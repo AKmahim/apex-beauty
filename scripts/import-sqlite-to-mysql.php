@@ -104,9 +104,12 @@ try {
         $imported++;
     }
 
+    if ($target->inTransaction()) {
+        $target->commit();
+    }
+
     $maxId = (int) $target->query('SELECT COALESCE(MAX(id), 0) FROM leads')->fetchColumn();
     $target->exec('ALTER TABLE leads AUTO_INCREMENT = ' . ($maxId + 1));
-    $target->commit();
 
     fwrite(STDOUT, "Imported {$imported} leads from {$sqlitePath} into MySQL.\n");
     exit(0);
