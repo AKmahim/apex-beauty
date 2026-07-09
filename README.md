@@ -39,6 +39,14 @@ php scripts/import-sqlite-to-mysql.php
 
 Optional: pass a custom SQLite file path as the first argument.
 
+
+command for run the project:
+```bash
+php -l router.php && php -S 127.0.0.1:8081 router.php
+```
+
+
+
 ---
 
 ## 2. Folder structure
