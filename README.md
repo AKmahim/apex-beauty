@@ -30,6 +30,15 @@ The frontend now talks to the API via same-origin paths (`/api/...`), so the
 pages and API can live on the same domain without separate backend/frontend
 deployment steps.
 
+If you already have legacy leads in the old SQLite file, you can import them
+once after configuring MySQL:
+
+```bash
+php scripts/import-sqlite-to-mysql.php
+```
+
+Optional: pass a custom SQLite file path as the first argument.
+
 ---
 
 ## 2. Folder structure

@@ -67,7 +67,7 @@ function apex_migrate(PDO $pdo): void
             fbc VARCHAR(255) NULL,
             status VARCHAR(32) NOT NULL DEFAULT 'new',
             submitted_at DATETIME NOT NULL,
-            created_at DATETIME NOT NULL DEFAULT UTC_TIMESTAMP(),
+            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
             KEY idx_leads_created_at (created_at),
             KEY idx_leads_email (email),
             KEY idx_leads_status (status)

@@ -1,179 +1,179 @@
 {
-  "hero": {
-    "eyebrow": {
-      "de": "Basiert in Österreich · Größtes Nachsorge-Netzwerk",
-      "en": "Based in Austria · Largest Aftercare Network"
+    "hero": {
+        "eyebrow": {
+            "de": "Basiert in Österreich · Größtes Nachsorge-Netzwerk",
+            "en": "Based in Austria · Largest Aftercare Network"
+        },
+        "headline1": {
+            "de": "Ihre komplette Haartransplantation.",
+            "en": "Your complete hair transplant journey."
+        },
+        "headline2": {
+            "de": "Professionell begleitet von der Beratung bis zur Nachsorge.",
+            "en": "Professionally managed from consultation to aftercare."
+        },
+        "sub": {
+            "de": "Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg.",
+            "en": "Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way."
+        },
+        "ctaPrimary": {
+            "de": "Kostenlose Beratung sichern",
+            "en": "Get your free consultation"
+        },
+        "ctaSecondary": {
+            "de": "Vorher-Nachher ansehen",
+            "en": "See before & after"
+        },
+        "mobileVideo": "assets/apex-video-verticle.mp4",
+        "desktopVideo": "assets/apex-video-verticle.mp4",
+        "trustPills": [
+            {
+                "de": "Fachärztlich Betreut",
+                "en": "Plastic Surgeon Supervised"
+            },
+            {
+                "de": "Individuelles Haarlinien-Design",
+                "en": "Personalized Hairline Design"
+            },
+            {
+                "de": "Stressfreie Sedierung",
+                "en": "Stress-Free Sedation"
+            }
+        ]
     },
-    "headline1": {
-      "de": "Ihre komplette Haartransplantation.",
-      "en": "Your complete hair transplant journey."
+    "trustBar": {
+        "stat1Label": {
+            "de": "Patienten Behandelt",
+            "en": "Patients Treated"
+        },
+        "stat2Label": {
+            "de": "Google-Bewertungen",
+            "en": "Google Reviews"
+        },
+        "stat3Unit": {
+            "de": "Jahre",
+            "en": "Years"
+        },
+        "stat3Label": {
+            "de": "Klinische Erfahrung",
+            "en": "Clinical Experience"
+        },
+        "stat4Main": {
+            "de": "Größtes Netzwerk",
+            "en": "Largest Network"
+        },
+        "stat4Label": {
+            "de": "Für Nachsorge in AT · DE · CH",
+            "en": "For Aftercare in AT · DE · CH"
+        }
     },
-    "headline2": {
-      "de": "Professionell begleitet von der Beratung bis zur Nachsorge.",
-      "en": "Professionally managed from consultation to aftercare."
+    "promise": {
+        "heading": {
+            "de": "Kein Bruch zwischen Beratung, Behandlung und Nachsorge",
+            "en": "No gap between consultation, treatment and aftercare"
+        },
+        "sub": {
+            "de": "Die meisten Patienten fürchten sich nicht vor der Operation, sondern davor, was passiert, wenn sie wieder zuhause sind. Deshalb begleiten wir Sie durchgehend, nicht nur am Tag des Eingriffs.",
+            "en": "Most patients aren't afraid of the procedure itself. They're afraid of what happens once they're back home. That's why we stay with you the whole way, not just on treatment day."
+        },
+        "video": "assets/apex-drone.mp4"
     },
-    "sub": {
-      "de": "Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg.",
-      "en": "Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way."
+    "network": {
+        "heading": {
+            "de": "Ein Anbieter, verbunden über vier Länder",
+            "en": "One provider, connected across four countries"
+        },
+        "sub": {
+            "de": "Österreich, Deutschland und die Schweiz, verbunden mit unserer Hauptklinik in der Türkei: ein durchgehendes Betreuungsnetzwerk über vier Länder hinweg.",
+            "en": "Austria, Germany and Switzerland, connecting to our main clinic in Turkey: one continuous care network spanning four countries."
+        }
     },
-    "ctaPrimary": {
-      "de": "Kostenlose Beratung sichern",
-      "en": "Get your free consultation"
-    },
-    "ctaSecondary": {
-      "de": "Vorher-Nachher ansehen",
-      "en": "See before & after"
-    },
-    "mobileVideo": "assets/apex-video-verticle.mp4",
-    "desktopVideo": "assets/apex-video-verticle.mp4",
-    "trustPills": [
-      {
-        "de": "Fachärztlich Betreut",
-        "en": "Plastic Surgeon Supervised"
-      },
-      {
-        "de": "Individuelles Haarlinien-Design",
-        "en": "Personalized Hairline Design"
-      },
-      {
-        "de": "Stressfreie Sedierung",
-        "en": "Stress-Free Sedation"
-      }
-    ]
-  },
-  "trustBar": {
-    "stat1Label": {
-      "de": "Patienten Behandelt",
-      "en": "Patients Treated"
-    },
-    "stat2Label": {
-      "de": "Google-Bewertungen",
-      "en": "Google Reviews"
-    },
-    "stat3Unit": {
-      "de": "Jahre",
-      "en": "Years"
-    },
-    "stat3Label": {
-      "de": "Klinische Erfahrung",
-      "en": "Clinical Experience"
-    },
-    "stat4Main": {
-      "de": "Größtes Netzwerk",
-      "en": "Largest Network"
-    },
-    "stat4Label": {
-      "de": "Für Nachsorge in AT · DE · CH",
-      "en": "For Aftercare in AT · DE · CH"
+    "faq": {
+        "heading": {
+            "de": "Häufig gestellte Fragen",
+            "en": "Frequently asked questions"
+        },
+        "items": [
+            {
+                "question": {
+                    "de": "Tut eine Haartransplantation weh?",
+                    "en": "Does a hair transplant hurt?"
+                },
+                "answer": {
+                    "de": "Der Eingriff erfolgt unter örtlicher Betäubung, die Kopfhaut ist während der Operation vollständig taub. Die meisten Patienten spüren nur leichten Druck, nicht Schmerz. Nachbeschwerden sind meist mild und mit frei verkäuflichen Schmerzmitteln gut zu behandeln.",
+                    "en": "The procedure is performed under local anaesthesia, so the scalp is fully numb during the operation. Most patients feel only mild pressure, not pain. Post-operative discomfort is usually mild and manageable with standard over-the-counter pain relief."
+                }
+            },
+            {
+                "question": {
+                    "de": "Wird man sehen, dass ich eine Transplantation hatte?",
+                    "en": "Will anyone be able to tell I've had a transplant?"
+                },
+                "answer": {
+                    "de": "In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.",
+                    "en": "In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair."
+                }
+            },
+            {
+                "question": {
+                    "de": "Wie viele Grafts brauche ich?",
+                    "en": "How many grafts do I need?"
+                },
+                "answer": {
+                    "de": "Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung.",
+                    "en": "This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate."
+                }
+            },
+            {
+                "question": {
+                    "de": "Ist das Ergebnis dauerhaft?",
+                    "en": "Is the result permanent?"
+                },
+                "answer": {
+                    "de": "Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar.",
+                    "en": "Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair."
+                }
+            },
+            {
+                "question": {
+                    "de": "Was passiert, wenn das Ergebnis nicht ausreicht?",
+                    "en": "What happens if I don't get enough results?"
+                },
+                "answer": {
+                    "de": "Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.",
+                    "en": "Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome."
+                }
+            },
+            {
+                "question": {
+                    "de": "Können Frauen eine Haartransplantation bekommen?",
+                    "en": "Can women have hair transplants?"
+                },
+                "answer": {
+                    "de": "Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell.",
+                    "en": "Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential."
+                }
+            },
+            {
+                "question": {
+                    "de": "Wie läuft die Anreise nach Istanbul ab?",
+                    "en": "How do I travel to Istanbul for the procedure?"
+                },
+                "answer": {
+                    "de": "Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden.",
+                    "en": "Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call."
+                }
+            },
+            {
+                "question": {
+                    "de": "Was unterscheidet Apex direkt von einem Vermittler?",
+                    "en": "What's the difference between Apex direct and a broker?"
+                },
+                "answer": {
+                    "de": "Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung.",
+                    "en": "A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability."
+                }
+            }
+        ]
     }
-  },
-  "promise": {
-    "heading": {
-      "de": "Kein Bruch zwischen Beratung, Behandlung und Nachsorge",
-      "en": "No gap between consultation, treatment and aftercare"
-    },
-    "sub": {
-      "de": "Die meisten Patienten fürchten sich nicht vor der Operation, sondern davor, was passiert, wenn sie wieder zuhause sind. Deshalb begleiten wir Sie durchgehend, nicht nur am Tag des Eingriffs.",
-      "en": "Most patients aren't afraid of the procedure itself. They're afraid of what happens once they're back home. That's why we stay with you the whole way, not just on treatment day."
-    },
-    "video": "assets/apex-drone.mp4"
-  },
-  "network": {
-    "heading": {
-      "de": "Ein Anbieter, verbunden über vier Länder",
-      "en": "One provider, connected across four countries"
-    },
-    "sub": {
-      "de": "Österreich, Deutschland und die Schweiz, verbunden mit unserer Hauptklinik in der Türkei: ein durchgehendes Betreuungsnetzwerk über vier Länder hinweg.",
-      "en": "Austria, Germany and Switzerland, connecting to our main clinic in Turkey: one continuous care network spanning four countries."
-    }
-  },
-  "faq": {
-    "heading": {
-      "de": "Häufig gestellte Fragen",
-      "en": "Frequently asked questions"
-    },
-    "items": [
-      {
-        "question": {
-          "de": "Tut eine Haartransplantation weh?",
-          "en": "Does a hair transplant hurt?"
-        },
-        "answer": {
-          "de": "Der Eingriff erfolgt unter örtlicher Betäubung, die Kopfhaut ist während der Operation vollständig taub. Die meisten Patienten spüren nur leichten Druck, nicht Schmerz. Nachbeschwerden sind meist mild und mit frei verkäuflichen Schmerzmitteln gut zu behandeln.",
-          "en": "The procedure is performed under local anaesthesia, so the scalp is fully numb during the operation. Most patients feel only mild pressure, not pain. Post-operative discomfort is usually mild and manageable with standard over-the-counter pain relief."
-        }
-      },
-      {
-        "question": {
-          "de": "Wird man sehen, dass ich eine Transplantation hatte?",
-          "en": "Will anyone be able to tell I've had a transplant?"
-        },
-        "answer": {
-          "de": "In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.",
-          "en": "In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair."
-        }
-      },
-      {
-        "question": {
-          "de": "Wie viele Grafts brauche ich?",
-          "en": "How many grafts do I need?"
-        },
-        "answer": {
-          "de": "Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung.",
-          "en": "This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate."
-        }
-      },
-      {
-        "question": {
-          "de": "Ist das Ergebnis dauerhaft?",
-          "en": "Is the result permanent?"
-        },
-        "answer": {
-          "de": "Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar.",
-          "en": "Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair."
-        }
-      },
-      {
-        "question": {
-          "de": "Was passiert, wenn das Ergebnis nicht ausreicht?",
-          "en": "What happens if I don't get enough results?"
-        },
-        "answer": {
-          "de": "Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.",
-          "en": "Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome."
-        }
-      },
-      {
-        "question": {
-          "de": "Können Frauen eine Haartransplantation bekommen?",
-          "en": "Can women have hair transplants?"
-        },
-        "answer": {
-          "de": "Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell.",
-          "en": "Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential."
-        }
-      },
-      {
-        "question": {
-          "de": "Wie läuft die Anreise nach Istanbul ab?",
-          "en": "How do I travel to Istanbul for the procedure?"
-        },
-        "answer": {
-          "de": "Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden.",
-          "en": "Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call."
-        }
-      },
-      {
-        "question": {
-          "de": "Was unterscheidet Apex direkt von einem Vermittler?",
-          "en": "What's the difference between Apex direct and a broker?"
-        },
-        "answer": {
-          "de": "Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung.",
-          "en": "A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability."
-        }
-      }
-    ]
-  }
 }
