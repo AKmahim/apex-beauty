@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "heading": { "de": "<span>Haartransplantation</span> bei Apex Beauty", "en": "Hair Transplantation <span>at Apex Beauty</span>" },
+    "sub": { "de": "Ein chirurgischer Eingriff unter örtlicher Betäubung. Gesunde, DHT-resistente Follikel werden aus dem Spenderbereich entnommen und in ausgedünnte Areale verpflanzt, wo sie dauerhaft weiterwachsen.", "en": "A surgical procedure under local anaesthesia. Healthy, DHT-resistant follicles are taken from the donor area and relocated to thinning areas, where they keep growing for life." }
+  },
+  "umfasst": {
+    "heading": { "de": "Was die Behandlung umfasst", "en": "What the treatment involves" },
+    "body": { "de": "Apex Beauty führt drei anerkannte Transplantationstechniken durch, je nach Fläche, Graft-Anzahl und gewünschtem Detailgrad.", "en": "Apex Beauty performs three recognised transplantation techniques, chosen based on area, graft count, and desired level of detail." }
+  },
+  "geeignet": {
+    "heading": { "de": "Wer ist geeignet?", "en": "Who is a suitable candidate?" },
+    "body": { "de": "Eine kostenlose Beratung mit Haaranalyse gibt eine präzise, individuelle Einschätzung.", "en": "A free consultation with scalp analysis gives a precise, individual assessment." }
+  },
+  "genesungService": {
+    "heading": { "de": "Genesung & Nachsorge", "en": "Recovery & aftercare" },
+    "body": { "de": "Die Erholungsphase ist genauso wichtig wie der Eingriff selbst. Sie bestimmt Graft-Überleben, Heilungsqualität und Endergebnis.", "en": "The recovery period matters as much as the procedure itself. It determines graft survival, healing quality, and the final result." }
+  },
+  "ergebnisse": {
+    "heading": { "de": "Ergebnisse: was Sie realistisch erwarten können", "en": "Results: what to realistically expect" },
+    "body": { "de": "Das vollständige Ergebnis zeigt sich erst nach 12 bis 18 Monaten, nicht sofort.", "en": "Full results are visible at 12 to 18 months, not immediately." }
+  }
+}

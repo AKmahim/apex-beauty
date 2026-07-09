@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "heading": {
+      "de": "Hairpedia: Ihr Wissen rund um <span>Haarausfall &amp; Haartransplantation</span>",
+      "en": "Hairpedia: everything you need to know about <span>hair loss &amp; hair transplantation</span>"
+    },
+    "sub": {
+      "de": "Wissenschaftlich fundiert, verständlich erklärt. Von den Ursachen des Haarausfalls bis zur vollständigen Genesung nach der Transplantation, alles an einem Ort.",
+      "en": "Scientifically grounded, clearly explained. From the causes of hair loss to full recovery after transplantation, all in one place."
+    }
+  },
+  "wasIstHaarausfall": {
+    "heading": {
+      "de": "Was ist Haarausfall?",
+      "en": "What is hair loss?"
+    },
+    "body": {
+      "de": "Haarausfall, medizinisch Alopezie genannt, ist das teilweise oder vollständige Fehlen von Haaren an Stellen, an denen sie normalerweise wachsen. Bis zu 100 Haare täglich zu verlieren gilt als normaler Teil des Wachstumszyklus.",
+      "en": "Hair loss, medically known as alopecia, is the partial or complete absence of hair from areas where it normally grows. Losing up to 100 hairs a day is a normal part of the growth cycle."
+    },
+    "image": ""
+  },
+  "ursachen": {
+    "heading": {
+      "de": "Ursachen von Haarausfall",
+      "en": "Causes of hair loss"
+    },
+    "body": {
+      "de": "Haarausfall hat selten eine einzige Ursache. Genetik, Hormone, Stress und Ernährung wirken häufig zusammen.",
+      "en": "Hair loss rarely has a single cause. Genetics, hormones, stress, and nutrition often act together."
+    },
+    "image": ""
+  },
+  "arten": {
+    "heading": {
+      "de": "Arten von Haarausfall",
+      "en": "Types of hair loss"
+    },
+    "body": {
+      "de": "Nicht jeder Haarausfall ist gleich. Die Art bestimmt, welche Behandlung sinnvoll ist.",
+      "en": "Not all hair loss is the same. The type determines which treatment makes sense."
+    },
+    "image": ""
+  },
+  "diagnose": {
+    "heading": {
+      "de": "Diagnose & Haaranalyse",
+      "en": "Diagnosis & hair analysis"
+    },
+    "body": {
+      "de": "Eine präzise Diagnose ist die Grundlage jeder wirksamen Behandlung.",
+      "en": "An accurate diagnosis is the foundation of any effective treatment."
+    },
+    "image": ""
+  },
+  "behandlung": {
+    "heading": {
+      "de": "Behandlungsmöglichkeiten",
+      "en": "Treatment options"
+    },
+    "body": {
+      "de": "Von topischen Medikamenten bis zur Transplantation, jede Option hat einen anderen Wirkmechanismus, Aufwand und Evidenzgrad.",
+      "en": "From topical medication to transplantation, each option differs in mechanism, effort, and quality of evidence."
+    },
+    "image": ""
+  },
+  "transplantation": {
+    "heading": {
+      "de": "Haartransplantation",
+      "en": "Hair transplantation"
+    },
+    "body": {
+      "de": "Ein chirurgischer Eingriff unter örtlicher Betäubung. Gesunde, DHT-resistente Follikel werden aus dem Spenderbereich entnommen und in ausgedünnte Areale verpflanzt, wo sie dauerhaft weiterwachsen.",
+      "en": "A surgical procedure under local anaesthesia. Healthy, DHT-resistant follicles are taken from the donor area and relocated to thinning areas, where they keep growing for life."
+    },
+    "image": ""
+  },
+  "genesung": {
+    "heading": {
+      "de": "Genesung & Nachsorge",
+      "en": "Recovery & aftercare"
+    },
+    "body": {
+      "de": "Die Erholungsphase ist genauso wichtig wie der Eingriff selbst. Sie bestimmt Graft-Überleben, Heilungsqualität und Endergebnis.",
+      "en": "The recovery period matters as much as the procedure itself. It determines graft survival, healing quality, and the final result."
+    },
+    "image": ""
+  },
+  "vorherNachher": {
+    "heading": {
+      "de": "Vorher-Nachher: was pro Monat zu erwarten ist",
+      "en": "Before & after: what to expect each month"
+    },
+    "body": {
+      "de": "Ein visueller und beschreibender Monat-für-Monat-Überblick. Echte Patientenfotos von Apex Beauty folgen hier, sobald sie freigegeben sind.",
+      "en": "A visual and descriptive month-by-month reference. Real Apex Beauty patient photos will appear here once cleared for use."
+    },
+    "image": ""
+  },
+  "glossar": {
+    "heading": {
+      "de": "Medizinisches Glossar",
+      "en": "Medical glossary"
+    },
+    "body": {
+      "de": "Alle Fachbegriffe der Hairpedia einfach erklärt.",
+      "en": "All the technical terms used throughout Hairpedia, explained simply."
+    }
+  }
+}

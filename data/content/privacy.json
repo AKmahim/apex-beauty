@@ -1,0 +1,38 @@
+{
+  "intro": {
+    "title": { "de": "Datenschutzerklärung", "en": "Privacy Policy" },
+    "sub": { "de": "Diese Seite deckt die DSGVO-Mindestangaben ab. Sie wurde nicht anwaltlich geprüft.", "en": "This page covers DSGVO/GDPR baseline disclosures. It has not been reviewed by a lawyer." }
+  },
+  "sections": {
+    "items": [
+      {
+        "heading": { "de": "1. Verantwortlicher", "en": "1. Data Controller" },
+        "body": { "de": "Verantwortlich für die Datenverarbeitung auf dieser Website ist Apex Beauty. Für Fragen zum Datenschutz oder um Ihre Rechte auszuüben, kontaktieren Sie uns unter <a href=\"mailto:privacy@apexbeauty.at\">privacy@apexbeauty.at</a> oder per WhatsApp.", "en": "Apex Beauty is responsible for data processing on this website. For privacy questions or to exercise your rights, contact us at <a href=\"mailto:privacy@apexbeauty.at\">privacy@apexbeauty.at</a> or via WhatsApp." }
+      },
+      {
+        "heading": { "de": "2. Welche Daten wir erheben", "en": "2. What Data We Collect" },
+        "body": { "de": "Wenn Sie unser Beratungsformular ausfüllen, erheben wir: <ul><li>Name, E-Mail-Adresse, Land und Telefonnummer</li><li>Geschlecht, gewünschte Verfahren/Therapien und geplanter Zeitraum</li><li>Optionale Notizen und optional hochgeladene Fotos</li><li>Rabattgutschein-Code (falls angegeben) und Marketing-Einwilligung</li></ul> Zusätzlich erheben wir technische Cookie-Daten wie unten unter „Cookies\" beschrieben.", "en": "When you fill in our consultation form, we collect: <ul><li>Name, email address, country, and phone number</li><li>Gender, procedures/therapies of interest, and planned timing</li><li>Optional notes and optionally uploaded photos</li><li>Discount coupon code (if provided) and marketing opt-in status</li></ul> We additionally collect technical cookie data as described under \"Cookies\" below." }
+      },
+      {
+        "heading": { "de": "3. Warum wir diese Daten verarbeiten", "en": "3. Why We Process This Data" },
+        "body": { "de": "Die Formulardaten verarbeiten wir, um Ihre Anfrage zu beantworten und eine kostenlose Beratung vorzubereiten (Rechtsgrundlage: Erfüllung eines vorvertraglichen Verhältnisses, Art. 6 Abs. 1 lit. b DSGVO). Marketing-Cookies (Meta Pixel) verarbeiten wir ausschließlich auf Grundlage Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie im Cookie-Banner erteilen oder jederzeit widerrufen können.", "en": "We process your form data to respond to your inquiry and prepare a free consultation (legal basis: pre-contractual measures, Art. 6(1)(b) DSGVO/GDPR). Marketing cookies (Meta Pixel) are processed solely on the basis of your explicit consent (Art. 6(1)(a) DSGVO/GDPR), given via the cookie banner and revocable at any time." }
+      },
+      {
+        "heading": { "de": "4. Speicherdauer", "en": "4. Retention Period" },
+        "body": { "de": "Wir speichern Ihre Anfragedaten so lange, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist, längstens jedoch 24 Monate ab Ihrer letzten Kontaktaufnahme, sofern Sie nicht vorher eine Löschung beantragen. Marketing-Cookie-Daten werden gemäß den Aufbewahrungsfristen von Meta verarbeitet, die in deren eigener Datenrichtlinie beschrieben sind.", "en": "We retain your inquiry data for as long as needed to process your request, and no longer than 24 months from your last contact with us, unless you request earlier deletion. Marketing cookie data is processed according to Meta's own retention periods, described in Meta's data policy." }
+      },
+      {
+        "heading": { "de": "5. An wen wir Daten weitergeben", "en": "5. Who We Share Data With" },
+        "body": { "de": "Ihre Formulardaten werden nicht an Dritte verkauft oder weitergegeben, außer soweit dies zur Bearbeitung Ihrer Beratungsanfrage notwendig ist. Wenn Sie Marketing-Cookies zustimmen, teilen wir Nutzungsdaten (z. B. Seitenaufrufe, Formularabsendungen) mit Meta Platforms Ireland Ltd. über den Meta Pixel, zur Messung der Werbewirksamkeit. Ohne Ihre Zustimmung findet keine Datenübermittlung an Meta statt.", "en": "Your form data is not sold or shared with third parties except as necessary to process your consultation request. If you consent to marketing cookies, we share usage data (e.g. page views, form submissions) with Meta Platforms Ireland Ltd. via the Meta Pixel, to measure ad performance. Without your consent, no data is transmitted to Meta." }
+      },
+      {
+        "heading": { "de": "6. Cookies", "en": "6. Cookies" },
+        "body": { "de": "<table><tr><th>Kategorie</th><th>Zweck</th><th>Anbieter</th></tr><tr><td>Essenziell (immer aktiv)</td><td>Speichert Ihre Cookie-Auswahl und ein temporäres lokales Backup Ihrer Formulareingaben in Ihrem Browser (localStorage), damit die Seite funktioniert.</td><td>Apex Beauty</td></tr><tr><td>Marketing / Tracking (nur mit Zustimmung)</td><td>Meta Pixel — misst Seitenaufrufe und Formularabsendungen zur Optimierung von Werbeanzeigen.</td><td>Meta Platforms Ireland Ltd.</td></tr></table>", "en": "<table><tr><th>Category</th><th>Purpose</th><th>Provider</th></tr><tr><td>Essential (always on)</td><td>Stores your cookie choice and a temporary local backup of your form input in your browser (localStorage), so the site works.</td><td>Apex Beauty</td></tr><tr><td>Marketing / Tracking (consent required)</td><td>Meta Pixel — measures page views and form submissions to optimize ad campaigns.</td><td>Meta Platforms Ireland Ltd.</td></tr></table>" }
+      },
+      {
+        "heading": { "de": "7. Ihre Rechte", "en": "7. Your Rights" },
+        "body": { "de": "Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung Ihrer Daten. Ihre Einwilligung zu Marketing-Cookies können Sie jederzeit über den Link „Cookie-Einstellungen\" unten auf jeder Seite widerrufen. Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (in Österreich: die Datenschutzbehörde, www.dsb.gv.at). Um eines dieser Rechte auszuüben, kontaktieren Sie uns unter <a href=\"mailto:privacy@apexbeauty.at\">privacy@apexbeauty.at</a>.", "en": "Under DSGVO/GDPR, you have the right to access, rectify, erase, restrict processing of, port, and object to the processing of your data. You can withdraw consent to marketing cookies at any time via the \"Cookie settings\" link at the bottom of any page. You also have the right to lodge a complaint with a data protection supervisory authority (in Austria: the Datenschutzbehörde, www.dsb.gv.at). To exercise any of these rights, contact us at <a href=\"mailto:privacy@apexbeauty.at\">privacy@apexbeauty.at</a>." }
+      }
+    ]
+  }
+}
