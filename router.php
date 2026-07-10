@@ -25,6 +25,26 @@ if ($uriPath === '/' || $uriPath === '') {
     return true;
 }
 
+if ($uriPath === '/consult' || $uriPath === '/consult/') {
+    $originalQuery = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_QUERY);
+    $target = '/?open=consult';
+    if (is_string($originalQuery) && $originalQuery !== '') {
+        $target .= '&' . $originalQuery;
+    }
+    header('Location: ' . $target, true, 302);
+    return true;
+}
+
+if ($uriPath === '/consult-light' || $uriPath === '/consult-light/') {
+    $originalQuery = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_QUERY);
+    $target = '/?open=consult-light';
+    if (is_string($originalQuery) && $originalQuery !== '') {
+        $target .= '&' . $originalQuery;
+    }
+    header('Location: ' . $target, true, 302);
+    return true;
+}
+
 $trimmed = trim($uriPath, '/');
 if ($trimmed !== '' && preg_match('/^[A-Za-z0-9-]+$/', $trimmed) === 1) {
     $phpPage = $root . '/' . $trimmed . '.php';
