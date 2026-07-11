@@ -320,11 +320,11 @@ function apex_get_stats(): array
     $marketingOptIns = apex_scalar('SELECT COUNT(*) FROM leads WHERE marketing_opt_in = 1');
     $withPhotos = apex_scalar('SELECT COUNT(*) FROM leads WHERE photos_uploaded > 0');
 
-    $byGender = apex_group_counts("SELECT COALESCE(gender,'unspecified') AS key, COUNT(*) AS n FROM leads GROUP BY key ORDER BY n DESC");
-    $byTiming = apex_group_counts("SELECT COALESCE(timing,'unspecified') AS key, COUNT(*) AS n FROM leads GROUP BY key ORDER BY n DESC");
-    $byCountry = apex_group_counts("SELECT COALESCE(country,'unspecified') AS key, COUNT(*) AS n FROM leads GROUP BY key ORDER BY n DESC");
-    $byUtmSource = apex_group_counts("SELECT COALESCE(utm_source,'direct') AS key, COUNT(*) AS n FROM leads GROUP BY key ORDER BY n DESC");
-    $byStatus = apex_group_counts("SELECT status AS key, COUNT(*) AS n FROM leads GROUP BY key ORDER BY n DESC");
+    $byGender = apex_group_counts("SELECT COALESCE(gender,'unspecified') AS `key`, COUNT(*) AS n FROM leads GROUP BY `key` ORDER BY n DESC");
+    $byTiming = apex_group_counts("SELECT COALESCE(timing,'unspecified') AS `key`, COUNT(*) AS n FROM leads GROUP BY `key` ORDER BY n DESC");
+    $byCountry = apex_group_counts("SELECT COALESCE(country,'unspecified') AS `key`, COUNT(*) AS n FROM leads GROUP BY `key` ORDER BY n DESC");
+    $byUtmSource = apex_group_counts("SELECT COALESCE(utm_source,'direct') AS `key`, COUNT(*) AS n FROM leads GROUP BY `key` ORDER BY n DESC");
+    $byStatus = apex_group_counts("SELECT status AS `key`, COUNT(*) AS n FROM leads GROUP BY `key` ORDER BY n DESC");
 
     $procedureCounts = [];
     $therapyCounts = [];
