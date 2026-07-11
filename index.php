@@ -1240,7 +1240,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body data-content-page="home">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6ZC5JRP"
+<noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-W6ZC5JRP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
@@ -1300,16 +1300,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <nav class="nav">
-  <div class="logo-lockup">
+  <a class="logo-lockup" href="index.php" aria-label="Apex Beauty Home">
     <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
     <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
-  </div>
+  </a>
   <div class="nav-collapse">
     <div class="nav-links">
-      <a href="service-hair-transplant.html" data-de="Verfahren" data-en="Procedures">Verfahren</a>
+      <a href="service-hair-transplant.php" data-de="Verfahren" data-en="Procedures">Verfahren</a>
       <!-- <a href="#" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
       <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
-      <a href="hairpedia.html" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
+      <a href="hairpedia.php" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
       <a href="#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
       <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
     </div>
@@ -1522,7 +1522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="faq-kicker" data-de="Fragen &amp; Antworten" data-en="Questions &amp; answers">Fragen &amp; Antworten</div>
         <h2 data-ckey="faq.heading" data-de="Häufig gestellte Fragen" data-en="Frequently asked questions">Häufig gestellte Fragen</h2>
         <p data-de="Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet." data-en="The questions that most often hold prospective patients back from booking a consultation, answered honestly.">Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet.</p>
-        <a href="service-hair-transplant.html" style="display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline;" data-de="Mehr über die Haartransplantation erfahren →" data-en="Learn more about hair transplantation →">Mehr über die Haartransplantation erfahren →</a>
+        <a href="service-hair-transplant.php" style="display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline;" data-de="Mehr über die Haartransplantation erfahren →" data-en="Learn more about hair transplantation →">Mehr über die Haartransplantation erfahren →</a>
       </div>
     </div>
 
@@ -1747,7 +1747,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="check-row">
         <input type="checkbox" id="cfPrivacy" onchange="validateStep3()">
-        <span data-de="Ich habe die &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *">Ich habe die <a href="privacy.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
+        <span data-de="Ich habe die &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *">Ich habe die <a href="privacy.php" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
       </div>
       <div class="check-row">
         <input type="checkbox" id="cfMarketing">
