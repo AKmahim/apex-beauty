@@ -832,7 +832,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero { overflow: hidden; }
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 580px) {
     .logo-lockup img.wordmark { display: none; }
     .nav-right .cta-btn { padding: 8px 10px; font-size: 12px; }
   }
