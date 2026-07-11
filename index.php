@@ -187,6 +187,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 10.5px 20px;
     border-radius: 10px;
   }
+  /* .nav-collapse is invisible plumbing on desktop (display:contents leaves
+     .nav-links laid out exactly as before); on mobile it becomes the
+     hamburger's overlay dropdown. .nav-drop-cta only ever shows inside that
+     mobile dropdown. */
+  .nav-collapse { display: contents; }
+  .nav-drop-cta { display: none; }
+  .nav-hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 10px;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .nav-hamburger svg { width: 20px; height: 20px; }
 
   /* ---- HERO ---- */
   .hero {
@@ -273,6 +293,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 500px;
     margin-bottom: 28px;
   }
+  /* Shortened, hardcoded mobile-only stand-in for .hero-sub (not CMS-driven —
+     see the Glass Premium mockup, which shows a single short line instead of
+     the full CMS paragraph). Shares .hero-sub's typography via the same
+     class; hidden on desktop, swapped in on mobile in the media query below. */
+  .hero-sub-mobile { display: none; }
   /* ---- ANNOUNCEMENT BAR (top scroller) ---- */
   .announce-bar {
     position: sticky; top: 0; z-index: 60;
@@ -446,7 +471,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right center;
+    /* The source clip is portrait (1080x1920) inside a landscape frame, so
+       cover crops most of its height; shifted from 22% toward the top so the
+       Apex Beauty logo stays fully in frame instead of being clipped. */
+    object-position: center 12%;
   }
   .sound-toggle {
     position: absolute; bottom: 16px; right: 16px; z-index: 2;
@@ -671,26 +699,118 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 900px) {
-    .nav { padding: 10px 16px; gap: 8px; }
+    .nav { padding: 10px 16px; gap: 8px; flex-wrap: wrap; }
     .nav-links { display: none; }
     .logo-lockup { gap: 8px; flex-shrink: 0; }
     .logo-lockup img.lotus { height: 30px; }
     .logo-lockup img.wordmark { height: 19px; }
-    .nav-right { gap: 8px; }
+    /* .nav-right is unboxed so the language switch and CTA become direct
+       flex items of .nav: the switch hugs the hamburger on the right (auto
+       margin absorbs the free space), while the CTA only appears inside the
+       opened dropdown. No second language switch in the menu. */
+    .nav-right { display: contents; }
+    .nav-right .lang-switch { margin-left: auto; }
+    .nav-right .cta-btn { display: none; }
+    .nav-hamburger { display: flex; }
+    /* The dropdown overlays the page (absolute, anchored to the sticky nav)
+       instead of expanding the nav and pushing the hero down. */
+    .nav-collapse {
+      display: none;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      /* Same glass recipe as the nav itself and the float-cards: tinted
+         translucent gradient + heavy blur + rim-lit edges, so the hero
+         frosts through the panel instead of being blocked by a flat sheet. */
+      /* The nav's own backdrop-filter forms a backdrop root, so this panel's
+         blur can't reliably frost the page behind it — the tint layers carry
+         most of the opacity (~0.95 combined) to keep the links readable,
+         with just enough translucency left for a soft glass glow. */
+      background:
+        linear-gradient(160deg, rgba(228,243,254,0.94), rgba(207,232,250,0.86) 55%, rgba(222,239,254,0.92)),
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82));
+      backdrop-filter: blur(30px) saturate(1.8);
+      -webkit-backdrop-filter: blur(30px) saturate(1.8);
+      border-top: 1px solid rgba(255,255,255,0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.7);
+      border-radius: 0 0 20px 20px;
+      box-shadow:
+        0 28px 52px -20px rgba(20,40,60,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.9),
+        inset 0 -12px 24px -18px rgba(37,99,235,0.25);
+      padding: 10px 16px 16px;
+    }
+    .nav.nav-open .nav-collapse { display: block; }
+    .nav.nav-open .nav-links { display: flex; flex-direction: column; gap: 3px; }
+    .nav.nav-open .nav-links a {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.5);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 4px 10px -6px rgba(20,40,60,0.15);
+    }
+    .nav-drop-cta { justify-content: center; text-align: center; margin-top: 12px; }
+    .nav.nav-open .nav-drop-cta { display: flex; }
     .lang-switch { font-size: 11px; }
     .lang-switch button { padding: 4px 9px; }
     .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
-    .hero-inner { grid-template-columns: 1fr; padding: 0 20px; }
-    .hero-visual { display: none; }
-    h1 { font-size: 32px; }
-    .eyebrow { font-size: 11.5px; }
+    /* Glass Premium mockup order: eyebrow -> heading -> subtext -> video ->
+       CTAs -> stats. The markup keeps hero-visual as hero-inner's 2nd child
+       (desktop needs it beside the text), so on mobile the text wrapper is
+       unboxed via display:contents and every hero-inner descendant gets an
+       explicit flex order instead of relying on DOM position. */
+    /* Mobile hero also drops its forced 92vh min-height (a desktop-only
+       full-bleed-video artifact) and shrinks its top/bottom padding, so the
+       whole hero + trust-bar stack fits in roughly one screen instead of
+       leaving a tall gap before the stats row. */
+    /* min-height fills the space left under the announce bar + nav and above
+       the trust bar, so the "Unser Versprechen" section only appears on
+       scroll; the flex column spreads its rows evenly into that space so the
+       layout breathes instead of bunching at the top. */
+    .hero { min-height: calc(100svh - 182px); padding: 12px 0 10px; }
+    /* The announce bar dismisses itself after 60s (adds .is-closed, stays in
+       the DOM) — reclaim its 49px so the trust bar keeps hugging the fold
+       instead of letting the promise section peek in. */
+    body:has(#announceBar.is-closed) .hero { min-height: calc(100svh - 133px); }
+    .hero-inner {
+      grid-template-columns: 1fr; padding: 0 20px;
+      display: flex; flex-direction: column; align-items: stretch;
+      justify-content: space-evenly; flex: 1;
+      gap: 0; /* desktop grid's 48px gap would otherwise pad every flex row */
+    }
+    .hero-inner > div:first-child { display: contents; }
+    .eyebrow { order: 1; margin-bottom: 12px; align-self: flex-start; }
+    h1 { order: 2; font-size: 26px; margin-bottom: 10px; }
+    /* Only the first headline sentence shows on mobile (Glass Premium). */
+    h1 br { display: none; }
+    h1 .hl { display: none; }
+    .hero-sub { display: none; order: 3; }
+    .hero-sub-mobile { display: block; margin-bottom: 14px; font-size: 13.5px; line-height: 1.55; }
+    .hero-visual { order: 4; height: 250px; margin-top: 0; margin-bottom: 14px; }
+    .hero-ctas { order: 5; margin-bottom: 10px; gap: 10px; }
+    .hero-ctas .cta-btn, .hero-ctas .cta-ghost { padding: 11px 22px; font-size: 14px; }
+    .hero-microtrust { display: none; order: 6; }
+    .fc-2 { display: none; }
+    /* 360° float card pinned to the video's bottom-left corner, scaled down
+       so it doesn't cover the footage. */
+    .fc-1 {
+      top: auto; bottom: 10px; left: 10px; right: auto;
+      transform: scale(0.8); transform-origin: bottom left;
+    }
+    .fc-1:hover { transform: scale(0.8); }
+    /* Keep the eyebrow pill on a single line on phones. */
+    .eyebrow { font-size: 10px; padding: 5px 11px; white-space: nowrap; }
+    .eyebrow span:last-child { overflow: hidden; text-overflow: ellipsis; }
     .announce-inner { padding: 9px 16px; gap: 10px; }
     .announce-items { gap: 16px; }
     .announce-item b { font-size: 10.5px; }
     .announce-divider { display: none; }
     .hero-ctas { flex-wrap: wrap; }
-    .hero-microtrust { max-width: none; flex-wrap: wrap; }
-    .trust-inner { grid-template-columns: 1fr 1fr; padding: 28px 20px; }
+    .trust-inner { grid-template-columns: repeat(3, auto); justify-content: space-between; padding: 10px 16px 12px; gap: 8px; }
+    .trust-item { flex-direction: column; align-items: center; text-align: center; gap: 2px; }
+    .trust-item .trust-icon { width: 22px; height: 22px; }
+    .trust-inner .trust-item:nth-child(4) { display: none; }
+    .trust-num { font-size: 13.5px; color: var(--blue-700); }
+    .trust-label { font-size: 9px; white-space: nowrap; }
     .service { padding: 64px 20px 72px; }
     .service-steps { grid-template-columns: 1fr; gap: 16px; position: relative; }
     .service-steps::before { display: none; }
@@ -706,42 +826,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .step-num { margin-bottom: 0; flex-shrink: 0; }
     .step-text { flex: 1; min-width: 0; }
 
-    /* ---- Mobile: full-bleed video background instead of mesh gradient ---- */
+    /* ---- Mobile: light "Glass Premium" layout — hero-visual (the same
+       rounded video card used on desktop) stacks below the text instead of
+       a full-bleed background video, so text stays dark-on-light like desktop. ---- */
     .hero { overflow: hidden; }
-    .hero-bg-layer { display: none; }
-    .hero-mobile-video {
-      display: block;
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      z-index: 0;
-    }
-    /* Kept consistently dark top-to-bottom (no lighter middle band) so hero
-       text stays readable no matter how bright any given video frame is —
-       robust to the actual footage rather than tuned to one moment of it. */
-    .hero-mobile-scrim {
-      display: block;
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(6,10,16,0.72) 0%, rgba(6,10,16,0.6) 45%, rgba(6,10,16,0.82) 100%);
-      z-index: 1;
-    }
-    .sound-toggle-mobile { display: flex; bottom: 20px; right: 20px; }
-    .eyebrow {
-      color: #fff;
-      background: rgba(255,255,255,0.16);
-      border-color: rgba(255,255,255,0.3);
-    }
-    .eyebrow .dot { background: var(--accent-amber); }
-    h1 { color: #ffffff; }
-    h1 span { background: linear-gradient(100deg, #7ab8ff, #93c5fd); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero-sub { color: rgba(255,255,255,0.82); }
-    .hero-ctas .cta-ghost { color: #fff; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); }
-    .hero-microtrust { color: rgba(255,255,255,0.75); }
-    .hero-microtrust b { color: #ffffff; }
   }
 
   @media (max-width: 380px) {
@@ -1143,7 +1231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 </head>
 <body data-content-page="home">
-  <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6ZC5JRP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -1208,13 +1296,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
     <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
   </div>
-  <div class="nav-links">
-    <a href="service-hair-transplant.html" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-    <!-- <a href="#" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-    <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
-    <a href="hairpedia.html" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
-    <a href="#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
-    <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
+  <div class="nav-collapse">
+    <div class="nav-links">
+      <a href="service-hair-transplant.html" data-de="Verfahren" data-en="Procedures">Verfahren</a>
+      <!-- <a href="#" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
+      <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
+      <a href="hairpedia.html" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
+      <a href="#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
+      <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
+    </div>
+    <a href="#" class="cta-btn nav-drop-cta" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch">Kontakt aufnehmen</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch">
@@ -1223,11 +1314,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch">Kontakt aufnehmen</a>
   </div>
+  <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  </button>
 </nav>
 
 <section class="hero">
   <div class="hero-bg-layer"></div>
-  <video class="hero-mobile-video" id="mobileVideo" data-cmedia="hero.mobileVideo" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-video.mp4"></video>
+  <video class="hero-mobile-video" id="mobileVideo" data-cmedia="hero.mobileVideo" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-video-verticle.mp4"></video>
   <div class="hero-mobile-scrim"></div>
   <button type="button" class="sound-toggle sound-toggle-mobile" id="soundToggleMobile" aria-label="Mute video" aria-pressed="true">
     <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a9 9 0 0 1 0 12"/></svg>
@@ -1241,6 +1335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="hl" data-ckey="hero.headline2" data-de="Professionell begleitet von der Beratung bis zur Nachsorge." data-en="Professionally managed from consultation to aftercare.">Professionell begleitet von der Beratung bis zur Nachsorge.</span>
       </h1>
       <p class="hero-sub" data-ckey="hero.sub" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg.</p>
+      <p class="hero-sub hero-sub-mobile" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz.</p>
       <div class="hero-ctas">
         <a href="#" class="cta-btn" onclick="openConsult(event)" data-ckey="hero.ctaPrimary" data-de="Kostenlose Beratung sichern" data-en="Get your free consultation">Kostenlose Beratung sichern</a>
         <a href="#" class="cta-ghost" data-ckey="hero.ctaSecondary" data-de="Vorher-Nachher ansehen" data-en="See before &amp; after">Vorher-Nachher ansehen</a>
@@ -2000,6 +2095,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.querySelectorAll('.lang-switch button').forEach(function (s) {
     s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
   });
+
+  // Mobile-only nav: hamburger reveals the same nav links / language switch /
+  // CTA that desktop shows inline, repositioned into a dropdown row via CSS
+  // (see .nav.nav-open rules) rather than duplicating any markup.
+  var navHamburger = document.getElementById('navHamburger');
+  if (navHamburger) {
+    navHamburger.addEventListener('click', function () {
+      var nav = document.querySelector('.nav');
+      var isOpen = nav.classList.toggle('nav-open');
+      navHamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 
   /* ---- Rolling count-up numbers (trust bar) ---- */
   var countsDone = false;
