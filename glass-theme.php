@@ -4,6 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- favicon -->
+<link rel="icon" href="assets/lotus-transparent.png" type="image/x-icon">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -23,7 +25,7 @@ src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <title>Apex Beauty</title>
 <script src="assets/meta-pixel.js"></script>
-<script src="assets/cookie-consent.js"></script>
+<script src="assets/cookie-consent.js?v=23"></script>
 <script src="assets/content-loader.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
