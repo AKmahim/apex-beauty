@@ -118,7 +118,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .logo-lockup { display: flex; align-items: center; gap: 4px; }
   .logo-lockup img.lotus { height: 46px; width: auto; display: block; }
-  .logo-lockup img.wordmark { height: 55px; width: auto; display: block; }
+  .logo-lockup img.wordmark {
+    height: 70px;
+    width: auto;
+    display: block;
+    /* Optical centering against the lotus mark. */
+    transform: translateY(3px);
+  }
   .nav-links {
     display: flex;
     gap: 32px;
@@ -705,7 +711,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-links { display: none; }
     .logo-lockup { gap: 8px; flex-shrink: 0; }
     .logo-lockup img.lotus { height: 30px; }
-    .logo-lockup img.wordmark { height: 19px; }
+    .logo-lockup img.wordmark { height: 22px; transform: translateY(3px); }
     /* .nav-right is unboxed so the language switch and CTA become direct
        flex items of .nav: the switch hugs the hamburger on the right (auto
        margin absorbs the free space), while the CTA only appears inside the
