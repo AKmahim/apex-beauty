@@ -47,84 +47,6 @@
   }
   a { text-decoration: none; color: inherit; }
 
-  /* ---- NAV ---- */
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 48px;
-    background: linear-gradient(100deg, rgba(224,242,254,0.65), rgba(191,225,250,0.5) 55%, rgba(219,238,254,0.55));
-    background-color: rgba(255,255,255,0.55);
-    backdrop-filter: blur(30px) saturate(1.8);
-    -webkit-backdrop-filter: blur(30px) saturate(1.8);
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset, 0 8px 24px -18px rgba(37,99,235,0.18);
-  }
-  .logo-lockup { display: flex; align-items: center; gap: 4px; }
-  .logo-lockup img.lotus { height: 46px; width: auto; display: block; }
-  .logo-lockup img.wordmark { height: 55px; width: auto; display: block; }
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 14.5px;
-    font-weight: 500;
-    color: var(--ink-soft);
-  }
-  .nav-links a:hover { color: var(--teal-700); }
-  .nav-links a.active { color: var(--teal-700); font-weight: 700; }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .lang-switch {
-    display: flex;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 999px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
-    padding: 3px;
-  }
-  .lang-switch button { padding: 5px 12px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; }
-  .lang-switch .active {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500), var(--blue-600));
-    box-shadow: 0 4px 14px -3px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.55);
-    color: white;
-  }
-  .lang-switch .active::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.55), transparent 60%);
-    pointer-events: none;
-  }
-  .lang-switch .inactive { color: var(--ink-soft); background: transparent; }
-  .cta-btn {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500) 0%, var(--teal-600) 35%, var(--blue-600) 100%);
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 11px 22px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 10px 28px -6px rgba(13,148,136,0.55), 0 4px 14px -4px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.55);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    white-space: nowrap;
-  }
-  .cta-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.08) 45%, transparent 55%);
-    pointer-events: none;
-  }
-  .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 32px -6px rgba(13,148,136,0.65), 0 6px 16px -4px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.6); }
   .cta-ghost {
     border: 1.5px solid rgba(255,255,255,0.55);
     background: rgba(255,255,255,0.22);
@@ -643,26 +565,12 @@
 </head>
 <body data-content-page="hairpedia">
 
-<nav class="nav">
-  <a class="logo-lockup" href="glass-theme.html">
-    <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
-    <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
-  </a>
-  <div class="nav-links">
-    <a href="service-hair-transplant.html" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-    <a href="glass-theme.html" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-    <a href="glass-theme.html" data-de="Ärzte" data-en="Doctors">Ärzte</a>
-    <a href="hairpedia.html" class="active" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
-    <a href="glass-theme.html#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
-  </div>
-  <div class="nav-right">
-    <div class="lang-switch">
-      <button type="button" class="active" data-lang="de">DE</button>
-      <button type="button" class="inactive" data-lang="en">EN</button>
-    </div>
-    <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kostenlose Beratung" data-en="Free consultation">Kostenlose Beratung</a>
-  </div>
-</nav>
+<?php
+$siteHeaderMode = 'full';
+$siteSectionBase = 'index.php';
+$siteHomeHref = 'index.php';
+include __DIR__ . '/includes/site-header.php';
+?>
 
 <section class="hp-hero">
   <div class="hp-hero-bg"></div>
@@ -1043,6 +951,8 @@
 <section style="padding: 40px 48px 60px; text-align:center; max-width:1180px; margin:0 auto;">
   <a href="#" class="cta-btn" onclick="openConsult(event)" style="padding:16px 34px; font-size:15.5px; display:inline-flex;" data-de="Kostenlose Beratung sichern" data-en="Get your free consultation">Kostenlose Beratung sichern</a>
 </section>
+
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 <!-- ==================== CONSULTATION MODAL ==================== -->
 <div class="consult-overlay" id="consultOverlay">

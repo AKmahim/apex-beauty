@@ -99,90 +99,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     body { zoom: 0.9; }
   }
 
-  /* ---- NAV ---- */
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 48px;
-    transition: top 0.35s ease;
-    background: linear-gradient(100deg, rgba(224,242,254,0.65), rgba(191,225,250,0.5) 55%, rgba(219,238,254,0.55));
-    background-color: rgba(255,255,255,0.55);
-    backdrop-filter: blur(30px) saturate(1.8);
-    -webkit-backdrop-filter: blur(30px) saturate(1.8);
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset, 0 8px 24px -18px rgba(37,99,235,0.18);
-  }
-  .logo-lockup { display: flex; align-items: center; gap: 4px; }
-  .logo-lockup img.lotus { height: 46px; width: auto; display: block; }
-  .logo-lockup img.wordmark {
-    height: 70px;
-    width: auto;
-    display: block;
-    /* Optical centering against the lotus mark. */
-    transform: translateY(3px);
-  }
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 14.5px;
-    font-weight: 500;
-    color: var(--ink-soft);
-  }
-  .nav-links a:hover { color: var(--teal-700); }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .lang-switch {
-    display: flex;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 999px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
-    padding: 3px;
-  }
-  .lang-switch button { padding: 5px 12px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; }
-  .lang-switch .active {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500), var(--blue-600));
-    box-shadow: 0 4px 14px -3px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.55);
-    color: white;
-  }
-  .lang-switch .active::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.55), transparent 60%);
-    pointer-events: none;
-  }
-  .lang-switch .inactive { color: var(--ink-soft); background: transparent; }
-  .cta-btn {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500) 0%, var(--teal-600) 35%, var(--blue-600) 100%);
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 11px 22px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 10px 28px -6px rgba(13,148,136,0.55), 0 4px 14px -4px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.55);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    white-space: nowrap;
-  }
-  .cta-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.08) 45%, transparent 55%);
-    pointer-events: none;
-  }
-  .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 32px -6px rgba(13,148,136,0.65), 0 6px 16px -4px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.6); }
   .cta-ghost {
     border: 1.5px solid rgba(255,255,255,0.55);
     background: rgba(255,255,255,0.22);
@@ -195,26 +111,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 10.5px 20px;
     border-radius: 10px;
   }
-  /* .nav-collapse is invisible plumbing on desktop (display:contents leaves
-     .nav-links laid out exactly as before); on mobile it becomes the
-     hamburger's overlay dropdown. .nav-drop-cta only ever shows inside that
-     mobile dropdown. */
-  .nav-collapse { display: contents; }
-  .nav-drop-cta { display: none; }
-  .nav-hamburger {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    flex-shrink: 0;
-    background: rgba(255,255,255,0.5);
-    border: 1px solid rgba(255,255,255,0.7);
-    border-radius: 10px;
-    color: var(--ink);
-    cursor: pointer;
-  }
-  .nav-hamburger svg { width: 20px; height: 20px; }
 
   /* ---- HERO ---- */
   .hero {
@@ -676,91 +572,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .service-foot b { color: #7dd3fc; }
 
-  /* ---- Footer (flat/solid — no glass, no blur) ---- */
-  .site-footer {
-    background: #0b1524;
-    padding: 28px 48px;
-  }
-  .footer-inner {
-    max-width: 1180px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .footer-copy { font-size: 13px; color: rgba(226,232,240,0.6); }
-  .footer-social { display: flex; align-items: center; gap: 10px; }
-  .footer-social-link {
-    width: 38px; height: 38px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(226,232,240,0.75);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-  .footer-social-link:hover, .footer-social-link:focus-visible {
-    color: #ffffff; background: var(--blue-600); border-color: var(--blue-600);
-    transform: translateY(-2px);
-  }
-  .footer-social-link svg { width: 17px; height: 17px; display: block; }
-
-  @media (max-width: 640px) {
-    .site-footer { padding: 24px 20px; }
-    .footer-inner { flex-direction: column; text-align: center; }
-  }
-
   @media (max-width: 900px) {
-    .nav { padding: 10px 16px; gap: 8px; flex-wrap: wrap; }
-    .nav-links { display: none; }
-    .logo-lockup { gap: 8px; flex-shrink: 0; }
-    .logo-lockup img.lotus { height: 30px; }
-    .logo-lockup img.wordmark { height: 22px; transform: translateY(3px); }
-    /* .nav-right is unboxed so the language switch and CTA become direct
-       flex items of .nav: the switch hugs the hamburger on the right (auto
-       margin absorbs the free space), while the CTA only appears inside the
-       opened dropdown. No second language switch in the menu. */
-    .nav-right { display: contents; }
-    .nav-right .lang-switch { margin-left: auto; }
-    .nav-right .cta-btn { display: none; }
-    .nav-hamburger { display: flex; }
-    /* The dropdown overlays the page (absolute, anchored to the sticky nav)
-       instead of expanding the nav and pushing the hero down. */
-    .nav-collapse {
-      display: none;
-      position: absolute;
-      top: 100%; left: 0; right: 0;
-      /* Same glass recipe as the nav itself and the float-cards: tinted
-         translucent gradient + heavy blur + rim-lit edges, so the hero
-         frosts through the panel instead of being blocked by a flat sheet. */
-      /* The nav's own backdrop-filter forms a backdrop root, so this panel's
-         blur can't reliably frost the page behind it — the tint layers carry
-         most of the opacity (~0.95 combined) to keep the links readable,
-         with just enough translucency left for a soft glass glow. */
-      background:
-        linear-gradient(160deg, rgba(228,243,254,0.94), rgba(207,232,250,0.86) 55%, rgba(222,239,254,0.92)),
-        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82));
-      backdrop-filter: blur(30px) saturate(1.8);
-      -webkit-backdrop-filter: blur(30px) saturate(1.8);
-      border-top: 1px solid rgba(255,255,255,0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.7);
-      border-radius: 0 0 20px 20px;
-      box-shadow:
-        0 28px 52px -20px rgba(20,40,60,0.35),
-        inset 0 1px 0 rgba(255,255,255,0.9),
-        inset 0 -12px 24px -18px rgba(37,99,235,0.25);
-      padding: 10px 16px 16px;
-    }
-    .nav.nav-open .nav-collapse { display: block; }
-    .nav.nav-open .nav-links { display: flex; flex-direction: column; gap: 3px; }
-    .nav.nav-open .nav-links a {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.75);
-      background: rgba(255,255,255,0.5);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 4px 10px -6px rgba(20,40,60,0.15);
-    }
-    .nav-drop-cta { justify-content: center; text-align: center; margin-top: 12px; }
-    .nav.nav-open .nav-drop-cta { display: flex; }
-    .lang-switch { font-size: 11px; }
-    .lang-switch button { padding: 4px 9px; }
-    .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
+    .nav-right .cta-btn { white-space: nowrap; }
     /* Glass Premium mockup order: eyebrow -> heading -> subtext -> video ->
        CTAs -> stats. The markup keeps hero-visual as hero-inner's 2nd child
        (desktop needs it beside the text), so on mobile the text wrapper is
@@ -841,8 +654,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 580px) {
-    .logo-lockup img.wordmark { display: none; }
-    .nav-right .cta-btn { padding: 8px 10px; font-size: 12px; }
+    .hero-ctas .cta-btn, .hero-ctas .cta-ghost { padding: 10px 18px; font-size: 13px; }
   }
 
   /* ---- OUR NETWORK (live animated map) ---- */
@@ -1299,33 +1111,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="nav">
-  <a class="logo-lockup" href="index.php" aria-label="Apex Beauty Home">
-    <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
-    <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
-  </a>
-  <div class="nav-collapse">
-    <div class="nav-links">
-      <a href="service-hair-transplant.php" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-      <!-- <a href="#" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-      <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
-      <a href="hairpedia.php" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
-      <a href="#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
-      <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
-    </div>
-    <a href="#" class="cta-btn nav-drop-cta" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch">Kontakt aufnehmen</a>
-  </div>
-  <div class="nav-right">
-    <div class="lang-switch">
-      <button type="button" class="active" data-lang="de">DE</button>
-      <button type="button" class="inactive" data-lang="en">EN</button>
-    </div>
-    <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch">Kontakt aufnehmen</a>
-  </div>
-  <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-  </button>
-</nav>
+<?php
+$siteHeaderMode = 'full';
+$siteHomeHref = 'index.php';
+include __DIR__ . '/includes/site-header.php';
+?>
 
 <section class="hero">
   <div class="hero-bg-layer"></div>
@@ -1563,30 +1353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p class="footer-copy">© <span id="footerYear"></span> <span data-de="Apex Beauty. Alle Rechte vorbehalten." data-en="Apex Beauty. All rights reserved.">Apex Beauty. All rights reserved.</span></p>
-    <div class="footer-social">
-      <a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61583751883465" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.5c0-.87.24-1.46 1.5-1.46h1.6V4.36C15.85 4.32 15.02 4.25 14.06 4.25c-2.13 0-3.6 1.3-3.6 3.7V10.5H8v3h2.46V21h3.04z"/></svg>
-      </a>
-      <a class="footer-social-link" href="https://www.instagram.com/apex_beauty_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-          <circle cx="12" cy="12" r="4.1"/>
-          <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-      <a class="footer-social-link" href="#" onclick="return false;" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-          <rect x="2.5" y="6" width="19" height="12" rx="4"/>
-          <path d="M10.3 9.6l5 2.4-5 2.4v-4.8z" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</footer>
-<script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 <a class="whatsapp-fab" href="https://wa.me/436641999199" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
@@ -2103,18 +1870,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.querySelectorAll('.lang-switch button').forEach(function (s) {
     s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
   });
-
-  // Mobile-only nav: hamburger reveals the same nav links / language switch /
-  // CTA that desktop shows inline, repositioned into a dropdown row via CSS
-  // (see .nav.nav-open rules) rather than duplicating any markup.
-  var navHamburger = document.getElementById('navHamburger');
-  if (navHamburger) {
-    navHamburger.addEventListener('click', function () {
-      var nav = document.querySelector('.nav');
-      var isOpen = nav.classList.toggle('nav-open');
-      navHamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  }
 
   /* ---- Rolling count-up numbers (trust bar) ---- */
   var countsDone = false;
