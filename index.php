@@ -4,6 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- favicon -->
+<link rel="icon" href="assets/lotus-transparent.png" type="image/x-icon">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -23,7 +25,7 @@ src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <title>Apex Beauty</title>
 <script src="assets/meta-pixel.js"></script>
-<script src="assets/cookie-consent.js"></script>
+<script src="assets/cookie-consent.js?v=23"></script>
 <script src="assets/content-loader.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,84 +99,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     body { zoom: 0.9; }
   }
 
-  /* ---- NAV ---- */
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 48px;
-    transition: top 0.35s ease;
-    background: linear-gradient(100deg, rgba(224,242,254,0.65), rgba(191,225,250,0.5) 55%, rgba(219,238,254,0.55));
-    background-color: rgba(255,255,255,0.55);
-    backdrop-filter: blur(30px) saturate(1.8);
-    -webkit-backdrop-filter: blur(30px) saturate(1.8);
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset, 0 8px 24px -18px rgba(37,99,235,0.18);
-  }
-  .logo-lockup { display: flex; align-items: center; gap: 4px; }
-  .logo-lockup img.lotus { height: 46px; width: auto; display: block; }
-  .logo-lockup img.wordmark { height: 55px; width: auto; display: block; }
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 14.5px;
-    font-weight: 500;
-    color: var(--ink-soft);
-  }
-  .nav-links a:hover { color: var(--teal-700); }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .lang-switch {
-    display: flex;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 999px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
-    padding: 3px;
-  }
-  .lang-switch button { padding: 5px 12px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; }
-  .lang-switch .active {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500), var(--blue-600));
-    box-shadow: 0 4px 14px -3px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.55);
-    color: white;
-  }
-  .lang-switch .active::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.55), transparent 60%);
-    pointer-events: none;
-  }
-  .lang-switch .inactive { color: var(--ink-soft); background: transparent; }
-  .cta-btn {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500) 0%, var(--teal-600) 35%, var(--blue-600) 100%);
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 11px 22px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 10px 28px -6px rgba(13,148,136,0.55), 0 4px 14px -4px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.55);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    white-space: nowrap;
-  }
-  .cta-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.08) 45%, transparent 55%);
-    pointer-events: none;
-  }
-  .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 32px -6px rgba(13,148,136,0.65), 0 6px 16px -4px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.6); }
   .cta-ghost {
     border: 1.5px solid rgba(255,255,255,0.55);
     background: rgba(255,255,255,0.22);
@@ -273,6 +197,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 500px;
     margin-bottom: 28px;
   }
+  /* Shortened, hardcoded mobile-only stand-in for .hero-sub (not CMS-driven —
+     see the Glass Premium mockup, which shows a single short line instead of
+     the full CMS paragraph). Shares .hero-sub's typography via the same
+     class; hidden on desktop, swapped in on mobile in the media query below. */
+  .hero-sub-mobile { display: none; }
   /* ---- ANNOUNCEMENT BAR (top scroller) ---- */
   .announce-bar {
     position: sticky; top: 0; z-index: 60;
@@ -446,7 +375,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right center;
+    /* The source clip is portrait (1080x1920) inside a landscape frame, so
+       cover crops most of its height; shifted from 22% toward the top so the
+       Apex Beauty logo stays fully in frame instead of being clipped. */
+    object-position: center 12%;
   }
   .sound-toggle {
     position: absolute; bottom: 16px; right: 16px; z-index: 2;
@@ -640,57 +572,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .service-foot b { color: #7dd3fc; }
 
-  /* ---- Footer (flat/solid — no glass, no blur) ---- */
-  .site-footer {
-    background: #0b1524;
-    padding: 28px 48px;
-  }
-  .footer-inner {
-    max-width: 1180px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .footer-copy { font-size: 13px; color: rgba(226,232,240,0.6); }
-  .footer-social { display: flex; align-items: center; gap: 10px; }
-  .footer-social-link {
-    width: 38px; height: 38px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(226,232,240,0.75);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-  .footer-social-link:hover, .footer-social-link:focus-visible {
-    color: #ffffff; background: var(--blue-600); border-color: var(--blue-600);
-    transform: translateY(-2px);
-  }
-  .footer-social-link svg { width: 17px; height: 17px; display: block; }
-
-  @media (max-width: 640px) {
-    .site-footer { padding: 24px 20px; }
-    .footer-inner { flex-direction: column; text-align: center; }
-  }
-
   @media (max-width: 900px) {
-    .nav { padding: 10px 16px; gap: 8px; }
-    .nav-links { display: none; }
-    .logo-lockup { gap: 8px; flex-shrink: 0; }
-    .logo-lockup img.lotus { height: 30px; }
-    .logo-lockup img.wordmark { height: 19px; }
-    .nav-right { gap: 8px; }
-    .lang-switch { font-size: 11px; }
-    .lang-switch button { padding: 4px 9px; }
-    .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
-    .hero-inner { grid-template-columns: 1fr; padding: 0 20px; }
-    .hero-visual { display: none; }
-    h1 { font-size: 32px; }
-    .eyebrow { font-size: 11.5px; }
+    .nav-right .cta-btn { white-space: nowrap; }
+    /* Glass Premium mockup order: eyebrow -> heading -> subtext -> video ->
+       CTAs -> stats. The markup keeps hero-visual as hero-inner's 2nd child
+       (desktop needs it beside the text), so on mobile the text wrapper is
+       unboxed via display:contents and every hero-inner descendant gets an
+       explicit flex order instead of relying on DOM position. */
+    /* Mobile hero also drops its forced 92vh min-height (a desktop-only
+       full-bleed-video artifact) and shrinks its top/bottom padding, so the
+       whole hero + trust-bar stack fits in roughly one screen instead of
+       leaving a tall gap before the stats row. */
+    /* min-height fills the space left under the announce bar + nav and above
+       the trust bar, so the "Unser Versprechen" section only appears on
+       scroll; the flex column spreads its rows evenly into that space so the
+       layout breathes instead of bunching at the top. */
+    .hero { min-height: calc(100svh - 182px); padding: 12px 0 10px; }
+    /* The announce bar dismisses itself after 60s (adds .is-closed, stays in
+       the DOM) — reclaim its 49px so the trust bar keeps hugging the fold
+       instead of letting the promise section peek in. */
+    body:has(#announceBar.is-closed) .hero { min-height: calc(100svh - 133px); }
+    .hero-inner {
+      grid-template-columns: 1fr; padding: 0 20px;
+      display: flex; flex-direction: column; align-items: stretch;
+      justify-content: space-evenly; flex: 1;
+      gap: 0; /* desktop grid's 48px gap would otherwise pad every flex row */
+    }
+    .hero-inner > div:first-child { display: contents; }
+    .eyebrow { order: 1; margin-bottom: 12px; align-self: flex-start; }
+    h1 { order: 2; font-size: 26px; margin-bottom: 10px; }
+    /* Only the first headline sentence shows on mobile (Glass Premium). */
+    h1 br { display: none; }
+    h1 .hl { display: none; }
+    .hero-sub { display: none; order: 3; }
+    .hero-sub-mobile { display: block; margin-bottom: 14px; font-size: 13.5px; line-height: 1.55; }
+    .hero-visual { order: 4; height: 250px; margin-top: 0; margin-bottom: 14px; }
+    .hero-ctas { order: 5; margin-bottom: 10px; gap: 10px; }
+    .hero-ctas .cta-btn, .hero-ctas .cta-ghost { padding: 11px 22px; font-size: 14px; }
+    .hero-microtrust { display: none; order: 6; }
+    .fc-2 { display: none; }
+    /* 360° float card pinned to the video's bottom-left corner, scaled down
+       so it doesn't cover the footage. */
+    .fc-1 {
+      top: auto; bottom: 10px; left: 10px; right: auto;
+      transform: scale(0.8); transform-origin: bottom left;
+    }
+    .fc-1:hover { transform: scale(0.8); }
+    /* Keep the eyebrow pill on a single line on phones. */
+    .eyebrow { font-size: 10px; padding: 5px 11px; white-space: nowrap; }
+    .eyebrow span:last-child { overflow: hidden; text-overflow: ellipsis; }
     .announce-inner { padding: 9px 16px; gap: 10px; }
     .announce-items { gap: 16px; }
     .announce-item b { font-size: 10.5px; }
     .announce-divider { display: none; }
     .hero-ctas { flex-wrap: wrap; }
-    .hero-microtrust { max-width: none; flex-wrap: wrap; }
-    .trust-inner { grid-template-columns: 1fr 1fr; padding: 28px 20px; }
+    .trust-inner { grid-template-columns: repeat(3, auto); justify-content: space-between; padding: 10px 16px 12px; gap: 8px; }
+    .trust-item { flex-direction: column; align-items: center; text-align: center; gap: 2px; }
+    .trust-item .trust-icon { width: 22px; height: 22px; }
+    .trust-inner .trust-item:nth-child(4) { display: none; }
+    .trust-num { font-size: 13.5px; color: var(--blue-700); }
+    .trust-label { font-size: 9px; white-space: nowrap; }
     .service { padding: 64px 20px 72px; }
     .service-steps { grid-template-columns: 1fr; gap: 16px; position: relative; }
     .service-steps::before { display: none; }
@@ -706,47 +647,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .step-num { margin-bottom: 0; flex-shrink: 0; }
     .step-text { flex: 1; min-width: 0; }
 
-    /* ---- Mobile: full-bleed video background instead of mesh gradient ---- */
+    /* ---- Mobile: light "Glass Premium" layout — hero-visual (the same
+       rounded video card used on desktop) stacks below the text instead of
+       a full-bleed background video, so text stays dark-on-light like desktop. ---- */
     .hero { overflow: hidden; }
-    .hero-bg-layer { display: none; }
-    .hero-mobile-video {
-      display: block;
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      z-index: 0;
-    }
-    /* Kept consistently dark top-to-bottom (no lighter middle band) so hero
-       text stays readable no matter how bright any given video frame is —
-       robust to the actual footage rather than tuned to one moment of it. */
-    .hero-mobile-scrim {
-      display: block;
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(6,10,16,0.72) 0%, rgba(6,10,16,0.6) 45%, rgba(6,10,16,0.82) 100%);
-      z-index: 1;
-    }
-    .sound-toggle-mobile { display: flex; bottom: 20px; right: 20px; }
-    .eyebrow {
-      color: #fff;
-      background: rgba(255,255,255,0.16);
-      border-color: rgba(255,255,255,0.3);
-    }
-    .eyebrow .dot { background: var(--accent-amber); }
-    h1 { color: #ffffff; }
-    h1 span { background: linear-gradient(100deg, #7ab8ff, #93c5fd); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero-sub { color: rgba(255,255,255,0.82); }
-    .hero-ctas .cta-ghost { color: #fff; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); }
-    .hero-microtrust { color: rgba(255,255,255,0.75); }
-    .hero-microtrust b { color: #ffffff; }
   }
 
-  @media (max-width: 380px) {
-    .logo-lockup img.wordmark { display: none; }
-    .nav-right .cta-btn { padding: 8px 10px; font-size: 12px; }
+  @media (max-width: 580px) {
+    .hero-ctas .cta-btn, .hero-ctas .cta-ghost { padding: 10px 18px; font-size: 13px; }
   }
 
   /* ---- OUR NETWORK (live animated map) ---- */
@@ -1143,8 +1051,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 </head>
 <body data-content-page="home">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6ZC5JRP"
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-W6ZC5JRP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
@@ -1203,31 +1111,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<nav class="nav">
-  <div class="logo-lockup">
-    <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
-    <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
-  </div>
-  <div class="nav-links">
-    <a href="service-hair-transplant.html" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-    <!-- <a href="#" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-    <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
-    <a href="hairpedia.html" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
-    <a href="#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
-    <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
-  </div>
-  <div class="nav-right">
-    <div class="lang-switch">
-      <button type="button" class="active" data-lang="de">DE</button>
-      <button type="button" class="inactive" data-lang="en">EN</button>
-    </div>
-    <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch">Kontakt aufnehmen</a>
-  </div>
-</nav>
+<?php
+$siteHeaderMode = 'full';
+$siteHomeHref = 'index.php';
+include __DIR__ . '/includes/site-header.php';
+?>
 
 <section class="hero">
   <div class="hero-bg-layer"></div>
-  <video class="hero-mobile-video" id="mobileVideo" data-cmedia="hero.mobileVideo" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-video.mp4"></video>
+  <video class="hero-mobile-video" id="mobileVideo" data-cmedia="hero.mobileVideo" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-video-verticle.mp4"></video>
   <div class="hero-mobile-scrim"></div>
   <button type="button" class="sound-toggle sound-toggle-mobile" id="soundToggleMobile" aria-label="Mute video" aria-pressed="true">
     <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a9 9 0 0 1 0 12"/></svg>
@@ -1241,6 +1133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="hl" data-ckey="hero.headline2" data-de="Professionell begleitet von der Beratung bis zur Nachsorge." data-en="Professionally managed from consultation to aftercare.">Professionell begleitet von der Beratung bis zur Nachsorge.</span>
       </h1>
       <p class="hero-sub" data-ckey="hero.sub" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg.</p>
+      <p class="hero-sub hero-sub-mobile" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz.</p>
       <div class="hero-ctas">
         <a href="#" class="cta-btn" onclick="openConsult(event)" data-ckey="hero.ctaPrimary" data-de="Kostenlose Beratung sichern" data-en="Get your free consultation">Kostenlose Beratung sichern</a>
         <a href="#" class="cta-ghost" data-ckey="hero.ctaSecondary" data-de="Vorher-Nachher ansehen" data-en="See before &amp; after">Vorher-Nachher ansehen</a>
@@ -1419,7 +1312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="faq-kicker" data-de="Fragen &amp; Antworten" data-en="Questions &amp; answers">Fragen &amp; Antworten</div>
         <h2 data-ckey="faq.heading" data-de="Häufig gestellte Fragen" data-en="Frequently asked questions">Häufig gestellte Fragen</h2>
         <p data-de="Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet." data-en="The questions that most often hold prospective patients back from booking a consultation, answered honestly.">Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet.</p>
-        <a href="service-hair-transplant.html" style="display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline;" data-de="Mehr über die Haartransplantation erfahren →" data-en="Learn more about hair transplantation →">Mehr über die Haartransplantation erfahren →</a>
+        <a href="service-hair-transplant.php" style="display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline;" data-de="Mehr über die Haartransplantation erfahren →" data-en="Learn more about hair transplantation →">Mehr über die Haartransplantation erfahren →</a>
       </div>
     </div>
 
@@ -1460,30 +1353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p class="footer-copy">© <span id="footerYear"></span> <span data-de="Apex Beauty. Alle Rechte vorbehalten." data-en="Apex Beauty. All rights reserved.">Apex Beauty. All rights reserved.</span></p>
-    <div class="footer-social">
-      <a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61583751883465" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.5c0-.87.24-1.46 1.5-1.46h1.6V4.36C15.85 4.32 15.02 4.25 14.06 4.25c-2.13 0-3.6 1.3-3.6 3.7V10.5H8v3h2.46V21h3.04z"/></svg>
-      </a>
-      <a class="footer-social-link" href="https://www.instagram.com/apex_beauty_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-          <circle cx="12" cy="12" r="4.1"/>
-          <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-      <a class="footer-social-link" href="#" onclick="return false;" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-          <rect x="2.5" y="6" width="19" height="12" rx="4"/>
-          <path d="M10.3 9.6l5 2.4-5 2.4v-4.8z" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</footer>
-<script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 <a class="whatsapp-fab" href="https://wa.me/436641999199" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
@@ -1644,7 +1514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="check-row">
         <input type="checkbox" id="cfPrivacy" onchange="validateStep3()">
-        <span data-de="Ich habe die &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *">Ich habe die <a href="privacy.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
+        <span data-de="Ich habe die &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *">Ich habe die <a href="privacy.php" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
       </div>
       <div class="check-row">
         <input type="checkbox" id="cfMarketing">

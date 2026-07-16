@@ -11,7 +11,6 @@
 (function () {
   var STYLE_ID = 'apex-cookie-consent-style';
   var BANNER_ID = 'apexCookieBanner';
-  var REOPEN_ID = 'apexCookieReopen';
 
   function injectStyle() {
     if (document.getElementById(STYLE_ID)) return;
@@ -45,11 +44,6 @@
       '#' + BANNER_ID + ' .acc-btn-save{background:#fff;color:#0f2027;}',
       '#' + BANNER_ID + ' .acc-btn-accept{background:linear-gradient(100deg,#0ea5e9,#2563eb);',
       'color:#fff;border-color:transparent;}',
-      '#' + REOPEN_ID + '{position:fixed;left:16px;bottom:16px;z-index:9998;',
-      'font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;',
-      'font-size:12px;font-weight:600;color:#45596a;background:rgba(255,255,255,0.9);',
-      'border:1px solid #dbe6f2;border-radius:999px;padding:8px 14px;cursor:pointer;',
-      'box-shadow:0 8px 20px -10px rgba(15,32,39,0.25);}',
       '@media (max-width:480px){#' + BANNER_ID + ' .acc-actions{flex-direction:column;}}'
     ].join('');
     document.head.appendChild(style);
@@ -89,7 +83,6 @@
   function closeBanner() {
     var el = document.getElementById(BANNER_ID);
     if (el) el.remove();
-    showReopenLink();
   }
 
   function openBanner() {
@@ -137,24 +130,9 @@
     }
   }
 
-  function showReopenLink() {
-    if (document.getElementById(REOPEN_ID)) return;
-    var link = document.createElement('button');
-    link.id = REOPEN_ID;
-    link.type = 'button';
-    link.setAttribute('data-de', '🍪 Cookie-Einstellungen');
-    link.setAttribute('data-en', '🍪 Cookie settings');
-    var lang = document.documentElement.lang || 'de';
-    link.textContent = lang === 'de' ? '🍪 Cookie-Einstellungen' : '🍪 Cookie settings';
-    link.addEventListener('click', openBanner);
-    document.body.appendChild(link);
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
     if (!window.__apexConsent.hasDecided()) {
       openBanner();
-    } else {
-      showReopenLink();
     }
   });
 })();

@@ -5,9 +5,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Haartransplantation · Apex Beauty</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '972641739140966');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <script src="assets/meta-pixel.js"></script>
 <script src="assets/cookie-consent.js"></script>
 <script src="assets/content-loader.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W6ZC5JRP');</script>
+<!-- End Google Tag Manager -->
 <style>
   :root {
     --teal-400: #38bdf8;
@@ -47,84 +71,6 @@
   }
   a { text-decoration: none; color: inherit; }
 
-  /* ---- NAV ---- */
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 48px;
-    background: linear-gradient(100deg, rgba(224,242,254,0.65), rgba(191,225,250,0.5) 55%, rgba(219,238,254,0.55));
-    background-color: rgba(255,255,255,0.55);
-    backdrop-filter: blur(30px) saturate(1.8);
-    -webkit-backdrop-filter: blur(30px) saturate(1.8);
-    border-bottom: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset, 0 8px 24px -18px rgba(37,99,235,0.18);
-  }
-  .logo-lockup { display: flex; align-items: center; gap: 4px; }
-  .logo-lockup img.lotus { height: 46px; width: auto; display: block; }
-  .logo-lockup img.wordmark { height: 55px; width: auto; display: block; }
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 14.5px;
-    font-weight: 500;
-    color: var(--ink-soft);
-  }
-  .nav-links a:hover { color: var(--teal-700); }
-  .nav-links a.active { color: var(--teal-700); font-weight: 700; }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .lang-switch {
-    display: flex;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 999px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
-    padding: 3px;
-  }
-  .lang-switch button { padding: 5px 12px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; }
-  .lang-switch .active {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500), var(--blue-600));
-    box-shadow: 0 4px 14px -3px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.55);
-    color: white;
-  }
-  .lang-switch .active::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.55), transparent 60%);
-    pointer-events: none;
-  }
-  .lang-switch .inactive { color: var(--ink-soft); background: transparent; }
-  .cta-btn {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(100deg, var(--teal-500) 0%, var(--teal-600) 35%, var(--blue-600) 100%);
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 11px 22px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 10px 28px -6px rgba(13,148,136,0.55), 0 4px 14px -4px rgba(37,99,235,0.5), inset 0 1px 0 rgba(255,255,255,0.55);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    white-space: nowrap;
-  }
-  .cta-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.08) 45%, transparent 55%);
-    pointer-events: none;
-  }
-  .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 32px -6px rgba(13,148,136,0.65), 0 6px 16px -4px rgba(37,99,235,0.6), inset 0 1px 0 rgba(255,255,255,0.6); }
   .cta-ghost {
     border: 1.5px solid rgba(255,255,255,0.55);
     background: rgba(255,255,255,0.22);
@@ -155,35 +101,6 @@
   @media (max-width: 640px) {
     .whatsapp-fab { bottom: 16px; right: 16px; width: 50px; height: 50px; }
     .whatsapp-fab svg { width: 27px; height: 27px; }
-  }
-
-  /* ---- Footer (same as glass-theme.html) ---- */
-  .site-footer {
-    background: #0b1524;
-    padding: 28px 48px;
-  }
-  .footer-inner {
-    max-width: 1180px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .footer-copy { font-size: 13px; color: rgba(226,232,240,0.6); }
-  .footer-social { display: flex; align-items: center; gap: 10px; }
-  .footer-social-link {
-    width: 38px; height: 38px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(226,232,240,0.75);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-  .footer-social-link:hover, .footer-social-link:focus-visible {
-    color: #ffffff; background: var(--blue-600); border-color: var(--blue-600);
-    transform: translateY(-2px);
-  }
-  .footer-social-link svg { width: 17px; height: 17px; display: block; }
-  @media (max-width: 640px) {
-    .site-footer { padding: 24px 20px; }
-    .footer-inner { flex-direction: column; text-align: center; }
   }
 
   /* ---- HAIRPEDIA HERO ---- */
@@ -686,27 +603,17 @@
 </style>
 </head>
 <body data-content-page="service">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-W6ZC5JRP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<nav class="nav">
-  <a class="logo-lockup" href="glass-theme.html">
-    <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
-    <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
-  </a>
-  <div class="nav-links">
-    <a href="service-hair-transplant.html" class="active" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-    <a href="glass-theme.html" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-    <a href="glass-theme.html" data-de="Ärzte" data-en="Doctors">Ärzte</a>
-    <a href="hairpedia.html" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
-    <a href="glass-theme.html#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
-  </div>
-  <div class="nav-right">
-    <div class="lang-switch">
-      <button type="button" class="active" data-lang="de">DE</button>
-      <button type="button" class="inactive" data-lang="en">EN</button>
-    </div>
-    <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kostenlose Beratung" data-en="Free consultation">Kostenlose Beratung</a>
-  </div>
-</nav>
+<?php
+$siteHeaderMode = 'full';
+$siteSectionBase = 'index.php';
+$siteHomeHref = 'index.php';
+include __DIR__ . '/includes/site-header.php';
+?>
 
 <section class="hp-hero">
   <div class="hp-hero-bg"></div>
@@ -1198,30 +1105,7 @@
   });
 </script>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p class="footer-copy">© <span id="footerYear"></span> <span data-de="Apex Beauty. Alle Rechte vorbehalten." data-en="Apex Beauty. All rights reserved.">Apex Beauty. All rights reserved.</span></p>
-    <div class="footer-social">
-      <a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61583751883465" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.5c0-.87.24-1.46 1.5-1.46h1.6V4.36C15.85 4.32 15.02 4.25 14.06 4.25c-2.13 0-3.6 1.3-3.6 3.7V10.5H8v3h2.46V21h3.04z"/></svg>
-      </a>
-      <a class="footer-social-link" href="https://www.instagram.com/apex_beauty_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-          <circle cx="12" cy="12" r="4.1"/>
-          <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-      <a class="footer-social-link" href="#" onclick="return false;" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-          <rect x="2.5" y="6" width="19" height="12" rx="4"/>
-          <path d="M10.3 9.6l5 2.4-5 2.4v-4.8z" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</footer>
-<script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 <a class="whatsapp-fab" href="https://wa.me/436641999199" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
