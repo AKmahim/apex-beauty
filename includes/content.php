@@ -58,8 +58,15 @@ function apex_update_section(string $page, string $section, array $data): ?array
     return $current[$section];
 }
 
-function apex_set_section_media(string $page, string $section, string $field, string $tmpPath, string $originalName): ?string
-{
+function apex_set_section_media(
+    string $page,
+    string $section,
+    string $field,
+    string $tmpPath,
+    string $originalName,
+    ?string $listKey = null,
+    ?int $listIndex = null
+): ?string {
     $current = apex_get_page_content($page);
     if ($current === null || !array_key_exists($section, $current)) {
         return null;
@@ -77,7 +84,23 @@ function apex_set_section_media(string $page, string $section, string $field, st
     }
 
     $publicPath = 'assets/content/' . $filename;
-    $current[$section][$field] = $publicPath;
+
+    if ($listKey !== null && $listIndex !== null) {
+        // Per-item media (e.g. a Vorher/Nachher case's photo) — same upload
+        // endpoint as section-level media, just scoped one level deeper into
+        // a list item. Auto-creates the item slot so a brand-new, not-yet-
+        // saved list row (added in the admin panel but no "Save section"
+        // click yet) can still receive its photo immediately.
+        if (!isset($current[$section][$listKey]) || !is_array($current[$section][$listKey])) {
+            $current[$section][$listKey] = [];
+        }
+        if (!isset($current[$section][$listKey][$listIndex]) || !is_array($current[$section][$listKey][$listIndex])) {
+            $current[$section][$listKey][$listIndex] = [];
+        }
+        $current[$section][$listKey][$listIndex][$field] = $publicPath;
+    } else {
+        $current[$section][$field] = $publicPath;
+    }
     apex_write_page_content($page, $current);
 
     return $publicPath;

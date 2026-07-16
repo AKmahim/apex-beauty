@@ -190,7 +190,19 @@ if ($resource === 'content') {
         if (!isset($_FILES['file']) || !is_uploaded_file($_FILES['file']['tmp_name'])) {
             apex_json_response(['error' => 'No file uploaded.'], 400);
         }
-        $stored = apex_set_section_media($page, $adminSegments[2], $adminSegments[4], $_FILES['file']['tmp_name'], $_FILES['file']['name']);
+        // Optional: present when uploading a photo for one item in a list
+        // (e.g. one Vorher/Nachher case) rather than a flat section field.
+        $listKey = isset($_POST['listKey']) && $_POST['listKey'] !== '' ? (string) $_POST['listKey'] : null;
+        $listIndex = isset($_POST['index']) && $_POST['index'] !== '' ? (int) $_POST['index'] : null;
+        $stored = apex_set_section_media(
+            $page,
+            $adminSegments[2],
+            $adminSegments[4],
+            $_FILES['file']['tmp_name'],
+            $_FILES['file']['name'],
+            $listKey,
+            $listIndex
+        );
         if ($stored === null) {
             apex_json_response(['error' => 'Unknown section.'], 404);
         }

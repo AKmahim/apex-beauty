@@ -39,6 +39,25 @@ return [
                     ['key' => 'video', 'label' => 'Background video', 'type' => 'video'],
                 ],
             ],
+            'beforeAfter' => [
+                'label' => 'Before & after (Vorher/Nachher carousel)',
+                'fields' => [
+                    ['key' => 'heading1', 'label' => 'Heading — line 1', 'type' => 'text'],
+                    ['key' => 'heading2', 'label' => 'Heading — line 2 (highlighted)', 'type' => 'text'],
+                    ['key' => 'sub', 'label' => 'Subtext', 'type' => 'richtext'],
+                ],
+                'list' => [
+                    'key' => 'cases', 'label' => 'Cases', 'itemType' => 'fields',
+                    'itemFields' => [
+                        ['key' => 'vorherImage', 'label' => 'Vorher photo', 'type' => 'image'],
+                        ['key' => 'vorherLine1', 'label' => 'Vorher — line 1', 'type' => 'text'],
+                        ['key' => 'vorherLine2', 'label' => 'Vorher — line 2', 'type' => 'text'],
+                        ['key' => 'nachherImage', 'label' => 'Nachher photo', 'type' => 'image'],
+                        ['key' => 'nachherLine1', 'label' => 'Nachher — line 1', 'type' => 'text'],
+                        ['key' => 'nachherLine2', 'label' => 'Nachher — line 2', 'type' => 'text'],
+                    ],
+                ],
+            ],
             'network' => [
                 'label' => 'Aftercare network section',
                 'fields' => [

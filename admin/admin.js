@@ -482,6 +482,31 @@
     }
     // itemType 'fields': one field-row-ish block per named field, grouped together.
     const rows = list.itemFields.map((f) => {
+      if (f.type === 'image' || f.type === 'video') {
+        // Per-item media (e.g. one Vorher/Nachher case's photo). Uploads hit
+        // the same media endpoint as section-level fields, just with an
+        // extra listKey/index so the backend writes it into this list item
+        // instead of the section root — see the item-media-upload-btn
+        // handler below. The item's position in the DOM at upload time (not
+        // a stored index) decides which array slot it targets, so this only
+        // stays correct if the row isn't reordered between adding it and
+        // saving — there's no drag-reorder UI, so that's not a real risk.
+        const path = (item && item[f.key]) || '';
+        const previewUrl = path ? siteAssetUrl(path) : '';
+        const preview = path
+          ? (f.type === 'video' ? `<video class="media-preview" src="${escapeAttr(previewUrl)}" muted></video>` : `<img class="media-preview" src="${escapeAttr(previewUrl)}">`)
+          : `<div class="media-preview"></div>`;
+        return `
+          <div class="item-media-row" data-item-media-field="${f.key}" data-path="${escapeAttr(path)}" style="display:grid;grid-template-columns:110px 1fr;gap:8px;margin-bottom:4px;align-items:center;">
+            <label style="font-size:11.5px;color:var(--ink-soft);">${escapeHtml(f.label)}</label>
+            <div style="display:flex;align-items:center;gap:8px;">
+              ${preview}
+              <input type="file" accept="${f.type === 'video' ? 'video/*' : 'image/*'}">
+              <button type="button" class="item-media-upload-btn">Upload</button>
+              <span class="item-media-status" style="font-size:11px;color:var(--ink-soft);"></span>
+            </div>
+          </div>`;
+      }
       const v = (item && item[f.key]) || {};
       return `
         <div style="display:grid;grid-template-columns:110px 1fr 1fr;gap:8px;margin-bottom:4px;">
@@ -576,6 +601,14 @@
         payload[schema.list.key] = rows.map((row) => {
           const item = {};
           schema.list.itemFields.forEach((f) => {
+            if (f.type === 'image' || f.type === 'video') {
+              // Already saved directly to disk by its own upload endpoint —
+              // just carry the current path forward so re-saving the text
+              // fields in this item doesn't wipe it out.
+              const mediaEl = row.querySelector(`[data-item-media-field="${f.key}"]`);
+              item[f.key] = mediaEl ? (mediaEl.dataset.path || '') : '';
+              return;
+            }
             item[f.key] = {
               de: row.querySelector(`[data-item-field="${f.key}"][data-item-lang="de"]`).value.trim(),
               en: row.querySelector(`[data-item-field="${f.key}"][data-item-lang="en"]`).value.trim()
@@ -620,6 +653,46 @@
         sectionState[page][section][field] = data.path;
         const preview = row.querySelector('.media-preview');
         preview.src = siteAssetUrl(data.path);
+        status.textContent = 'Uploaded ✓';
+      } else {
+        status.textContent = 'Upload failed.';
+      }
+      return;
+    }
+    const itemUploadBtn = e.target.closest('.item-media-upload-btn');
+    if (itemUploadBtn) {
+      const mediaRow = itemUploadBtn.closest('[data-item-media-field]');
+      const listRow = itemUploadBtn.closest('[data-list-item]');
+      const container = itemUploadBtn.closest('.list-items');
+      const card = itemUploadBtn.closest('.content-card');
+      const fileInput = mediaRow.querySelector('input[type="file"]');
+      const file = fileInput.files[0];
+      const status = mediaRow.querySelector('.item-media-status');
+      if (!file) { status.textContent = 'Choose a file first.'; return; }
+      const { page, section } = card.dataset;
+      const field = mediaRow.dataset.itemMediaField;
+      const listKey = container.dataset.listKey;
+      // Position in the DOM right now, not a stored id — matches how the
+      // backend addresses list items (see apex_set_section_media).
+      const index = Array.from(container.children).indexOf(listRow);
+      status.textContent = 'Uploading…';
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('listKey', listKey);
+      formData.append('index', String(index));
+      const res = await api(`/content/${page}/${section}/media/${field}`, { method: 'POST', body: formData });
+      if (res.ok) {
+        const data = await res.json();
+        mediaRow.dataset.path = data.path;
+        const previewHolder = mediaRow.querySelector('.media-preview');
+        if (previewHolder.tagName === 'DIV') {
+          const img = document.createElement('img');
+          img.className = 'media-preview';
+          img.src = siteAssetUrl(data.path);
+          previewHolder.replaceWith(img);
+        } else {
+          previewHolder.src = siteAssetUrl(data.path);
+        }
         status.textContent = 'Uploaded ✓';
       } else {
         status.textContent = 'Upload failed.';

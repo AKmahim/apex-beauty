@@ -8,7 +8,11 @@
 //   data-clist="section.listKey"   repeatable list container; its first child
 //                                  marked data-citem is the template, cloned
 //                                  once per array entry. Fields inside a clone
-//                                  use data-cfield="itemFieldKey".
+//                                  use data-cfield="itemFieldKey" for text, or
+//                                  data-cmediafield="itemFieldKey" for an
+//                                  image/video whose src comes from that item
+//                                  (as opposed to data-cmedia, which always
+//                                  resolves against the top-level content).
 //
 // After applying content, it re-runs the page's own applyLang(), so the
 // DE/EN toggle keeps working on freshly-loaded text.
@@ -55,6 +59,15 @@
           // the descendant marked data-ctext (or the clone root if none).
           applyBilingual(clone.querySelector('[data-ctext]') || clone, item);
         }
+        clone.querySelectorAll('[data-cmediafield]').forEach(function (mediaEl) {
+          var path = item[mediaEl.getAttribute('data-cmediafield')];
+          if (!path) return;
+          if (mediaEl.tagName === 'IMG') {
+            mediaEl.src = path;
+          } else if (mediaEl.tagName === 'VIDEO') {
+            mediaEl.src = path;
+          }
+        });
         frag.appendChild(clone);
       });
       container.innerHTML = '';

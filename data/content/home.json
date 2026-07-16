@@ -78,6 +78,62 @@
         },
         "video": "assets/apex-drone.mp4"
     },
+    "beforeAfter": {
+        "heading1": {
+            "de": "Jeder Haaransatz.",
+            "en": "Every hairline."
+        },
+        "heading2": {
+            "de": "Mit Präzision gestaltet.",
+            "en": "Designed with precision."
+        },
+        "sub": {
+            "de": "Jeder Fall beginnt mit einer Kopfhaut-Analyse und endet mit einem Ergebnis, das individuell geplant wurde.",
+            "en": "Every case starts with a scalp analysis and ends with a result that was planned individually."
+        },
+        "cases": [
+            {
+                "vorherImage": "assets/before.png",
+                "vorherLine1": {
+                    "de": "Bereich: Stirn & Krone",
+                    "en": "Area: Hairline & crown"
+                },
+                "vorherLine2": {
+                    "de": "Dichte: Gering",
+                    "en": "Density: Low"
+                },
+                "nachherImage": "assets/after.png",
+                "nachherLine1": {
+                    "de": "Transplantate präzise platziert",
+                    "en": "Grafts precisely placed"
+                },
+                "nachherLine2": {
+                    "de": "Natürlicher Haaransatz · Verbesserte Dichte",
+                    "en": "Natural hairline · Improved density"
+                }
+            },
+            {
+                "vorherImage": "assets/content/home-beforeAfter-vorherImage-1784118032.jpg",
+                "vorherLine1": {
+                    "de": "Bereich: Oberkopf",
+                    "en": "Area: Crown"
+                },
+                "vorherLine2": {
+                    "de": "Dichte: Ausgedünnt",
+                    "en": "Density: Thinned"
+                },
+                "nachherImage": "assets/content/home-beforeAfter-nachherImage-1784118047.jpg",
+                "nachherLine1": {
+                    "de": "Volle Haardichte wiederhergestellt",
+                    "en": "Full density restored"
+                },
+                "nachherLine2": {
+                    "de": "Natürlicher Haaransatz · Kräftiges Ergebnis",
+                    "en": "Natural hairline · Strong result"
+                }
+            }
+        ]
+    },
     "network": {
         "heading": {
             "de": "Ein Anbieter, verbunden über vier Länder",
