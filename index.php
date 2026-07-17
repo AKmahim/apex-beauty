@@ -25,8 +25,8 @@ src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <title>Apex Beauty</title>
 <script src="assets/meta-pixel.js"></script>
-<script src="assets/cookie-consent.js?v=23"></script>
-<script src="assets/content-loader.js"></script>
+<script src="assets/cookie-consent.js?v=24"></script>
+<script src="assets/content-loader.js?v=23"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..800&display=swap" rel="stylesheet">
@@ -517,6 +517,145 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .step-num { transition: transform 0.25s ease; }
   .step-card:hover .step-num { transform: translateY(-2px) scale(1.1); }
 
+  /* ---- BEFORE & AFTER ---- */
+  .ba-section {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 88px 48px 96px;
+  }
+  .ba-bg-layer {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 10% 15%, rgba(125,211,252,0.18) 0%, transparent 45%),
+      radial-gradient(circle at 92% 85%, rgba(37,99,235,0.1) 0%, transparent 50%);
+  }
+  .ba-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; }
+  .ba-head { max-width: 640px; margin: 0 auto 48px; text-align: center; }
+  .ba-kicker {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--teal-700); margin-bottom: 14px;
+  }
+  .ba-head h2 {
+    font-family: 'Urbanist', -apple-system, sans-serif; font-size: 38px; line-height: 1.16;
+    font-weight: 300; color: var(--ink); margin-bottom: 14px; letter-spacing: -0.01em;
+  }
+  .ba-head h2 .hl {
+    background: linear-gradient(100deg, var(--blue-600), var(--blue-700));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-weight: 600;
+  }
+  .ba-head p { font-size: 15.5px; color: var(--ink-soft); line-height: 1.6; }
+
+  .ba-carousel { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
+  .ba-arrow {
+    flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.9);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    box-shadow: 0 12px 28px -10px rgba(20,40,60,0.28), inset 0 1px 0 rgba(255,255,255,0.9);
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    color: var(--blue-700); transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .ba-arrow:hover { transform: scale(1.08); }
+  .ba-arrow svg { width: 20px; height: 20px; }
+
+  .ba-track { flex: 1; min-width: 0; overflow: hidden; touch-action: pan-y; }
+  .ba-slide { display: none; }
+  .ba-slide.active { display: block; }
+  /* Direction-aware entrance: prev/next arrows and dot-jumps pick dir-next
+     or dir-prev (see the carousel script) so the case actually slides in
+     from the side it logically came from, instead of just fading in place.
+     dir-init is the original subtle fade, used only on first paint. */
+  .ba-slide.active.dir-next { animation: baSlideInRight 0.5s cubic-bezier(0.22, 0.9, 0.32, 1); }
+  .ba-slide.active.dir-prev { animation: baSlideInLeft 0.5s cubic-bezier(0.22, 0.9, 0.32, 1); }
+  .ba-slide.active.dir-init { animation: baFade 0.35s ease; }
+  @keyframes baFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes baSlideInRight { from { opacity: 0; transform: translateX(44px) scale(0.98); } to { opacity: 1; transform: translateX(0) scale(1); } }
+  @keyframes baSlideInLeft { from { opacity: 0; transform: translateX(-44px) scale(0.98); } to { opacity: 1; transform: translateX(0) scale(1); } }
+
+  .ba-compare {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+    border-radius: 26px; padding: 14px;
+    background: linear-gradient(160deg, rgba(255,255,255,0.62), rgba(255,255,255,0.4));
+    backdrop-filter: blur(24px) saturate(2); -webkit-backdrop-filter: blur(24px) saturate(2);
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow:
+      0 30px 70px -24px rgba(20,40,60,0.32),
+      inset 0 1px 0 rgba(255,255,255,0.95),
+      inset 0 -14px 26px -20px rgba(37,99,235,0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .ba-compare:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 36px 80px -22px rgba(20,40,60,0.36),
+      inset 0 1px 0 rgba(255,255,255,0.95),
+      inset 0 -14px 26px -20px rgba(37,99,235,0.24);
+  }
+  .ba-photo { position: relative; aspect-ratio: 3 / 4.7; }
+  .ba-photo-frame {
+    position: absolute; inset: 0; overflow: hidden; border-radius: 18px;
+    background: linear-gradient(160deg, #cfe8f7 0%, #7fb8e0 50%, #3d6fd6 100%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4), inset 0 -40px 60px -20px rgba(10,20,40,0.28);
+  }
+  .ba-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ba-tag {
+    position: absolute; top: 14px; left: 14px; z-index: 2;
+    background: rgba(255,255,255,0.92); color: var(--ink);
+    font-size: 11.5px; font-weight: 800; letter-spacing: 0.04em;
+    padding: 6px 14px; border-radius: 999px;
+    box-shadow: 0 6px 14px -6px rgba(20,40,60,0.3);
+  }
+  .ba-photo.ba-after .ba-tag { left: auto; right: 14px; }
+  .ba-placeholder {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 20px;
+    color: rgba(255,255,255,0.85);
+  }
+  .ba-placeholder svg { width: 34px; height: 34px; opacity: 0.85; }
+  .ba-placeholder b { font-size: 12.5px; font-weight: 700; }
+  .ba-callout {
+    position: absolute; bottom: -16px; left: 12px; right: 12px; z-index: 2;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px) saturate(2); -webkit-backdrop-filter: blur(20px) saturate(2);
+    border: 1px solid rgba(255,255,255,0.95); border-radius: 14px;
+    padding: 12px 14px; display: flex; align-items: flex-start; gap: 10px;
+    box-shadow:
+      0 16px 30px -12px rgba(20,40,60,0.32),
+      inset 0 1px 0 rgba(255,255,255,0.95),
+      inset 0 -8px 14px -12px rgba(37,99,235,0.3);
+    animation: floatSlow 5.5s ease-in-out infinite;
+  }
+  .ba-photo.ba-after .ba-callout { animation-delay: -2.75s; }
+  .ba-callout .ba-callout-ico {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--teal-500), var(--blue-600)); color: #fff;
+  }
+  .ba-callout .ba-callout-ico svg { width: 15px; height: 15px; }
+  .ba-callout b { display: block; font-size: 11.5px; font-weight: 800; color: var(--ink); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.02em; }
+  .ba-callout span { display: block; font-size: 11px; color: var(--ink-soft); line-height: 1.5; }
+
+  .ba-dots { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 28px 0 44px; }
+  .ba-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(29,78,216,0.22); border: none; cursor: pointer; padding: 0; transition: transform 0.2s ease, background 0.2s ease; }
+  .ba-dot.active { background: var(--blue-600); transform: scale(1.3); }
+  .ba-carousel.single-slide .ba-arrow { display: none; }
+  .ba-dots.single-slide { display: none; }
+
+  .ba-features {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    border-radius: 20px; padding: 30px 24px; margin-bottom: 36px;
+    background: rgba(224,242,254,0.4);
+    border: 1px solid rgba(255,255,255,0.8);
+  }
+  .ba-feature { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+  .ba-feature-ico { flex-shrink: 0; width: 44px; height: 44px; transition: transform 0.25s ease; }
+  .ba-feature:hover .ba-feature-ico { transform: translateY(-3px) scale(1.07); }
+  .ba-feature b { display: block; font-size: 13.5px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+  .ba-feature span { display: block; font-size: 12px; color: var(--ink-soft); }
+
+  .ba-cta-wrap { text-align: center; }
+
   /* ---- SERVICE / USP (draft copy) ---- */
   .service {
     position: relative;
@@ -632,6 +771,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .trust-inner .trust-item:nth-child(4) { display: none; }
     .trust-num { font-size: 13.5px; color: var(--blue-700); }
     .trust-label { font-size: 9px; white-space: nowrap; }
+    .ba-section { padding: 56px 20px 64px; }
+    .ba-head h2 { font-size: 26px; }
+    .ba-carousel { gap: 8px; }
+    .ba-arrow { width: 36px; height: 36px; }
+    .ba-arrow svg { width: 16px; height: 16px; }
+    .ba-compare { grid-template-columns: 1fr 1fr; gap: 10px; padding: 8px; border-radius: 18px; align-items: start; }
+    .ba-photo { aspect-ratio: auto; min-width: 0; }
+    .ba-photo-frame { position: relative; width: 100%; aspect-ratio: 3 / 4.3; border-radius: 12px; }
+    .ba-tag { font-size: 9.5px; padding: 4px 9px; top: 8px; left: 8px; }
+    .ba-photo.ba-after .ba-tag { right: 8px; }
+    .ba-callout {
+      position: static; margin-top: 8px; animation: none;
+      padding: 7px 8px; gap: 6px; border-radius: 11px; align-items: flex-start;
+    }
+    .ba-callout .ba-callout-ico { width: 20px; height: 20px; }
+    .ba-callout .ba-callout-ico svg { width: 11px; height: 11px; }
+    .ba-callout b { display: none; }
+    .ba-callout span:last-child { display: none; }
+    .ba-callout span { font-size: 9.5px; line-height: 1.3; overflow-wrap: break-word; }
+    .ba-features { grid-template-columns: 1fr; gap: 14px; padding: 20px 18px; }
     .service { padding: 64px 20px 72px; }
     .service-steps { grid-template-columns: 1fr; gap: 16px; position: relative; }
     .service-steps::before { display: none; }
@@ -1136,7 +1295,7 @@ include __DIR__ . '/includes/site-header.php';
       <p class="hero-sub hero-sub-mobile" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz.</p>
       <div class="hero-ctas">
         <a href="#" class="cta-btn" onclick="openConsult(event)" data-ckey="hero.ctaPrimary" data-de="Kostenlose Beratung sichern" data-en="Get your free consultation">Kostenlose Beratung sichern</a>
-        <a href="#" class="cta-ghost" data-ckey="hero.ctaSecondary" data-de="Vorher-Nachher ansehen" data-en="See before &amp; after">Vorher-Nachher ansehen</a>
+        <a href="#before-after" class="cta-ghost" data-ckey="hero.ctaSecondary" data-de="Vorher-Nachher ansehen" data-en="See before &amp; after">Vorher-Nachher ansehen</a>
       </div>
       <div class="hero-microtrust" id="heroMicrotrust" data-clist="hero.trustPills">
         <div class="trust-pill tp-amber" data-citem>
@@ -1242,6 +1401,100 @@ include __DIR__ . '/includes/site-header.php';
     </div>
     <div class="service-foot">
       <span data-de="Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell." data-en="One provider, three countries, one continuous model of care.">Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell.</span>
+    </div>
+  </div>
+</section>
+
+<section class="ba-section" id="before-after">
+  <div class="ba-bg-layer"></div>
+  <div class="ba-inner">
+    <div class="ba-head">
+      <span class="ba-kicker" data-de="Vorher &amp; Nachher" data-en="Before &amp; after">Vorher &amp; Nachher</span>
+      <h2><span data-ckey="beforeAfter.heading1" data-de="Jeder Haaransatz." data-en="Every hairline.">Jeder Haaransatz.</span> <span class="hl" data-ckey="beforeAfter.heading2" data-de="Mit Präzision gestaltet." data-en="Designed with precision.">Mit Präzision gestaltet.</span></h2>
+      <p data-ckey="beforeAfter.sub" data-de="Jeder Fall beginnt mit einer Kopfhaut-Analyse und endet mit einem Ergebnis, das individuell geplant wurde." data-en="Every case starts with a scalp analysis and ends with a result that was planned individually.">Jeder Fall beginnt mit einer Kopfhaut-Analyse und endet mit einem Ergebnis, das individuell geplant wurde.</p>
+    </div>
+
+    <div class="ba-carousel">
+      <button type="button" class="ba-arrow ba-arrow-prev" id="baPrev" aria-label="Previous case">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+
+      <!-- Cases come from the admin panel's "Before & after" list (content
+           API: home.beforeAfter.cases). This single .ba-slide is the clone
+           template - content-loader.js (data-clist/data-citem) clones it
+           once per case and fills data-cfield/data-cmediafield descendants;
+           the JS carousel further down detects the resulting slide count and
+           reveals the arrows/dots once there's more than one. -->
+      <div class="ba-track" id="baTrack" data-clist="beforeAfter.cases">
+        <div class="ba-slide active" data-citem data-slide="0">
+          <div class="ba-compare">
+            <div class="ba-photo ba-before">
+              <span class="ba-tag" data-de="VORHER" data-en="BEFORE">VORHER</span>
+              <div class="ba-photo-frame">
+                <img src="assets/before.png" alt="Vorher" loading="lazy" data-cmediafield="vorherImage">
+              </div>
+              <div class="ba-callout">
+                <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v3M9 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 0v7m-3 0h6"/></svg></div>
+                <div>
+                  <b data-de="Kopfhaut-Analyse" data-en="Scalp analysis">Kopfhaut-Analyse</b>
+                  <span data-cfield="vorherLine1" data-de="Bereich: Stirn &amp; Krone" data-en="Area: Hairline &amp; crown">Bereich: Stirn &amp; Krone</span>
+                  <span data-cfield="vorherLine2" data-de="Dichte: Gering" data-en="Density: Low">Dichte: Gering</span>
+                </div>
+              </div>
+            </div>
+            <div class="ba-photo ba-after">
+              <span class="ba-tag" data-de="NACHHER" data-en="AFTER">NACHHER</span>
+              <div class="ba-photo-frame">
+                <img src="assets/after.png" alt="Nachher" loading="lazy" data-cmediafield="nachherImage">
+              </div>
+              <div class="ba-callout">
+                <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+                <div>
+                  <b data-de="Präzises Ergebnis" data-en="Precise result">Präzises Ergebnis</b>
+                  <span data-cfield="nachherLine1" data-de="Transplantate präzise platziert" data-en="Grafts precisely placed">Transplantate präzise platziert</span>
+                  <span data-cfield="nachherLine2" data-de="Natürlicher Haaransatz · Verbesserte Dichte" data-en="Natural hairline · Improved density">Natürlicher Haaransatz · Verbesserte Dichte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="ba-arrow ba-arrow-next" id="baNext" aria-label="Next case">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="ba-dots" id="baDots">
+      <button type="button" class="ba-dot active" data-goto="0" aria-label="Case 1"></button>
+    </div>
+
+    <div class="ba-features">
+      <div class="ba-feature">
+        <div class="ba-feature-ico"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBaTarget" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gBaTarget)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><circle cx="32" cy="32" r="14" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="32" cy="32" r="8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="32" cy="32" r="2.8" fill="#fff"/></svg></div>
+        <div>
+          <b data-de="Mit Erfahrung gestaltet" data-en="Shaped by experience">Mit Erfahrung gestaltet</b>
+          <span data-de="Für maximale Präzision" data-en="For maximum precision">Für maximale Präzision</span>
+        </div>
+      </div>
+      <div class="ba-feature">
+        <div class="ba-feature-ico"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBaDensity" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gBaDensity)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="20" y="34" width="5" height="14" rx="2.5" fill="#fff"/><rect x="29.5" y="24" width="5" height="24" rx="2.5" fill="#fff"/><rect x="39" y="29" width="5" height="19" rx="2.5" fill="#fff"/></svg></div>
+        <div>
+          <b data-de="Natürliche Dichte" data-en="Natural density">Natürliche Dichte</b>
+          <span data-de="Für ein echtes Ergebnis" data-en="For a genuine result">Für ein echtes Ergebnis</span>
+        </div>
+      </div>
+      <div class="ba-feature">
+        <div class="ba-feature-ico"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBaShield" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gBaShield)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><path d="M32 16l14 6v10c0 11-6 18-14 22-8-4-14-11-14-22V22z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M25 32l5 5 10-10" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <b data-de="Individuell geplant" data-en="Individually planned">Individuell geplant</b>
+          <span data-de="Für langfristige Erfolge" data-en="For long-term success">Für langfristige Erfolge</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ba-cta-wrap">
+      <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Jetzt kostenlose Beratung sichern" data-en="Get Quote">Jetzt kostenlose Beratung sichern</a>
     </div>
   </div>
 </section>
@@ -1870,6 +2123,90 @@ include __DIR__ . '/includes/site-header.php';
   document.querySelectorAll('.lang-switch button').forEach(function (s) {
     s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
   });
+
+  /* ---- Before & after carousel ---- */
+  (function () {
+    var section = document.getElementById('before-after');
+    if (!section) return;
+    var slides = [];
+    var dots = [];
+    var current = 0;
+    var touchStartX = null;
+
+    function refresh() {
+      slides = Array.prototype.slice.call(section.querySelectorAll('.ba-slide'));
+      if (!slides.length) return;
+      var carousel = section.querySelector('.ba-carousel');
+      var dotsWrap = section.querySelector('#baDots');
+      if (dotsWrap) {
+        dotsWrap.innerHTML = slides.map(function (_, i) {
+          return '<button type="button" class="ba-dot' + (i === 0 ? ' active' : '') +
+            '" data-goto="' + i + '" aria-label="Case ' + (i + 1) + '"></button>';
+        }).join('');
+      }
+      dots = Array.prototype.slice.call(section.querySelectorAll('.ba-dot'));
+      var single = slides.length <= 1;
+      if (carousel) carousel.classList.toggle('single-slide', single);
+      if (dotsWrap) dotsWrap.classList.toggle('single-slide', single);
+      current = 0;
+      slides.forEach(function (s, idx) {
+        s.classList.remove('dir-next', 'dir-prev', 'dir-init');
+        var isFirst = idx === 0;
+        s.classList.toggle('active', isFirst);
+        if (isFirst) s.classList.add('dir-init');
+      });
+    }
+
+    function goTo(i, dir) {
+      if (!slides.length) return;
+      var next = (i + slides.length) % slides.length;
+      if (!dir) {
+        if (next === current) return;
+        var forward = (next - current + slides.length) % slides.length;
+        var backward = (current - next + slides.length) % slides.length;
+        dir = forward <= backward ? 'dir-next' : 'dir-prev';
+      }
+      current = next;
+      slides.forEach(function (s, idx) {
+        var isActive = idx === current;
+        s.classList.toggle('active', isActive);
+        if (isActive) {
+          s.classList.remove('dir-next', 'dir-prev', 'dir-init');
+          void s.offsetWidth;
+          s.classList.add(dir);
+        }
+      });
+      dots.forEach(function (d, idx) { d.classList.toggle('active', idx === current); });
+    }
+
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('#baPrev')) { goTo(current - 1, 'dir-prev'); return; }
+      if (e.target.closest('#baNext')) { goTo(current + 1, 'dir-next'); return; }
+      var dot = e.target.closest('.ba-dot');
+      if (dot) goTo(parseInt(dot.getAttribute('data-goto'), 10));
+    });
+
+    section.addEventListener('touchstart', function (e) {
+      if (!e.touches || !e.touches.length) return;
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    section.addEventListener('touchend', function (e) {
+      if (touchStartX == null || !e.changedTouches || !e.changedTouches.length) return;
+      var deltaX = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(deltaX) < 36) return;
+      goTo(current + (deltaX < 0 ? 1 : -1), deltaX < 0 ? 'dir-next' : 'dir-prev');
+    }, { passive: true });
+
+    section.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') goTo(current - 1, 'dir-prev');
+      if (e.key === 'ArrowRight') goTo(current + 1, 'dir-next');
+    });
+
+    refresh();
+    document.addEventListener('apex-content-loaded', refresh);
+  })();
 
   /* ---- Rolling count-up numbers (trust bar) ---- */
   var countsDone = false;

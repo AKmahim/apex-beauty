@@ -25,8 +25,8 @@ src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <title>Apex Beauty</title>
 <script src="assets/meta-pixel.js"></script>
-<script src="assets/cookie-consent.js?v=23"></script>
-<script src="assets/content-loader.js"></script>
+<script src="assets/cookie-consent.js?v=24"></script>
+<script src="assets/content-loader.js?v=23"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..800&display=swap" rel="stylesheet">
@@ -559,7 +559,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .ba-arrow:hover { transform: scale(1.08); }
   .ba-arrow svg { width: 20px; height: 20px; }
 
-  .ba-track { flex: 1; min-width: 0; }
+  .ba-track { flex: 1; min-width: 0; overflow: hidden; touch-action: pan-y; }
   .ba-slide { display: none; }
   .ba-slide.active { display: block; }
   /* Direction-aware entrance: prev/next arrows and dot-jumps pick dir-next
@@ -592,9 +592,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       inset 0 1px 0 rgba(255,255,255,0.95),
       inset 0 -14px 26px -20px rgba(37,99,235,0.24);
   }
-  /* .ba-photo itself has no overflow clipping so the floating callout can
-     poke past its bottom edge; the rounded, clipped image sits in the
-     .ba-photo-frame child instead. */
   .ba-photo { position: relative; aspect-ratio: 3 / 4.7; }
   .ba-photo-frame {
     position: absolute; inset: 0; overflow: hidden; border-radius: 18px;
@@ -617,9 +614,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .ba-placeholder svg { width: 34px; height: 34px; opacity: 0.85; }
   .ba-placeholder b { font-size: 12.5px; font-weight: 700; }
-  /* Callout floats just past the photo's bottom edge (like the hero's
-     float-cards) instead of sitting flush-inset, plus a slow bob animation
-     for the same "glass floating" feel used elsewhere on the site. */
   .ba-callout {
     position: absolute; bottom: -16px; left: 12px; right: 12px; z-index: 2;
     background: rgba(255,255,255,0.6);
@@ -645,7 +639,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .ba-dots { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 28px 0 44px; }
   .ba-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(29,78,216,0.22); border: none; cursor: pointer; padding: 0; transition: transform 0.2s ease, background 0.2s ease; }
   .ba-dot.active { background: var(--blue-600); transform: scale(1.3); }
-  /* Hidden by JS when only one case exists — see the carousel script. */
   .ba-carousel.single-slide .ba-arrow { display: none; }
   .ba-dots.single-slide { display: none; }
 
@@ -783,37 +776,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .ba-carousel { gap: 8px; }
     .ba-arrow { width: 36px; height: 36px; }
     .ba-arrow svg { width: 16px; height: 16px; }
-    /* Keep Vorher/Nachher side-by-side on phones too — stacking them read as
-       two separate photos instead of a comparison. */
     .ba-compare { grid-template-columns: 1fr 1fr; gap: 10px; padding: 8px; border-radius: 18px; align-items: start; }
-    /* The frame (not .ba-photo) now carries the aspect-ratio and sits in
-       normal flow, so the caption below can occupy its own space instead of
-       overlapping the absolutely-positioned image. min-width:0 overrides the
-       grid item's default auto min-width (= its content's min-content size)
-       — without it, a long unbroken caption word (e.g. "wiederhergestellt")
-       forces that column wider than its 1fr share, so the two photos end up
-       different sizes instead of matching. */
     .ba-photo { aspect-ratio: auto; min-width: 0; }
     .ba-photo-frame { position: relative; width: 100%; aspect-ratio: 3 / 4.3; border-radius: 12px; }
     .ba-tag { font-size: 9.5px; padding: 4px 9px; top: 8px; left: 8px; }
     .ba-photo.ba-after .ba-tag { right: 8px; }
-    /* The callout used to float/inset over the bottom of the photo — on a
-       narrow column that ate into the hairline/crown area users actually
-       need to compare. It's now a plain in-flow caption directly under the
-       frame instead, so it never covers any part of the picture. */
-    /* align-items stays flex-start (icon pinned to the first line) rather
-       than center — captions wrap to different line counts (2 vs 3 lines)
-       depending on length, and centering made the icon land at a different
-       spot relative to the text in each card instead of lining up. */
     .ba-callout {
       position: static; margin-top: 8px; animation: none;
       padding: 7px 8px; gap: 6px; border-radius: 11px; align-items: flex-start;
     }
     .ba-callout .ba-callout-ico { width: 20px; height: 20px; }
     .ba-callout .ba-callout-ico svg { width: 11px; height: 11px; }
-    /* The bold title line just repeats "Vorher/Nachher" already shown on the
-       tag — drop it here to leave room for the one line that actually
-       carries per-case content (vorherLine1 / nachherLine1). */
     .ba-callout b { display: none; }
     .ba-callout span:last-child { display: none; }
     .ba-callout span { font-size: 9.5px; line-height: 1.3; overflow-wrap: break-word; }
@@ -1448,7 +1421,7 @@ include __DIR__ . '/includes/site-header.php';
 
       <!-- Cases come from the admin panel's "Before & after" list (content
            API: home.beforeAfter.cases). This single .ba-slide is the clone
-           template — content-loader.js (data-clist/data-citem) clones it
+           template - content-loader.js (data-clist/data-citem) clones it
            once per case and fills data-cfield/data-cmediafield descendants;
            the JS carousel further down detects the resulting slide count and
            reveals the arrows/dots once there's more than one. -->
@@ -2151,33 +2124,27 @@ include __DIR__ . '/includes/site-header.php';
     s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
   });
 
-  /* ---- Before & after carousel ----
-     Cases (and therefore slide count) come from content-loader.js cloning
-     #baTrack's template per home.beforeAfter.cases entry, which happens
-     asynchronously after its own fetch resolves — so slides/dots can't be
-     read once at page load and cached. Instead: one delegated click
-     listener bound to the document (safe to bind exactly once), plus a
-     refresh() that recomputes everything and gets called both at load
-     (static single-case fallback if the content API is unreachable) and
-     again on 'apex-content-loaded' once the real case list is in. */
+  /* ---- Before & after carousel ---- */
   (function () {
+    var section = document.getElementById('before-after');
+    if (!section) return;
     var slides = [];
     var dots = [];
     var current = 0;
+    var touchStartX = null;
 
     function refresh() {
-      slides = Array.prototype.slice.call(document.querySelectorAll('.ba-slide'));
+      slides = Array.prototype.slice.call(section.querySelectorAll('.ba-slide'));
       if (!slides.length) return;
-      var carousel = document.querySelector('.ba-carousel');
-      var dotsWrap = document.getElementById('baDots');
-      // Rebuild the dots to match however many cases actually loaded.
+      var carousel = section.querySelector('.ba-carousel');
+      var dotsWrap = section.querySelector('#baDots');
       if (dotsWrap) {
         dotsWrap.innerHTML = slides.map(function (_, i) {
           return '<button type="button" class="ba-dot' + (i === 0 ? ' active' : '') +
             '" data-goto="' + i + '" aria-label="Case ' + (i + 1) + '"></button>';
         }).join('');
       }
-      dots = Array.prototype.slice.call(document.querySelectorAll('.ba-dot'));
+      dots = Array.prototype.slice.call(section.querySelectorAll('.ba-dot'));
       var single = slides.length <= 1;
       if (carousel) carousel.classList.toggle('single-slide', single);
       if (dotsWrap) dotsWrap.classList.toggle('single-slide', single);
@@ -2190,10 +2157,6 @@ include __DIR__ . '/includes/site-header.php';
       });
     }
 
-    // dir is 'dir-next' / 'dir-prev', explicit for the arrow buttons; for dot
-    // clicks it's inferred from whichever way round is the shorter hop, so a
-    // jump from the last case back to the first still slides forward rather
-    // than looking like it went backwards.
     function goTo(i, dir) {
       if (!slides.length) return;
       var next = (i + slides.length) % slides.length;
@@ -2209,7 +2172,7 @@ include __DIR__ . '/includes/site-header.php';
         s.classList.toggle('active', isActive);
         if (isActive) {
           s.classList.remove('dir-next', 'dir-prev', 'dir-init');
-          void s.offsetWidth; // force reflow so the animation restarts
+          void s.offsetWidth;
           s.classList.add(dir);
         }
       });
@@ -2221,6 +2184,24 @@ include __DIR__ . '/includes/site-header.php';
       if (e.target.closest('#baNext')) { goTo(current + 1, 'dir-next'); return; }
       var dot = e.target.closest('.ba-dot');
       if (dot) goTo(parseInt(dot.getAttribute('data-goto'), 10));
+    });
+
+    section.addEventListener('touchstart', function (e) {
+      if (!e.touches || !e.touches.length) return;
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    section.addEventListener('touchend', function (e) {
+      if (touchStartX == null || !e.changedTouches || !e.changedTouches.length) return;
+      var deltaX = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(deltaX) < 36) return;
+      goTo(current + (deltaX < 0 ? 1 : -1), deltaX < 0 ? 'dir-next' : 'dir-prev');
+    }, { passive: true });
+
+    section.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') goTo(current - 1, 'dir-prev');
+      if (e.key === 'ArrowRight') goTo(current + 1, 'dir-next');
     });
 
     refresh();
