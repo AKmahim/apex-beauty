@@ -185,8 +185,8 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
   <div class="nav-collapse">
     <div class="nav-links">
       <a href="service-hair-transplant.php" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-      <!-- <a href="#" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-      <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
+      <a href="#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
+      <!-- <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
       <a href="hairpedia.php" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
