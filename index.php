@@ -1,4 +1,32 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/includes/content.php';
+$seoTitle = 'Haartransplantation Österreich | Apex Beauty – Beratung, Behandlung & Nachsorge';
+$seoDescription = 'Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.';
+$seoCanonicalPath = '';
+
+// FAQPage schema, generated straight from the same home.json the admin
+// panel edits — so it can never drift out of sync with the visible FAQ.
+$homeContent = apex_get_page_content('home') ?? [];
+$faqItems = $homeContent['faq']['items'] ?? [];
+$faqSchema = null;
+if ($faqItems) {
+    $faqSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => array_map(static function (array $item): array {
+            return [
+                '@type' => 'Question',
+                'name' => strip_tags((string) ($item['question']['de'] ?? '')),
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => strip_tags((string) ($item['answer']['de'] ?? '')),
+                ],
+            ];
+        }, $faqItems),
+    ];
+}
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -23,7 +51,11 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<title>Apex Beauty</title>
+<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
+<?php require __DIR__ . '/includes/site-meta.php'; ?>
+<?php if ($faqSchema): ?>
+<script type="application/ld+json"><?= json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<?php endif; ?>
 <script src="assets/meta-pixel.js"></script>
 <script src="assets/cookie-consent.js?v=24"></script>
 <script src="assets/content-loader.js?v=23"></script>

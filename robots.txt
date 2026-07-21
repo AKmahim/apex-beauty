@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /glass-theme
+Disallow: /contact
+Disallow: /privacy
+
+# AI/answer-engine crawlers — explicitly welcomed, not just left to the
+# default * rule above, so nothing here is mistaken for accidental exposure.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://my.apexbeauty.at/sitemap.xml

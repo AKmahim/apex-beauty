@@ -1,11 +1,17 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+$seoTitle = 'Apex Beauty — Kostenlose Beratung';
+$seoDescription = 'Sichern Sie sich eine kostenlose, unverbindliche Beratung zur Haartransplantation bei Apex Beauty.';
+$seoCanonicalPath = 'contact';
+$seoNoindex = true;
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apex Beauty — Kostenlose Beratung</title>
-<meta name="robots" content="noindex, nofollow">
+<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
+<?php require __DIR__ . '/includes/site-meta.php'; ?>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

@@ -1,0 +1,59 @@
+{
+    "hero": {
+        "photo": "",
+        "name": {
+            "de": "Dr. Huseyin Burhan",
+            "en": "Dr. Huseyin Burhan"
+        },
+        "credentials": {
+            "de": "Facharzt für Haartransplantation",
+            "en": "Hair Transplant Specialist"
+        },
+        "intro": {
+            "de": "Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty – von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge.",
+            "en": "Responsible for the medical quality of every Apex Beauty treatment — from the first scalp analysis through long-term aftercare."
+        },
+        "bio": {
+            "de": "<p>Dr. Huseyin Burhan überwacht die medizinische Planung und Durchführung der Haartransplantationen bei Apex Beauty. Jeder Fall beginnt mit einer individuellen Kopfhaut-Analyse, auf deren Grundlage Behandlungsplan, Graft-Anzahl und Haarlinien-Design festgelegt werden.</p><p>Sein Ansatz stellt eine durchgehende Betreuung in den Mittelpunkt: von der Beratung in Österreich über die Behandlung in der Partnerklinik in der Türkei bis zur Nachsorge in Österreich, Deutschland und der Schweiz.</p>",
+            "en": "<p>Dr. Huseyin Burhan oversees the medical planning and execution of hair transplants at Apex Beauty. Every case begins with an individual scalp analysis, which forms the basis for the treatment plan, graft count, and hairline design.</p><p>His approach centers on continuous care: from consultation in Austria, through treatment at the partner clinic in Turkey, to aftercare across Austria, Germany, and Switzerland.</p>"
+        }
+    },
+    "specialties": {
+        "heading": {
+            "de": "Schwerpunkte",
+            "en": "Areas of focus"
+        },
+        "items": [
+            {
+                "title": {
+                    "de": "Individuelles Haarlinien-Design",
+                    "en": "Personalized hairline design"
+                },
+                "body": {
+                    "de": "Jede Haarlinie wird an Gesichtsform und natürlichen Haarwuchs angepasst.",
+                    "en": "Every hairline is planned around facial structure and natural growth patterns."
+                }
+            },
+            {
+                "title": {
+                    "de": "Kopfhaut-Analyse",
+                    "en": "Scalp analysis"
+                },
+                "body": {
+                    "de": "Grundlage für Behandlungsplan, Graft-Anzahl und erwartetes Ergebnis.",
+                    "en": "The basis for the treatment plan, graft count, and expected outcome."
+                }
+            },
+            {
+                "title": {
+                    "de": "Durchgehende Betreuung",
+                    "en": "Continuous care"
+                },
+                "body": {
+                    "de": "Von der Beratung über die Behandlung bis zur Nachsorge in AT · DE · CH.",
+                    "en": "From consultation through treatment to aftercare across AT · DE · CH."
+                }
+            }
+        ]
+    }
+}

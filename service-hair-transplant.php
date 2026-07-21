@@ -1,10 +1,16 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+$seoTitle = 'Haartransplantation: Ablauf, Eignung & Ergebnisse | Apex Beauty';
+$seoDescription = 'Was die Behandlung umfasst, wer geeignet ist, wie die Genesung verläuft und welche Ergebnisse Sie erwarten können – Ihr Leitfaden zur Haartransplantation von Apex Beauty.';
+$seoCanonicalPath = 'service-hair-transplant';
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haartransplantation · Apex Beauty</title>
+<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
+<?php require __DIR__ . '/includes/site-meta.php'; ?>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

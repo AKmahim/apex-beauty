@@ -1,11 +1,17 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+$seoTitle = 'Datenschutzerklärung · Apex Beauty';
+$seoDescription = 'Datenschutzerklärung von Apex Beauty: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.';
+$seoCanonicalPath = 'privacy';
+$seoNoindex = true;
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Datenschutzerklärung · Apex Beauty</title>
-<meta name="robots" content="noindex, nofollow">
+<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
+<?php require __DIR__ . '/includes/site-meta.php'; ?>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -83,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="ph-nav">
-  <a class="logo" href="glass-theme.html">
+  <a class="logo" href="index.php">
     <img src="assets/lotus-transparent.png" alt="Apex Beauty">
     <span data-de="← Zurück zu Apex Beauty" data-en="← Back to Apex Beauty">← Zurück zu Apex Beauty</span>
   </a>
@@ -170,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 
-  <a class="back-link" href="glass-theme.html" data-de="← Zurück zur Startseite" data-en="← Back to homepage">← Zurück zur Startseite</a>
+  <a class="back-link" href="index.php" data-de="← Zurück zur Startseite" data-en="← Back to homepage">← Zurück zur Startseite</a>
 </div>
 
 <script>

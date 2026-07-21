@@ -158,6 +158,34 @@ return [
             ]],
         ],
     ],
+    'doctor' => [
+        'label' => 'Doctor page',
+        'sections' => [
+            'hero' => [
+                'label' => 'Physician profile',
+                'fields' => [
+                    ['key' => 'photo', 'label' => 'Photo', 'type' => 'image'],
+                    ['key' => 'name', 'label' => 'Name', 'type' => 'text'],
+                    ['key' => 'credentials', 'label' => 'Title / credentials', 'type' => 'text'],
+                    ['key' => 'intro', 'label' => 'Short intro line', 'type' => 'richtext'],
+                    ['key' => 'bio', 'label' => 'Biography', 'type' => 'richtext'],
+                ],
+            ],
+            'specialties' => [
+                'label' => 'Specialties / focus areas',
+                'fields' => [
+                    ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
+                ],
+                'list' => [
+                    'key' => 'items', 'label' => 'Specialties', 'itemType' => 'fields',
+                    'itemFields' => [
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text'],
+                        ['key' => 'body', 'label' => 'Description', 'type' => 'text'],
+                    ],
+                ],
+            ],
+        ],
+    ],
     'contact' => [
         'label' => 'Contact / consultation modal',
         'sections' => [

@@ -1,10 +1,27 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/includes/site-config.php';
+$seoTitle = 'Hairpedia: Haarausfall verstehen – Ursachen, Diagnose & Behandlung | Apex Beauty';
+$seoDescription = 'Alles über Haarausfall: Ursachen, Arten, Diagnose, Behandlungsmöglichkeiten und Haartransplantation, verständlich erklärt von Apex Beauty.';
+$seoCanonicalPath = 'hairpedia';
+$medicalWebPageSchema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'MedicalWebPage',
+    'name' => $seoTitle,
+    'description' => $seoDescription,
+    'url' => rtrim(APEX_SITE_URL, '/') . '/hairpedia.php',
+    'about' => ['@type' => 'MedicalCondition', 'name' => 'Androgenetic alopecia (hair loss)'],
+    'publisher' => ['@type' => 'MedicalOrganization', 'name' => APEX_BUSINESS_NAME],
+];
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hairpedia · Apex Beauty</title>
+<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
+<?php require __DIR__ . '/includes/site-meta.php'; ?>
+<script type="application/ld+json"><?= json_encode($medicalWebPageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

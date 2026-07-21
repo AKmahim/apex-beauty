@@ -4,6 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Internal preview/staging copy of the homepage — index.php is what's
+     actually live at "/". Kept out of search results so it never competes
+     with index.php as duplicate content. -->
+<meta name="robots" content="noindex, nofollow">
 <!-- favicon -->
 <link rel="icon" href="assets/lotus-transparent.png" type="image/x-icon">
 <!-- Meta Pixel Code -->

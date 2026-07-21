@@ -1,5 +1,7 @@
 <?php declare(strict_types=1);
 
+require_once __DIR__ . '/site-config.php';
+
 $siteHeaderMode = $siteHeaderMode ?? 'simple';
 $siteActivePage = $siteActivePage ?? '';
 $siteHomeHref = $siteHomeHref ?? 'index.php';
@@ -175,6 +177,44 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
   <?php
 }
 ?>
+<?php if (!defined('APEX_SITE_SCHEMA_EMITTED')): ?>
+<?php
+define('APEX_SITE_SCHEMA_EMITTED', true);
+$medicalClinicSchema = [
+  '@context' => 'https://schema.org',
+  '@type' => 'MedicalClinic',
+  'name' => APEX_BUSINESS_NAME,
+  'legalName' => APEX_BUSINESS_LEGAL_NAME,
+  'url' => APEX_SITE_URL,
+  'logo' => APEX_SITE_URL . '/assets/wordmark-transparent.png',
+  'image' => APEX_SITE_URL . '/assets/wordmark-transparent.png',
+  'telephone' => APEX_WHATSAPP_E164,
+  'address' => [
+    '@type' => 'PostalAddress',
+    'streetAddress' => APEX_ADDRESS_STREET,
+    'addressLocality' => APEX_ADDRESS_CITY,
+    'postalCode' => APEX_ADDRESS_POSTAL_CODE,
+    'addressCountry' => APEX_ADDRESS_COUNTRY,
+  ],
+  'areaServed' => ['Austria', 'Germany', 'Switzerland'],
+  'medicalSpecialty' => 'Hair Transplantation',
+  'availableService' => [
+    '@type' => 'MedicalProcedure',
+    'name' => 'Hair Transplantation',
+  ],
+  'employee' => [
+    '@type' => 'Physician',
+    'name' => APEX_PHYSICIAN_NAME,
+    'medicalSpecialty' => 'https://schema.org/Dermatology',
+    'url' => rtrim(APEX_SITE_URL, '/') . '/doctor.php',
+  ],
+  'sameAs' => [
+    'https://www.facebook.com/profile.php?id=61583751883465',
+    'https://www.instagram.com/apex_beauty_',
+  ],
+]; ?>
+<script type="application/ld+json"><?= json_encode($medicalClinicSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<?php endif; ?>
 <nav class="nav <?= $siteHeaderMode === 'full' ? 'nav-full' : 'nav-simple' ?>">
   <a class="logo-lockup" href="<?= htmlspecialchars($siteHomeHref, ENT_QUOTES) ?>" aria-label="Apex Beauty Home">
     <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
@@ -186,7 +226,7 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
     <div class="nav-links">
       <a href="service-hair-transplant.php" data-de="Verfahren" data-en="Procedures">Verfahren</a>
       <a href="#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-      <!-- <a href="#" data-de="Ärzte" data-en="Doctors">Ärzte</a> -->
+      <a href="doctor.php" data-de="Ärzte" data-en="Doctors">Ärzte</a>
       <a href="hairpedia.php" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#network" data-de="Unser Netzwerk" data-en="Our Network">Unser Netzwerk</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
@@ -206,8 +246,8 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
 <?php else: ?>
   <div class="nav-links">
     <a href="service-hair-transplant.php" class="<?= $siteActivePage === 'service' ? 'active' : '' ?>" data-de="Verfahren" data-en="Procedures">Verfahren</a>
-    <a href="index.php" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
-    <a href="index.php" data-de="Ärzte" data-en="Doctors">Ärzte</a>
+    <a href="index.php#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after">Vorher-Nachher</a>
+    <a href="doctor.php" class="<?= $siteActivePage === 'doctor' ? 'active' : '' ?>" data-de="Ärzte" data-en="Doctors">Ärzte</a>
     <a href="hairpedia.php" class="<?= $siteActivePage === 'hairpedia' ? 'active' : '' ?>" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
     <a href="index.php#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
   </div>
