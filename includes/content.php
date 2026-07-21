@@ -86,7 +86,7 @@ function apex_set_section_media(
     $publicPath = 'assets/content/' . $filename;
 
     if ($listKey !== null && $listIndex !== null) {
-        // Per-item media (e.g. a Vorher/Nachher case's photo) — same upload
+        // Per-item media (e.g. a Vorher/Nachher case's photo): same upload
         // endpoint as section-level media, just scoped one level deeper into
         // a list item. Auto-creates the item slot so a brand-new, not-yet-
         // saved list row (added in the admin panel but no "Save section"

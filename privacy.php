@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/includes/site-config.php';
 $seoTitle = 'Datenschutzerklärung · Apex Beauty';
 $seoDescription = 'Datenschutzerklärung von Apex Beauty: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.';
 $seoCanonicalPath = 'privacy';
@@ -10,6 +11,8 @@ $seoNoindex = true;
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/lotus-transparent.png" type="image/png">
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
 <!-- Meta Pixel Code -->
@@ -80,6 +83,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .ph-wrap th, .ph-wrap td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
   .ph-wrap th { background: #eef3fa; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink-soft); }
   .back-link { display: inline-block; margin-top: 4px; font-size: 13px; font-weight: 600; }
+
+  /* ---- WhatsApp floating button ---- */
+  .whatsapp-fab {
+    position: fixed; bottom: 24px; right: 24px; z-index: 90;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 16px 36px -10px rgba(0,0,0,0.38), 0 6px 14px -6px rgba(0,0,0,0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .whatsapp-fab:hover {
+    transform: translateY(-4px) scale(1.07);
+    box-shadow: 0 22px 44px -10px rgba(0,0,0,0.42), 0 10px 22px -6px rgba(0,0,0,0.28);
+  }
+  .whatsapp-fab svg { width: 30px; height: 30px; display: block; }
+  @media (max-width: 640px) {
+    .whatsapp-fab { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+    .whatsapp-fab svg { width: 27px; height: 27px; }
+  }
 </style>
 </head>
 <body data-content-page="privacy">
@@ -194,6 +216,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.querySelectorAll('.lang-switch button').forEach(function (s) {
     s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
   });
+
+  function trackWhatsAppContact() {
+    if (window.__apexPixel) window.__apexPixel.track('Contact');
+  }
 </script>
+
+<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
+  <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
 </body>
 </html>

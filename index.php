@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
-$seoTitle = 'Haartransplantation Österreich | Apex Beauty – Beratung, Behandlung & Nachsorge';
+$seoTitle = 'Haartransplantation Österreich: Apex Beauty für Beratung, Behandlung & Nachsorge';
 $seoDescription = 'Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.';
 $seoCanonicalPath = '';
 
 // FAQPage schema, generated straight from the same home.json the admin
-// panel edits — so it can never drift out of sync with the visible FAQ.
+// panel edits, so it can never drift out of sync with the visible FAQ.
 $homeContent = apex_get_page_content('home') ?? [];
 $faqItems = $homeContent['faq']['items'] ?? [];
 $faqSchema = null;
@@ -33,7 +33,8 @@ if ($faqItems) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- favicon -->
-<link rel="icon" href="assets/lotus-transparent.png" type="image/x-icon">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/lotus-transparent.png" type="image/png">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

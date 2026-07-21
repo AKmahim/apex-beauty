@@ -486,11 +486,11 @@
         // Per-item media (e.g. one Vorher/Nachher case's photo). Uploads hit
         // the same media endpoint as section-level fields, just with an
         // extra listKey/index so the backend writes it into this list item
-        // instead of the section root — see the item-media-upload-btn
+        // instead of the section root; see the item-media-upload-btn
         // handler below. The item's position in the DOM at upload time (not
         // a stored index) decides which array slot it targets, so this only
         // stays correct if the row isn't reordered between adding it and
-        // saving — there's no drag-reorder UI, so that's not a real risk.
+        // saving. There's no drag-reorder UI, so that's not a real risk.
         const path = (item && item[f.key]) || '';
         const previewUrl = path ? siteAssetUrl(path) : '';
         const preview = path
@@ -602,7 +602,7 @@
           const item = {};
           schema.list.itemFields.forEach((f) => {
             if (f.type === 'image' || f.type === 'video') {
-              // Already saved directly to disk by its own upload endpoint —
+              // Already saved directly to disk by its own upload endpoint,
               // just carry the current path forward so re-saving the text
               // fields in this item doesn't wipe it out.
               const mediaEl = row.querySelector(`[data-item-media-field="${f.key}"]`);
@@ -672,7 +672,7 @@
       const { page, section } = card.dataset;
       const field = mediaRow.dataset.itemMediaField;
       const listKey = container.dataset.listKey;
-      // Position in the DOM right now, not a stored id — matches how the
+      // Position in the DOM right now, not a stored id; matches how the
       // backend addresses list items (see apex_set_section_media).
       const index = Array.from(container.children).indexOf(listRow);
       status.textContent = 'Uploading…';

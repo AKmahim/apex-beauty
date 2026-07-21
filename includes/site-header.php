@@ -197,7 +197,11 @@ $medicalClinicSchema = [
     'addressCountry' => APEX_ADDRESS_COUNTRY,
   ],
   'areaServed' => ['Austria', 'Germany', 'Switzerland'],
-  'medicalSpecialty' => 'Hair Transplantation',
+  // Hair transplantation is a surgical/reconstructive procedure, not a skin
+  // condition — PlasticSurgery is schema.org's actual MedicalSpecialty enum
+  // member for this (there's no dedicated "hair restoration" value), and it
+  // matches the site's own "Plastic Surgeon Supervised" copy elsewhere.
+  'medicalSpecialty' => 'https://schema.org/PlasticSurgery',
   'availableService' => [
     '@type' => 'MedicalProcedure',
     'name' => 'Hair Transplantation',
@@ -205,7 +209,7 @@ $medicalClinicSchema = [
   'employee' => [
     '@type' => 'Physician',
     'name' => APEX_PHYSICIAN_NAME,
-    'medicalSpecialty' => 'https://schema.org/Dermatology',
+    'medicalSpecialty' => 'https://schema.org/PlasticSurgery',
     'url' => rtrim(APEX_SITE_URL, '/') . '/doctor.php',
   ],
   'sameAs' => [

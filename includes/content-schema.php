@@ -42,19 +42,19 @@ return [
             'beforeAfter' => [
                 'label' => 'Before & after (Vorher/Nachher carousel)',
                 'fields' => [
-                    ['key' => 'heading1', 'label' => 'Heading — line 1', 'type' => 'text'],
-                    ['key' => 'heading2', 'label' => 'Heading — line 2 (highlighted)', 'type' => 'text'],
+                    ['key' => 'heading1', 'label' => 'Heading (line 1)', 'type' => 'text'],
+                    ['key' => 'heading2', 'label' => 'Heading (line 2, highlighted)', 'type' => 'text'],
                     ['key' => 'sub', 'label' => 'Subtext', 'type' => 'richtext'],
                 ],
                 'list' => [
                     'key' => 'cases', 'label' => 'Cases', 'itemType' => 'fields',
                     'itemFields' => [
                         ['key' => 'vorherImage', 'label' => 'Vorher photo', 'type' => 'image'],
-                        ['key' => 'vorherLine1', 'label' => 'Vorher — line 1', 'type' => 'text'],
-                        ['key' => 'vorherLine2', 'label' => 'Vorher — line 2', 'type' => 'text'],
+                        ['key' => 'vorherLine1', 'label' => 'Vorher (line 1)', 'type' => 'text'],
+                        ['key' => 'vorherLine2', 'label' => 'Vorher (line 2)', 'type' => 'text'],
                         ['key' => 'nachherImage', 'label' => 'Nachher photo', 'type' => 'image'],
-                        ['key' => 'nachherLine1', 'label' => 'Nachher — line 1', 'type' => 'text'],
-                        ['key' => 'nachherLine2', 'label' => 'Nachher — line 2', 'type' => 'text'],
+                        ['key' => 'nachherLine1', 'label' => 'Nachher (line 1)', 'type' => 'text'],
+                        ['key' => 'nachherLine2', 'label' => 'Nachher (line 2)', 'type' => 'text'],
                     ],
                 ],
             ],
@@ -175,13 +175,6 @@ return [
                 'label' => 'Specialties / focus areas',
                 'fields' => [
                     ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
-                ],
-                'list' => [
-                    'key' => 'items', 'label' => 'Specialties', 'itemType' => 'fields',
-                    'itemFields' => [
-                        ['key' => 'title', 'label' => 'Title', 'type' => 'text'],
-                        ['key' => 'body', 'label' => 'Description', 'type' => 'text'],
-                    ],
                 ],
             ],
         ],

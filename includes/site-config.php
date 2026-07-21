@@ -7,12 +7,13 @@ declare(strict_types=1);
 // MedicalClinic / Physician) across every page.
 
 const APEX_BUSINESS_NAME = 'Apex Beauty';
-const APEX_BUSINESS_LEGAL_NAME = 'Apex Beauty – Europa Niederlassung';
+const APEX_BUSINESS_LEGAL_NAME = 'Apex Beauty, Europa Niederlassung';
 const APEX_ADDRESS_STREET = 'Landstraße 35a';
 const APEX_ADDRESS_CITY = 'Linz';
 const APEX_ADDRESS_POSTAL_CODE = '4020';
 const APEX_ADDRESS_COUNTRY = 'AT';
 const APEX_ADDRESS_COUNTRY_NAME = 'Austria';
+const APEX_ADDRESS_MAPS_LINK = 'https://www.google.com/maps/search/?api=1&query=Landstra%C3%9Fe+35a%2C+4020+Linz%2C+Austria';
 
 const APEX_WHATSAPP_DISPLAY = '+43 664 199 9 199';
 const APEX_WHATSAPP_E164 = '+436641999199';
