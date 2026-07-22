@@ -219,9 +219,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .dr-section { padding: 28px 22px; border-radius: 20px; }
     /* Same treatment as the specialty cards below: icon centered above the
        heading, not side-by-side pinned to the left with empty space next
-       to it. Body paragraphs stay left-aligned — centering long text hurts
-       readability. */
+       to it. The bio paragraphs below center too, since there's no
+       left-starting icon to anchor them left. */
     .dr-section-head { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+    .dr-bio { text-align: center; }
   }
 
   /* ---- SPECIALTIES ---- */
