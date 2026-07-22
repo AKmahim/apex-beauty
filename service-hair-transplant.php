@@ -148,7 +148,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---- QUICK NAV ---- */
   .hp-quicknav-wrap {
-    position: sticky; top: 71px; z-index: 40;
+    /* Must match the site nav's real rendered height (95px desktop / 59px
+       at <=900px, see the .nav override below) or this bar sticks partly
+       underneath the header instead of flush below it. */
+    position: sticky; top: 95px; z-index: 40;
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(28px) saturate(2.1);
     -webkit-backdrop-filter: blur(28px) saturate(2.1);
@@ -307,7 +310,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ---- CHECKLIST ---- */
   .hp-checklist { display: grid; gap: 10px; max-width: 680px; }
   .hp-check {
-    display: flex; align-items: flex-start; gap: 12px; padding: 13px 16px; border-radius: 12px;
+    display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 12px;
     background: rgba(255,255,255,0.38);
     backdrop-filter: blur(22px) saturate(2);
     -webkit-backdrop-filter: blur(22px) saturate(2);
@@ -317,7 +320,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hp-check .tick {
     flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
     background: linear-gradient(120deg, var(--teal-500), var(--blue-600)); color: #fff;
-    display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;
   }
   .hp-check p { font-size: 13.5px; color: var(--ink); line-height: 1.5; }
 
@@ -364,7 +367,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ---- AFTERCARE RULES ---- */
   .hp-rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .hp-rule {
-    display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: 12px;
+    display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px;
     background: rgba(255,255,255,0.38);
     backdrop-filter: blur(22px) saturate(2);
     -webkit-backdrop-filter: blur(22px) saturate(2);
@@ -401,12 +404,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
     .hp-hero { padding: 40px 20px 26px; }
     .hp-hero h1 { font-size: 27px; }
+    .hp-quicknav-wrap { top: 59px; }
     .hp-quicknav { padding: 0 20px; }
     .hp-section { padding: 48px 20px; }
     .hp-section.alt .hp-section-in { padding: 0 20px; }
     .hp-grid, .hp-grid.cols-2, .hp-cycle, .hp-stats, .hp-rules { grid-template-columns: 1fr; }
     .hp-glossary { columns: 1; }
-    .hp-section-head { flex-direction: column; gap: 12px; }
+    .hp-section-head { flex-direction: column; align-items: center; text-align: center; gap: 12px; max-width: none; }
+    /* Heading is centered, so the body copy in the same card centers too. */
+    .hp-card { text-align: center; }
+    .hp-card .hp-ico { margin-left: auto; margin-right: auto; }
+    /* Same stat-card role as .hp-cycle-card (already centered by design),
+       so bring it in line for mobile consistency. */
+    .hp-stat { text-align: center; }
+    /* No left-starting icon here (term + definition only), so it centers
+       like every other heading/body pairing. */
+    .hp-term { text-align: center; }
+    /* Standalone sub-headings and their intro copy (not part of an
+       icon-led row like checklists/timeline/table) center along with
+       every other heading on the page; the icon-led rows below them
+       keep starting from the left. */
+    .hp-section > h3, .hp-section > p, .hp-section-in > h3, .hp-section-in > p { text-align: center; }
     .hp-thumbs-wrap { padding: 4px 20px 40px; }
     .hp-thumbs { grid-template-columns: 1fr; }
   }
@@ -1083,13 +1101,24 @@ include __DIR__ . '/includes/site-header.php';
   /* ---- Quick-nav scroll spy ---- */
   var hpSections = Array.from(document.querySelectorAll('.hp-section[id]'));
   var hpLinks = Array.from(document.querySelectorAll('#hpQuicknav a'));
+  var hpQuicknavEl = document.getElementById('hpQuicknav');
+  function hpScrollNavToActive(link) {
+    if (!hpQuicknavEl || !link) return;
+    var containerRect = hpQuicknavEl.getBoundingClientRect();
+    var linkRect = link.getBoundingClientRect();
+    var offset = (linkRect.left + linkRect.width / 2) - (containerRect.left + containerRect.width / 2);
+    hpQuicknavEl.scrollBy({ left: offset, behavior: 'smooth' });
+  }
   if ('IntersectionObserver' in window && hpSections.length) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           hpLinks.forEach(function (l) { l.classList.remove('active'); });
           var match = hpLinks.find(function (l) { return l.getAttribute('href') === '#' + entry.target.id; });
-          if (match) match.classList.add('active');
+          if (match) {
+            match.classList.add('active');
+            hpScrollNavToActive(match);
+          }
         }
       });
     }, { rootMargin: '-160px 0px -70% 0px' });
