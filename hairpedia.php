@@ -129,18 +129,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .hp-hero .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-500); }
   .hp-hero h1 {
-    font-size: 38px; line-height: 1.16; font-weight: 800; letter-spacing: -0.02em;
+    font-size: 44px; line-height: 1.16; font-weight: 800; letter-spacing: -0.02em;
     color: #1a2733; margin-bottom: 16px;
   }
   .hp-hero h1 span {
     background: linear-gradient(100deg, var(--teal-600), var(--blue-700));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
+  /* Secondary line under the big "Hairpedia" brand word — same gradient
+     fill, just sized down between the h1 and the intro paragraph. */
+  .hp-hero h1 span.hp-hero-tagline {
+    display: block;
+    font-size: 22px; font-weight: 600; letter-spacing: 0; line-height: 1.35;
+    margin-top: 8px;
+  }
   .hp-hero p { font-size: 16px; line-height: 1.6; color: var(--ink-soft); max-width: 620px; margin: 0 auto; }
 
   /* ---- QUICK NAV ---- */
   .hp-quicknav-wrap {
-    position: sticky; top: 71px; z-index: 40;
+    /* Must match the site nav's real rendered height (95px desktop / 59px
+       at <=900px, see the .nav override below) or this bar sticks partly
+       underneath the header instead of flush below it. */
+    position: sticky; top: 95px; z-index: 40;
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(28px) saturate(2.1);
     -webkit-backdrop-filter: blur(28px) saturate(2.1);
@@ -303,7 +313,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ---- CHECKLIST ---- */
   .hp-checklist { display: grid; gap: 10px; max-width: 680px; }
   .hp-check {
-    display: flex; align-items: flex-start; gap: 12px; padding: 13px 16px; border-radius: 12px;
+    display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 12px;
     background: rgba(255,255,255,0.38);
     backdrop-filter: blur(22px) saturate(2);
     -webkit-backdrop-filter: blur(22px) saturate(2);
@@ -313,7 +323,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hp-check .tick {
     flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
     background: linear-gradient(120deg, var(--teal-500), var(--blue-600)); color: #fff;
-    display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;
   }
   .hp-check p { font-size: 13.5px; color: var(--ink); line-height: 1.5; }
 
@@ -360,7 +370,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ---- AFTERCARE RULES ---- */
   .hp-rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .hp-rule {
-    display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: 12px;
+    display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px;
     background: rgba(255,255,255,0.38);
     backdrop-filter: blur(22px) saturate(2);
     -webkit-backdrop-filter: blur(22px) saturate(2);
@@ -395,19 +405,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .lang-switch { font-size: 11px; }
     .lang-switch button { padding: 4px 9px; }
     .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
+    .hp-quicknav-wrap { top: 59px; }
     .hp-hero { padding: 40px 20px 26px; }
-    .hp-hero h1 { font-size: 27px; }
+    .hp-hero h1 { font-size: 32px; }
+    .hp-hero h1 span.hp-hero-tagline { font-size: 17px; margin-top: 6px; }
     .hp-quicknav { padding: 0 20px; }
     .hp-section { padding: 48px 20px; }
     .hp-section.alt .hp-section-in { padding: 0 20px; }
     .hp-grid, .hp-grid.cols-2, .hp-cycle, .hp-stats, .hp-rules { grid-template-columns: 1fr; }
     .hp-glossary { columns: 1; }
-    .hp-section-head { flex-direction: column; gap: 12px; }
+    .hp-section-head { flex-direction: column; align-items: center; text-align: center; gap: 12px; max-width: none; }
+    /* Heading is centered, so the body copy in the same card centers too. */
+    .hp-card { text-align: center; }
+    .hp-card .hp-ico { margin-left: auto; margin-right: auto; }
+    /* Same stat-card role as .hp-cycle-card (already centered by design),
+       so bring it in line for mobile consistency. */
+    .hp-stat { text-align: center; }
+    /* No left-starting icon here (term + definition only), so it centers
+       like every other heading/body pairing. */
+    .hp-term { text-align: center; }
+    /* Standalone sub-headings and their intro copy (not part of an
+       icon-led row like checklists/timeline/table) center along with
+       every other heading on the page; the icon-led rows below them
+       keep starting from the left. */
+    .hp-section > h3, .hp-section > p, .hp-section-in > h3, .hp-section-in > p { text-align: center; }
     .hp-thumbs-wrap { padding: 4px 20px 40px; }
     .hp-thumbs { grid-template-columns: 1fr; }
   }
   @media (min-width: 901px) and (max-width: 1180px) {
     .hp-thumbs { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 901px) {
+    /* Scaled down 20% from the full-width fit — the mobile size already
+       reads well, this is a desktop-only adjustment. */
+    #was-ist-haarausfall .hp-media-img { width: 80%; display: block; margin: 0 auto; }
   }
 
   /* ---- CONSULTATION MODAL ---- */
@@ -642,7 +673,7 @@ include __DIR__ . '/includes/site-header.php';
   <div class="hp-hero-bg"></div>
   <div class="hp-hero-inner">
     <div class="eyebrow"><span class="dot"></span><span data-de="Wissen &amp; Aufklärung" data-en="Knowledge &amp; education">Wissen &amp; Aufklärung</span></div>
-    <h1 data-ckey="hero.heading" data-de="Hairpedia: Ihr Wissen rund um <span>Haarausfall &amp; Haartransplantation</span>" data-en="Hairpedia: everything you need to know about <span>hair loss &amp; hair transplantation</span>">Hairpedia: Ihr Wissen rund um <span>Haarausfall &amp; Haartransplantation</span></h1>
+    <h1 data-ckey="hero.heading" data-de="<span>Hairpedia</span><br><span class=&quot;hp-hero-tagline&quot;>Ihr Wissen rund um Haarausfall &amp; Haartransplantation</span>" data-en="<span>Hairpedia</span><br><span class=&quot;hp-hero-tagline&quot;>Everything you need to know about hair loss &amp; hair transplantation</span>"><span>Hairpedia</span><br><span class="hp-hero-tagline">Ihr Wissen rund um Haarausfall &amp; Haartransplantation</span></h1>
     <p data-ckey="hero.sub" data-de="Wissenschaftlich fundiert, verständlich erklärt. Von den Ursachen des Haarausfalls bis zur vollständigen Genesung nach der Transplantation, alles an einem Ort." data-en="Scientifically grounded, clearly explained. From the causes of hair loss to full recovery after transplantation, all in one place.">Wissenschaftlich fundiert, verständlich erklärt. Von den Ursachen des Haarausfalls bis zur vollständigen Genesung nach der Transplantation, alles an einem Ort.</p>
   </div>
 </section>
@@ -1364,13 +1395,24 @@ include __DIR__ . '/includes/site-header.php';
   /* ---- Quick-nav scroll spy ---- */
   var hpSections = Array.from(document.querySelectorAll('.hp-section[id]'));
   var hpLinks = Array.from(document.querySelectorAll('#hpQuicknav a'));
+  var hpQuicknavEl = document.getElementById('hpQuicknav');
+  function hpScrollNavToActive(link) {
+    if (!hpQuicknavEl || !link) return;
+    var containerRect = hpQuicknavEl.getBoundingClientRect();
+    var linkRect = link.getBoundingClientRect();
+    var offset = (linkRect.left + linkRect.width / 2) - (containerRect.left + containerRect.width / 2);
+    hpQuicknavEl.scrollBy({ left: offset, behavior: 'smooth' });
+  }
   if ('IntersectionObserver' in window && hpSections.length) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           hpLinks.forEach(function (l) { l.classList.remove('active'); });
           var match = hpLinks.find(function (l) { return l.getAttribute('href') === '#' + entry.target.id; });
-          if (match) match.classList.add('active');
+          if (match) {
+            match.classList.add('active');
+            hpScrollNavToActive(match);
+          }
         }
       });
     }, { rootMargin: '-160px 0px -70% 0px' });

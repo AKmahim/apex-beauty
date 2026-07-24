@@ -1,8 +1,8 @@
 {
   "hero": {
     "heading": {
-      "de": "Hairpedia: Ihr Wissen rund um <span>Haarausfall &amp; Haartransplantation</span>",
-      "en": "Hairpedia: everything you need to know about <span>hair loss &amp; hair transplantation</span>"
+      "de": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Ihr Wissen rund um Haarausfall &amp; Haartransplantation</span>",
+      "en": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Everything you need to know about hair loss &amp; hair transplantation</span>"
     },
     "sub": {
       "de": "Wissenschaftlich fundiert, verständlich erklärt. Von den Ursachen des Haarausfalls bis zur vollständigen Genesung nach der Transplantation, alles an einem Ort.",
@@ -18,7 +18,7 @@
       "de": "Haarausfall, medizinisch Alopezie genannt, ist das teilweise oder vollständige Fehlen von Haaren an Stellen, an denen sie normalerweise wachsen. Bis zu 100 Haare täglich zu verlieren gilt als normaler Teil des Wachstumszyklus.",
       "en": "Hair loss, medically known as alopecia, is the partial or complete absence of hair from areas where it normally grows. Losing up to 100 hairs a day is a normal part of the growth cycle."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-wasIstHaarausfall-image-1784912960.png"
   },
   "ursachen": {
     "heading": {
@@ -29,7 +29,7 @@
       "de": "Haarausfall hat selten eine einzige Ursache. Genetik, Hormone, Stress und Ernährung wirken häufig zusammen.",
       "en": "Hair loss rarely has a single cause. Genetics, hormones, stress, and nutrition often act together."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-ursachen-image-1784914056.png"
   },
   "arten": {
     "heading": {
@@ -40,7 +40,7 @@
       "de": "Nicht jeder Haarausfall ist gleich. Die Art bestimmt, welche Behandlung sinnvoll ist.",
       "en": "Not all hair loss is the same. The type determines which treatment makes sense."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-arten-image-1784914433.png"
   },
   "diagnose": {
     "heading": {
@@ -51,7 +51,7 @@
       "de": "Eine präzise Diagnose ist die Grundlage jeder wirksamen Behandlung.",
       "en": "An accurate diagnosis is the foundation of any effective treatment."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-diagnose-image-1784914980.png"
   },
   "behandlung": {
     "heading": {
@@ -62,7 +62,7 @@
       "de": "Von topischen Medikamenten bis zur Transplantation, jede Option hat einen anderen Wirkmechanismus, Aufwand und Evidenzgrad.",
       "en": "From topical medication to transplantation, each option differs in mechanism, effort, and quality of evidence."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-behandlung-image-1784915585.png"
   },
   "transplantation": {
     "heading": {
@@ -73,7 +73,7 @@
       "de": "Ein chirurgischer Eingriff unter örtlicher Betäubung. Gesunde, DHT-resistente Follikel werden aus dem Spenderbereich entnommen und in ausgedünnte Areale verpflanzt, wo sie dauerhaft weiterwachsen.",
       "en": "A surgical procedure under local anaesthesia. Healthy, DHT-resistant follicles are taken from the donor area and relocated to thinning areas, where they keep growing for life."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-transplantation-image-1784916023.png"
   },
   "genesung": {
     "heading": {
@@ -84,7 +84,7 @@
       "de": "Die Erholungsphase ist genauso wichtig wie der Eingriff selbst. Sie bestimmt Graft-Überleben, Heilungsqualität und Endergebnis.",
       "en": "The recovery period matters as much as the procedure itself. It determines graft survival, healing quality, and the final result."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-genesung-image-1784916746.png"
   },
   "vorherNachher": {
     "heading": {
@@ -95,7 +95,7 @@
       "de": "Ein visueller und beschreibender Monat-für-Monat-Überblick. Echte Patientenfotos von Apex Beauty folgen hier, sobald sie freigegeben sind.",
       "en": "A visual and descriptive month-by-month reference. Real Apex Beauty patient photos will appear here once cleared for use."
     },
-    "image": ""
+    "image": "assets/content/hairpedia-vorherNachher-image-1784918156.png"
   },
   "glossar": {
     "heading": {
