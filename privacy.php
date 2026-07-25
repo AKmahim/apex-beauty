@@ -67,12 +67,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .ph-nav .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--ink); }
   .ph-nav .logo img { height: 28px; width: auto; }
-  .lang-switch {
-    display: flex; font-size: 12.5px; font-weight: 600;
-    border: 1px solid var(--line); border-radius: 999px; overflow: hidden; padding: 3px;
+  .lang-switch { position: relative; font-size: 12.5px; font-weight: 600; }
+  .lang-switch-toggle {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 12px; cursor: pointer;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: transparent; font: inherit; font-weight: inherit; color: var(--ink);
   }
-  .lang-switch button { padding: 5px 12px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; background: transparent; color: var(--ink-soft); }
-  .lang-switch .active { background: linear-gradient(100deg, var(--teal-500), var(--blue-600)); color: #fff; }
+  .lang-switch-caret { width: 11px; height: 11px; flex-shrink: 0; transition: transform 0.2s ease; }
+  .lang-switch.open .lang-switch-caret { transform: rotate(180deg); }
+  .lang-switch-menu {
+    position: absolute; top: calc(100% + 8px); right: 0;
+    display: flex; flex-direction: column; gap: 2px;
+    min-width: 92px; padding: 6px;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 18px 34px -14px rgba(15,23,42,0.25);
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+    z-index: 60;
+  }
+  .lang-switch.open .lang-switch-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .lang-switch-menu button { padding: 7px 12px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; text-align: left; background: transparent; color: var(--ink-soft); }
+  .lang-switch-menu button:hover:not(.active) { background: #eef3fa; color: var(--ink); }
+  .lang-switch-menu button.active { background: linear-gradient(100deg, var(--teal-500), var(--blue-600)); color: #fff; }
   .ph-wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 100px; }
   .ph-wrap h1 { font-size: 24px; margin-bottom: 6px; }
   .ph-updated { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 32px; }
@@ -113,11 +130,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="ph-nav">
   <a class="logo" href="index.php">
     <img src="assets/lotus-transparent.png" alt="Apex Beauty">
-    <span data-de="← Zurück zu Apex Beauty" data-en="← Back to Apex Beauty">← Zurück zu Apex Beauty</span>
+    <span data-de="← Zurück zu Apex Beauty" data-en="← Back to Apex Beauty" data-fr="← Retour à Apex Beauty" data-nl="← Terug naar Apex Beauty" data-it="← Torna ad Apex Beauty" data-tr="← Apex Beauty'e Dön">← Zurück zu Apex Beauty</span>
   </a>
-  <div class="lang-switch">
-    <button type="button" class="active" data-lang="de">DE</button>
-    <button type="button" class="inactive" data-lang="en">EN</button>
+  <div class="lang-switch" id="langSwitch">
+    <button type="button" class="lang-switch-toggle" id="langSwitchToggle" aria-haspopup="listbox" aria-expanded="false">
+      <span class="lang-switch-current">DE</span>
+      <svg class="lang-switch-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="lang-switch-menu" id="langSwitchMenu" role="listbox">
+      <button type="button" class="active" data-lang="de" role="option">DE</button>
+      <button type="button" class="inactive" data-lang="en" role="option">EN</button>
+      <button type="button" class="inactive" data-lang="fr" role="option">FR</button>
+      <button type="button" class="inactive" data-lang="nl" role="option">NL</button>
+      <button type="button" class="inactive" data-lang="it" role="option">IT</button>
+      <button type="button" class="inactive" data-lang="tr" role="option">TR</button>
+    </div>
   </div>
 </div>
 
@@ -198,24 +225,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 
-  <a class="back-link" href="index.php" data-de="← Zurück zur Startseite" data-en="← Back to homepage">← Zurück zur Startseite</a>
+  <a class="back-link" href="index.php" data-de="← Zurück zur Startseite" data-en="← Back to homepage" data-fr="← Retour à l'accueil" data-nl="← Terug naar homepage" data-it="← Torna alla home" data-tr="← Ana Sayfaya Dön">← Zurück zur Startseite</a>
 </div>
 
 <script>
+  // FR/NL/IT/TR have no translated copy yet — they fall back to the English
+  // strings until real translations are added for those data-* attributes.
+  var APEX_TRANSLATED_LANGS = ['de', 'en'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
+    var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
+      if (val === null && fallback) val = el.getAttribute('data-' + fallback);
       if (val !== null) el.innerHTML = val;
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (s) {
+    document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       var isActive = s.getAttribute('data-lang') === lang;
       s.className = isActive ? 'active' : 'inactive';
     });
+    document.querySelectorAll('.lang-switch-current').forEach(function (s) {
+      s.textContent = lang.toUpperCase();
+    });
   }
-  document.querySelectorAll('.lang-switch button').forEach(function (s) {
-    s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
+  document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
+    s.addEventListener('click', function () {
+      applyLang(s.getAttribute('data-lang'));
+      var ls = s.closest('.lang-switch');
+      if (ls) {
+        ls.classList.remove('open');
+        var t = ls.querySelector('.lang-switch-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
+  (function () {
+    var toggle = document.getElementById('langSwitchToggle');
+    var ls = document.getElementById('langSwitch');
+    if (!toggle || !ls) return;
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = ls.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (ls.classList.contains('open') && !ls.contains(e.target)) {
+        ls.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { ls.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+    });
+  })();
 
   function trackWhatsAppContact() {
     if (window.__apexPixel) window.__apexPixel.track('Contact');

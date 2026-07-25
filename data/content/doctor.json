@@ -1,27 +1,97 @@
 {
-    "hero": {
-        "photo": "assets/content/doctor-hero-photo-1784672551.jpeg",
-        "name": {
-            "de": "Dr. Huseyin Burhan",
-            "en": "Dr. Huseyin Burhan"
-        },
-        "credentials": {
-            "de": "Facharzt für Haartransplantation",
-            "en": "Hair Transplant Specialist"
-        },
-        "intro": {
-            "de": "Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty: von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge.",
-            "en": "Responsible for the medical quality of every Apex Beauty treatment: from the first scalp analysis through long-term aftercare."
-        },
-        "bio": {
-            "de": "<p>Dr. Huseyin Burhan überwacht die medizinische Planung und Durchführung der Haartransplantationen bei Apex Beauty. Jeder Fall beginnt mit einer individuellen Kopfhaut-Analyse, auf deren Grundlage Behandlungsplan, Graft-Anzahl und Haarlinien-Design festgelegt werden.</p><p>Sein Ansatz stellt eine durchgehende Betreuung in den Mittelpunkt: von der Beratung in Österreich über die Behandlung in der Partnerklinik in der Türkei bis zur Nachsorge in Österreich, Deutschland und der Schweiz.</p>",
-            "en": "<p>Dr. Huseyin Burhan oversees the medical planning and execution of hair transplants at Apex Beauty. Every case begins with an individual scalp analysis, which forms the basis for the treatment plan, graft count, and hairline design.</p><p>His approach centers on continuous care: from consultation in Austria, through treatment at the partner clinic in Turkey, to aftercare across Austria, Germany, and Switzerland.</p>"
-        }
-    },
-    "specialties": {
-        "heading": {
-            "de": "Schwerpunkte",
-            "en": "Areas of focus"
-        }
+    "profiles": {
+        "items": [
+            {
+                "photo": "assets/content/doctor-hero-photo-1784672551.jpeg",
+                "name": {
+                    "de": "Dr. Huseyin Burhan",
+                    "en": "Dr. Huseyin Burhan",
+                    "fr": "Dr Huseyin Burhan",
+                    "nl": "Dr. Huseyin Burhan",
+                    "it": "Dr. Huseyin Burhan",
+                    "tr": "Dr. Hüseyin Burhan"
+                },
+                "credentials": {
+                    "de": "Facharzt für Haartransplantation",
+                    "en": "Hair Transplant Specialist",
+                    "fr": "Spécialiste en greffe de cheveux",
+                    "nl": "Specialist in haartransplantatie",
+                    "it": "Specialista in trapianto di capelli",
+                    "tr": "Saç Ekimi Uzmanı"
+                },
+                "intro": {
+                    "de": "Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty: von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge.",
+                    "en": "Responsible for the medical quality of every Apex Beauty treatment: from the first scalp analysis through long-term aftercare.",
+                    "fr": "Responsable de la qualité médicale de chaque traitement Apex Beauty : de la première analyse du cuir chevelu jusqu'au suivi à long terme.",
+                    "nl": "Verantwoordelijk voor de medische kwaliteit van elke Apex Beauty-behandeling: van de eerste hoofdhuidanalyse tot de langdurige nazorg.",
+                    "it": "Responsabile della qualità medica di ogni trattamento Apex Beauty: dalla prima analisi del cuoio capelluto fino all'assistenza post-operatoria a lungo termine.",
+                    "tr": "Her Apex Beauty tedavisinin tıbbi kalitesinden sorumludur: ilk saç derisi analizinden uzun vadeli bakıma kadar."
+                },
+                "bio": {
+                    "de": "<p>Dr. Huseyin Burhan überwacht die medizinische Planung und Durchführung der Haartransplantationen bei Apex Beauty. Jeder Fall beginnt mit einer individuellen Kopfhaut-Analyse, auf deren Grundlage Behandlungsplan, Graft-Anzahl und Haarlinien-Design festgelegt werden.</p><p>Sein Ansatz stellt eine durchgehende Betreuung in den Mittelpunkt: von der Beratung in Österreich über die Behandlung in der Partnerklinik in der Türkei bis zur Nachsorge in Österreich, Deutschland und der Schweiz.</p>",
+                    "en": "<p>Dr. Huseyin Burhan oversees the medical planning and execution of hair transplants at Apex Beauty. Every case begins with an individual scalp analysis, which forms the basis for the treatment plan, graft count, and hairline design.</p><p>His approach centers on continuous care: from consultation in Austria, through treatment at the partner clinic in Turkey, to aftercare across Austria, Germany, and Switzerland.</p>",
+                    "fr": "<p>Le Dr Huseyin Burhan supervise la planification médicale et la réalisation des greffes de cheveux chez Apex Beauty. Chaque cas débute par une analyse individuelle du cuir chevelu, qui sert de base au plan de traitement, au nombre de greffons et à la conception de la ligne capillaire.</p><p>Son approche est centrée sur un suivi continu : de la consultation en Autriche, au traitement dans la clinique partenaire en Turquie, jusqu'au suivi en Autriche, en Allemagne et en Suisse.</p>",
+                    "nl": "<p>Dr. Huseyin Burhan houdt toezicht op de medische planning en uitvoering van haartransplantaties bij Apex Beauty. Elk traject begint met een individuele hoofdhuidanalyse, die de basis vormt voor het behandelplan, het aantal grafts en het ontwerp van de haarlijn.</p><p>Zijn aanpak draait om continue zorg: van consult in Oostenrijk, via behandeling in de partnerkliniek in Turkije, tot nazorg in Oostenrijk, Duitsland en Zwitserland.</p>",
+                    "it": "<p>Il Dr. Huseyin Burhan supervisiona la pianificazione medica e l'esecuzione dei trapianti di capelli presso Apex Beauty. Ogni caso inizia con un'analisi individuale del cuoio capelluto, che costituisce la base per il piano di trattamento, il numero di innesti e il design dell'attaccatura.</p><p>Il suo approccio è incentrato sulla cura continua: dalla consulenza in Austria, al trattamento presso la clinica partner in Turchia, fino all'assistenza post-operatoria in Austria, Germania e Svizzera.</p>",
+                    "tr": "<p>Dr. Hüseyin Burhan, Apex Beauty'deki saç ekimlerinin tıbbi planlamasını ve uygulamasını denetler. Her vaka, tedavi planı, greft sayısı ve saç çizgisi tasarımının temelini oluşturan kişiye özel bir saç derisi analiziyle başlar.</p><p>Yaklaşımı kesintisiz bakıma odaklanır: Avusturya'daki danışmadan, Türkiye'deki ortak klinikte tedaviye, Avusturya, Almanya ve İsviçre'deki bakıma kadar.</p>"
+                },
+                "specialtiesHeading": {
+                    "de": "Schwerpunkte",
+                    "en": "Areas of focus",
+                    "fr": "Domaines d'expertise",
+                    "nl": "Aandachtsgebieden",
+                    "it": "Aree di competenza",
+                    "tr": "Uzmanlık Alanları"
+                },
+                "specialty1Title": {
+                    "de": "Individuelles Haarlinien-Design",
+                    "en": "Personalized hairline design",
+                    "fr": "Conception personnalisée de la ligne capillaire",
+                    "nl": "Persoonlijk ontwerp van de haarlijn",
+                    "it": "Design personalizzato dell'attaccatura",
+                    "tr": "Kişiye Özel Saç Çizgisi Tasarımı"
+                },
+                "specialty1Desc": {
+                    "de": "Jede Haarlinie wird an Gesichtsform und natürlichen Haarwuchs angepasst.",
+                    "en": "Every hairline is planned around facial structure and natural growth patterns.",
+                    "fr": "Chaque ligne capillaire est conçue en fonction de la structure du visage et des schémas de croissance naturels.",
+                    "nl": "Elke haarlijn wordt ontworpen op basis van de gezichtsstructuur en het natuurlijke groeipatroon.",
+                    "it": "Ogni attaccatura viene progettata in base alla struttura del viso e ai naturali schemi di crescita.",
+                    "tr": "Her saç çizgisi, yüz yapısına ve doğal büyüme desenlerine göre planlanır."
+                },
+                "specialty2Title": {
+                    "de": "Kopfhaut-Analyse",
+                    "en": "Scalp analysis",
+                    "fr": "Analyse du cuir chevelu",
+                    "nl": "Hoofdhuidanalyse",
+                    "it": "Analisi del cuoio capelluto",
+                    "tr": "Saç Derisi Analizi"
+                },
+                "specialty2Desc": {
+                    "de": "Grundlage für Behandlungsplan, Graft-Anzahl und erwartetes Ergebnis.",
+                    "en": "The basis for the treatment plan, graft count, and expected outcome.",
+                    "fr": "La base du plan de traitement, du nombre de greffons et du résultat attendu.",
+                    "nl": "De basis voor het behandelplan, het aantal grafts en het verwachte resultaat.",
+                    "it": "La base per il piano di trattamento, il numero di innesti e il risultato atteso.",
+                    "tr": "Tedavi planı, greft sayısı ve beklenen sonucun temelidir."
+                },
+                "specialty3Title": {
+                    "de": "Durchgehende Betreuung",
+                    "en": "Continuous care",
+                    "fr": "Suivi continu",
+                    "nl": "Continue zorg",
+                    "it": "Cura continua",
+                    "tr": "Kesintisiz Bakım"
+                },
+                "specialty3Desc": {
+                    "de": "Von der Beratung über die Behandlung bis zur Nachsorge in AT · DE · CH.",
+                    "en": "From consultation through treatment to aftercare across AT · DE · CH.",
+                    "fr": "De la consultation au traitement jusqu'au suivi, en Autriche, en Allemagne et en Suisse.",
+                    "nl": "Van consult tot behandeling tot nazorg in Oostenrijk, Duitsland en Zwitserland.",
+                    "it": "Dalla consulenza al trattamento fino all'assistenza post-operatoria in Austria, Germania e Svizzera.",
+                    "tr": "Danışmadan tedaviye, AT · DE · CH genelinde bakıma kadar."
+                }
+            }
+        ]
     }
 }

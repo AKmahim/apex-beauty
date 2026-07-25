@@ -18,6 +18,13 @@
 // DE/EN toggle keeps working on freshly-loaded text.
 (function () {
   var CONTENT_API_BASE = '';
+  // Every language the site can display. DE and EN are the only ones
+  // guaranteed to have real copy everywhere; the rest fall back to EN (then
+  // DE) wherever a translation hasn't been filled in yet, both here and in
+  // each page's own applyLang(). Shared by admin.js so both sides agree on
+  // which languages exist.
+  var APEX_CONTENT_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
+  window.APEX_CONTENT_LANGS = APEX_CONTENT_LANGS;
 
   function resolvePath(obj, path) {
     var parts = path.split('.');
@@ -31,8 +38,10 @@
 
   function applyBilingual(el, node) {
     if (!node || typeof node.de !== 'string') return;
-    el.setAttribute('data-de', node.de);
-    el.setAttribute('data-en', node.en || node.de);
+    APEX_CONTENT_LANGS.forEach(function (lang) {
+      var val = typeof node[lang] === 'string' && node[lang] !== '' ? node[lang] : (node.en || node.de);
+      el.setAttribute('data-' + lang, val);
+    });
   }
 
   function applyContent(content) {
@@ -64,6 +73,7 @@
           if (!path) return;
           if (mediaEl.tagName === 'IMG') {
             mediaEl.src = path;
+            mediaEl.closest('[data-cmedia-wrap]') && mediaEl.closest('[data-cmedia-wrap]').classList.add('has-media');
           } else if (mediaEl.tagName === 'VIDEO') {
             mediaEl.src = path;
           }

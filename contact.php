@@ -94,18 +94,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .consult-head h2 { font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 4px; }
   .consult-head p { font-size: 12.5px; color: rgba(255,255,255,0.7); }
   .lang-switch {
-    display: flex; justify-content: center;
+    position: relative;
     font-size: 12px; font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 999px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.1);
-    padding: 3px;
     width: fit-content;
     margin: 0 auto 14px;
   }
-  .lang-switch button { padding: 4px 11px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; color: rgba(255,255,255,0.7); background: transparent; }
-  .lang-switch .active { background: linear-gradient(100deg, var(--teal-500), var(--blue-600)); color: #fff; }
+  .lang-switch-toggle {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 12px; cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 999px;
+    background: rgba(255,255,255,0.1);
+    font: inherit; font-weight: inherit; color: rgba(255,255,255,0.85);
+  }
+  .lang-switch-caret { width: 11px; height: 11px; flex-shrink: 0; transition: transform 0.2s ease; }
+  .lang-switch.open .lang-switch-caret { transform: rotate(180deg); }
+  .lang-switch-menu {
+    position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px);
+    display: flex; flex-direction: column; gap: 2px;
+    min-width: 90px; padding: 6px;
+    background: rgba(20,30,45,0.95); backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 14px;
+    box-shadow: 0 18px 34px -14px rgba(0,0,0,0.5);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+    z-index: 60;
+  }
+  .lang-switch.open .lang-switch-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+  .lang-switch-menu button { padding: 6px 11px; cursor: pointer; border: none; font: inherit; font-weight: inherit; border-radius: 999px; color: rgba(255,255,255,0.7); background: transparent; }
+  .lang-switch-menu button:hover:not(.active) { background: rgba(255,255,255,0.12); color: #fff; }
+  .lang-switch-menu button.active { background: linear-gradient(100deg, var(--teal-500), var(--blue-600)); color: #fff; }
   .consult-steps {
     display: flex; align-items: center; justify-content: center;
     font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,0.55);
@@ -278,37 +295,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/lotus-transparent.png" alt="Apex Beauty">
         <span>Apex Beauty</span>
       </div>
-      <h2 id="consultTitle" data-ckey="intro.title" data-de="Kostenlose Beratung" data-en="Free Consultation">Kostenlose Beratung</h2>
-      <p data-ckey="intro.sub" data-de="Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden." data-en="Fill in the form and we'll get back to you within 24 hours.">Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.</p>
+      <h2 id="consultTitle" data-ckey="intro.title" data-de="Kostenlose Beratung" data-en="Free Consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</h2>
+      <p data-ckey="intro.sub" data-de="Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden." data-en="Fill in the form and we'll get back to you within 24 hours." data-fr="Remplissez le formulaire, nous vous répondrons sous 24 heures." data-nl="Vul het formulier in, we nemen binnen 24 uur contact met u op." data-it="Compila il modulo, ti risponderemo entro 24 ore." data-tr="Formu doldurun, 24 saat içinde size dönüş yapalım.">Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.</p>
     </div>
-    <div class="lang-switch">
-      <button type="button" class="active" data-lang="de">DE</button>
-      <button type="button" class="inactive" data-lang="en">EN</button>
+    <div class="lang-switch" id="langSwitch">
+      <button type="button" class="lang-switch-toggle" id="langSwitchToggle" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-switch-current">DE</span>
+        <svg class="lang-switch-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="lang-switch-menu" id="langSwitchMenu" role="listbox">
+        <button type="button" class="active" data-lang="de" role="option">DE</button>
+        <button type="button" class="inactive" data-lang="en" role="option">EN</button>
+        <button type="button" class="inactive" data-lang="fr" role="option">FR</button>
+        <button type="button" class="inactive" data-lang="nl" role="option">NL</button>
+        <button type="button" class="inactive" data-lang="it" role="option">IT</button>
+        <button type="button" class="inactive" data-lang="tr" role="option">TR</button>
+      </div>
     </div>
     <div class="consult-steps" id="consultSteps">
-      <div class="cstep active" data-step="1"><span class="dot">1</span><span data-de="Info" data-en="Info">Info</span></div>
+      <div class="cstep active" data-step="1"><span class="dot">1</span><span data-de="Info" data-en="Info" data-fr="Infos" data-nl="Info" data-it="Info" data-tr="Bilgi">Info</span></div>
       <div class="cstep-line"></div>
-      <div class="cstep" data-step="2"><span class="dot">2</span><span data-de="Bedarf" data-en="Needs">Bedarf</span></div>
+      <div class="cstep" data-step="2"><span class="dot">2</span><span data-de="Bedarf" data-en="Needs" data-fr="Besoins" data-nl="Behoefte" data-it="Esigenze" data-tr="İhtiyaçlar">Bedarf</span></div>
       <div class="cstep-line"></div>
-      <div class="cstep" data-step="3"><span class="dot">3</span><span data-de="Fotos" data-en="Photos">Fotos</span></div>
+      <div class="cstep" data-step="3"><span class="dot">3</span><span data-de="Fotos" data-en="Photos" data-fr="Photos" data-nl="Foto's" data-it="Foto" data-tr="Fotoğraflar">Fotos</span></div>
     </div>
   </div>
   <div class="consult-body">
 
   <!-- STEP 1: Info -->
   <div class="consult-pane active" id="cpane1">
-    <div class="pane-title" data-de="Holen Sie sich Ihre kostenlose Haaranalyse" data-en="Get Your Free Hair Analysis">Holen Sie sich Ihre kostenlose Haaranalyse</div>
-    <div class="pane-sub" data-de="Unser Expertenteam meldet sich innerhalb von 24 Stunden" data-en="Our expert team will contact you within 24 hours">Unser Expertenteam meldet sich innerhalb von 24 Stunden</div>
+    <div class="pane-title" data-de="Holen Sie sich Ihre kostenlose Haaranalyse" data-en="Get Your Free Hair Analysis" data-fr="Obtenez votre analyse capillaire gratuite" data-nl="Krijg uw gratis haaranalyse" data-it="Ottieni la tua analisi gratuita dei capelli" data-tr="Ücretsiz Saç Analizinizi Alın">Holen Sie sich Ihre kostenlose Haaranalyse</div>
+    <div class="pane-sub" data-de="Unser Expertenteam meldet sich innerhalb von 24 Stunden" data-en="Our expert team will contact you within 24 hours" data-fr="Notre équipe d'experts vous contactera sous 24 heures" data-nl="Ons expertteam neemt binnen 24 uur contact met u op" data-it="Il nostro team di esperti ti contatterà entro 24 ore" data-tr="Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir">Unser Expertenteam meldet sich innerhalb von 24 Stunden</div>
     <div class="cfield">
-      <label data-de="Vollständiger Name *" data-en="Full Name *">Vollständiger Name *</label>
+      <label data-de="Vollständiger Name *" data-en="Full Name *" data-fr="Nom complet *" data-nl="Volledige naam *" data-it="Nome completo *" data-tr="Ad Soyad *">Vollständiger Name *</label>
       <input type="text" id="cfName" data-de-ph="Ihr vollständiger Name" data-en-ph="Your full name" placeholder="Ihr vollständiger Name" oninput="validateStep1()">
     </div>
     <div class="cfield">
-      <label data-de="E-Mail *" data-en="Email *">E-Mail *</label>
+      <label data-de="E-Mail *" data-en="Email *" data-fr="E-mail *" data-nl="E-mail *" data-it="E-mail *" data-tr="E-posta *">E-Mail *</label>
       <input type="email" id="cfEmail" placeholder="email@example.com" oninput="validateStep1()">
     </div>
     <div class="cfield">
-      <label data-de="Land *" data-en="Country *">Land *</label>
+      <label data-de="Land *" data-en="Country *" data-fr="Pays *" data-nl="Land *" data-it="Paese *" data-tr="Ülke *">Land *</label>
       <select id="cfCountry" onchange="updatePrefix(); validateStep1()">
         <option value="AT" data-prefix="+43">🇦🇹 Österreich</option>
         <option value="DE" data-prefix="+49">🇩🇪 Deutschland</option>
@@ -318,125 +345,125 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </select>
     </div>
     <div class="cfield">
-      <label data-de="Telefon *" data-en="Phone *">Telefon *</label>
+      <label data-de="Telefon *" data-en="Phone *" data-fr="Téléphone *" data-nl="Telefoon *" data-it="Telefono *" data-tr="Telefon *">Telefon *</label>
       <div class="phone-row">
         <div class="prefix" id="cfPrefix">+43</div>
         <input type="tel" id="cfPhone" placeholder="660 123 45 67" oninput="validateStep1()">
       </div>
     </div>
     <div class="consult-nav">
-      <button type="button" class="cnext" id="cnext1" disabled onclick="gotoStep(2)" data-de="Weiter" data-en="Continue">Weiter</button>
+      <button type="button" class="cnext" id="cnext1" disabled onclick="gotoStep(2)" data-de="Weiter" data-en="Continue" data-fr="Continuer" data-nl="Doorgaan" data-it="Continua" data-tr="Devam Et">Weiter</button>
     </div>
   </div>
 
   <!-- STEP 2: Needs -->
   <div class="consult-pane" id="cpane2">
     <div class="cfield">
-      <label data-de="Ihr Geschlecht *" data-en="Your Gender *">Ihr Geschlecht *</label>
+      <label data-de="Ihr Geschlecht *" data-en="Your Gender *" data-fr="Votre sexe *" data-nl="Uw geslacht *" data-it="Il tuo genere *" data-tr="Cinsiyetiniz *">Ihr Geschlecht *</label>
       <div class="opt-grid cols-2" id="genderRow">
         <div class="opt-card radio centered" data-value="male" onclick="pickSingle(this,'genderRow'); validateStep2()">
-          <span data-de="Männlich" data-en="Male">Männlich</span>
+          <span data-de="Männlich" data-en="Male" data-fr="Homme" data-nl="Man" data-it="Uomo" data-tr="Erkek">Männlich</span>
         </div>
         <div class="opt-card radio centered" data-value="female" onclick="pickSingle(this,'genderRow'); validateStep2()">
-          <span data-de="Weiblich" data-en="Female">Weiblich</span>
+          <span data-de="Weiblich" data-en="Female" data-fr="Femme" data-nl="Vrouw" data-it="Donna" data-tr="Kadın">Weiblich</span>
         </div>
       </div>
     </div>
     <div class="cfield">
-      <label data-de="Verfahren, die Sie interessieren *" data-en="Procedures You're Interested In *">Verfahren, die Sie interessieren *</label>
+      <label data-de="Verfahren, die Sie interessieren *" data-en="Procedures You're Interested In *" data-fr="Interventions qui vous intéressent *" data-nl="Ingrepen waarin u geïnteresseerd bent *" data-it="Procedure di tuo interesse *" data-tr="İlgilendiğiniz İşlemler *">Verfahren, die Sie interessieren *</label>
       <div class="opt-grid cols-1" id="procRow">
         <div class="opt-card" data-value="hair" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="Haartransplantation" data-en="Hair Transplant">Haartransplantation</span>
+          <span class="mark"></span><span data-de="Haartransplantation" data-en="Hair Transplant" data-fr="Greffe de cheveux" data-nl="Haartransplantatie" data-it="Trapianto di capelli" data-tr="Saç Ekimi">Haartransplantation</span>
         </div>
         <div class="opt-card" data-value="beard" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="Barttransplantation" data-en="Beard Transplant">Barttransplantation</span>
+          <span class="mark"></span><span data-de="Barttransplantation" data-en="Beard Transplant" data-fr="Greffe de barbe" data-nl="Baardtransplantatie" data-it="Trapianto di barba" data-tr="Sakal Ekimi">Barttransplantation</span>
         </div>
         <div class="opt-card" data-value="eyebrow" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="Augenbrauentransplantation" data-en="Eyebrow Transplant">Augenbrauentransplantation</span>
+          <span class="mark"></span><span data-de="Augenbrauentransplantation" data-en="Eyebrow Transplant" data-fr="Greffe de sourcils" data-nl="Wenkbrauwtransplantatie" data-it="Trapianto di sopracciglia" data-tr="Kaş Ekimi">Augenbrauentransplantation</span>
         </div>
       </div>
-      <div class="cgroup-note" data-de="Unterstützende Therapien" data-en="Supporting Therapies">Unterstützende Therapien</div>
+      <div class="cgroup-note" data-de="Unterstützende Therapien" data-en="Supporting Therapies" data-fr="Thérapies complémentaires" data-nl="Ondersteunende therapieën" data-it="Terapie di supporto" data-tr="Destekleyici Tedaviler">Unterstützende Therapien</div>
       <div class="opt-grid cols-2" id="therapyRow">
         <div class="opt-card" data-value="prp" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="PRP-Therapie" data-en="PRP Therapy">PRP-Therapie</span>
+          <span class="mark"></span><span data-de="PRP-Therapie" data-en="PRP Therapy" data-fr="Thérapie PRP" data-nl="PRP-therapie" data-it="Terapia PRP" data-tr="PRP Tedavisi">PRP-Therapie</span>
         </div>
         <div class="opt-card" data-value="stemcell" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="Stammzelltherapie" data-en="Stem Cell Therapy">Stammzelltherapie</span>
+          <span class="mark"></span><span data-de="Stammzelltherapie" data-en="Stem Cell Therapy" data-fr="Thérapie par cellules souches" data-nl="Stamceltherapie" data-it="Terapia con cellule staminali" data-tr="Kök Hücre Tedavisi">Stammzelltherapie</span>
         </div>
         <div class="opt-card" data-value="exosome" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="Exosom-Therapie" data-en="Exosome Therapy">Exosom-Therapie</span>
+          <span class="mark"></span><span data-de="Exosom-Therapie" data-en="Exosome Therapy" data-fr="Thérapie par exosomes" data-nl="Exosoomtherapie" data-it="Terapia con esosomi" data-tr="Ekzozom Tedavisi">Exosom-Therapie</span>
         </div>
         <div class="opt-card" data-value="hbot" onclick="toggleChip(this); validateStep2()">
-          <span class="mark"></span><span data-de="Hyperbarer Sauerstoff" data-en="Hyperbaric Oxygen">Hyperbarer Sauerstoff</span>
+          <span class="mark"></span><span data-de="Hyperbarer Sauerstoff" data-en="Hyperbaric Oxygen" data-fr="Oxygénothérapie hyperbare" data-nl="Hyperbare zuurstoftherapie" data-it="Ossigenoterapia iperbarica" data-tr="Hiperbarik Oksijen">Hyperbarer Sauerstoff</span>
         </div>
       </div>
     </div>
     <div class="cfield">
-      <label data-de="Wann planen Sie den Eingriff?" data-en="When Are You Planning the Procedure?">Wann planen Sie den Eingriff?</label>
+      <label data-de="Wann planen Sie den Eingriff?" data-en="When Are You Planning the Procedure?" data-fr="Quand prévoyez-vous l'intervention ?" data-nl="Wanneer plant u de ingreep?" data-it="Quando prevedi l'intervento?" data-tr="İşlemi Ne Zaman Planlıyorsunuz?">Wann planen Sie den Eingriff?</label>
       <div class="opt-grid cols-3" id="timingRow">
-        <div class="opt-card radio centered" data-value="this-month" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="Diesen Monat" data-en="This month">Diesen Monat</span></div>
-        <div class="opt-card radio centered" data-value="1-3" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 1–3 Monaten" data-en="In 1–3 months">In 1–3 Monaten</span></div>
-        <div class="opt-card radio centered" data-value="3-6" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 3–6 Monaten" data-en="In 3–6 months">In 3–6 Monaten</span></div>
-        <div class="opt-card radio centered" data-value="6plus" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 6+ Monaten" data-en="In 6+ months">In 6+ Monaten</span></div>
-        <div class="opt-card radio centered" data-value="research" onclick="pickSingle(this,'timingRow'); validateStep2()" style="grid-column: span 2;"><span data-de="Nur recherchieren" data-en="Just researching">Nur recherchieren</span></div>
+        <div class="opt-card radio centered" data-value="this-month" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="Diesen Monat" data-en="This month" data-fr="Ce mois-ci" data-nl="Deze maand" data-it="Questo mese" data-tr="Bu Ay">Diesen Monat</span></div>
+        <div class="opt-card radio centered" data-value="1-3" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 1–3 Monaten" data-en="In 1–3 months" data-fr="Dans 1 à 3 mois" data-nl="Over 1–3 maanden" data-it="Tra 1 e 3 mesi" data-tr="1-3 Ay İçinde">In 1–3 Monaten</span></div>
+        <div class="opt-card radio centered" data-value="3-6" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 3–6 Monaten" data-en="In 3–6 months" data-fr="Dans 3 à 6 mois" data-nl="Over 3–6 maanden" data-it="Tra 3 e 6 mesi" data-tr="3-6 Ay İçinde">In 3–6 Monaten</span></div>
+        <div class="opt-card radio centered" data-value="6plus" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 6+ Monaten" data-en="In 6+ months" data-fr="Dans 6+ mois" data-nl="Over 6+ maanden" data-it="Tra 6+ mesi" data-tr="6+ Ay İçinde">In 6+ Monaten</span></div>
+        <div class="opt-card radio centered" data-value="research" onclick="pickSingle(this,'timingRow'); validateStep2()" style="grid-column: span 2;"><span data-de="Nur recherchieren" data-en="Just researching" data-fr="Je me renseigne seulement" data-nl="Alleen aan het oriënteren" data-it="Sto solo informandomi" data-tr="Sadece Araştırıyorum">Nur recherchieren</span></div>
       </div>
     </div>
     <div class="cfield">
-      <label data-de="Zusätzliche Notizen (optional)" data-en="Additional Notes (Optional)">Zusätzliche Notizen (optional)</label>
+      <label data-de="Zusätzliche Notizen (optional)" data-en="Additional Notes (Optional)" data-fr="Remarques supplémentaires (facultatif)" data-nl="Aanvullende opmerkingen (optioneel)" data-it="Note aggiuntive (facoltativo)" data-tr="Ek Notlar (İsteğe Bağlı)">Zusätzliche Notizen (optional)</label>
       <textarea id="cfNotes" data-de-ph="Ihre Ziele oder Fragen..." data-en-ph="Your goals or questions..." placeholder="Ihre Ziele oder Fragen..."></textarea>
     </div>
     <div class="consult-nav">
-      <button type="button" class="cback" onclick="gotoStep(1)" data-de="Zurück" data-en="Back">Zurück</button>
-      <button type="button" class="cnext" id="cnext2" disabled onclick="gotoStep(3)" data-de="Weiter" data-en="Continue">Weiter</button>
+      <button type="button" class="cback" onclick="gotoStep(1)" data-de="Zurück" data-en="Back" data-fr="Retour" data-nl="Terug" data-it="Indietro" data-tr="Geri">Zurück</button>
+      <button type="button" class="cnext" id="cnext2" disabled onclick="gotoStep(3)" data-de="Weiter" data-en="Continue" data-fr="Continuer" data-nl="Doorgaan" data-it="Continua" data-tr="Devam Et">Weiter</button>
     </div>
   </div>
 
   <!-- STEP 3: Photos -->
   <div class="consult-pane" id="cpane3">
-    <div class="photo-note" data-de="📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall." data-en="📸 Photos are optional. Our experts will contact you either way.">📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.</div>
+    <div class="photo-note" data-de="📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall." data-en="📸 Photos are optional. Our experts will contact you either way." data-fr="📸 Les photos sont facultatives. Nos experts vous contacteront dans tous les cas." data-nl="📸 Foto's zijn optioneel. Onze experts nemen sowieso contact met u op." data-it="📸 Le foto sono facoltative. I nostri esperti ti contatteranno comunque." data-tr="📸 Fotoğraflar isteğe bağlıdır. Uzmanlarımız her durumda sizinle iletişime geçecektir.">📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.</div>
     <div class="photo-grid">
       <div class="photo-slot" id="slot-front">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhFront" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhFront)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><circle cx="15" cy="14" r="7" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12.5" cy="12.5" r="1.1" fill="#fff"/><circle cx="17.5" cy="12.5" r="1.1" fill="#fff"/><path d="M12 17c1 1.2 2 1.6 3 1.6s2-0.4 3-1.6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        <b data-de="Vorne" data-en="Front">Vorne</b>
-        <span data-de="Gesicht sichtbar" data-en="Face visible">Gesicht sichtbar</span>
+        <b data-de="Vorne" data-en="Front" data-fr="Face avant" data-nl="Voorkant" data-it="Fronte" data-tr="Ön">Vorne</b>
+        <span data-de="Gesicht sichtbar" data-en="Face visible" data-fr="Visage visible" data-nl="Gezicht zichtbaar" data-it="Volto visibile" data-tr="Yüz Görünür">Gesicht sichtbar</span>
         <input type="file" accept="image/*" onchange="markSlot(this,'slot-front')">
       </div>
       <div class="photo-slot" id="slot-top">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhTop" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhTop)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><circle cx="15" cy="20" r="4.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M15 5v8M11 9l4-4 4 4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <b data-de="Oben" data-en="Top">Oben</b>
-        <span data-de="Von oben" data-en="From above">Von oben</span>
+        <b data-de="Oben" data-en="Top" data-fr="Dessus" data-nl="Bovenkant" data-it="Sopra" data-tr="Üst">Oben</b>
+        <span data-de="Von oben" data-en="From above" data-fr="Vue de dessus" data-nl="Van bovenaf" data-it="Dall'alto" data-tr="Yukarıdan">Von oben</span>
         <input type="file" accept="image/*" onchange="markSlot(this,'slot-top')">
       </div>
       <div class="photo-slot" id="slot-side">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhSide" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhSide)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><path d="M11 22c-1-2-1-4 0-6-1-1-1-3 0-4 1-3 4-5 7-5 3 0 4 2 4 4 1 0 2 1 2 2 0 2-1 3-2 3 0 2-1 4-3 5-1 1-1 2 0 3z" fill="#fff" opacity="0.92"/></svg></span>
-        <b data-de="Seite" data-en="Side">Seite</b>
-        <span data-de="Profil" data-en="Profile">Profil</span>
+        <b data-de="Seite" data-en="Side" data-fr="Profil" data-nl="Zijkant" data-it="Lato" data-tr="Yan">Seite</b>
+        <span data-de="Profil" data-en="Profile" data-fr="Profil" data-nl="Profiel" data-it="Profilo" data-tr="Profil">Profil</span>
         <input type="file" accept="image/*" onchange="markSlot(this,'slot-side')">
       </div>
       <div class="photo-slot" id="slot-donor">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhDonor" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhDonor)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><path d="M20 10a7 7 0 1 0 1.8 6.9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polyline points="22,7 21.8,11.5 17.5,10.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <b data-de="Spender" data-en="Donor">Spender</b>
-        <span data-de="Hinterkopf" data-en="Back of head">Hinterkopf</span>
+        <b data-de="Spender" data-en="Donor" data-fr="Donneuse" data-nl="Donor" data-it="Donatrice" data-tr="Donör">Spender</b>
+        <span data-de="Hinterkopf" data-en="Back of head" data-fr="Arrière de la tête" data-nl="Achterhoofd" data-it="Retro della testa" data-tr="Baş Arkası">Hinterkopf</span>
         <input type="file" accept="image/*" onchange="markSlot(this,'slot-donor')">
       </div>
     </div>
-    <div class="photo-note"><span id="photoCount">0</span>/4 <span data-de="Fotos hochgeladen" data-en="photos uploaded">Fotos hochgeladen</span></div>
+    <div class="photo-note"><span id="photoCount">0</span>/4 <span data-de="Fotos hochgeladen" data-en="photos uploaded" data-fr="photos téléchargées" data-nl="foto's geüpload" data-it="foto caricate" data-tr="fotoğraf yüklendi">Fotos hochgeladen</span></div>
     <div class="cfield">
-      <label data-de="Rabattgutschein (optional)" data-en="Discount Coupon (Optional)">Rabattgutschein (optional)</label>
+      <label data-de="Rabattgutschein (optional)" data-en="Discount Coupon (Optional)" data-fr="Code de réduction (facultatif)" data-nl="Kortingscode (optioneel)" data-it="Codice sconto (facoltativo)" data-tr="İndirim Kuponu (İsteğe Bağlı)">Rabattgutschein (optional)</label>
       <input type="text" id="cfCoupon" placeholder="WELCOME5">
     </div>
     <div class="check-row">
       <input type="checkbox" id="cfPrivacy" onchange="validateStep3()">
-      <span data-de="Ich habe die &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *">Ich habe die <a href="privacy.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
+      <span data-de="Ich habe die &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *" data-fr="J'ai lu la &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;politique de confidentialité&lt;/a&gt; et j'accepte le traitement de mes données personnelles. *" data-nl="Ik heb het &lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacybeleid&lt;/a&gt; gelezen en ga akkoord met de verwerking van mijn persoonsgegevens. *" data-it="Ho letto l'&lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;informativa sulla privacy&lt;/a&gt; e accetto il trattamento dei miei dati personali. *" data-tr="&lt;a href=&quot;privacy.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Gizlilik politikasını&lt;/a&gt; okudum ve kişisel verilerimin işlenmesini kabul ediyorum. *">Ich habe die <a href="privacy.html" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
     </div>
     <div class="check-row">
       <input type="checkbox" id="cfMarketing">
-      <span data-de="Ich möchte über Aktionen und Angebote informiert werden." data-en="I'd like to be informed about promotions and offers.">Ich möchte über Aktionen und Angebote informiert werden.</span>
+      <span data-de="Ich möchte über Aktionen und Angebote informiert werden." data-en="I'd like to be informed about promotions and offers." data-fr="Je souhaite être informé(e) des promotions et offres." data-nl="Ik wil op de hoogte worden gehouden van acties en aanbiedingen." data-it="Desidero essere informato/a su promozioni e offerte." data-tr="Kampanyalar ve fırsatlar hakkında bilgilendirilmek istiyorum.">Ich möchte über Aktionen und Angebote informiert werden.</span>
     </div>
-    <div class="gdpr-badge" data-de="🇪🇺 DSGVO · Ihre Daten sind geschützt" data-en="🇪🇺 GDPR · Your data is protected">🇪🇺 DSGVO · Ihre Daten sind geschützt</div>
+    <div class="gdpr-badge" data-de="🇪🇺 DSGVO · Ihre Daten sind geschützt" data-en="🇪🇺 GDPR · Your data is protected" data-fr="🇪🇺 RGPD · Vos données sont protégées" data-nl="🇪🇺 AVG · Uw gegevens zijn beschermd" data-it="🇪🇺 GDPR · I tuoi dati sono protetti" data-tr="🇪🇺 GDPR · Verileriniz Korunmaktadır">🇪🇺 DSGVO · Ihre Daten sind geschützt</div>
     <div class="consult-nav">
-      <button type="button" class="cback" onclick="gotoStep(2)" data-de="Zurück" data-en="Back">Zurück</button>
-      <button type="button" class="cnext" id="cnext3" disabled onclick="submitConsult()" data-de="Absenden" data-en="Submit">Absenden</button>
+      <button type="button" class="cback" onclick="gotoStep(2)" data-de="Zurück" data-en="Back" data-fr="Retour" data-nl="Terug" data-it="Indietro" data-tr="Geri">Zurück</button>
+      <button type="button" class="cnext" id="cnext3" disabled onclick="submitConsult()" data-de="Absenden" data-en="Submit" data-fr="Envoyer" data-nl="Versturen" data-it="Invia" data-tr="Gönder">Absenden</button>
     </div>
   </div>
 
@@ -444,8 +471,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="consult-pane" id="cpaneSuccess">
     <div class="consult-success">
       <div class="ok-ring">✓</div>
-      <h3 data-de="Vielen Dank!" data-en="Thank You!">Vielen Dank!</h3>
-      <p data-de="Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen." data-en="We've received your request. Our team will get back to you within 24 hours.">Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
+      <h3 data-de="Vielen Dank!" data-en="Thank You!" data-fr="Merci !" data-nl="Bedankt!" data-it="Grazie!" data-tr="Teşekkürler!">Vielen Dank!</h3>
+      <p data-de="Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen." data-en="We've received your request. Our team will get back to you within 24 hours." data-fr="Nous avons bien reçu votre demande. Notre équipe vous recontactera sous 24 heures." data-nl="We hebben uw aanvraag ontvangen. Ons team neemt binnen 24 uur contact met u op." data-it="Abbiamo ricevuto la tua richiesta. Il nostro team ti risponderà entro 24 ore." data-tr="Talebinizi aldık. Ekibimiz 24 saat içinde sizinle iletişime geçecektir.">Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
     </div>
   </div>
   </div>
@@ -463,24 +490,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return match ? decodeURIComponent(match[1]) : null;
   }
 
+  // FR/NL/IT/TR have no translated copy yet — they fall back to the English
+  // strings until real translations are added for those data-* attributes.
+  var APEX_TRANSLATED_LANGS = ['de', 'en'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
+    var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
+      if (val === null && fallback) val = el.getAttribute('data-' + fallback);
       if (val !== null) el.innerHTML = val;
     });
     document.querySelectorAll('[data-de-ph]').forEach(function (el) {
       var ph = el.getAttribute('data-' + lang + '-ph');
+      if (ph === null && fallback) ph = el.getAttribute('data-' + fallback + '-ph');
       if (ph !== null) el.placeholder = ph;
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (s) {
+    document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       var isActive = s.getAttribute('data-lang') === lang;
       s.className = isActive ? 'active' : 'inactive';
     });
+    document.querySelectorAll('.lang-switch-current').forEach(function (s) {
+      s.textContent = lang.toUpperCase();
+    });
   }
-  document.querySelectorAll('.lang-switch button').forEach(function (s) {
-    s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
+  document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
+    s.addEventListener('click', function () {
+      applyLang(s.getAttribute('data-lang'));
+      var ls = s.closest('.lang-switch');
+      if (ls) {
+        ls.classList.remove('open');
+        var t = ls.querySelector('.lang-switch-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
+  (function () {
+    var toggle = document.getElementById('langSwitchToggle');
+    var ls = document.getElementById('langSwitch');
+    if (!toggle || !ls) return;
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = ls.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (ls.classList.contains('open') && !ls.contains(e.target)) {
+        ls.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { ls.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+    });
+  })();
 
   function gotoStep(n) {
     [1, 2, 3].forEach(function (i) {

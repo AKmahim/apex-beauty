@@ -2,109 +2,189 @@
   "hero": {
     "heading": {
       "de": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Ihr Wissen rund um Haarausfall &amp; Haartransplantation</span>",
-      "en": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Everything you need to know about hair loss &amp; hair transplantation</span>"
+      "en": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Everything you need to know about hair loss &amp; hair transplantation</span>",
+      "fr": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Tout ce que vous devez savoir sur la chute de cheveux et la greffe de cheveux</span>",
+      "nl": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Alles wat u moet weten over haaruitval en haartransplantatie</span>",
+      "it": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Tutto ciò che devi sapere sulla caduta dei capelli e il trapianto di capelli</span>",
+      "tr": "<span>Hairpedia</span><br><span class='hp-hero-tagline'>Saç dökülmesi ve saç ekimi hakkında bilmeniz gereken her şey</span>"
     },
     "sub": {
       "de": "Wissenschaftlich fundiert, verständlich erklärt. Von den Ursachen des Haarausfalls bis zur vollständigen Genesung nach der Transplantation, alles an einem Ort.",
-      "en": "Scientifically grounded, clearly explained. From the causes of hair loss to full recovery after transplantation, all in one place."
+      "en": "Scientifically grounded, clearly explained. From the causes of hair loss to full recovery after transplantation, all in one place.",
+      "fr": "Fondé sur des données scientifiques, expliqué clairement. Des causes de la chute de cheveux jusqu'au rétablissement complet après la greffe, tout au même endroit.",
+      "nl": "Wetenschappelijk onderbouwd, helder uitgelegd. Van de oorzaken van haaruitval tot volledig herstel na de transplantatie, alles op één plek.",
+      "it": "Basato su solide evidenze scientifiche, spiegato in modo chiaro. Dalle cause della caduta dei capelli al recupero completo dopo il trapianto, tutto in un unico posto.",
+      "tr": "Bilimsel temellere dayalı, anlaşılır bir dille anlatılmıştır. Saç dökülmesinin nedenlerinden nakil sonrası tam iyileşmeye kadar her şey tek bir yerde."
     }
   },
   "wasIstHaarausfall": {
     "heading": {
       "de": "Was ist Haarausfall?",
-      "en": "What is hair loss?"
+      "en": "What is hair loss?",
+      "fr": "Qu'est-ce que la chute de cheveux ?",
+      "nl": "Wat is haaruitval?",
+      "it": "Cos'è la caduta dei capelli?",
+      "tr": "Saç Dökülmesi Nedir?"
     },
     "body": {
       "de": "Haarausfall, medizinisch Alopezie genannt, ist das teilweise oder vollständige Fehlen von Haaren an Stellen, an denen sie normalerweise wachsen. Bis zu 100 Haare täglich zu verlieren gilt als normaler Teil des Wachstumszyklus.",
-      "en": "Hair loss, medically known as alopecia, is the partial or complete absence of hair from areas where it normally grows. Losing up to 100 hairs a day is a normal part of the growth cycle."
+      "en": "Hair loss, medically known as alopecia, is the partial or complete absence of hair from areas where it normally grows. Losing up to 100 hairs a day is a normal part of the growth cycle.",
+      "fr": "La chute de cheveux, appelée médicalement alopécie, est l'absence partielle ou totale de cheveux dans des zones où ils poussent normalement. Perdre jusqu'à 100 cheveux par jour fait partie normale du cycle de croissance.",
+      "nl": "Haaruitval, medisch alopecia genoemd, is de gedeeltelijke of volledige afwezigheid van haar op plekken waar het normaal gesproken groeit. Tot 100 haren per dag verliezen is een normaal onderdeel van de groeicyclus.",
+      "it": "La caduta dei capelli, nota in ambito medico come alopecia, è l'assenza parziale o totale di capelli nelle aree in cui normalmente crescono. Perdere fino a 100 capelli al giorno è una parte normale del ciclo di crescita.",
+      "tr": "Tıbbi adıyla alopesi olarak bilinen saç dökülmesi, normalde saçın büyüdüğü bölgelerde kısmi veya tam saç yokluğudur. Günde 100 adede kadar saç kaybı, büyüme döngüsünün normal bir parçasıdır."
     },
     "image": "assets/content/hairpedia-wasIstHaarausfall-image-1784912960.png"
   },
   "ursachen": {
     "heading": {
       "de": "Ursachen von Haarausfall",
-      "en": "Causes of hair loss"
+      "en": "Causes of hair loss",
+      "fr": "Causes de la chute de cheveux",
+      "nl": "Oorzaken van haaruitval",
+      "it": "Cause della caduta dei capelli",
+      "tr": "Saç Dökülmesinin Nedenleri"
     },
     "body": {
       "de": "Haarausfall hat selten eine einzige Ursache. Genetik, Hormone, Stress und Ernährung wirken häufig zusammen.",
-      "en": "Hair loss rarely has a single cause. Genetics, hormones, stress, and nutrition often act together."
+      "en": "Hair loss rarely has a single cause. Genetics, hormones, stress, and nutrition often act together.",
+      "fr": "La chute de cheveux a rarement une seule cause. La génétique, les hormones, le stress et l'alimentation agissent souvent ensemble.",
+      "nl": "Haaruitval heeft zelden één enkele oorzaak. Genetica, hormonen, stress en voeding werken vaak samen.",
+      "it": "La caduta dei capelli raramente ha una causa unica. Genetica, ormoni, stress e alimentazione agiscono spesso insieme.",
+      "tr": "Saç dökülmesinin nadiren tek bir nedeni vardır. Genetik, hormonlar, stres ve beslenme genellikle birlikte etki eder."
     },
     "image": "assets/content/hairpedia-ursachen-image-1784914056.png"
   },
   "arten": {
     "heading": {
       "de": "Arten von Haarausfall",
-      "en": "Types of hair loss"
+      "en": "Types of hair loss",
+      "fr": "Types de chute de cheveux",
+      "nl": "Soorten haaruitval",
+      "it": "Tipi di caduta dei capelli",
+      "tr": "Saç Dökülmesi Türleri"
     },
     "body": {
       "de": "Nicht jeder Haarausfall ist gleich. Die Art bestimmt, welche Behandlung sinnvoll ist.",
-      "en": "Not all hair loss is the same. The type determines which treatment makes sense."
+      "en": "Not all hair loss is the same. The type determines which treatment makes sense.",
+      "fr": "Toutes les chutes de cheveux ne se ressemblent pas. Le type détermine quel traitement est pertinent.",
+      "nl": "Niet elke vorm van haaruitval is hetzelfde. Het type bepaalt welke behandeling zinvol is.",
+      "it": "Non tutte le cadute di capelli sono uguali. Il tipo determina quale trattamento sia più indicato.",
+      "tr": "Her saç dökülmesi aynı değildir. Tür, hangi tedavinin mantıklı olduğunu belirler."
     },
     "image": "assets/content/hairpedia-arten-image-1784914433.png"
   },
   "diagnose": {
     "heading": {
       "de": "Diagnose & Haaranalyse",
-      "en": "Diagnosis & hair analysis"
+      "en": "Diagnosis & hair analysis",
+      "fr": "Diagnostic et analyse capillaire",
+      "nl": "Diagnose & haaranalyse",
+      "it": "Diagnosi e analisi dei capelli",
+      "tr": "Teşhis ve Saç Analizi"
     },
     "body": {
       "de": "Eine präzise Diagnose ist die Grundlage jeder wirksamen Behandlung.",
-      "en": "An accurate diagnosis is the foundation of any effective treatment."
+      "en": "An accurate diagnosis is the foundation of any effective treatment.",
+      "fr": "Un diagnostic précis est la base de tout traitement efficace.",
+      "nl": "Een nauwkeurige diagnose is de basis van elke effectieve behandeling.",
+      "it": "Una diagnosi accurata è la base di qualsiasi trattamento efficace.",
+      "tr": "Doğru bir teşhis, her etkili tedavinin temelidir."
     },
     "image": "assets/content/hairpedia-diagnose-image-1784914980.png"
   },
   "behandlung": {
     "heading": {
       "de": "Behandlungsmöglichkeiten",
-      "en": "Treatment options"
+      "en": "Treatment options",
+      "fr": "Options de traitement",
+      "nl": "Behandelopties",
+      "it": "Opzioni di trattamento",
+      "tr": "Tedavi Seçenekleri"
     },
     "body": {
       "de": "Von topischen Medikamenten bis zur Transplantation, jede Option hat einen anderen Wirkmechanismus, Aufwand und Evidenzgrad.",
-      "en": "From topical medication to transplantation, each option differs in mechanism, effort, and quality of evidence."
+      "en": "From topical medication to transplantation, each option differs in mechanism, effort, and quality of evidence.",
+      "fr": "Des médicaments topiques à la greffe, chaque option diffère par son mécanisme d'action, son niveau de contrainte et la qualité des preuves scientifiques.",
+      "nl": "Van topische medicatie tot transplantatie, elke optie verschilt in werkingsmechanisme, inspanning en bewijskracht.",
+      "it": "Dai farmaci topici al trapianto, ogni opzione differisce per meccanismo d'azione, impegno richiesto e livello di evidenza scientifica.",
+      "tr": "Topikal ilaçlardan nakle kadar, her seçenek etki mekanizması, gerektirdiği çaba ve kanıt kalitesi bakımından farklılık gösterir."
     },
     "image": "assets/content/hairpedia-behandlung-image-1784915585.png"
   },
   "transplantation": {
     "heading": {
       "de": "Haartransplantation",
-      "en": "Hair transplantation"
+      "en": "Hair transplantation",
+      "fr": "Greffe de cheveux",
+      "nl": "Haartransplantatie",
+      "it": "Trapianto di capelli",
+      "tr": "Saç Ekimi"
     },
     "body": {
       "de": "Ein chirurgischer Eingriff unter örtlicher Betäubung. Gesunde, DHT-resistente Follikel werden aus dem Spenderbereich entnommen und in ausgedünnte Areale verpflanzt, wo sie dauerhaft weiterwachsen.",
-      "en": "A surgical procedure under local anaesthesia. Healthy, DHT-resistant follicles are taken from the donor area and relocated to thinning areas, where they keep growing for life."
+      "en": "A surgical procedure under local anaesthesia. Healthy, DHT-resistant follicles are taken from the donor area and relocated to thinning areas, where they keep growing for life.",
+      "fr": "Une intervention chirurgicale sous anesthésie locale. Des follicules sains, résistants à la DHT, sont prélevés dans la zone donneuse et replantés dans les zones clairsemées, où ils continuent de pousser à vie.",
+      "nl": "Een chirurgische ingreep onder lokale verdoving. Gezonde, DHT-resistente follikels worden uit het donorgebied gehaald en verplaatst naar dunner wordende zones, waar ze levenslang blijven doorgroeien.",
+      "it": "Una procedura chirurgica in anestesia locale. Follicoli sani e resistenti al DHT vengono prelevati dall'area donatrice e trapiantati nelle zone diradate, dove continuano a crescere per tutta la vita.",
+      "tr": "Lokal anestezi altında yapılan cerrahi bir işlemdir. Sağlıklı, DHT'ye dirençli foliküller donör bölgeden alınarak seyrelen bölgelere nakledilir ve orada ömür boyu büyümeye devam eder."
     },
     "image": "assets/content/hairpedia-transplantation-image-1784916023.png"
   },
   "genesung": {
     "heading": {
       "de": "Genesung & Nachsorge",
-      "en": "Recovery & aftercare"
+      "en": "Recovery & aftercare",
+      "fr": "Récupération et suivi",
+      "nl": "Herstel & nazorg",
+      "it": "Recupero e assistenza post-operatoria",
+      "tr": "İyileşme ve Bakım"
     },
     "body": {
       "de": "Die Erholungsphase ist genauso wichtig wie der Eingriff selbst. Sie bestimmt Graft-Überleben, Heilungsqualität und Endergebnis.",
-      "en": "The recovery period matters as much as the procedure itself. It determines graft survival, healing quality, and the final result."
+      "en": "The recovery period matters as much as the procedure itself. It determines graft survival, healing quality, and the final result.",
+      "fr": "La période de récupération compte autant que l'intervention elle-même. Elle détermine la survie des greffons, la qualité de la cicatrisation et le résultat final.",
+      "nl": "De hersteltijd is net zo belangrijk als de ingreep zelf. Deze bepaalt de overleving van de grafts, de kwaliteit van de genezing en het eindresultaat.",
+      "it": "Il periodo di recupero è importante quanto l'intervento stesso. Determina la sopravvivenza degli innesti, la qualità della guarigione e il risultato finale.",
+      "tr": "İyileşme süreci, işlemin kendisi kadar önemlidir. Greft sağkalımını, iyileşme kalitesini ve nihai sonucu belirler."
     },
     "image": "assets/content/hairpedia-genesung-image-1784916746.png"
   },
   "vorherNachher": {
     "heading": {
       "de": "Vorher-Nachher: was pro Monat zu erwarten ist",
-      "en": "Before & after: what to expect each month"
+      "en": "Before & after: what to expect each month",
+      "fr": "Avant/après : à quoi s'attendre chaque mois",
+      "nl": "Voor en na: wat u elke maand kunt verwachten",
+      "it": "Prima e dopo: cosa aspettarsi ogni mese",
+      "tr": "Öncesi ve Sonrası: Her Ay Neler Beklenmeli"
     },
     "body": {
       "de": "Ein visueller und beschreibender Monat-für-Monat-Überblick. Echte Patientenfotos von Apex Beauty folgen hier, sobald sie freigegeben sind.",
-      "en": "A visual and descriptive month-by-month reference. Real Apex Beauty patient photos will appear here once cleared for use."
+      "en": "A visual and descriptive month-by-month reference. Real Apex Beauty patient photos will appear here once cleared for use.",
+      "fr": "Une référence visuelle et descriptive mois par mois. De vraies photos de patients Apex Beauty apparaîtront ici dès qu'elles seront validées pour utilisation.",
+      "nl": "Een visueel en beschrijvend overzicht per maand. Echte foto's van Apex Beauty-patiënten verschijnen hier zodra ze zijn goedgekeurd voor gebruik.",
+      "it": "Un riferimento visivo e descrittivo mese per mese. Le foto reali dei pazienti Apex Beauty appariranno qui non appena approvate per l'uso.",
+      "tr": "Görsel ve açıklayıcı, aya göre bir referans. Gerçek Apex Beauty hasta fotoğrafları, kullanım onayı verildiğinde burada yer alacaktır."
     },
     "image": "assets/content/hairpedia-vorherNachher-image-1784918156.png"
   },
   "glossar": {
     "heading": {
       "de": "Medizinisches Glossar",
-      "en": "Medical glossary"
+      "en": "Medical glossary",
+      "fr": "Glossaire médical",
+      "nl": "Medische woordenlijst",
+      "it": "Glossario medico",
+      "tr": "Tıbbi Sözlük"
     },
     "body": {
       "de": "Alle Fachbegriffe der Hairpedia einfach erklärt.",
-      "en": "All the technical terms used throughout Hairpedia, explained simply."
+      "en": "All the technical terms used throughout Hairpedia, explained simply.",
+      "fr": "Tous les termes techniques utilisés dans Hairpedia, expliqués simplement.",
+      "nl": "Alle technische termen die in Hairpedia worden gebruikt, eenvoudig uitgelegd.",
+      "it": "Tutti i termini tecnici utilizzati in Hairpedia, spiegati in modo semplice.",
+      "tr": "Hairpedia boyunca kullanılan tüm teknik terimler basitçe açıklanmıştır."
     }
   }
 }

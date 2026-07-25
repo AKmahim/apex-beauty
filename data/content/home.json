@@ -2,134 +2,246 @@
     "hero": {
         "eyebrow": {
             "de": "Basiert in Österreich · Größtes Nachsorge-Netzwerk",
-            "en": "Based in Austria · Largest Aftercare Network"
+            "en": "Based in Austria · Largest Aftercare Network",
+            "fr": "Basé en Autriche · Plus grand réseau de suivi post-opératoire",
+            "nl": "Gevestigd in Oostenrijk · Grootste nazorgnetwerk",
+            "it": "Con sede in Austria · La più grande rete di assistenza post-operatoria",
+            "tr": "Avusturya Merkezli · En Büyük Bakım Sonrası Ağı"
         },
         "headline1": {
             "de": "Ihre komplette Haartransplantation.",
-            "en": "Your complete hair transplant journey."
+            "en": "Your complete hair transplant journey.",
+            "fr": "Votre parcours complet de greffe de cheveux.",
+            "nl": "Uw complete haartransplantatietraject.",
+            "it": "Il tuo percorso completo di trapianto di capelli.",
+            "tr": "Eksiksiz saç ekimi yolculuğunuz."
         },
         "headline2": {
             "de": "Professionell begleitet von der Beratung bis zur Nachsorge.",
-            "en": "Professionally managed from consultation to aftercare."
+            "en": "Professionally managed from consultation to aftercare.",
+            "fr": "Géré de façon professionnelle, de la consultation au suivi post-opératoire.",
+            "nl": "Professioneel begeleid van consult tot nazorg.",
+            "it": "Gestito in modo professionale, dalla consulenza all'assistenza post-operatoria.",
+            "tr": "Danışmadan bakıma kadar profesyonelce yönetilir."
         },
         "sub": {
             "de": "Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg.",
-            "en": "Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way."
+            "en": "Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way.",
+            "fr": "Consultation en Autriche, traitement dans notre clinique de référence en Turquie et suivi professionnel en Autriche, en Allemagne et en Suisse. Avec une supervision médicale 24h/24 et 7j/7 et l'un des plus grands réseaux de suivi d'Europe, vous êtes accompagné à chaque étape.",
+            "nl": "Consult in Oostenrijk, behandeling in onze toonaangevende kliniek in Turkije en professionele nazorg in Oostenrijk, Duitsland en Zwitserland. Met 24/7 medisch toezicht en een van de grootste nazorgnetwerken van Europa wordt u bij elke stap begeleid.",
+            "it": "Consulenza in Austria, trattamento presso la nostra clinica leader in Turchia e assistenza post-operatoria professionale in Austria, Germania e Svizzera. Con supervisione medica 24 ore su 24, 7 giorni su 7 e una delle più grandi reti di assistenza post-operatoria d'Europa, sarai seguito in ogni fase del percorso.",
+            "tr": "Avusturya'da danışmanlık, Türkiye'deki lider kliniğimizde tedavi ve Avusturya, Almanya ve İsviçre genelinde profesyonel bakım sonrası destek. 7/24 tıbbi gözetim ve Avrupa'nın en büyük bakım sonrası ağlarından biriyle, yolculuğunuzun her adımında yanınızdayız."
         },
         "ctaPrimary": {
             "de": "Kostenlose Beratung sichern",
-            "en": "Get your free consultation"
+            "en": "Get your free consultation",
+            "fr": "Obtenez votre consultation gratuite",
+            "nl": "Vraag uw gratis consult aan",
+            "it": "Richiedi il tuo consulto gratuito",
+            "tr": "Ücretsiz Danışmanızı Alın"
         },
         "ctaSecondary": {
             "de": "Vorher-Nachher ansehen",
-            "en": "See before & after"
+            "en": "See before & after",
+            "fr": "Voir avant/après",
+            "nl": "Bekijk voor en na",
+            "it": "Guarda il prima e dopo",
+            "tr": "Öncesi ve Sonrasını Gör"
         },
         "mobileVideo": "assets/apex-video-verticle.mp4",
         "desktopVideo": "assets/apex-video-verticle.mp4",
         "trustPills": [
             {
                 "de": "Fachärztlich Betreut",
-                "en": "Plastic Surgeon Supervised"
+                "en": "Plastic Surgeon Supervised",
+                "fr": "Supervisé par un chirurgien plasticien",
+                "nl": "Onder toezicht van een plastisch chirurg",
+                "it": "Supervisionato da un chirurgo plastico",
+                "tr": "Plastik Cerrah Gözetiminde"
             },
             {
                 "de": "Individuelles Haarlinien-Design",
-                "en": "Personalized Hairline Design"
+                "en": "Personalized Hairline Design",
+                "fr": "Conception personnalisée de la ligne capillaire",
+                "nl": "Persoonlijk ontwerp van de haarlijn",
+                "it": "Design personalizzato dell'attaccatura",
+                "tr": "Kişiye Özel Saç Çizgisi Tasarımı"
             },
             {
                 "de": "Stressfreie Sedierung",
-                "en": "Stress-Free Sedation"
+                "en": "Stress-Free Sedation",
+                "fr": "Sédation sans stress",
+                "nl": "Stressvrije sedatie",
+                "it": "Sedazione senza stress",
+                "tr": "Stressiz Sedasyon"
             }
         ]
     },
     "trustBar": {
         "stat1Label": {
             "de": "Patienten Behandelt",
-            "en": "Patients Treated"
+            "en": "Patients Treated",
+            "fr": "Patients traités",
+            "nl": "Behandelde patiënten",
+            "it": "Pazienti trattati",
+            "tr": "Tedavi Edilen Hasta"
         },
         "stat2Label": {
             "de": "Google-Bewertungen",
-            "en": "Google Reviews"
+            "en": "Google Reviews",
+            "fr": "Avis Google",
+            "nl": "Google-recensies",
+            "it": "Recensioni Google",
+            "tr": "Google Yorumları"
         },
         "stat3Unit": {
             "de": "Jahre",
-            "en": "Years"
+            "en": "Years",
+            "fr": "Ans",
+            "nl": "Jaar",
+            "it": "Anni",
+            "tr": "Yıl"
         },
         "stat3Label": {
             "de": "Klinische Erfahrung",
-            "en": "Clinical Experience"
+            "en": "Clinical Experience",
+            "fr": "Expérience clinique",
+            "nl": "Klinische ervaring",
+            "it": "Esperienza clinica",
+            "tr": "Klinik Deneyim"
         },
         "stat4Main": {
             "de": "Größtes Netzwerk",
-            "en": "Largest Network"
+            "en": "Largest Network",
+            "fr": "Le plus grand réseau",
+            "nl": "Grootste netwerk",
+            "it": "La rete più grande",
+            "tr": "En Büyük Ağ"
         },
         "stat4Label": {
             "de": "Für Nachsorge in AT · DE · CH",
-            "en": "For Aftercare in AT · DE · CH"
+            "en": "For Aftercare in AT · DE · CH",
+            "fr": "Pour le suivi en AT · DE · CH",
+            "nl": "Voor nazorg in AT · DE · CH",
+            "it": "Per l'assistenza post-operatoria in AT · DE · CH",
+            "tr": "AT · DE · CH'de Bakım İçin"
         }
     },
     "promise": {
         "heading": {
             "de": "Kein Bruch zwischen Beratung, Behandlung und Nachsorge",
-            "en": "No gap between consultation, treatment and aftercare"
+            "en": "No gap between consultation, treatment and aftercare",
+            "fr": "Aucune rupture entre la consultation, le traitement et le suivi",
+            "nl": "Geen kloof tussen consult, behandeling en nazorg",
+            "it": "Nessuna interruzione tra consulenza, trattamento e assistenza post-operatoria",
+            "tr": "Danışma, Tedavi ve Bakım Arasında Kesinti Yok"
         },
         "sub": {
             "de": "Die meisten Patienten fürchten sich nicht vor der Operation, sondern davor, was passiert, wenn sie wieder zuhause sind. Deshalb begleiten wir Sie durchgehend, nicht nur am Tag des Eingriffs.",
-            "en": "Most patients aren't afraid of the procedure itself. They're afraid of what happens once they're back home. That's why we stay with you the whole way, not just on treatment day."
+            "en": "Most patients aren't afraid of the procedure itself. They're afraid of what happens once they're back home. That's why we stay with you the whole way, not just on treatment day.",
+            "fr": "La plupart des patients n'ont pas peur de l'intervention elle-même. Ils craignent ce qui se passe une fois rentrés chez eux. C'est pourquoi nous vous accompagnons tout au long du parcours, pas seulement le jour du traitement.",
+            "nl": "De meeste patiënten zijn niet bang voor de ingreep zelf. Ze zijn bang voor wat er gebeurt als ze weer thuis zijn. Daarom blijven we de hele weg bij u, niet alleen op de dag van de behandeling.",
+            "it": "La maggior parte dei pazienti non teme l'intervento in sé. Temono ciò che accade una volta tornati a casa. Per questo restiamo al tuo fianco lungo tutto il percorso, non solo il giorno del trattamento.",
+            "tr": "Çoğu hasta işlemin kendisinden korkmaz. Eve döndüklerinde ne olacağından korkarlar. Bu yüzden sadece tedavi gününde değil, tüm süreç boyunca yanınızdayız."
         },
         "video": "assets/apex-drone.mp4"
     },
     "beforeAfter": {
         "heading1": {
             "de": "Jeder Haaransatz.",
-            "en": "Every hairline."
+            "en": "Every hairline.",
+            "fr": "Chaque ligne capillaire.",
+            "nl": "Elke haarlijn.",
+            "it": "Ogni attaccatura.",
+            "tr": "Her saç çizgisi."
         },
         "heading2": {
             "de": "Mit Präzision gestaltet.",
-            "en": "Designed with precision."
+            "en": "Designed with precision.",
+            "fr": "Conçue avec précision.",
+            "nl": "Ontworpen met precisie.",
+            "it": "Progettata con precisione.",
+            "tr": "Hassasiyetle tasarlandı."
         },
         "sub": {
             "de": "Jeder Fall beginnt mit einer Kopfhaut-Analyse und endet mit einem Ergebnis, das individuell geplant wurde.",
-            "en": "Every case starts with a scalp analysis and ends with a result that was planned individually."
+            "en": "Every case starts with a scalp analysis and ends with a result that was planned individually.",
+            "fr": "Chaque cas commence par une analyse du cuir chevelu et se termine par un résultat planifié individuellement.",
+            "nl": "Elk traject begint met een hoofdhuidanalyse en eindigt met een resultaat dat individueel is gepland.",
+            "it": "Ogni caso inizia con un'analisi del cuoio capelluto e si conclude con un risultato pianificato individualmente.",
+            "tr": "Her vaka bir saç derisi analiziyle başlar ve kişiye özel planlanmış bir sonuçla biter."
         },
         "cases": [
             {
                 "vorherImage": "assets/before.png",
                 "vorherLine1": {
                     "de": "Bereich: Stirn & Krone",
-                    "en": "Area: Hairline & crown"
+                    "en": "Area: Hairline & crown",
+                    "fr": "Zone : ligne capillaire et vertex",
+                    "nl": "Gebied: haarlijn & kruin",
+                    "it": "Area: attaccatura e vertice",
+                    "tr": "Bölge: Saç çizgisi ve tepe"
                 },
                 "vorherLine2": {
                     "de": "Dichte: Gering",
-                    "en": "Density: Low"
+                    "en": "Density: Low",
+                    "fr": "Densité : faible",
+                    "nl": "Dichtheid: laag",
+                    "it": "Densità: bassa",
+                    "tr": "Yoğunluk: Düşük"
                 },
                 "nachherImage": "assets/after.png",
                 "nachherLine1": {
                     "de": "Transplantate präzise platziert",
-                    "en": "Grafts precisely placed"
+                    "en": "Grafts precisely placed",
+                    "fr": "Greffons placés avec précision",
+                    "nl": "Grafts nauwkeurig geplaatst",
+                    "it": "Innesti posizionati con precisione",
+                    "tr": "Greftler hassasiyetle yerleştirildi"
                 },
                 "nachherLine2": {
                     "de": "Natürlicher Haaransatz · Verbesserte Dichte",
-                    "en": "Natural hairline · Improved density"
+                    "en": "Natural hairline · Improved density",
+                    "fr": "Ligne capillaire naturelle · Densité améliorée",
+                    "nl": "Natuurlijke haarlijn · Verbeterde dichtheid",
+                    "it": "Attaccatura naturale · Densità migliorata",
+                    "tr": "Doğal saç çizgisi · Gelişmiş yoğunluk"
                 }
             },
             {
                 "vorherImage": "assets/content/home-beforeAfter-vorherImage-1784118032.jpg",
                 "vorherLine1": {
                     "de": "Bereich: Oberkopf",
-                    "en": "Area: Crown"
+                    "en": "Area: Crown",
+                    "fr": "Zone : vertex",
+                    "nl": "Gebied: kruin",
+                    "it": "Area: vertice",
+                    "tr": "Bölge: Tepe"
                 },
                 "vorherLine2": {
                     "de": "Dichte: Ausgedünnt",
-                    "en": "Density: Thinned"
+                    "en": "Density: Thinned",
+                    "fr": "Densité : clairsemée",
+                    "nl": "Dichtheid: uitgedund",
+                    "it": "Densità: diradata",
+                    "tr": "Yoğunluk: Seyrelmiş"
                 },
                 "nachherImage": "assets/content/home-beforeAfter-nachherImage-1784118047.jpg",
                 "nachherLine1": {
                     "de": "Volle Haardichte wiederhergestellt",
-                    "en": "Full density restored"
+                    "en": "Full density restored",
+                    "fr": "Densité complète restaurée",
+                    "nl": "Volledige dichtheid hersteld",
+                    "it": "Densità completa ripristinata",
+                    "tr": "Tam yoğunluk geri kazanıldı"
                 },
                 "nachherLine2": {
                     "de": "Natürlicher Haaransatz · Kräftiges Ergebnis",
-                    "en": "Natural hairline · Strong result"
+                    "en": "Natural hairline · Strong result",
+                    "fr": "Ligne capillaire naturelle · Résultat solide",
+                    "nl": "Natuurlijke haarlijn · Sterk resultaat",
+                    "it": "Attaccatura naturale · Risultato solido",
+                    "tr": "Doğal saç çizgisi · Güçlü sonuç"
                 }
             }
         ]
@@ -137,97 +249,173 @@
     "network": {
         "heading": {
             "de": "Ein Anbieter, verbunden über vier Länder",
-            "en": "One provider, connected across four countries"
+            "en": "One provider, connected across four countries",
+            "fr": "Un seul prestataire, connecté à travers quatre pays",
+            "nl": "Eén aanbieder, verbonden over vier landen",
+            "it": "Un unico fornitore, collegato in quattro paesi",
+            "tr": "Dört Ülkede Bağlantılı Tek Sağlayıcı"
         },
         "sub": {
             "de": "Österreich, Deutschland und die Schweiz, verbunden mit unserer Hauptklinik in der Türkei: ein durchgehendes Betreuungsnetzwerk über vier Länder hinweg.",
-            "en": "Austria, Germany and Switzerland, connecting to our main clinic in Turkey: one continuous care network spanning four countries."
+            "en": "Austria, Germany and Switzerland, connecting to our main clinic in Turkey: one continuous care network spanning four countries.",
+            "fr": "L'Autriche, l'Allemagne et la Suisse, reliées à notre clinique principale en Turquie : un réseau de soins continu s'étendant sur quatre pays.",
+            "nl": "Oostenrijk, Duitsland en Zwitserland, verbonden met onze hoofdkliniek in Turkije: één doorlopend zorgnetwerk verspreid over vier landen.",
+            "it": "Austria, Germania e Svizzera, collegate alla nostra clinica principale in Turchia: una rete di assistenza continua che si estende su quattro paesi.",
+            "tr": "Avusturya, Almanya ve İsviçre, Türkiye'deki ana kliniğimize bağlanıyor: dört ülkeye yayılan kesintisiz bir bakım ağı."
         }
     },
     "faq": {
         "heading": {
             "de": "Häufig gestellte Fragen",
-            "en": "Frequently asked questions"
+            "en": "Frequently asked questions",
+            "fr": "Questions fréquentes",
+            "nl": "Veelgestelde vragen",
+            "it": "Domande frequenti",
+            "tr": "Sıkça Sorulan Sorular"
         },
         "items": [
             {
                 "question": {
                     "de": "Tut eine Haartransplantation weh?",
-                    "en": "Does a hair transplant hurt?"
+                    "en": "Does a hair transplant hurt?",
+                    "fr": "Une greffe de cheveux fait-elle mal ?",
+                    "nl": "Doet een haartransplantatie pijn?",
+                    "it": "Il trapianto di capelli fa male?",
+                    "tr": "Saç ekimi acıtır mı?"
                 },
                 "answer": {
                     "de": "Der Eingriff erfolgt unter örtlicher Betäubung, die Kopfhaut ist während der Operation vollständig taub. Die meisten Patienten spüren nur leichten Druck, nicht Schmerz. Nachbeschwerden sind meist mild und mit frei verkäuflichen Schmerzmitteln gut zu behandeln.",
-                    "en": "The procedure is performed under local anaesthesia, so the scalp is fully numb during the operation. Most patients feel only mild pressure, not pain. Post-operative discomfort is usually mild and manageable with standard over-the-counter pain relief."
+                    "en": "The procedure is performed under local anaesthesia, so the scalp is fully numb during the operation. Most patients feel only mild pressure, not pain. Post-operative discomfort is usually mild and manageable with standard over-the-counter pain relief.",
+                    "fr": "L'intervention est réalisée sous anesthésie locale, le cuir chevelu est donc totalement insensibilisé pendant l'opération. La plupart des patients ne ressentent qu'une légère pression, pas de douleur. L'inconfort post-opératoire est généralement léger et se gère avec des antalgiques en vente libre.",
+                    "nl": "De ingreep wordt uitgevoerd onder lokale verdoving, waardoor de hoofdhuid tijdens de operatie volledig gevoelloos is. De meeste patiënten voelen alleen lichte druk, geen pijn. Ongemak na de operatie is meestal mild en goed te behandelen met gewone, vrij verkrijgbare pijnstillers.",
+                    "it": "La procedura viene eseguita in anestesia locale, quindi il cuoio capelluto è completamente insensibile durante l'operazione. La maggior parte dei pazienti avverte solo una lieve pressione, non dolore. Il fastidio post-operatorio è generalmente lieve e gestibile con normali antidolorifici da banco.",
+                    "tr": "İşlem lokal anestezi altında yapılır, bu nedenle operasyon sırasında saç derisi tamamen uyuşturulur. Çoğu hasta yalnızca hafif bir baskı hisseder, ağrı değil. Ameliyat sonrası rahatsızlık genellikle hafiftir ve standart reçetesiz ağrı kesicilerle kolayca yönetilebilir."
                 }
             },
             {
                 "question": {
                     "de": "Wird man sehen, dass ich eine Transplantation hatte?",
-                    "en": "Will anyone be able to tell I've had a transplant?"
+                    "en": "Will anyone be able to tell I've had a transplant?",
+                    "fr": "Est-ce que cela se verra que j'ai eu une greffe ?",
+                    "nl": "Zal iemand kunnen zien dat ik een transplantatie heb gehad?",
+                    "it": "Si vedrà che ho fatto un trapianto?",
+                    "tr": "Saç ekimi yaptırdığım belli olur mu?"
                 },
                 "answer": {
                     "de": "In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.",
-                    "en": "In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair."
+                    "en": "In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair.",
+                    "fr": "Durant les 1 à 2 premières semaines, des croûtes visibles et des rougeurs peuvent apparaître. Ensuite, la cicatrisation devient largement invisible. Entre le 4e et le 6e mois, les nouveaux cheveux se fondent naturellement et, avec un chirurgien expérimenté, deviennent indiscernables des cheveux naturels.",
+                    "nl": "In de eerste 1 tot 2 weken kunnen zichtbare korstjes en roodheid optreden. Daarna is de genezing grotendeels onzichtbaar. Vanaf maand 4 tot 6 vermengt het nieuwe haar zich natuurlijk en is het, bij een ervaren chirurg, niet te onderscheiden van natuurlijk haar.",
+                    "it": "Nelle prime 1-2 settimane possono essere visibili croste e arrossamenti. Successivamente, la guarigione diventa in gran parte invisibile. Dal 4° al 6° mese, i nuovi capelli si integrano in modo naturale e, con un chirurgo esperto, risultano indistinguibili dai capelli naturali.",
+                    "tr": "İlk 1-2 hafta içinde görünür kabuklanma ve kızarıklık olabilir. Bundan sonra iyileşme büyük ölçüde görünmez hale gelir. 4. ile 6. aylar arasında yeni saçlar doğal bir şekilde kaynaşır ve deneyimli bir cerrahla doğal saçtan ayırt edilemez hale gelir."
                 }
             },
             {
                 "question": {
                     "de": "Wie viele Grafts brauche ich?",
-                    "en": "How many grafts do I need?"
+                    "en": "How many grafts do I need?",
+                    "fr": "De combien de greffons ai-je besoin ?",
+                    "nl": "Hoeveel grafts heb ik nodig?",
+                    "it": "Di quanti innesti ho bisogno?",
+                    "tr": "Kaç greft ihtiyacım var?"
                 },
                 "answer": {
                     "de": "Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung.",
-                    "en": "This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate."
+                    "en": "This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate.",
+                    "fr": "Cela dépend entièrement du degré de chute de cheveux et de la densité souhaitée. Une séance typique va de 1 500 à 4 000 greffons. Le stade II à III nécessite généralement 1 500 à 2 000 ; le stade V à VI souvent 3 000 à 4 500. Une consultation gratuite avec analyse du cuir chevelu permet une estimation précise.",
+                    "nl": "Dit hangt volledig af van de mate van haaruitval en de gewenste dichtheid. Een gemiddelde sessie omvat 1.500 tot 4.000 grafts. Graad II tot III heeft meestal 1.500 tot 2.000 nodig; graad V tot VI vaak 3.000 tot 4.500. Een gratis consult met hoofdhuidanalyse geeft een nauwkeurige schatting.",
+                    "it": "Dipende interamente dal grado di caduta dei capelli e dalla densità desiderata. Una seduta tipica va da 1.500 a 4.000 innesti. Il grado II-III richiede solitamente 1.500-2.000 innesti; il grado V-VI spesso 3.000-4.500. Un consulto gratuito con analisi del cuoio capelluto fornisce una stima precisa.",
+                    "tr": "Bu tamamen saç dökülmesinin derecesine ve istenen yoğunluğa bağlıdır. Tipik bir seans 1.500 ile 4.000 greft arasında değişir. Derece II-III genellikle 1.500-2.000 greft gerektirir; derece V-VI ise sıklıkla 3.000-4.500 greft gerektirir. Saç derisi analizi içeren ücretsiz bir danışma, doğru bir tahmin sağlar."
                 }
             },
             {
                 "question": {
                     "de": "Ist das Ergebnis dauerhaft?",
-                    "en": "Is the result permanent?"
+                    "en": "Is the result permanent?",
+                    "fr": "Le résultat est-il permanent ?",
+                    "nl": "Is het resultaat blijvend?",
+                    "it": "Il risultato è permanente?",
+                    "tr": "Sonuç kalıcı mı?"
                 },
                 "answer": {
                     "de": "Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar.",
-                    "en": "Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair."
+                    "en": "Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair.",
+                    "fr": "Les cheveux transplantés proviennent de la zone donneuse résistante à la DHT et continuent de pousser à vie. Cependant, les cheveux non transplantés existants peuvent continuer à s'affiner. Des médicaments comme le finastéride ou le minoxidil après l'intervention aident à protéger les cheveux naturels restants.",
+                    "nl": "Getransplanteerd haar komt uit het DHT-resistente donorgebied en blijft levenslang doorgroeien. Bestaand, niet-getransplanteerd haar kan echter blijven uitdunnen. Medicatie zoals finasteride of minoxidil na de ingreep helpt het resterende natuurlijke haar te beschermen.",
+                    "it": "I capelli trapiantati provengono dall'area donatrice resistente al DHT e continuano a crescere per tutta la vita. Tuttavia, i capelli esistenti non trapiantati potrebbero continuare a diradarsi. Farmaci come finasteride o minoxidil dopo l'intervento aiutano a proteggere i capelli naturali rimanenti.",
+                    "tr": "Nakledilen saçlar DHT'ye dirençli donör bölgeden alınır ve ömür boyu büyümeye devam eder. Ancak nakledilmemiş mevcut saçlar seyrelmeye devam edebilir. İşlem sonrası finasterid veya minoksidil gibi ilaçlar, kalan doğal saçların korunmasına yardımcı olur."
                 }
             },
             {
                 "question": {
                     "de": "Was passiert, wenn das Ergebnis nicht ausreicht?",
-                    "en": "What happens if I don't get enough results?"
+                    "en": "What happens if I don't get enough results?",
+                    "fr": "Que se passe-t-il si le résultat n'est pas suffisant ?",
+                    "nl": "Wat gebeurt er als het resultaat onvoldoende is?",
+                    "it": "Cosa succede se il risultato non è sufficiente?",
+                    "tr": "Yeterli sonuç alamazsam ne olur?"
                 },
                 "answer": {
                     "de": "Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.",
-                    "en": "Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome."
+                    "en": "Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome.",
+                    "fr": "Les taux de survie des greffons dans les cliniques réputées sont généralement de 90 à 95 %. Si le résultat est inférieur aux attentes après 12 à 18 mois, une séance de suivi peut être envisagée. Apex Beauty propose une consultation de suivi à 12 mois pour évaluer le résultat.",
+                    "nl": "De overlevingspercentages van grafts bij gerenommeerde klinieken liggen doorgaans tussen 90 en 95%. Als het resultaat na 12 tot 18 maanden onder de verwachtingen blijft, kan een vervolgsessie worden besproken. Apex Beauty biedt een vervolgconsult na 12 maanden om het resultaat te beoordelen.",
+                    "it": "I tassi di sopravvivenza degli innesti nelle cliniche affidabili sono generalmente del 90-95%. Se il risultato è inferiore alle aspettative dopo 12-18 mesi, si può discutere di una seduta di follow-up. Apex Beauty offre una consulenza di controllo a 12 mesi per valutare l'esito.",
+                    "tr": "Saygın kliniklerde greft sağkalım oranları genellikle %90 ila %95 arasındadır. Sonuç 12-18 ay sonra beklentilerin altındaysa, bir takip seansı değerlendirilebilir. Apex Beauty, sonucu değerlendirmek için 12 aylık bir takip danışmanlığı sunar."
                 }
             },
             {
                 "question": {
                     "de": "Können Frauen eine Haartransplantation bekommen?",
-                    "en": "Can women have hair transplants?"
+                    "en": "Can women have hair transplants?",
+                    "fr": "Les femmes peuvent-elles avoir une greffe de cheveux ?",
+                    "nl": "Kunnen vrouwen een haartransplantatie ondergaan?",
+                    "it": "Le donne possono sottoporsi a trapianto di capelli?",
+                    "tr": "Kadınlar saç ekimi yaptırabilir mi?"
                 },
                 "answer": {
                     "de": "Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell.",
-                    "en": "Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential."
+                    "en": "Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential.",
+                    "fr": "Oui. Les femmes atteintes d'alopécie androgénétique peuvent être de bonnes candidates. Cependant, les femmes présentant une chute de cheveux diffuse sur l'ensemble du cuir chevelu, y compris la zone donneuse, peuvent ne pas disposer d'assez de cheveux donneurs stables. Une évaluation par un spécialiste est essentielle.",
+                    "nl": "Ja. Vrouwen met androgenetische alopecia kunnen geschikte kandidaten zijn. Vrouwen met diffuse haaruitval over de hele hoofdhuid, inclusief het donorgebied, hebben echter mogelijk onvoldoende stabiel donorhaar. Een beoordeling door een specialist is essentieel.",
+                    "it": "Sì. Le donne con alopecia androgenetica possono essere candidate idonee. Tuttavia, le donne con caduta diffusa dei capelli su tutto il cuoio capelluto, inclusa l'area donatrice, potrebbero non avere capelli donatori stabili a sufficienza. Una valutazione specialistica è essenziale.",
+                    "tr": "Evet. Androgenetik alopesisi olan kadınlar uygun aday olabilir. Ancak donör bölge dahil tüm saç derisinde yaygın saç dökülmesi yaşayan kadınlarda yeterli kararlı donör saç bulunmayabilir. Uzman değerlendirmesi şarttır."
                 }
             },
             {
                 "question": {
                     "de": "Wie läuft die Anreise nach Istanbul ab?",
-                    "en": "How do I travel to Istanbul for the procedure?"
+                    "en": "How do I travel to Istanbul for the procedure?",
+                    "fr": "Comment se déroule le voyage à Istanbul pour l'intervention ?",
+                    "nl": "Hoe verloopt de reis naar Istanboel voor de ingreep?",
+                    "it": "Come funziona il viaggio a Istanbul per l'intervento?",
+                    "tr": "İşlem için İstanbul'a seyahat nasıl gerçekleşir?"
                 },
                 "answer": {
                     "de": "Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden.",
-                    "en": "Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call."
+                    "en": "Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call.",
+                    "fr": "Apex Beauty coordonne toute la logistique pour les patients venant d'Autriche, d'Allemagne et de Suisse. L'intervention dure une journée. La plupart des patients arrivent la veille, se reposent une nuit et rentrent chez eux dans les 48 heures. Les rendez-vous de suivi peuvent se faire à distance par appel vidéo.",
+                    "nl": "Apex Beauty regelt alle logistiek voor patiënten uit Oostenrijk, Duitsland en Zwitserland. De ingreep duurt één dag. De meeste patiënten vliegen de dag ervoor in, rusten één nacht uit en vliegen binnen 48 uur terug. Vervolgafspraken kunnen op afstand via videogesprek plaatsvinden.",
+                    "it": "Apex Beauty coordina tutta la logistica per i pazienti provenienti da Austria, Germania e Svizzera. L'intervento dura un giorno. La maggior parte dei pazienti arriva il giorno prima, riposa una notte e rientra entro 48 ore. Gli appuntamenti di follow-up possono svolgersi da remoto tramite videochiamata.",
+                    "tr": "Apex Beauty, Avusturya, Almanya ve İsviçre'den gelen hastalar için tüm lojistiği koordine eder. İşlem bir gün sürer. Çoğu hasta bir gün önce uçarak gelir, bir gece dinlenir ve 48 saat içinde eve döner. Takip randevuları görüntülü görüşme yoluyla uzaktan yapılabilir."
                 }
             },
             {
                 "question": {
                     "de": "Was unterscheidet Apex direkt von einem Vermittler?",
-                    "en": "What's the difference between Apex direct and a broker?"
+                    "en": "What's the difference between Apex direct and a broker?",
+                    "fr": "Quelle est la différence entre Apex en direct et un intermédiaire ?",
+                    "nl": "Wat is het verschil tussen Apex rechtstreeks en een bemiddelaar?",
+                    "it": "Qual è la differenza tra Apex diretto e un intermediario?",
+                    "tr": "Apex direkt ile bir aracı kurum arasındaki fark nedir?"
                 },
                 "answer": {
                     "de": "Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung.",
-                    "en": "A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability."
+                    "en": "A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability.",
+                    "fr": "Un intermédiaire coordonne entre un patient et une clinique, mais n'est pas médicalement impliqué. Vous ne savez souvent pas à l'avance quelle équipe vous traitera. Apex Beauty est une clinique directe : l'équipe que vous consultez est celle qui vous traite, dans notre propre établissement. Cela garantit une qualité constante et une responsabilité directe.",
+                    "nl": "Een bemiddelaar coördineert tussen een patiënt en een kliniek, maar is medisch niet betrokken. U weet vaak niet vooraf welk team u zal behandelen. Apex Beauty is een directe kliniek: het team waarmee u een consult heeft, is ook het team dat u behandelt, in onze eigen faciliteit. Dat betekent consistente kwaliteit en directe verantwoordelijkheid.",
+                    "it": "Un intermediario coordina tra il paziente e una clinica, ma non è coinvolto dal punto di vista medico. Spesso non si sa in anticipo quale team ti curerà. Apex Beauty è una clinica diretta: il team con cui ti consulti è lo stesso che ti tratta, nella nostra struttura. Questo garantisce qualità costante e responsabilità diretta.",
+                    "tr": "Bir aracı, hasta ile klinik arasında koordinasyon sağlar ancak tıbbi olarak sürece dahil değildir. Sizi hangi ekibin tedavi edeceğini önceden bilemeyebilirsiniz. Apex Beauty ise direkt bir klinik: danıştığınız ekip, kendi tesisimizde sizi tedavi eden ekiptir. Bu da tutarlı kalite ve doğrudan sorumluluk anlamına gelir."
                 }
             }
         ]

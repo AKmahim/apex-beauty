@@ -116,6 +116,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .whatsapp-fab svg { width: 27px; height: 27px; }
   }
 
+  /* ---- DOCTOR PAGER (shown only once 2+ doctors exist, see profiles.items) ---- */
+  .dr-pager { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 22px 20px 0; }
+  .dr-pager.single-slide { display: none; }
+  .dr-arrow {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.9);
+    backdrop-filter: blur(20px) saturate(1.8); -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    box-shadow: 0 12px 28px -10px rgba(20,40,60,0.28), inset 0 1px 0 rgba(255,255,255,0.9);
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    color: var(--blue-700); transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .dr-arrow:hover { transform: scale(1.08); }
+  .dr-arrow svg { width: 18px; height: 18px; }
+  .dr-dots { display: flex; align-items: center; gap: 8px; }
+  .dr-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(29,78,216,0.22); border: none; cursor: pointer; padding: 0; transition: transform 0.2s ease, background 0.2s ease; }
+  .dr-dot.active { background: var(--blue-600); transform: scale(1.3); }
+
+  .dr-track { overflow-x: hidden; touch-action: pan-y; }
+  .dr-slide { display: none; }
+  .dr-slide.active { display: block; }
+  /* Same direction-aware entrance as the Before & After carousel on the
+     homepage: prev/next and dot-jumps pick dir-next/dir-prev so a doctor
+     slides in from the side it logically came from. */
+  .dr-slide.active.dir-next { animation: drSlideInRight 0.5s cubic-bezier(0.22, 0.9, 0.32, 1); }
+  .dr-slide.active.dir-prev { animation: drSlideInLeft 0.5s cubic-bezier(0.22, 0.9, 0.32, 1); }
+  .dr-slide.active.dir-init { animation: drFade 0.35s ease; }
+  @keyframes drFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes drSlideInRight { from { opacity: 0; transform: translateX(44px) scale(0.98); } to { opacity: 1; transform: translateX(0) scale(1); } }
+  @keyframes drSlideInLeft { from { opacity: 0; transform: translateX(-44px) scale(0.98); } to { opacity: 1; transform: translateX(0) scale(1); } }
+  @media (max-width: 720px) {
+    .dr-arrow { width: 34px; height: 34px; }
+    .dr-arrow svg { width: 15px; height: 15px; }
+  }
+
   /* ---- DOCTOR HERO ---- */
   .dr-hero {
     position: relative; overflow: hidden;
@@ -155,10 +189,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .dr-photo-placeholder { text-align: center; padding: 0 20px; }
   .dr-photo-frame.has-media .dr-photo-placeholder { display: none; }
   .dr-photo-monogram {
-    font-family: 'Urbanist', -apple-system, sans-serif;
-    font-size: 46px; font-weight: 700; color: var(--blue-700); line-height: 1;
-    margin-bottom: 8px;
+    width: 46px; height: 46px; margin: 0 auto 8px; color: var(--blue-700);
   }
+  .dr-photo-monogram svg { width: 100%; height: 100%; }
   .dr-photo-placeholder span { display: block; font-size: 11px; color: var(--ink-soft); font-weight: 600; }
   .dr-hero-text .eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
@@ -289,29 +322,50 @@ $siteHomeHref = 'index.php';
 include __DIR__ . '/includes/site-header.php';
 ?>
 
+<div class="dr-pager" id="drPager">
+  <button type="button" class="dr-arrow dr-arrow-prev" id="drPrev" aria-label="Previous doctor">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <div class="dr-dots" id="drDots">
+    <button type="button" class="dr-dot active" data-goto="0" aria-label="Doctor 1"></button>
+  </div>
+  <button type="button" class="dr-arrow dr-arrow-next" id="drNext" aria-label="Next doctor">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<!-- Doctors come from the admin panel's "Doctors page" > "Doctor profiles"
+     list (content API: doctor.profiles.items). This single .dr-slide is the
+     clone template - content-loader.js (data-clist/data-citem) clones it
+     once per doctor and fills data-cfield/data-cmediafield descendants; the
+     JS pager further down detects the resulting slide count and reveals the
+     arrows/dots once there's more than one. -->
+<div class="dr-track" id="drTrack" data-clist="profiles.items">
+<div class="dr-slide active" data-citem data-slide="0">
+
 <section class="dr-hero">
   <div class="dr-hero-bg"></div>
   <div class="dr-hero-inner">
     <div class="dr-photo-frame" data-cmedia-wrap>
       <div class="dr-photo-inner">
-        <img data-cmedia="hero.photo" alt="<?= htmlspecialchars(APEX_PHYSICIAN_NAME, ENT_QUOTES) ?>">
+        <img data-cmediafield="photo" alt="<?= htmlspecialchars(APEX_PHYSICIAN_NAME, ENT_QUOTES) ?>">
         <div class="dr-photo-placeholder">
-          <div class="dr-photo-monogram">HB</div>
-          <span data-de="Foto folgt in Kürze" data-en="Photo coming soon">Foto folgt in Kürze</span>
+          <div class="dr-photo-monogram" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <span data-de="Foto folgt in Kürze" data-en="Photo coming soon" data-fr="Photo bientôt disponible" data-nl="Foto volgt binnenkort" data-it="Foto in arrivo" data-tr="Fotoğraf Yakında Eklenecek">Foto folgt in Kürze</span>
         </div>
       </div>
     </div>
     <div class="dr-hero-text">
-      <span class="eyebrow"><span class="dot"></span><span data-de="Ihr Facharzt" data-en="Your Physician">Ihr Facharzt</span></span>
-      <h1 data-ckey="hero.name" data-de="Dr. Huseyin Burhan" data-en="Dr. Huseyin Burhan">Dr. Huseyin Burhan</h1>
-      <p class="dr-credentials" data-ckey="hero.credentials" data-de="Facharzt für Haartransplantation" data-en="Hair Transplant Specialist">Facharzt für Haartransplantation</p>
-      <div class="dr-intro" data-ckey="hero.intro" data-de="Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty: von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge." data-en="Responsible for the medical quality of every Apex Beauty treatment: from the first scalp analysis through long-term aftercare.">Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty: von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge.</div>
+      <span class="eyebrow"><span class="dot"></span><span data-de="Ihr Facharzt" data-en="Your Physician" data-fr="Votre spécialiste" data-nl="Uw specialist" data-it="Il tuo specialista" data-tr="Uzman Hekiminiz">Ihr Facharzt</span></span>
+      <h1 data-cfield="name" data-de="Dr. Huseyin Burhan" data-en="Dr. Huseyin Burhan">Dr. Huseyin Burhan</h1>
+      <p class="dr-credentials" data-cfield="credentials" data-de="Facharzt für Haartransplantation" data-en="Hair Transplant Specialist">Facharzt für Haartransplantation</p>
+      <div class="dr-intro" data-cfield="intro" data-de="Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty: von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge." data-en="Responsible for the medical quality of every Apex Beauty treatment: from the first scalp analysis through long-term aftercare.">Verantwortlich für die medizinische Qualität jeder Behandlung bei Apex Beauty: von der ersten Kopfhaut-Analyse bis zur langfristigen Nachsorge.</div>
       <?php
       // Dr. Burhan's direct phone number and the clinic WhatsApp chip both
       // stay available (site-config.php / the floating WhatsApp button
       // site-wide) but are intentionally not duplicated here in the hero.
       ?>
-      <a href="contact.php" class="cta-btn" data-de="Termin bei Apex Beauty anfragen" data-en="Request an appointment">Termin bei Apex Beauty anfragen</a>
+      <a href="contact.php" class="cta-btn" data-de="Termin bei Apex Beauty anfragen" data-en="Request an appointment" data-fr="Demander un rendez-vous" data-nl="Afspraak aanvragen" data-it="Richiedi un appuntamento" data-tr="Randevu Talep Edin">Termin bei Apex Beauty anfragen</a>
     </div>
   </div>
 </section>
@@ -320,9 +374,9 @@ include __DIR__ . '/includes/site-header.php';
   <section class="dr-section">
     <div class="dr-section-head">
       <span class="dr-section-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-      <h2 data-de="Über Dr. Burhan" data-en="About Dr. Burhan">Über Dr. Burhan</h2>
+      <h2 data-de="Über den Arzt" data-en="About the doctor" data-fr="À propos du médecin" data-nl="Over de arts" data-it="Il medico" data-tr="Doktor Hakkında">Über den Arzt</h2>
     </div>
-    <div class="dr-bio" data-ckey="hero.bio" data-de="&lt;p&gt;Dr. Huseyin Burhan &uuml;berwacht die medizinische Planung und Durchf&uuml;hrung der Haartransplantationen bei Apex Beauty. Jeder Fall beginnt mit einer individuellen Kopfhaut-Analyse, auf deren Grundlage Behandlungsplan, Graft-Anzahl und Haarlinien-Design festgelegt werden.&lt;/p&gt;&lt;p&gt;Sein Ansatz stellt eine durchgehende Betreuung in den Mittelpunkt: von der Beratung in &Ouml;sterreich &uuml;ber die Behandlung in der Partnerklinik in der T&uuml;rkei bis zur Nachsorge in &Ouml;sterreich, Deutschland und der Schweiz.&lt;/p&gt;" data-en="&lt;p&gt;Dr. Huseyin Burhan oversees the medical planning and execution of hair transplants at Apex Beauty. Every case begins with an individual scalp analysis, which forms the basis for the treatment plan, graft count, and hairline design.&lt;/p&gt;&lt;p&gt;His approach centers on continuous care: from consultation in Austria, through treatment at the partner clinic in Turkey, to aftercare across Austria, Germany, and Switzerland.&lt;/p&gt;">
+    <div class="dr-bio" data-cfield="bio" data-de="&lt;p&gt;Dr. Huseyin Burhan &uuml;berwacht die medizinische Planung und Durchf&uuml;hrung der Haartransplantationen bei Apex Beauty. Jeder Fall beginnt mit einer individuellen Kopfhaut-Analyse, auf deren Grundlage Behandlungsplan, Graft-Anzahl und Haarlinien-Design festgelegt werden.&lt;/p&gt;&lt;p&gt;Sein Ansatz stellt eine durchgehende Betreuung in den Mittelpunkt: von der Beratung in &Ouml;sterreich &uuml;ber die Behandlung in der Partnerklinik in der T&uuml;rkei bis zur Nachsorge in &Ouml;sterreich, Deutschland und der Schweiz.&lt;/p&gt;" data-en="&lt;p&gt;Dr. Huseyin Burhan oversees the medical planning and execution of hair transplants at Apex Beauty. Every case begins with an individual scalp analysis, which forms the basis for the treatment plan, graft count, and hairline design.&lt;/p&gt;&lt;p&gt;His approach centers on continuous care: from consultation in Austria, through treatment at the partner clinic in Turkey, to aftercare across Austria, Germany, and Switzerland.&lt;/p&gt;">
       <p>Dr. Huseyin Burhan überwacht die medizinische Planung und Durchführung der Haartransplantationen bei Apex Beauty. Jeder Fall beginnt mit einer individuellen Kopfhaut-Analyse, auf deren Grundlage Behandlungsplan, Graft-Anzahl und Haarlinien-Design festgelegt werden.</p>
       <p>Sein Ansatz stellt eine durchgehende Betreuung in den Mittelpunkt: von der Beratung in Österreich über die Behandlung in der Partnerklinik in der Türkei bis zur Nachsorge in Österreich, Deutschland und der Schweiz.</p>
     </div>
@@ -331,32 +385,35 @@ include __DIR__ . '/includes/site-header.php';
 
 <section class="dr-specialties-wrap">
   <div class="dr-specialties-inner">
-    <span class="dr-kicker" data-de="Warum Dr. Burhan" data-en="Why Dr. Burhan">Warum Dr. Burhan</span>
-    <h2 data-ckey="specialties.heading" data-de="Schwerpunkte" data-en="Areas of focus">Schwerpunkte</h2>
+    <span class="dr-kicker" data-de="Warum dieser Facharzt" data-en="Why this specialist" data-fr="Pourquoi ce spécialiste" data-nl="Waarom deze specialist" data-it="Perché questo specialista" data-tr="Neden Bu Uzman">Warum dieser Facharzt</span>
+    <h2 data-cfield="specialtiesHeading" data-de="Schwerpunkte" data-en="Areas of focus">Schwerpunkte</h2>
     <div class="dr-specialties">
       <div class="dr-specialty">
         <span class="dr-specialty-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></svg></span>
-        <b data-de="Individuelles Haarlinien-Design" data-en="Personalized hairline design">Individuelles Haarlinien-Design</b>
-        <span class="dr-specialty-desc" data-de="Jede Haarlinie wird an Gesichtsform und natürlichen Haarwuchs angepasst." data-en="Every hairline is planned around facial structure and natural growth patterns.">Jede Haarlinie wird an Gesichtsform und natürlichen Haarwuchs angepasst.</span>
+        <b data-cfield="specialty1Title" data-de="Individuelles Haarlinien-Design" data-en="Personalized hairline design">Individuelles Haarlinien-Design</b>
+        <span class="dr-specialty-desc" data-cfield="specialty1Desc" data-de="Jede Haarlinie wird an Gesichtsform und natürlichen Haarwuchs angepasst." data-en="Every hairline is planned around facial structure and natural growth patterns.">Jede Haarlinie wird an Gesichtsform und natürlichen Haarwuchs angepasst.</span>
       </div>
       <div class="dr-specialty">
         <span class="dr-specialty-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-        <b data-de="Kopfhaut-Analyse" data-en="Scalp analysis">Kopfhaut-Analyse</b>
-        <span class="dr-specialty-desc" data-de="Grundlage für Behandlungsplan, Graft-Anzahl und erwartetes Ergebnis." data-en="The basis for the treatment plan, graft count, and expected outcome.">Grundlage für Behandlungsplan, Graft-Anzahl und erwartetes Ergebnis.</span>
+        <b data-cfield="specialty2Title" data-de="Kopfhaut-Analyse" data-en="Scalp analysis">Kopfhaut-Analyse</b>
+        <span class="dr-specialty-desc" data-cfield="specialty2Desc" data-de="Grundlage für Behandlungsplan, Graft-Anzahl und erwartetes Ergebnis." data-en="The basis for the treatment plan, graft count, and expected outcome.">Grundlage für Behandlungsplan, Graft-Anzahl und erwartetes Ergebnis.</span>
       </div>
       <div class="dr-specialty">
         <span class="dr-specialty-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-2.5-8-6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5-4 8.5-8 11z"/></svg></span>
-        <b data-de="Durchgehende Betreuung" data-en="Continuous care">Durchgehende Betreuung</b>
-        <span class="dr-specialty-desc" data-de="Von der Beratung über die Behandlung bis zur Nachsorge in AT · DE · CH." data-en="From consultation through treatment to aftercare across AT · DE · CH.">Von der Beratung über die Behandlung bis zur Nachsorge in AT · DE · CH.</span>
+        <b data-cfield="specialty3Title" data-de="Durchgehende Betreuung" data-en="Continuous care">Durchgehende Betreuung</b>
+        <span class="dr-specialty-desc" data-cfield="specialty3Desc" data-de="Von der Beratung über die Behandlung bis zur Nachsorge in AT · DE · CH." data-en="From consultation through treatment to aftercare across AT · DE · CH.">Von der Beratung über die Behandlung bis zur Nachsorge in AT · DE · CH.</span>
       </div>
     </div>
   </div>
 </section>
 
+</div>
+</div>
+
 <div class="dr-cta-wrap">
-  <h2 data-de="Bereit für den ersten Schritt?" data-en="Ready for the first step?">Bereit für den ersten Schritt?</h2>
-  <p data-de="Sichern Sie sich eine kostenlose, unverbindliche Beratung." data-en="Get a free, no-obligation consultation.">Sichern Sie sich eine kostenlose, unverbindliche Beratung.</p>
-  <a href="contact.php" class="cta-btn" data-de="Jetzt kostenlose Beratung sichern" data-en="Get your free consultation">Jetzt kostenlose Beratung sichern</a>
+  <h2 data-de="Bereit für den ersten Schritt?" data-en="Ready for the first step?" data-fr="Prêt à faire le premier pas ?" data-nl="Klaar voor de eerste stap?" data-it="Pronto per il primo passo?" data-tr="İlk Adımı Atmaya Hazır mısınız?">Bereit für den ersten Schritt?</h2>
+  <p data-de="Sichern Sie sich eine kostenlose, unverbindliche Beratung." data-en="Get a free, no-obligation consultation." data-fr="Obtenez une consultation gratuite et sans engagement." data-nl="Vraag een gratis, vrijblijvend consult aan." data-it="Richiedi un consulto gratuito e senza impegno." data-tr="Ücretsiz, taahhütsüz bir danışma alın.">Sichern Sie sich eine kostenlose, unverbindliche Beratung.</p>
+  <a href="contact.php" class="cta-btn" data-de="Jetzt kostenlose Beratung sichern" data-en="Get your free consultation" data-fr="Obtenez votre consultation gratuite" data-nl="Vraag uw gratis consult aan" data-it="Richiedi il tuo consulto gratuito" data-tr="Ücretsiz Danışmanızı Alın">Jetzt kostenlose Beratung sichern</a>
 </div>
 
 <?php include __DIR__ . '/includes/site-footer.php'; ?>
@@ -366,19 +423,113 @@ include __DIR__ . '/includes/site-header.php';
 </a>
 
 <script>
+  /* ---- Doctor profile pager ---- */
+  (function () {
+    var wrap = document.getElementById('drTrack');
+    if (!wrap) return;
+    var pager = document.getElementById('drPager');
+    var slides = [];
+    var dots = [];
+    var current = 0;
+    var touchStartX = null;
+
+    function refresh() {
+      slides = Array.prototype.slice.call(wrap.querySelectorAll('.dr-slide'));
+      if (!slides.length) return;
+      var dotsWrap = document.getElementById('drDots');
+      if (dotsWrap) {
+        dotsWrap.innerHTML = slides.map(function (_, i) {
+          return '<button type="button" class="dr-dot' + (i === 0 ? ' active' : '') +
+            '" data-goto="' + i + '" aria-label="Doctor ' + (i + 1) + '"></button>';
+        }).join('');
+      }
+      dots = Array.prototype.slice.call(document.querySelectorAll('.dr-dot'));
+      var single = slides.length <= 1;
+      if (pager) pager.classList.toggle('single-slide', single);
+      current = 0;
+      slides.forEach(function (s, idx) {
+        s.classList.remove('dir-next', 'dir-prev', 'dir-init');
+        var isFirst = idx === 0;
+        s.classList.toggle('active', isFirst);
+        if (isFirst) s.classList.add('dir-init');
+      });
+    }
+
+    function goTo(i, dir) {
+      if (!slides.length) return;
+      var next = (i + slides.length) % slides.length;
+      if (!dir) {
+        if (next === current) return;
+        var forward = (next - current + slides.length) % slides.length;
+        var backward = (current - next + slides.length) % slides.length;
+        dir = forward <= backward ? 'dir-next' : 'dir-prev';
+      }
+      current = next;
+      slides.forEach(function (s, idx) {
+        var isActive = idx === current;
+        s.classList.toggle('active', isActive);
+        if (isActive) {
+          s.classList.remove('dir-next', 'dir-prev', 'dir-init');
+          void s.offsetWidth;
+          s.classList.add(dir);
+        }
+      });
+      dots.forEach(function (d, idx) { d.classList.toggle('active', idx === current); });
+    }
+
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('#drPrev')) { goTo(current - 1, 'dir-prev'); return; }
+      if (e.target.closest('#drNext')) { goTo(current + 1, 'dir-next'); return; }
+      var dot = e.target.closest('.dr-dot');
+      if (dot) goTo(parseInt(dot.getAttribute('data-goto'), 10));
+    });
+
+    wrap.addEventListener('touchstart', function (e) {
+      if (!e.touches || !e.touches.length) return;
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    wrap.addEventListener('touchend', function (e) {
+      if (touchStartX == null || !e.changedTouches || !e.changedTouches.length) return;
+      var deltaX = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(deltaX) < 36) return;
+      goTo(current + (deltaX < 0 ? 1 : -1), deltaX < 0 ? 'dir-next' : 'dir-prev');
+    }, { passive: true });
+
+    refresh();
+    document.addEventListener('apex-content-loaded', refresh);
+  })();
+
+  // FR/NL/IT/TR have no translated copy yet — they fall back to the English
+  // strings until real translations are added for those data-* attributes.
+  var APEX_TRANSLATED_LANGS = ['de', 'en'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
+    var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
+      if (val === null && fallback) val = el.getAttribute('data-' + fallback);
       if (val !== null) el.innerHTML = val;
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (s) {
+    document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       var isActive = s.getAttribute('data-lang') === lang;
       s.className = isActive ? 'active' : 'inactive';
     });
+    document.querySelectorAll('.lang-switch-current').forEach(function (s) {
+      s.textContent = lang.toUpperCase();
+    });
   }
-  document.querySelectorAll('.lang-switch button').forEach(function (s) {
-    s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
+  document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
+    s.addEventListener('click', function () {
+      applyLang(s.getAttribute('data-lang'));
+      var ls = s.closest('.lang-switch');
+      if (ls) {
+        ls.classList.remove('open');
+        var t = ls.querySelector('.lang-switch-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 
   function trackWhatsAppContact() {

@@ -159,22 +159,29 @@ return [
         ],
     ],
     'doctor' => [
-        'label' => 'Doctor page',
+        'label' => 'Doctors page',
         'sections' => [
-            'hero' => [
-                'label' => 'Physician profile',
-                'fields' => [
-                    ['key' => 'photo', 'label' => 'Photo', 'type' => 'image'],
-                    ['key' => 'name', 'label' => 'Name', 'type' => 'text'],
-                    ['key' => 'credentials', 'label' => 'Title / credentials', 'type' => 'text'],
-                    ['key' => 'intro', 'label' => 'Short intro line', 'type' => 'richtext'],
-                    ['key' => 'bio', 'label' => 'Biography', 'type' => 'richtext'],
-                ],
-            ],
-            'specialties' => [
-                'label' => 'Specialties / focus areas',
-                'fields' => [
-                    ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
+            'profiles' => [
+                'label' => 'Doctor profiles',
+                'fields' => [],
+                'list' => [
+                    'key' => 'items',
+                    'label' => 'Doctors',
+                    'itemType' => 'fields',
+                    'itemFields' => [
+                        ['key' => 'photo', 'label' => 'Photo', 'type' => 'image'],
+                        ['key' => 'name', 'label' => 'Name', 'type' => 'text'],
+                        ['key' => 'credentials', 'label' => 'Title / credentials', 'type' => 'text'],
+                        ['key' => 'intro', 'label' => 'Short intro line', 'type' => 'richtext'],
+                        ['key' => 'bio', 'label' => 'Biography', 'type' => 'richtext'],
+                        ['key' => 'specialtiesHeading', 'label' => 'Specialties heading (e.g. "Why Dr. Burhan")', 'type' => 'text'],
+                        ['key' => 'specialty1Title', 'label' => 'Specialty 1 — title', 'type' => 'text'],
+                        ['key' => 'specialty1Desc', 'label' => 'Specialty 1 — description', 'type' => 'text'],
+                        ['key' => 'specialty2Title', 'label' => 'Specialty 2 — title', 'type' => 'text'],
+                        ['key' => 'specialty2Desc', 'label' => 'Specialty 2 — description', 'type' => 'text'],
+                        ['key' => 'specialty3Title', 'label' => 'Specialty 3 — title', 'type' => 'text'],
+                        ['key' => 'specialty3Desc', 'label' => 'Specialty 3 — description', 'type' => 'text'],
+                    ],
                 ],
             ],
         ],

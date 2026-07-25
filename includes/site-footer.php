@@ -43,9 +43,9 @@ if (!defined('APEX_SITE_FOOTER_STYLE_EMITTED')) {
 
     .footer-right {
       flex: 1; min-width: 0;
-      display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+      display: flex; align-items: center; justify-content: flex-end;
       /* Clears the fixed WhatsApp button (56px + 24px offset) that sits in
-         this same corner, so it never overlaps the privacy link — without
+         this same corner, so it never overlaps the icons — without
          touching .site-footer's own padding, which would throw off the
          copyright column's true centering. */
       padding-right: 64px;
@@ -64,6 +64,11 @@ if (!defined('APEX_SITE_FOOTER_STYLE_EMITTED')) {
       transform: translateY(-2px);
     }
     .footer-social-link svg { width: 12px; height: 12px; display: block; }
+
+    /* Its own centered row under the three columns — small and out of the
+       way, not competing with the social icons for space in the right
+       column. */
+    .footer-legal { text-align: center; margin-top: 18px; }
     .footer-privacy-link {
       font-size: 10.5px; color: rgba(226,232,240,0.45); text-decoration: none;
     }
@@ -73,7 +78,8 @@ if (!defined('APEX_SITE_FOOTER_STYLE_EMITTED')) {
       .site-footer { padding: 24px 20px 84px; }
       .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 16px; }
       .footer-nap { text-align: center; }
-      .footer-right { align-items: center; padding-right: 0; }
+      .footer-right { justify-content: center; padding-right: 0; }
+      .footer-legal { margin-top: 14px; }
     }
   </style>
   <?php
@@ -95,7 +101,7 @@ require_once __DIR__ . '/site-config.php';
         <?= htmlspecialchars(APEX_WHATSAPP_DISPLAY, ENT_QUOTES) ?>
       </a>
     </div>
-    <p class="footer-copy">&copy; <span id="footerYear"></span> <span data-de="Apex Beauty. Alle Rechte vorbehalten." data-en="Apex Beauty. All rights reserved.">Apex Beauty. All rights reserved.</span></p>
+    <p class="footer-copy">&copy; <span id="footerYear"></span> <span data-de="Apex Beauty. Alle Rechte vorbehalten." data-en="Apex Beauty. All rights reserved." data-fr="Apex Beauty. Tous droits réservés." data-nl="Apex Beauty. Alle rechten voorbehouden." data-it="Apex Beauty. Tutti i diritti riservati." data-tr="Apex Beauty. Tüm hakları saklıdır.">Apex Beauty. All rights reserved.</span></p>
     <div class="footer-right">
       <div class="footer-social">
         <a class="footer-social-link" href="https://www.facebook.com/profile.php?id=61583751883465" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -115,8 +121,10 @@ require_once __DIR__ . '/site-config.php';
           </svg>
         </a>
       </div>
-      <a class="footer-privacy-link" href="privacy.php" data-de="Datenschutzerklärung" data-en="Privacy Policy">Datenschutzerklärung</a>
     </div>
+  </div>
+  <div class="footer-legal">
+    <a class="footer-privacy-link" href="privacy.php" data-de="Datenschutzerklärung" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-nl="Privacybeleid" data-it="Informativa sulla privacy" data-tr="Gizlilik Politikası">Datenschutzerklärung</a>
   </div>
 </footer>
 <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>

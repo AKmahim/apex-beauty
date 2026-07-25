@@ -1256,44 +1256,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="announce-items">
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gAChat" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gAChat)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="14" y="16" width="36" height="24" rx="8" fill="#fff" opacity="0.92"/><path d="M22 40l0 8 10-8z" fill="#fff" opacity="0.92"/><circle cx="24" cy="28" r="2.4" fill="url(#gAChat)"/><circle cx="32" cy="28" r="2.4" fill="url(#gAChat)"/><circle cx="40" cy="28" r="2.4" fill="url(#gAChat)"/></svg></span>
-            <b data-de="Beratung – Vor Ort, Österreich" data-en="Consultation - In person, Austria">Beratung – Vor Ort, Österreich</b>
+            <b data-de="Beratung – Vor Ort, Österreich" data-en="Consultation - In person, Austria" data-fr="Consultation - En personne, Autriche" data-nl="Consult - Persoonlijk, Oostenrijk" data-it="Consulenza - Di persona, Austria" data-tr="Danışma - Yüz Yüze, Avusturya">Beratung – Vor Ort, Österreich</b>
           </div>
           <div class="announce-divider"></div>
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gACase" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gACase)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="24" y="12" width="16" height="10" rx="3" fill="none" stroke="#fff" stroke-width="3" opacity="0.9"/><rect x="14" y="22" width="36" height="28" rx="6" fill="#fff" opacity="0.92"/><rect x="14" y="33" width="36" height="4" fill="url(#gACase)" opacity="0.45"/></svg></span>
-            <b data-de="Reise in die Türkei – Wir organisieren alles" data-en="Trip to Turkey - We handle it all">Reise in die Türkei – Wir organisieren alles</b>
+            <b data-de="Reise in die Türkei – Wir organisieren alles" data-en="Trip to Turkey - We handle it all" data-fr="Voyage en Turquie - Nous nous occupons de tout" data-nl="Reis naar Turkije - Wij regelen alles" data-it="Viaggio in Turchia - Ci occupiamo di tutto" data-tr="Türkiye Seyahati - Her Şeyi Biz Ayarlıyoruz">Reise in die Türkei – Wir organisieren alles</b>
           </div>
           <div class="announce-divider"></div>
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gACross" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gACross)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><path d="M27 14h10v11h11v10H37v11H27V35H16V25h11z" fill="#fff" opacity="0.92"/></svg></span>
-            <b data-de="Behandlung – Hauptklinik Türkei" data-en="Treatment - Main Clinic Turkey">Behandlung – Hauptklinik Türkei</b>
+            <b data-de="Behandlung – Hauptklinik Türkei" data-en="Treatment - Main Clinic Turkey" data-fr="Traitement - Clinique principale en Turquie" data-nl="Behandeling - Hoofdkliniek Turkije" data-it="Trattamento - Clinica principale in Turchia" data-tr="Tedavi - Ana Klinik Türkiye">Behandlung – Hauptklinik Türkei</b>
           </div>
           <div class="announce-divider"></div>
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gAGlobe" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gAGlobe)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><circle cx="28" cy="30" r="14" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.85"/><ellipse cx="28" cy="30" rx="14" ry="5.5" fill="none" stroke="#fff" stroke-width="1.8" opacity="0.6"/><line x1="14" y1="30" x2="42" y2="30" stroke="#fff" stroke-width="1.8" opacity="0.6"/><path d="M43 36c4 0 7 3 7 7 0 5-7 11-7 11s-7-6-7-11c0-4 3-7 7-7z" fill="#fff" opacity="0.95"/><circle cx="43" cy="43" r="2.4" fill="url(#gAGlobe)"/></svg></span>
-            <b data-de="Größtes Nachsorge-Netzwerk – AT·DE·CH" data-en="Largest Aftercare Network - AT·DE·CH">Größtes Nachsorge-Netzwerk – AT·DE·CH</b>
+            <b data-de="Größtes Nachsorge-Netzwerk – AT·DE·CH" data-en="Largest Aftercare Network - AT·DE·CH" data-fr="Plus grand réseau de suivi - AT·DE·CH" data-nl="Grootste nazorgnetwerk - AT·DE·CH" data-it="La più grande rete di assistenza post-operatoria - AT·DE·CH" data-tr="En Büyük Bakım Sonrası Ağı - AT·DE·CH">Größtes Nachsorge-Netzwerk – AT·DE·CH</b>
           </div>
           <div class="announce-divider"></div>
         </div>
         <div class="announce-items" aria-hidden="true">
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gAChat2" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gAChat2)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="14" y="16" width="36" height="24" rx="8" fill="#fff" opacity="0.92"/><path d="M22 40l0 8 10-8z" fill="#fff" opacity="0.92"/><circle cx="24" cy="28" r="2.4" fill="url(#gAChat2)"/><circle cx="32" cy="28" r="2.4" fill="url(#gAChat2)"/><circle cx="40" cy="28" r="2.4" fill="url(#gAChat2)"/></svg></span>
-            <b data-de="Beratung – Vor Ort, Österreich" data-en="Consultation - In person, Austria">Beratung – Vor Ort, Österreich</b>
+            <b data-de="Beratung – Vor Ort, Österreich" data-en="Consultation - In person, Austria" data-fr="Consultation - En personne, Autriche" data-nl="Consult - Persoonlijk, Oostenrijk" data-it="Consulenza - Di persona, Austria" data-tr="Danışma - Yüz Yüze, Avusturya">Beratung – Vor Ort, Österreich</b>
           </div>
           <div class="announce-divider"></div>
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gACase2" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gACase2)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="24" y="12" width="16" height="10" rx="3" fill="none" stroke="#fff" stroke-width="3" opacity="0.9"/><rect x="14" y="22" width="36" height="28" rx="6" fill="#fff" opacity="0.92"/><rect x="14" y="33" width="36" height="4" fill="url(#gACase2)" opacity="0.45"/></svg></span>
-            <b data-de="Reise in die Türkei – Wir organisieren alles" data-en="Trip to Turkey - We handle it all">Reise in die Türkei – Wir organisieren alles</b>
+            <b data-de="Reise in die Türkei – Wir organisieren alles" data-en="Trip to Turkey - We handle it all" data-fr="Voyage en Turquie - Nous nous occupons de tout" data-nl="Reis naar Turkije - Wij regelen alles" data-it="Viaggio in Turchia - Ci occupiamo di tutto" data-tr="Türkiye Seyahati - Her Şeyi Biz Ayarlıyoruz">Reise in die Türkei – Wir organisieren alles</b>
           </div>
           <div class="announce-divider"></div>
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gACross2" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gACross2)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><path d="M27 14h10v11h11v10H37v11H27V35H16V25h11z" fill="#fff" opacity="0.92"/></svg></span>
-            <b data-de="Behandlung – Hauptklinik Türkei" data-en="Treatment - Main Clinic Turkey">Behandlung – Hauptklinik Türkei</b>
+            <b data-de="Behandlung – Hauptklinik Türkei" data-en="Treatment - Main Clinic Turkey" data-fr="Traitement - Clinique principale en Turquie" data-nl="Behandeling - Hoofdkliniek Turkije" data-it="Trattamento - Clinica principale in Turchia" data-tr="Tedavi - Ana Klinik Türkiye">Behandlung – Hauptklinik Türkei</b>
           </div>
           <div class="announce-divider"></div>
           <div class="announce-item">
             <span class="ico"><svg class="gi gi-usp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gAGlobe2" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gAGlobe2)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><circle cx="28" cy="30" r="14" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.85"/><ellipse cx="28" cy="30" rx="14" ry="5.5" fill="none" stroke="#fff" stroke-width="1.8" opacity="0.6"/><line x1="14" y1="30" x2="42" y2="30" stroke="#fff" stroke-width="1.8" opacity="0.6"/><path d="M43 36c4 0 7 3 7 7 0 5-7 11-7 11s-7-6-7-11c0-4 3-7 7-7z" fill="#fff" opacity="0.95"/><circle cx="43" cy="43" r="2.4" fill="url(#gAGlobe2)"/></svg></span>
-            <b data-de="Größtes Nachsorge-Netzwerk – AT·DE·CH" data-en="Largest Aftercare Network - AT·DE·CH">Größtes Nachsorge-Netzwerk – AT·DE·CH</b>
+            <b data-de="Größtes Nachsorge-Netzwerk – AT·DE·CH" data-en="Largest Aftercare Network - AT·DE·CH" data-fr="Plus grand réseau de suivi - AT·DE·CH" data-nl="Grootste nazorgnetwerk - AT·DE·CH" data-it="La più grande rete di assistenza post-operatoria - AT·DE·CH" data-tr="En Büyük Bakım Sonrası Ağı - AT·DE·CH">Größtes Nachsorge-Netzwerk – AT·DE·CH</b>
           </div>
           <div class="announce-divider"></div>
         </div>
@@ -1325,7 +1325,7 @@ include __DIR__ . '/includes/site-header.php';
         <span class="hl" data-ckey="hero.headline2" data-de="Professionell begleitet von der Beratung bis zur Nachsorge." data-en="Professionally managed from consultation to aftercare.">Professionell begleitet von der Beratung bis zur Nachsorge.</span>
       </h1>
       <p class="hero-sub" data-ckey="hero.sub" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland. With 24/7 medical supervision and one of Europe's largest aftercare networks, you're supported every step of the way.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Mit einer ärztlichen Betreuung rund um die Uhr und einem der größten Nachsorgenetzwerke Europas begleiten wir Sie Schritt für Schritt auf Ihrem Weg.</p>
-      <p class="hero-sub hero-sub-mobile" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz.</p>
+      <p class="hero-sub hero-sub-mobile" data-de="Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz." data-en="Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland." data-fr="Consultation en Autriche, traitement dans notre clinique de référence en Turquie et suivi professionnel en Autriche, en Allemagne et en Suisse." data-nl="Consult in Oostenrijk, behandeling in onze toonaangevende kliniek in Turkije en professionele nazorg in Oostenrijk, Duitsland en Zwitserland." data-it="Consulenza in Austria, trattamento presso la nostra clinica leader in Turchia e assistenza post-operatoria professionale in Austria, Germania e Svizzera." data-tr="Avusturya'da danışmanlık, Türkiye'deki lider kliniğimizde tedavi ve Avusturya, Almanya ve İsviçre genelinde profesyonel bakım sonrası destek.">Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz.</p>
       <div class="hero-ctas">
         <a href="#" class="cta-btn" onclick="openConsult(event)" data-ckey="hero.ctaPrimary" data-de="Kostenlose Beratung sichern" data-en="Get your free consultation">Kostenlose Beratung sichern</a>
         <a href="#before-after" class="cta-ghost" data-ckey="hero.ctaSecondary" data-de="Vorher-Nachher ansehen" data-en="See before &amp; after">Vorher-Nachher ansehen</a>
@@ -1337,11 +1337,11 @@ include __DIR__ . '/includes/site-header.php';
         </div>
         <div class="trust-pill tp-pink">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a9 9 0 0 1 0-18c4.97 0 9 3.5 9 7.5 0 2-1.5 3.5-3.5 3.5H15a1.5 1.5 0 0 0-1 2.6c.3.3.5.7.5 1.1 0 1-.9 1.8-2 1.8Z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="10.5" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg>
-          <span data-de="Individuelles Haarlinien-Design" data-en="Personalized Hairline Design">Individuelles Haarlinien-Design</span>
+          <span data-de="Individuelles Haarlinien-Design" data-en="Personalized Hairline Design" data-fr="Conception personnalisée de la ligne capillaire" data-nl="Persoonlijk ontwerp van de haarlijn" data-it="Design personalizzato dell'attaccatura" data-tr="Kişiye Özel Saç Çizgisi Tasarımı">Individuelles Haarlinien-Design</span>
         </div>
         <div class="trust-pill tp-teal">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></svg>
-          <span data-de="Stressfreie Sedierung" data-en="Stress-Free Sedation">Stressfreie Sedierung</span>
+          <span data-de="Stressfreie Sedierung" data-en="Stress-Free Sedation" data-fr="Sédation sans stress" data-nl="Stressvrije sedatie" data-it="Sedazione senza stress" data-tr="Stressiz Sedasyon">Stressfreie Sedierung</span>
         </div>
       </div>
     </div>
@@ -1356,7 +1356,7 @@ include __DIR__ . '/includes/site-header.php';
       <a href="#network" class="float-card fc-1">
         <div class="fc-glass-tint"></div>
         <div class="icon"><svg class="gi gi-fc" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBadge" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><path d="M22 40l-6 16 12-4 4 8 6-15z" fill="#cfe8f7" opacity="0.9" stroke="#9fcfe8" stroke-width="0.5"/><path d="M42 40l6 16-12-4-4 8-6-15z" fill="#cfe8f7" opacity="0.9" stroke="#9fcfe8" stroke-width="0.5"/><circle cx="32" cy="28" r="26" fill="url(#gBadge)"/><ellipse cx="23" cy="17" rx="15" ry="8" fill="#fff" opacity="0.25"/><text x="32" y="33" font-family="Arial, sans-serif" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">360°</text></svg></div>
-        <div><span data-de="360°-Betreuung" data-en="360° Care">360°-Betreuung</span><br><span style="font-weight:400;color:#64748b;font-size:11px" data-de="Beratung bis Nachsorge" data-en="Consultation to Aftercare">Beratung bis Nachsorge</span></div>
+        <div><span data-de="360°-Betreuung" data-en="360° Care" data-fr="Soins 360°" data-nl="360° Zorg" data-it="Cura 360°" data-tr="360° Bakım">360°-Betreuung</span><br><span style="font-weight:400;color:#64748b;font-size:11px" data-de="Beratung bis Nachsorge" data-en="Consultation to Aftercare" data-fr="De la consultation au suivi" data-nl="Van consult tot nazorg" data-it="Dalla consulenza all'assistenza post-operatoria" data-tr="Danışmadan Bakıma">Beratung bis Nachsorge</span></div>
       </a>
       <a class="float-card fc-2" href="https://www.google.com/maps/place/Apex+Beauty+%C3%84sthetische+Chirurgie,+Medizin+Tourismus/@48.3014502,14.2879031,17z/data=!3m1!4b1!4m6!3m5!1s0x47739758cfdf6873:0x1802fb70cbb5f96d!8m2!3d48.3014502!4d14.290478!16s%2Fg%2F11h84lrbht?hl=de&entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
         <div class="fc-glass-tint"></div>
@@ -1369,7 +1369,7 @@ include __DIR__ . '/includes/site-header.php';
             <svg width="12" height="12" viewBox="0 0 20 20" fill="#fbbf24"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1L4.6 17.3l1.3-6L1.3 7.2l6.1-.6z"/></svg>
             <svg width="12" height="12" viewBox="0 0 20 20" fill="#fbbf24"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1L4.6 17.3l1.3-6L1.3 7.2l6.1-.6z"/></svg>
           </span>
-          <span>4.9 </span><span style="font-weight:400;color:#64748b;font-size:11px" data-de="Google-Bewertungen" data-en="Google Reviews">Google-Bewertungen</span>
+          <span>4.9 </span><span style="font-weight:400;color:#64748b;font-size:11px" data-de="Google-Bewertungen" data-en="Google Reviews" data-fr="Avis Google" data-nl="Google-recensies" data-it="Recensioni Google" data-tr="Google Yorumları">Google-Bewertungen</span>
         </div>
       </a>
     </div>
@@ -1384,7 +1384,7 @@ include __DIR__ . '/includes/site-header.php';
     </div>
     <div class="trust-item">
       <div class="trust-icon"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gStarTi" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gStarTi)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><path d="M32 15l5.4 11 12.1 1.7-8.8 8.5 2.1 12-10.8-5.7-10.8 5.7 2.1-12-8.8-8.5L26.6 26z" fill="#fff" opacity="0.92"/></svg></div>
-      <div><div class="trust-num"><span class="cnt" data-target="4.9" data-decimals="1">0</span> / 5</div><div class="trust-label" data-ckey="trustBar.stat2Label" data-de="Google-Bewertungen" data-en="Google Reviews">Google-Bewertungen</div></div>
+      <div><div class="trust-num"><span class="cnt" data-target="4.9" data-decimals="1">0</span> / 5</div><div class="trust-label" data-ckey="trustBar.stat2Label" data-de="Google-Bewertungen" data-en="Google Reviews" data-fr="Avis Google" data-nl="Google-recensies" data-it="Recensioni Google" data-tr="Google Yorumları">Google-Bewertungen</div></div>
     </div>
     <div class="trust-item">
       <div class="trust-icon"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gCal" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="10" y="10" width="50" height="50" rx="16" fill="#fff" opacity="0.3"/><rect x="4" y="4" width="50" height="50" rx="16" fill="url(#gCal)"/><rect x="16" y="1" width="6" height="12" rx="3" fill="#fff" opacity="0.85"/><rect x="38" y="1" width="6" height="12" rx="3" fill="#fff" opacity="0.85"/><rect x="10" y="22" width="38" height="3" rx="1.5" fill="#fff" opacity="0.7"/><circle cx="16" cy="34" r="2.6" fill="#fff" opacity="0.85"/><circle cx="26" cy="34" r="2.6" fill="#fff" opacity="0.85"/><circle cx="36" cy="34" r="2.6" fill="#fff" opacity="0.85"/><circle cx="16" cy="44" r="2.6" fill="#fff" opacity="0.85"/><circle cx="26" cy="44" r="2.6" fill="#fff" opacity="0.85"/></svg></div>
@@ -1402,7 +1402,7 @@ include __DIR__ . '/includes/site-header.php';
   <div class="service-scrim"></div>
   <div class="service-inner">
     <div class="service-head">
-      <span class="service-kicker" data-de="Unser Versprechen" data-en="Our promise">Unser Versprechen</span>
+      <span class="service-kicker" data-de="Unser Versprechen" data-en="Our promise" data-fr="Notre promesse" data-nl="Onze belofte" data-it="La nostra promessa" data-tr="Sözümüz">Unser Versprechen</span>
       <h2 data-ckey="promise.heading" data-de="Kein Bruch zwischen Beratung, Behandlung und Nachsorge" data-en="No gap between consultation, treatment and aftercare">Kein Bruch zwischen Beratung, Behandlung und Nachsorge</h2>
       <p data-ckey="promise.sub" data-de="Die meisten Patienten fürchten sich nicht vor der Operation, sondern davor, was passiert, wenn sie wieder zuhause sind. Deshalb begleiten wir Sie durchgehend, nicht nur am Tag des Eingriffs." data-en="Most patients aren't afraid of the procedure itself. They're afraid of what happens once they're back home. That's why we stay with you the whole way, not just on treatment day.">Die meisten Patienten fürchten sich nicht vor der Operation, sondern davor, was passiert, wenn sie wieder zuhause sind. Deshalb begleiten wir Sie durchgehend, nicht nur am Tag des Eingriffs.</p>
     </div>
@@ -1410,30 +1410,30 @@ include __DIR__ . '/includes/site-header.php';
       <div class="step-card s1">
         <div class="step-num">1</div>
         <div class="step-text">
-          <div class="step-flag" data-de="Österreich" data-en="Austria">Österreich</div>
-          <h3 data-de="Persönliche Beratung" data-en="Personal consultation">Persönliche Beratung</h3>
-          <p data-de="Ihr erstes Gespräch findet vor Ort statt, nicht per anonymem Chat. Wir klären Erwartungen, Methode und Ablauf, bevor Sie reisen." data-en="Your first conversation happens in person, not through an anonymous chat. We clarify expectations, method and process before you travel.">Ihr erstes Gespräch findet vor Ort statt, nicht per anonymem Chat. Wir klären Erwartungen, Methode und Ablauf, bevor Sie reisen.</p>
+          <div class="step-flag" data-de="Österreich" data-en="Austria" data-fr="Autriche" data-nl="Oostenrijk" data-it="Austria" data-tr="Avusturya">Österreich</div>
+          <h3 data-de="Persönliche Beratung" data-en="Personal consultation" data-fr="Consultation personnelle" data-nl="Persoonlijk consult" data-it="Consulenza personale" data-tr="Kişisel Danışma">Persönliche Beratung</h3>
+          <p data-de="Ihr erstes Gespräch findet vor Ort statt, nicht per anonymem Chat. Wir klären Erwartungen, Methode und Ablauf, bevor Sie reisen." data-en="Your first conversation happens in person, not through an anonymous chat. We clarify expectations, method and process before you travel." data-fr="Votre première conversation a lieu en personne, pas via un chat anonyme. Nous clarifions les attentes, la méthode et le déroulement avant votre voyage." data-nl="Uw eerste gesprek vindt persoonlijk plaats, niet via een anonieme chat. We verduidelijken verwachtingen, methode en proces voordat u reist." data-it="La tua prima conversazione avviene di persona, non tramite una chat anonima. Chiariamo aspettative, metodo e procedura prima del tuo viaggio." data-tr="İlk görüşmeniz anonim bir sohbet üzerinden değil, yüz yüze gerçekleşir. Seyahat etmeden önce beklentileri, yöntemi ve süreci netleştiririz.">Ihr erstes Gespräch findet vor Ort statt, nicht per anonymem Chat. Wir klären Erwartungen, Methode und Ablauf, bevor Sie reisen.</p>
         </div>
       </div>
       <div class="step-card s2">
         <div class="step-num">2</div>
         <div class="step-text">
-          <div class="step-flag" data-de="Hauptklinik Istanbul" data-en="Main clinic, Istanbul">Hauptklinik Istanbul</div>
-          <h3 data-de="Behandlung mit 24/7-Betreuung" data-en="Treatment with 24/7 care">Behandlung mit 24/7-Betreuung</h3>
-          <p data-de="Die Transplantation findet in unserer Hauptklinik statt, mit durchgehender ärztlicher Betreuung, nicht nur während des Eingriffs selbst." data-en="The transplant takes place at our main clinic, with continuous medical supervision, not just during the procedure itself.">Die Transplantation findet in unserer Hauptklinik statt, mit durchgehender ärztlicher Betreuung, nicht nur während des Eingriffs selbst.</p>
+          <div class="step-flag" data-de="Hauptklinik Istanbul" data-en="Main clinic, Istanbul" data-fr="Clinique principale, Istanbul" data-nl="Hoofdkliniek, Istanboel" data-it="Clinica principale, Istanbul" data-tr="Ana Klinik, İstanbul">Hauptklinik Istanbul</div>
+          <h3 data-de="Behandlung mit 24/7-Betreuung" data-en="Treatment with 24/7 care" data-fr="Traitement avec soins 24h/24 et 7j/7" data-nl="Behandeling met 24/7 zorg" data-it="Trattamento con assistenza 24 ore su 24" data-tr="7/24 Bakımla Tedavi">Behandlung mit 24/7-Betreuung</h3>
+          <p data-de="Die Transplantation findet in unserer Hauptklinik statt, mit durchgehender ärztlicher Betreuung, nicht nur während des Eingriffs selbst." data-en="The transplant takes place at our main clinic, with continuous medical supervision, not just during the procedure itself." data-fr="La greffe a lieu dans notre clinique principale, avec une supervision médicale continue, pas seulement pendant l'intervention elle-même." data-nl="De transplantatie vindt plaats in onze hoofdkliniek, met continu medisch toezicht, niet alleen tijdens de ingreep zelf." data-it="Il trapianto avviene presso la nostra clinica principale, con supervisione medica continua, non solo durante l'intervento stesso." data-tr="Nakil, yalnızca işlem sırasında değil, sürekli tıbbi gözetim altında ana kliniğimizde gerçekleştirilir.">Die Transplantation findet in unserer Hauptklinik statt, mit durchgehender ärztlicher Betreuung, nicht nur während des Eingriffs selbst.</p>
         </div>
       </div>
       <div class="step-card s3">
         <div class="step-num">3</div>
         <div class="step-text">
-          <div class="step-flag" data-de="AT · DE · CH Netzwerk" data-en="AT · DE · CH network">AT · DE · CH Netzwerk</div>
-          <h3 data-de="Nachsorge in Ihrer Nähe" data-en="Aftercare near you">Nachsorge in Ihrer Nähe</h3>
-          <p data-de="Zurück zuhause endet die Betreuung nicht: unser Kliniknetzwerk in Österreich, Deutschland und der Schweiz übernimmt die Nachsorge, von Medikamenten bis PRP-Behandlungen." data-en="Care doesn't end once you're home: our clinic network in Austria, Germany and Switzerland handles aftercare, from medication to PRP treatments.">Zurück zuhause endet die Betreuung nicht: unser Kliniknetzwerk in Österreich, Deutschland und der Schweiz übernimmt die Nachsorge, von Medikamenten bis PRP-Behandlungen.</p>
+          <div class="step-flag" data-de="AT · DE · CH Netzwerk" data-en="AT · DE · CH network" data-fr="Réseau AT · DE · CH" data-nl="AT · DE · CH netwerk" data-it="Rete AT · DE · CH" data-tr="AT · DE · CH Ağı">AT · DE · CH Netzwerk</div>
+          <h3 data-de="Nachsorge in Ihrer Nähe" data-en="Aftercare near you" data-fr="Un suivi près de chez vous" data-nl="Nazorg bij u in de buurt" data-it="Assistenza post-operatoria vicino a te" data-tr="Yakınınızda Bakım">Nachsorge in Ihrer Nähe</h3>
+          <p data-de="Zurück zuhause endet die Betreuung nicht: unser Kliniknetzwerk in Österreich, Deutschland und der Schweiz übernimmt die Nachsorge, von Medikamenten bis PRP-Behandlungen." data-en="Care doesn't end once you're home: our clinic network in Austria, Germany and Switzerland handles aftercare, from medication to PRP treatments." data-fr="Le suivi ne s'arrête pas une fois rentré chez vous : notre réseau de cliniques en Autriche, en Allemagne et en Suisse assure le suivi, des médicaments aux traitements PRP." data-nl="De zorg stopt niet zodra u weer thuis bent: ons klinieknetwerk in Oostenrijk, Duitsland en Zwitserland verzorgt de nazorg, van medicatie tot PRP-behandelingen." data-it="L'assistenza non finisce una volta tornati a casa: la nostra rete di cliniche in Austria, Germania e Svizzera si occupa dell'assistenza post-operatoria, dai farmaci ai trattamenti PRP." data-tr="Bakım, eve döndüğünüzde sona ermez: Avusturya, Almanya ve İsviçre'deki klinik ağımız, ilaçlardan PRP tedavilerine kadar bakım sonrası süreci yönetir.">Zurück zuhause endet die Betreuung nicht: unser Kliniknetzwerk in Österreich, Deutschland und der Schweiz übernimmt die Nachsorge, von Medikamenten bis PRP-Behandlungen.</p>
         </div>
       </div>
     </div>
     <div class="service-foot">
-      <span data-de="Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell." data-en="One provider, three countries, one continuous model of care.">Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell.</span>
+      <span data-de="Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell." data-en="One provider, three countries, one continuous model of care." data-fr="Un seul prestataire, trois pays, un modèle de soins continu." data-nl="Eén aanbieder, drie landen, één doorlopend zorgmodel." data-it="Un unico fornitore, tre paesi, un modello di assistenza continua." data-tr="Tek sağlayıcı, üç ülke, kesintisiz bir bakım modeli.">Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell.</span>
     </div>
   </div>
 </section>
@@ -1442,7 +1442,7 @@ include __DIR__ . '/includes/site-header.php';
   <div class="ba-bg-layer"></div>
   <div class="ba-inner">
     <div class="ba-head">
-      <span class="ba-kicker" data-de="Vorher &amp; Nachher" data-en="Before &amp; after">Vorher &amp; Nachher</span>
+      <span class="ba-kicker" data-de="Vorher &amp; Nachher" data-en="Before &amp; after" data-fr="Avant/après" data-nl="Voor en na" data-it="Prima e dopo" data-tr="Öncesi ve Sonrası">Vorher &amp; Nachher</span>
       <h2><span data-ckey="beforeAfter.heading1" data-de="Jeder Haaransatz." data-en="Every hairline.">Jeder Haaransatz.</span> <span class="hl" data-ckey="beforeAfter.heading2" data-de="Mit Präzision gestaltet." data-en="Designed with precision.">Mit Präzision gestaltet.</span></h2>
       <p data-ckey="beforeAfter.sub" data-de="Jeder Fall beginnt mit einer Kopfhaut-Analyse und endet mit einem Ergebnis, das individuell geplant wurde." data-en="Every case starts with a scalp analysis and ends with a result that was planned individually.">Jeder Fall beginnt mit einer Kopfhaut-Analyse und endet mit einem Ergebnis, das individuell geplant wurde.</p>
     </div>
@@ -1462,28 +1462,28 @@ include __DIR__ . '/includes/site-header.php';
         <div class="ba-slide active" data-citem data-slide="0">
           <div class="ba-compare">
             <div class="ba-photo ba-before">
-              <span class="ba-tag" data-de="VORHER" data-en="BEFORE">VORHER</span>
+              <span class="ba-tag" data-de="VORHER" data-en="BEFORE" data-fr="AVANT" data-nl="VOOR" data-it="PRIMA" data-tr="ÖNCESİ">VORHER</span>
               <div class="ba-photo-frame">
                 <img src="assets/before.png" alt="Vorher" loading="lazy" data-cmediafield="vorherImage">
               </div>
               <div class="ba-callout">
                 <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v3M9 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 0v7m-3 0h6"/></svg></div>
                 <div>
-                  <b data-de="Kopfhaut-Analyse" data-en="Scalp analysis">Kopfhaut-Analyse</b>
+                  <b data-de="Kopfhaut-Analyse" data-en="Scalp analysis" data-fr="Analyse du cuir chevelu" data-nl="Hoofdhuidanalyse" data-it="Analisi del cuoio capelluto" data-tr="Saç Derisi Analizi">Kopfhaut-Analyse</b>
                   <span data-cfield="vorherLine1" data-de="Bereich: Stirn &amp; Krone" data-en="Area: Hairline &amp; crown">Bereich: Stirn &amp; Krone</span>
                   <span data-cfield="vorherLine2" data-de="Dichte: Gering" data-en="Density: Low">Dichte: Gering</span>
                 </div>
               </div>
             </div>
             <div class="ba-photo ba-after">
-              <span class="ba-tag" data-de="NACHHER" data-en="AFTER">NACHHER</span>
+              <span class="ba-tag" data-de="NACHHER" data-en="AFTER" data-fr="APRÈS" data-nl="NA" data-it="DOPO" data-tr="SONRASI">NACHHER</span>
               <div class="ba-photo-frame">
                 <img src="assets/after.png" alt="Nachher" loading="lazy" data-cmediafield="nachherImage">
               </div>
               <div class="ba-callout">
                 <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
                 <div>
-                  <b data-de="Präzises Ergebnis" data-en="Precise result">Präzises Ergebnis</b>
+                  <b data-de="Präzises Ergebnis" data-en="Precise result" data-fr="Résultat précis" data-nl="Precies resultaat" data-it="Risultato preciso" data-tr="Hassas Sonuç">Präzises Ergebnis</b>
                   <span data-cfield="nachherLine1" data-de="Transplantate präzise platziert" data-en="Grafts precisely placed">Transplantate präzise platziert</span>
                   <span data-cfield="nachherLine2" data-de="Natürlicher Haaransatz · Verbesserte Dichte" data-en="Natural hairline · Improved density">Natürlicher Haaransatz · Verbesserte Dichte</span>
                 </div>
@@ -1506,28 +1506,28 @@ include __DIR__ . '/includes/site-header.php';
       <div class="ba-feature">
         <div class="ba-feature-ico"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBaTarget" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gBaTarget)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><circle cx="32" cy="32" r="14" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="32" cy="32" r="8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="32" cy="32" r="2.8" fill="#fff"/></svg></div>
         <div>
-          <b data-de="Mit Erfahrung gestaltet" data-en="Shaped by experience">Mit Erfahrung gestaltet</b>
-          <span data-de="Für maximale Präzision" data-en="For maximum precision">Für maximale Präzision</span>
+          <b data-de="Mit Erfahrung gestaltet" data-en="Shaped by experience" data-fr="Façonné par l'expérience" data-nl="Gevormd door ervaring" data-it="Plasmato dall'esperienza" data-tr="Deneyimle Şekillendi">Mit Erfahrung gestaltet</b>
+          <span data-de="Für maximale Präzision" data-en="For maximum precision" data-fr="Pour une précision maximale" data-nl="Voor maximale precisie" data-it="Per la massima precisione" data-tr="Maksimum Hassasiyet İçin">Für maximale Präzision</span>
         </div>
       </div>
       <div class="ba-feature">
         <div class="ba-feature-ico"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBaDensity" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gBaDensity)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="20" y="34" width="5" height="14" rx="2.5" fill="#fff"/><rect x="29.5" y="24" width="5" height="24" rx="2.5" fill="#fff"/><rect x="39" y="29" width="5" height="19" rx="2.5" fill="#fff"/></svg></div>
         <div>
-          <b data-de="Natürliche Dichte" data-en="Natural density">Natürliche Dichte</b>
-          <span data-de="Für ein echtes Ergebnis" data-en="For a genuine result">Für ein echtes Ergebnis</span>
+          <b data-de="Natürliche Dichte" data-en="Natural density" data-fr="Densité naturelle" data-nl="Natuurlijke dichtheid" data-it="Densità naturale" data-tr="Doğal Yoğunluk">Natürliche Dichte</b>
+          <span data-de="Für ein echtes Ergebnis" data-en="For a genuine result" data-fr="Pour un résultat authentique" data-nl="Voor een echt resultaat" data-it="Per un risultato autentico" data-tr="Gerçek Bir Sonuç İçin">Für ein echtes Ergebnis</span>
         </div>
       </div>
       <div class="ba-feature">
         <div class="ba-feature-ico"><svg class="gi gi-ti" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gBaShield" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gBaShield)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><path d="M32 16l14 6v10c0 11-6 18-14 22-8-4-14-11-14-22V22z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M25 32l5 5 10-10" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div>
-          <b data-de="Individuell geplant" data-en="Individually planned">Individuell geplant</b>
-          <span data-de="Für langfristige Erfolge" data-en="For long-term success">Für langfristige Erfolge</span>
+          <b data-de="Individuell geplant" data-en="Individually planned" data-fr="Planifié individuellement" data-nl="Individueel gepland" data-it="Pianificato individualmente" data-tr="Kişiye Özel Planlandı">Individuell geplant</b>
+          <span data-de="Für langfristige Erfolge" data-en="For long-term success" data-fr="Pour un succès à long terme" data-nl="Voor succes op lange termijn" data-it="Per un successo a lungo termine" data-tr="Uzun Vadeli Başarı İçin">Für langfristige Erfolge</span>
         </div>
       </div>
     </div>
 
     <div class="ba-cta-wrap">
-      <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Jetzt kostenlose Beratung sichern" data-en="Get Quote">Jetzt kostenlose Beratung sichern</a>
+      <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Jetzt kostenlose Beratung sichern" data-en="Get Quote" data-fr="Obtenir un devis" data-nl="Offerte aanvragen" data-it="Richiedi un preventivo" data-tr="Teklif Al">Jetzt kostenlose Beratung sichern</a>
     </div>
   </div>
 </section>
@@ -1535,7 +1535,7 @@ include __DIR__ . '/includes/site-header.php';
 <section class="network-section" id="network">
   <div class="network-inner">
     <div class="network-head">
-      <span class="network-kicker" data-de="Unser Netzwerk" data-en="Our network">Unser Netzwerk</span>
+      <span class="network-kicker" data-de="Unser Netzwerk" data-en="Our network" data-fr="Notre réseau" data-nl="Ons netwerk" data-it="La nostra rete" data-tr="Ağımız">Unser Netzwerk</span>
       <h2 data-ckey="network.heading" data-de="Ein Anbieter, verbunden über vier Länder" data-en="One provider, connected across four countries">Ein Anbieter, verbunden über vier Länder</h2>
       <p data-ckey="network.sub" data-de="Österreich, Deutschland und die Schweiz, verbunden mit unserer Hauptklinik in der Türkei: ein durchgehendes Betreuungsnetzwerk über vier Länder hinweg." data-en="Austria, Germany and Switzerland, connecting to our main clinic in Turkey: one continuous care network spanning four countries.">Österreich, Deutschland und die Schweiz, verbunden mit unserer Hauptklinik in der Türkei: ein durchgehendes Betreuungsnetzwerk über vier Länder hinweg.</p>
     </div>
@@ -1548,8 +1548,8 @@ include __DIR__ . '/includes/site-header.php';
             <button type="button" class="net-pin" aria-label="Germany"></button>
             <div class="net-label lbl-above">
               <span class="city flag" role="img" aria-label="Deutschland"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="3" height="0.667" y="0" fill="#1a1a1a"/><rect width="3" height="0.667" y="0.667" fill="#dd0000"/><rect width="3" height="0.666" y="1.334" fill="#ffce00"/></svg></span>
-              <span class="role" data-de="Nachsorge" data-en="Aftercare">Nachsorge</span>
-              <span class="desc" data-de="München, Teil unseres Nachsorge-Netzwerks." data-en="Munich, part of our aftercare network.">München, Teil unseres Nachsorge-Netzwerks.</span>
+              <span class="role" data-de="Nachsorge" data-en="Aftercare" data-fr="Suivi" data-nl="Nazorg" data-it="Assistenza post-operatoria" data-tr="Bakım">Nachsorge</span>
+              <span class="desc" data-de="München, Teil unseres Nachsorge-Netzwerks." data-en="Munich, part of our aftercare network." data-fr="Munich, membre de notre réseau de suivi." data-nl="München, onderdeel van ons nazorgnetwerk." data-it="Monaco, parte della nostra rete di assistenza post-operatoria." data-tr="Münih, bakım ağımızın bir parçasıdır.">München, Teil unseres Nachsorge-Netzwerks.</span>
             </div>
           </div>
 
@@ -1557,8 +1557,8 @@ include __DIR__ . '/includes/site-header.php';
             <button type="button" class="net-pin" aria-label="Switzerland"></button>
             <div class="net-label lbl-above">
               <span class="city flag" role="img" aria-label="Schweiz"><svg viewBox="0 0 2 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="2" height="2" fill="#e2101c"/><rect x="0.86" y="0.4" width="0.28" height="1.2" fill="#fff"/><rect x="0.4" y="0.86" width="1.2" height="0.28" fill="#fff"/></svg></span>
-              <span class="role" data-de="Nachsorge" data-en="Aftercare">Nachsorge</span>
-              <span class="desc" data-de="Zürich, Teil unseres Nachsorge-Netzwerks." data-en="Zurich, part of our aftercare network.">Zürich, Teil unseres Nachsorge-Netzwerks.</span>
+              <span class="role" data-de="Nachsorge" data-en="Aftercare" data-fr="Suivi" data-nl="Nazorg" data-it="Assistenza post-operatoria" data-tr="Bakım">Nachsorge</span>
+              <span class="desc" data-de="Zürich, Teil unseres Nachsorge-Netzwerks." data-en="Zurich, part of our aftercare network." data-fr="Zurich, membre de notre réseau de suivi." data-nl="Zürich, onderdeel van ons nazorgnetwerk." data-it="Zurigo, parte della nostra rete di assistenza post-operatoria." data-tr="Zürih, bakım ağımızın bir parçasıdır.">Zürich, Teil unseres Nachsorge-Netzwerks.</span>
             </div>
           </div>
 
@@ -1566,8 +1566,8 @@ include __DIR__ . '/includes/site-header.php';
             <button type="button" class="net-pin" aria-label="Austria"></button>
             <div class="net-label lbl-above">
               <span class="city flag" role="img" aria-label="Österreich"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#ed2939"/><rect y="0.667" width="3" height="0.666" fill="#fff"/></svg></span>
-              <span class="role" data-de="Beratung &amp; Zentrale" data-en="Consultation &amp; HQ">Beratung &amp; Zentrale</span>
-              <span class="desc" data-de="Linz, Ihr erstes Gespräch findet hier statt, persönlich vor Ort." data-en="Linz, your first conversation happens here, in person.">Linz, Ihr erstes Gespräch findet hier statt, persönlich vor Ort.</span>
+              <span class="role" data-de="Beratung &amp; Zentrale" data-en="Consultation &amp; HQ" data-fr="Consultation et siège" data-nl="Consult & hoofdkantoor" data-it="Consulenza e sede centrale" data-tr="Danışma ve Merkez">Beratung &amp; Zentrale</span>
+              <span class="desc" data-de="Linz, Ihr erstes Gespräch findet hier statt, persönlich vor Ort." data-en="Linz, your first conversation happens here, in person." data-fr="Linz, votre première conversation a lieu ici, en personne." data-nl="Linz, uw eerste gesprek vindt hier persoonlijk plaats." data-it="Linz, la tua prima conversazione avviene qui, di persona." data-tr="Linz, ilk görüşmeniz burada, yüz yüze gerçekleşir.">Linz, Ihr erstes Gespräch findet hier statt, persönlich vor Ort.</span>
             </div>
           </div>
 
@@ -1575,8 +1575,8 @@ include __DIR__ . '/includes/site-header.php';
             <button type="button" class="net-pin" aria-label="Turkey"></button>
             <div class="net-label lbl-above">
               <span class="city flag" role="img" aria-label="Türkei"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#e30a17"/><circle cx="1.15" cy="1" r="0.5" fill="#fff"/><circle cx="1.3" cy="1" r="0.4" fill="#e30a17"/><polygon points="1.62,0.78 1.68,0.94 1.85,0.94 1.71,1.05 1.77,1.22 1.62,1.11 1.47,1.22 1.53,1.05 1.39,0.94 1.56,0.94" fill="#fff"/></svg></span>
-              <span class="role" data-de="Hauptklinik" data-en="Main clinic">Hauptklinik</span>
-              <span class="desc" data-de="Istanbul, Ihre Behandlung findet hier statt, mit 24/7-Betreuung." data-en="Istanbul, your treatment takes place here, with 24/7 care.">Istanbul, Ihre Behandlung findet hier statt, mit 24/7-Betreuung.</span>
+              <span class="role" data-de="Hauptklinik" data-en="Main clinic" data-fr="Clinique principale" data-nl="Hoofdkliniek" data-it="Clinica principale" data-tr="Ana Klinik">Hauptklinik</span>
+              <span class="desc" data-de="Istanbul, Ihre Behandlung findet hier statt, mit 24/7-Betreuung." data-en="Istanbul, your treatment takes place here, with 24/7 care." data-fr="Istanbul, votre traitement a lieu ici, avec des soins 24h/24 et 7j/7." data-nl="Istanboel, uw behandeling vindt hier plaats, met 24/7 zorg." data-it="Istanbul, il tuo trattamento avviene qui, con assistenza 24 ore su 24." data-tr="İstanbul, tedaviniz burada, 7/24 bakımla gerçekleştirilir.">Istanbul, Ihre Behandlung findet hier statt, mit 24/7-Betreuung.</span>
             </div>
           </div>
         </div>
@@ -1584,7 +1584,7 @@ include __DIR__ . '/includes/site-header.php';
     </div>
 
     <div class="network-legend">
-      <div class="lg-item"><span class="lg-dot"></span><span data-de="Live verbundenes Betreuungsnetzwerk" data-en="Live connected care network">Live verbundenes Betreuungsnetzwerk</span></div>
+      <div class="lg-item"><span class="lg-dot"></span><span data-de="Live verbundenes Betreuungsnetzwerk" data-en="Live connected care network" data-fr="Réseau de soins connecté en direct" data-nl="Live verbonden zorgnetwerk" data-it="Rete di assistenza connessa in tempo reale" data-tr="Canlı Bağlantılı Bakım Ağı">Live verbundenes Betreuungsnetzwerk</span></div>
     </div>
   </div>
 </section>
@@ -1595,10 +1595,10 @@ include __DIR__ . '/includes/site-header.php';
     <div class="faq-head">
       <svg class="faq-head-icon gi" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gChatQ2" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="18" fill="url(#gChatQ2)"/><ellipse cx="22" cy="16" rx="20" ry="12" fill="#fff" opacity="0.22"/><rect x="14" y="16" width="36" height="24" rx="8" fill="#fff" opacity="0.95"/><path d="M22 40l0 8 10-8z" fill="#fff" opacity="0.95"/><text x="32" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#2563eb" text-anchor="middle">?</text></svg>
       <div>
-        <div class="faq-kicker" data-de="Fragen &amp; Antworten" data-en="Questions &amp; answers">Fragen &amp; Antworten</div>
+        <div class="faq-kicker" data-de="Fragen &amp; Antworten" data-en="Questions &amp; answers" data-fr="Questions et réponses" data-nl="Vragen & antwoorden" data-it="Domande e risposte" data-tr="Sorular ve Cevaplar">Fragen &amp; Antworten</div>
         <h2 data-ckey="faq.heading" data-de="Häufig gestellte Fragen" data-en="Frequently asked questions">Häufig gestellte Fragen</h2>
-        <p data-de="Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet." data-en="The questions that most often hold prospective patients back from booking a consultation, answered honestly.">Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet.</p>
-        <a href="service-hair-transplant.php" style="display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline;" data-de="Mehr über die Haartransplantation erfahren →" data-en="Learn more about hair transplantation →">Mehr über die Haartransplantation erfahren →</a>
+        <p data-de="Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet." data-en="The questions that most often hold prospective patients back from booking a consultation, answered honestly." data-fr="Les questions qui empêchent le plus souvent les futurs patients de réserver une consultation, avec des réponses honnêtes." data-nl="De vragen die potentiële patiënten er het vaakst van weerhouden een consult te boeken, eerlijk beantwoord." data-it="Le domande che più spesso trattengono i potenziali pazienti dal prenotare una consulenza, con risposte oneste." data-tr="Potansiyel hastaları bir danışma rezervasyonu yapmaktan en çok alıkoyan sorular, dürüstçe yanıtlanmıştır.">Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet.</p>
+        <a href="service-hair-transplant.php" style="display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline;" data-de="Mehr über die Haartransplantation erfahren →" data-en="Learn more about hair transplantation →" data-fr="En savoir plus sur la greffe de cheveux →" data-nl="Meer weten over haartransplantatie →" data-it="Scopri di più sul trapianto di capelli →" data-tr="Saç ekimi hakkında daha fazla bilgi edinin →">Mehr über die Haartransplantation erfahren →</a>
       </div>
     </div>
 
@@ -1608,32 +1608,32 @@ include __DIR__ . '/includes/site-header.php';
         <div class="hp-faq-a"><p data-cfield="answer" data-de="Der Eingriff erfolgt unter örtlicher Betäubung, die Kopfhaut ist während der Operation vollständig taub. Die meisten Patienten spüren nur leichten Druck, nicht Schmerz. Nachbeschwerden sind meist mild und mit frei verkäuflichen Schmerzmitteln gut zu behandeln." data-en="The procedure is performed under local anaesthesia, so the scalp is fully numb during the operation. Most patients feel only mild pressure, not pain. Post-operative discomfort is usually mild and manageable with standard over-the-counter pain relief.">Der Eingriff erfolgt unter örtlicher Betäubung, die Kopfhaut ist während der Operation vollständig taub. Die meisten Patienten spüren nur leichten Druck, nicht Schmerz. Nachbeschwerden sind meist mild und mit frei verkäuflichen Schmerzmitteln gut zu behandeln.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Wird man sehen, dass ich eine Transplantation hatte?" data-en="Will anyone be able to tell I've had a transplant?">Wird man sehen, dass ich eine Transplantation hatte?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden." data-en="In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair.">In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Wird man sehen, dass ich eine Transplantation hatte?" data-en="Will anyone be able to tell I've had a transplant?" data-fr="Est-ce que cela se verra que j'ai eu une greffe ?" data-nl="Zal iemand kunnen zien dat ik een transplantatie heb gehad?" data-it="Si vedrà che ho fatto un trapianto?" data-tr="Saç ekimi yaptırdığım belli olur mu?">Wird man sehen, dass ich eine Transplantation hatte?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden." data-en="In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair." data-fr="Durant les 1 à 2 premières semaines, des croûtes visibles et des rougeurs peuvent apparaître. Ensuite, la cicatrisation devient largement invisible. Entre le 4e et le 6e mois, les nouveaux cheveux se fondent naturellement et, avec un chirurgien expérimenté, deviennent indiscernables des cheveux naturels." data-nl="In de eerste 1 tot 2 weken kunnen zichtbare korstjes en roodheid optreden. Daarna is de genezing grotendeels onzichtbaar. Vanaf maand 4 tot 6 vermengt het nieuwe haar zich natuurlijk en is het, bij een ervaren chirurg, niet te onderscheiden van natuurlijk haar." data-it="Nelle prime 1-2 settimane possono essere visibili croste e arrossamenti. Successivamente, la guarigione diventa in gran parte invisibile. Dal 4° al 6° mese, i nuovi capelli si integrano in modo naturale e, con un chirurgo esperto, risultano indistinguibili dai capelli naturali." data-tr="İlk 1-2 hafta içinde görünür kabuklanma ve kızarıklık olabilir. Bundan sonra iyileşme büyük ölçüde görünmez hale gelir. 4. ile 6. aylar arasında yeni saçlar doğal bir şekilde kaynaşır ve deneyimli bir cerrahla doğal saçtan ayırt edilemez hale gelir.">In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Wie viele Grafts brauche ich?" data-en="How many grafts do I need?">Wie viele Grafts brauche ich?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung." data-en="This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate.">Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Wie viele Grafts brauche ich?" data-en="How many grafts do I need?" data-fr="De combien de greffons ai-je besoin ?" data-nl="Hoeveel grafts heb ik nodig?" data-it="Di quanti innesti ho bisogno?" data-tr="Kaç greft ihtiyacım var?">Wie viele Grafts brauche ich?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung." data-en="This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate." data-fr="Cela dépend entièrement du degré de chute de cheveux et de la densité souhaitée. Une séance typique va de 1 500 à 4 000 greffons. Le stade II à III nécessite généralement 1 500 à 2 000 ; le stade V à VI souvent 3 000 à 4 500. Une consultation gratuite avec analyse du cuir chevelu permet une estimation précise." data-nl="Dit hangt volledig af van de mate van haaruitval en de gewenste dichtheid. Een gemiddelde sessie omvat 1.500 tot 4.000 grafts. Graad II tot III heeft meestal 1.500 tot 2.000 nodig; graad V tot VI vaak 3.000 tot 4.500. Een gratis consult met hoofdhuidanalyse geeft een nauwkeurige schatting." data-it="Dipende interamente dal grado di caduta dei capelli e dalla densità desiderata. Una seduta tipica va da 1.500 a 4.000 innesti. Il grado II-III richiede solitamente 1.500-2.000 innesti; il grado V-VI spesso 3.000-4.500. Un consulto gratuito con analisi del cuoio capelluto fornisce una stima precisa." data-tr="Bu tamamen saç dökülmesinin derecesine ve istenen yoğunluğa bağlıdır. Tipik bir seans 1.500 ile 4.000 greft arasında değişir. Derece II-III genellikle 1.500-2.000 greft gerektirir; derece V-VI ise sıklıkla 3.000-4.500 greft gerektirir. Saç derisi analizi içeren ücretsiz bir danışma, doğru bir tahmin sağlar.">Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Ist das Ergebnis dauerhaft?" data-en="Is the result permanent?">Ist das Ergebnis dauerhaft?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar." data-en="Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair.">Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Ist das Ergebnis dauerhaft?" data-en="Is the result permanent?" data-fr="Le résultat est-il permanent ?" data-nl="Is het resultaat blijvend?" data-it="Il risultato è permanente?" data-tr="Sonuç kalıcı mı?">Ist das Ergebnis dauerhaft?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar." data-en="Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair." data-fr="Les cheveux transplantés proviennent de la zone donneuse résistante à la DHT et continuent de pousser à vie. Cependant, les cheveux non transplantés existants peuvent continuer à s'affiner. Des médicaments comme le finastéride ou le minoxidil après l'intervention aident à protéger les cheveux naturels restants." data-nl="Getransplanteerd haar komt uit het DHT-resistente donorgebied en blijft levenslang doorgroeien. Bestaand, niet-getransplanteerd haar kan echter blijven uitdunnen. Medicatie zoals finasteride of minoxidil na de ingreep helpt het resterende natuurlijke haar te beschermen." data-it="I capelli trapiantati provengono dall'area donatrice resistente al DHT e continuano a crescere per tutta la vita. Tuttavia, i capelli esistenti non trapiantati potrebbero continuare a diradarsi. Farmaci come finasteride o minoxidil dopo l'intervento aiutano a proteggere i capelli naturali rimanenti." data-tr="Nakledilen saçlar DHT'ye dirençli donör bölgeden alınır ve ömür boyu büyümeye devam eder. Ancak nakledilmemiş mevcut saçlar seyrelmeye devam edebilir. İşlem sonrası finasterid veya minoksidil gibi ilaçlar, kalan doğal saçların korunmasına yardımcı olur.">Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Was passiert, wenn das Ergebnis nicht ausreicht?" data-en="What happens if I don't get enough results?">Was passiert, wenn das Ergebnis nicht ausreicht?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an." data-en="Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome.">Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Was passiert, wenn das Ergebnis nicht ausreicht?" data-en="What happens if I don't get enough results?" data-fr="Que se passe-t-il si le résultat n'est pas suffisant ?" data-nl="Wat gebeurt er als het resultaat onvoldoende is?" data-it="Cosa succede se il risultato non è sufficiente?" data-tr="Yeterli sonuç alamazsam ne olur?">Was passiert, wenn das Ergebnis nicht ausreicht?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an." data-en="Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome." data-fr="Les taux de survie des greffons dans les cliniques réputées sont généralement de 90 à 95 %. Si le résultat est inférieur aux attentes après 12 à 18 mois, une séance de suivi peut être envisagée. Apex Beauty propose une consultation de suivi à 12 mois pour évaluer le résultat." data-nl="De overlevingspercentages van grafts bij gerenommeerde klinieken liggen doorgaans tussen 90 en 95%. Als het resultaat na 12 tot 18 maanden onder de verwachtingen blijft, kan een vervolgsessie worden besproken. Apex Beauty biedt een vervolgconsult na 12 maanden om het resultaat te beoordelen." data-it="I tassi di sopravvivenza degli innesti nelle cliniche affidabili sono generalmente del 90-95%. Se il risultato è inferiore alle aspettative dopo 12-18 mesi, si può discutere di una seduta di follow-up. Apex Beauty offre una consulenza di controllo a 12 mesi per valutare l'esito." data-tr="Saygın kliniklerde greft sağkalım oranları genellikle %90 ila %95 arasındadır. Sonuç 12-18 ay sonra beklentilerin altındaysa, bir takip seansı değerlendirilebilir. Apex Beauty, sonucu değerlendirmek için 12 aylık bir takip danışmanlığı sunar.">Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Können Frauen eine Haartransplantation bekommen?" data-en="Can women have hair transplants?">Können Frauen eine Haartransplantation bekommen?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell." data-en="Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential.">Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Können Frauen eine Haartransplantation bekommen?" data-en="Can women have hair transplants?" data-fr="Les femmes peuvent-elles avoir une greffe de cheveux ?" data-nl="Kunnen vrouwen een haartransplantatie ondergaan?" data-it="Le donne possono sottoporsi a trapianto di capelli?" data-tr="Kadınlar saç ekimi yaptırabilir mi?">Können Frauen eine Haartransplantation bekommen?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell." data-en="Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential." data-fr="Oui. Les femmes atteintes d'alopécie androgénétique peuvent être de bonnes candidates. Cependant, les femmes présentant une chute de cheveux diffuse sur l'ensemble du cuir chevelu, y compris la zone donneuse, peuvent ne pas disposer d'assez de cheveux donneurs stables. Une évaluation par un spécialiste est essentielle." data-nl="Ja. Vrouwen met androgenetische alopecia kunnen geschikte kandidaten zijn. Vrouwen met diffuse haaruitval over de hele hoofdhuid, inclusief het donorgebied, hebben echter mogelijk onvoldoende stabiel donorhaar. Een beoordeling door een specialist is essentieel." data-it="Sì. Le donne con alopecia androgenetica possono essere candidate idonee. Tuttavia, le donne con caduta diffusa dei capelli su tutto il cuoio capelluto, inclusa l'area donatrice, potrebbero non avere capelli donatori stabili a sufficienza. Una valutazione specialistica è essenziale." data-tr="Evet. Androgenetik alopesisi olan kadınlar uygun aday olabilir. Ancak donör bölge dahil tüm saç derisinde yaygın saç dökülmesi yaşayan kadınlarda yeterli kararlı donör saç bulunmayabilir. Uzman değerlendirmesi şarttır.">Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Wie läuft die Anreise nach Istanbul ab?" data-en="How do I travel to Istanbul for the procedure?">Wie läuft die Anreise nach Istanbul ab?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden." data-en="Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call.">Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Wie läuft die Anreise nach Istanbul ab?" data-en="How do I travel to Istanbul for the procedure?" data-fr="Comment se déroule le voyage à Istanbul pour l'intervention ?" data-nl="Hoe verloopt de reis naar Istanboel voor de ingreep?" data-it="Come funziona il viaggio a Istanbul per l'intervento?" data-tr="İşlem için İstanbul'a seyahat nasıl gerçekleşir?">Wie läuft die Anreise nach Istanbul ab?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden." data-en="Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call." data-fr="Apex Beauty coordonne toute la logistique pour les patients venant d'Autriche, d'Allemagne et de Suisse. L'intervention dure une journée. La plupart des patients arrivent la veille, se reposent une nuit et rentrent chez eux dans les 48 heures. Les rendez-vous de suivi peuvent se faire à distance par appel vidéo." data-nl="Apex Beauty regelt alle logistiek voor patiënten uit Oostenrijk, Duitsland en Zwitserland. De ingreep duurt één dag. De meeste patiënten vliegen de dag ervoor in, rusten één nacht uit en vliegen binnen 48 uur terug. Vervolgafspraken kunnen op afstand via videogesprek plaatsvinden." data-it="Apex Beauty coordina tutta la logistica per i pazienti provenienti da Austria, Germania e Svizzera. L'intervento dura un giorno. La maggior parte dei pazienti arriva il giorno prima, riposa una notte e rientra entro 48 ore. Gli appuntamenti di follow-up possono svolgersi da remoto tramite videochiamata." data-tr="Apex Beauty, Avusturya, Almanya ve İsviçre'den gelen hastalar için tüm lojistiği koordine eder. İşlem bir gün sürer. Çoğu hasta bir gün önce uçarak gelir, bir gece dinlenir ve 48 saat içinde eve döner. Takip randevuları görüntülü görüşme yoluyla uzaktan yapılabilir.">Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden.</p></div>
       </div>
       <div class="hp-faq-item">
-        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Was unterscheidet Apex direkt von einem Vermittler?" data-en="What's the difference between Apex direct and a broker?">Was unterscheidet Apex direkt von einem Vermittler?</span><span class="plus">+</span></div>
-        <div class="hp-faq-a"><p data-de="Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung." data-en="A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability.">Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung.</p></div>
+        <div class="hp-faq-q" onclick="toggleFaq(this)"><span data-de="Was unterscheidet Apex direkt von einem Vermittler?" data-en="What's the difference between Apex direct and a broker?" data-fr="Quelle est la différence entre Apex en direct et un intermédiaire ?" data-nl="Wat is het verschil tussen Apex rechtstreeks en een bemiddelaar?" data-it="Qual è la differenza tra Apex diretto e un intermediario?" data-tr="Apex direkt ile bir aracı kurum arasındaki fark nedir?">Was unterscheidet Apex direkt von einem Vermittler?</span><span class="plus">+</span></div>
+        <div class="hp-faq-a"><p data-de="Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung." data-en="A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability." data-fr="Un intermédiaire coordonne entre un patient et une clinique, mais n'est pas médicalement impliqué. Vous ne savez souvent pas à l'avance quelle équipe vous traitera. Apex Beauty est une clinique directe : l'équipe que vous consultez est celle qui vous traite, dans notre propre établissement. Cela garantit une qualité constante et une responsabilité directe." data-nl="Een bemiddelaar coördineert tussen een patiënt en een kliniek, maar is medisch niet betrokken. U weet vaak niet vooraf welk team u zal behandelen. Apex Beauty is een directe kliniek: het team waarmee u een consult heeft, is ook het team dat u behandelt, in onze eigen faciliteit. Dat betekent consistente kwaliteit en directe verantwoordelijkheid." data-it="Un intermediario coordina tra il paziente e una clinica, ma non è coinvolto dal punto di vista medico. Spesso non si sa in anticipo quale team ti curerà. Apex Beauty è una clinica diretta: il team con cui ti consulti è lo stesso che ti tratta, nella nostra struttura. Questo garantisce qualità costante e responsabilità diretta." data-tr="Bir aracı, hasta ile klinik arasında koordinasyon sağlar ancak tıbbi olarak sürece dahil değildir. Sizi hangi ekibin tedavi edeceğini önceden bilemeyebilirsiniz. Apex Beauty ise direkt bir klinik: danıştığınız ekip, kendi tesisimizde sizi tedavi eden ekiptir. Bu da tutarlı kalite ve doğrudan sorumluluk anlamına gelir.">Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung.</p></div>
       </div>
     </div>
   </div>
@@ -1655,33 +1655,33 @@ include __DIR__ . '/includes/site-header.php';
           <img src="assets/lotus-transparent.png" alt="Apex Beauty">
           <span>Apex Beauty</span>
         </div>
-        <h2 id="consultTitle" data-de="Kostenlose Beratung" data-en="Free Consultation">Kostenlose Beratung</h2>
-        <p data-de="Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden." data-en="Fill in the form and we'll get back to you within 24 hours.">Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.</p>
+        <h2 id="consultTitle" data-de="Kostenlose Beratung" data-en="Free Consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</h2>
+        <p data-de="Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden." data-en="Fill in the form and we'll get back to you within 24 hours." data-fr="Remplissez le formulaire, nous vous répondrons sous 24 heures." data-nl="Vul het formulier in, we nemen binnen 24 uur contact met u op." data-it="Compila il modulo, ti risponderemo entro 24 ore." data-tr="Formu doldurun, 24 saat içinde size dönüş yapalım.">Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.</p>
       </div>
       <div class="consult-steps" id="consultSteps">
-        <div class="cstep active" data-step="1"><span class="dot">1</span><span data-de="Info" data-en="Info">Info</span></div>
+        <div class="cstep active" data-step="1"><span class="dot">1</span><span data-de="Info" data-en="Info" data-fr="Infos" data-nl="Info" data-it="Info" data-tr="Bilgi">Info</span></div>
         <div class="cstep-line"></div>
-        <div class="cstep" data-step="2"><span class="dot">2</span><span data-de="Bedarf" data-en="Needs">Bedarf</span></div>
+        <div class="cstep" data-step="2"><span class="dot">2</span><span data-de="Bedarf" data-en="Needs" data-fr="Besoins" data-nl="Behoefte" data-it="Esigenze" data-tr="İhtiyaçlar">Bedarf</span></div>
         <div class="cstep-line"></div>
-        <div class="cstep" data-step="3"><span class="dot">3</span><span data-de="Fotos" data-en="Photos">Fotos</span></div>
+        <div class="cstep" data-step="3"><span class="dot">3</span><span data-de="Fotos" data-en="Photos" data-fr="Photos" data-nl="Foto's" data-it="Foto" data-tr="Fotoğraflar">Fotos</span></div>
       </div>
     </div>
     <div class="consult-body">
 
     <!-- STEP 1: Info -->
     <div class="consult-pane active" id="cpane1">
-      <div class="pane-title" data-de="Holen Sie sich Ihre kostenlose Haaranalyse" data-en="Get Your Free Hair Analysis">Holen Sie sich Ihre kostenlose Haaranalyse</div>
-      <div class="pane-sub" data-de="Unser Expertenteam meldet sich innerhalb von 24 Stunden" data-en="Our expert team will contact you within 24 hours">Unser Expertenteam meldet sich innerhalb von 24 Stunden</div>
+      <div class="pane-title" data-de="Holen Sie sich Ihre kostenlose Haaranalyse" data-en="Get Your Free Hair Analysis" data-fr="Obtenez votre analyse capillaire gratuite" data-nl="Krijg uw gratis haaranalyse" data-it="Ottieni la tua analisi gratuita dei capelli" data-tr="Ücretsiz Saç Analizinizi Alın">Holen Sie sich Ihre kostenlose Haaranalyse</div>
+      <div class="pane-sub" data-de="Unser Expertenteam meldet sich innerhalb von 24 Stunden" data-en="Our expert team will contact you within 24 hours" data-fr="Notre équipe d'experts vous contactera sous 24 heures" data-nl="Ons expertteam neemt binnen 24 uur contact met u op" data-it="Il nostro team di esperti ti contatterà entro 24 ore" data-tr="Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir">Unser Expertenteam meldet sich innerhalb von 24 Stunden</div>
       <div class="cfield">
-        <label data-de="Vollständiger Name *" data-en="Full Name *">Vollständiger Name *</label>
+        <label data-de="Vollständiger Name *" data-en="Full Name *" data-fr="Nom complet *" data-nl="Volledige naam *" data-it="Nome completo *" data-tr="Ad Soyad *">Vollständiger Name *</label>
         <input type="text" id="cfName" data-de-ph="Ihr vollständiger Name" data-en-ph="Your full name" placeholder="Ihr vollständiger Name" oninput="validateStep1()">
       </div>
       <div class="cfield">
-        <label data-de="E-Mail *" data-en="Email *">E-Mail *</label>
+        <label data-de="E-Mail *" data-en="Email *" data-fr="E-mail *" data-nl="E-mail *" data-it="E-mail *" data-tr="E-posta *">E-Mail *</label>
         <input type="email" id="cfEmail" placeholder="email@example.com" oninput="validateStep1()">
       </div>
       <div class="cfield">
-        <label data-de="Land *" data-en="Country *">Land *</label>
+        <label data-de="Land *" data-en="Country *" data-fr="Pays *" data-nl="Land *" data-it="Paese *" data-tr="Ülke *">Land *</label>
         <select id="cfCountry" onchange="updatePrefix(); validateStep1()">
           <option value="AT" data-prefix="+43">🇦🇹 Österreich</option>
           <option value="DE" data-prefix="+49">🇩🇪 Deutschland</option>
@@ -1691,125 +1691,125 @@ include __DIR__ . '/includes/site-header.php';
         </select>
       </div>
       <div class="cfield">
-        <label data-de="Telefon *" data-en="Phone *">Telefon *</label>
+        <label data-de="Telefon *" data-en="Phone *" data-fr="Téléphone *" data-nl="Telefoon *" data-it="Telefono *" data-tr="Telefon *">Telefon *</label>
         <div class="phone-row">
           <div class="prefix" id="cfPrefix">+43</div>
           <input type="tel" id="cfPhone" placeholder="660 123 45 67" oninput="validateStep1()">
         </div>
       </div>
       <div class="consult-nav">
-        <button type="button" class="cnext" id="cnext1" disabled onclick="gotoStep(2)" data-de="Weiter" data-en="Continue">Weiter</button>
+        <button type="button" class="cnext" id="cnext1" disabled onclick="gotoStep(2)" data-de="Weiter" data-en="Continue" data-fr="Continuer" data-nl="Doorgaan" data-it="Continua" data-tr="Devam Et">Weiter</button>
       </div>
     </div>
 
     <!-- STEP 2: Needs -->
     <div class="consult-pane" id="cpane2">
       <div class="cfield">
-        <label data-de="Ihr Geschlecht *" data-en="Your Gender *">Ihr Geschlecht *</label>
+        <label data-de="Ihr Geschlecht *" data-en="Your Gender *" data-fr="Votre sexe *" data-nl="Uw geslacht *" data-it="Il tuo genere *" data-tr="Cinsiyetiniz *">Ihr Geschlecht *</label>
         <div class="opt-grid cols-2" id="genderRow">
           <div class="opt-card radio centered" data-value="male" onclick="pickSingle(this,'genderRow'); validateStep2()">
-            <span data-de="Männlich" data-en="Male">Männlich</span>
+            <span data-de="Männlich" data-en="Male" data-fr="Homme" data-nl="Man" data-it="Uomo" data-tr="Erkek">Männlich</span>
           </div>
           <div class="opt-card radio centered" data-value="female" onclick="pickSingle(this,'genderRow'); validateStep2()">
-            <span data-de="Weiblich" data-en="Female">Weiblich</span>
+            <span data-de="Weiblich" data-en="Female" data-fr="Femme" data-nl="Vrouw" data-it="Donna" data-tr="Kadın">Weiblich</span>
           </div>
         </div>
       </div>
       <div class="cfield">
-        <label data-de="Verfahren, die Sie interessieren *" data-en="Procedures You're Interested In *">Verfahren, die Sie interessieren *</label>
+        <label data-de="Verfahren, die Sie interessieren *" data-en="Procedures You're Interested In *" data-fr="Interventions qui vous intéressent *" data-nl="Ingrepen waarin u geïnteresseerd bent *" data-it="Procedure di tuo interesse *" data-tr="İlgilendiğiniz İşlemler *">Verfahren, die Sie interessieren *</label>
         <div class="opt-grid cols-1" id="procRow">
           <div class="opt-card" data-value="hair" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="Haartransplantation" data-en="Hair Transplant">Haartransplantation</span>
+            <span class="mark"></span><span data-de="Haartransplantation" data-en="Hair Transplant" data-fr="Greffe de cheveux" data-nl="Haartransplantatie" data-it="Trapianto di capelli" data-tr="Saç Ekimi">Haartransplantation</span>
           </div>
           <div class="opt-card" data-value="beard" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="Barttransplantation" data-en="Beard Transplant">Barttransplantation</span>
+            <span class="mark"></span><span data-de="Barttransplantation" data-en="Beard Transplant" data-fr="Greffe de barbe" data-nl="Baardtransplantatie" data-it="Trapianto di barba" data-tr="Sakal Ekimi">Barttransplantation</span>
           </div>
           <div class="opt-card" data-value="eyebrow" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="Augenbrauentransplantation" data-en="Eyebrow Transplant">Augenbrauentransplantation</span>
+            <span class="mark"></span><span data-de="Augenbrauentransplantation" data-en="Eyebrow Transplant" data-fr="Greffe de sourcils" data-nl="Wenkbrauwtransplantatie" data-it="Trapianto di sopracciglia" data-tr="Kaş Ekimi">Augenbrauentransplantation</span>
           </div>
         </div>
-        <div class="cgroup-note" data-de="Unterstützende Therapien" data-en="Supporting Therapies">Unterstützende Therapien</div>
+        <div class="cgroup-note" data-de="Unterstützende Therapien" data-en="Supporting Therapies" data-fr="Thérapies complémentaires" data-nl="Ondersteunende therapieën" data-it="Terapie di supporto" data-tr="Destekleyici Tedaviler">Unterstützende Therapien</div>
         <div class="opt-grid cols-2" id="therapyRow">
           <div class="opt-card" data-value="prp" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="PRP-Therapie" data-en="PRP Therapy">PRP-Therapie</span>
+            <span class="mark"></span><span data-de="PRP-Therapie" data-en="PRP Therapy" data-fr="Thérapie PRP" data-nl="PRP-therapie" data-it="Terapia PRP" data-tr="PRP Tedavisi">PRP-Therapie</span>
           </div>
           <div class="opt-card" data-value="stemcell" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="Stammzelltherapie" data-en="Stem Cell Therapy">Stammzelltherapie</span>
+            <span class="mark"></span><span data-de="Stammzelltherapie" data-en="Stem Cell Therapy" data-fr="Thérapie par cellules souches" data-nl="Stamceltherapie" data-it="Terapia con cellule staminali" data-tr="Kök Hücre Tedavisi">Stammzelltherapie</span>
           </div>
           <div class="opt-card" data-value="exosome" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="Exosom-Therapie" data-en="Exosome Therapy">Exosom-Therapie</span>
+            <span class="mark"></span><span data-de="Exosom-Therapie" data-en="Exosome Therapy" data-fr="Thérapie par exosomes" data-nl="Exosoomtherapie" data-it="Terapia con esosomi" data-tr="Ekzozom Tedavisi">Exosom-Therapie</span>
           </div>
           <div class="opt-card" data-value="hbot" onclick="toggleChip(this); validateStep2()">
-            <span class="mark"></span><span data-de="Hyperbarer Sauerstoff" data-en="Hyperbaric Oxygen">Hyperbarer Sauerstoff</span>
+            <span class="mark"></span><span data-de="Hyperbarer Sauerstoff" data-en="Hyperbaric Oxygen" data-fr="Oxygénothérapie hyperbare" data-nl="Hyperbare zuurstoftherapie" data-it="Ossigenoterapia iperbarica" data-tr="Hiperbarik Oksijen">Hyperbarer Sauerstoff</span>
           </div>
         </div>
       </div>
       <div class="cfield">
-        <label data-de="Wann planen Sie den Eingriff?" data-en="When Are You Planning the Procedure?">Wann planen Sie den Eingriff?</label>
+        <label data-de="Wann planen Sie den Eingriff?" data-en="When Are You Planning the Procedure?" data-fr="Quand prévoyez-vous l'intervention ?" data-nl="Wanneer plant u de ingreep?" data-it="Quando prevedi l'intervento?" data-tr="İşlemi Ne Zaman Planlıyorsunuz?">Wann planen Sie den Eingriff?</label>
         <div class="opt-grid cols-3" id="timingRow">
-          <div class="opt-card radio centered" data-value="this-month" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="Diesen Monat" data-en="This month">Diesen Monat</span></div>
-          <div class="opt-card radio centered" data-value="1-3" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 1–3 Monaten" data-en="In 1–3 months">In 1–3 Monaten</span></div>
-          <div class="opt-card radio centered" data-value="3-6" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 3–6 Monaten" data-en="In 3–6 months">In 3–6 Monaten</span></div>
-          <div class="opt-card radio centered" data-value="6plus" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 6+ Monaten" data-en="In 6+ months">In 6+ Monaten</span></div>
-          <div class="opt-card radio centered" data-value="research" onclick="pickSingle(this,'timingRow'); validateStep2()" style="grid-column: span 2;"><span data-de="Nur recherchieren" data-en="Just researching">Nur recherchieren</span></div>
+          <div class="opt-card radio centered" data-value="this-month" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="Diesen Monat" data-en="This month" data-fr="Ce mois-ci" data-nl="Deze maand" data-it="Questo mese" data-tr="Bu Ay">Diesen Monat</span></div>
+          <div class="opt-card radio centered" data-value="1-3" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 1–3 Monaten" data-en="In 1–3 months" data-fr="Dans 1 à 3 mois" data-nl="Over 1–3 maanden" data-it="Tra 1 e 3 mesi" data-tr="1-3 Ay İçinde">In 1–3 Monaten</span></div>
+          <div class="opt-card radio centered" data-value="3-6" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 3–6 Monaten" data-en="In 3–6 months" data-fr="Dans 3 à 6 mois" data-nl="Over 3–6 maanden" data-it="Tra 3 e 6 mesi" data-tr="3-6 Ay İçinde">In 3–6 Monaten</span></div>
+          <div class="opt-card radio centered" data-value="6plus" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-de="In 6+ Monaten" data-en="In 6+ months" data-fr="Dans 6+ mois" data-nl="Over 6+ maanden" data-it="Tra 6+ mesi" data-tr="6+ Ay İçinde">In 6+ Monaten</span></div>
+          <div class="opt-card radio centered" data-value="research" onclick="pickSingle(this,'timingRow'); validateStep2()" style="grid-column: span 2;"><span data-de="Nur recherchieren" data-en="Just researching" data-fr="Je me renseigne seulement" data-nl="Alleen aan het oriënteren" data-it="Sto solo informandomi" data-tr="Sadece Araştırıyorum">Nur recherchieren</span></div>
         </div>
       </div>
       <div class="cfield">
-        <label data-de="Zusätzliche Notizen (optional)" data-en="Additional Notes (Optional)">Zusätzliche Notizen (optional)</label>
+        <label data-de="Zusätzliche Notizen (optional)" data-en="Additional Notes (Optional)" data-fr="Remarques supplémentaires (facultatif)" data-nl="Aanvullende opmerkingen (optioneel)" data-it="Note aggiuntive (facoltativo)" data-tr="Ek Notlar (İsteğe Bağlı)">Zusätzliche Notizen (optional)</label>
         <textarea id="cfNotes" data-de-ph="Ihre Ziele oder Fragen..." data-en-ph="Your goals or questions..." placeholder="Ihre Ziele oder Fragen..."></textarea>
       </div>
       <div class="consult-nav">
-        <button type="button" class="cback" onclick="gotoStep(1)" data-de="Zurück" data-en="Back">Zurück</button>
-        <button type="button" class="cnext" id="cnext2" disabled onclick="gotoStep(3)" data-de="Weiter" data-en="Continue">Weiter</button>
+        <button type="button" class="cback" onclick="gotoStep(1)" data-de="Zurück" data-en="Back" data-fr="Retour" data-nl="Terug" data-it="Indietro" data-tr="Geri">Zurück</button>
+        <button type="button" class="cnext" id="cnext2" disabled onclick="gotoStep(3)" data-de="Weiter" data-en="Continue" data-fr="Continuer" data-nl="Doorgaan" data-it="Continua" data-tr="Devam Et">Weiter</button>
       </div>
     </div>
 
     <!-- STEP 3: Photos -->
     <div class="consult-pane" id="cpane3">
-      <div class="photo-note" data-de="📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall." data-en="📸 Photos are optional. Our experts will contact you either way.">📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.</div>
+      <div class="photo-note" data-de="📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall." data-en="📸 Photos are optional. Our experts will contact you either way." data-fr="📸 Les photos sont facultatives. Nos experts vous contacteront dans tous les cas." data-nl="📸 Foto's zijn optioneel. Onze experts nemen sowieso contact met u op." data-it="📸 Le foto sono facoltative. I nostri esperti ti contatteranno comunque." data-tr="📸 Fotoğraflar isteğe bağlıdır. Uzmanlarımız her durumda sizinle iletişime geçecektir.">📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.</div>
       <div class="photo-grid">
         <div class="photo-slot" id="slot-front">
           <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhFront" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhFront)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><circle cx="15" cy="14" r="7" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12.5" cy="12.5" r="1.1" fill="#fff"/><circle cx="17.5" cy="12.5" r="1.1" fill="#fff"/><path d="M12 17c1 1.2 2 1.6 3 1.6s2-0.4 3-1.6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-          <b data-de="Vorne" data-en="Front">Vorne</b>
-          <span data-de="Gesicht sichtbar" data-en="Face visible">Gesicht sichtbar</span>
+          <b data-de="Vorne" data-en="Front" data-fr="Face avant" data-nl="Voorkant" data-it="Fronte" data-tr="Ön">Vorne</b>
+          <span data-de="Gesicht sichtbar" data-en="Face visible" data-fr="Visage visible" data-nl="Gezicht zichtbaar" data-it="Volto visibile" data-tr="Yüz Görünür">Gesicht sichtbar</span>
           <input type="file" accept="image/*" onchange="markSlot(this,'slot-front')">
         </div>
         <div class="photo-slot" id="slot-top">
           <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhTop" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhTop)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><circle cx="15" cy="20" r="4.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M15 5v8M11 9l4-4 4 4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <b data-de="Oben" data-en="Top">Oben</b>
-          <span data-de="Von oben" data-en="From above">Von oben</span>
+          <b data-de="Oben" data-en="Top" data-fr="Dessus" data-nl="Bovenkant" data-it="Sopra" data-tr="Üst">Oben</b>
+          <span data-de="Von oben" data-en="From above" data-fr="Vue de dessus" data-nl="Van bovenaf" data-it="Dall'alto" data-tr="Yukarıdan">Von oben</span>
           <input type="file" accept="image/*" onchange="markSlot(this,'slot-top')">
         </div>
         <div class="photo-slot" id="slot-side">
           <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhSide" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhSide)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><path d="M11 22c-1-2-1-4 0-6-1-1-1-3 0-4 1-3 4-5 7-5 3 0 4 2 4 4 1 0 2 1 2 2 0 2-1 3-2 3 0 2-1 4-3 5-1 1-1 2 0 3z" fill="#fff" opacity="0.92"/></svg></span>
-          <b data-de="Seite" data-en="Side">Seite</b>
-          <span data-de="Profil" data-en="Profile">Profil</span>
+          <b data-de="Seite" data-en="Side" data-fr="Profil" data-nl="Zijkant" data-it="Lato" data-tr="Yan">Seite</b>
+          <span data-de="Profil" data-en="Profile" data-fr="Profil" data-nl="Profiel" data-it="Profilo" data-tr="Profil">Profil</span>
           <input type="file" accept="image/*" onchange="markSlot(this,'slot-side')">
         </div>
         <div class="photo-slot" id="slot-donor">
           <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhDonor" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhDonor)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><path d="M20 10a7 7 0 1 0 1.8 6.9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polyline points="22,7 21.8,11.5 17.5,10.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <b data-de="Spender" data-en="Donor">Spender</b>
-          <span data-de="Hinterkopf" data-en="Back of head">Hinterkopf</span>
+          <b data-de="Spender" data-en="Donor" data-fr="Donneuse" data-nl="Donor" data-it="Donatrice" data-tr="Donör">Spender</b>
+          <span data-de="Hinterkopf" data-en="Back of head" data-fr="Arrière de la tête" data-nl="Achterhoofd" data-it="Retro della testa" data-tr="Baş Arkası">Hinterkopf</span>
           <input type="file" accept="image/*" onchange="markSlot(this,'slot-donor')">
         </div>
       </div>
-      <div class="photo-note"><span id="photoCount">0</span>/4 <span data-de="Fotos hochgeladen" data-en="photos uploaded">Fotos hochgeladen</span></div>
+      <div class="photo-note"><span id="photoCount">0</span>/4 <span data-de="Fotos hochgeladen" data-en="photos uploaded" data-fr="photos téléchargées" data-nl="foto's geüpload" data-it="foto caricate" data-tr="fotoğraf yüklendi">Fotos hochgeladen</span></div>
       <div class="cfield">
-        <label data-de="Rabattgutschein (optional)" data-en="Discount Coupon (Optional)">Rabattgutschein (optional)</label>
+        <label data-de="Rabattgutschein (optional)" data-en="Discount Coupon (Optional)" data-fr="Code de réduction (facultatif)" data-nl="Kortingscode (optioneel)" data-it="Codice sconto (facoltativo)" data-tr="İndirim Kuponu (İsteğe Bağlı)">Rabattgutschein (optional)</label>
         <input type="text" id="cfCoupon" placeholder="WELCOME5">
       </div>
       <div class="check-row">
         <input type="checkbox" id="cfPrivacy" onchange="validateStep3()">
-        <span data-de="Ich habe die &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *">Ich habe die <a href="privacy.php" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
+        <span data-de="Ich habe die &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *" data-fr="J'ai lu la &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;politique de confidentialité&lt;/a&gt; et j'accepte le traitement de mes données personnelles. *" data-nl="Ik heb het &lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacybeleid&lt;/a&gt; gelezen en ga akkoord met de verwerking van mijn persoonsgegevens. *" data-it="Ho letto l'&lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;informativa sulla privacy&lt;/a&gt; e accetto il trattamento dei miei dati personali. *" data-tr="&lt;a href=&quot;privacy.php&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Gizlilik politikasını&lt;/a&gt; okudum ve kişisel verilerimin işlenmesini kabul ediyorum. *">Ich habe die <a href="privacy.php" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
       </div>
       <div class="check-row">
         <input type="checkbox" id="cfMarketing">
-        <span data-de="Ich möchte über Aktionen und Angebote informiert werden." data-en="I'd like to be informed about promotions and offers.">Ich möchte über Aktionen und Angebote informiert werden.</span>
+        <span data-de="Ich möchte über Aktionen und Angebote informiert werden." data-en="I'd like to be informed about promotions and offers." data-fr="Je souhaite être informé(e) des promotions et offres." data-nl="Ik wil op de hoogte worden gehouden van acties en aanbiedingen." data-it="Desidero essere informato/a su promozioni e offerte." data-tr="Kampanyalar ve fırsatlar hakkında bilgilendirilmek istiyorum.">Ich möchte über Aktionen und Angebote informiert werden.</span>
       </div>
-      <div class="gdpr-badge" data-de="🇪🇺 DSGVO · Ihre Daten sind geschützt" data-en="🇪🇺 GDPR · Your data is protected">🇪🇺 DSGVO · Ihre Daten sind geschützt</div>
+      <div class="gdpr-badge" data-de="🇪🇺 DSGVO · Ihre Daten sind geschützt" data-en="🇪🇺 GDPR · Your data is protected" data-fr="🇪🇺 RGPD · Vos données sont protégées" data-nl="🇪🇺 AVG · Uw gegevens zijn beschermd" data-it="🇪🇺 GDPR · I tuoi dati sono protetti" data-tr="🇪🇺 GDPR · Verileriniz Korunmaktadır">🇪🇺 DSGVO · Ihre Daten sind geschützt</div>
       <div class="consult-nav">
-        <button type="button" class="cback" onclick="gotoStep(2)" data-de="Zurück" data-en="Back">Zurück</button>
-        <button type="button" class="cnext" id="cnext3" disabled onclick="submitConsult()" data-de="Absenden" data-en="Submit">Absenden</button>
+        <button type="button" class="cback" onclick="gotoStep(2)" data-de="Zurück" data-en="Back" data-fr="Retour" data-nl="Terug" data-it="Indietro" data-tr="Geri">Zurück</button>
+        <button type="button" class="cnext" id="cnext3" disabled onclick="submitConsult()" data-de="Absenden" data-en="Submit" data-fr="Envoyer" data-nl="Versturen" data-it="Invia" data-tr="Gönder">Absenden</button>
       </div>
     </div>
 
@@ -1817,8 +1817,8 @@ include __DIR__ . '/includes/site-header.php';
     <div class="consult-pane" id="cpaneSuccess">
       <div class="consult-success">
         <div class="ok-ring">✓</div>
-        <h3 data-de="Vielen Dank!" data-en="Thank You!">Vielen Dank!</h3>
-        <p data-de="Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen." data-en="We've received your request. Our team will get back to you within 24 hours.">Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
+        <h3 data-de="Vielen Dank!" data-en="Thank You!" data-fr="Merci !" data-nl="Bedankt!" data-it="Grazie!" data-tr="Teşekkürler!">Vielen Dank!</h3>
+        <p data-de="Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen." data-en="We've received your request. Our team will get back to you within 24 hours." data-fr="Nous avons bien reçu votre demande. Notre équipe vous recontactera sous 24 heures." data-nl="We hebben uw aanvraag ontvangen. Ons team neemt binnen 24 uur contact met u op." data-it="Abbiamo ricevuto la tua richiesta. Il nostro team ti risponderà entro 24 ore." data-tr="Talebinizi aldık. Ekibimiz 24 saat içinde sizinle iletişime geçecektir.">Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.</p>
       </div>
     </div>
     </div>
@@ -2009,19 +2009,28 @@ include __DIR__ . '/includes/site-header.php';
     applyForBreakpoint(mq.matches);
     mq.addEventListener('change', function (e) { applyForBreakpoint(e.matches); });
   })();
+  // FR/NL/IT/TR have no translated copy yet — they fall back to the English
+  // strings until real translations are added for those data-* attributes.
+  var APEX_TRANSLATED_LANGS = ['de', 'en'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
+    var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
+      if (val === null && fallback) val = el.getAttribute('data-' + fallback);
       if (val !== null) el.innerHTML = val;
     });
     document.querySelectorAll('[data-de-ph]').forEach(function (el) {
       var ph = el.getAttribute('data-' + lang + '-ph');
+      if (ph === null && fallback) ph = el.getAttribute('data-' + fallback + '-ph');
       if (ph !== null) el.placeholder = ph;
     });
-    document.querySelectorAll('.lang-switch button').forEach(function (s) {
+    document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       var isActive = s.getAttribute('data-lang') === lang;
       s.className = isActive ? 'active' : 'inactive';
+    });
+    document.querySelectorAll('.lang-switch-current').forEach(function (s) {
+      s.textContent = lang.toUpperCase();
     });
     if (countsDone) renderCounts(1);
   }
@@ -2153,8 +2162,16 @@ include __DIR__ . '/includes/site-header.php';
     document.querySelectorAll('#consultSteps .cstep').forEach(function (s) { s.classList.add('done'); s.classList.remove('active'); });
     document.getElementById('cpaneSuccess').classList.add('active');
   }
-  document.querySelectorAll('.lang-switch button').forEach(function (s) {
-    s.addEventListener('click', function () { applyLang(s.getAttribute('data-lang')); });
+  document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
+    s.addEventListener('click', function () {
+      applyLang(s.getAttribute('data-lang'));
+      var ls = s.closest('.lang-switch');
+      if (ls) {
+        ls.classList.remove('open');
+        var t = ls.querySelector('.lang-switch-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 
   /* ---- Before & after carousel ---- */

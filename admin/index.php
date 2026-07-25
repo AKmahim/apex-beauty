@@ -92,6 +92,48 @@
   }
   .insights-list li.insufficient { border-left-color: var(--line); color: var(--ink-soft); font-style: italic; }
 
+  .suggestions-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 20px;
+  }
+  .suggestions-card h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-soft); margin: 0 0 10px; }
+  .suggestions-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .suggestions-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13.5px; color: var(--ink); padding: 9px 12px; border-radius: 8px; background: #f7fafd;
+    border-left: 3px solid var(--ink-soft);
+  }
+  .suggestions-list li.kind-risk { border-left-color: #dc2626; }
+  .suggestions-list li.kind-opportunity { border-left-color: #16a34a; }
+  .suggestions-list li.kind-operational { border-left-color: var(--teal-500); }
+  .suggestions-list .badge {
+    flex: none; font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+    padding: 2px 7px; border-radius: 5px; white-space: nowrap; margin-top: 1px;
+  }
+  .suggestions-list li.priority-high .badge { background: #fee2e2; color: #b91c1c; }
+  .suggestions-list li.priority-medium .badge { background: #fef3c7; color: #92400e; }
+  .suggestions-list li.priority-low .badge { background: #eef3fa; color: var(--ink-soft); }
+  .suggestions-list li.suggestions-empty { border-left-color: var(--line); color: var(--ink-soft); font-style: italic; }
+
+  .forecast-card .chart-wrap { height: 220px; position: relative; }
+  .forecast-summary { font-size: 13px; color: var(--ink); background: #f7fafd; border-radius: 8px; padding: 8px 12px; margin-top: 10px; }
+
+  .anomalies-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 20px;
+  }
+  .anomalies-card h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-soft); margin: 0 0 10px; }
+  .anomalies-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .anomalies-list li {
+    display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink);
+    padding: 7px 10px; border-radius: 7px; background: #f7fafd;
+  }
+  .anomalies-list .badge {
+    flex: none; font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+    padding: 2px 7px; border-radius: 5px;
+  }
+  .anomalies-list li.spike .badge { background: #dcfce7; color: #15803d; }
+  .anomalies-list li.drop .badge { background: #fee2e2; color: #b91c1c; }
+  .anomalies-list li.anomalies-empty { background: transparent; color: var(--ink-soft); font-style: italic; }
+
   .status-select {
     padding: 5px 8px; border-radius: 7px; border: 1.5px solid var(--line); font-size: 12px; font-weight: 600;
     background: #fff; color: var(--ink); cursor: pointer;
@@ -154,35 +196,70 @@
   .tab-btn.active { color: var(--blue-700); border-bottom-color: var(--blue-600); }
 
   /* ---- Content panel ---- */
+  .content-layout { display: flex; align-items: flex-start; gap: 18px; }
+  .section-tabs {
+    flex: 0 0 230px; display: flex; flex-direction: column; gap: 2px;
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 8px;
+    position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto;
+  }
+  .section-tab-btn {
+    text-align: left; border: none; background: none; padding: 10px 12px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; color: var(--ink-soft); cursor: pointer; line-height: 1.35;
+  }
+  .section-tab-btn:hover { background: #f2f6fb; color: var(--ink); }
+  .section-tab-btn.active { background: var(--blue-600); color: #fff; }
+  .content-editor { flex: 1; min-width: 0; }
+  .lang-tabs {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 8px;
+  }
+  .lang-tab-btn {
+    border: none; background: none; padding: 7px 14px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 700; color: var(--ink-soft); cursor: pointer;
+  }
+  .lang-tab-btn:hover { background: #f2f6fb; color: var(--ink); }
+  .lang-tab-btn.active { background: var(--blue-600); color: #fff; }
+  .miss-dot { display: none; width: 6px; height: 6px; border-radius: 50%; background: #f59e0b; margin-left: 6px; vertical-align: middle; }
+  @media (max-width: 900px) {
+    .content-layout { flex-direction: column; }
+    .section-tabs { position: static; flex-direction: row; overflow-x: auto; width: 100%; max-height: none; }
+    .section-tab-btn { white-space: nowrap; }
+  }
+
   .content-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
   .content-card h3 { font-size: 14px; margin: 0 0 4px; }
   .content-card .sub { font-size: 12px; color: var(--ink-soft); margin: 0 0 16px; }
-  .field-row { display: grid; grid-template-columns: 160px 1fr 1fr; gap: 10px; align-items: start; margin-bottom: 10px; }
+  .field-row { display: grid; grid-template-columns: 160px 1fr; gap: 10px; align-items: start; margin-bottom: 10px; }
   .field-row label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); padding-top: 9px; }
   .field-row input, .field-row textarea {
     width: 100%; padding: 8px 10px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 13px;
     font-family: inherit; resize: vertical;
   }
-  .field-row .lang-tag { font-size: 10.5px; font-weight: 700; color: var(--ink-soft); margin-bottom: 3px; display: block; }
-  .pill-row { display: grid; grid-template-columns: 160px 1fr 1fr 32px; gap: 10px; align-items: center; margin-bottom: 8px; }
-  .pill-row input { padding: 7px 9px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 12.5px; }
-  .pill-remove { border: none; background: none; color: #dc2626; font-size: 16px; cursor: pointer; line-height: 1; }
-  .add-pill-btn {
-    border: 1.5px dashed var(--line); background: none; color: var(--ink-soft); padding: 6px 12px;
-    border-radius: 8px; font-size: 12.5px; cursor: pointer; margin-top: 4px;
-  }
-  .add-pill-btn:hover { border-color: var(--blue-600); color: var(--blue-600); }
   .content-save-row { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
   .content-save-msg { font-size: 12.5px; color: #16a34a; opacity: 0; transition: opacity 0.2s; }
   .content-save-msg.show { opacity: 1; }
-  .list-row { display: grid; grid-template-columns: 160px 1fr 1fr 32px; gap: 10px; align-items: center; margin-bottom: 8px; }
-  .list-row input, .list-row textarea { padding: 7px 9px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 12.5px; font-family: inherit; }
-  .list-row-remove { border: none; background: none; color: #dc2626; font-size: 16px; cursor: pointer; line-height: 1; }
+
+  .list-label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); display: block; margin: 14px 0 8px; }
+  .list-items { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+  .list-row { position: relative; background: #fbfdff; border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .list-row-text { display: flex; align-items: center; gap: 10px; padding: 10px 36px 10px 12px; }
+  .list-row-text input { flex: 1; padding: 7px 9px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 12.5px; }
+  .list-row-fields { display: flex; flex-direction: column; gap: 8px; padding-right: 26px; }
+  .item-field-row { display: grid; grid-template-columns: 140px 1fr; gap: 8px; align-items: start; }
+  .item-field-row label { font-size: 11.5px; color: var(--ink-soft); padding-top: 7px; }
+  .item-field-row input, .item-field-row textarea {
+    width: 100%; padding: 7px 9px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 12.5px; font-family: inherit;
+  }
+  .list-row-remove {
+    position: absolute; top: 8px; right: 8px; border: none; background: none;
+    color: #dc2626; font-size: 16px; cursor: pointer; line-height: 1;
+  }
   .add-item-btn {
     border: 1.5px dashed var(--line); background: none; color: var(--ink-soft); padding: 6px 12px;
     border-radius: 8px; font-size: 12.5px; cursor: pointer; margin-top: 4px;
   }
   .add-item-btn:hover { border-color: var(--blue-600); color: var(--blue-600); }
+
   .media-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
   .media-row label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); width: 160px; flex-shrink: 0; }
   .media-preview { width: 100px; height: 60px; border-radius: 8px; border: 1.5px solid var(--line); object-fit: cover; background: #eef3fa; }
@@ -190,6 +267,21 @@
   .media-upload-btn { padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; border: 1.5px solid var(--blue-600); background: #fff; color: var(--blue-600); }
   .media-upload-btn:hover { background: var(--blue-600); color: #fff; }
   .media-status { font-size: 11.5px; color: var(--ink-soft); }
+
+  .item-media-row { display: grid; grid-template-columns: 140px 1fr; gap: 8px; align-items: center; margin-bottom: 4px; }
+  .item-media-row label { font-size: 11.5px; color: var(--ink-soft); }
+  .item-media-controls { display: flex; align-items: center; gap: 8px; }
+  .item-media-controls .media-preview { width: 80px; height: 48px; }
+  .item-media-controls input[type="file"] { font-size: 11.5px; max-width: 150px; }
+  .item-media-status { font-size: 11px; color: var(--ink-soft); }
+
+  /* ---- Admin UI language toggle (translates this dashboard's own chrome,
+     separate from the site-content language tabs above) ---- */
+  .admin-lang-toggle { display: flex; border: 1.5px solid var(--line); border-radius: 8px; overflow: hidden; margin-right: 10px; }
+  .admin-lang-toggle button {
+    border: none; background: #fff; color: var(--ink-soft); padding: 7px 12px; font-size: 12.5px; font-weight: 700; cursor: pointer;
+  }
+  .admin-lang-toggle button.active { background: var(--blue-600); color: #fff; }
 </style>
 </head>
 <body>
@@ -197,118 +289,147 @@
 <div id="loginScreen">
   <form class="login-card" id="loginForm">
     <h1>Apex Beauty</h1>
-    <p>Leads admin — sign in to continue.</p>
-    <p class="login-error" id="loginError">Incorrect password.</p>
-    <input type="password" id="loginPassword" placeholder="Admin password" autocomplete="current-password" required>
-    <button type="submit">Sign in</button>
+    <p data-i18n="login-sub">Leads admin — sign in to continue.</p>
+    <p class="login-error" id="loginError" data-i18n="login-error">Incorrect password.</p>
+    <input type="password" id="loginPassword" data-i18n-ph="login-password-ph" placeholder="Admin password" autocomplete="current-password" required>
+    <button type="submit" data-i18n="login-submit">Sign in</button>
   </form>
 </div>
 
 <div id="dashboard">
   <div class="db-header">
     <div>
-      <h1>Consultation leads</h1>
-      <div class="sub">Live submissions from the free-consultation form</div>
+      <h1 data-i18n="header-title">Consultation leads</h1>
+      <div class="sub" data-i18n="header-sub">Live submissions from the free-consultation form</div>
     </div>
-    <button id="logoutBtn">Log out</button>
+    <div style="display:flex; align-items:center;">
+      <div class="admin-lang-toggle" id="adminLangToggle">
+        <button type="button" data-admin-lang="en" class="active">EN</button>
+        <button type="button" data-admin-lang="de">DE</button>
+      </div>
+      <button id="logoutBtn" data-i18n="logout">Log out</button>
+    </div>
   </div>
 
   <div class="tabs">
-    <button class="tab-btn active" id="tabLeadsBtn" data-tab="leads">Leads</button>
-    <button class="tab-btn" id="tabContentBtn" data-tab="content">Website content</button>
+    <button class="tab-btn active" id="tabLeadsBtn" data-tab="leads" data-i18n="tab-leads">Leads</button>
+    <button class="tab-btn" id="tabContentBtn" data-tab="content" data-i18n="tab-content">Website content</button>
   </div>
 
   <div id="leadsPanel">
   <div class="stat-cards">
-    <div class="stat-card"><div class="n" id="statTotal">–</div><div class="l">Total leads</div></div>
-    <div class="stat-card"><div class="n"><span id="stat7">–</span><span class="delta" id="stat7Delta"></span></div><div class="l">Last 7 days</div></div>
-    <div class="stat-card"><div class="n" id="stat30">–</div><div class="l">Last 30 days</div></div>
-    <div class="stat-card"><div class="n" id="statAvgDay">–</div><div class="l">Avg leads / day (7d)</div></div>
-    <div class="stat-card"><div class="n" id="statOptIn">–</div><div class="l">Marketing opt-ins</div></div>
-    <div class="stat-card"><div class="n" id="statPhotos">–</div><div class="l">With photos uploaded</div></div>
+    <div class="stat-card"><div class="n" id="statTotal">–</div><div class="l" data-i18n="stat-total">Total leads</div></div>
+    <div class="stat-card"><div class="n"><span id="stat7">–</span><span class="delta" id="stat7Delta"></span></div><div class="l" data-i18n="stat-7d">Last 7 days</div></div>
+    <div class="stat-card"><div class="n" id="stat30">–</div><div class="l" data-i18n="stat-30d">Last 30 days</div></div>
+    <div class="stat-card"><div class="n" id="statAvgDay">–</div><div class="l" data-i18n="stat-avgday">Avg leads / day (7d)</div></div>
+    <div class="stat-card"><div class="n" id="statOptIn">–</div><div class="l" data-i18n="stat-optin">Marketing opt-ins</div></div>
+    <div class="stat-card"><div class="n" id="statPhotos">–</div><div class="l" data-i18n="stat-photos">With photos uploaded</div></div>
   </div>
 
   <div class="insights-card">
-    <h3>Insights</h3>
+    <h3 data-i18n="insights-title">Insights</h3>
     <ul class="insights-list" id="insightsList"></ul>
   </div>
 
+  <div class="suggestions-card">
+    <h3 data-i18n="suggestions-title">Suggestions</h3>
+    <ul class="suggestions-list" id="suggestionsList"></ul>
+  </div>
+
+  <div class="trend-card forecast-card">
+    <h3 data-i18n="forecast-title">Forecast</h3>
+    <div class="sub" data-i18n="forecast-sub">Historical + projected daily leads, next 14 days</div>
+    <div class="chart-wrap"><canvas id="chForecast"></canvas></div>
+    <div class="forecast-summary" id="forecastSummary"></div>
+  </div>
+
+  <div class="anomalies-card">
+    <h3 data-i18n="anomalies-title">Anomalies</h3>
+    <ul class="anomalies-list" id="anomaliesList"></ul>
+  </div>
+
   <div class="trend-card">
-    <h3>Leads over time</h3>
-    <div class="sub">Daily submissions, last 30 days</div>
+    <h3 data-i18n="trend-title">Leads over time</h3>
+    <div class="sub" data-i18n="trend-sub">Daily submissions, last 30 days</div>
     <div class="chart-wrap"><canvas id="chTrend"></canvas></div>
   </div>
 
   <div class="trend-card">
-    <h3>Leads per month</h3>
-    <div class="sub">Monthly submissions, last 6 months</div>
+    <h3 data-i18n="monthly-title">Leads per month</h3>
+    <div class="sub" data-i18n="monthly-sub">Monthly submissions, last 6 months</div>
     <div class="chart-wrap"><canvas id="chMonthly"></canvas></div>
   </div>
 
   <div class="breakdown-row">
-    <div class="breakdown-card"><h3>By procedure</h3><div class="chart-wrap"><canvas id="chProcedure"></canvas></div></div>
-    <div class="breakdown-card"><h3>By timing</h3><div class="chart-wrap"><canvas id="chTiming"></canvas></div></div>
-    <div class="breakdown-card"><h3>By gender</h3><div class="chart-wrap donut"><canvas id="chGender"></canvas></div></div>
-    <div class="breakdown-card"><h3>By country</h3><div class="chart-wrap"><canvas id="chCountry"></canvas></div></div>
-    <div class="breakdown-card"><h3>By source (UTM)</h3><div class="chart-wrap"><canvas id="chSource"></canvas></div></div>
-    <div class="breakdown-card"><h3>By therapy add-on</h3><div class="chart-wrap"><canvas id="chTherapy"></canvas></div></div>
-    <div class="breakdown-card"><h3>By status</h3><div class="chart-wrap donut"><canvas id="chStatus"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-procedure">By procedure</h3><div class="chart-wrap"><canvas id="chProcedure"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-timing">By timing</h3><div class="chart-wrap"><canvas id="chTiming"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-gender">By gender</h3><div class="chart-wrap donut"><canvas id="chGender"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-country">By country</h3><div class="chart-wrap"><canvas id="chCountry"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-source">By source (UTM)</h3><div class="chart-wrap"><canvas id="chSource"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-therapy">By therapy add-on</h3><div class="chart-wrap"><canvas id="chTherapy"></canvas></div></div>
+    <div class="breakdown-card"><h3 data-i18n="bd-status">By status</h3><div class="chart-wrap donut"><canvas id="chStatus"></canvas></div></div>
   </div>
 
   <div class="toolbar">
-    <input type="search" id="fSearch" placeholder="Search name, email, phone…">
-    <select id="fGender"><option value="">Any gender</option><option value="male">Male</option><option value="female">Female</option></select>
+    <input type="search" id="fSearch" data-i18n-ph="search-ph" placeholder="Search name, email, phone…">
+    <select id="fGender"><option value="" data-i18n="gender-any">Any gender</option><option value="male" data-i18n="gender-male">Male</option><option value="female" data-i18n="gender-female">Female</option></select>
     <select id="fTiming">
-      <option value="">Any timing</option>
-      <option value="this-month">This month</option>
-      <option value="1-3">1–3 months</option>
-      <option value="3-6">3–6 months</option>
-      <option value="6plus">6+ months</option>
-      <option value="research">Just researching</option>
+      <option value="" data-i18n="timing-any">Any timing</option>
+      <option value="this-month" data-i18n="timing-thismonth">This month</option>
+      <option value="1-3" data-i18n="timing-1-3">1–3 months</option>
+      <option value="3-6" data-i18n="timing-3-6">3–6 months</option>
+      <option value="6plus" data-i18n="timing-6plus">6+ months</option>
+      <option value="research" data-i18n="timing-research">Just researching</option>
     </select>
-    <select id="fMarketing"><option value="">Marketing: any</option><option value="true">Opted in</option><option value="false">Not opted in</option></select>
-    <select id="fSource"><option value="">Any source</option></select>
+    <select id="fMarketing"><option value="" data-i18n="marketing-any">Marketing: any</option><option value="true" data-i18n="marketing-in">Opted in</option><option value="false" data-i18n="marketing-out">Not opted in</option></select>
+    <select id="fSource"><option value="" data-i18n="source-any">Any source</option></select>
     <select id="fStatus">
-      <option value="">Any status</option>
-      <option value="new">New</option>
-      <option value="contacted">Contacted</option>
-      <option value="converted">Converted</option>
-      <option value="lost">Lost</option>
+      <option value="" data-i18n="status-any">Any status</option>
+      <option value="new" data-i18n="status-new">New</option>
+      <option value="contacted" data-i18n="status-contacted">Contacted</option>
+      <option value="converted" data-i18n="status-converted">Converted</option>
+      <option value="lost" data-i18n="status-lost">Lost</option>
     </select>
-    <input type="date" id="fFrom" title="From date">
-    <input type="date" id="fTo" title="To date">
-    <button class="btn-ghost" id="resetBtn">Reset</button>
+    <input type="date" id="fFrom" data-i18n-title="from-date" title="From date">
+    <input type="date" id="fTo" data-i18n-title="to-date" title="To date">
+    <button class="btn-ghost" id="resetBtn" data-i18n="reset-btn">Reset</button>
     <span class="spacer"></span>
-    <button class="btn-primary" id="exportBtn">⬇ Export CSV</button>
+    <button class="btn-primary" id="exportBtn" data-i18n="export-btn">⬇ Export CSV</button>
   </div>
 
   <div id="tableWrap">
     <table>
       <thead>
         <tr>
-          <th>Submitted</th><th>Name</th><th>Email</th><th>Phone</th><th>Country</th>
-          <th>Gender</th><th>Procedures</th><th>Therapies</th><th>Timing</th><th>Source</th><th>Marketing</th><th>Photos</th><th>Status</th><th></th>
+          <th data-i18n="th-submitted">Submitted</th><th data-i18n="th-name">Name</th><th data-i18n="th-email">Email</th><th data-i18n="th-phone">Phone</th><th data-i18n="th-country">Country</th>
+          <th data-i18n="th-gender">Gender</th><th data-i18n="th-procedures">Procedures</th><th data-i18n="th-therapies">Therapies</th><th data-i18n="th-timing">Timing</th><th data-i18n="th-source">Source</th><th data-i18n="th-marketing">Marketing</th><th data-i18n="th-photos">Photos</th><th data-i18n="th-status">Status</th><th></th>
         </tr>
       </thead>
       <tbody id="leadsBody"></tbody>
     </table>
-    <div class="empty-state" id="emptyState" style="display:none;">No leads match these filters yet.</div>
+    <div class="empty-state" id="emptyState" style="display:none;" data-i18n="empty-state">No leads match these filters yet.</div>
   </div>
 
   <div class="pagination">
-    <button id="prevPage">← Prev</button>
+    <button id="prevPage" data-i18n="prev-page">← Prev</button>
     <span id="pageInfo">Page 1</span>
-    <button id="nextPage">Next →</button>
+    <button id="nextPage" data-i18n="next-page">Next →</button>
   </div>
   </div>
 
   <div id="contentPanel" style="display:none;">
     <div class="toolbar">
-      <label style="font-size:13px; font-weight:600; color:var(--ink-soft);">Page:</label>
+      <label style="font-size:13px; font-weight:600; color:var(--ink-soft);" data-i18n="page-label">Page:</label>
       <select id="cPageSelect"></select>
-      <span class="sub" style="margin-left:auto;">Edits save immediately and appear on the live site on next page load.</span>
+      <span class="sub" style="margin-left:auto;" data-i18n="content-hint">Edits save immediately and appear on the live site on next page load.</span>
     </div>
-    <div id="cSections"></div>
+    <div class="content-layout">
+      <div class="section-tabs" id="cSectionTabs"></div>
+      <div class="content-editor">
+        <div class="lang-tabs" id="cLangTabs"></div>
+        <div id="cSections"></div>
+      </div>
+    </div>
   </div>
 </div>
 

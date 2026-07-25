@@ -115,6 +115,14 @@ if ($resource === 'insights' && $method === 'GET') {
     apex_json_response(['insights' => apex_get_insights()]);
 }
 
+if ($resource === 'forecast' && $method === 'GET') {
+    apex_json_response(apex_get_forecast());
+}
+
+if ($resource === 'suggestions' && $method === 'GET') {
+    apex_json_response(['suggestions' => apex_get_suggestions(), 'anomalies' => apex_get_anomalies()]);
+}
+
 if ($resource === 'leads-export.csv' && $method === 'GET') {
     apex_export_leads_csv(apex_list_all_leads_for_export(apex_read_filters()));
 }

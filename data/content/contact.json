@@ -1,6 +1,6 @@
 {
   "intro": {
-    "title": { "de": "Kostenlose Beratung", "en": "Free Consultation" },
-    "sub": { "de": "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.", "en": "Fill in the form and we'll get back to you within 24 hours." }
+    "title": { "de": "Kostenlose Beratung", "en": "Free Consultation", "fr": "Consultation gratuite", "nl": "Gratis consult", "it": "Consulto gratuito", "tr": "Ücretsiz Danışma" },
+    "sub": { "de": "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.", "en": "Fill in the form and we'll get back to you within 24 hours.", "fr": "Remplissez le formulaire, nous vous répondrons sous 24 heures.", "nl": "Vul het formulier in, we nemen binnen 24 uur contact met u op.", "it": "Compila il modulo, ti risponderemo entro 24 ore.", "tr": "Formu doldurun, 24 saat içinde size dönüş yapalım." }
   }
 }
