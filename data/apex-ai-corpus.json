@@ -1,0 +1,426 @@
+{
+  "cards": [
+    {
+      "title_de": "Anagen",
+      "title_en": "Anagen",
+      "desc_de": "Der Follikel produziert aktiv einen Haarschaft, rund 1 bis 1,5 cm pro Monat. Je länger diese Phase, desto länger kann das Haar werden.",
+      "desc_en": "The follicle actively produces a hair shaft, growing roughly 1 to 1.5 cm per month. The longer this phase, the longer the hair can grow."
+    },
+    {
+      "title_de": "Katagen",
+      "title_en": "Catagen",
+      "desc_de": "Eine kurze Übergangsphase. Die Haarproduktion stoppt, der Follikel schrumpft und löst sich von der Blutversorgung.",
+      "desc_en": "A short transitional period. Hair production stops, the follicle shrinks, and detaches from its blood supply."
+    },
+    {
+      "title_de": "Telogen",
+      "title_en": "Telogen",
+      "desc_de": "Der Follikel ruht rund 3 Monate. Am Ende der Phase fällt das Haar aus und ein neues Anagen-Haar beginnt zu wachsen.",
+      "desc_en": "The follicle rests for around 3 months. At the end, the hair sheds and a new anagen hair begins growing."
+    },
+    {
+      "title_de": "Genetik",
+      "title_en": "Genetics",
+      "desc_de": "Die genetische Veranlagung ist der Haupttreiber. Rund 80% der Männer mit erblich bedingtem Haarausfall haben einen betroffenen Vater. Vererbung kann von beiden Elternteilen kommen.",
+      "desc_en": "Genetic predisposition is the primary driver. Around 80% of men with pattern baldness have a father who was also affected. Inheritance can come from either side."
+    },
+    {
+      "title_de": "DHT (Dihydrotestosteron)",
+      "title_en": "DHT (Dihydrotestosterone)",
+      "desc_de": "Der zentrale Hormontreiber bei Männern und Frauen. DHT bindet an genetisch empfindliche Follikel und lässt sie über Zeit schrumpfen.",
+      "desc_en": "The central hormonal driver in both men and women. DHT binds to genetically sensitive follicles and causes them to shrink over time."
+    },
+    {
+      "title_de": "Hormonelle Veränderungen",
+      "title_en": "Hormonal changes",
+      "desc_de": "Schwangerschaft, Wechseljahre, Schilddrüsenerkrankungen und PCOS können diffuses Ausdünnen oder Schuppung auslösen.",
+      "desc_en": "Pregnancy, menopause, thyroid disorders, and PCOS can trigger diffuse thinning or shedding."
+    },
+    {
+      "title_de": "Stress",
+      "title_en": "Stress",
+      "desc_de": "Starker physischer oder psychischer Stress kann viele Follikel gleichzeitig in die Ruhephase drängen (telogenes Effluvium), meist reversibel.",
+      "desc_en": "Significant physical or psychological stress can push many follicles into the resting phase at once (telogen effluvium), usually reversible."
+    },
+    {
+      "title_de": "Ernährung & Mängel",
+      "title_en": "Nutrition & deficiencies",
+      "desc_de": "Eisen, Vitamin D, Zink, Protein und Biotin sind für aktive Follikel essenziell. Mängel beeinträchtigen Wachstum und Qualität.",
+      "desc_en": "Iron, vitamin D, zinc, protein, and biotin are essential for active follicles. Deficiencies impair growth and hair quality."
+    },
+    {
+      "title_de": "Medikamente",
+      "title_en": "Medications",
+      "desc_de": "Blutverdünner, Chemotherapeutika, Antidepressiva, Betablocker und hormonelle Verhütung können Haarausfall als Nebenwirkung haben.",
+      "desc_en": "Anticoagulants, chemotherapy drugs, antidepressants, beta-blockers, and hormonal contraceptives can cause hair loss as a side effect."
+    },
+    {
+      "title_de": "Erkrankungen",
+      "title_en": "Medical conditions",
+      "desc_de": "Alopecia areata, Kopfhautinfektionen, Lupus und andere Autoimmunerkrankungen sowie Diabetes können Haarausfall verursachen.",
+      "desc_en": "Alopecia areata, scalp infections, lupus and other autoimmune diseases, and diabetes can all cause hair loss."
+    },
+    {
+      "title_de": "Androgenetische Alopezie",
+      "title_en": "Androgenetic alopecia",
+      "desc_de": "Erblich bedingter Haarausfall. Bei Männern Geheimratsecken und Scheitel (Norwood-Hamilton I–VII), bei Frauen diffuse Ausdünnung des Scheitels (Ludwig I–III). Progressiv, chronisch, bessert sich nicht von selbst.",
+      "desc_en": "Genetically inherited pattern hair loss. In men, temple recession and crown thinning (Norwood-Hamilton I–VII); in women, diffuse parting widening (Ludwig I–III). Progressive and chronic, does not resolve on its own."
+    },
+    {
+      "title_de": "Alopecia areata",
+      "title_en": "Alopecia areata",
+      "desc_de": "Autoimmunerkrankung, bei der das Immunsystem Follikel angreift, meist runde Herde. In den meisten Fällen wächst das Haar zurück, kann aber unvorhersehbar verlaufen.",
+      "desc_en": "An autoimmune condition where the immune system attacks follicles, usually causing round patches. In most cases the hair regrows, though it can be unpredictable."
+    },
+    {
+      "title_de": "Telogenes Effluvium",
+      "title_en": "Telogen effluvium",
+      "desc_de": "Vorübergehendes, diffuses Ausdünnen 2 bis 4 Monate nach Geburt, OP, schwerer Krankheit oder starkem Stress. Klingt meist innerhalb von 6 bis 12 Monaten ab.",
+      "desc_en": "Temporary diffuse shedding 2 to 4 months after childbirth, surgery, severe illness, or major stress. Usually resolves within 6 to 12 months."
+    },
+    {
+      "title_de": "Traktionsalopezie",
+      "title_en": "Traction alopecia",
+      "desc_de": "Haarausfall durch dauerhaften Zug, etwa durch enge Zöpfe, Extensions oder Pferdeschwänze. Anfangs reversibel, kann bei anhaltendem Zug dauerhaft werden.",
+      "desc_en": "Hair loss from chronic tension, such as tight braids, extensions, or ponytails. Initially reversible, can become permanent if tension continues."
+    },
+    {
+      "title_de": "Vernarbende Alopezie",
+      "title_en": "Scarring alopecia",
+      "desc_de": "Follikel werden zerstört und durch Narbengewebe ersetzt, dauerhafter Haarverlust. Eine Transplantation ist bei aktiver Entzündung meist nicht geeignet.",
+      "desc_en": "Follicles are destroyed and replaced by scar tissue, causing permanent loss. Transplantation is generally unsuitable while inflammation is active."
+    },
+    {
+      "title_de": "Klinische Untersuchung",
+      "title_en": "Clinical assessment",
+      "desc_de": "Anamnese zu Beginn, Verlauf, Familiengeschichte, Medikamenten und Ernährung, gefolgt von einer körperlichen Untersuchung von Muster und Kopfhaut.",
+      "desc_en": "History of onset, progression, family history, medications, and diet, followed by a physical exam of pattern and scalp condition."
+    },
+    {
+      "title_de": "Trichoskopie & Scalp Mapping",
+      "title_en": "Trichoscopy & scalp mapping",
+      "desc_de": "Ein Dermatoskop vergrößert die Kopfhaut bis zu 70-fach und zeigt Follikeldichte, Miniaturisierung und Entzündung. Digitales Scalp Mapping dokumentiert Veränderungen präzise über Zeit.",
+      "desc_en": "A dermatoscope magnifies the scalp up to 70x, revealing follicle density, miniaturization, and inflammation. Digital scalp mapping tracks changes precisely over time."
+    },
+    {
+      "title_de": "Der Zugtest",
+      "title_en": "The pull test",
+      "desc_de": "40 bis 60 Haare werden sanft gezogen. Lösen sich mehr als 6, deutet das auf aktiven Haarausfall hin.",
+      "desc_en": "A bundle of 40 to 60 hairs is gently pulled. Extracting more than 6 suggests active shedding."
+    },
+    {
+      "title_de": "Bluttests",
+      "title_en": "Blood tests",
+      "desc_de": "Blutbild, Eisen und Ferritin, Schilddrüsenwerte, Hormonspiegel (Testosteron, DHT), Vitamin D, Zink und Blutzucker, um zugrundeliegende Ursachen auszuschließen.",
+      "desc_en": "Full blood count, iron and ferritin, thyroid function, hormone levels (testosterone, DHT), vitamin D, zinc, and blood sugar, to rule out underlying causes."
+    },
+    {
+      "title_de": "Kopfhautbiopsie",
+      "title_en": "Scalp biopsy",
+      "desc_de": "Bei unklaren Fällen bestätigt eine kleine Gewebeprobe unter dem Mikroskop die Art des Haarausfalls und mögliche Entzündungen.",
+      "desc_en": "In unclear cases, a small tissue sample under the microscope confirms the type of hair loss and any inflammation."
+    },
+    {
+      "title_de": "Minoxidil",
+      "title_en": "Minoxidil",
+      "desc_de": "Topisch oder oral. Verlängert die Anagen-Phase und verbessert die Durchblutung. Blockiert kein DHT. Wirkung sichtbar nach 4 bis 6 Monaten, hält nur bei fortgesetzter Anwendung.",
+      "desc_en": "Topical or oral. Extends the anagen phase and improves blood flow. Doesn't block DHT. Visible after 4 to 6 months, only lasts with continued use."
+    },
+    {
+      "title_de": "Finasterid",
+      "title_en": "Finasteride",
+      "desc_de": "Orales Medikament, senkt DHT in der Kopfhaut um rund 70%. Stoppt den Haarausfall bei rund 90% der Männer, fördert Regrowth bei rund 65%.",
+      "desc_en": "Oral medication, reduces scalp DHT by around 70%. Stops hair loss in around 90% of men, promotes regrowth in around 65%."
+    },
+    {
+      "title_de": "Dutasterid",
+      "title_en": "Dutasteride",
+      "desc_de": "Stärkere Alternative zu Finasterid, senkt DHT um rund 90%. Off-Label unter ärztlicher Aufsicht, besonders wirksam am Oberkopf.",
+      "desc_en": "A more potent alternative to finasteride, reduces DHT by around 90%. Used off-label under medical supervision, particularly effective at the crown."
+    },
+    {
+      "title_de": "PRP",
+      "title_en": "PRP",
+      "desc_de": "Plättchenreiches Plasma aus dem eigenen Blut wird in die Kopfhaut injiziert und regt die Follikelaktivität an. Meist als Ergänzung, Sitzungen alle 3 bis 6 Monate.",
+      "desc_en": "Platelet-rich plasma from the patient's own blood is injected into the scalp to stimulate follicle activity. Usually a complement, sessions every 3 to 6 months."
+    },
+    {
+      "title_de": "Exosomen",
+      "title_en": "Exosomes",
+      "desc_de": "Aus Stammzellen gewonnene Vesikel mit Wachstumssignalen, per Microneedling oder Injektion angewendet. Vielversprechend, aber noch begrenzte Langzeitdaten.",
+      "desc_en": "Stem cell-derived vesicles carrying growth signals, applied via micro-needling or injection. Promising, but long-term data is still limited."
+    },
+    {
+      "title_de": "Mesotherapie",
+      "title_en": "Mesotherapy",
+      "desc_de": "Mikroinjektionen aus Vitaminen, Mineralien und Wachstumsfaktoren zur Unterstützung der Kopfhautgesundheit. Meist begleitend zu anderen Behandlungen.",
+      "desc_en": "Micro-injections of vitamins, minerals, and growth factors to support scalp health. Usually combined with other treatments."
+    },
+    {
+      "title_de": "Haartransplantation",
+      "title_en": "Hair transplantation",
+      "desc_de": "Die einzige Behandlung, die dauerhaft Haare in kahle oder ausgedünnte Bereiche zurückbringt. Gesunde Follikel aus dem DHT-resistenten Spenderbereich werden verpflanzt.",
+      "desc_en": "The only treatment that permanently restores hair to bald or thinning areas. Healthy follicles from the DHT-resistant donor zone are relocated."
+    },
+    {
+      "title_de": "FUE",
+      "title_en": "FUE",
+      "desc_de": "Follikuläre Einheiten (1 bis 4 Haare) werden einzeln mit einem Mikro-Punch-Werkzeug entnommen. Kein linearer Schnitt, keine sichtbare Narbe. 5 bis 8 Stunden je nach Graft-Anzahl.",
+      "desc_en": "Follicular units (1 to 4 hairs) are extracted one by one with a micro-punch tool. No linear incision, no visible scar. 5 to 8 hours depending on graft count."
+    },
+    {
+      "title_de": "Saphir-FUE",
+      "title_en": "Sapphire FUE",
+      "desc_de": "Kanäle werden mit Saphirklingen statt Stahl geöffnet: kleinere, präzisere Schnitte, schnellere Heilung, höhere Dichte pro cm² und geringeres Risiko für Verkrustung.",
+      "desc_en": "Channels are opened with sapphire blades instead of steel: smaller, more precise incisions, faster healing, higher density per cm², and lower risk of scabbing."
+    },
+    {
+      "title_de": "DHI",
+      "title_en": "DHI",
+      "desc_de": "Follikel werden mit einem Choi Implanter Pen direkt implantiert, ohne separate Kanaleröffnung. Präzise Kontrolle über Winkel und Tiefe, ideal für den Haaransatz.",
+      "desc_en": "Follicles are implanted directly using a Choi Implanter Pen, without opening separate channels first. Precise control over angle and depth, ideal for the hairline."
+    },
+    {
+      "title_de": "Erste Heilung",
+      "title_en": "Initial healing",
+      "desc_de": "Kleine Krusten bilden sich, Rötung und leichte Schwellung um Stirn und Augen sind normal. Kopf erhöht schlafen, Kopfhaut nicht berühren.",
+      "desc_en": "Small scabs form, redness and mild swelling around the forehead and eyes is common. Sleep with the head elevated, avoid touching the scalp."
+    },
+    {
+      "title_de": "Schock-Verlust",
+      "title_en": "Shock loss",
+      "desc_de": "Bis zu 90% der transplantierten Haarschäfte fallen aus. Das ist völlig normal, die Follikel selbst bleiben unter der Kopfhaut aktiv.",
+      "desc_en": "Up to 90% of transplanted hair shafts shed. This is completely normal; the follicles themselves remain alive beneath the scalp."
+    },
+    {
+      "title_de": "Die ruhige Phase",
+      "title_en": "The quiet phase",
+      "desc_de": "Kaum sichtbares Wachstum, die Follikel ruhen. Erste feine Haare können ab Woche 10 bis 12 erscheinen.",
+      "desc_en": "Little visible growth, follicles are resting. First fine hairs may emerge around week 10 to 12."
+    },
+    {
+      "title_de": "Sichtbares Wachstum beginnt",
+      "title_en": "Visible growth begins",
+      "desc_de": "Feine neue Haare erscheinen und verdicken sich allmählich. Bis Monat 6 sind rund 40 bis 60% des Endergebnisses sichtbar.",
+      "desc_en": "Fine new hairs emerge and gradually thicken. By month 6, around 40 to 60% of the final result is visible."
+    },
+    {
+      "title_de": "Die Dichte verbessert sich",
+      "title_en": "Density improves",
+      "desc_de": "Das Haar wird spürbar dicker und dunkler. Rund 80% der Grafts sind zu diesem Zeitpunkt durchgebrochen.",
+      "desc_en": "Hair becomes noticeably thicker and darker. Around 80% of grafts have broken through by this point."
+    },
+    {
+      "title_de": "Endgültige Verfeinerung",
+      "title_en": "Final refinement",
+      "desc_de": "Die letzten Haare reifen und verdicken sich. Das transplantierte Haar verschmilzt vollständig mit dem natürlichen Haar.",
+      "desc_en": "The last hairs mature and thicken. Transplanted hair fully blends with native hair."
+    }
+  ],
+  "glossary": [
+    {
+      "term_de": "Alopezie",
+      "term_en": "Alopecia",
+      "def_de": "Der medizinische Begriff für Haarausfall, unabhängig von der Ursache.",
+      "def_en": "The medical term for hair loss, from any cause."
+    },
+    {
+      "term_de": "Anagen",
+      "term_en": "Anagen",
+      "def_de": "Die aktive Wachstumsphase des Haarzyklus, dauert 2 bis 7 Jahre.",
+      "def_en": "The active growth phase of the hair cycle, lasting 2 to 7 years."
+    },
+    {
+      "term_de": "Androgenetische Alopezie",
+      "term_en": "Androgenetic alopecia",
+      "def_de": "Erblich bedingter, durch DHT beeinflusster Haarausfall. Die häufigste Form bei Männern und Frauen.",
+      "def_en": "Genetically inherited pattern hair loss influenced by DHT. The most common form in both men and women."
+    },
+    {
+      "term_de": "Katagen",
+      "term_en": "Catagen",
+      "def_de": "Die kurze Übergangsphase, rund 2 bis 3 Wochen, in der der Follikel schrumpft und das Wachstum stoppt.",
+      "def_en": "The short transitional phase, lasting about 2 to 3 weeks, during which the follicle shrinks and growth stops."
+    },
+    {
+      "term_de": "DHI",
+      "term_en": "DHI",
+      "def_de": "Direkte Haarimplantation. Technik mit einem Choi Implanter Pen, der Follikel in einem Schritt entnimmt und implantiert.",
+      "def_en": "Direct Hair Implantation. A technique using a Choi Implanter Pen to extract and implant follicles in a single step."
+    },
+    {
+      "term_de": "DHT (Dihydrotestosteron)",
+      "term_en": "DHT (Dihydrotestosterone)",
+      "def_de": "Ein starkes Hormon aus Testosteron, der Haupttreiber der androgenetischen Alopezie bei genetisch empfindlichen Personen.",
+      "def_en": "A potent hormone derived from testosterone, the primary driver of androgenetic alopecia in genetically sensitive individuals."
+    },
+    {
+      "term_de": "Spenderbereich",
+      "term_en": "Donor area",
+      "def_de": "Der Bereich der Kopfhaut, meist Hinterkopf und Seiten, aus dem DHT-resistente Follikel entnommen werden.",
+      "def_en": "The part of the scalp, typically the back and sides, from which DHT-resistant follicles are harvested."
+    },
+    {
+      "term_de": "Exosomen",
+      "term_en": "Exosomes",
+      "def_de": "Winzige, aus Stammzellen gewonnene Vesikel mit Wachstumssignalen, experimentell zur Follikelregeneration eingesetzt.",
+      "def_en": "Tiny stem cell-derived vesicles containing growth signals, used experimentally to stimulate follicle regeneration."
+    },
+    {
+      "term_de": "5-Alpha-Reduktase",
+      "term_en": "5-alpha reductase",
+      "def_de": "Das Enzym, das Testosteron in DHT umwandelt. Wird durch Finasterid und Dutasterid gehemmt.",
+      "def_en": "The enzyme responsible for converting testosterone into DHT. Inhibited by finasteride and dutasteride."
+    },
+    {
+      "term_de": "Finasterid",
+      "term_en": "Finasteride",
+      "def_de": "Orales Medikament, senkt DHT in der Kopfhaut um rund 70%, indem es Typ-II-5-Alpha-Reduktase blockiert.",
+      "def_en": "An oral medication that reduces scalp DHT by around 70% by blocking type II 5-alpha reductase."
+    },
+    {
+      "term_de": "Follikuläre Einheit",
+      "term_en": "Follicular unit",
+      "def_de": "Eine natürliche Gruppierung von 1 bis 4 Haaren. Bei der Transplantation werden ganze Einheiten verpflanzt.",
+      "def_en": "A natural grouping of 1 to 4 hairs. Transplantation moves whole follicular units."
+    },
+    {
+      "term_de": "FUE",
+      "term_en": "FUE",
+      "def_de": "Follikuläre Einheiten-Extraktion. Einzelne Follikel werden mit einem Mikro-Punch entnommen, ohne lineare Narbe.",
+      "def_en": "Follicular Unit Extraction. Individual units are extracted one by one with a micro-punch tool, leaving no linear scar."
+    },
+    {
+      "term_de": "FUT",
+      "term_en": "FUT",
+      "def_de": "Ältere Streifenmethode: ein Hautstreifen wird entnommen und in Einheiten geteilt. Hinterlässt eine lineare Narbe.",
+      "def_en": "An older strip technique: a strip of scalp is removed and divided into units. Leaves a linear scar."
+    },
+    {
+      "term_de": "Graft",
+      "term_en": "Graft",
+      "def_de": "Eine bei der Transplantation verwendete follikuläre Einheit, üblicherweise 1 bis 4 Haare.",
+      "def_en": "A follicular unit used in transplantation, typically containing 1 to 4 hairs."
+    },
+    {
+      "term_de": "Ludwig-Skala",
+      "term_en": "Ludwig scale",
+      "def_de": "Klassifikation für weiblichen Haarausfall, Grad I bis III nach Ausmaß der zentralen Ausdünnung.",
+      "def_en": "A classification system for female pattern hair loss, graded I to III based on central thinning."
+    },
+    {
+      "term_de": "Mesotherapie",
+      "term_en": "Mesotherapy",
+      "def_de": "Mikroinjektionen aus Vitaminen, Mineralien und Wachstumsfaktoren zur Unterstützung der Follikelgesundheit.",
+      "def_en": "Micro-injections of vitamins, minerals, and growth factors to support follicle health."
+    },
+    {
+      "term_de": "Miniaturisierung",
+      "term_en": "Miniaturisation",
+      "def_de": "Das fortschreitende Schrumpfen der Follikel durch DHT, bis der Follikel schließlich ruht.",
+      "def_en": "The progressive shrinking of follicles caused by DHT, until the follicle becomes dormant."
+    },
+    {
+      "term_de": "Minoxidil",
+      "term_en": "Minoxidil",
+      "def_de": "Topisches oder orales Mittel, das die Anagen-Phase verlängert und die Durchblutung verbessert. Blockiert kein DHT.",
+      "def_en": "A topical or oral medication that extends the anagen phase and improves blood flow. Doesn't block DHT."
+    },
+    {
+      "term_de": "Norwood-Hamilton-Skala",
+      "term_en": "Norwood-Hamilton scale",
+      "def_de": "Klassifikation für männlichen Haarausfall, Grad I bis VII nach Muster und Ausmaß.",
+      "def_en": "A classification system for male pattern baldness, graded I to VII based on pattern and extent."
+    },
+    {
+      "term_de": "PRP",
+      "term_en": "PRP",
+      "def_de": "Plättchenreiches Plasma. Eigenes Blut wird zentrifugiert und in die Kopfhaut injiziert, um Follikelaktivität anzuregen.",
+      "def_en": "Platelet-Rich Plasma. The patient's own blood is centrifuged and injected into the scalp to stimulate follicle activity."
+    },
+    {
+      "term_de": "Empfängerbereich",
+      "term_en": "Recipient area",
+      "def_de": "Der ausgedünnte oder kahle Bereich der Kopfhaut, in den Grafts transplantiert werden.",
+      "def_en": "The thinning or bald area of the scalp into which grafts are transplanted."
+    },
+    {
+      "term_de": "Saphir-FUE",
+      "term_en": "Sapphire FUE",
+      "def_de": "Fortgeschrittene FUE-Variante mit Saphirklingen für kleinere, präzisere Kanäle und schnellere Heilung.",
+      "def_en": "An advanced version of FUE using sapphire blades for smaller, more precise channels and faster healing."
+    },
+    {
+      "term_de": "Schock-Verlust",
+      "term_en": "Shock loss",
+      "def_de": "Vorübergehender Ausfall des transplantierten Haares 2 bis 4 Wochen nach dem Eingriff. Die Follikel überleben, die Schäfte wachsen nach.",
+      "def_en": "Temporary shedding of transplanted hair 2 to 4 weeks after a transplant. The follicles survive; the shafts regrow."
+    },
+    {
+      "term_de": "Telogen",
+      "term_en": "Telogen",
+      "def_de": "Die Ruhephase des Haarzyklus, rund 2 bis 3 Monate. Das Haar bleibt, wächst aber nicht mehr.",
+      "def_en": "The resting phase of the hair cycle, lasting 2 to 3 months. Hair remains in place but doesn't grow."
+    },
+    {
+      "term_de": "Telogenes Effluvium",
+      "term_en": "Telogen effluvium",
+      "def_de": "Vorübergehender diffuser Haarausfall, wenn viele Follikel gleichzeitig in die Telogen-Phase eintreten.",
+      "def_en": "A temporary condition causing diffuse shedding when many follicles simultaneously enter telogen."
+    },
+    {
+      "term_de": "Trichoskopie",
+      "term_en": "Trichoscopy",
+      "def_de": "Nicht-invasive Technik mit einem Dermatoskop zur Beurteilung von Follikeldichte, Miniaturisierung und Kopfhautzustand.",
+      "def_en": "A non-invasive technique using a dermatoscope to assess follicle density, miniaturisation, and scalp condition."
+    },
+    {
+      "term_de": "Vertex / Oberkopf",
+      "term_en": "Vertex / Crown",
+      "def_de": "Der obere Hinterkopfbereich, oft einer der zuletzt betroffenen Bereiche bei männlichem Haarausfall.",
+      "def_en": "The top-rear area of the scalp, often one of the later areas affected in male pattern baldness."
+    }
+  ],
+  "aftercareRules": [
+    {
+      "de": "Keine direkte Sonne auf der Kopfhaut für mindestens 4 Wochen.",
+      "en": "No direct sun exposure on the scalp for at least 4 weeks."
+    },
+    {
+      "de": "Kein Schwimmen (Pool, Meer, See) für mindestens 4 Wochen.",
+      "en": "No swimming (pool, sea, or lake) for at least 4 weeks."
+    },
+    {
+      "de": "Kein intensiver Sport oder starkes Schwitzen für 2 bis 3 Wochen.",
+      "en": "No intense exercise or heavy sweating for 2 to 3 weeks."
+    },
+    {
+      "de": "Kein Alkohol in der ersten Woche, er beeinträchtigt die Durchblutung.",
+      "en": "No alcohol for the first week; it affects blood circulation."
+    },
+    {
+      "de": "Nicht rauchen: Nikotin verengt die Blutgefäße und senkt die Graft-Überlebensrate.",
+      "en": "No smoking: nicotine restricts blood supply and reduces graft survival."
+    },
+    {
+      "de": "Kopf erhöht schlafen für die ersten 3 bis 5 Nächte.",
+      "en": "Sleep with the head elevated for the first 3 to 5 nights."
+    },
+    {
+      "de": "Sanft waschen nach Klinikanleitung, keinen starken Wasserstrahl direkt auf die Grafts.",
+      "en": "Wash gently per the clinic's instructions; no strong water pressure directly on the grafts."
+    },
+    {
+      "de": "Haare im ersten Monat nicht aggressiv schneiden, färben oder stylen.",
+      "en": "Don't cut, colour, or style hair aggressively in the first month."
+    },
+    {
+      "de": "Verschriebene Medikamente wie Finasterid oder Minoxidil wie angeordnet fortsetzen.",
+      "en": "Continue prescribed medications like finasteride or minoxidil as directed."
+    },
+    {
+      "de": "Alle Folgetermine wahrnehmen, manche Kliniken bieten Remote-Check-ins an.",
+      "en": "Attend all follow-up appointments; some clinics offer remote check-ins."
+    }
+  ]
+}

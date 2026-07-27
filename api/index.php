@@ -8,6 +8,8 @@ require_once __DIR__ . '/../includes/content.php';
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/capi.php';
 require_once __DIR__ . '/../includes/export.php';
+require_once __DIR__ . '/../includes/apex-ai.php';
+require_once __DIR__ . '/../includes/apex-ai-sales.php';
 
 $method = apex_request_method();
 $path = preg_replace('#^/api/?#', '', apex_request_path()) ?? '';
@@ -62,6 +64,27 @@ if (($segments[0] ?? '') === 'leads') {
     }
 
     apex_json_response(['ok' => true, 'id' => $id], 201);
+}
+
+if (($segments[0] ?? '') === 'chat') {
+    apex_send_cors(['POST', 'OPTIONS']);
+    if ($method !== 'POST') {
+        apex_not_found();
+    }
+
+    $body = apex_read_json_body();
+    $message = is_string($body['message'] ?? null) ? trim($body['message']) : '';
+    if ($message === '' || mb_strlen($message) > APEX_AI_MAX_MESSAGE_LENGTH) {
+        apex_json_response(['error' => 'A message (max ' . APEX_AI_MAX_MESSAGE_LENGTH . ' characters) is required.'], 400);
+    }
+    $lang = is_string($body['lang'] ?? null) ? $body['lang'] : 'de';
+    $lastTopicId = is_string($body['lastTopicId'] ?? null) ? $body['lastTopicId'] : null;
+    $leadState = is_array($body['leadState'] ?? null) ? $body['leadState'] : null;
+
+    if (apex_ai_check_and_record_hit(apex_client_ip())) {
+        apex_json_response(['error' => 'Too many messages. Please wait a moment and try again.'], 429);
+    }
+    apex_json_response(apex_ai_sales_respond($message, $lang, $lastTopicId, $leadState));
 }
 
 if (($segments[0] ?? '') === 'content') {

@@ -542,5 +542,7 @@ include __DIR__ . '/includes/site-header.php';
   }
 </script>
 
+<?php include __DIR__ . '/includes/apex-ai-widget.php'; ?>
+
 </body>
 </html>
