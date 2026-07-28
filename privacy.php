@@ -1,13 +1,20 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
-$seoTitle = 'Datenschutzerklärung · Apex Beauty';
-$seoDescription = 'Datenschutzerklärung von Apex Beauty: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.';
+require_once __DIR__ . '/includes/i18n.php';
+$currentLang = apex_current_lang();
+$seoTitle = $currentLang === 'en'
+    ? 'Privacy Policy · Apex Beauty'
+    : 'Datenschutzerklärung · Apex Beauty';
+$seoDescription = $currentLang === 'en'
+    ? "Apex Beauty's privacy policy: information on the processing of personal data under GDPR."
+    : 'Datenschutzerklärung von Apex Beauty: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.';
 $seoCanonicalPath = 'privacy';
 $seoNoindex = true;
+ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars($currentLang, ENT_QUOTES) ?>">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -292,3 +299,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
+<?php echo apex_localize_output((string) ob_get_clean(), $currentLang); ?>

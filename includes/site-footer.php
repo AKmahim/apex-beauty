@@ -1,5 +1,7 @@
 <?php declare(strict_types=1);
 
+require_once __DIR__ . '/i18n.php';
+
 if (!defined('APEX_SITE_FOOTER_STYLE_EMITTED')) {
   define('APEX_SITE_FOOTER_STYLE_EMITTED', true);
   ?>
@@ -124,7 +126,7 @@ require_once __DIR__ . '/site-config.php';
     </div>
   </div>
   <div class="footer-legal">
-    <a class="footer-privacy-link" href="privacy.php" data-de="Datenschutzerklärung" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-nl="Privacybeleid" data-it="Informativa sulla privacy" data-tr="Gizlilik Politikası">Datenschutzerklärung</a>
+    <a class="footer-privacy-link" href="<?= htmlspecialchars(apex_lang_base(), ENT_QUOTES) ?>/privacy" data-de="Datenschutzerklärung" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-nl="Privacybeleid" data-it="Informativa sulla privacy" data-tr="Gizlilik Politikası">Datenschutzerklärung</a>
   </div>
 </footer>
 <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>

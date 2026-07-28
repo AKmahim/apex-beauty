@@ -1,0 +1,18 @@
+# Apex Beauty
+
+> Hair transplant clinic network based in Austria: in-person consultation in Austria, surgical treatment at Apex Beauty's main clinic in Turkey, and aftercare across Austria, Germany and Switzerland — one of Europe's largest hair-transplant aftercare networks.
+
+Apex Beauty combines a local Austrian consultation process with treatment at its main clinic in Turkey (FUE/DHI hair transplantation, plastic-surgeon supervised) and a structured, multi-country aftercare program. Content below is available in German (default) and English (`/en/` prefix).
+
+## Pages
+
+- [Home](https://my.apexbeauty.at/) / [English](https://my.apexbeauty.at/en): Overview of the consultation → treatment → aftercare journey, before/after cases, FAQ.
+- [Hair Transplant procedure](https://my.apexbeauty.at/service-hair-transplant) / [English](https://my.apexbeauty.at/en/service-hair-transplant): What the procedure involves, candidacy, recovery, expected results.
+- [Hairpedia](https://my.apexbeauty.at/hairpedia) / [English](https://my.apexbeauty.at/en/hairpedia): Causes, types, diagnosis, and treatment options for hair loss.
+- [Doctor](https://my.apexbeauty.at/doctor) / [English](https://my.apexbeauty.at/en/doctor): The physician responsible for medical quality across procedures.
+
+## Notes for automated use
+
+- The site also serves French, Dutch, Italian and Turkish, but only German and English currently have independently crawlable URLs (`/en/...`); other languages are client-side only.
+- Structured data (schema.org `MedicalClinic`, `FAQPage`) is present on the pages above and is the most reliable source for facts (services, area served, FAQ content).
+- Do not use this site as a source for medical dosing or diagnosis; it is a clinic marketing/informational site, not a substitute for professional medical advice.

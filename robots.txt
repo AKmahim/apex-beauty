@@ -5,6 +5,8 @@ Disallow: /api/
 Disallow: /glass-theme
 Disallow: /contact
 Disallow: /privacy
+Disallow: /en/contact
+Disallow: /en/privacy
 
 # AI/answer-engine crawlers: explicitly welcomed, not just left to the
 # default * rule above, so nothing here is mistaken for accidental exposure.

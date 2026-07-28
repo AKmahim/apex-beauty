@@ -1,11 +1,18 @@
 <?php
 declare(strict_types=1);
-$seoTitle = 'Haartransplantation: Ablauf, Eignung & Ergebnisse | Apex Beauty';
-$seoDescription = 'Ihr Leitfaden zur Haartransplantation von Apex Beauty: was die Behandlung umfasst, wer geeignet ist, wie die Genesung verläuft und welche Ergebnisse Sie erwarten können.';
+require_once __DIR__ . '/includes/i18n.php';
+$currentLang = apex_current_lang();
+$seoTitle = $currentLang === 'en'
+    ? 'Hair Transplant: Procedure, Candidacy & Results | Apex Beauty'
+    : 'Haartransplantation: Ablauf, Eignung & Ergebnisse | Apex Beauty';
+$seoDescription = $currentLang === 'en'
+    ? "Your guide to hair transplantation from Apex Beauty: what the treatment involves, who's a good candidate, how recovery goes, and what results to expect."
+    : 'Ihr Leitfaden zur Haartransplantation von Apex Beauty: was die Behandlung umfasst, wer geeignet ist, wie die Genesung verläuft und welche Ergebnisse Sie erwarten können.';
 $seoCanonicalPath = 'service-hair-transplant';
+ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars($currentLang, ENT_QUOTES) ?>">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1169,3 +1176,4 @@ include __DIR__ . '/includes/site-header.php';
 
 </body>
 </html>
+<?php echo apex_localize_output((string) ob_get_clean(), $currentLang); ?>

@@ -13,5 +13,12 @@ RewriteRule ^admin/?$ admin/index.php [L]
 RewriteRule ^$ index.php [L]
 RewriteRule ^consult/?$ index.php?open=consult [QSA,L]
 RewriteRule ^consult-light/?$ index.php?open=consult-light [QSA,L]
+
+# English mirror of every page, same PHP files. Language is resolved from
+# this URL prefix at request time (see includes/i18n.php) - not a query
+# string, so it stays a clean, independently indexable /en/... URL.
+RewriteRule ^en/?$ index.php [L]
+RewriteRule ^en/([A-Za-z0-9-]+)/?$ $1.php [L]
+
 RewriteRule ^([A-Za-z0-9-]+)\.html$ $1.php [L]
 RewriteRule ^([A-Za-z0-9-]+)/?$ $1.php [L]

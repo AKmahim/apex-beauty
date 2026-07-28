@@ -1,8 +1,14 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
-$seoTitle = APEX_PHYSICIAN_NAME . ', Ihr Facharzt für Haartransplantation | Apex Beauty';
-$seoDescription = 'Lernen Sie ' . APEX_PHYSICIAN_NAME . ' kennen, verantwortlich für die medizinische Qualität jeder Haartransplantation bei Apex Beauty.';
+require_once __DIR__ . '/includes/i18n.php';
+$currentLang = apex_current_lang();
+$seoTitle = $currentLang === 'en'
+    ? APEX_PHYSICIAN_NAME . ', Your Hair Transplant Specialist | Apex Beauty'
+    : APEX_PHYSICIAN_NAME . ', Ihr Facharzt für Haartransplantation | Apex Beauty';
+$seoDescription = $currentLang === 'en'
+    ? 'Meet ' . APEX_PHYSICIAN_NAME . ', responsible for the medical quality of every hair transplant at Apex Beauty.'
+    : 'Lernen Sie ' . APEX_PHYSICIAN_NAME . ' kennen, verantwortlich für die medizinische Qualität jeder Haartransplantation bei Apex Beauty.';
 $seoCanonicalPath = 'doctor';
 $physicianSchema = [
     '@context' => 'https://schema.org',
@@ -12,9 +18,10 @@ $physicianSchema = [
     'url' => rtrim(APEX_SITE_URL, '/') . '/doctor.php',
     'worksFor' => ['@type' => 'MedicalClinic', 'name' => APEX_BUSINESS_NAME, 'url' => APEX_SITE_URL],
 ];
+ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars($currentLang, ENT_QUOTES) ?>">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -546,3 +553,4 @@ include __DIR__ . '/includes/site-header.php';
 
 </body>
 </html>
+<?php echo apex_localize_output((string) ob_get_clean(), $currentLang); ?>

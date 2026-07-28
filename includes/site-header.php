@@ -1,11 +1,19 @@
 <?php declare(strict_types=1);
 
 require_once __DIR__ . '/site-config.php';
+require_once __DIR__ . '/i18n.php';
 
 $siteHeaderMode = $siteHeaderMode ?? 'simple';
 $siteActivePage = $siteActivePage ?? '';
+$siteLangBase = apex_lang_base();
+// Pages pass 'index.php' (the only value ever used in practice) or leave
+// these unset; either way the real link always needs the current language's
+// URL prefix, since a bare relative "index.php" resolves one level too deep
+// once a page is actually served from under /en/.
 $siteHomeHref = $siteHomeHref ?? 'index.php';
+$siteHomeHref = $siteLangBase . '/' . ($siteHomeHref === 'index.php' || $siteHomeHref === '' ? '' : ltrim($siteHomeHref, '/'));
 $siteSectionBase = $siteSectionBase ?? '';
+$siteSectionBase = $siteLangBase . '/' . ($siteSectionBase === 'index.php' || $siteSectionBase === '' ? '' : ltrim($siteSectionBase, '/'));
 
 if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
   define('APEX_SITE_HEADER_STYLE_EMITTED', true);
@@ -266,10 +274,10 @@ $medicalClinicSchema = [
 <?php if ($siteHeaderMode === 'full'): ?>
   <div class="nav-collapse">
     <div class="nav-links">
-      <a href="service-hair-transplant.php" data-de="Verfahren" data-en="Procedures" data-fr="Procédures" data-nl="Procedures" data-it="Procedure" data-tr="İşlemler">Verfahren</a>
+      <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/service-hair-transplant" data-de="Verfahren" data-en="Procedures" data-fr="Procédures" data-nl="Procedures" data-it="Procedure" data-tr="İşlemler">Verfahren</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after" data-fr="Avant/après" data-nl="Voor en na" data-it="Prima e dopo" data-tr="Öncesi ve Sonrası">Vorher-Nachher</a>
-      <a href="doctor.php" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
-      <a href="hairpedia.php" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
+      <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/doctor" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
+      <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/hairpedia" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#network" data-de="Unser Netzwerk" data-en="Our Network" data-fr="Notre réseau" data-nl="Ons netwerk" data-it="La nostra rete" data-tr="Ağımız">Unser Netzwerk</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
     </div>
@@ -297,11 +305,11 @@ $medicalClinicSchema = [
   </button>
 <?php else: ?>
   <div class="nav-links">
-    <a href="service-hair-transplant.php" class="<?= $siteActivePage === 'service' ? 'active' : '' ?>" data-de="Verfahren" data-en="Procedures" data-fr="Procédures" data-nl="Procedures" data-it="Procedure" data-tr="İşlemler">Verfahren</a>
-    <a href="index.php#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after" data-fr="Avant/après" data-nl="Voor en na" data-it="Prima e dopo" data-tr="Öncesi ve Sonrası">Vorher-Nachher</a>
-    <a href="doctor.php" class="<?= $siteActivePage === 'doctor' ? 'active' : '' ?>" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
-    <a href="hairpedia.php" class="<?= $siteActivePage === 'hairpedia' ? 'active' : '' ?>" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
-    <a href="index.php#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
+    <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/service-hair-transplant" class="<?= $siteActivePage === 'service' ? 'active' : '' ?>" data-de="Verfahren" data-en="Procedures" data-fr="Procédures" data-nl="Procedures" data-it="Procedure" data-tr="İşlemler">Verfahren</a>
+    <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after" data-fr="Avant/après" data-nl="Voor en na" data-it="Prima e dopo" data-tr="Öncesi ve Sonrası">Vorher-Nachher</a>
+    <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/doctor" class="<?= $siteActivePage === 'doctor' ? 'active' : '' ?>" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
+    <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/hairpedia" class="<?= $siteActivePage === 'hairpedia' ? 'active' : '' ?>" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
+    <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch" id="langSwitch">

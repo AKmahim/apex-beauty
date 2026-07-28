@@ -1,8 +1,14 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
-$seoTitle = 'Haartransplantation Österreich: Apex Beauty für Beratung, Behandlung & Nachsorge';
-$seoDescription = 'Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.';
+require_once __DIR__ . '/includes/i18n.php';
+$currentLang = apex_current_lang();
+$seoTitle = $currentLang === 'en'
+    ? 'Hair Transplant Austria: Apex Beauty for Consultation, Treatment & Aftercare'
+    : 'Haartransplantation Österreich: Apex Beauty für Beratung, Behandlung & Nachsorge';
+$seoDescription = $currentLang === 'en'
+    ? "Personal consultation in Austria, hair transplantation at our leading clinic in Turkey, and professional aftercare in Austria, Germany and Switzerland. One of Europe's largest aftercare networks."
+    : 'Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.';
 $seoCanonicalPath = '';
 
 // FAQPage schema, generated straight from the same home.json the admin
@@ -14,21 +20,24 @@ if ($faqItems) {
     $faqSchema = [
         '@context' => 'https://schema.org',
         '@type' => 'FAQPage',
-        'mainEntity' => array_map(static function (array $item): array {
+        'mainEntity' => array_map(static function (array $item) use ($currentLang): array {
+            $question = $item['question'][$currentLang] ?? $item['question']['en'] ?? $item['question']['de'] ?? '';
+            $answer = $item['answer'][$currentLang] ?? $item['answer']['en'] ?? $item['answer']['de'] ?? '';
             return [
                 '@type' => 'Question',
-                'name' => strip_tags((string) ($item['question']['de'] ?? '')),
+                'name' => strip_tags((string) $question),
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => strip_tags((string) ($item['answer']['de'] ?? '')),
+                    'text' => strip_tags((string) $answer),
                 ],
             ];
         }, $faqItems),
     ];
 }
+ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars($currentLang, ENT_QUOTES) ?>">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2328,3 +2337,4 @@ include __DIR__ . '/includes/site-header.php';
 
 </body>
 </html>
+<?php echo apex_localize_output((string) ob_get_clean(), $currentLang); ?>

@@ -1,13 +1,20 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
-$seoTitle = 'Kostenlose Beratung bei Apex Beauty';
-$seoDescription = 'Sichern Sie sich eine kostenlose, unverbindliche Beratung zur Haartransplantation bei Apex Beauty.';
+require_once __DIR__ . '/includes/i18n.php';
+$currentLang = apex_current_lang();
+$seoTitle = $currentLang === 'en'
+    ? 'Free Consultation at Apex Beauty'
+    : 'Kostenlose Beratung bei Apex Beauty';
+$seoDescription = $currentLang === 'en'
+    ? 'Secure a free, no-obligation hair transplant consultation with Apex Beauty.'
+    : 'Sichern Sie sich eine kostenlose, unverbindliche Beratung zur Haartransplantation bei Apex Beauty.';
 $seoCanonicalPath = 'contact';
 $seoNoindex = true;
+ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars($currentLang, ENT_QUOTES) ?>">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -669,3 +676,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
+<?php echo apex_localize_output((string) ob_get_clean(), $currentLang); ?>

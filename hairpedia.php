@@ -1,8 +1,14 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
-$seoTitle = 'Hairpedia: Ursachen, Diagnose & Behandlung von Haarausfall | Apex Beauty';
-$seoDescription = 'Alles über Haarausfall: Ursachen, Arten, Diagnose, Behandlungsmöglichkeiten und Haartransplantation, verständlich erklärt von Apex Beauty.';
+require_once __DIR__ . '/includes/i18n.php';
+$currentLang = apex_current_lang();
+$seoTitle = $currentLang === 'en'
+    ? 'Hairpedia: Causes, Diagnosis & Treatment of Hair Loss | Apex Beauty'
+    : 'Hairpedia: Ursachen, Diagnose & Behandlung von Haarausfall | Apex Beauty';
+$seoDescription = $currentLang === 'en'
+    ? 'Everything about hair loss: causes, types, diagnosis, treatment options and hair transplantation, explained clearly by Apex Beauty.'
+    : 'Alles über Haarausfall: Ursachen, Arten, Diagnose, Behandlungsmöglichkeiten und Haartransplantation, verständlich erklärt von Apex Beauty.';
 $seoCanonicalPath = 'hairpedia';
 $medicalWebPageSchema = [
     '@context' => 'https://schema.org',
@@ -13,9 +19,10 @@ $medicalWebPageSchema = [
     'about' => ['@type' => 'MedicalCondition', 'name' => 'Androgenetic alopecia (hair loss)'],
     'publisher' => ['@type' => 'MedicalOrganization', 'name' => APEX_BUSINESS_NAME],
 ];
+ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?= htmlspecialchars($currentLang, ENT_QUOTES) ?>">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1445,3 +1452,4 @@ include __DIR__ . '/includes/site-header.php';
 
 </body>
 </html>
+<?php echo apex_localize_output((string) ob_get_clean(), $currentLang); ?>
