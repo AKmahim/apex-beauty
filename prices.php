@@ -285,10 +285,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     white-space: nowrap;
   }
   .pr-table thead th:first-child { background: linear-gradient(100deg, var(--teal-700), var(--teal-600)); }
-  .pr-table tbody td:not(:first-child) { text-align: center; width: 130px; }
-  .pr-table tbody tr:last-child td { border-bottom: none; }
-  .pr-table tbody tr:hover td { background: rgba(224,242,254,0.45); }
-  .pr-table td:first-child { color: var(--ink); font-weight: 600; }
+  .pr-table tbody td { text-align: center; width: 130px; }
+  .pr-table tbody tr:last-child td, .pr-table tbody tr:last-child th { border-bottom: none; }
+  .pr-table tbody tr:hover td, .pr-table tbody tr:hover th { background: rgba(224,242,254,0.45); }
+  /* First cell of every body/footer row is a row-scoped header cell, so a
+     screen reader announces the service name alongside each tick rather
+     than reading a column of bare checkmarks. */
+  .pr-table tbody th { color: var(--ink); font-weight: 600; width: auto; }
   .pr-yes {
     display: inline-flex; align-items: center; justify-content: center;
     width: 22px; height: 22px; border-radius: 50%;
@@ -296,11 +299,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #fff; font-size: 12px; font-weight: 700;
   }
   .pr-no { display: inline-block; color: rgba(69,89,106,0.4); font-size: 15px; font-weight: 700; }
-  .pr-table tfoot td {
+  .pr-table tfoot td, .pr-table tfoot th {
     font-weight: 800; font-size: 15px; color: var(--ink);
     background: rgba(224,242,254,0.5);
   }
-  .pr-table tfoot td:not(:first-child) { text-align: center; }
+  .pr-table tfoot td { text-align: center; }
 
   /* ---- NOTES ---- */
   .pr-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
@@ -400,7 +403,7 @@ include __DIR__ . '/includes/site-header.php';
   <div class="pr-hero-bg"></div>
   <div class="pr-hero-inner">
     <div class="eyebrow"><span class="dot"></span><span data-de="Preise &amp; Pakete" data-en="Prices &amp; Packages" data-fr="Prix &amp; forfaits" data-nl="Prijzen &amp; pakketten" data-it="Prezzi e pacchetti" data-tr="Fiyatlar ve Paketler">Preise &amp; Pakete</span></div>
-    <h1 data-de="Transparente Preise für Ihre &lt;span&gt;Haartransplantation&lt;/span&gt;" data-en="Transparent pricing for your &lt;span&gt;hair transplant&lt;/span&gt;" data-fr="Des tarifs transparents pour votre &lt;span&gt;greffe de cheveux&lt;/span&gt;" data-nl="Transparante prijzen voor uw &lt;span&gt;haartransplantatie&lt;/span&gt;" data-it="Prezzi trasparenti per il tuo &lt;span&gt;trapianto di capelli&lt;/span&gt;" data-tr="&lt;span&gt;Saç ekiminiz&lt;/span&gt; için şeffaf fiyatlar">Transparente Preise für Ihre <span>Haartransplantation</span></h1>
+    <h1 data-de="Transparente Preise für Ihre &lt;span&gt;Haartransplantation&lt;/span&gt;" data-en="Transparent pricing for your &lt;span&gt;hair transplant&lt;/span&gt;" data-fr="Des tarifs transparents pour votre &lt;span&gt;greffe de cheveux&lt;/span&gt;" data-nl="Transparante prijzen voor uw &lt;span&gt;haartransplantatie&lt;/span&gt;" data-it="Prezzi trasparenti per il tuo &lt;span&gt;trapianto di capelli&lt;/span&gt;" data-tr="&lt;span&gt;Saç ekiminiz&lt;/span&gt; için şeffaf fiyatlar">Transparente Preise für Ihre Haartransplantation</h1>
     <p data-de="Drei Komplettpakete, ein fester Preis. Jedes Paket enthält die vollständige medizinische Behandlung inklusive PRP, Medikamenten und ärztlicher Nachbehandlung." data-en="Three all-in packages, one fixed price. Every package covers the complete medical treatment including PRP, medication and medical follow-ups." data-fr="Trois forfaits complets, un prix fixe. Chaque forfait comprend l'intégralité du traitement médical, y compris le PRP, les médicaments et le suivi médical." data-nl="Drie complete pakketten, één vaste prijs. Elk pakket omvat de volledige medische behandeling inclusief PRP, medicatie en medische nacontroles." data-it="Tre pacchetti completi, un prezzo fisso. Ogni pacchetto comprende l'intero trattamento medico, inclusi PRP, farmaci e controlli medici." data-tr="Üç eksiksiz paket, tek sabit fiyat. Her paket; PRP, ilaçlar ve tıbbi kontroller dahil olmak üzere eksiksiz tıbbi tedaviyi kapsar.">Drei Komplettpakete, ein fester Preis. Jedes Paket enthält die vollständige medizinische Behandlung inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.</p>
   </div>
 </section>
@@ -421,7 +424,7 @@ include __DIR__ . '/includes/site-header.php';
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Haaranalyse" data-en="Free hair analysis" data-fr="Analyse capillaire gratuite" data-nl="Gratis haaranalyse" data-it="Analisi dei capelli gratuita" data-tr="Ücretsiz saç analizi">Kostenlose Haaranalyse</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Individuelle Behandlungsplanung" data-en="Individual treatment planning" data-fr="Planification personnalisée du traitement" data-nl="Individuele behandelplanning" data-it="Pianificazione personalizzata del trattamento" data-tr="Kişiye özel tedavi planlaması">Individuelle Behandlungsplanung</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Präzise Anzeichnung der Haarlinie" data-en="Precise hairline design" data-fr="Tracé précis de la ligne capillaire" data-nl="Precieze aftekening van de haarlijn" data-it="Disegno preciso dell'attaccatura" data-tr="Hassas saç çizgisi tasarımı">Präzise Anzeichnung der Haarlinie</span></div>
-        <div class="pr-feat"><span class="tick">✓</span><span data-de="Hochwertige Haartransplantation (DHI/FUE – nach medizinischer Empfehlung)" data-en="High-quality hair transplant (DHI/FUE – as medically recommended)" data-fr="Greffe de cheveux haut de gamme (DHI/FUE – selon recommandation médicale)" data-nl="Hoogwaardige haartransplantatie (DHI/FUE – volgens medisch advies)" data-it="Trapianto di capelli di alta qualità (DHI/FUE – secondo indicazione medica)" data-tr="Yüksek kaliteli saç ekimi (DHI/FUE – tıbbi öneriye göre)">Hochwertige Haartransplantation (DHI/FUE – nach medizinischer Empfehlung)</span></div>
+        <div class="pr-feat"><span class="tick">✓</span><span data-de="Hochwertige Haartransplantation (DHI/FUE, nach medizinischer Empfehlung)" data-en="High-quality hair transplant (DHI/FUE, as medically recommended)" data-fr="Greffe de cheveux haut de gamme (DHI/FUE, selon recommandation médicale)" data-nl="Hoogwaardige haartransplantatie (DHI/FUE, volgens medisch advies)" data-it="Trapianto di capelli di alta qualità (DHI/FUE, secondo indicazione medica)" data-tr="Yüksek kaliteli saç ekimi (DHI/FUE, tıbbi öneriye göre)">Hochwertige Haartransplantation (DHI/FUE, nach medizinischer Empfehlung)</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="PRP-Eigenblutbehandlung inklusive" data-en="PRP treatment included" data-fr="Traitement PRP inclus" data-nl="PRP-behandeling inbegrepen" data-it="Trattamento PRP incluso" data-tr="PRP tedavisi dahil">PRP-Eigenblutbehandlung inklusive</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Medikamente für die erste Woche" data-en="Medication for the first week" data-fr="Médicaments pour la première semaine" data-nl="Medicatie voor de eerste week" data-it="Farmaci per la prima settimana" data-tr="İlk hafta için ilaçlar">Medikamente für die erste Woche</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Zweimal ärztliche Nachbehandlung in der Klinik" data-en="Two medical follow-ups at the clinic" data-fr="Deux suivis médicaux à la clinique" data-nl="Twee medische nacontroles in de kliniek" data-it="Due controlli medici in clinica" data-tr="Klinikte iki kez tıbbi kontrol">Zweimal ärztliche Nachbehandlung in der Klinik</span></div>
@@ -449,7 +452,7 @@ include __DIR__ . '/includes/site-header.php';
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Haaranalyse" data-en="Free hair analysis" data-fr="Analyse capillaire gratuite" data-nl="Gratis haaranalyse" data-it="Analisi dei capelli gratuita" data-tr="Ücretsiz saç analizi">Kostenlose Haaranalyse</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Individuelle Behandlungsplanung" data-en="Individual treatment planning" data-fr="Planification personnalisée du traitement" data-nl="Individuele behandelplanning" data-it="Pianificazione personalizzata del trattamento" data-tr="Kişiye özel tedavi planlaması">Individuelle Behandlungsplanung</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Präzise Anzeichnung der Haarlinie" data-en="Precise hairline design" data-fr="Tracé précis de la ligne capillaire" data-nl="Precieze aftekening van de haarlijn" data-it="Disegno preciso dell'attaccatura" data-tr="Hassas saç çizgisi tasarımı">Präzise Anzeichnung der Haarlinie</span></div>
-        <div class="pr-feat"><span class="tick">✓</span><span data-de="Hochwertige Haartransplantation (DHI/FUE – nach medizinischer Empfehlung)" data-en="High-quality hair transplant (DHI/FUE – as medically recommended)" data-fr="Greffe de cheveux haut de gamme (DHI/FUE – selon recommandation médicale)" data-nl="Hoogwaardige haartransplantatie (DHI/FUE – volgens medisch advies)" data-it="Trapianto di capelli di alta qualità (DHI/FUE – secondo indicazione medica)" data-tr="Yüksek kaliteli saç ekimi (DHI/FUE – tıbbi öneriye göre)">Hochwertige Haartransplantation (DHI/FUE – nach medizinischer Empfehlung)</span></div>
+        <div class="pr-feat"><span class="tick">✓</span><span data-de="Hochwertige Haartransplantation (DHI/FUE, nach medizinischer Empfehlung)" data-en="High-quality hair transplant (DHI/FUE, as medically recommended)" data-fr="Greffe de cheveux haut de gamme (DHI/FUE, selon recommandation médicale)" data-nl="Hoogwaardige haartransplantatie (DHI/FUE, volgens medisch advies)" data-it="Trapianto di capelli di alta qualità (DHI/FUE, secondo indicazione medica)" data-tr="Yüksek kaliteli saç ekimi (DHI/FUE, tıbbi öneriye göre)">Hochwertige Haartransplantation (DHI/FUE, nach medizinischer Empfehlung)</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="PRP-Eigenblutbehandlung inklusive" data-en="PRP treatment included" data-fr="Traitement PRP inclus" data-nl="PRP-behandeling inbegrepen" data-it="Trattamento PRP incluso" data-tr="PRP tedavisi dahil">PRP-Eigenblutbehandlung inklusive</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Medikamente für die erste Woche" data-en="Medication for the first week" data-fr="Médicaments pour la première semaine" data-nl="Medicatie voor de eerste week" data-it="Farmaci per la prima settimana" data-tr="İlk hafta için ilaçlar">Medikamente für die erste Woche</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Zweimal ärztliche Nachbehandlung in der Klinik" data-en="Two medical follow-ups at the clinic" data-fr="Deux suivis médicaux à la clinique" data-nl="Twee medische nacontroles in de kliniek" data-it="Due controlli medici in clinica" data-tr="Klinikte iki kez tıbbi kontrol">Zweimal ärztliche Nachbehandlung in der Klinik</span></div>
@@ -466,14 +469,14 @@ include __DIR__ . '/includes/site-header.php';
       <div class="pr-name" data-de="Basispaket" data-en="Basic Package" data-fr="Forfait de base" data-nl="Basispakket" data-it="Pacchetto Base" data-tr="Temel Paket">Basispaket</div>
       <div class="pr-price" data-de="€ 2.650" data-en="€2,650" data-fr="2 650 €" data-nl="€ 2.650" data-it="2.650 €" data-tr="2.650 €">€ 2.650</div>
       <div class="pr-price-note" data-de="Komplettpaket" data-en="All-in package" data-fr="Forfait tout compris" data-nl="Compleet pakket" data-it="Pacchetto completo" data-tr="Her Şey Dahil Paket">Komplettpaket</div>
-      <p class="pr-desc" data-de="Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf – von der Beratung bis zur Nachbetreuung." data-en="All medical services follow a clearly structured treatment process – from consultation through to aftercare." data-fr="Toutes les prestations médicales suivent un parcours de traitement clairement structuré – de la consultation au suivi." data-nl="Alle medische diensten volgen een duidelijk gestructureerd behandeltraject – van consult tot nazorg." data-it="Tutte le prestazioni mediche seguono un percorso di trattamento chiaramente strutturato – dalla consulenza al follow-up." data-tr="Tüm tıbbi hizmetler, danışmadan bakım sonrası sürece kadar net yapılandırılmış bir tedavi akışını izler.">Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf – von der Beratung bis zur Nachbetreuung.</p>
+      <p class="pr-desc" data-de="Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf, von der Beratung bis zur Nachbetreuung." data-en="All medical services follow a clearly structured treatment process, from consultation through to aftercare." data-fr="Toutes les prestations médicales suivent un parcours de traitement clairement structuré, de la consultation au suivi." data-nl="Alle medische diensten volgen een duidelijk gestructureerd behandeltraject, van consult tot nazorg." data-it="Tutte le prestazioni mediche seguono un percorso di trattamento chiaramente strutturato, dalla consulenza al follow-up." data-tr="Tüm tıbbi hizmetler, danışmadan bakım sonrası sürece kadar net yapılandırılmış bir tedavi akışını izler.">Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf, von der Beratung bis zur Nachbetreuung.</p>
       <div class="pr-divider"></div>
       <div class="pr-feats">
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Erstberatung" data-en="Free initial consultation" data-fr="Première consultation gratuite" data-nl="Gratis eerste consult" data-it="Prima consulenza gratuita" data-tr="Ücretsiz ilk danışma">Kostenlose Erstberatung</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Haaranalyse" data-en="Free hair analysis" data-fr="Analyse capillaire gratuite" data-nl="Gratis haaranalyse" data-it="Analisi dei capelli gratuita" data-tr="Ücretsiz saç analizi">Kostenlose Haaranalyse</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Individuelle Behandlungsplanung" data-en="Individual treatment planning" data-fr="Planification personnalisée du traitement" data-nl="Individuele behandelplanning" data-it="Pianificazione personalizzata del trattamento" data-tr="Kişiye özel tedavi planlaması">Individuelle Behandlungsplanung</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Präzise Anzeichnung der Haarlinie" data-en="Precise hairline design" data-fr="Tracé précis de la ligne capillaire" data-nl="Precieze aftekening van de haarlijn" data-it="Disegno preciso dell'attaccatura" data-tr="Hassas saç çizgisi tasarımı">Präzise Anzeichnung der Haarlinie</span></div>
-        <div class="pr-feat"><span class="tick">✓</span><span data-de="Hochwertige Haartransplantation (DHI/FUE – nach medizinischer Empfehlung)" data-en="High-quality hair transplant (DHI/FUE – as medically recommended)" data-fr="Greffe de cheveux haut de gamme (DHI/FUE – selon recommandation médicale)" data-nl="Hoogwaardige haartransplantatie (DHI/FUE – volgens medisch advies)" data-it="Trapianto di capelli di alta qualità (DHI/FUE – secondo indicazione medica)" data-tr="Yüksek kaliteli saç ekimi (DHI/FUE – tıbbi öneriye göre)">Hochwertige Haartransplantation (DHI/FUE – nach medizinischer Empfehlung)</span></div>
+        <div class="pr-feat"><span class="tick">✓</span><span data-de="Hochwertige Haartransplantation (DHI/FUE, nach medizinischer Empfehlung)" data-en="High-quality hair transplant (DHI/FUE, as medically recommended)" data-fr="Greffe de cheveux haut de gamme (DHI/FUE, selon recommandation médicale)" data-nl="Hoogwaardige haartransplantatie (DHI/FUE, volgens medisch advies)" data-it="Trapianto di capelli di alta qualità (DHI/FUE, secondo indicazione medica)" data-tr="Yüksek kaliteli saç ekimi (DHI/FUE, tıbbi öneriye göre)">Hochwertige Haartransplantation (DHI/FUE, nach medizinischer Empfehlung)</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="PRP-Eigenblutbehandlung inklusive" data-en="PRP treatment included" data-fr="Traitement PRP inclus" data-nl="PRP-behandeling inbegrepen" data-it="Trattamento PRP incluso" data-tr="PRP tedavisi dahil">PRP-Eigenblutbehandlung inklusive</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Medikamente für die erste Woche" data-en="Medication for the first week" data-fr="Médicaments pour la première semaine" data-nl="Medicatie voor de eerste week" data-it="Farmaci per la prima settimana" data-tr="İlk hafta için ilaçlar">Medikamente für die erste Woche</span></div>
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Zweimal ärztliche Nachbehandlung in der Klinik" data-en="Two medical follow-ups at the clinic" data-fr="Deux suivis médicaux à la clinique" data-nl="Twee medische nacontroles in de kliniek" data-it="Due controlli medici in clinica" data-tr="Klinikte iki kez tıbbi kontrol">Zweimal ärztliche Nachbehandlung in der Klinik</span></div>
@@ -503,69 +506,69 @@ include __DIR__ . '/includes/site-header.php';
       </thead>
       <tbody>
         <tr>
-          <td data-de="Kostenlose Erstberatung" data-en="Free initial consultation" data-fr="Première consultation gratuite" data-nl="Gratis eerste consult" data-it="Prima consulenza gratuita" data-tr="Ücretsiz ilk danışma">Kostenlose Erstberatung</td>
+          <th scope="row" data-de="Kostenlose Erstberatung" data-en="Free initial consultation" data-fr="Première consultation gratuite" data-nl="Gratis eerste consult" data-it="Prima consulenza gratuita" data-tr="Ücretsiz ilk danışma">Kostenlose Erstberatung</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Kostenlose Haaranalyse" data-en="Free hair analysis" data-fr="Analyse capillaire gratuite" data-nl="Gratis haaranalyse" data-it="Analisi dei capelli gratuita" data-tr="Ücretsiz saç analizi">Kostenlose Haaranalyse</td>
+          <th scope="row" data-de="Kostenlose Haaranalyse" data-en="Free hair analysis" data-fr="Analyse capillaire gratuite" data-nl="Gratis haaranalyse" data-it="Analisi dei capelli gratuita" data-tr="Ücretsiz saç analizi">Kostenlose Haaranalyse</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Individuelle Behandlungsplanung" data-en="Individual treatment planning" data-fr="Planification personnalisée du traitement" data-nl="Individuele behandelplanning" data-it="Pianificazione personalizzata del trattamento" data-tr="Kişiye özel tedavi planlaması">Individuelle Behandlungsplanung</td>
+          <th scope="row" data-de="Individuelle Behandlungsplanung" data-en="Individual treatment planning" data-fr="Planification personnalisée du traitement" data-nl="Individuele behandelplanning" data-it="Pianificazione personalizzata del trattamento" data-tr="Kişiye özel tedavi planlaması">Individuelle Behandlungsplanung</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Präzise Anzeichnung der Haarlinie" data-en="Precise hairline design" data-fr="Tracé précis de la ligne capillaire" data-nl="Precieze aftekening van de haarlijn" data-it="Disegno preciso dell'attaccatura" data-tr="Hassas saç çizgisi tasarımı">Präzise Anzeichnung der Haarlinie</td>
+          <th scope="row" data-de="Präzise Anzeichnung der Haarlinie" data-en="Precise hairline design" data-fr="Tracé précis de la ligne capillaire" data-nl="Precieze aftekening van de haarlijn" data-it="Disegno preciso dell'attaccatura" data-tr="Hassas saç çizgisi tasarımı">Präzise Anzeichnung der Haarlinie</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Haartransplantation (DHI/FUE)" data-en="Hair transplant (DHI/FUE)" data-fr="Greffe de cheveux (DHI/FUE)" data-nl="Haartransplantatie (DHI/FUE)" data-it="Trapianto di capelli (DHI/FUE)" data-tr="Saç ekimi (DHI/FUE)">Haartransplantation (DHI/FUE)</td>
+          <th scope="row" data-de="Haartransplantation (DHI/FUE)" data-en="Hair transplant (DHI/FUE)" data-fr="Greffe de cheveux (DHI/FUE)" data-nl="Haartransplantatie (DHI/FUE)" data-it="Trapianto di capelli (DHI/FUE)" data-tr="Saç ekimi (DHI/FUE)">Haartransplantation (DHI/FUE)</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="PRP-Eigenblutbehandlung" data-en="PRP treatment" data-fr="Traitement PRP" data-nl="PRP-behandeling" data-it="Trattamento PRP" data-tr="PRP tedavisi">PRP-Eigenblutbehandlung</td>
+          <th scope="row" data-de="PRP-Eigenblutbehandlung" data-en="PRP treatment" data-fr="Traitement PRP" data-nl="PRP-behandeling" data-it="Trattamento PRP" data-tr="PRP tedavisi">PRP-Eigenblutbehandlung</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Medikamente für die erste Woche" data-en="Medication for the first week" data-fr="Médicaments pour la première semaine" data-nl="Medicatie voor de eerste week" data-it="Farmaci per la prima settimana" data-tr="İlk hafta için ilaçlar">Medikamente für die erste Woche</td>
+          <th scope="row" data-de="Medikamente für die erste Woche" data-en="Medication for the first week" data-fr="Médicaments pour la première semaine" data-nl="Medicatie voor de eerste week" data-it="Farmaci per la prima settimana" data-tr="İlk hafta için ilaçlar">Medikamente für die erste Woche</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Zweimal ärztliche Nachbehandlung" data-en="Two medical follow-ups" data-fr="Deux suivis médicaux" data-nl="Twee medische nacontroles" data-it="Due controlli medici" data-tr="İki kez tıbbi kontrol">Zweimal ärztliche Nachbehandlung</td>
+          <th scope="row" data-de="Zweimal ärztliche Nachbehandlung" data-en="Two medical follow-ups" data-fr="Deux suivis médicaux" data-nl="Twee medische nacontroles" data-it="Due controlli medici" data-tr="İki kez tıbbi kontrol">Zweimal ärztliche Nachbehandlung</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="Deutschsprachige Betreuung" data-en="German-speaking support" data-fr="Accompagnement en allemand" data-nl="Duitstalige begeleiding" data-it="Assistenza in lingua tedesca" data-tr="Almanca dil desteği">Deutschsprachige Betreuung</td>
+          <th scope="row" data-de="Deutschsprachige Betreuung" data-en="German-speaking support" data-fr="Accompagnement en allemand" data-nl="Duitstalige begeleiding" data-it="Assistenza in lingua tedesca" data-tr="Almanca dil desteği">Deutschsprachige Betreuung</th>
           <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td>
         </tr>
         <tr>
-          <td data-de="3 Übernachtungen im Partnerhotel" data-en="3 nights at the partner hotel" data-fr="3 nuits à l'hôtel partenaire" data-nl="3 overnachtingen in het partnerhotel" data-it="3 notti nell'hotel partner" data-tr="Partner otelde 3 gece konaklama">3 Übernachtungen im Partnerhotel</td>
-          <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-no">–</span></td>
+          <th scope="row" data-de="3 Übernachtungen im Partnerhotel" data-en="3 nights at the partner hotel" data-fr="3 nuits à l'hôtel partenaire" data-nl="3 overnachtingen in het partnerhotel" data-it="3 notti nell'hotel partner" data-tr="Partner otelde 3 gece konaklama">3 Übernachtungen im Partnerhotel</th>
+          <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-no">✕</span></td>
         </tr>
         <tr>
-          <td data-de="Flughafentransfer (Flughafen ↔ Hotel)" data-en="Airport transfer (airport ↔ hotel)" data-fr="Transfert aéroport (aéroport ↔ hôtel)" data-nl="Luchthaventransfer (luchthaven ↔ hotel)" data-it="Transfer aeroportuale (aeroporto ↔ hotel)" data-tr="Havaalanı transferi (havaalanı ↔ otel)">Flughafentransfer (Flughafen ↔ Hotel)</td>
-          <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-no">–</span></td>
+          <th scope="row" data-de="Flughafentransfer (Flughafen ↔ Hotel)" data-en="Airport transfer (airport ↔ hotel)" data-fr="Transfert aéroport (aéroport ↔ hôtel)" data-nl="Luchthaventransfer (luchthaven ↔ hotel)" data-it="Transfer aeroportuale (aeroporto ↔ hotel)" data-tr="Havaalanı transferi (havaalanı ↔ otel)">Flughafentransfer (Flughafen ↔ Hotel)</th>
+          <td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-no">✕</span></td>
         </tr>
         <tr>
-          <td data-de="Geführte Istanbul-Tour" data-en="Guided Istanbul tour" data-fr="Visite guidée d'Istanbul" data-nl="Begeleide Istanbul-tour" data-it="Tour guidato di Istanbul" data-tr="Rehberli İstanbul turu">Geführte Istanbul-Tour</td>
-          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">–</span></td><td><span class="pr-no">–</span></td>
+          <th scope="row" data-de="Geführte Istanbul-Tour" data-en="Guided Istanbul tour" data-fr="Visite guidée d'Istanbul" data-nl="Begeleide Istanbul-tour" data-it="Tour guidato di Istanbul" data-tr="Rehberli İstanbul turu">Geführte Istanbul-Tour</th>
+          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">✕</span></td><td><span class="pr-no">✕</span></td>
         </tr>
         <tr>
-          <td data-de="Bosporus-Schifffahrt (ca. 2,5 Stunden)" data-en="Bosphorus cruise (approx. 2.5 hours)" data-fr="Croisière sur le Bosphore (env. 2,5 heures)" data-nl="Bosporus-cruise (ca. 2,5 uur)" data-it="Crociera sul Bosforo (ca. 2,5 ore)" data-tr="Boğaz turu (yaklaşık 2,5 saat)">Bosporus-Schifffahrt (ca. 2,5 Stunden)</td>
-          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">–</span></td><td><span class="pr-no">–</span></td>
+          <th scope="row" data-de="Bosporus-Schifffahrt (ca. 2,5 Stunden)" data-en="Bosphorus cruise (approx. 2.5 hours)" data-fr="Croisière sur le Bosphore (env. 2,5 heures)" data-nl="Bosporus-cruise (ca. 2,5 uur)" data-it="Crociera sul Bosforo (ca. 2,5 ore)" data-tr="Boğaz turu (yaklaşık 2,5 saat)">Bosporus-Schifffahrt (ca. 2,5 Stunden)</th>
+          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">✕</span></td><td><span class="pr-no">✕</span></td>
         </tr>
         <tr>
-          <td data-de="Metrokarte für Sehenswürdigkeiten" data-en="Metro card for the sights" data-fr="Carte de métro pour les sites touristiques" data-nl="Metrokaart voor de bezienswaardigheden" data-it="Tessera della metro per le attrazioni" data-tr="Gezilecek yerler için metro kartı">Metrokarte für Sehenswürdigkeiten</td>
-          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">–</span></td><td><span class="pr-no">–</span></td>
+          <th scope="row" data-de="Metrokarte für Sehenswürdigkeiten" data-en="Metro card for the sights" data-fr="Carte de métro pour les sites touristiques" data-nl="Metrokaart voor de bezienswaardigheden" data-it="Tessera della metro per le attrazioni" data-tr="Gezilecek yerler için metro kartı">Metrokarte für Sehenswürdigkeiten</th>
+          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">✕</span></td><td><span class="pr-no">✕</span></td>
         </tr>
         <tr>
-          <td data-de="Persönliche VIP-Betreuung" data-en="Personal VIP support" data-fr="Accompagnement VIP personnalisé" data-nl="Persoonlijke VIP-begeleiding" data-it="Assistenza VIP personale" data-tr="Kişisel VIP hizmeti">Persönliche VIP-Betreuung</td>
-          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">–</span></td><td><span class="pr-no">–</span></td>
+          <th scope="row" data-de="Persönliche VIP-Betreuung" data-en="Personal VIP support" data-fr="Accompagnement VIP personnalisé" data-nl="Persoonlijke VIP-begeleiding" data-it="Assistenza VIP personale" data-tr="Kişisel VIP hizmeti">Persönliche VIP-Betreuung</th>
+          <td><span class="pr-yes">✓</span></td><td><span class="pr-no">✕</span></td><td><span class="pr-no">✕</span></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td data-de="Paketpreis" data-en="Package price" data-fr="Prix du forfait" data-nl="Pakketprijs" data-it="Prezzo del pacchetto" data-tr="Paket fiyatı">Paketpreis</td>
+          <th scope="row" data-de="Paketpreis" data-en="Package price" data-fr="Prix du forfait" data-nl="Pakketprijs" data-it="Prezzo del pacchetto" data-tr="Paket fiyatı">Paketpreis</th>
           <td data-de="€ 4.350" data-en="€4,350" data-fr="4 350 €" data-nl="€ 4.350" data-it="4.350 €" data-tr="4.350 €">€ 4.350</td>
           <td data-de="€ 3.950" data-en="€3,950" data-fr="3 950 €" data-nl="€ 3.950" data-it="3.950 €" data-tr="3.950 €">€ 3.950</td>
           <td data-de="€ 2.650" data-en="€2,650" data-fr="2 650 €" data-nl="€ 2.650" data-it="2.650 €" data-tr="2.650 €">€ 2.650</td>
@@ -581,7 +584,7 @@ include __DIR__ . '/includes/site-header.php';
     </div>
     <div class="pr-note">
       <b data-de="Technik nach Befund" data-en="Technique based on assessment" data-fr="Technique selon le diagnostic" data-nl="Techniek op basis van diagnose" data-it="Tecnica in base alla valutazione" data-tr="Değerlendirmeye göre teknik">Technik nach Befund</b>
-      <p data-de="Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse – der Paketpreis bleibt davon unberührt." data-en="Whether DHI or FUE is used follows the medical recommendation after your hair analysis – the package price stays the same either way." data-fr="Le choix entre DHI et FUE dépend de la recommandation médicale après votre analyse capillaire – le prix du forfait reste inchangé." data-nl="Of DHI of FUE wordt gebruikt, volgt uit het medisch advies na uw haaranalyse – de pakketprijs blijft hetzelfde." data-it="Se venga utilizzata la tecnica DHI o FUE dipende dall'indicazione medica dopo l'analisi dei capelli – il prezzo del pacchetto non cambia." data-tr="DHI mi yoksa FUE mi kullanılacağı, saç analizinizin ardından verilen tıbbi öneriye bağlıdır – paket fiyatı değişmez.">Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse – der Paketpreis bleibt davon unberührt.</p>
+      <p data-de="Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse. Der Paketpreis bleibt davon unberührt." data-en="Whether DHI or FUE is used follows the medical recommendation after your hair analysis. The package price stays the same either way." data-fr="Le choix entre DHI et FUE dépend de la recommandation médicale après votre analyse capillaire. Le prix du forfait reste inchangé." data-nl="Of DHI of FUE wordt gebruikt, volgt uit het medisch advies na uw haaranalyse. De pakketprijs blijft hetzelfde." data-it="Se venga utilizzata la tecnica DHI o FUE dipende dall'indicazione medica dopo l'analisi dei capelli. Il prezzo del pacchetto non cambia." data-tr="DHI mi yoksa FUE mi kullanılacağı, saç analizinizin ardından verilen tıbbi öneriye bağlıdır. Paket fiyatı değişmez.">Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse. Der Paketpreis bleibt davon unberührt.</p>
     </div>
     <div class="pr-note">
       <b data-de="Offene Fragen?" data-en="Any open questions?" data-fr="Des questions ?" data-nl="Nog vragen?" data-it="Domande aperte?" data-tr="Sorularınız mı var?">Offene Fragen?</b>
@@ -593,7 +596,7 @@ include __DIR__ . '/includes/site-header.php';
 <div class="pr-band-wrap">
   <div class="pr-band">
     <h2 data-de="Welches Paket passt zu Ihnen?" data-en="Which package fits you?" data-fr="Quel forfait vous convient ?" data-nl="Welk pakket past bij u?" data-it="Quale pacchetto fa per te?" data-tr="Hangi paket size uygun?">Welches Paket passt zu Ihnen?</h2>
-    <p data-de="Erstberatung und Haaranalyse sind in jedem Paket kostenlos – und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist." data-en="The initial consultation and hair analysis are free in every package – and entirely without obligation. We will tell you honestly what makes medical sense." data-fr="La première consultation et l'analyse capillaire sont gratuites dans chaque forfait – et sans aucun engagement. Nous vous dirons honnêtement ce qui est médicalement pertinent." data-nl="Het eerste consult en de haaranalyse zijn in elk pakket gratis – en volledig vrijblijvend. We vertellen u eerlijk wat medisch zinvol is." data-it="La prima consulenza e l'analisi dei capelli sono gratuite in ogni pacchetto – e senza alcun impegno. Ti diremo onestamente cosa ha senso dal punto di vista medico." data-tr="İlk danışma ve saç analizi her pakette ücretsizdir – ve tamamen yükümlülüksüzdür. Tıbbi açıdan neyin anlamlı olduğunu size dürüstçe söyleriz.">Erstberatung und Haaranalyse sind in jedem Paket kostenlos – und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist.</p>
+    <p data-de="Erstberatung und Haaranalyse sind in jedem Paket kostenlos und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist." data-en="The initial consultation and hair analysis are free in every package and entirely without obligation. We will tell you honestly what makes medical sense." data-fr="La première consultation et l'analyse capillaire sont gratuites dans chaque forfait et sans aucun engagement. Nous vous dirons honnêtement ce qui est médicalement pertinent." data-nl="Het eerste consult en de haaranalyse zijn in elk pakket gratis en volledig vrijblijvend. We vertellen u eerlijk wat medisch zinvol is." data-it="La prima consulenza e l'analisi dei capelli sono gratuite in ogni pacchetto e senza alcun impegno. Ti diremo onestamente cosa ha senso dal punto di vista medico." data-tr="İlk danışma ve saç analizi her pakette ücretsizdir ve tamamen yükümlülüksüzdür. Tıbbi açıdan neyin anlamlı olduğunu size dürüstçe söyleriz.">Erstberatung und Haaranalyse sind in jedem Paket kostenlos und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist.</p>
     <div class="pr-band-actions">
       <a class="pr-band-btn" href="<?= htmlspecialchars($consultHref, ENT_QUOTES) ?>" data-de="Kostenlose Beratung sichern" data-en="Book a free consultation" data-fr="Réserver une consultation gratuite" data-nl="Gratis consult aanvragen" data-it="Prenota una consulenza gratuita" data-tr="Ücretsiz danışma alın">Kostenlose Beratung sichern</a>
       <a class="pr-band-btn ghost" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" onclick="trackWhatsAppContact()">
@@ -650,7 +653,7 @@ include __DIR__ . '/includes/site-header.php';
   // the switcher's own state to it rather than repainting the whole page.
   applyLang(document.documentElement.lang || 'de');
 
-  // Meta Pixel ViewContent — pricing is a high-intent page, so it earns its
+  // Meta Pixel ViewContent: pricing is a high-intent page, so it earns its
   // own signal rather than relying on PageView alone. Gated by the same
   // consent logic as every other event: never before marketing consent, but
   // not missed either if consent is granted later in this same page view
