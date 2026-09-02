@@ -18,6 +18,10 @@ RewriteRule ^consult-light/?$ index.php?open=consult-light [QSA,L]
 # this URL prefix at request time (see includes/i18n.php) - not a query
 # string, so it stays a clean, independently indexable /en/... URL.
 RewriteRule ^en/?$ index.php [L]
+# The consult shortcuts need their own /en rules before the generic one
+# below, which would otherwise look for a non-existent consult.php.
+RewriteRule ^en/consult/?$ index.php?open=consult [QSA,L]
+RewriteRule ^en/consult-light/?$ index.php?open=consult-light [QSA,L]
 RewriteRule ^en/([A-Za-z0-9-]+)/?$ $1.php [L]
 
 RewriteRule ^([A-Za-z0-9-]+)\.html$ $1.php [L]

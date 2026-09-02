@@ -175,13 +175,13 @@ function apex_ai_knowledge_base(): array
         'category' => 'clinic',
         'title' => ['en' => 'How much does it cost?', 'de' => 'Was kostet es?'],
         'text' => [
-            'en' => "Pricing depends on your graft count, technique, and the extent of the area treated, so we don't quote a number without a scalp analysis first. A free consultation gives you an exact, personalised quote with no obligation.",
-            'de' => 'Der Preis hängt von der Graft-Anzahl, der Technik und dem Umfang des behandelten Bereichs ab, daher nennen wir keine Zahl ohne vorherige Kopfhautanalyse. Eine kostenlose Beratung liefert Ihnen ein genaues, persönliches Angebot ohne Verpflichtung.',
+            'en' => "Apex Beauty works with three fixed all-in packages: VIP at EUR 4,350, Comfort at EUR 3,950, and Basic at EUR 2,650. Every package includes the full medical treatment — free consultation and hair analysis, treatment planning, hairline design, the transplant itself (DHI or FUE, whichever is medically recommended), PRP treatment, medication for the first week, and two medical follow-ups at the clinic. Comfort adds 3 nights at the partner hotel next to the clinic plus airport transfers; VIP adds a guided Istanbul tour, a Bosphorus cruise, a metro card and personal VIP support on top of that. You can see the full comparison on our prices page.",
+            'de' => 'Apex Beauty arbeitet mit drei festen Komplettpaketen: VIP für 4.350 EUR, Komfort für 3.950 EUR und Basis für 2.650 EUR. Jedes Paket enthält die vollständige medizinische Behandlung — kostenlose Erstberatung und Haaranalyse, Behandlungsplanung, Anzeichnung der Haarlinie, die Transplantation selbst (DHI oder FUE, je nach medizinischer Empfehlung), PRP-Eigenblutbehandlung, Medikamente für die erste Woche und zweimal ärztliche Nachbehandlung in der Klinik. Komfort ergänzt 3 Übernachtungen im Partnerhotel neben der Klinik sowie Flughafentransfers; VIP kommt zusätzlich mit geführter Istanbul-Tour, Bosporus-Schifffahrt, Metrokarte und persönlicher VIP-Betreuung. Den vollständigen Vergleich finden Sie auf unserer Preisseite.',
         ],
         'extraKeywords' => [
-            'en' => ['cost', 'price', 'how much', 'pricing', 'expensive', 'cheap', 'payment plan', 'financing'],
-            'de' => ['kosten', 'kostet', 'preis', 'kostenpunkt', 'wie viel', 'teuer', 'günstig', 'finanzierung', 'ratenzahlung'],
-            'fr' => ['cout', 'prix', 'combien'], 'nl' => ['kosten', 'kost', 'prijs', 'hoeveel'], 'it' => ['costo', 'costa', 'prezzo', 'quanto'], 'tr' => ['maliyet', 'fiyat', 'ne kadar', 'tutar'],
+            'en' => ['cost', 'price', 'how much', 'pricing', 'expensive', 'cheap', 'payment plan', 'financing', 'package', 'packages', 'vip', 'comfort package', 'basic package', 'all in'],
+            'de' => ['kosten', 'kostet', 'preis', 'preise', 'kostenpunkt', 'wie viel', 'teuer', 'günstig', 'finanzierung', 'ratenzahlung', 'paket', 'pakete', 'vip', 'komfortpaket', 'basispaket', 'komplettpreis'],
+            'fr' => ['cout', 'prix', 'combien', 'forfait'], 'nl' => ['kosten', 'kost', 'prijs', 'hoeveel', 'pakket'], 'it' => ['costo', 'costa', 'prezzo', 'quanto', 'pacchetto'], 'tr' => ['maliyet', 'fiyat', 'ne kadar', 'tutar', 'paket'],
         ],
     ];
 

@@ -42,8 +42,8 @@ ob_start();
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- favicon -->
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/lotus-transparent.png" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/lotus-transparent.png" type="image/png">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -66,9 +66,9 @@ src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 <?php if ($faqSchema): ?>
 <script type="application/ld+json"><?= json_encode($faqSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php endif; ?>
-<script src="assets/meta-pixel.js"></script>
-<script src="assets/cookie-consent.js?v=24"></script>
-<script src="assets/content-loader.js?v=23"></script>
+<script src="/assets/meta-pixel.js"></script>
+<script src="/assets/cookie-consent.js?v=24"></script>
+<script src="/assets/content-loader.js?v=23"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..800&display=swap" rel="stylesheet">
@@ -1253,7 +1253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body data-content-page="home">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-W6ZC5JRP"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6ZC5JRP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
@@ -1320,7 +1320,7 @@ include __DIR__ . '/includes/site-header.php';
 
 <section class="hero">
   <div class="hero-bg-layer"></div>
-  <video class="hero-mobile-video" id="mobileVideo" data-cmedia="hero.mobileVideo" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-video-verticle.mp4"></video>
+  <video class="hero-mobile-video" id="mobileVideo" data-cmedia="hero.mobileVideo" autoplay muted loop playsinline webkit-playsinline data-src="/assets/apex-video-verticle.mp4"></video>
   <div class="hero-mobile-scrim"></div>
   <button type="button" class="sound-toggle sound-toggle-mobile" id="soundToggleMobile" aria-label="Mute video" aria-pressed="true">
     <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a9 9 0 0 1 0 12"/></svg>
@@ -1356,7 +1356,7 @@ include __DIR__ . '/includes/site-header.php';
     </div>
     <div class="hero-visual">
       <div class="visual-frame">
-        <video id="desktopVideo" data-cmedia="hero.desktopVideo" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-video-verticle.mp4"></video>
+        <video id="desktopVideo" data-cmedia="hero.desktopVideo" autoplay muted loop playsinline webkit-playsinline data-src="/assets/apex-video-verticle.mp4"></video>
         <button type="button" class="sound-toggle" id="soundToggle" aria-label="Mute video" aria-pressed="true">
           <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a9 9 0 0 1 0 12"/></svg>
           <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" stroke="none"/><path d="M16 9l5 6M21 9l-5 6"/></svg>
@@ -1407,7 +1407,7 @@ include __DIR__ . '/includes/site-header.php';
 </section>
 
 <section class="service" id="promiseSection">
-  <video class="service-video" id="serviceVideo" data-cmedia="promise.video" autoplay muted loop playsinline webkit-playsinline data-src="assets/apex-drone.mp4"></video>
+  <video class="service-video" id="serviceVideo" data-cmedia="promise.video" autoplay muted loop playsinline webkit-playsinline data-src="/assets/apex-drone.mp4"></video>
   <div class="service-scrim"></div>
   <div class="service-inner">
     <div class="service-head">
@@ -1473,7 +1473,7 @@ include __DIR__ . '/includes/site-header.php';
             <div class="ba-photo ba-before">
               <span class="ba-tag" data-de="VORHER" data-en="BEFORE" data-fr="AVANT" data-nl="VOOR" data-it="PRIMA" data-tr="ÖNCESİ">VORHER</span>
               <div class="ba-photo-frame">
-                <img src="assets/before.png" alt="Vorher" loading="lazy" data-cmediafield="vorherImage">
+                <img src="/assets/before.png" alt="Vorher" loading="lazy" data-cmediafield="vorherImage">
               </div>
               <div class="ba-callout">
                 <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v3M9 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 0v7m-3 0h6"/></svg></div>
@@ -1487,7 +1487,7 @@ include __DIR__ . '/includes/site-header.php';
             <div class="ba-photo ba-after">
               <span class="ba-tag" data-de="NACHHER" data-en="AFTER" data-fr="APRÈS" data-nl="NA" data-it="DOPO" data-tr="SONRASI">NACHHER</span>
               <div class="ba-photo-frame">
-                <img src="assets/after.png" alt="Nachher" loading="lazy" data-cmediafield="nachherImage">
+                <img src="/assets/after.png" alt="Nachher" loading="lazy" data-cmediafield="nachherImage">
               </div>
               <div class="ba-callout">
                 <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
@@ -1550,7 +1550,7 @@ include __DIR__ . '/includes/site-header.php';
     </div>
 
     <div class="network-map" id="networkMap">
-      <div class="earth-globe" id="earthGlobe" data-asset-base="assets/earth/">
+      <div class="earth-globe" id="earthGlobe" data-asset-base="/assets/earth/">
         <canvas class="earth-canvas" aria-hidden="true"></canvas>
         <div class="earth-markers">
           <div class="net-node" data-id="de" style="--d:.1s;">
@@ -1661,7 +1661,7 @@ include __DIR__ . '/includes/site-header.php';
       <button type="button" class="consult-close" onclick="closeConsult()" aria-label="Close">✕</button>
       <div class="consult-head">
         <div class="clogo">
-          <img src="assets/lotus-transparent.png" alt="Apex Beauty">
+          <img src="/assets/lotus-transparent.png" alt="Apex Beauty">
           <span>Apex Beauty</span>
         </div>
         <h2 id="consultTitle" data-de="Kostenlose Beratung" data-en="Free Consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</h2>
@@ -1863,7 +1863,15 @@ include __DIR__ . '/includes/site-header.php';
   //                          are ever requested at all.
   // Both variants skip the "sound on by default" hero behavior below, since
   // either way the visitor came for the form, not to browse the homepage.
-  var openParam = new URLSearchParams(window.location.search).get('open');
+  //
+  // The pretty /consult and /en/consult URLs reach this page through an
+  // Apache *internal* rewrite, which never changes the address bar — so
+  // location.search is empty there and reading only the client-side query
+  // string silently missed every one of those landings. PHP does see the
+  // rewritten query string, so take the server's value first and fall back
+  // to the URL for direct ?open=... links.
+  var openParam = <?= json_encode(is_string($_GET['open'] ?? null) ? $_GET['open'] : null, JSON_UNESCAPED_SLASHES) ?>
+    || new URLSearchParams(window.location.search).get('open');
   var isLightLanding = openParam === 'consult-light';
   var isAdLanding = isLightLanding || openParam === 'consult';
 

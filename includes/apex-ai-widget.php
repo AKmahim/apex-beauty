@@ -142,5 +142,5 @@ define('APEX_AI_WIDGET_EMITTED', true);
   </div>
 </div>
 
-<script src="assets/apex-ai.js" defer></script>
+<script src="/assets/apex-ai.js" defer></script>
 <?php endif; ?>

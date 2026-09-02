@@ -18,8 +18,8 @@ ob_start();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/lotus-transparent.png" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/lotus-transparent.png" type="image/png">
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
 <!-- Meta Pixel Code -->
@@ -39,9 +39,9 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=972641739140966&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<script src="assets/meta-pixel.js"></script>
-<script src="assets/cookie-consent.js"></script>
-<script src="assets/content-loader.js"></script>
+<script src="/assets/meta-pixel.js"></script>
+<script src="/assets/cookie-consent.js"></script>
+<script src="/assets/content-loader.js"></script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -130,13 +130,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body data-content-page="privacy">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-W6ZC5JRP"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6ZC5JRP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="ph-nav">
   <a class="logo" href="index.php">
-    <img src="assets/lotus-transparent.png" alt="Apex Beauty">
+    <img src="/assets/lotus-transparent.png" alt="Apex Beauty">
     <span data-de="← Zurück zu Apex Beauty" data-en="← Back to Apex Beauty" data-fr="← Retour à Apex Beauty" data-nl="← Terug naar Apex Beauty" data-it="← Torna ad Apex Beauty" data-tr="← Apex Beauty'e Dön">← Zurück zu Apex Beauty</span>
   </a>
   <div class="lang-switch" id="langSwitch">

@@ -8,6 +8,7 @@ Apex Beauty combines a local Austrian consultation process with treatment at its
 
 - [Home](https://my.apexbeauty.at/) / [English](https://my.apexbeauty.at/en): Overview of the consultation -> treatment -> aftercare journey, before/after cases, FAQ.
 - [Hair Transplant procedure](https://my.apexbeauty.at/service-hair-transplant) / [English](https://my.apexbeauty.at/en/service-hair-transplant): What the procedure involves, candidacy, recovery, expected results.
+- [Prices](https://my.apexbeauty.at/prices) / [English](https://my.apexbeauty.at/en/prices): The three fixed all-in packages and exactly what each includes - VIP EUR 4,350, Comfort EUR 3,950, Basic EUR 2,650.
 - [Hairpedia](https://my.apexbeauty.at/hairpedia) / [English](https://my.apexbeauty.at/en/hairpedia): Causes, types, diagnosis, and treatment options for hair loss.
 - [Doctor](https://my.apexbeauty.at/doctor) / [English](https://my.apexbeauty.at/en/doctor): The physician responsible for medical quality across procedures.
 

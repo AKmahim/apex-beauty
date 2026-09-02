@@ -44,6 +44,17 @@
     });
   }
 
+  // Uploaded media is stored as a root-relative-ish path ("assets/content/x.jpg").
+  // Assigned as-is it resolves against the *current* URL, which breaks on any
+  // page served below the root — /en/hairpedia would look for
+  // /en/assets/content/x.jpg. Anchoring to "/" keeps one stored value correct
+  // at every URL depth.
+  function mediaUrl(path) {
+    if (typeof path !== 'string' || path === '') return path;
+    if (/^([a-z]+:)?\/\//i.test(path) || path.charAt(0) === '/' || path.indexOf('data:') === 0) return path;
+    return '/' + path;
+  }
+
   function applyContent(content) {
     document.querySelectorAll('[data-ckey]').forEach(function (el) {
       applyBilingual(el, resolvePath(content, el.getAttribute('data-ckey')));
@@ -72,10 +83,10 @@
           var path = item[mediaEl.getAttribute('data-cmediafield')];
           if (!path) return;
           if (mediaEl.tagName === 'IMG') {
-            mediaEl.src = path;
+            mediaEl.src = mediaUrl(path);
             mediaEl.closest('[data-cmedia-wrap]') && mediaEl.closest('[data-cmedia-wrap]').classList.add('has-media');
           } else if (mediaEl.tagName === 'VIDEO') {
-            mediaEl.src = path;
+            mediaEl.src = mediaUrl(path);
           }
         });
         frag.appendChild(clone);
@@ -88,15 +99,15 @@
       var path = resolvePath(content, el.getAttribute('data-cmedia'));
       if (!path) return;
       if (el.tagName === 'IMG') {
-        el.src = path;
+        el.src = mediaUrl(path);
         el.closest('[data-cmedia-wrap]') && el.closest('[data-cmedia-wrap]').classList.add('has-media');
       } else if (el.tagName === 'VIDEO') {
-        el.setAttribute('data-src', path);
+        el.setAttribute('data-src', mediaUrl(path));
         // Some pages lazy-load the real source only under certain
         // conditions (see loadRealVideoSource in glass-theme.html) — only
         // force a reload here if that already happened for this element.
         if (el.hasAttribute('src')) {
-          el.src = path;
+          el.src = mediaUrl(path);
           el.load();
         }
       }

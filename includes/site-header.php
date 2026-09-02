@@ -267,8 +267,8 @@ $medicalClinicSchema = [
 <?php endif; ?>
 <nav class="nav <?= $siteHeaderMode === 'full' ? 'nav-full' : 'nav-simple' ?>">
   <a class="logo-lockup" href="<?= htmlspecialchars($siteHomeHref, ENT_QUOTES) ?>" aria-label="Apex Beauty Home">
-    <img class="lotus" src="assets/lotus-transparent.png" alt="Apex Beauty">
-    <img class="wordmark" src="assets/wordmark-transparent.png" alt="Apex Beauty">
+    <img class="lotus" src="/assets/lotus-transparent.png" alt="Apex Beauty">
+    <img class="wordmark" src="/assets/wordmark-transparent.png" alt="Apex Beauty">
   </a>
 
 <?php if ($siteHeaderMode === 'full'): ?>
@@ -277,6 +277,7 @@ $medicalClinicSchema = [
       <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/service-hair-transplant" data-de="Verfahren" data-en="Procedures" data-fr="Procédures" data-nl="Procedures" data-it="Procedure" data-tr="İşlemler">Verfahren</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after" data-fr="Avant/après" data-nl="Voor en na" data-it="Prima e dopo" data-tr="Öncesi ve Sonrası">Vorher-Nachher</a>
       <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/doctor" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
+      <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/prices" data-de="Preise" data-en="Prices" data-fr="Tarifs" data-nl="Prijzen" data-it="Prezzi" data-tr="Fiyatlar">Preise</a>
       <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/hairpedia" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#network" data-de="Unser Netzwerk" data-en="Our Network" data-fr="Notre réseau" data-nl="Ons netwerk" data-it="La nostra rete" data-tr="Ağımız">Unser Netzwerk</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
@@ -308,6 +309,7 @@ $medicalClinicSchema = [
     <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/service-hair-transplant" class="<?= $siteActivePage === 'service' ? 'active' : '' ?>" data-de="Verfahren" data-en="Procedures" data-fr="Procédures" data-nl="Procedures" data-it="Procedure" data-tr="İşlemler">Verfahren</a>
     <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#before-after" data-de="Vorher-Nachher" data-en="Before &amp; after" data-fr="Avant/après" data-nl="Voor en na" data-it="Prima e dopo" data-tr="Öncesi ve Sonrası">Vorher-Nachher</a>
     <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/doctor" class="<?= $siteActivePage === 'doctor' ? 'active' : '' ?>" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
+    <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/prices" class="<?= $siteActivePage === 'prices' ? 'active' : '' ?>" data-de="Preise" data-en="Prices" data-fr="Tarifs" data-nl="Prijzen" data-it="Prezzi" data-tr="Fiyatlar">Preise</a>
     <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/hairpedia" class="<?= $siteActivePage === 'hairpedia' ? 'active' : '' ?>" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
     <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
   </div>
