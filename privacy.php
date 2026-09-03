@@ -104,7 +104,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .ph-wrap p, .ph-wrap li { font-size: 14px; line-height: 1.65; color: var(--ink); margin-bottom: 10px; }
   .ph-wrap ul { padding-left: 20px; margin-bottom: 12px; }
   .ph-wrap table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13.5px; }
-  .ph-wrap th, .ph-wrap td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+  /* Cookie-table headings translate into long single words (Dutch
+     "Aanbieder"/"Essentieel", German "Kategorie") that used to push the table
+     wider than a phone screen and scroll the whole page sideways. */
+  .ph-wrap th, .ph-wrap td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+  @media (max-width: 640px) {
+    .ph-wrap table { display: block; overflow-x: auto; }
+    .ph-wrap th, .ph-wrap td { padding: 8px; }
+  }
   .ph-wrap th { background: #eef3fa; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink-soft); }
   .back-link { display: inline-block; margin-top: 4px; font-size: 13px; font-weight: 600; }
 

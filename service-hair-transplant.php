@@ -155,9 +155,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---- QUICK NAV ---- */
   .hp-quicknav-wrap {
-    /* Must match the site nav's real rendered height (95px desktop / 59px
-       at <=900px, see the .nav override below) or this bar sticks partly
-       underneath the header instead of flush below it. */
+    /* Must match the site nav's real rendered height (95px desktop, 59px
+       once the bar collapses to the hamburger at <=1240px in
+       includes/site-header.php) or this bar sticks partly underneath the
+       header instead of flush below it. */
     position: sticky; top: 95px; z-index: 40;
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(28px) saturate(2.1);
@@ -239,6 +240,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hp-section.alt { max-width: none; }
   .hp-section.alt .hp-section-in { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
   .hp-section-head { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 34px; max-width: 760px; }
+  /* Flex items default to min-width:auto, so a long German compound
+     ("Behandlungsmoeglichkeiten") set a min-content floor the text column
+     could not shrink below and it spilled out of the heading block. */
+  .hp-section-head > div { min-width: 0; max-width: 100%; }
+  .hp-section-head h2 { overflow-wrap: anywhere; }
   .hp-section-icon { width: 56px; height: 56px; flex-shrink: 0; filter: drop-shadow(0 6px 14px rgba(37,99,235,0.25)); }
   .hp-section-head h2 { font-size: 27px; font-weight: 800; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.01em; }
   .hp-section-head p { font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
@@ -399,6 +405,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hp-term b { display: block; font-size: 13.5px; font-weight: 700; color: var(--teal-700); margin-bottom: 4px; }
   .hp-term span { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
 
+  /* Follows the header's collapse breakpoint, not the content one. */
+  @media (max-width: 1240px) { .hp-quicknav-wrap { top: 59px; } }
+
   @media (max-width: 900px) {
     .nav { padding: 10px 16px; gap: 8px; }
     .nav-links { display: none; }
@@ -411,7 +420,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
     .hp-hero { padding: 40px 20px 26px; }
     .hp-hero h1 { font-size: 27px; }
-    .hp-quicknav-wrap { top: 59px; }
     .hp-quicknav { padding: 0 20px; }
     .hp-section { padding: 48px 20px; }
     .hp-section.alt .hp-section-in { padding: 0 20px; }

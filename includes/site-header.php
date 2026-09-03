@@ -152,7 +152,15 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
     }
     .nav-hamburger svg { width: 20px; height: 20px; }
 
-    @media (max-width: 900px) {
+    /* Collapse to the hamburger well before the old 900px mark. Measured natural
+       width of logo + six nav links + language switcher + CTA, per language:
+       de 1198, fr 1153, nl 1143, en 1139, tr 1108, it 1107. German sets the
+       floor, so anything under ~1240px pushed .nav-right past the viewport
+       and gave the whole page a horizontal scrollbar - and just above the old
+       900px mark the links collided with the logo and wrapped mid-word. Any
+       change here must stay in step with the .hp-quicknav-wrap sticky offsets
+       on hairpedia/service-hair-transplant, measured against this bar. */
+    @media (max-width: 1240px) {
       .logo-lockup { gap: 8px; flex-shrink: 0; }
       .logo-lockup img.lotus { height: 30px; }
       .logo-lockup img.wordmark { height: 22px; transform: translateY(3px); }
@@ -213,6 +221,16 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
       .lang-switch-toggle { padding: 5px 10px; }
       .lang-switch-menu button { padding: 6px 10px; }
       .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
+    }
+
+    /* .cta-btn is nowrap so the header button never breaks mid-label, but the
+       same class is reused for in-page buttons, where a long translation
+       ("Obtenez votre consultation gratuite") cannot fit one phone line and
+       pushed the page into horizontal scroll. The header's own CTA is already
+       hidden at this width, so letting these wrap only affects in-page ones. */
+    @media (max-width: 640px) {
+      .cta-btn { white-space: normal; }
+      .nav-right .cta-btn { white-space: nowrap; }
     }
 
     @media (max-width: 580px) {
