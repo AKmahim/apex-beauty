@@ -150,27 +150,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .whatsapp-fab svg { width: 30px; height: 30px; display: block; }
 
   /* ---- HERO ---- */
-  .pr-hero { position: relative; padding: 64px 48px 30px; background: #ffffff; overflow: hidden; }
+  .pr-hero { position: relative; padding: 66px 48px 34px; background: #ffffff; overflow: hidden; }
   .pr-hero-bg {
     position: absolute; inset: 0;
     background-image:
-      radial-gradient(circle at 12% 15%, rgba(125,211,252,0.32) 0%, transparent 45%),
-      radial-gradient(circle at 92% 8%, rgba(94,185,224,0.28) 0%, transparent 50%),
-      radial-gradient(circle at 85% 95%, rgba(61,111,214,0.16) 0%, transparent 50%);
+      radial-gradient(circle at 12% 12%, rgba(125,211,252,0.46) 0%, transparent 46%),
+      radial-gradient(circle at 90% 4%, rgba(94,185,224,0.40) 0%, transparent 50%),
+      radial-gradient(circle at 50% 120%, rgba(37,99,235,0.20) 0%, transparent 55%);
     z-index: 0;
   }
   .pr-hero-inner { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; text-align: center; }
   .pr-hero .eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
     font-size: 13px; font-weight: 700; color: #1d2f3d;
-    background: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.85);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
-    backdrop-filter: blur(16px) saturate(1.5);
+    background: rgba(255,255,255,0.62); border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 8px 20px -12px rgba(37,99,235,0.4);
+    padding: 7px 15px; border-radius: 999px; margin-bottom: 20px;
+    backdrop-filter: blur(18px) saturate(1.7);
+    -webkit-backdrop-filter: blur(18px) saturate(1.7);
   }
-  .pr-hero .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-500); }
+  .pr-hero .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-500); box-shadow: 0 0 0 3px rgba(14,165,233,0.2); }
   .pr-hero h1 {
-    font-size: 38px; line-height: 1.16; font-weight: 800; letter-spacing: -0.02em;
+    font-size: 40px; line-height: 1.14; font-weight: 800; letter-spacing: -0.022em;
     color: #1a2733; margin-bottom: 16px;
   }
   .pr-hero h1 span {
@@ -179,89 +180,158 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .pr-hero p { font-size: 16px; line-height: 1.6; color: var(--ink-soft); max-width: 640px; margin: 0 auto; }
 
-  /* ---- PACKAGE CARDS ---- */
-  .pr-cards-wrap { max-width: 1180px; margin: 0 auto; padding: 30px 48px 10px; }
-  .pr-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; }
-  .pr-card {
+  /* ---- PACKAGE SHOWCASE (deep band) ----
+     The site's premium moments (the three-step section over the clinic photo,
+     the night-earth network globe) all put glass on a deep navy ground. On the
+     pale page background the same cards had nothing to refract and read flat,
+     so the tiers get that same dark stage here. */
+  .pr-showcase {
     position: relative; overflow: hidden;
-    display: flex; flex-direction: column;
-    border-radius: 22px; padding: 26px 24px 24px;
-    background: rgba(255,255,255,0.42);
-    backdrop-filter: blur(26px) saturate(2.1);
-    -webkit-backdrop-filter: blur(26px) saturate(2.1);
-    border: 1px solid rgba(255,255,255,0.85);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 14px 32px -18px rgba(37,99,235,0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    scroll-margin-top: 130px;
+    margin-top: 26px; padding: 64px 48px 68px;
+    /* Light pools on the left, where the flagship tier sits, and falls away
+       to deep navy on the right so the eye lands on VIP first. */
+    background:
+      radial-gradient(115% 95% at 16% 6%, rgba(2,132,199,0.50) 0%, transparent 56%),
+      radial-gradient(85% 80% at 30% 0%, rgba(124,58,237,0.26) 0%, transparent 52%),
+      radial-gradient(100% 90% at 45% 112%, rgba(14,165,233,0.26) 0%, transparent 58%),
+      linear-gradient(150deg, #0c1d33 0%, #0d2137 38%, #091524 100%);
   }
-  .pr-card::before {
-    content: ''; position: absolute; inset: 0; border-radius: 22px;
-    background: linear-gradient(160deg, rgba(255,255,255,0.6), transparent 50%);
+  /* Soft light blooms drifting behind the glass, like the globe atmosphere. */
+  .pr-showcase::before {
+    content: ''; position: absolute; inset: -20% -10%;
+    background:
+      radial-gradient(closest-side, rgba(56,189,248,0.40), transparent) 12% 26% / 46% 56% no-repeat,
+      radial-gradient(closest-side, rgba(139,92,246,0.22), transparent) 34% 4% / 34% 40% no-repeat,
+      radial-gradient(closest-side, rgba(37,99,235,0.22), transparent) 78% 92% / 44% 46% no-repeat;
+    filter: blur(6px);
+    animation: prDrift 18s ease-in-out infinite alternate;
     pointer-events: none;
   }
-  .pr-card:hover { transform: translateY(-5px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 24px 44px -18px rgba(37,99,235,0.38); }
+  @keyframes prDrift {
+    from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+    to   { transform: translate3d(1.5%, 1.5%, 0) scale(1.06); }
+  }
+  @media (prefers-reduced-motion: reduce) { .pr-showcase::before { animation: none; } }
+  /* Hairline light seams top and bottom, so the band reads as a pane of glass
+     laid over the page rather than a flat colour block. */
+  .pr-showcase::after {
+    content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  }
+  .pr-showcase-inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+  .pr-showcase-head { text-align: center; max-width: 660px; margin: 0 auto 34px; }
+  .pr-showcase-head h2 { font-size: 25px; font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .pr-showcase-head p { font-size: 14.5px; line-height: 1.6; color: rgba(226,242,255,0.72); }
+
+  .pr-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .pr-card {
+    position: relative;
+    display: flex; flex-direction: column;
+    border-radius: 24px; padding: 28px 26px 26px;
+    background: linear-gradient(168deg, rgba(255,255,255,0.13), rgba(255,255,255,0.055));
+    backdrop-filter: blur(30px) saturate(1.6);
+    -webkit-backdrop-filter: blur(30px) saturate(1.6);
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.35),
+      inset 0 -30px 60px -40px rgba(56,189,248,0.5),
+      0 26px 50px -24px rgba(3,10,22,0.85);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    scroll-margin-top: 130px;
+  }
+  /* Specular sheen across the top edge. */
+  .pr-card::before {
+    content: ''; position: absolute; inset: 0; border-radius: 24px; pointer-events: none;
+    background: linear-gradient(150deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.05) 26%, transparent 52%);
+  }
+  .pr-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(168deg, rgba(255,255,255,0.17), rgba(255,255,255,0.075));
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.45),
+      inset 0 -30px 60px -40px rgba(56,189,248,0.65),
+      0 38px 66px -24px rgba(3,10,22,0.9);
+  }
   .pr-card > * { position: relative; z-index: 1; }
 
-  /* Flagship tier gets a gradient rim so the eye lands on it first. */
+  /* Flagship tier: a true gradient rim plus an outer bloom. */
   .pr-card.featured {
+    background: linear-gradient(168deg, rgba(255,255,255,0.22), rgba(255,255,255,0.085));
     border-color: transparent;
     box-shadow:
-      inset 0 1px 0 rgba(255,255,255,0.85),
-      0 0 0 2px rgba(2,132,199,0.55),
-      0 20px 44px -18px rgba(37,99,235,0.45);
-    background: rgba(255,255,255,0.55);
+      inset 0 1px 0 rgba(255,255,255,0.55),
+      inset 0 -34px 70px -40px rgba(56,189,248,0.8),
+      0 0 90px -14px rgba(56,189,248,0.55),
+      0 34px 60px -24px rgba(3,10,22,0.9);
   }
-  .pr-card.featured:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 0 0 2px rgba(2,132,199,0.7), 0 28px 54px -18px rgba(37,99,235,0.5); }
+  .pr-card.featured::after {
+    content: ''; position: absolute; inset: 0; border-radius: 24px; padding: 2.5px;
+    background: linear-gradient(140deg, #e0f7ff 0%, #7dd3fc 22%, #38bdf8 48%, #6366f1 78%, #a78bfa 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .pr-card.featured:hover { box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.55),
+      inset 0 -34px 70px -40px rgba(56,189,248,0.9),
+      0 0 90px -16px rgba(56,189,248,0.6),
+      0 44px 74px -24px rgba(3,10,22,0.92); }
 
   .pr-badge {
     display: inline-block; align-self: flex-start;
-    font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--teal-700); background: rgba(125,211,252,0.28);
-    padding: 5px 11px; border-radius: 999px; margin-bottom: 12px;
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase;
+    color: #d8f1ff; background: rgba(125,211,252,0.16);
+    border: 1px solid rgba(125,211,252,0.32);
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 14px;
   }
   .pr-card.featured .pr-badge {
-    color: #fff;
-    background: linear-gradient(100deg, var(--teal-500), var(--blue-600));
-    box-shadow: 0 6px 14px -6px rgba(37,99,235,0.6);
+    color: #06263c; border-color: transparent;
+    background: linear-gradient(100deg, #7dd3fc, #38bdf8 55%, #60a5fa);
+    box-shadow: 0 8px 20px -8px rgba(56,189,248,0.8);
   }
-  .pr-name { font-size: 20px; font-weight: 800; color: var(--ink); margin-bottom: 10px; letter-spacing: -0.01em; }
+  .pr-name { font-size: 21px; font-weight: 800; color: #fff; margin-bottom: 10px; letter-spacing: -0.01em; }
   .pr-price {
-    font-size: 40px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;
-    background: linear-gradient(100deg, var(--teal-600), var(--blue-700));
+    font-size: 42px; font-weight: 800; line-height: 1.04; letter-spacing: -0.025em;
+    background: linear-gradient(100deg, #ffffff 0%, #bae6fd 45%, #7dd3fc 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
     margin-bottom: 4px;
+    text-shadow: 0 8px 30px rgba(56,189,248,0.25);
   }
-  .pr-price-note { font-size: 12px; font-weight: 700; color: var(--teal-700); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
-  .pr-desc { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 18px; }
-  .pr-divider { height: 1px; background: linear-gradient(90deg, rgba(147,197,253,0.7), transparent); margin-bottom: 16px; }
+  .pr-price-note { font-size: 11.5px; font-weight: 700; color: rgba(125,211,252,0.9); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 15px; }
+  .pr-desc { font-size: 13.5px; color: rgba(222,239,255,0.78); line-height: 1.6; margin-bottom: 18px; }
+  .pr-divider { height: 1px; background: linear-gradient(90deg, rgba(125,211,252,0.5), rgba(255,255,255,0.06)); margin-bottom: 17px; }
 
-  .pr-feats { display: grid; gap: 9px; margin-bottom: 22px; }
+  .pr-feats { display: grid; gap: 10px; margin-bottom: 24px; }
   .pr-feat { display: flex; align-items: flex-start; gap: 10px; }
   .pr-feat .tick {
     flex-shrink: 0; width: 19px; height: 19px; border-radius: 50%; margin-top: 1px;
-    background: linear-gradient(120deg, var(--teal-500), var(--blue-600)); color: #fff;
+    background: linear-gradient(135deg, #38bdf8, #2563eb); color: #fff;
     display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;
+    box-shadow: 0 4px 10px -3px rgba(56,189,248,0.7);
   }
-  .pr-feat span { font-size: 13px; color: var(--ink); line-height: 1.45; }
-  /* Perks unique to this tier read slightly stronger than the shared base. */
-  .pr-feat.plus span { font-weight: 700; }
+  .pr-feat span { font-size: 13px; color: rgba(233,245,255,0.9); line-height: 1.5; }
+  /* Perks unique to this tier read brighter than the shared medical base. */
+  .pr-feat.plus span { color: #fff; font-weight: 600; }
+  .pr-feat.plus .tick { background: linear-gradient(135deg, #7dd3fc, #8b5cf6); }
 
   .pr-cta {
     margin-top: auto; display: block; text-align: center;
-    padding: 13px 20px; border-radius: 12px;
+    padding: 13.5px 20px; border-radius: 13px;
     font-size: 14.5px; font-weight: 700;
-    border: 1.5px solid rgba(2,132,199,0.35);
-    background: rgba(255,255,255,0.5);
-    color: var(--blue-700);
-    transition: all 0.18s ease;
+    border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(255,255,255,0.10);
+    color: #eaf6ff;
+    backdrop-filter: blur(10px);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
   }
-  .pr-cta:hover { background: rgba(255,255,255,0.85); border-color: var(--teal-600); transform: translateY(-1px); }
+  .pr-cta:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); box-shadow: 0 14px 28px -14px rgba(0,0,0,0.7); }
   .pr-card.featured .pr-cta {
-    border-color: transparent; color: #fff;
-    background: linear-gradient(100deg, var(--teal-500) 0%, var(--teal-600) 35%, var(--blue-600) 100%);
-    box-shadow: 0 12px 26px -10px rgba(13,148,136,0.55), inset 0 1px 0 rgba(255,255,255,0.5);
+    border-color: transparent; color: #05243a;
+    background: linear-gradient(100deg, #a5e8ff 0%, #7dd3fc 45%, #93c5fd 100%);
+    box-shadow: 0 16px 32px -12px rgba(56,189,248,0.75), inset 0 1px 0 rgba(255,255,255,0.7);
   }
-  .pr-card.featured .pr-cta:hover { transform: translateY(-2px); }
+  .pr-card.featured .pr-cta:hover { transform: translateY(-3px); box-shadow: 0 22px 42px -12px rgba(56,189,248,0.9), inset 0 1px 0 rgba(255,255,255,0.8); }
 
   /* ---- SECTIONS ---- */
   .pr-section { max-width: 1180px; margin: 0 auto; padding: 56px 48px; scroll-margin-top: 130px; }
@@ -369,8 +439,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-right .cta-btn { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
     .pr-hero { padding: 40px 20px 22px; }
     .pr-hero h1 { font-size: 27px; }
-    .pr-cards-wrap { padding: 24px 20px 6px; }
+    .pr-showcase { padding: 44px 20px 48px; margin-top: 18px; }
+    .pr-showcase-head { margin-bottom: 26px; }
+    .pr-showcase-head h2 { font-size: 21px; }
     .pr-cards { grid-template-columns: 1fr; gap: 16px; }
+    .pr-card { padding: 24px 22px 22px; }
+    .pr-price { font-size: 38px; }
     .pr-section { padding: 44px 20px; }
     .pr-notes { grid-template-columns: 1fr; }
     .pr-band-wrap { padding: 6px 20px 56px; }
@@ -408,8 +482,13 @@ include __DIR__ . '/includes/site-header.php';
   </div>
 </section>
 
-<div class="pr-cards-wrap">
-  <div class="pr-cards">
+<section class="pr-showcase">
+  <div class="pr-showcase-inner">
+    <div class="pr-showcase-head">
+      <h2 data-de="Wählen Sie Ihr Paket" data-en="Choose your package" data-fr="Choisissez votre forfait" data-nl="Kies uw pakket" data-it="Scegli il tuo pacchetto" data-tr="Paketinizi seçin">Wählen Sie Ihr Paket</h2>
+      <p data-de="Vom Rundum-Erlebnis bis zur reinen Behandlung. Die medizinischen Leistungen sind überall dieselben." data-en="From the full experience to the treatment alone. The medical services are the same in all three." data-fr="De l'expérience complète au traitement seul. Les prestations médicales sont identiques dans les trois." data-nl="Van de volledige ervaring tot alleen de behandeling. De medische diensten zijn in alle drie hetzelfde." data-it="Dall'esperienza completa al solo trattamento. Le prestazioni mediche sono identiche in tutti e tre." data-tr="Eksiksiz deneyimden yalnızca tedaviye kadar. Tıbbi hizmetler üçünde de aynıdır.">Vom Rundum-Erlebnis bis zur reinen Behandlung. Die medizinischen Leistungen sind überall dieselben.</p>
+    </div>
+    <div class="pr-cards">
 
     <!-- ===== VIP - highest tier, listed first ===== -->
     <div class="pr-card featured" id="vip">
@@ -485,8 +564,9 @@ include __DIR__ . '/includes/site-header.php';
       <a class="pr-cta" href="<?= htmlspecialchars($consultHref, ENT_QUOTES) ?>" data-de="Kostenlose Beratung sichern" data-en="Book a free consultation" data-fr="Réserver une consultation gratuite" data-nl="Gratis consult aanvragen" data-it="Prenota una consulenza gratuita" data-tr="Ücretsiz danışma alın">Kostenlose Beratung sichern</a>
     </div>
 
+    </div>
   </div>
-</div>
+</section>
 
 <section class="pr-section" id="vergleich">
   <div class="pr-section-head">
