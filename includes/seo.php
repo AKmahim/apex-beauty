@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/site-config.php';
 require_once __DIR__ . '/content.php';
 require_once __DIR__ . '/i18n.php';
+require_once __DIR__ . '/blog.php';
 
 // Everything search engines and answer engines read about a page: the title
 // and description in the <head>, the robots switch, the share image, and the
@@ -76,6 +77,21 @@ function apex_seo_registry(): array
             'description' => [
                 'de' => 'Transparente Komplettpreise für Ihre Haartransplantation bei Apex Beauty{range} - inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.',
                 'en' => 'Transparent all-in package prices for a hair transplant at Apex Beauty{range} - including PRP, medication and medical follow-ups.',
+            ],
+        ],
+        'blog' => [
+            'path' => 'blog',
+            'template' => 'blog.php',
+            'name' => 'Guide (articles on hair loss and hair transplantation)',
+            'changefreq' => 'weekly',
+            'priority' => '0.8',
+            'title' => [
+                'de' => 'Ratgeber: Haarausfall & Haartransplantation | Apex Beauty',
+                'en' => 'Guide: Hair Loss & Hair Transplantation | Apex Beauty',
+            ],
+            'description' => [
+                'de' => 'Verständlich erklärte Artikel von Apex Beauty zu Haarausfall, Haartransplantation, Kosten, Ablauf und Nachsorge.',
+                'en' => 'Clearly explained articles from Apex Beauty on hair loss, hair transplantation, costs, procedure and aftercare.',
             ],
         ],
         'doctor' => [
@@ -290,6 +306,32 @@ function apex_sitemap_xml(): string
         }
     }
 
+    // Published posts, newest first. Nothing here is hand-maintained: a post
+    // published in the admin panel is in the sitemap on the next request.
+    foreach (apex_blog_all(true) as $post) {
+        $deUrl = apex_blog_url(apex_blog_post_path($post['slug'], 'de'));
+        $enUrl = apex_blog_url(apex_blog_post_path($post['slug'], 'en'));
+        foreach (['de' => $deUrl, 'en' => $enUrl] as $lang => $loc) {
+            // A post only gets a URL in a language it was actually written in.
+            if (!apex_blog_has_language($post, $lang)) {
+                continue;
+            }
+            $out .= "  <url>\n"
+                . '    <loc>' . $esc($loc) . "</loc>\n";
+            if (apex_blog_has_language($post, 'de')) {
+                $out .= '    <xhtml:link rel="alternate" hreflang="de" href="' . $esc($deUrl) . "\"/>\n"
+                    . '    <xhtml:link rel="alternate" hreflang="x-default" href="' . $esc($deUrl) . "\"/>\n";
+            }
+            if (apex_blog_has_language($post, 'en')) {
+                $out .= '    <xhtml:link rel="alternate" hreflang="en" href="' . $esc($enUrl) . "\"/>\n";
+            }
+            $out .= '    <lastmod>' . $esc($post['updatedAt']) . "</lastmod>\n"
+                . "    <changefreq>monthly</changefreq>\n"
+                . "    <priority>0.7</priority>\n"
+                . "  </url>\n";
+        }
+    }
+
     return $out . '</urlset>' . "\n";
 }
 
@@ -382,6 +424,19 @@ function apex_llms_txt(): string
                 continue;
             }
             $out[] = '- ' . $name . ' - ' . $price . ': ' . $description;
+        }
+    }
+
+    $articles = array_slice(array_filter(apex_blog_all(true), static fn(array $p): bool => apex_blog_has_language($p, 'en')), 0, 15);
+    if ($articles !== []) {
+        $out[] = '';
+        $out[] = '## Articles';
+        $out[] = '';
+        foreach ($articles as $article) {
+            $name = apex_ascii(strip_tags(apex_cms_value($article['title'], 'en')));
+            $summary = apex_ascii(strip_tags(apex_cms_value($article['excerpt'], 'en')));
+            $out[] = '- [' . $name . '](' . apex_blog_url(apex_blog_post_path($article['slug'], 'en')) . ')'
+                . ' (' . $article['publishedAt'] . ')' . ($summary !== '' ? ': ' . $summary : '');
         }
     }
 

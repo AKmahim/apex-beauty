@@ -55,6 +55,20 @@
     return '/' + path;
   }
 
+  // Alt text lives next to the image as "<field>Alt" and is per-language, so a
+  // photo uploaded in the admin panel can be described once and stay described
+  // in every language. An empty value leaves whatever the template hardcoded
+  // in place rather than blanking it out.
+  function currentLang() {
+    return document.documentElement.lang === 'en' ? 'en' : 'de';
+  }
+
+  function applyAlt(el, value) {
+    if (el.tagName !== 'IMG' || !value) return;
+    var text = typeof value === 'string' ? value : (value[currentLang()] || value.en || value.de || '');
+    if (text) el.alt = text;
+  }
+
   function applyContent(content) {
     document.querySelectorAll('[data-ckey]').forEach(function (el) {
       applyBilingual(el, resolvePath(content, el.getAttribute('data-ckey')));
@@ -84,6 +98,7 @@
           if (!path) return;
           if (mediaEl.tagName === 'IMG') {
             mediaEl.src = mediaUrl(path);
+            applyAlt(mediaEl, item[mediaEl.getAttribute('data-cmediafield') + 'Alt']);
             mediaEl.closest('[data-cmedia-wrap]') && mediaEl.closest('[data-cmedia-wrap]').classList.add('has-media');
           } else if (mediaEl.tagName === 'VIDEO') {
             mediaEl.src = mediaUrl(path);
@@ -100,6 +115,7 @@
       if (!path) return;
       if (el.tagName === 'IMG') {
         el.src = mediaUrl(path);
+        applyAlt(el, resolvePath(content, el.getAttribute('data-cmedia') + 'Alt'));
         el.closest('[data-cmedia-wrap]') && el.closest('[data-cmedia-wrap]').classList.add('has-media');
       } else if (el.tagName === 'VIDEO') {
         el.setAttribute('data-src', mediaUrl(path));

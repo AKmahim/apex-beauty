@@ -155,12 +155,12 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
     /* Collapse to the hamburger well before the old 900px mark. Measured natural
        width of logo + six nav links + language switcher + CTA, per language:
        de 1198, fr 1153, nl 1143, en 1139, tr 1108, it 1107. German sets the
-       floor, so anything under ~1240px pushed .nav-right past the viewport
+       floor, so anything under ~1360px pushed .nav-right past the viewport
        and gave the whole page a horizontal scrollbar - and just above the old
        900px mark the links collided with the logo and wrapped mid-word. Any
        change here must stay in step with the .hp-quicknav-wrap sticky offsets
        on hairpedia/service-hair-transplant, measured against this bar. */
-    @media (max-width: 1240px) {
+    @media (max-width: 1360px) {
       .logo-lockup { gap: 8px; flex-shrink: 0; }
       .logo-lockup img.lotus { height: 30px; }
       .logo-lockup img.wordmark { height: 22px; transform: translateY(3px); }
@@ -297,6 +297,7 @@ $medicalClinicSchema = [
       <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/doctor" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
       <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/prices" data-de="Preise" data-en="Prices" data-fr="Tarifs" data-nl="Prijzen" data-it="Prezzi" data-tr="Fiyatlar">Preise</a>
       <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/hairpedia" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
+      <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/blog" data-de="Ratgeber" data-en="Guide" data-fr="Guide" data-nl="Gids" data-it="Guida" data-tr="Rehber">Ratgeber</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#network" data-de="Unser Netzwerk" data-en="Our Network" data-fr="Notre réseau" data-nl="Ons netwerk" data-it="La nostra rete" data-tr="Ağımız">Unser Netzwerk</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
     </div>
@@ -329,6 +330,7 @@ $medicalClinicSchema = [
     <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/doctor" class="<?= $siteActivePage === 'doctor' ? 'active' : '' ?>" data-de="Ärzte" data-en="Doctors" data-fr="Médecins" data-nl="Artsen" data-it="Medici" data-tr="Doktorlar">Ärzte</a>
     <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/prices" class="<?= $siteActivePage === 'prices' ? 'active' : '' ?>" data-de="Preise" data-en="Prices" data-fr="Tarifs" data-nl="Prijzen" data-it="Prezzi" data-tr="Fiyatlar">Preise</a>
     <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/hairpedia" class="<?= $siteActivePage === 'hairpedia' ? 'active' : '' ?>" data-de="Hairpedia" data-en="Hairpedia">Hairpedia</a>
+    <a href="<?= htmlspecialchars($siteLangBase, ENT_QUOTES) ?>/blog" class="<?= $siteActivePage === 'blog' ? 'active' : '' ?>" data-de="Ratgeber" data-en="Guide" data-fr="Guide" data-nl="Gids" data-it="Guida" data-tr="Rehber">Ratgeber</a>
     <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
   </div>
   <div class="nav-right">

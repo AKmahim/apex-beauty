@@ -30,6 +30,45 @@
       'logout': 'Log out',
       'tab-leads': 'Leads',
       'tab-content': 'Website content',
+      'tab-blog': 'Blog',
+      'tab-settings': 'Site settings',
+      'settings-title': 'Site settings',
+      'settings-sub': 'Verification codes and tracking IDs. These apply to every page.',
+      'settings-save': 'Save settings',
+      'set-googleSiteVerification': 'Google Search Console verification code',
+      'set-googleSiteVerification-help': 'Paste only the code from the meta tag Google gives you, not the whole tag.',
+      'set-bingSiteVerification': 'Bing Webmaster Tools verification code',
+      'set-bingSiteVerification-help': 'Optional. Bing also feeds some AI assistants.',
+      'set-gtmId': 'Google Tag Manager container ID',
+      'set-gtmId-help': 'Looks like GTM-XXXXXXX. Clearing this removes Google Tag Manager from every page.',
+      'set-metaPixelId': 'Meta Pixel ID',
+      'set-metaPixelId-help': 'The numeric ID from Meta Events Manager. Clearing this removes the pixel from every page.',
+      'set-defaultShareImage': 'Default social share image path',
+      'set-defaultShareImage-help': 'Used when a page has no share image of its own. 1200 x 630 pixels works best.',
+      'blog-new': 'New article',
+      'blog-hint': 'Drafts stay invisible on the site. Publishing adds the article to the blog, the sitemap and llms.txt.',
+      'blog-none': 'No articles yet. Create the first one.',
+      'blog-title-prompt': 'Working title for the new article',
+      'blog-delete-confirm': 'Delete this article for good? Its uploaded images go too.',
+      'blog-deleted': 'Article deleted.',
+      'blog-status': 'Status',
+      'blog-draft': 'Draft',
+      'blog-published': 'Published',
+      'blog-date': 'Publication date',
+      'blog-slug': 'URL',
+      'blog-author': 'Author',
+      'blog-cover': 'Cover image',
+      'blog-cover-alt': 'Cover image description (alt text)',
+      'blog-headline': 'Headline',
+      'blog-excerpt': 'Excerpt (shown on cards and in Google)',
+      'blog-body': 'Article',
+      'blog-seo-title': 'Search engine title (leave empty to use the headline)',
+      'blog-seo-desc': 'Search engine description (leave empty to use the excerpt)',
+      'blog-save': 'Save article',
+      'blog-delete': 'Delete',
+      'blog-insert-image': 'Insert image',
+      'blog-link-prompt': 'Link address (https://...)',
+      'blog-slug-taken': 'That URL is already used by another article.',
       'stat-total': 'Total leads',
       'stat-7d': 'Last 7 days',
       'stat-30d': 'Last 30 days',
@@ -113,6 +152,45 @@
       'logout': 'Abmelden',
       'tab-leads': 'Leads',
       'tab-content': 'Website-Inhalte',
+      'tab-blog': 'Blog',
+      'tab-settings': 'Website-Einstellungen',
+      'settings-title': 'Website-Einstellungen',
+      'settings-sub': 'Bestätigungscodes und Tracking-IDs. Sie gelten für jede Seite.',
+      'settings-save': 'Einstellungen speichern',
+      'set-googleSiteVerification': 'Google-Search-Console-Bestätigungscode',
+      'set-googleSiteVerification-help': 'Nur den Code aus dem Meta-Tag von Google einfügen, nicht das ganze Tag.',
+      'set-bingSiteVerification': 'Bing-Webmaster-Tools-Bestätigungscode',
+      'set-bingSiteVerification-help': 'Optional. Bing speist auch einige KI-Assistenten.',
+      'set-gtmId': 'Google-Tag-Manager-Container-ID',
+      'set-gtmId-help': 'Sieht aus wie GTM-XXXXXXX. Leeren entfernt den Google Tag Manager von jeder Seite.',
+      'set-metaPixelId': 'Meta-Pixel-ID',
+      'set-metaPixelId-help': 'Die numerische ID aus dem Meta Events Manager. Leeren entfernt das Pixel von jeder Seite.',
+      'set-defaultShareImage': 'Standard-Bild für soziale Netzwerke (Pfad)',
+      'set-defaultShareImage-help': 'Wird verwendet, wenn eine Seite kein eigenes Bild hat. 1200 x 630 Pixel funktioniert am besten.',
+      'blog-new': 'Neuer Artikel',
+      'blog-hint': 'Entwürfe sind auf der Website unsichtbar. Beim Veröffentlichen erscheint der Artikel im Blog, in der Sitemap und in llms.txt.',
+      'blog-none': 'Noch keine Artikel. Legen Sie den ersten an.',
+      'blog-title-prompt': 'Arbeitstitel für den neuen Artikel',
+      'blog-delete-confirm': 'Diesen Artikel endgültig löschen? Die hochgeladenen Bilder werden mitgelöscht.',
+      'blog-deleted': 'Artikel gelöscht.',
+      'blog-status': 'Status',
+      'blog-draft': 'Entwurf',
+      'blog-published': 'Veröffentlicht',
+      'blog-date': 'Veröffentlichungsdatum',
+      'blog-slug': 'URL',
+      'blog-author': 'Autor',
+      'blog-cover': 'Titelbild',
+      'blog-cover-alt': 'Bildbeschreibung des Titelbilds (Alt-Text)',
+      'blog-headline': 'Überschrift',
+      'blog-excerpt': 'Kurzbeschreibung (auf Karten und in Google)',
+      'blog-body': 'Artikel',
+      'blog-seo-title': 'Suchmaschinen-Titel (leer lassen für die Überschrift)',
+      'blog-seo-desc': 'Suchmaschinen-Beschreibung (leer lassen für die Kurzbeschreibung)',
+      'blog-save': 'Artikel speichern',
+      'blog-delete': 'Löschen',
+      'blog-insert-image': 'Bild einfügen',
+      'blog-link-prompt': 'Link-Adresse (https://...)',
+      'blog-slug-taken': 'Diese URL wird bereits von einem anderen Artikel verwendet.',
       'stat-total': 'Leads gesamt',
       'stat-7d': 'Letzte 7 Tage',
       'stat-30d': 'Letzte 30 Tage',
@@ -814,6 +892,8 @@
 
   // ---- Tabs ----
   let contentLoaded = false;
+  let blogLoaded = false;
+  let settingsLoaded = false;
   document.querySelectorAll('.tab-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
@@ -821,9 +901,19 @@
       const tab = btn.dataset.tab;
       $('leadsPanel').style.display = tab === 'leads' ? 'block' : 'none';
       $('contentPanel').style.display = tab === 'content' ? 'block' : 'none';
+      $('blogPanel').style.display = tab === 'blog' ? 'block' : 'none';
+      $('settingsPanel').style.display = tab === 'settings' ? 'block' : 'none';
+      if (tab === 'settings' && !settingsLoaded) {
+        settingsLoaded = true;
+        loadSettings();
+      }
       if (tab === 'content' && !contentLoaded) {
         contentLoaded = true;
         loadContent();
+      }
+      if (tab === 'blog' && !blogLoaded) {
+        blogLoaded = true;
+        loadBlog();
       }
     });
   });
@@ -1316,6 +1406,366 @@
         setTimeout(() => msg.classList.remove('show'), 2000);
       }
     }
+  });
+
+  // ---- Site settings -------------------------------------------------------
+  // Small enough to render straight from the field list the API returns, so
+  // adding a setting server-side needs no change here beyond its labels.
+
+  async function loadSettings() {
+    const res = await api('/settings');
+    const data = await res.json();
+    const settings = data.settings || {};
+    $('settingsFields').innerHTML = (data.fields || []).map((key) => `
+      <div class="field-row">
+        <label>${escapeHtml(t('set-' + key))}</label>
+        <div>
+          <input type="text" data-setting="${escapeAttr(key)}" value="${escapeAttr(settings[key] || '')}">
+          <div class="blog-url-preview">${escapeHtml(t('set-' + key + '-help'))}</div>
+        </div>
+      </div>`).join('');
+  }
+
+  $('settingsSaveBtn').addEventListener('click', async () => {
+    const payload = {};
+    document.querySelectorAll('[data-setting]').forEach((el) => { payload[el.dataset.setting] = el.value; });
+    const res = await api('/settings', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const msg = $('settingsSaveMsg');
+    msg.classList.add('show');
+    setTimeout(() => msg.classList.remove('show'), 2000);
+    if (res.ok) await loadSettings();
+  });
+
+  // ---- Blog ----------------------------------------------------------------
+  // Unlike the Website content panel, the blog is not schema-driven: the shape
+  // of a post is fixed and the list of posts is what changes, so this renders
+  // a post list plus one editor rather than a form built from a schema.
+  //
+  // Language-independent fields (status, date, URL, author, cover image) sit at
+  // the top; everything below the language tabs is per-language, so a post can
+  // be written in German first and translated later without blocking publish.
+
+  let blogPosts = [];
+  let blogCurrent = null;
+  let blogLang = 'de';
+
+  const BLOG_LANG_FIELDS = ['title', 'excerpt', 'body', 'coverAlt', 'seoTitle', 'seoDescription'];
+
+  function blogEmptyLangs() {
+    const o = {};
+    CONTENT_LANGS.forEach((l) => { o[l.code] = ''; });
+    return o;
+  }
+
+  function blogLangValue(field, lang) {
+    if (!blogCurrent || !blogCurrent[field]) return '';
+    return blogCurrent[field][lang] || '';
+  }
+
+  async function loadBlog() {
+    const res = await api('/blog');
+    const data = await res.json();
+    blogPosts = data.posts || [];
+    renderBlogList();
+    if (blogPosts.length) selectBlogPost(blogPosts[0].slug);
+    else { blogCurrent = null; $('blogEditor').innerHTML = ''; $('blogLangTabs').innerHTML = ''; }
+  }
+
+  function renderBlogList() {
+    const list = $('blogList');
+    if (!blogPosts.length) {
+      list.innerHTML = `<div class="blog-empty">${escapeHtml(t('blog-none'))}</div>`;
+      return;
+    }
+    list.innerHTML = blogPosts.map((p) => {
+      const label = (p.title && (p.title[blogLang] || p.title.de || p.title.en)) || p.slug;
+      const badge = p.status === 'published' ? 'published' : 'draft';
+      const active = blogCurrent && blogCurrent.slug === p.slug ? ' active' : '';
+      return `<button type="button" class="blog-item${active}" data-blog-slug="${escapeAttr(p.slug)}">
+        ${escapeHtml(String(label).replace(/<[^>]*>/g, ''))}
+        <span class="blog-badge ${badge}">${escapeHtml(t('blog-' + badge))}</span>
+        <span class="blog-item-meta">${escapeHtml(p.publishedAt)}</span>
+      </button>`;
+    }).join('');
+  }
+
+  function renderBlogLangTabs() {
+    $('blogLangTabs').innerHTML = CONTENT_LANGS.map((l) => `
+      <button type="button" class="lang-tab-btn${l.code === blogLang ? ' active' : ''}" data-blog-lang="${l.code}">${l.label}</button>
+    `).join('');
+  }
+
+  async function selectBlogPost(slug) {
+    const res = await api('/blog/' + encodeURIComponent(slug));
+    if (!res.ok) return;
+    blogCurrent = await res.json();
+    BLOG_LANG_FIELDS.forEach((f) => {
+      if (!blogCurrent[f] || typeof blogCurrent[f] !== 'object') blogCurrent[f] = blogEmptyLangs();
+    });
+    renderBlogList();
+    renderBlogLangTabs();
+    renderBlogEditor();
+  }
+
+  function blogPublicUrl(slug) {
+    const base = blogLang === 'en' ? '/en' : '';
+    return `${location.origin}${base}/blog/${slug}`;
+  }
+
+  function renderBlogEditor() {
+    if (!blogCurrent) { $('blogEditor').innerHTML = ''; return; }
+    const p = blogCurrent;
+    const cover = p.coverImage
+      ? `<img class="blog-cover-preview" src="/${escapeAttr(p.coverImage)}" alt="">`
+      : `<div class="blog-cover-preview"></div>`;
+    $('blogEditor').innerHTML = `
+      <div class="content-card" id="blogCard">
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-status'))}</label>
+          <select data-blog-field="status">
+            <option value="draft"${p.status === 'draft' ? ' selected' : ''}>${escapeHtml(t('blog-draft'))}</option>
+            <option value="published"${p.status === 'published' ? ' selected' : ''}>${escapeHtml(t('blog-published'))}</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-date'))}</label>
+          <input type="date" data-blog-field="publishedAt" value="${escapeAttr(p.publishedAt)}">
+        </div>
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-slug'))}</label>
+          <div>
+            <input type="text" data-blog-field="slug" value="${escapeAttr(p.slug)}">
+            <div class="blog-url-preview" id="blogUrlPreview">${escapeHtml(blogPublicUrl(p.slug))}</div>
+          </div>
+        </div>
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-author'))}</label>
+          <input type="text" data-blog-field="author" value="${escapeAttr(p.author)}">
+        </div>
+        <div class="media-row" id="blogCoverRow">
+          <label>${escapeHtml(t('blog-cover'))}</label>
+          ${cover}
+          <input type="file" accept="image/*">
+          <button type="button" class="media-upload-btn" id="blogCoverUpload">${escapeHtml(t('upload-btn'))}</button>
+          <span class="media-status" id="blogCoverStatus"></span>
+        </div>
+
+        <div class="sub" style="margin:18px 0 10px;">${escapeHtml(t('editing-lang'))}: <strong>${escapeHtml(CONTENT_LANGS.find((l) => l.code === blogLang).label)}</strong></div>
+
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-headline'))}</label>
+          <input type="text" data-blog-lang-field="title" value="${escapeAttr(blogLangValue('title', blogLang))}">
+        </div>
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-cover-alt'))}</label>
+          <input type="text" data-blog-lang-field="coverAlt" value="${escapeAttr(blogLangValue('coverAlt', blogLang))}">
+        </div>
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-excerpt'))}</label>
+          <textarea rows="3" data-blog-lang-field="excerpt">${escapeHtml(blogLangValue('excerpt', blogLang))}</textarea>
+        </div>
+        <label class="list-label">${escapeHtml(t('blog-body'))}</label>
+        <div class="blog-toolbar-row">
+          <button type="button" class="blog-tool" data-wrap="h2">H2</button>
+          <button type="button" class="blog-tool" data-wrap="h3">H3</button>
+          <button type="button" class="blog-tool" data-wrap="p">P</button>
+          <button type="button" class="blog-tool" data-wrap="strong">B</button>
+          <button type="button" class="blog-tool" data-wrap="em">I</button>
+          <button type="button" class="blog-tool" data-wrap="ul">&bull; List</button>
+          <button type="button" class="blog-tool" data-wrap="link">Link</button>
+          <button type="button" class="blog-tool" id="blogInlineImageBtn">${escapeHtml(t('blog-insert-image'))}</button>
+          <input type="file" id="blogInlineImageInput" accept="image/*" style="display:none;">
+        </div>
+        <textarea class="blog-body-area" data-blog-lang-field="body">${escapeHtml(blogLangValue('body', blogLang))}</textarea>
+
+        <div class="field-row" style="margin-top:16px;">
+          <label>${escapeHtml(t('blog-seo-title'))}</label>
+          <input type="text" data-blog-lang-field="seoTitle" value="${escapeAttr(blogLangValue('seoTitle', blogLang))}">
+        </div>
+        <div class="field-row">
+          <label>${escapeHtml(t('blog-seo-desc'))}</label>
+          <textarea rows="2" data-blog-lang-field="seoDescription">${escapeHtml(blogLangValue('seoDescription', blogLang))}</textarea>
+        </div>
+
+        <div class="content-save-row">
+          <button class="btn-primary" id="blogSaveBtn">${escapeHtml(t('blog-save'))}</button>
+          <span class="content-save-msg" id="blogSaveMsg">${escapeHtml(t('saved'))}</span>
+          <button type="button" class="blog-danger" id="blogDeleteBtn">${escapeHtml(t('blog-delete'))}</button>
+        </div>
+      </div>`;
+  }
+
+  // Reads the editor back into blogCurrent. Called before switching language or
+  // saving, so edits in one language are never lost by clicking another tab.
+  function captureBlogEditor() {
+    const card = $('blogCard');
+    if (!card || !blogCurrent) return;
+    card.querySelectorAll('[data-blog-field]').forEach((el) => {
+      blogCurrent[el.dataset.blogField] = el.value;
+    });
+    card.querySelectorAll('[data-blog-lang-field]').forEach((el) => {
+      const f = el.dataset.blogLangField;
+      if (!blogCurrent[f] || typeof blogCurrent[f] !== 'object') blogCurrent[f] = blogEmptyLangs();
+      blogCurrent[f][blogLang] = el.value;
+    });
+  }
+
+  // Wraps the selected text in the chosen tag. A plain textarea keeps the
+  // stored HTML clean and predictable, which matters because this markup is
+  // what Google reads.
+  function blogWrapSelection(kind) {
+    const area = document.querySelector('[data-blog-lang-field="body"]');
+    if (!area) return;
+    const start = area.selectionStart;
+    const end = area.selectionEnd;
+    const selected = area.value.slice(start, end);
+    let replacement;
+    if (kind === 'ul') {
+      const lines = (selected || 'Item').split(/\n+/).filter((l) => l.trim() !== '');
+      replacement = '<ul>\n' + lines.map((l) => `  <li>${l.trim()}</li>`).join('\n') + '\n</ul>';
+    } else if (kind === 'link') {
+      const href = window.prompt(t('blog-link-prompt'), 'https://');
+      if (!href) return;
+      replacement = `<a href="${href}">${selected || href}</a>`;
+    } else {
+      replacement = `<${kind}>${selected}</${kind}>`;
+    }
+    area.value = area.value.slice(0, start) + replacement + area.value.slice(end);
+    area.focus();
+    area.selectionStart = area.selectionEnd = start + replacement.length;
+    captureBlogEditor();
+  }
+
+  function blogInsertAtCursor(html) {
+    const area = document.querySelector('[data-blog-lang-field="body"]');
+    if (!area) return;
+    const start = area.selectionStart;
+    area.value = area.value.slice(0, start) + html + area.value.slice(area.selectionEnd);
+    area.selectionStart = area.selectionEnd = start + html.length;
+    area.focus();
+    captureBlogEditor();
+  }
+
+  $('blogList').addEventListener('click', async (e) => {
+    const btn = e.target.closest('[data-blog-slug]');
+    if (!btn) return;
+    captureBlogEditor();
+    await selectBlogPost(btn.dataset.blogSlug);
+  });
+
+  $('blogLangTabs').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-blog-lang]');
+    if (!btn) return;
+    captureBlogEditor();
+    blogLang = btn.dataset.blogLang;
+    renderBlogLangTabs();
+    renderBlogEditor();
+  });
+
+  $('blogNewBtn').addEventListener('click', async () => {
+    const title = window.prompt(t('blog-title-prompt'), '');
+    if (title === null) return;
+    const res = await api('/blog', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: { de: title, en: title }, slug: title })
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    await loadBlog();
+    await selectBlogPost(data.post.slug);
+  });
+
+  $('blogEditor').addEventListener('input', (e) => {
+    if (e.target.matches('[data-blog-field="slug"]')) {
+      const preview = $('blogUrlPreview');
+      if (preview) preview.textContent = blogPublicUrl(e.target.value);
+    }
+  });
+
+  $('blogEditor').addEventListener('click', async (e) => {
+    const wrapBtn = e.target.closest('[data-wrap]');
+    if (wrapBtn) { blogWrapSelection(wrapBtn.dataset.wrap); return; }
+
+    if (e.target.closest('#blogInlineImageBtn')) { $('blogInlineImageInput').click(); return; }
+
+    if (e.target.closest('#blogCoverUpload')) {
+      const row = $('blogCoverRow');
+      const file = row.querySelector('input[type="file"]').files[0];
+      const status = $('blogCoverStatus');
+      if (!file) { status.textContent = t('choose-file-first'); return; }
+      status.textContent = t('uploading');
+      const fd = new FormData();
+      fd.append('file', file);
+      const res = await api(`/blog/${encodeURIComponent(blogCurrent.slug)}/media/cover`, { method: 'POST', body: fd });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        blogCurrent.coverImage = data.path;
+        status.textContent = t('uploaded');
+        const img = row.querySelector('.blog-cover-preview');
+        if (img.tagName === 'IMG') img.src = data.url;
+        else renderBlogEditor();
+      } else {
+        status.textContent = data.error || t('upload-failed');
+      }
+      return;
+    }
+
+    if (e.target.closest('#blogSaveBtn')) {
+      captureBlogEditor();
+      const previousSlug = blogCurrent.slug;
+      const res = await api('/blog/' + encodeURIComponent(previousSlug), {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(blogCurrent)
+      });
+      const data = await res.json().catch(() => ({}));
+      const msg = $('blogSaveMsg');
+      if (!res.ok) {
+        msg.textContent = res.status === 409 ? t('blog-slug-taken') : (data.error || t('upload-failed'));
+        msg.style.color = '#b91c1c';
+        msg.classList.add('show');
+        setTimeout(() => msg.classList.remove('show'), 4000);
+        return;
+      }
+      blogCurrent = data.post;
+      msg.textContent = t('saved');
+      msg.style.color = '';
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 2000);
+      const listRes = await api('/blog');
+      blogPosts = (await listRes.json()).posts || [];
+      renderBlogList();
+      renderBlogEditor();
+      return;
+    }
+
+    if (e.target.closest('#blogDeleteBtn')) {
+      if (!window.confirm(t('blog-delete-confirm'))) return;
+      const res = await api('/blog/' + encodeURIComponent(blogCurrent.slug), { method: 'DELETE' });
+      if (res.ok) { blogCurrent = null; await loadBlog(); }
+      return;
+    }
+  });
+
+  $('blogEditor').addEventListener('change', async (e) => {
+    if (!e.target.matches('#blogInlineImageInput')) return;
+    const file = e.target.files[0];
+    if (!file || !blogCurrent) return;
+    const fd = new FormData();
+    fd.append('file', file);
+    const res = await api(`/blog/${encodeURIComponent(blogCurrent.slug)}/media/inline`, { method: 'POST', body: fd });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok) {
+      // A figure with an empty alt is inserted rather than a bare <img>, so the
+      // writer is prompted to describe the image instead of shipping it blank.
+      blogInsertAtCursor(`\n<figure>\n  <img src="${data.url}" alt="" width="1200" height="675" loading="lazy">\n  <figcaption></figcaption>\n</figure>\n`);
+    }
+    e.target.value = '';
   });
 
   // ---- Boot: check for an existing session before showing the login form ----

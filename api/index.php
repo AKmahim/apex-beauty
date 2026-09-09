@@ -5,6 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/../includes/bootstrap.php';
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/content.php';
+require_once __DIR__ . '/../includes/blog.php';
+require_once __DIR__ . '/../includes/settings.php';
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/capi.php';
 require_once __DIR__ . '/../includes/export.php';
@@ -239,6 +241,121 @@ if ($resource === 'content') {
         }
         apex_json_response(['ok' => true, 'path' => $stored]);
     }
+}
+
+// ---- Site settings --------------------------------------------------------
+// Verification strings and tracking IDs that used to be hardcoded in every
+// page template.
+if ($resource === 'settings') {
+    if ($method === 'GET') {
+        apex_json_response(['settings' => apex_settings(), 'fields' => array_keys(APEX_SETTINGS_DEFAULTS)]);
+    }
+    if ($method === 'PUT') {
+        apex_json_response(['ok' => true, 'settings' => apex_save_settings(apex_read_json_body())]);
+    }
+    apex_not_found();
+}
+
+// ---- Blog -----------------------------------------------------------------
+// Posts are addressed by slug: /api/admin/blog for the list, /blog/<slug> for
+// one post, /blog/<slug>/media/<field> for its images.
+if ($resource === 'blog') {
+    $slug = $adminSegments[1] ?? '';
+
+    if ($method === 'GET' && count($adminSegments) === 1) {
+        apex_json_response(['posts' => apex_blog_all(false), 'languages' => APEX_CONTENT_LANGS]);
+    }
+
+    // Create. A title is enough; the slug is derived from it unless one is
+    // given, and a collision gets a numeric suffix rather than an error, so
+    // writing a second "Hair transplant cost" post just works.
+    if ($method === 'POST' && count($adminSegments) === 1) {
+        $body = apex_read_json_body();
+        $wanted = apex_blog_slugify((string) ($body['slug'] ?? $body['title'] ?? ''));
+        if ($wanted === '') {
+            $wanted = 'post-' . gmdate('Ymd-His');
+        }
+        $slug = $wanted;
+        $n = 2;
+        while (apex_blog_get($slug) !== null) {
+            $slug = $wanted . '-' . $n++;
+        }
+        $post = apex_blog_save($slug, [
+            'status' => 'draft',
+            'title' => is_array($body['title'] ?? null) ? $body['title'] : [],
+        ]);
+        if ($post === null) {
+            apex_json_response(['error' => 'Could not create post.'], 400);
+        }
+        apex_json_response(['ok' => true, 'post' => $post], 201);
+    }
+
+    if (!apex_blog_valid_slug($slug)) {
+        apex_not_found();
+    }
+
+    if ($method === 'GET' && count($adminSegments) === 2) {
+        $post = apex_blog_get($slug);
+        if ($post === null) {
+            apex_json_response(['error' => 'Unknown post.'], 404);
+        }
+        apex_json_response($post);
+    }
+
+    if ($method === 'PUT' && count($adminSegments) === 2) {
+        if (apex_blog_get($slug) === null) {
+            apex_json_response(['error' => 'Unknown post.'], 404);
+        }
+        $body = apex_read_json_body();
+        // Renaming the slug changes the post's public URL, so it only happens
+        // when the new one is valid and free.
+        $target = apex_blog_slugify((string) ($body['slug'] ?? $slug));
+        if ($target !== $slug && $target !== '') {
+            if (apex_blog_get($target) !== null) {
+                apex_json_response(['error' => 'That URL is already used by another post.'], 409);
+            }
+            if (!apex_blog_rename($slug, $target)) {
+                apex_json_response(['error' => 'Could not change the URL.'], 400);
+            }
+            $slug = $target;
+        }
+        $post = apex_blog_save($slug, $body);
+        if ($post === null) {
+            apex_json_response(['error' => 'Could not save post.'], 400);
+        }
+        apex_json_response(['ok' => true, 'post' => $post]);
+    }
+
+    if ($method === 'DELETE' && count($adminSegments) === 2) {
+        if (!apex_blog_delete($slug)) {
+            apex_json_response(['error' => 'Unknown post.'], 404);
+        }
+        apex_blog_delete_media($slug);
+        apex_json_response(['ok' => true]);
+    }
+
+    if ($method === 'POST' && count($adminSegments) === 4 && $adminSegments[2] === 'media') {
+        if (apex_blog_get($slug) === null) {
+            apex_json_response(['error' => 'Unknown post.'], 404);
+        }
+        if (!isset($_FILES['file']) || !is_uploaded_file($_FILES['file']['tmp_name'])) {
+            apex_json_response(['error' => 'No file uploaded.'], 400);
+        }
+        $stored = apex_blog_store_media($slug, $_FILES['file']['tmp_name'], $_FILES['file']['name']);
+        if ($stored === null) {
+            apex_json_response(['error' => 'That file type is not allowed. Use JPG, PNG, WebP, GIF or AVIF.'], 400);
+        }
+        // The cover is a field on the post; anything else is an inline image
+        // the editor drops into the body, so it only needs its URL back.
+        if ($adminSegments[3] === 'cover') {
+            $post = apex_blog_get($slug) ?? [];
+            $post['coverImage'] = $stored;
+            apex_blog_save($slug, $post);
+        }
+        apex_json_response(['ok' => true, 'path' => $stored, 'url' => '/' . $stored]);
+    }
+
+    apex_not_found();
 }
 
 apex_not_found();

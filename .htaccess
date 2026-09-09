@@ -32,5 +32,13 @@ RewriteRule ^en/consult/?$ index.php?open=consult [QSA,L]
 RewriteRule ^en/consult-light/?$ index.php?open=consult-light [QSA,L]
 RewriteRule ^en/([A-Za-z0-9-]+)/?$ $1.php [L]
 
+# Blog. The archive is one page and every post is the same template resolved
+# by slug, so posts are added from the admin panel without touching Apache.
+RewriteRule ^blog/?$ blog.php [L]
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog-post.php?slug=$1 [QSA,L]
+RewriteRule ^en/blog/?$ blog.php [L]
+RewriteRule ^en/blog/([a-z0-9-]+)/?$ blog-post.php?slug=$1 [QSA,L]
+
+
 RewriteRule ^([A-Za-z0-9-]+)\.html$ $1.php [L]
 RewriteRule ^([A-Za-z0-9-]+)/?$ $1.php [L]

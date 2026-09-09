@@ -65,9 +65,11 @@ $pages = [
                     'key' => 'cases', 'label' => 'Cases', 'itemType' => 'fields',
                     'itemFields' => [
                         ['key' => 'vorherImage', 'label' => 'Vorher photo', 'type' => 'image'],
+                        ['key' => 'vorherImageAlt', 'label' => 'Vorher photo: image description (alt text)', 'type' => 'text'],
                         ['key' => 'vorherLine1', 'label' => 'Vorher (line 1)', 'type' => 'text'],
                         ['key' => 'vorherLine2', 'label' => 'Vorher (line 2)', 'type' => 'text'],
                         ['key' => 'nachherImage', 'label' => 'Nachher photo', 'type' => 'image'],
+                        ['key' => 'nachherImageAlt', 'label' => 'Nachher photo: image description (alt text)', 'type' => 'text'],
                         ['key' => 'nachherLine1', 'label' => 'Nachher (line 1)', 'type' => 'text'],
                         ['key' => 'nachherLine2', 'label' => 'Nachher (line 2)', 'type' => 'text'],
                     ],
@@ -106,41 +108,49 @@ $pages = [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'ursachen' => ['label' => '2. Ursachen', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'arten' => ['label' => '3. Arten von Haarausfall', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'diagnose' => ['label' => '4. Diagnose', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'behandlung' => ['label' => '5. Behandlungsmöglichkeiten', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'transplantation' => ['label' => '6. Haartransplantation', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'genesung' => ['label' => '7. Genesung & Nachsorge', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'vorherNachher' => ['label' => '8. Vorher-Nachher', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'body', 'label' => 'Body text', 'type' => 'richtext'],
                 ['key' => 'image', 'label' => 'Image', 'type' => 'image'],
+                ['key' => 'imageAlt', 'label' => 'Image: image description (alt text)', 'type' => 'text'],
             ]],
             'glossar' => ['label' => '9. Glossar', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
@@ -185,6 +195,7 @@ $pages = [
                     'itemType' => 'fields',
                     'itemFields' => [
                         ['key' => 'photo', 'label' => 'Photo', 'type' => 'image'],
+                        ['key' => 'photoAlt', 'label' => 'Photo: image description (alt text)', 'type' => 'text'],
                         ['key' => 'name', 'label' => 'Name', 'type' => 'text'],
                         ['key' => 'credentials', 'label' => 'Title / credentials', 'type' => 'text'],
                         ['key' => 'intro', 'label' => 'Short intro line', 'type' => 'richtext'],
@@ -255,6 +266,23 @@ $pages = [
             'cta' => ['label' => 'Closing call to action', 'fields' => [
                 ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
                 ['key' => 'sub', 'label' => 'Text', 'type' => 'richtext'],
+            ]],
+        ],
+    ],
+    'blog' => [
+        'label' => 'Guide / blog page',
+        'sections' => [
+            // The article list itself is managed in the Blog tab; this is only
+            // the wrapper copy at the top of the archive page.
+            'hero' => ['label' => 'Archive header', 'fields' => [
+                ['key' => 'eyebrow', 'label' => 'Eyebrow chip', 'type' => 'text'],
+                ['key' => 'heading', 'label' => 'Headline (wrap the highlighted part in <span>)', 'type' => 'richtext'],
+                ['key' => 'sub', 'label' => 'Sub-headline', 'type' => 'richtext'],
+            ]],
+            'cta' => ['label' => 'Closing call to action', 'fields' => [
+                ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
+                ['key' => 'sub', 'label' => 'Text', 'type' => 'richtext'],
+                ['key' => 'button', 'label' => 'Button label', 'type' => 'text'],
             ]],
         ],
     ],

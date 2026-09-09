@@ -6,6 +6,11 @@ const APEX_ROOT = __DIR__ . '/..';
 const APEX_DATA_DIR = APEX_ROOT . '/data';
 const APEX_CONTENT_DIR = APEX_DATA_DIR . '/content';
 const APEX_MEDIA_DIR = APEX_ROOT . '/assets/content';
+// Blog posts live one file per post so publishing one never rewrites the
+// others, and their images sit apart from page media to keep the two
+// libraries browsable.
+const APEX_BLOG_DIR = APEX_DATA_DIR . '/blog';
+const APEX_BLOG_MEDIA_DIR = APEX_ROOT . '/assets/blog';
 const APEX_ENV_FILES = [
     APEX_ROOT . '/.env',
     APEX_ROOT . '/backend/.env',
@@ -30,6 +35,12 @@ function apex_bootstrap(): void
     }
     if (!is_dir(APEX_MEDIA_DIR)) {
         mkdir(APEX_MEDIA_DIR, 0775, true);
+    }
+    if (!is_dir(APEX_BLOG_DIR)) {
+        mkdir(APEX_BLOG_DIR, 0775, true);
+    }
+    if (!is_dir(APEX_BLOG_MEDIA_DIR)) {
+        mkdir(APEX_BLOG_MEDIA_DIR, 0775, true);
     }
 
     date_default_timezone_set('UTC');

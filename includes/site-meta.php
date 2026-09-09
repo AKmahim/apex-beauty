@@ -3,6 +3,7 @@
 require_once __DIR__ . '/site-config.php';
 require_once __DIR__ . '/i18n.php';
 require_once __DIR__ . '/seo.php';
+require_once __DIR__ . '/settings.php';
 
 // Include this once per page, right after that page's own <title> tag, with
 // $seoPage (the CMS page key, e.g. 'hairpedia') / $seoTitle / $seoDescription
@@ -17,7 +18,7 @@ $seoNoindex = $seoNoindex ?? false;
 $seoPage = $seoPage ?? '';
 // A page with its own share image uploaded in the admin panel uses it;
 // everything else falls back to the site wordmark.
-$seoImage = $seoImage ?? apex_seo_image($seoPage, 'assets/wordmark-transparent.png');
+$seoImage = $seoImage ?? apex_seo_image($seoPage, apex_setting('defaultShareImage'));
 
 $currentLang = apex_current_lang();
 $buildLocalizedUrl = static function (string $langBase) use ($seoCanonicalPath): string {
@@ -29,6 +30,12 @@ $enUrl = $buildLocalizedUrl('/en');
 $canonicalUrl = $currentLang === 'en' ? $enUrl : $deUrl;
 $imageUrl = rtrim(APEX_SITE_URL, '/') . '/' . ltrim($seoImage, '/');
 ?>
+<?php if (apex_setting('googleSiteVerification') !== ''): ?>
+<meta name="google-site-verification" content="<?= htmlspecialchars(apex_setting('googleSiteVerification'), ENT_QUOTES) ?>">
+<?php endif; ?>
+<?php if (apex_setting('bingSiteVerification') !== ''): ?>
+<meta name="msvalidate.01" content="<?= htmlspecialchars(apex_setting('bingSiteVerification'), ENT_QUOTES) ?>">
+<?php endif; ?>
 <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
 <link rel="alternate" hreflang="de" href="<?= htmlspecialchars($deUrl, ENT_QUOTES) ?>">

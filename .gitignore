@@ -4,3 +4,7 @@ dist/
 .DS_Store
 *.zip
 data/chat-hits.json
+
+# Written by the admin panel on the server and set once by whoever owns the
+# Search Console property, so a deploy must never overwrite it.
+data/settings.json

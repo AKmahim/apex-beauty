@@ -244,6 +244,42 @@
   .field-row.toggle-row { grid-template-columns: 1fr; }
   .field-row.toggle-row label { display: flex; align-items: center; gap: 9px; padding-top: 2px; cursor: pointer; font-weight: 600; }
   .field-row.toggle-row input[type="checkbox"] { width: 16px; height: 16px; margin: 0; accent-color: var(--blue-600); cursor: pointer; }
+  /* ---- Blog ---- */
+  .blog-item {
+    display: block; width: 100%; text-align: left; border: 0; background: transparent;
+    padding: 9px 12px; border-radius: 8px; cursor: pointer; font: inherit; color: var(--ink-soft);
+    font-size: 12.5px; font-weight: 600; line-height: 1.35;
+  }
+  .blog-item:hover { background: #f2f6fb; color: var(--ink); }
+  .blog-item.active { background: var(--blue-600); color: #fff; }
+  .blog-item .blog-item-meta { display: block; font-weight: 500; font-size: 11px; opacity: 0.75; margin-top: 3px; }
+  .blog-badge {
+    display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; padding: 2px 6px; border-radius: 999px; margin-left: 6px; vertical-align: 1px;
+  }
+  .blog-badge.draft { background: #fef3c7; color: #92400e; }
+  .blog-badge.published { background: #dcfce7; color: #166534; }
+  .blog-item.active .blog-badge { background: rgba(255,255,255,0.22); color: #fff; }
+  .blog-empty { padding: 14px 12px; font-size: 12.5px; color: var(--ink-soft); }
+
+  .blog-toolbar-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .blog-tool {
+    border: 1.5px solid var(--line); background: #fff; border-radius: 7px; padding: 5px 10px;
+    font-size: 12px; font-weight: 600; color: var(--ink-soft); cursor: pointer; font-family: inherit;
+  }
+  .blog-tool:hover { background: #f2f6fb; color: var(--blue-700); border-color: #b9d2ea; }
+  .blog-body-area {
+    width: 100%; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 8px;
+    resize: vertical; min-height: 340px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.6; }
+  .blog-url-preview { font-size: 11.5px; color: var(--ink-soft); margin-top: 4px; word-break: break-all; }
+  .blog-danger {
+    margin-left: auto; background: #fff; border: 1.5px solid #fecaca; color: #b91c1c;
+    border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+  }
+  .blog-danger:hover { background: #fef2f2; }
+  .blog-cover-preview { width: 190px; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); background: #eef5fb; }
+
   .list-label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); display: block; margin: 14px 0 8px; }
   .list-items { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
   .list-row { position: relative; background: #fbfdff; border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
@@ -319,6 +355,8 @@
   <div class="tabs">
     <button class="tab-btn active" id="tabLeadsBtn" data-tab="leads" data-i18n="tab-leads">Leads</button>
     <button class="tab-btn" id="tabContentBtn" data-tab="content" data-i18n="tab-content">Website content</button>
+    <button class="tab-btn" id="tabBlogBtn" data-tab="blog" data-i18n="tab-blog">Blog</button>
+    <button class="tab-btn" id="tabSettingsBtn" data-tab="settings" data-i18n="tab-settings">Site settings</button>
   </div>
 
   <div id="leadsPanel">
@@ -433,6 +471,32 @@
       <div class="content-editor">
         <div class="lang-tabs" id="cLangTabs"></div>
         <div id="cSections"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="settingsPanel" style="display:none;">
+    <div class="content-card" id="settingsCard">
+      <h3 data-i18n="settings-title">Site settings</h3>
+      <div class="sub" data-i18n="settings-sub">Verification codes and tracking IDs. These apply to every page.</div>
+      <div id="settingsFields"></div>
+      <div class="content-save-row">
+        <button class="btn-primary" id="settingsSaveBtn" data-i18n="settings-save">Save settings</button>
+        <span class="content-save-msg" id="settingsSaveMsg" data-i18n="saved">Saved</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="blogPanel" style="display:none;">
+    <div class="toolbar">
+      <button class="btn-primary" id="blogNewBtn" data-i18n="blog-new">New article</button>
+      <span class="sub" style="margin-left:auto;" data-i18n="blog-hint">Drafts stay invisible on the site. Publishing adds the article to the blog, the sitemap and llms.txt.</span>
+    </div>
+    <div class="content-layout">
+      <div class="section-tabs" id="blogList"></div>
+      <div class="content-editor">
+        <div class="lang-tabs" id="blogLangTabs"></div>
+        <div id="blogEditor"></div>
       </div>
     </div>
   </div>

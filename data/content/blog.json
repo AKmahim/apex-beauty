@@ -1,0 +1,74 @@
+{
+    "hero": {
+        "eyebrow": {
+            "de": "Ratgeber",
+            "en": "Guide",
+            "fr": "Guide",
+            "nl": "Gids",
+            "it": "Guida",
+            "tr": "Rehber"
+        },
+        "heading": {
+            "de": "Wissen zu <span>Haarausfall</span> und Haartransplantation",
+            "en": "Knowledge on <span>hair loss</span> and hair transplantation",
+            "fr": "Tout savoir sur la <span>chute de cheveux</span> et la greffe",
+            "nl": "Kennis over <span>haaruitval</span> en haartransplantatie",
+            "it": "Tutto su <span>caduta dei capelli</span> e trapianto",
+            "tr": "<span>Saç dökülmesi</span> ve saç ekimi hakkında bilgi"
+        },
+        "sub": {
+            "de": "Verständlich erklärte Artikel von unserem medizinischen Team: Ursachen, Behandlungen, Kosten, Ablauf und Nachsorge.",
+            "en": "Clearly explained articles from our medical team: causes, treatments, costs, procedure and aftercare.",
+            "fr": "Des articles clairs de notre équipe médicale : causes, traitements, tarifs, déroulement et suivi.",
+            "nl": "Helder uitgelegde artikelen van ons medisch team: oorzaken, behandelingen, kosten, verloop en nazorg.",
+            "it": "Articoli spiegati con chiarezza dal nostro team medico: cause, trattamenti, costi, procedura e post-operatorio.",
+            "tr": "Tıbbi ekibimizden anlaşılır makaleler: nedenler, tedaviler, maliyetler, süreç ve sonrası bakım."
+        }
+    },
+    "cta": {
+        "heading": {
+            "de": "Fragen zu Ihrer Situation?",
+            "en": "Questions about your situation?",
+            "fr": "Des questions sur votre situation ?",
+            "nl": "Vragen over uw situatie?",
+            "it": "Domande sulla tua situazione?",
+            "tr": "Durumunuz hakkında sorularınız mı var?"
+        },
+        "sub": {
+            "de": "Eine kostenlose, unverbindliche Analyse sagt Ihnen mehr als jeder Artikel: Wir schauen uns Ihre Haarsituation persönlich an.",
+            "en": "A free, no-obligation analysis tells you more than any article can: we look at your hair situation in person.",
+            "fr": "Une analyse gratuite et sans engagement vous en dira plus que n'importe quel article : nous examinons votre situation capillaire en personne.",
+            "nl": "Een gratis, vrijblijvende analyse zegt meer dan welk artikel ook: we bekijken uw haarsituatie persoonlijk.",
+            "it": "Un'analisi gratuita e senza impegno dice più di qualsiasi articolo: esaminiamo di persona la tua situazione capillare.",
+            "tr": "Ücretsiz ve bağlayıcı olmayan bir analiz her makaleden daha fazlasını anlatır: saç durumunuzu bizzat inceliyoruz."
+        },
+        "button": {
+            "de": "Kostenlose Beratung sichern",
+            "en": "Book a free consultation",
+            "fr": "Réserver une consultation gratuite",
+            "nl": "Gratis consult aanvragen",
+            "it": "Prenota un consulto gratuito",
+            "tr": "Ücretsiz danışma alın"
+        }
+    },
+    "seo": {
+        "title": {
+            "de": "Ratgeber: Haarausfall & Haartransplantation | Apex Beauty",
+            "en": "Guide: Hair Loss & Hair Transplantation | Apex Beauty",
+            "fr": "",
+            "nl": "",
+            "it": "",
+            "tr": ""
+        },
+        "description": {
+            "de": "Verständlich erklärte Artikel von Apex Beauty zu Haarausfall, Haartransplantation, Kosten, Ablauf und Nachsorge.",
+            "en": "Clearly explained articles from Apex Beauty on hair loss, hair transplantation, costs, procedure and aftercare.",
+            "fr": "",
+            "nl": "",
+            "it": "",
+            "tr": ""
+        },
+        "shareImage": "",
+        "noindex": false
+    }
+}

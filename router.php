@@ -42,6 +42,17 @@ if ($uriPath === '/en' || $uriPath === '/en/') {
     return true;
 }
 
+// Blog: archive plus one template resolved by slug, mirroring .htaccess.
+if (preg_match('#^/(?:en/)?blog/?$#', $uriPath) === 1) {
+    require $root . '/blog.php';
+    return true;
+}
+if (preg_match('#^/(?:en/)?blog/([a-z0-9-]+)/?$#', $uriPath, $m) === 1) {
+    $_GET['slug'] = $m[1];
+    require $root . '/blog-post.php';
+    return true;
+}
+
 if ($uriPath === '/consult' || $uriPath === '/consult/' || $uriPath === '/en/consult' || $uriPath === '/en/consult/') {
     $originalQuery = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_QUERY);
     $target = '/?open=consult';
