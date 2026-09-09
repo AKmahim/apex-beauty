@@ -2,14 +2,16 @@
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
-$seoTitle = $currentLang === 'en'
-    ? 'Hairpedia: Causes, Diagnosis & Treatment of Hair Loss | Apex Beauty'
-    : 'Hairpedia: Ursachen, Diagnose & Behandlung von Haarausfall | Apex Beauty';
-$seoDescription = $currentLang === 'en'
-    ? 'Everything about hair loss: causes, types, diagnosis, treatment options and hair transplantation, explained clearly by Apex Beauty.'
-    : 'Alles über Haarausfall: Ursachen, Arten, Diagnose, Behandlungsmöglichkeiten und Haartransplantation, verständlich erklärt von Apex Beauty.';
-$seoCanonicalPath = 'hairpedia';
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'hairpedia';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 $medicalWebPageSchema = [
     '@context' => 'https://schema.org',
     '@type' => 'MedicalWebPage',

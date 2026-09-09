@@ -2,14 +2,16 @@
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
-$seoTitle = $currentLang === 'en'
-    ? APEX_PHYSICIAN_NAME . ', Your Hair Transplant Specialist | Apex Beauty'
-    : APEX_PHYSICIAN_NAME . ', Ihr Facharzt für Haartransplantation | Apex Beauty';
-$seoDescription = $currentLang === 'en'
-    ? 'Meet ' . APEX_PHYSICIAN_NAME . ', responsible for the medical quality of every hair transplant at Apex Beauty.'
-    : 'Lernen Sie ' . APEX_PHYSICIAN_NAME . ' kennen, verantwortlich für die medizinische Qualität jeder Haartransplantation bei Apex Beauty.';
-$seoCanonicalPath = 'doctor';
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'doctor';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 $physicianSchema = [
     '@context' => 'https://schema.org',
     '@type' => 'Physician',

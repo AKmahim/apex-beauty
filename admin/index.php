@@ -239,6 +239,11 @@
   .content-save-msg { font-size: 12.5px; color: #16a34a; opacity: 0; transition: opacity 0.2s; }
   .content-save-msg.show { opacity: 1; }
 
+  /* A toggle has no per-language value, so it drops the label column and
+     puts its caption next to the box instead of in the left gutter. */
+  .field-row.toggle-row { grid-template-columns: 1fr; }
+  .field-row.toggle-row label { display: flex; align-items: center; gap: 9px; padding-top: 2px; cursor: pointer; font-weight: 600; }
+  .field-row.toggle-row input[type="checkbox"] { width: 16px; height: 16px; margin: 0; accent-color: var(--blue-600); cursor: pointer; }
   .list-label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); display: block; margin: 14px 0 8px; }
   .list-items { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
   .list-row { position: relative; background: #fbfdff; border: 1px solid var(--line); border-radius: 10px; padding: 12px; }

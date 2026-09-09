@@ -2,7 +2,22 @@
 
 declare(strict_types=1);
 
-return [
+// Every page gets the same search-engine block. It is appended after the page
+// list below rather than written out seven times, and always lands last so it
+// never pushes the actual page copy down the section tabs.
+$seoSection = static function (string $descriptionLabel): array {
+    return [
+        'label' => 'Search engine listing',
+        'fields' => [
+            ['key' => 'title', 'label' => 'Title shown in Google and the browser tab (about 60 characters)', 'type' => 'text'],
+            ['key' => 'description', 'label' => $descriptionLabel, 'type' => 'richtext'],
+            ['key' => 'shareImage', 'label' => 'Image shown when the page is shared on social media (1200 x 630 pixels works best)', 'type' => 'image'],
+            ['key' => 'noindex', 'label' => 'Hide this page from Google', 'type' => 'toggle'],
+        ],
+    ];
+};
+
+$pages = [
     'home' => [
         'label' => 'Homepage',
         'sections' => [
@@ -275,3 +290,13 @@ return [
         ],
     ],
 ];
+
+foreach ($pages as $pageKey => $page) {
+    $pages[$pageKey]['sections']['seo'] = $seoSection(
+        $pageKey === 'prices'
+            ? 'Description shown under the title in Google (about 155 characters). Leave {range} in the text to keep the live price range in it.'
+            : 'Description shown under the title in Google (about 155 characters)'
+    );
+}
+
+return $pages;

@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
-$seoTitle = $currentLang === 'en'
-    ? 'Hair Transplant: Procedure, Candidacy & Results | Apex Beauty'
-    : 'Haartransplantation: Ablauf, Eignung & Ergebnisse | Apex Beauty';
-$seoDescription = $currentLang === 'en'
-    ? "Your guide to hair transplantation from Apex Beauty: what the treatment involves, who's a good candidate, how recovery goes, and what results to expect."
-    : 'Ihr Leitfaden zur Haartransplantation von Apex Beauty: was die Behandlung umfasst, wer geeignet ist, wie die Genesung verläuft und welche Ergebnisse Sie erwarten können.';
-$seoCanonicalPath = 'service-hair-transplant';
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'service';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 ob_start();
 ?>
 <!DOCTYPE html>

@@ -186,5 +186,25 @@
       "it": "Tutti i termini tecnici utilizzati in Hairpedia, spiegati in modo semplice.",
       "tr": "Hairpedia boyunca kullanılan tüm teknik terimler basitçe açıklanmıştır."
     }
+  },
+  "seo": {
+    "title": {
+      "de": "Hairpedia: Ursachen, Diagnose & Behandlung von Haarausfall | Apex Beauty",
+      "en": "Hairpedia: Causes, Diagnosis & Treatment of Hair Loss | Apex Beauty",
+      "fr": "",
+      "nl": "",
+      "it": "",
+      "tr": ""
+    },
+    "description": {
+      "de": "Alles über Haarausfall: Ursachen, Arten, Diagnose, Behandlungsmöglichkeiten und Haartransplantation, verständlich erklärt von Apex Beauty.",
+      "en": "Everything about hair loss: causes, types, diagnosis, treatment options and hair transplantation, explained clearly by Apex Beauty.",
+      "fr": "",
+      "nl": "",
+      "it": "",
+      "tr": ""
+    },
+    "shareImage": "",
+    "noindex": false
   }
 }

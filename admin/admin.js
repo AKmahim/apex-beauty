@@ -881,6 +881,14 @@
   function normalizeListItem(list, raw) {
     if (list.itemType === 'text') return normalizeLangValue(raw);
     const item = {};
+    // Structural values the template depends on but nobody edits, such as a
+    // price package's `key` and its `featured` flag, have no schema field.
+    // Building the item purely from itemFields dropped them on save and
+    // quietly broke the page, so carry anything unrecognised straight through.
+    const known = new Set(list.itemFields.map((f) => f.key));
+    if (raw && typeof raw === 'object') {
+      Object.keys(raw).forEach((k) => { if (!known.has(k)) item[k] = raw[k]; });
+    }
     list.itemFields.forEach((f) => {
       item[f.key] = (f.type === 'image' || f.type === 'video') ? ((raw && raw[f.key]) || '') : normalizeLangValue(raw && raw[f.key]);
     });
@@ -962,6 +970,16 @@
       if (f.type === 'image' || f.type === 'video') {
         return mediaFieldHtml(currentPage, currentSectionKey, f, (sectionState[currentPage][currentSectionKey] || {})[f.key]);
       }
+      if (f.type === 'toggle') {
+        // A switch means the same thing in every language, so it lives outside
+        // the per-language values and never counts as a missing translation.
+        const on = !!(sectionState[currentPage][currentSectionKey] || {})[f.key];
+        values[f.key] = on;
+        return `
+        <div class="field-row toggle-row">
+          <label><input type="checkbox" data-toggle="${f.key}"${on ? ' checked' : ''}>${escapeHtml(schemaLabel(f.label))}</label>
+        </div>`;
+      }
       values[f.key] = normalizeLangValue((sectionState[currentPage][currentSectionKey] || {})[f.key]);
       return `
         <div class="field-row">
@@ -1009,7 +1027,10 @@
     CONTENT_LANGS.forEach((l) => {
       let missing = false;
       if (card && card.__values) {
-        Object.values(card.__values).forEach((v) => { if (v.en && !v[l.code]) missing = true; });
+        Object.values(card.__values).forEach((v) => {
+          if (!v || typeof v !== 'object') return; // toggles have no languages
+          if (v.en && !v[l.code]) missing = true;
+        });
       }
       if (card) {
         card.querySelectorAll('[data-list-item]').forEach((row) => {
@@ -1091,9 +1112,21 @@
     refreshVisibleValues();
   });
 
+  // Checkboxes fire 'input' in current browsers, but 'change' is the event
+  // they are actually specified to fire, so both are handled.
+  $('cSections').addEventListener('change', (e) => {
+    const card = e.target.closest('.content-card');
+    if (!card || !e.target.matches('[data-toggle]')) return;
+    card.__values[e.target.dataset.toggle] = e.target.checked;
+  });
+
   $('cSections').addEventListener('input', (e) => {
     const card = e.target.closest('.content-card');
     if (!card) return;
+    if (e.target.matches('[data-toggle]')) {
+      card.__values[e.target.dataset.toggle] = e.target.checked;
+      return;
+    }
     if (e.target.matches('[data-field]')) {
       const key = e.target.dataset.field;
       if (card.__values[key]) card.__values[key][currentContentLang] = e.target.value;
@@ -1148,6 +1181,7 @@
     const payload = { ...sectionState[pageKey][sectionKey] };
     (schema.fields || []).forEach((f) => {
       if (f.type === 'image' || f.type === 'video') return; // media saves via its own upload endpoint
+      if (f.type === 'toggle') { payload[f.key] = !!card.__values[f.key]; return; }
       payload[f.key] = { ...(card.__values[f.key] || emptyLangObj()) };
     });
     if (schema.list) {
@@ -1160,6 +1194,10 @@
       } else {
         payload[schema.list.key] = rows.map((row) => {
           const item = {};
+          const known = new Set(schema.list.itemFields.map((f) => f.key));
+          if (row.__item) {
+            Object.keys(row.__item).forEach((k) => { if (!known.has(k)) item[k] = row.__item[k]; });
+          }
           schema.list.itemFields.forEach((f) => {
             if (f.type === 'image' || f.type === 'video') {
               // Already saved directly to disk by its own upload endpoint,

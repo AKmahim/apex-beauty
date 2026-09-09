@@ -2,14 +2,16 @@
 declare(strict_types=1);
 require_once __DIR__ . '/includes/content.php';
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
-$seoTitle = $currentLang === 'en'
-    ? 'Hair Transplant Austria: Apex Beauty for Consultation, Treatment & Aftercare'
-    : 'Haartransplantation Österreich: Apex Beauty für Beratung, Behandlung & Nachsorge';
-$seoDescription = $currentLang === 'en'
-    ? "Personal consultation in Austria, hair transplantation at our leading clinic in Turkey, and professional aftercare in Austria, Germany and Switzerland. One of Europe's largest aftercare networks."
-    : 'Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.';
-$seoCanonicalPath = '';
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'home';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 
 // FAQPage schema, generated straight from the same home.json the admin
 // panel edits, so it can never drift out of sync with the visible FAQ.

@@ -93,5 +93,25 @@
                 }
             }
         ]
+    },
+    "seo": {
+        "title": {
+            "de": "Dr. Huseyin Burhan, Ihr Facharzt für Haartransplantation | Apex Beauty",
+            "en": "Dr. Huseyin Burhan, Your Hair Transplant Specialist | Apex Beauty",
+            "fr": "",
+            "nl": "",
+            "it": "",
+            "tr": ""
+        },
+        "description": {
+            "de": "Lernen Sie Dr. Huseyin Burhan kennen, verantwortlich für die medizinische Qualität jeder Haartransplantation bei Apex Beauty.",
+            "en": "Meet Dr. Huseyin Burhan, responsible for the medical quality of every hair transplant at Apex Beauty.",
+            "fr": "",
+            "nl": "",
+            "it": "",
+            "tr": ""
+        },
+        "shareImage": "",
+        "noindex": false
     }
 }

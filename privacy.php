@@ -2,15 +2,16 @@
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
-$seoTitle = $currentLang === 'en'
-    ? 'Privacy Policy · Apex Beauty'
-    : 'Datenschutzerklärung · Apex Beauty';
-$seoDescription = $currentLang === 'en'
-    ? "Apex Beauty's privacy policy: information on the processing of personal data under GDPR."
-    : 'Datenschutzerklärung von Apex Beauty: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.';
-$seoCanonicalPath = 'privacy';
-$seoNoindex = true;
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'privacy';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 ob_start();
 ?>
 <!DOCTYPE html>

@@ -2,16 +2,22 @@
 
 require_once __DIR__ . '/site-config.php';
 require_once __DIR__ . '/i18n.php';
+require_once __DIR__ . '/seo.php';
 
 // Include this once per page, right after that page's own <title> tag, with
-// $seoTitle / $seoDescription / $seoCanonicalPath (DE-rooted path, e.g.
-// 'hairpedia' or '' for the homepage - the /en equivalent is derived from it)
-// / $seoNoindex (bool) set beforehand.
+// $seoPage (the CMS page key, e.g. 'hairpedia') / $seoTitle / $seoDescription
+// / $seoCanonicalPath (DE-rooted path, e.g. 'hairpedia' or '' for the
+// homepage - the /en equivalent is derived from it) / $seoNoindex (bool) set
+// beforehand. Pages get all of those from includes/seo.php, which resolves
+// them from the admin panel first and the coded defaults second.
 $seoTitle = $seoTitle ?? APEX_BUSINESS_NAME;
 $seoDescription = $seoDescription ?? '';
 $seoCanonicalPath = $seoCanonicalPath ?? '';
 $seoNoindex = $seoNoindex ?? false;
-$seoImage = $seoImage ?? 'assets/wordmark-transparent.png';
+$seoPage = $seoPage ?? '';
+// A page with its own share image uploaded in the admin panel uses it;
+// everything else falls back to the site wordmark.
+$seoImage = $seoImage ?? apex_seo_image($seoPage, 'assets/wordmark-transparent.png');
 
 $currentLang = apex_current_lang();
 $buildLocalizedUrl = static function (string $langBase) use ($seoCanonicalPath): string {

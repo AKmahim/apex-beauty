@@ -2,15 +2,16 @@
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
-$seoTitle = $currentLang === 'en'
-    ? 'Free Consultation at Apex Beauty'
-    : 'Kostenlose Beratung bei Apex Beauty';
-$seoDescription = $currentLang === 'en'
-    ? 'Secure a free, no-obligation hair transplant consultation with Apex Beauty.'
-    : 'Sichern Sie sich eine kostenlose, unverbindliche Beratung zur Haartransplantation bei Apex Beauty.';
-$seoCanonicalPath = 'contact';
-$seoNoindex = true;
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'contact';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 ob_start();
 ?>
 <!DOCTYPE html>

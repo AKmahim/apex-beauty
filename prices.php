@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/content.php';
 require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
 $langBase = apex_lang_base();
 
@@ -42,20 +43,14 @@ $prColHead = static function (string $key, array $short) use ($prByKey): array {
     }
     return $out;
 };
-$seoTitle = $currentLang === 'en'
-    ? 'Hair Transplant Prices & Packages | Apex Beauty'
-    : 'Haartransplantation Preise & Pakete | Apex Beauty';
-// The meta description quotes a price range, so it is built from the CMS too.
-// Packages are listed highest first, so the last one is the entry price.
-$prHighest = apex_cms_value($prPackages[0]['price'] ?? null, $currentLang);
-$prLowest = apex_cms_value(end($prPackages)['price'] ?? null, $currentLang);
-$prRange = ($prLowest !== '' && $prHighest !== '')
-    ? ($currentLang === 'en' ? ", from $prLowest to $prHighest" : ", von $prLowest bis $prHighest")
-    : '';
-$seoDescription = $currentLang === 'en'
-    ? 'Transparent all-in package prices for a hair transplant at Apex Beauty' . $prRange . ' - including PRP, medication and medical follow-ups.'
-    : 'Transparente Komplettpreise für Ihre Haartransplantation bei Apex Beauty' . $prRange . ' - inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.';
-$seoCanonicalPath = 'prices';
+// Title, description, share image and the Google visibility switch are edited
+// in the admin panel under Website content > Search engine listing; the
+// fallbacks live in includes/seo.php.
+$seoPage = 'prices';
+$seoTitle = apex_seo_title($seoPage);
+$seoDescription = apex_seo_description($seoPage);
+$seoCanonicalPath = apex_seo_path($seoPage);
+$seoNoindex = apex_seo_noindex($seoPage);
 
 // Consultation CTA target. The consult modal itself lives on the homepage
 // (index.php reads ?open=consult), so every CTA here routes there rather

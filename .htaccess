@@ -10,6 +10,14 @@ RewriteRule ^ - [L]
 
 RewriteRule ^api/?(.*)$ api/index.php [QSA,L]
 RewriteRule ^admin/?$ admin/index.php [L]
+
+# robots.txt, sitemap.xml and llms.txt are generated from the live admin
+# content (includes/seo.php), not kept as hand-edited static files, so a page
+# added, switched to noindex, or repriced in the panel can never leave them
+# stale. They keep their conventional URLs; only the source is dynamic.
+RewriteRule ^robots\.txt$ robots.php [L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^llms\.txt$ llms.php [L]
 RewriteRule ^$ index.php [L]
 RewriteRule ^consult/?$ index.php?open=consult [QSA,L]
 RewriteRule ^consult-light/?$ index.php?open=consult-light [QSA,L]

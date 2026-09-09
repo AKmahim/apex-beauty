@@ -419,5 +419,25 @@
                 }
             }
         ]
+    },
+    "seo": {
+        "title": {
+            "de": "Haartransplantation Österreich: Apex Beauty für Beratung, Behandlung & Nachsorge",
+            "en": "Hair Transplant Austria: Apex Beauty for Consultation, Treatment & Aftercare",
+            "fr": "",
+            "nl": "",
+            "it": "",
+            "tr": ""
+        },
+        "description": {
+            "de": "Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.",
+            "en": "Personal consultation in Austria, hair transplantation at our leading clinic in Turkey, and professional aftercare in Austria, Germany and Switzerland. One of Europe's largest aftercare networks.",
+            "fr": "",
+            "nl": "",
+            "it": "",
+            "tr": ""
+        },
+        "shareImage": "",
+        "noindex": false
     }
 }
