@@ -1,15 +1,60 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/includes/site-config.php';
+require_once __DIR__ . '/includes/content.php';
 require_once __DIR__ . '/includes/i18n.php';
 $currentLang = apex_current_lang();
 $langBase = apex_lang_base();
+
+// Copy and prices come from the admin panel (data/content/prices.json, edited
+// under Website content > Prices page). Rendering them server-side rather than
+// letting content-loader.js swap them in keeps the English pages correct for
+// crawlers that never run the JS.
+$pricesContent = apex_get_page_content('prices') ?? [];
+$prHero = $pricesContent['hero'] ?? [];
+$prShowcase = $pricesContent['showcase'] ?? [];
+$prPackages = $pricesContent['packages']['items'] ?? [];
+$prComparison = $pricesContent['comparison'] ?? [];
+$prNotes = $pricesContent['notes']['items'] ?? [];
+$prCta = $pricesContent['cta'] ?? [];
+// Packages are keyed so the template can pair each one with its feature list,
+// which stays here rather than in the CMS: the features are structural (they
+// drive the comparison matrix too) and change far less often than a price.
+$prByKey = [];
+foreach ($prPackages as $p) {
+    if (!empty($p['key'])) {
+        $prByKey[$p['key']] = $p;
+    }
+}
+$prPrice = static function (string $key) use ($prByKey) {
+    return $prByKey[$key]['price'] ?? null;
+};
+// Column headings pair a short tier label with the price. The label stays in
+// the template (the full CMS name, "VIP-Paket", is too wide for a 130px
+// column) but the number is taken from the CMS, so the table can never quote a
+// price the cards disagree with.
+$prColHead = static function (string $key, array $short) use ($prByKey): array {
+    $price = $prByKey[$key]['price'] ?? [];
+    $out = [];
+    foreach (APEX_CONTENT_LANGS as $l) {
+        $p = is_array($price) ? ($price[$l] ?? ($price['en'] ?? '')) : '';
+        $out[$l] = ($short[$l] ?? $short['en'] ?? '') . " \u{00B7} " . $p;
+    }
+    return $out;
+};
 $seoTitle = $currentLang === 'en'
     ? 'Hair Transplant Prices & Packages | Apex Beauty'
     : 'Haartransplantation Preise & Pakete | Apex Beauty';
+// The meta description quotes a price range, so it is built from the CMS too.
+// Packages are listed highest first, so the last one is the entry price.
+$prHighest = apex_cms_value($prPackages[0]['price'] ?? null, $currentLang);
+$prLowest = apex_cms_value(end($prPackages)['price'] ?? null, $currentLang);
+$prRange = ($prLowest !== '' && $prHighest !== '')
+    ? ($currentLang === 'en' ? ", from $prLowest to $prHighest" : ", von $prLowest bis $prHighest")
+    : '';
 $seoDescription = $currentLang === 'en'
-    ? 'Transparent all-in package prices for a hair transplant at Apex Beauty: VIP from EUR 4,350, Comfort from EUR 3,950, Basic from EUR 2,650 - including PRP, medication and medical follow-ups.'
-    : 'Transparente Komplettpreise für Ihre Haartransplantation bei Apex Beauty: VIP ab 4.350 EUR, Komfort ab 3.950 EUR, Basis ab 2.650 EUR - inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.';
+    ? 'Transparent all-in package prices for a hair transplant at Apex Beauty' . $prRange . ' - including PRP, medication and medical follow-ups.'
+    : 'Transparente Komplettpreise für Ihre Haartransplantation bei Apex Beauty' . $prRange . ' - inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.';
 $seoCanonicalPath = 'prices';
 
 // Consultation CTA target. The consult modal itself lives on the homepage
@@ -21,11 +66,22 @@ $consultHref = ($langBase === '' ? '' : $langBase) . '/consult';
 // OfferCatalog rather than a Product, since this is a medical service
 // package and not a physical good.
 $pricesUrl = rtrim(APEX_SITE_URL, '/') . '/' . ltrim(trim($langBase . '/' . $seoCanonicalPath, '/'), '/');
-$packageOffers = [
-    ['id' => 'vip', 'price' => '4350', 'de' => 'VIP-Paket', 'en' => 'VIP Package'],
-    ['id' => 'komfort', 'price' => '3950', 'de' => 'Komfortpaket', 'en' => 'Comfort Package'],
-    ['id' => 'basis', 'price' => '2650', 'de' => 'Basispaket', 'en' => 'Basic Package'],
-];
+// Schema.org wants a bare number, but the CMS stores the price as it should be
+// displayed ("€ 4.350" / "4 350 €"), so strip everything that is not a digit.
+// Editing the price in the admin therefore updates the structured data too.
+$packageOffers = [];
+foreach ($prPackages as $p) {
+    $digits = preg_replace('/\D+/', '', apex_cms_value($p['price'] ?? null, 'en'));
+    if ($digits === '') {
+        continue;
+    }
+    $packageOffers[] = [
+        'id' => $p['key'] ?? '',
+        'price' => $digits,
+        'de' => apex_cms_value($p['name'] ?? null, 'de'),
+        'en' => apex_cms_value($p['name'] ?? null, 'en'),
+    ];
+}
 $pricesSchema = [
     '@context' => 'https://schema.org',
     '@type' => 'Service',
@@ -476,27 +532,27 @@ include __DIR__ . '/includes/site-header.php';
 <section class="pr-hero">
   <div class="pr-hero-bg"></div>
   <div class="pr-hero-inner">
-    <div class="eyebrow"><span class="dot"></span><span data-de="Preise &amp; Pakete" data-en="Prices &amp; Packages" data-fr="Prix &amp; forfaits" data-nl="Prijzen &amp; pakketten" data-it="Prezzi e pacchetti" data-tr="Fiyatlar ve Paketler">Preise &amp; Pakete</span></div>
-    <h1 data-de="Transparente Preise für Ihre &lt;span&gt;Haartransplantation&lt;/span&gt;" data-en="Transparent pricing for your &lt;span&gt;hair transplant&lt;/span&gt;" data-fr="Des tarifs transparents pour votre &lt;span&gt;greffe de cheveux&lt;/span&gt;" data-nl="Transparante prijzen voor uw &lt;span&gt;haartransplantatie&lt;/span&gt;" data-it="Prezzi trasparenti per il tuo &lt;span&gt;trapianto di capelli&lt;/span&gt;" data-tr="&lt;span&gt;Saç ekiminiz&lt;/span&gt; için şeffaf fiyatlar">Transparente Preise für Ihre Haartransplantation</h1>
-    <p data-de="Drei Komplettpakete, ein fester Preis. Jedes Paket enthält die vollständige medizinische Behandlung inklusive PRP, Medikamenten und ärztlicher Nachbehandlung." data-en="Three all-in packages, one fixed price. Every package covers the complete medical treatment including PRP, medication and medical follow-ups." data-fr="Trois forfaits complets, un prix fixe. Chaque forfait comprend l'intégralité du traitement médical, y compris le PRP, les médicaments et le suivi médical." data-nl="Drie complete pakketten, één vaste prijs. Elk pakket omvat de volledige medische behandeling inclusief PRP, medicatie en medische nacontroles." data-it="Tre pacchetti completi, un prezzo fisso. Ogni pacchetto comprende l'intero trattamento medico, inclusi PRP, farmaci e controlli medici." data-tr="Üç eksiksiz paket, tek sabit fiyat. Her paket; PRP, ilaçlar ve tıbbi kontroller dahil olmak üzere eksiksiz tıbbi tedaviyi kapsar.">Drei Komplettpakete, ein fester Preis. Jedes Paket enthält die vollständige medizinische Behandlung inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.</p>
+    <div class="eyebrow"><span class="dot"></span><span<?= apex_cms_attrs($prHero['eyebrow'] ?? null) ?>><?= apex_cms_value($prHero['eyebrow'] ?? null, $currentLang) ?></span></div>
+    <h1<?= apex_cms_attrs($prHero['heading'] ?? null) ?>><?= apex_cms_value($prHero['heading'] ?? null, $currentLang) ?></h1>
+    <p<?= apex_cms_attrs($prHero['sub'] ?? null) ?>><?= apex_cms_value($prHero['sub'] ?? null, $currentLang) ?></p>
   </div>
 </section>
 
 <section class="pr-showcase">
   <div class="pr-showcase-inner">
     <div class="pr-showcase-head">
-      <h2 data-de="Wählen Sie Ihr Paket" data-en="Choose your package" data-fr="Choisissez votre forfait" data-nl="Kies uw pakket" data-it="Scegli il tuo pacchetto" data-tr="Paketinizi seçin">Wählen Sie Ihr Paket</h2>
-      <p data-de="Vom Rundum-Erlebnis bis zur reinen Behandlung. Die medizinischen Leistungen sind überall dieselben." data-en="From the full experience to the treatment alone. The medical services are the same in all three." data-fr="De l'expérience complète au traitement seul. Les prestations médicales sont identiques dans les trois." data-nl="Van de volledige ervaring tot alleen de behandeling. De medische diensten zijn in alle drie hetzelfde." data-it="Dall'esperienza completa al solo trattamento. Le prestazioni mediche sono identiche in tutti e tre." data-tr="Eksiksiz deneyimden yalnızca tedaviye kadar. Tıbbi hizmetler üçünde de aynıdır.">Vom Rundum-Erlebnis bis zur reinen Behandlung. Die medizinischen Leistungen sind überall dieselben.</p>
+      <h2<?= apex_cms_attrs($prShowcase['heading'] ?? null) ?>><?= apex_cms_value($prShowcase['heading'] ?? null, $currentLang) ?></h2>
+      <p<?= apex_cms_attrs($prShowcase['sub'] ?? null) ?>><?= apex_cms_value($prShowcase['sub'] ?? null, $currentLang) ?></p>
     </div>
     <div class="pr-cards">
 
     <!-- ===== VIP - highest tier, listed first ===== -->
     <div class="pr-card featured" id="vip">
-      <span class="pr-badge" data-de="VIP-Erlebnis" data-en="VIP Experience" data-fr="Expérience VIP" data-nl="VIP-ervaring" data-it="Esperienza VIP" data-tr="VIP Deneyim">VIP-Erlebnis</span>
-      <div class="pr-name" data-de="VIP-Paket" data-en="VIP Package" data-fr="Forfait VIP" data-nl="VIP-pakket" data-it="Pacchetto VIP" data-tr="VIP Paketi">VIP-Paket</div>
-      <div class="pr-price" data-de="€ 4.350" data-en="€4,350" data-fr="4 350 €" data-nl="€ 4.350" data-it="4.350 €" data-tr="4.350 €">€ 4.350</div>
-      <div class="pr-price-note" data-de="Komplettpaket" data-en="All-in package" data-fr="Forfait tout compris" data-nl="Compleet pakket" data-it="Pacchetto completo" data-tr="Her Şey Dahil Paket">Komplettpaket</div>
-      <p class="pr-desc" data-de="Zusätzlich zu den medizinischen Leistungen genießen Sie ein exklusives Istanbul-Erlebnis." data-en="On top of the medical services, you enjoy an exclusive Istanbul experience." data-fr="En plus des prestations médicales, vous profitez d'une expérience exclusive à Istanbul." data-nl="Naast de medische diensten geniet u van een exclusieve Istanbul-ervaring." data-it="Oltre alle prestazioni mediche, potrai vivere un'esclusiva esperienza a Istanbul." data-tr="Tıbbi hizmetlerin yanı sıra ayrıcalıklı bir İstanbul deneyimi yaşarsınız.">Zusätzlich zu den medizinischen Leistungen genießen Sie ein exklusives Istanbul-Erlebnis.</p>
+      <span class="pr-badge"<?= apex_cms_attrs($prByKey['vip']['badge'] ?? null) ?>><?= apex_cms_value($prByKey['vip']['badge'] ?? null, $currentLang) ?></span>
+      <div class="pr-name"<?= apex_cms_attrs($prByKey['vip']['name'] ?? null) ?>><?= apex_cms_value($prByKey['vip']['name'] ?? null, $currentLang) ?></div>
+      <div class="pr-price"<?= apex_cms_attrs($prByKey['vip']['price'] ?? null) ?>><?= apex_cms_value($prByKey['vip']['price'] ?? null, $currentLang) ?></div>
+      <div class="pr-price-note"<?= apex_cms_attrs($prByKey['vip']['priceNote'] ?? null) ?>><?= apex_cms_value($prByKey['vip']['priceNote'] ?? null, $currentLang) ?></div>
+      <p class="pr-desc"<?= apex_cms_attrs($prByKey['vip']['description'] ?? null) ?>><?= apex_cms_value($prByKey['vip']['description'] ?? null, $currentLang) ?></p>
       <div class="pr-divider"></div>
       <div class="pr-feats">
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Erstberatung" data-en="Free initial consultation" data-fr="Première consultation gratuite" data-nl="Gratis eerste consult" data-it="Prima consulenza gratuita" data-tr="Ücretsiz ilk danışma">Kostenlose Erstberatung</span></div>
@@ -520,11 +576,11 @@ include __DIR__ . '/includes/site-header.php';
 
     <!-- ===== KOMFORT - middle tier ===== -->
     <div class="pr-card" id="komfort">
-      <span class="pr-badge" data-de="Komfort &amp; Service" data-en="Comfort &amp; Service" data-fr="Confort &amp; service" data-nl="Comfort &amp; service" data-it="Comfort e servizio" data-tr="Konfor ve Hizmet">Komfort &amp; Service</span>
-      <div class="pr-name" data-de="Komfortpaket" data-en="Comfort Package" data-fr="Forfait Confort" data-nl="Comfortpakket" data-it="Pacchetto Comfort" data-tr="Konfor Paketi">Komfortpaket</div>
-      <div class="pr-price" data-de="€ 3.950" data-en="€3,950" data-fr="3 950 €" data-nl="€ 3.950" data-it="3.950 €" data-tr="3.950 €">€ 3.950</div>
-      <div class="pr-price-note" data-de="Komplettpaket" data-en="All-in package" data-fr="Forfait tout compris" data-nl="Compleet pakket" data-it="Pacchetto completo" data-tr="Her Şey Dahil Paket">Komplettpaket</div>
-      <p class="pr-desc" data-de="Zusätzlich zu den medizinischen Leistungen sind Hotel und Transfers bereits inkludiert." data-en="On top of the medical services, hotel and transfers are already included." data-fr="En plus des prestations médicales, l'hôtel et les transferts sont déjà inclus." data-nl="Naast de medische diensten zijn hotel en transfers al inbegrepen." data-it="Oltre alle prestazioni mediche, hotel e transfer sono già inclusi." data-tr="Tıbbi hizmetlere ek olarak otel ve transferler zaten dahildir.">Zusätzlich zu den medizinischen Leistungen sind Hotel und Transfers bereits inkludiert.</p>
+      <span class="pr-badge"<?= apex_cms_attrs($prByKey['komfort']['badge'] ?? null) ?>><?= apex_cms_value($prByKey['komfort']['badge'] ?? null, $currentLang) ?></span>
+      <div class="pr-name"<?= apex_cms_attrs($prByKey['komfort']['name'] ?? null) ?>><?= apex_cms_value($prByKey['komfort']['name'] ?? null, $currentLang) ?></div>
+      <div class="pr-price"<?= apex_cms_attrs($prByKey['komfort']['price'] ?? null) ?>><?= apex_cms_value($prByKey['komfort']['price'] ?? null, $currentLang) ?></div>
+      <div class="pr-price-note"<?= apex_cms_attrs($prByKey['komfort']['priceNote'] ?? null) ?>><?= apex_cms_value($prByKey['komfort']['priceNote'] ?? null, $currentLang) ?></div>
+      <p class="pr-desc"<?= apex_cms_attrs($prByKey['komfort']['description'] ?? null) ?>><?= apex_cms_value($prByKey['komfort']['description'] ?? null, $currentLang) ?></p>
       <div class="pr-divider"></div>
       <div class="pr-feats">
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Erstberatung" data-en="Free initial consultation" data-fr="Première consultation gratuite" data-nl="Gratis eerste consult" data-it="Prima consulenza gratuita" data-tr="Ücretsiz ilk danışma">Kostenlose Erstberatung</span></div>
@@ -544,11 +600,11 @@ include __DIR__ . '/includes/site-header.php';
 
     <!-- ===== BASIS - entry tier ===== -->
     <div class="pr-card" id="basis">
-      <span class="pr-badge" data-de="Ihr Vorteil" data-en="Your Advantage" data-fr="Votre avantage" data-nl="Uw voordeel" data-it="Il tuo vantaggio" data-tr="Avantajınız">Ihr Vorteil</span>
-      <div class="pr-name" data-de="Basispaket" data-en="Basic Package" data-fr="Forfait de base" data-nl="Basispakket" data-it="Pacchetto Base" data-tr="Temel Paket">Basispaket</div>
-      <div class="pr-price" data-de="€ 2.650" data-en="€2,650" data-fr="2 650 €" data-nl="€ 2.650" data-it="2.650 €" data-tr="2.650 €">€ 2.650</div>
-      <div class="pr-price-note" data-de="Komplettpaket" data-en="All-in package" data-fr="Forfait tout compris" data-nl="Compleet pakket" data-it="Pacchetto completo" data-tr="Her Şey Dahil Paket">Komplettpaket</div>
-      <p class="pr-desc" data-de="Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf, von der Beratung bis zur Nachbetreuung." data-en="All medical services follow a clearly structured treatment process, from consultation through to aftercare." data-fr="Toutes les prestations médicales suivent un parcours de traitement clairement structuré, de la consultation au suivi." data-nl="Alle medische diensten volgen een duidelijk gestructureerd behandeltraject, van consult tot nazorg." data-it="Tutte le prestazioni mediche seguono un percorso di trattamento chiaramente strutturato, dalla consulenza al follow-up." data-tr="Tüm tıbbi hizmetler, danışmadan bakım sonrası sürece kadar net yapılandırılmış bir tedavi akışını izler.">Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf, von der Beratung bis zur Nachbetreuung.</p>
+      <span class="pr-badge"<?= apex_cms_attrs($prByKey['basis']['badge'] ?? null) ?>><?= apex_cms_value($prByKey['basis']['badge'] ?? null, $currentLang) ?></span>
+      <div class="pr-name"<?= apex_cms_attrs($prByKey['basis']['name'] ?? null) ?>><?= apex_cms_value($prByKey['basis']['name'] ?? null, $currentLang) ?></div>
+      <div class="pr-price"<?= apex_cms_attrs($prByKey['basis']['price'] ?? null) ?>><?= apex_cms_value($prByKey['basis']['price'] ?? null, $currentLang) ?></div>
+      <div class="pr-price-note"<?= apex_cms_attrs($prByKey['basis']['priceNote'] ?? null) ?>><?= apex_cms_value($prByKey['basis']['priceNote'] ?? null, $currentLang) ?></div>
+      <p class="pr-desc"<?= apex_cms_attrs($prByKey['basis']['description'] ?? null) ?>><?= apex_cms_value($prByKey['basis']['description'] ?? null, $currentLang) ?></p>
       <div class="pr-divider"></div>
       <div class="pr-feats">
         <div class="pr-feat"><span class="tick">✓</span><span data-de="Kostenlose Erstberatung" data-en="Free initial consultation" data-fr="Première consultation gratuite" data-nl="Gratis eerste consult" data-it="Prima consulenza gratuita" data-tr="Ücretsiz ilk danışma">Kostenlose Erstberatung</span></div>
@@ -570,8 +626,8 @@ include __DIR__ . '/includes/site-header.php';
 
 <section class="pr-section" id="vergleich">
   <div class="pr-section-head">
-    <h2 data-de="Alle Pakete im Vergleich" data-en="All packages compared" data-fr="Comparatif des forfaits" data-nl="Alle pakketten vergeleken" data-it="Confronto tra i pacchetti" data-tr="Tüm paketlerin karşılaştırması">Alle Pakete im Vergleich</h2>
-    <p data-de="Die medizinischen Leistungen sind in jedem Paket identisch. Die Unterschiede liegen in Unterbringung, Transfer und Betreuung vor Ort." data-en="The medical services are identical in every package. The differences are in accommodation, transfers and on-site support." data-fr="Les prestations médicales sont identiques dans chaque forfait. Les différences portent sur l'hébergement, les transferts et l'accompagnement sur place." data-nl="De medische diensten zijn in elk pakket identiek. De verschillen zitten in verblijf, transfers en begeleiding ter plaatse." data-it="Le prestazioni mediche sono identiche in ogni pacchetto. Le differenze riguardano alloggio, transfer e assistenza in loco." data-tr="Tıbbi hizmetler her pakette aynıdır. Farklar konaklama, transfer ve yerinde destek konularındadır.">Die medizinischen Leistungen sind in jedem Paket identisch. Die Unterschiede liegen in Unterbringung, Transfer und Betreuung vor Ort.</p>
+    <h2<?= apex_cms_attrs($prComparison['heading'] ?? null) ?>><?= apex_cms_value($prComparison['heading'] ?? null, $currentLang) ?></h2>
+    <p<?= apex_cms_attrs($prComparison['sub'] ?? null) ?>><?= apex_cms_value($prComparison['sub'] ?? null, $currentLang) ?></p>
   </div>
 
   <div class="pr-table-wrap">
@@ -579,9 +635,9 @@ include __DIR__ . '/includes/site-header.php';
       <thead>
         <tr>
           <th data-de="Leistung" data-en="Service" data-fr="Prestation" data-nl="Dienst" data-it="Prestazione" data-tr="Hizmet">Leistung</th>
-          <th data-de="VIP · € 4.350" data-en="VIP · €4,350" data-fr="VIP · 4 350 €" data-nl="VIP · € 4.350" data-it="VIP · 4.350 €" data-tr="VIP · 4.350 €">VIP · € 4.350</th>
-          <th data-de="Komfort · € 3.950" data-en="Comfort · €3,950" data-fr="Confort · 3 950 €" data-nl="Comfort · € 3.950" data-it="Comfort · 3.950 €" data-tr="Konfor · 3.950 €">Komfort · € 3.950</th>
-          <th data-de="Basis · € 2.650" data-en="Basic · €2,650" data-fr="Base · 2 650 €" data-nl="Basis · € 2.650" data-it="Base · 2.650 €" data-tr="Temel · 2.650 €">Basis · € 2.650</th>
+          <th<?= apex_cms_attrs($prColHead('vip', ['de'=>'VIP','en'=>'VIP','fr'=>'VIP','nl'=>'VIP','it'=>'VIP','tr'=>'VIP'])) ?>><?= apex_cms_value($prColHead('vip', ['de'=>'VIP','en'=>'VIP','fr'=>'VIP','nl'=>'VIP','it'=>'VIP','tr'=>'VIP']), $currentLang) ?></th>
+          <th<?= apex_cms_attrs($prColHead('komfort', ['de'=>'Komfort','en'=>'Comfort','fr'=>'Confort','nl'=>'Comfort','it'=>'Comfort','tr'=>'Konfor'])) ?>><?= apex_cms_value($prColHead('komfort', ['de'=>'Komfort','en'=>'Comfort','fr'=>'Confort','nl'=>'Comfort','it'=>'Comfort','tr'=>'Konfor']), $currentLang) ?></th>
+          <th<?= apex_cms_attrs($prColHead('basis', ['de'=>'Basis','en'=>'Basic','fr'=>'Base','nl'=>'Basis','it'=>'Base','tr'=>'Temel'])) ?>><?= apex_cms_value($prColHead('basis', ['de'=>'Basis','en'=>'Basic','fr'=>'Base','nl'=>'Basis','it'=>'Base','tr'=>'Temel']), $currentLang) ?></th>
         </tr>
       </thead>
       <tbody>
@@ -649,9 +705,9 @@ include __DIR__ . '/includes/site-header.php';
       <tfoot>
         <tr>
           <th scope="row" data-de="Paketpreis" data-en="Package price" data-fr="Prix du forfait" data-nl="Pakketprijs" data-it="Prezzo del pacchetto" data-tr="Paket fiyatı">Paketpreis</th>
-          <td data-de="€ 4.350" data-en="€4,350" data-fr="4 350 €" data-nl="€ 4.350" data-it="4.350 €" data-tr="4.350 €">€ 4.350</td>
-          <td data-de="€ 3.950" data-en="€3,950" data-fr="3 950 €" data-nl="€ 3.950" data-it="3.950 €" data-tr="3.950 €">€ 3.950</td>
-          <td data-de="€ 2.650" data-en="€2,650" data-fr="2 650 €" data-nl="€ 2.650" data-it="2.650 €" data-tr="2.650 €">€ 2.650</td>
+          <td<?= apex_cms_attrs($prPrice('vip')) ?>><?= apex_cms_value($prPrice('vip'), $currentLang) ?></td>
+          <td<?= apex_cms_attrs($prPrice('komfort')) ?>><?= apex_cms_value($prPrice('komfort'), $currentLang) ?></td>
+          <td<?= apex_cms_attrs($prPrice('basis')) ?>><?= apex_cms_value($prPrice('basis'), $currentLang) ?></td>
         </tr>
       </tfoot>
     </table>
@@ -659,24 +715,24 @@ include __DIR__ . '/includes/site-header.php';
 
   <div class="pr-notes">
     <div class="pr-note">
-      <b data-de="Fester Paketpreis" data-en="Fixed package price" data-fr="Prix forfaitaire fixe" data-nl="Vaste pakketprijs" data-it="Prezzo fisso del pacchetto" data-tr="Sabit paket fiyatı">Fester Paketpreis</b>
-      <p data-de="Die genannten Preise sind Komplettpreise für das jeweilige Paket. Alle enthaltenen Leistungen sind oben aufgeführt." data-en="The prices shown are complete prices for the respective package. Everything included is listed above." data-fr="Les prix indiqués sont des prix complets pour le forfait concerné. Toutes les prestations incluses sont listées ci-dessus." data-nl="De genoemde prijzen zijn complete prijzen voor het betreffende pakket. Alles wat inbegrepen is, staat hierboven vermeld." data-it="I prezzi indicati sono prezzi completi per il rispettivo pacchetto. Tutto ciò che è incluso è elencato sopra." data-tr="Belirtilen fiyatlar ilgili paketin tam fiyatlarıdır. Dahil olan her şey yukarıda listelenmiştir.">Die genannten Preise sind Komplettpreise für das jeweilige Paket. Alle enthaltenen Leistungen sind oben aufgeführt.</p>
+      <b<?= apex_cms_attrs($prNotes[0]['title'] ?? null) ?>><?= apex_cms_value($prNotes[0]['title'] ?? null, $currentLang) ?></b>
+      <p<?= apex_cms_attrs($prNotes[0]['body'] ?? null) ?>><?= apex_cms_value($prNotes[0]['body'] ?? null, $currentLang) ?></p>
     </div>
     <div class="pr-note">
-      <b data-de="Technik nach Befund" data-en="Technique based on assessment" data-fr="Technique selon le diagnostic" data-nl="Techniek op basis van diagnose" data-it="Tecnica in base alla valutazione" data-tr="Değerlendirmeye göre teknik">Technik nach Befund</b>
-      <p data-de="Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse. Der Paketpreis bleibt davon unberührt." data-en="Whether DHI or FUE is used follows the medical recommendation after your hair analysis. The package price stays the same either way." data-fr="Le choix entre DHI et FUE dépend de la recommandation médicale après votre analyse capillaire. Le prix du forfait reste inchangé." data-nl="Of DHI of FUE wordt gebruikt, volgt uit het medisch advies na uw haaranalyse. De pakketprijs blijft hetzelfde." data-it="Se venga utilizzata la tecnica DHI o FUE dipende dall'indicazione medica dopo l'analisi dei capelli. Il prezzo del pacchetto non cambia." data-tr="DHI mi yoksa FUE mi kullanılacağı, saç analizinizin ardından verilen tıbbi öneriye bağlıdır. Paket fiyatı değişmez.">Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse. Der Paketpreis bleibt davon unberührt.</p>
+      <b<?= apex_cms_attrs($prNotes[1]['title'] ?? null) ?>><?= apex_cms_value($prNotes[1]['title'] ?? null, $currentLang) ?></b>
+      <p<?= apex_cms_attrs($prNotes[1]['body'] ?? null) ?>><?= apex_cms_value($prNotes[1]['body'] ?? null, $currentLang) ?></p>
     </div>
     <div class="pr-note">
-      <b data-de="Offene Fragen?" data-en="Any open questions?" data-fr="Des questions ?" data-nl="Nog vragen?" data-it="Domande aperte?" data-tr="Sorularınız mı var?">Offene Fragen?</b>
-      <p data-de="Was über das Paket hinaus benötigt wird, klären wir individuell und unverbindlich in Ihrer kostenlosen Beratung." data-en="Anything you need beyond the package is clarified individually and without obligation in your free consultation." data-fr="Tout ce qui dépasse le forfait est clarifié individuellement et sans engagement lors de votre consultation gratuite." data-nl="Alles wat u buiten het pakket nodig heeft, bespreken we individueel en vrijblijvend tijdens uw gratis consult." data-it="Tutto ciò che serve oltre al pacchetto viene chiarito individualmente e senza impegno durante la consulenza gratuita." data-tr="Paketin ötesinde ihtiyaç duyduğunuz her şey, ücretsiz danışmanızda kişisel olarak ve hiçbir yükümlülük olmadan netleştirilir.">Was über das Paket hinaus benötigt wird, klären wir individuell und unverbindlich in Ihrer kostenlosen Beratung.</p>
+      <b<?= apex_cms_attrs($prNotes[2]['title'] ?? null) ?>><?= apex_cms_value($prNotes[2]['title'] ?? null, $currentLang) ?></b>
+      <p<?= apex_cms_attrs($prNotes[2]['body'] ?? null) ?>><?= apex_cms_value($prNotes[2]['body'] ?? null, $currentLang) ?></p>
     </div>
   </div>
 </section>
 
 <div class="pr-band-wrap">
   <div class="pr-band">
-    <h2 data-de="Welches Paket passt zu Ihnen?" data-en="Which package fits you?" data-fr="Quel forfait vous convient ?" data-nl="Welk pakket past bij u?" data-it="Quale pacchetto fa per te?" data-tr="Hangi paket size uygun?">Welches Paket passt zu Ihnen?</h2>
-    <p data-de="Erstberatung und Haaranalyse sind in jedem Paket kostenlos und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist." data-en="The initial consultation and hair analysis are free in every package and entirely without obligation. We will tell you honestly what makes medical sense." data-fr="La première consultation et l'analyse capillaire sont gratuites dans chaque forfait et sans aucun engagement. Nous vous dirons honnêtement ce qui est médicalement pertinent." data-nl="Het eerste consult en de haaranalyse zijn in elk pakket gratis en volledig vrijblijvend. We vertellen u eerlijk wat medisch zinvol is." data-it="La prima consulenza e l'analisi dei capelli sono gratuite in ogni pacchetto e senza alcun impegno. Ti diremo onestamente cosa ha senso dal punto di vista medico." data-tr="İlk danışma ve saç analizi her pakette ücretsizdir ve tamamen yükümlülüksüzdür. Tıbbi açıdan neyin anlamlı olduğunu size dürüstçe söyleriz.">Erstberatung und Haaranalyse sind in jedem Paket kostenlos und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist.</p>
+    <h2<?= apex_cms_attrs($prCta['heading'] ?? null) ?>><?= apex_cms_value($prCta['heading'] ?? null, $currentLang) ?></h2>
+    <p<?= apex_cms_attrs($prCta['sub'] ?? null) ?>><?= apex_cms_value($prCta['sub'] ?? null, $currentLang) ?></p>
     <div class="pr-band-actions">
       <a class="pr-band-btn" href="<?= htmlspecialchars($consultHref, ENT_QUOTES) ?>" data-de="Kostenlose Beratung sichern" data-en="Book a free consultation" data-fr="Réserver une consultation gratuite" data-nl="Gratis consult aanvragen" data-it="Prenota una consulenza gratuita" data-tr="Ücretsiz danışma alın">Kostenlose Beratung sichern</a>
       <a class="pr-band-btn ghost" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" onclick="trackWhatsAppContact()">

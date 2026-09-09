@@ -35,6 +35,45 @@ function apex_lang_base(?string $lang = null): string
     return $lang === 'en' ? '/en' : '';
 }
 
+const APEX_CONTENT_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
+
+// Picks one language out of a { de, en, fr, ... } content field, falling back
+// the same way the client-side applyLang() does: asked-for language, then
+// English, then German.
+function apex_cms_value($field, ?string $lang = null): string
+{
+    if (!is_array($field)) {
+        return is_string($field) ? $field : '';
+    }
+    $lang = $lang ?? apex_resolve_lang();
+    foreach ([$lang, 'en', 'de'] as $try) {
+        if (isset($field[$try]) && is_string($field[$try]) && $field[$try] !== '') {
+            return $field[$try];
+        }
+    }
+    return '';
+}
+
+// Renders the data-de/data-en/... attributes for a content field, so the
+// client-side language switcher keeps working on CMS-driven markup exactly as
+// it does on hand-written markup. Values are stored as HTML fragments (a
+// heading may contain a <span>), which is what applyLang assigns via
+// innerHTML, so they are escaped for the attribute here and printed raw as
+// element content by apex_cms_value().
+function apex_cms_attrs($field): string
+{
+    if (!is_array($field)) {
+        return '';
+    }
+    $out = '';
+    foreach (APEX_CONTENT_LANGS as $l) {
+        if (isset($field[$l]) && is_string($field[$l])) {
+            $out .= ' data-' . $l . '="' . htmlspecialchars($field[$l], ENT_QUOTES) . '"';
+        }
+    }
+    return $out;
+}
+
 // Rewrites the body of any element carrying a data-{lang} attribute, mirroring
 // what the client-side applyLang() does with el.innerHTML.
 //

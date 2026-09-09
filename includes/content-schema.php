@@ -186,6 +186,63 @@ return [
             ],
         ],
     ],
+    // The package prices live here rather than in prices.php so the clinic can
+    // change a price without a code change. prices.php renders every price
+    // from these values (cards, comparison header, comparison footer) and the
+    // Apex AI knowledge base reads the same file, so a price can only ever be
+    // stated in one place. The feature lists and the comparison matrix stay in
+    // the template: they change rarely and are structural rather than copy.
+    'prices' => [
+        'label' => 'Prices page',
+        'sections' => [
+            'hero' => ['label' => 'Hero', 'fields' => [
+                ['key' => 'eyebrow', 'label' => 'Eyebrow chip', 'type' => 'text'],
+                ['key' => 'heading', 'label' => 'Headline (wrap the highlighted part in <span>)', 'type' => 'richtext'],
+                ['key' => 'sub', 'label' => 'Sub-headline', 'type' => 'richtext'],
+            ]],
+            'showcase' => ['label' => 'Package section heading', 'fields' => [
+                ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
+                ['key' => 'sub', 'label' => 'Sub-heading', 'type' => 'richtext'],
+            ]],
+            'packages' => [
+                'label' => 'Packages',
+                'fields' => [],
+                'list' => [
+                    'key' => 'items',
+                    'label' => 'Packages (highest price first)',
+                    'itemType' => 'fields',
+                    'itemFields' => [
+                        ['key' => 'name', 'label' => 'Package name', 'type' => 'text'],
+                        ['key' => 'price', 'label' => 'Price (write it exactly as it should appear, per language)', 'type' => 'text'],
+                        ['key' => 'priceNote', 'label' => 'Line under the price', 'type' => 'text'],
+                        ['key' => 'badge', 'label' => 'Badge chip', 'type' => 'text'],
+                        ['key' => 'description', 'label' => 'Short description', 'type' => 'richtext'],
+                    ],
+                ],
+            ],
+            'comparison' => ['label' => 'Comparison table heading', 'fields' => [
+                ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
+                ['key' => 'sub', 'label' => 'Sub-heading', 'type' => 'richtext'],
+            ]],
+            'notes' => [
+                'label' => 'Notes under the table',
+                'fields' => [],
+                'list' => [
+                    'key' => 'items',
+                    'label' => 'Notes',
+                    'itemType' => 'fields',
+                    'itemFields' => [
+                        ['key' => 'title', 'label' => 'Title', 'type' => 'text'],
+                        ['key' => 'body', 'label' => 'Text', 'type' => 'richtext'],
+                    ],
+                ],
+            ],
+            'cta' => ['label' => 'Closing call to action', 'fields' => [
+                ['key' => 'heading', 'label' => 'Heading', 'type' => 'text'],
+                ['key' => 'sub', 'label' => 'Text', 'type' => 'richtext'],
+            ]],
+        ],
+    ],
     'contact' => [
         'label' => 'Contact / consultation modal',
         'sections' => [

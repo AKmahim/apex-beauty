@@ -1,0 +1,276 @@
+{
+  "hero": {
+    "eyebrow": {
+      "de": "Preise & Pakete",
+      "en": "Prices & Packages",
+      "fr": "Prix & forfaits",
+      "nl": "Prijzen & pakketten",
+      "it": "Prezzi e pacchetti",
+      "tr": "Fiyatlar ve Paketler"
+    },
+    "heading": {
+      "de": "Transparente Preise für Ihre <span>Haartransplantation</span>",
+      "en": "Transparent pricing for your <span>hair transplant</span>",
+      "fr": "Des tarifs transparents pour votre <span>greffe de cheveux</span>",
+      "nl": "Transparante prijzen voor uw <span>haartransplantatie</span>",
+      "it": "Prezzi trasparenti per il tuo <span>trapianto di capelli</span>",
+      "tr": "<span>Saç ekiminiz</span> için şeffaf fiyatlar"
+    },
+    "sub": {
+      "de": "Drei Komplettpakete, ein fester Preis. Jedes Paket enthält die vollständige medizinische Behandlung inklusive PRP, Medikamenten und ärztlicher Nachbehandlung.",
+      "en": "Three all-in packages, one fixed price. Every package covers the complete medical treatment including PRP, medication and medical follow-ups.",
+      "fr": "Trois forfaits complets, un prix fixe. Chaque forfait comprend l'intégralité du traitement médical, y compris le PRP, les médicaments et le suivi médical.",
+      "nl": "Drie complete pakketten, één vaste prijs. Elk pakket omvat de volledige medische behandeling inclusief PRP, medicatie en medische nacontroles.",
+      "it": "Tre pacchetti completi, un prezzo fisso. Ogni pacchetto comprende l'intero trattamento medico, inclusi PRP, farmaci e controlli medici.",
+      "tr": "Üç eksiksiz paket, tek sabit fiyat. Her paket; PRP, ilaçlar ve tıbbi kontroller dahil olmak üzere eksiksiz tıbbi tedaviyi kapsar."
+    }
+  },
+  "showcase": {
+    "heading": {
+      "de": "Wählen Sie Ihr Paket",
+      "en": "Choose your package",
+      "fr": "Choisissez votre forfait",
+      "nl": "Kies uw pakket",
+      "it": "Scegli il tuo pacchetto",
+      "tr": "Paketinizi seçin"
+    },
+    "sub": {
+      "de": "Vom Rundum-Erlebnis bis zur reinen Behandlung. Die medizinischen Leistungen sind überall dieselben.",
+      "en": "From the full experience to the treatment alone. The medical services are the same in all three.",
+      "fr": "De l'expérience complète au traitement seul. Les prestations médicales sont identiques dans les trois.",
+      "nl": "Van de volledige ervaring tot alleen de behandeling. De medische diensten zijn in alle drie hetzelfde.",
+      "it": "Dall'esperienza completa al solo trattamento. Le prestazioni mediche sono identiche in tutti e tre.",
+      "tr": "Eksiksiz deneyimden yalnızca tedaviye kadar. Tıbbi hizmetler üçünde de aynıdır."
+    }
+  },
+  "packages": {
+    "items": [
+      {
+        "key": "vip",
+        "featured": "yes",
+        "badge": {
+          "de": "VIP-Erlebnis",
+          "en": "VIP Experience",
+          "fr": "Expérience VIP",
+          "nl": "VIP-ervaring",
+          "it": "Esperienza VIP",
+          "tr": "VIP Deneyim"
+        },
+        "name": {
+          "de": "VIP-Paket",
+          "en": "VIP Package",
+          "fr": "Forfait VIP",
+          "nl": "VIP-pakket",
+          "it": "Pacchetto VIP",
+          "tr": "VIP Paketi"
+        },
+        "price": {
+          "de": "€ 4.350",
+          "en": "€4,350",
+          "fr": "4 350 €",
+          "nl": "€ 4.350",
+          "it": "4.350 €",
+          "tr": "4.350 €"
+        },
+        "priceNote": {
+          "de": "Komplettpaket",
+          "en": "All-in package",
+          "fr": "Forfait tout compris",
+          "nl": "Compleet pakket",
+          "it": "Pacchetto completo",
+          "tr": "Her Şey Dahil Paket"
+        },
+        "description": {
+          "de": "Zusätzlich zu den medizinischen Leistungen genießen Sie ein exklusives Istanbul-Erlebnis.",
+          "en": "On top of the medical services, you enjoy an exclusive Istanbul experience.",
+          "fr": "En plus des prestations médicales, vous profitez d'une expérience exclusive à Istanbul.",
+          "nl": "Naast de medische diensten geniet u van een exclusieve Istanbul-ervaring.",
+          "it": "Oltre alle prestazioni mediche, potrai vivere un'esclusiva esperienza a Istanbul.",
+          "tr": "Tıbbi hizmetlerin yanı sıra ayrıcalıklı bir İstanbul deneyimi yaşarsınız."
+        }
+      },
+      {
+        "key": "komfort",
+        "featured": "",
+        "badge": {
+          "de": "Komfort & Service",
+          "en": "Comfort & Service",
+          "fr": "Confort & service",
+          "nl": "Comfort & service",
+          "it": "Comfort e servizio",
+          "tr": "Konfor ve Hizmet"
+        },
+        "name": {
+          "de": "Komfortpaket",
+          "en": "Comfort Package",
+          "fr": "Forfait Confort",
+          "nl": "Comfortpakket",
+          "it": "Pacchetto Comfort",
+          "tr": "Konfor Paketi"
+        },
+        "price": {
+          "de": "€ 3.950",
+          "en": "€3,950",
+          "fr": "3 950 €",
+          "nl": "€ 3.950",
+          "it": "3.950 €",
+          "tr": "3.950 €"
+        },
+        "priceNote": {
+          "de": "Komplettpaket",
+          "en": "All-in package",
+          "fr": "Forfait tout compris",
+          "nl": "Compleet pakket",
+          "it": "Pacchetto completo",
+          "tr": "Her Şey Dahil Paket"
+        },
+        "description": {
+          "de": "Zusätzlich zu den medizinischen Leistungen sind Hotel und Transfers bereits inkludiert.",
+          "en": "On top of the medical services, hotel and transfers are already included.",
+          "fr": "En plus des prestations médicales, l'hôtel et les transferts sont déjà inclus.",
+          "nl": "Naast de medische diensten zijn hotel en transfers al inbegrepen.",
+          "it": "Oltre alle prestazioni mediche, hotel e transfer sono già inclusi.",
+          "tr": "Tıbbi hizmetlere ek olarak otel ve transferler zaten dahildir."
+        }
+      },
+      {
+        "key": "basis",
+        "featured": "",
+        "badge": {
+          "de": "Ihr Vorteil",
+          "en": "Your Advantage",
+          "fr": "Votre avantage",
+          "nl": "Uw voordeel",
+          "it": "Il tuo vantaggio",
+          "tr": "Avantajınız"
+        },
+        "name": {
+          "de": "Basispaket",
+          "en": "Basic Package",
+          "fr": "Forfait de base",
+          "nl": "Basispakket",
+          "it": "Pacchetto Base",
+          "tr": "Temel Paket"
+        },
+        "price": {
+          "de": "€ 2.650",
+          "en": "€2,650",
+          "fr": "2 650 €",
+          "nl": "€ 2.650",
+          "it": "2.650 €",
+          "tr": "2.650 €"
+        },
+        "priceNote": {
+          "de": "Komplettpaket",
+          "en": "All-in package",
+          "fr": "Forfait tout compris",
+          "nl": "Compleet pakket",
+          "it": "Pacchetto completo",
+          "tr": "Her Şey Dahil Paket"
+        },
+        "description": {
+          "de": "Alle medizinischen Leistungen folgen einem klar strukturierten Behandlungsablauf, von der Beratung bis zur Nachbetreuung.",
+          "en": "All medical services follow a clearly structured treatment process, from consultation through to aftercare.",
+          "fr": "Toutes les prestations médicales suivent un parcours de traitement clairement structuré, de la consultation au suivi.",
+          "nl": "Alle medische diensten volgen een duidelijk gestructureerd behandeltraject, van consult tot nazorg.",
+          "it": "Tutte le prestazioni mediche seguono un percorso di trattamento chiaramente strutturato, dalla consulenza al follow-up.",
+          "tr": "Tüm tıbbi hizmetler, danışmadan bakım sonrası sürece kadar net yapılandırılmış bir tedavi akışını izler."
+        }
+      }
+    ]
+  },
+  "comparison": {
+    "heading": {
+      "de": "Alle Pakete im Vergleich",
+      "en": "All packages compared",
+      "fr": "Comparatif des forfaits",
+      "nl": "Alle pakketten vergeleken",
+      "it": "Confronto tra i pacchetti",
+      "tr": "Tüm paketlerin karşılaştırması"
+    },
+    "sub": {
+      "de": "Die medizinischen Leistungen sind in jedem Paket identisch. Die Unterschiede liegen in Unterbringung, Transfer und Betreuung vor Ort.",
+      "en": "The medical services are identical in every package. The differences are in accommodation, transfers and on-site support.",
+      "fr": "Les prestations médicales sont identiques dans chaque forfait. Les différences portent sur l'hébergement, les transferts et l'accompagnement sur place.",
+      "nl": "De medische diensten zijn in elk pakket identiek. De verschillen zitten in verblijf, transfers en begeleiding ter plaatse.",
+      "it": "Le prestazioni mediche sono identiche in ogni pacchetto. Le differenze riguardano alloggio, transfer e assistenza in loco.",
+      "tr": "Tıbbi hizmetler her pakette aynıdır. Farklar konaklama, transfer ve yerinde destek konularındadır."
+    }
+  },
+  "notes": {
+    "items": [
+      {
+        "title": {
+          "de": "Fester Paketpreis",
+          "en": "Fixed package price",
+          "fr": "Prix forfaitaire fixe",
+          "nl": "Vaste pakketprijs",
+          "it": "Prezzo fisso del pacchetto",
+          "tr": "Sabit paket fiyatı"
+        },
+        "body": {
+          "de": "Die genannten Preise sind Komplettpreise für das jeweilige Paket. Alle enthaltenen Leistungen sind oben aufgeführt.",
+          "en": "The prices shown are complete prices for the respective package. Everything included is listed above.",
+          "fr": "Les prix indiqués sont des prix complets pour le forfait concerné. Toutes les prestations incluses sont listées ci-dessus.",
+          "nl": "De genoemde prijzen zijn complete prijzen voor het betreffende pakket. Alles wat inbegrepen is, staat hierboven vermeld.",
+          "it": "I prezzi indicati sono prezzi completi per il rispettivo pacchetto. Tutto ciò che è incluso è elencato sopra.",
+          "tr": "Belirtilen fiyatlar ilgili paketin tam fiyatlarıdır. Dahil olan her şey yukarıda listelenmiştir."
+        }
+      },
+      {
+        "title": {
+          "de": "Technik nach Befund",
+          "en": "Technique based on assessment",
+          "fr": "Technique selon le diagnostic",
+          "nl": "Techniek op basis van diagnose",
+          "it": "Tecnica in base alla valutazione",
+          "tr": "Değerlendirmeye göre teknik"
+        },
+        "body": {
+          "de": "Ob DHI oder FUE zum Einsatz kommt, entscheidet die medizinische Empfehlung nach Ihrer Haaranalyse. Der Paketpreis bleibt davon unberührt.",
+          "en": "Whether DHI or FUE is used follows the medical recommendation after your hair analysis. The package price stays the same either way.",
+          "fr": "Le choix entre DHI et FUE dépend de la recommandation médicale après votre analyse capillaire. Le prix du forfait reste inchangé.",
+          "nl": "Of DHI of FUE wordt gebruikt, volgt uit het medisch advies na uw haaranalyse. De pakketprijs blijft hetzelfde.",
+          "it": "Se venga utilizzata la tecnica DHI o FUE dipende dall'indicazione medica dopo l'analisi dei capelli. Il prezzo del pacchetto non cambia.",
+          "tr": "DHI mi yoksa FUE mi kullanılacağı, saç analizinizin ardından verilen tıbbi öneriye bağlıdır. Paket fiyatı değişmez."
+        }
+      },
+      {
+        "title": {
+          "de": "Offene Fragen?",
+          "en": "Any open questions?",
+          "fr": "Des questions ?",
+          "nl": "Nog vragen?",
+          "it": "Domande aperte?",
+          "tr": "Sorularınız mı var?"
+        },
+        "body": {
+          "de": "Was über das Paket hinaus benötigt wird, klären wir individuell und unverbindlich in Ihrer kostenlosen Beratung.",
+          "en": "Anything you need beyond the package is clarified individually and without obligation in your free consultation.",
+          "fr": "Tout ce qui dépasse le forfait est clarifié individuellement et sans engagement lors de votre consultation gratuite.",
+          "nl": "Alles wat u buiten het pakket nodig heeft, bespreken we individueel en vrijblijvend tijdens uw gratis consult.",
+          "it": "Tutto ciò che serve oltre al pacchetto viene chiarito individualmente e senza impegno durante la consulenza gratuita.",
+          "tr": "Paketin ötesinde ihtiyaç duyduğunuz her şey, ücretsiz danışmanızda kişisel olarak ve hiçbir yükümlülük olmadan netleştirilir."
+        }
+      }
+    ]
+  },
+  "cta": {
+    "heading": {
+      "de": "Welches Paket passt zu Ihnen?",
+      "en": "Which package fits you?",
+      "fr": "Quel forfait vous convient ?",
+      "nl": "Welk pakket past bij u?",
+      "it": "Quale pacchetto fa per te?",
+      "tr": "Hangi paket size uygun?"
+    },
+    "sub": {
+      "de": "Erstberatung und Haaranalyse sind in jedem Paket kostenlos und völlig unverbindlich. Wir sagen Ihnen ehrlich, was medizinisch sinnvoll ist.",
+      "en": "The initial consultation and hair analysis are free in every package and entirely without obligation. We will tell you honestly what makes medical sense.",
+      "fr": "La première consultation et l'analyse capillaire sont gratuites dans chaque forfait et sans aucun engagement. Nous vous dirons honnêtement ce qui est médicalement pertinent.",
+      "nl": "Het eerste consult en de haaranalyse zijn in elk pakket gratis en volledig vrijblijvend. We vertellen u eerlijk wat medisch zinvol is.",
+      "it": "La prima consulenza e l'analisi dei capelli sono gratuite in ogni pacchetto e senza alcun impegno. Ti diremo onestamente cosa ha senso dal punto di vista medico.",
+      "tr": "İlk danışma ve saç analizi her pakette ücretsizdir ve tamamen yükümlülüksüzdür. Tıbbi açıdan neyin anlamlı olduğunu size dürüstçe söyleriz."
+    }
+  }
+}

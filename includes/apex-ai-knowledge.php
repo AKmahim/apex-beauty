@@ -18,6 +18,32 @@ require_once __DIR__ . '/site-config.php';
 // FR/NL/IT/TR visitors get the EN answer, same fallback convention as
 // content-loader.js's applyBilingual().
 
+// Reads the package prices straight out of the same CMS file the prices page
+// renders from, so changing a price in the admin updates what the bot quotes.
+// Hard-coding them here once meant the bot could keep quoting a price the page
+// no longer showed, which is worse than the page being stale on its own.
+function apex_ai_package_prices(string $lang): string
+{
+    $items = apex_get_page_content('prices')['packages']['items'] ?? [];
+    $parts = [];
+    foreach ($items as $p) {
+        $name = $p['name'][$lang] ?? $p['name']['en'] ?? '';
+        $price = $p['price'][$lang] ?? $p['price']['en'] ?? '';
+        if ($name !== '' && $price !== '') {
+            $parts[] = $name . ' ' . ($lang === 'de' ? 'für' : 'at') . ' ' . $price;
+        }
+    }
+    if (!$parts) {
+        return $lang === 'de'
+            ? 'drei Komplettpakete (Preise auf unserer Preisseite)'
+            : 'three all-in packages (prices on our prices page)';
+    }
+    $last = array_pop($parts);
+    return $parts
+        ? implode(', ', $parts) . ($lang === 'de' ? ' und ' : ' and ') . $last
+        : $last;
+}
+
 function apex_ai_corpus(): array
 {
     static $corpus = null;
@@ -175,8 +201,8 @@ function apex_ai_knowledge_base(): array
         'category' => 'clinic',
         'title' => ['en' => 'How much does it cost?', 'de' => 'Was kostet es?'],
         'text' => [
-            'en' => "Apex Beauty works with three fixed all-in packages: VIP at EUR 4,350, Comfort at EUR 3,950, and Basic at EUR 2,650. Every package includes the full medical treatment — free consultation and hair analysis, treatment planning, hairline design, the transplant itself (DHI or FUE, whichever is medically recommended), PRP treatment, medication for the first week, and two medical follow-ups at the clinic. Comfort adds 3 nights at the partner hotel next to the clinic plus airport transfers; VIP adds a guided Istanbul tour, a Bosphorus cruise, a metro card and personal VIP support on top of that. You can see the full comparison on our prices page.",
-            'de' => 'Apex Beauty arbeitet mit drei festen Komplettpaketen: VIP für 4.350 EUR, Komfort für 3.950 EUR und Basis für 2.650 EUR. Jedes Paket enthält die vollständige medizinische Behandlung — kostenlose Erstberatung und Haaranalyse, Behandlungsplanung, Anzeichnung der Haarlinie, die Transplantation selbst (DHI oder FUE, je nach medizinischer Empfehlung), PRP-Eigenblutbehandlung, Medikamente für die erste Woche und zweimal ärztliche Nachbehandlung in der Klinik. Komfort ergänzt 3 Übernachtungen im Partnerhotel neben der Klinik sowie Flughafentransfers; VIP kommt zusätzlich mit geführter Istanbul-Tour, Bosporus-Schifffahrt, Metrokarte und persönlicher VIP-Betreuung. Den vollständigen Vergleich finden Sie auf unserer Preisseite.',
+            'en' => "Apex Beauty works with three fixed all-in packages: " . apex_ai_package_prices('en') . ". Every package includes the full medical treatment — free consultation and hair analysis, treatment planning, hairline design, the transplant itself (DHI or FUE, whichever is medically recommended), PRP treatment, medication for the first week, and two medical follow-ups at the clinic. Comfort adds 3 nights at the partner hotel next to the clinic plus airport transfers; VIP adds a guided Istanbul tour, a Bosphorus cruise, a metro card and personal VIP support on top of that. You can see the full comparison on our prices page.",
+            'de' => 'Apex Beauty arbeitet mit drei festen Komplettpaketen: ' . apex_ai_package_prices('de') . '. Jedes Paket enthält die vollständige medizinische Behandlung — kostenlose Erstberatung und Haaranalyse, Behandlungsplanung, Anzeichnung der Haarlinie, die Transplantation selbst (DHI oder FUE, je nach medizinischer Empfehlung), PRP-Eigenblutbehandlung, Medikamente für die erste Woche und zweimal ärztliche Nachbehandlung in der Klinik. Komfort ergänzt 3 Übernachtungen im Partnerhotel neben der Klinik sowie Flughafentransfers; VIP kommt zusätzlich mit geführter Istanbul-Tour, Bosporus-Schifffahrt, Metrokarte und persönlicher VIP-Betreuung. Den vollständigen Vergleich finden Sie auf unserer Preisseite.',
         ],
         'extraKeywords' => [
             'en' => ['cost', 'price', 'how much', 'pricing', 'expensive', 'cheap', 'payment plan', 'financing', 'package', 'packages', 'vip', 'comfort package', 'basic package', 'all in'],
