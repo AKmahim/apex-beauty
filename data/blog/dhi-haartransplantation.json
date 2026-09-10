@@ -1,10 +1,10 @@
 {
     "slug": "dhi-haartransplantation",
-    "status": "draft",
-    "publishedAt": "2026-09-09",
-    "updatedAt": "2026-09-09",
+    "status": "published",
+    "publishedAt": "2026-09-10",
+    "updatedAt": "2026-09-10",
     "author": "Apex Beauty",
-    "coverImage": "",
+    "coverImage": "assets/blog/cover-kosten.png",
     "title": {
         "de": "DHI Haartransplantation: Ablauf, Vorteile und für wen sie geeignet ist",
         "en": "DHI Hair Transplant: Process, Benefits and Who It Suits",
@@ -14,40 +14,40 @@
         "tr": ""
     },
     "excerpt": {
-        "de": "",
-        "en": "",
+        "de": "DHI ist keine Alternative zu FUE, sondern beschreibt einen anderen Schritt. Was das für Ihr Ergebnis bedeutet.",
+        "en": "DHI is not an alternative to FUE; it describes a different step. What that means for your result.",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "body": {
-        "de": "<p><em>Entwurf. Ziel-Keyword: <strong>dhi haartransplantation</strong>.</em></p>\n<h2>Geplante Gliederung</h2>\n<ul>\n  <li>Was DHI technisch bedeutet und was der Choi-Implanter macht</li>\n  <li>Warum DHI kein Gegensatz zu FUE ist: Entnahme gegen Einsetzen</li>\n  <li>Bei welchen Befunden DHI Vorteile bringt</li>\n  <li>Grenzen der Methode und wo sie nichts verbessert</li>\n</ul>",
-        "en": "",
+        "de": "<p>DHI steht für Direct Hair Implantation. Der Begriff wird häufig so verwendet, als wäre er eine Alternative zu FUE. Das ist er nicht, und dieses Missverständnis führt zu falschen Erwartungen.</p>\n\n<h2>Was DHI technisch bedeutet</h2>\n<p>Bei jeder Haartransplantation gibt es zwei Schritte: die Entnahme der Follikel aus der Spenderregion und das Einsetzen in den Empfängerbereich. FUE beschreibt die Entnahme. DHI beschreibt das Einsetzen.</p>\n<p>Beim klassischen Vorgehen werden zuerst Kanäle geöffnet und die Grafts anschließend eingesetzt. Bei DHI übernimmt ein Implanter-Stift, oft Choi-Implanter genannt, beides in einem Schritt.</p>\n\n<h2>Wo DHI Vorteile bringt</h2>\n<ul>\n  <li><strong>Haarlinie:</strong> Winkel und Richtung jedes Grafts lassen sich präziser steuern, was für die vorderste Reihe zählt.</li>\n  <li><strong>Kürzere Zeit außerhalb des Körpers:</strong> Die Grafts sind weniger lange der Luft ausgesetzt.</li>\n  <li><strong>Dichte auf kleiner Fläche:</strong> Bei begrenzten Arealen lässt sich enger setzen.</li>\n  <li><strong>Teilrasur möglich:</strong> Für Patienten, die keine Vollrasur wollen, ist DHI oft praktikabler.</li>\n</ul>\n\n<h2>Wo DHI nichts verbessert</h2>\n<p>Bei großen Flächen mit hoher Graft-Zahl dauert DHI länger und ist teurer, ohne dass das Ergebnis zwangsläufig besser wird. Ist die Spenderregion schwach, ändert die Implantationsmethode daran nichts. Und eine schlecht geplante Haarlinie bleibt schlecht, egal mit welchem Instrument sie gesetzt wurde.</p>\n\n<h2>Wie die Methode festgelegt wird</h2>\n<p>Bei Apex Beauty wird die Technik bei der Beratung in Österreich festgelegt, nach Befund, nicht nach Preisliste. Wenn klassisches FUE für Ihre Fläche das sinnvollere Verfahren ist, sagen wir das.</p>\n\n<p>Der Vergleich beider Verfahren steht ausführlich in unserer <a href=\"/hairpedia\">Hairpedia</a>. Was in den Paketen enthalten ist, finden Sie auf der <a href=\"/prices\">Preisseite</a>.</p>",
+        "en": "<p>DHI stands for Direct Hair Implantation. The term is often used as though it were an alternative to FUE. It is not, and that misunderstanding creates false expectations.</p>\n\n<h2>What DHI actually means</h2>\n<p>Every hair transplant has two steps: extracting follicles from the donor area and implanting them in the recipient area. FUE describes the extraction. DHI describes the implantation.</p>\n<p>In the classic approach, channels are opened first and grafts are placed afterwards. With DHI an implanter pen, often called a Choi implanter, does both in one motion.</p>\n\n<h2>Where DHI helps</h2>\n<ul>\n  <li><strong>Hairline:</strong> The angle and direction of each graft can be controlled more precisely, which matters most in the front row.</li>\n  <li><strong>Less time outside the body:</strong> Grafts spend less time exposed to air.</li>\n  <li><strong>Density on small areas:</strong> Grafts can be placed closer together on limited zones.</li>\n  <li><strong>Partial shaving:</strong> For patients who do not want a full shave, DHI is often more practical.</li>\n</ul>\n\n<h2>Where DHI changes nothing</h2>\n<p>On large areas with high graft counts, DHI takes longer and costs more without the result being necessarily better. If the donor area is weak, the implantation method does not change that. And a badly planned hairline stays badly planned whatever instrument placed it.</p>\n\n<h2>How the method gets chosen</h2>\n<p>At Apex Beauty the technique is decided during the consultation in Austria, based on findings rather than a price list. If classic FUE is the more sensible option for your area, we say so.</p>\n\n<p>A fuller comparison of both methods is in our <a href=\"/en/hairpedia\">Hairpedia</a>. What the packages include is on the <a href=\"/en/prices\">pricing page</a>.</p>",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "coverAlt": {
-        "de": "",
-        "en": "",
+        "de": "Abstrakte Darstellung des DHI-Implanter-Verfahrens",
+        "en": "An abstract representation of the DHI implanter method",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "seoTitle": {
-        "de": "",
-        "en": "",
+        "de": "DHI Haartransplantation: Ablauf und Eignung | Apex Beauty",
+        "en": "DHI Hair Transplant: Process and Suitability | Apex Beauty",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "seoDescription": {
-        "de": "",
-        "en": "",
+        "de": "Was DHI technisch bedeutet, wo der Implanter-Stift Vorteile bringt, wo er nichts verbessert und wie die Methode nach Befund festgelegt wird.",
+        "en": "What DHI actually means, where the implanter pen helps, where it changes nothing, and how the method is chosen from the findings.",
         "fr": "",
         "nl": "",
         "it": "",

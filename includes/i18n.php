@@ -13,6 +13,10 @@ declare(strict_types=1);
 // picked. This makes /en/* a real, independently crawlable English surface
 // without needing a second copy of every template.
 
+// German is served from the root and every other language sits behind its own
+// prefix. Keeping German unprefixed preserves the URLs Google already knows.
+const APEX_URL_LANGS = ['en', 'fr', 'nl', 'it', 'tr'];
+
 function apex_resolve_lang(): string
 {
     static $lang = null;
@@ -20,7 +24,13 @@ function apex_resolve_lang(): string
         return $lang;
     }
     $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
-    $lang = preg_match('#^/en(/|$)#', $path) === 1 ? 'en' : 'de';
+    $lang = 'de';
+    foreach (APEX_URL_LANGS as $code) {
+        if (preg_match('#^/' . $code . '(/|$)#', $path) === 1) {
+            $lang = $code;
+            break;
+        }
+    }
     return $lang;
 }
 
@@ -32,7 +42,19 @@ function apex_current_lang(): string
 function apex_lang_base(?string $lang = null): string
 {
     $lang = $lang ?? apex_resolve_lang();
-    return $lang === 'en' ? '/en' : '';
+    return in_array($lang, APEX_URL_LANGS, true) ? '/' . $lang : '';
+}
+
+// The og:locale value each language should advertise.
+const APEX_LOCALES = [
+    'de' => 'de_AT', 'en' => 'en_US', 'fr' => 'fr_FR',
+    'nl' => 'nl_NL', 'it' => 'it_IT', 'tr' => 'tr_TR',
+];
+
+function apex_locale(?string $lang = null): string
+{
+    $lang = $lang ?? apex_resolve_lang();
+    return APEX_LOCALES[$lang] ?? 'de_AT';
 }
 
 const APEX_CONTENT_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];

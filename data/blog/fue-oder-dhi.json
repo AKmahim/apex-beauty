@@ -1,10 +1,10 @@
 {
     "slug": "fue-oder-dhi",
-    "status": "draft",
-    "publishedAt": "2026-09-09",
-    "updatedAt": "2026-09-09",
+    "status": "published",
+    "publishedAt": "2026-09-10",
+    "updatedAt": "2026-09-10",
     "author": "Apex Beauty",
-    "coverImage": "",
+    "coverImage": "assets/blog/cover-kosten.png",
     "title": {
         "de": "FUE oder DHI: Welche Methode passt zu welchem Befund?",
         "en": "FUE or DHI: Which Method Suits Which Case?",
@@ -14,40 +14,40 @@
         "tr": ""
     },
     "excerpt": {
-        "de": "",
-        "en": "",
+        "de": "Die Frage vergleicht zwei Dinge, die keine echten Alternativen sind. Ein Vergleich mit Tabelle und was wirklich über das Ergebnis entscheidet.",
+        "en": "The question compares two things that are not real alternatives. A comparison table, and what actually decides the result.",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "body": {
-        "de": "<p><em>Entwurf. Ziel-Keyword: <strong>fue oder dhi</strong>.</em></p>\n<h2>Geplante Gliederung</h2>\n<ul>\n  <li>Der häufigste Denkfehler beim Vergleich beider Begriffe</li>\n  <li>Dichte, Haarlinie und Narbenbildung im direkten Vergleich</li>\n  <li>Kosten- und Zeitunterschied</li>\n  <li>Wie die Methode bei der Beratung in Österreich festgelegt wird</li>\n</ul>",
-        "en": "",
+        "de": "<p>Die Frage \"FUE oder DHI\" ist so verbreitet, dass es sich lohnt, sie ehrlich zu beantworten: Sie vergleicht zwei Dinge, die keine echten Alternativen sind.</p>\n\n<h2>Der Denkfehler</h2>\n<p>FUE beschreibt, wie die Follikel entnommen werden. DHI beschreibt, wie sie eingesetzt werden. Ein DHI-Eingriff verwendet die FUE-Entnahme. Die richtige Frage lautet also nicht \"FUE oder DHI\", sondern \"klassisches Einsetzen mit vorab geöffneten Kanälen oder Einsetzen per Implanter-Stift\".</p>\n\n<h2>Der praktische Vergleich</h2>\n\n<div class=\"bp-tablescroll\">\n<table>\n  <thead><tr><th scope=\"col\">&nbsp;</th><th scope=\"col\">Klassisch (FUE mit Kanälen)</th><th scope=\"col\">DHI (Implanter-Stift)</th></tr></thead>\n  <tbody>\n    <tr><th scope=\"row\">Große Flächen</th><td>Effizienter</td><td>Zeitaufwendiger</td></tr>\n    <tr><th scope=\"row\">Haarlinie</th><td>Gut</td><td>Präziser steuerbar</td></tr>\n    <tr><th scope=\"row\">Rasur</th><td>Meist Vollrasur</td><td>Teilrasur oft möglich</td></tr>\n    <tr><th scope=\"row\">Dauer</th><td>Kürzer</td><td>Länger</td></tr>\n    <tr><th scope=\"row\">Kosten</th><td>Niedriger</td><td>Höher</td></tr>\n  </tbody>\n</table>\n</div>\n\n<h2>Was tatsächlich über das Ergebnis entscheidet</h2>\n<p>Nicht das Instrument, sondern drei andere Dinge:</p>\n<ul>\n  <li><strong>Die Planung der Haarlinie.</strong> Zu tief gesetzt sieht sie in zehn Jahren falsch aus.</li>\n  <li><strong>Die Schonung der Spenderregion.</strong> Wird zu viel entnommen, fehlt später Material.</li>\n  <li><strong>Winkel und Dichte beim Einsetzen.</strong> Handwerk, nicht Technik.</li>\n</ul>\n\n<p>Eine Klinik, die Ihnen DHI als pauschal überlegen verkauft, verkauft einen Aufpreis, keine bessere Medizin.</p>\n\n<h2>Wie wir entscheiden</h2>\n<p>Bei der Beratung in Österreich wird die Spenderdichte gemessen und die zu deckende Fläche bestimmt. Daraus ergibt sich die Methode. Häufig ist eine Kombination sinnvoll: DHI für die vorderste Haarlinie, klassisches Vorgehen für die Fläche dahinter.</p>\n\n<p>Mehr zu den Verfahren steht in der <a href=\"/hairpedia\">Hairpedia</a>. Die Pakete finden Sie auf der <a href=\"/prices\">Preisseite</a>.</p>",
+        "en": "<p>The question \"FUE or DHI\" is so common that it deserves an honest answer: it compares two things that are not real alternatives.</p>\n\n<h2>The misunderstanding</h2>\n<p>FUE describes how follicles are extracted. DHI describes how they are implanted. A DHI procedure uses FUE extraction. So the right question is not \"FUE or DHI\" but \"classic implantation into pre-opened channels, or implantation with an implanter pen\".</p>\n\n<h2>The practical comparison</h2>\n\n<div class=\"bp-tablescroll\">\n<table>\n  <thead><tr><th scope=\"col\">&nbsp;</th><th scope=\"col\">Classic (FUE with channels)</th><th scope=\"col\">DHI (implanter pen)</th></tr></thead>\n  <tbody>\n    <tr><th scope=\"row\">Large areas</th><td>More efficient</td><td>More time-consuming</td></tr>\n    <tr><th scope=\"row\">Hairline</th><td>Good</td><td>More precisely controlled</td></tr>\n    <tr><th scope=\"row\">Shaving</th><td>Usually a full shave</td><td>Partial shave often possible</td></tr>\n    <tr><th scope=\"row\">Duration</th><td>Shorter</td><td>Longer</td></tr>\n    <tr><th scope=\"row\">Cost</th><td>Lower</td><td>Higher</td></tr>\n  </tbody>\n</table>\n</div>\n\n<h2>What actually decides the result</h2>\n<p>Not the instrument, but three other things:</p>\n<ul>\n  <li><strong>Hairline planning.</strong> Set too low, it looks wrong in ten years.</li>\n  <li><strong>Preserving the donor area.</strong> Take too much and there is nothing left for later.</li>\n  <li><strong>Angle and density on implantation.</strong> Craft, not technology.</li>\n</ul>\n\n<p>A clinic selling DHI as universally superior is selling a surcharge, not better medicine.</p>\n\n<h2>How we decide</h2>\n<p>During the consultation in Austria, donor density is measured and the area to be covered is established. The method follows from that. A combination is often sensible: DHI for the front hairline, the classic approach for the area behind it.</p>\n\n<p>More on both methods is in the <a href=\"/en/hairpedia\">Hairpedia</a>. The packages are on the <a href=\"/en/prices\">pricing page</a>.</p>",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "coverAlt": {
-        "de": "",
-        "en": "",
+        "de": "Waage als Symbol für den Vergleich zweier Methoden",
+        "en": "A balance representing the comparison of two methods",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "seoTitle": {
-        "de": "",
-        "en": "",
+        "de": "FUE oder DHI: Methoden im Vergleich | Apex Beauty",
+        "en": "FUE or DHI: Methods Compared | Apex Beauty",
         "fr": "",
         "nl": "",
         "it": "",
         "tr": ""
     },
     "seoDescription": {
-        "de": "",
-        "en": "",
+        "de": "FUE beschreibt die Entnahme, DHI das Einsetzen. Der praktische Vergleich bei Fläche, Haarlinie, Rasur, Dauer und Kosten.",
+        "en": "FUE describes extraction, DHI describes implantation. The practical comparison across area, hairline, shaving, duration and cost.",
         "fr": "",
         "nl": "",
         "it": "",

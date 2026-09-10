@@ -37,23 +37,23 @@ if ($uriPath === '/' || $uriPath === '') {
     return true;
 }
 
-if ($uriPath === '/en' || $uriPath === '/en/') {
+if (preg_match('#^/(en|fr|nl|it|tr)/?$#', $uriPath) === 1) {
     require $root . '/index.php';
     return true;
 }
 
 // Blog: archive plus one template resolved by slug, mirroring .htaccess.
-if (preg_match('#^/(?:en/)?blog/?$#', $uriPath) === 1) {
+if (preg_match('#^/(?:(?:en|fr|nl|it|tr)/)?blog/?$#', $uriPath) === 1) {
     require $root . '/blog.php';
     return true;
 }
-if (preg_match('#^/(?:en/)?blog/([a-z0-9-]+)/?$#', $uriPath, $m) === 1) {
+if (preg_match('#^/(?:(?:en|fr|nl|it|tr)/)?blog/([a-z0-9-]+)/?$#', $uriPath, $m) === 1) {
     $_GET['slug'] = $m[1];
     require $root . '/blog-post.php';
     return true;
 }
 
-if ($uriPath === '/consult' || $uriPath === '/consult/' || $uriPath === '/en/consult' || $uriPath === '/en/consult/') {
+if (preg_match('#^/(?:(?:en|fr|nl|it|tr)/)?consult/?$#', $uriPath) === 1) {
     $originalQuery = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_QUERY);
     $target = '/?open=consult';
     if (is_string($originalQuery) && $originalQuery !== '') {
@@ -63,7 +63,7 @@ if ($uriPath === '/consult' || $uriPath === '/consult/' || $uriPath === '/en/con
     return true;
 }
 
-if ($uriPath === '/consult-light' || $uriPath === '/consult-light/' || $uriPath === '/en/consult-light' || $uriPath === '/en/consult-light/') {
+if (preg_match('#^/(?:(?:en|fr|nl|it|tr)/)?consult-light/?$#', $uriPath) === 1) {
     $originalQuery = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_QUERY);
     $target = '/?open=consult-light';
     if (is_string($originalQuery) && $originalQuery !== '') {
@@ -74,11 +74,10 @@ if ($uriPath === '/consult-light' || $uriPath === '/consult-light/' || $uriPath 
 }
 
 $trimmed = trim($uriPath, '/');
-// /en/<page> serves the same template; includes/i18n.php reads the language
-// back off the URL, so the prefix only needs stripping to find the file.
-if (str_starts_with($trimmed, 'en/')) {
-    $trimmed = substr($trimmed, 3);
-}
+// /<lang>/<page> serves the same template; includes/i18n.php reads the
+// language back off the URL, so the prefix only needs stripping to find the
+// file on disk.
+$trimmed = (string) preg_replace('#^(?:en|fr|nl|it|tr)/#', '', $trimmed);
 if ($trimmed !== '' && preg_match('/^[A-Za-z0-9-]+$/', $trimmed) === 1) {
     $phpPage = $root . '/' . $trimmed . '.php';
     if (is_file($phpPage)) {

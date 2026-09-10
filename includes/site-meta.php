@@ -25,9 +25,14 @@ $buildLocalizedUrl = static function (string $langBase) use ($seoCanonicalPath):
     $path = trim($langBase . '/' . ltrim($seoCanonicalPath, '/'), '/');
     return $path === '' ? rtrim(APEX_SITE_URL, '/') . '/' : rtrim(APEX_SITE_URL, '/') . '/' . $path;
 };
-$deUrl = $buildLocalizedUrl('');
-$enUrl = $buildLocalizedUrl('/en');
-$canonicalUrl = $currentLang === 'en' ? $enUrl : $deUrl;
+// One URL per language. German is the root and also the x-default, since it is
+// the language a visitor with no better match should land on.
+$langUrls = ['de' => $buildLocalizedUrl('')];
+foreach (APEX_URL_LANGS as $code) {
+    $langUrls[$code] = $buildLocalizedUrl('/' . $code);
+}
+$deUrl = $langUrls['de'];
+$canonicalUrl = $langUrls[$currentLang] ?? $deUrl;
 $imageUrl = rtrim(APEX_SITE_URL, '/') . '/' . ltrim($seoImage, '/');
 ?>
 <?php if (apex_setting('googleSiteVerification') !== ''): ?>
@@ -38,8 +43,9 @@ $imageUrl = rtrim(APEX_SITE_URL, '/') . '/' . ltrim($seoImage, '/');
 <?php endif; ?>
 <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
-<link rel="alternate" hreflang="de" href="<?= htmlspecialchars($deUrl, ENT_QUOTES) ?>">
-<link rel="alternate" hreflang="en" href="<?= htmlspecialchars($enUrl, ENT_QUOTES) ?>">
+<?php foreach ($langUrls as $hrefLang => $hrefUrl): ?>
+<link rel="alternate" hreflang="<?= htmlspecialchars($hrefLang, ENT_QUOTES) ?>" href="<?= htmlspecialchars($hrefUrl, ENT_QUOTES) ?>">
+<?php endforeach; ?>
 <link rel="alternate" hreflang="x-default" href="<?= htmlspecialchars($deUrl, ENT_QUOTES) ?>">
 <meta name="robots" content="<?= $seoNoindex ? 'noindex, nofollow' : 'index, follow' ?>">
 <meta property="og:type" content="website">
@@ -48,8 +54,10 @@ $imageUrl = rtrim(APEX_SITE_URL, '/') . '/' . ltrim($seoImage, '/');
 <meta property="og:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
 <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
 <meta property="og:image" content="<?= htmlspecialchars($imageUrl, ENT_QUOTES) ?>">
-<meta property="og:locale" content="<?= $currentLang === 'en' ? 'en_US' : 'de_AT' ?>">
-<meta property="og:locale:alternate" content="<?= $currentLang === 'en' ? 'de_AT' : 'en_US' ?>">
+<meta property="og:locale" content="<?= htmlspecialchars(apex_locale($currentLang), ENT_QUOTES) ?>">
+<?php foreach (array_keys($langUrls) as $altLang): if ($altLang === $currentLang) { continue; } ?>
+<meta property="og:locale:alternate" content="<?= htmlspecialchars(apex_locale($altLang), ENT_QUOTES) ?>">
+<?php endforeach; ?>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= htmlspecialchars($seoTitle, ENT_QUOTES) ?>">
 <meta name="twitter:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">

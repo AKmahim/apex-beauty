@@ -253,8 +253,14 @@ function apex_seo_tokens(string $page, string $lang): array
 function apex_seo_url(string $page, string $lang): string
 {
     $base = rtrim(APEX_SITE_URL, '/');
-    $path = trim(($lang === 'en' ? '/en' : '') . '/' . apex_seo_path($page), '/');
+    $path = trim(apex_lang_base($lang) . '/' . apex_seo_path($page), '/');
     return $path === '' ? $base . '/' : $base . '/' . $path;
+}
+
+// German plus every prefixed language, in the order they should be listed.
+function apex_sitemap_langs(): array
+{
+    return array_merge(['de'], APEX_URL_LANGS);
 }
 
 // An honest <lastmod>: the later of the template's own mtime and the mtime of
@@ -288,17 +294,23 @@ function apex_sitemap_xml(): string
     $out = '<?xml version="1.0" encoding="UTF-8"?>' . "\n"
         . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' . "\n";
 
+    $langs = apex_sitemap_langs();
     foreach (apex_seo_indexable_pages() as $page) {
         $entry = apex_seo_entry($page);
-        $deUrl = apex_seo_url($page, 'de');
-        $enUrl = apex_seo_url($page, 'en');
+        $urls = [];
+        foreach ($langs as $lang) {
+            $urls[$lang] = apex_seo_url($page, $lang);
+        }
+        $alternates = '';
+        foreach ($urls as $lang => $url) {
+            $alternates .= '    <xhtml:link rel="alternate" hreflang="' . $esc($lang) . '" href="' . $esc($url) . "\"/>\n";
+        }
+        $alternates .= '    <xhtml:link rel="alternate" hreflang="x-default" href="' . $esc($urls['de']) . "\"/>\n";
         $lastmod = apex_seo_lastmod($page);
-        foreach ([$deUrl, $enUrl] as $loc) {
+        foreach ($urls as $loc) {
             $out .= "  <url>\n"
                 . '    <loc>' . $esc($loc) . "</loc>\n"
-                . '    <xhtml:link rel="alternate" hreflang="de" href="' . $esc($deUrl) . "\"/>\n"
-                . '    <xhtml:link rel="alternate" hreflang="en" href="' . $esc($enUrl) . "\"/>\n"
-                . '    <xhtml:link rel="alternate" hreflang="x-default" href="' . $esc($deUrl) . "\"/>\n"
+                . $alternates
                 . '    <lastmod>' . $lastmod . "</lastmod>\n"
                 . '    <changefreq>' . $esc((string) ($entry['changefreq'] ?? 'monthly')) . "</changefreq>\n"
                 . '    <priority>' . $esc((string) ($entry['priority'] ?? '0.5')) . "</priority>\n"
@@ -309,23 +321,27 @@ function apex_sitemap_xml(): string
     // Published posts, newest first. Nothing here is hand-maintained: a post
     // published in the admin panel is in the sitemap on the next request.
     foreach (apex_blog_all(true) as $post) {
-        $deUrl = apex_blog_url(apex_blog_post_path($post['slug'], 'de'));
-        $enUrl = apex_blog_url(apex_blog_post_path($post['slug'], 'en'));
-        foreach (['de' => $deUrl, 'en' => $enUrl] as $lang => $loc) {
-            // A post only gets a URL in a language it was actually written in.
-            if (!apex_blog_has_language($post, $lang)) {
-                continue;
-            }
+        // A post only gets a URL in a language it was actually written in, so
+        // a German-only article never appears as an empty Italian page.
+        $written = array_values(array_filter(
+            $langs,
+            static fn(string $lang): bool => apex_blog_has_language($post, $lang)
+        ));
+        if ($written === []) {
+            continue;
+        }
+        $alternates = '';
+        foreach ($written as $lang) {
+            $alternates .= '    <xhtml:link rel="alternate" hreflang="' . $esc($lang) . '" href="'
+                . $esc(apex_blog_url(apex_blog_post_path($post['slug'], $lang))) . "\"/>\n";
+        }
+        $alternates .= '    <xhtml:link rel="alternate" hreflang="x-default" href="'
+            . $esc(apex_blog_url(apex_blog_post_path($post['slug'], $written[0]))) . "\"/>\n";
+        foreach ($written as $lang) {
             $out .= "  <url>\n"
-                . '    <loc>' . $esc($loc) . "</loc>\n";
-            if (apex_blog_has_language($post, 'de')) {
-                $out .= '    <xhtml:link rel="alternate" hreflang="de" href="' . $esc($deUrl) . "\"/>\n"
-                    . '    <xhtml:link rel="alternate" hreflang="x-default" href="' . $esc($deUrl) . "\"/>\n";
-            }
-            if (apex_blog_has_language($post, 'en')) {
-                $out .= '    <xhtml:link rel="alternate" hreflang="en" href="' . $esc($enUrl) . "\"/>\n";
-            }
-            $out .= '    <lastmod>' . $esc($post['updatedAt']) . "</lastmod>\n"
+                . '    <loc>' . $esc(apex_blog_url(apex_blog_post_path($post['slug'], $lang))) . "</loc>\n"
+                . $alternates
+                . '    <lastmod>' . $esc($post['updatedAt']) . "</lastmod>\n"
                 . "    <changefreq>monthly</changefreq>\n"
                 . "    <priority>0.7</priority>\n"
                 . "  </url>\n";

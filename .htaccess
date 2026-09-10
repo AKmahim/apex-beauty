@@ -22,22 +22,23 @@ RewriteRule ^$ index.php [L]
 RewriteRule ^consult/?$ index.php?open=consult [QSA,L]
 RewriteRule ^consult-light/?$ index.php?open=consult-light [QSA,L]
 
-# English mirror of every page, same PHP files. Language is resolved from
-# this URL prefix at request time (see includes/i18n.php) - not a query
-# string, so it stays a clean, independently indexable /en/... URL.
-RewriteRule ^en/?$ index.php [L]
-# The consult shortcuts need their own /en rules before the generic one
-# below, which would otherwise look for a non-existent consult.php.
-RewriteRule ^en/consult/?$ index.php?open=consult [QSA,L]
-RewriteRule ^en/consult-light/?$ index.php?open=consult-light [QSA,L]
-RewriteRule ^en/([A-Za-z0-9-]+)/?$ $1.php [L]
+# Every non-German language mirrors the whole site behind its own prefix, on
+# the same PHP files. The language is resolved from this URL prefix at request
+# time (see includes/i18n.php), not from a query string, so each one stays a
+# clean, independently indexable URL. German stays at the root.
+RewriteRule ^(en|fr|nl|it|tr)/?$ index.php [L]
+# The consult shortcuts need their own rules before the generic one below,
+# which would otherwise look for a non-existent consult.php.
+RewriteRule ^(en|fr|nl|it|tr)/consult/?$ index.php?open=consult [QSA,L]
+RewriteRule ^(en|fr|nl|it|tr)/consult-light/?$ index.php?open=consult-light [QSA,L]
+RewriteRule ^(en|fr|nl|it|tr)/blog/?$ blog.php [L]
+RewriteRule ^(en|fr|nl|it|tr)/blog/([a-z0-9-]+)/?$ blog-post.php?slug=$2 [QSA,L]
+RewriteRule ^(en|fr|nl|it|tr)/([A-Za-z0-9-]+)/?$ $2.php [L]
 
 # Blog. The archive is one page and every post is the same template resolved
 # by slug, so posts are added from the admin panel without touching Apache.
 RewriteRule ^blog/?$ blog.php [L]
 RewriteRule ^blog/([a-z0-9-]+)/?$ blog-post.php?slug=$1 [QSA,L]
-RewriteRule ^en/blog/?$ blog.php [L]
-RewriteRule ^en/blog/([a-z0-9-]+)/?$ blog-post.php?slug=$1 [QSA,L]
 
 
 RewriteRule ^([A-Za-z0-9-]+)\.html$ $1.php [L]
