@@ -1,9 +1,13 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/includes/content.php';
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/i18n.php';
 require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
+// The copy the admin panel edits, rendered into the HTML instead of being
+// swapped in by JavaScript, so an edit is visible to crawlers.
+$cmsPrivacy = apex_get_page_content('privacy') ?? [];
 // Title, description, share image and the Google visibility switch are edited
 // in the admin panel under Website content > Search engine listing; the
 // fallbacks live in includes/seo.php.
@@ -139,8 +143,8 @@ ob_start();
 </div>
 
 <div class="ph-wrap">
-  <h1 data-ckey="intro.title" data-de="Datenschutzerklärung" data-en="Privacy Policy">Datenschutzerklärung</h1>
-  <p class="ph-updated" data-ckey="intro.sub" data-de="Diese Seite deckt die DSGVO-Mindestangaben ab. Sie wurde nicht anwaltlich geprüft." data-en="This page covers DSGVO/GDPR baseline disclosures. It has not been reviewed by a lawyer.">Diese Seite deckt die DSGVO-Mindestangaben ab. Sie wurde nicht anwaltlich geprüft.</p>
+  <h1 data-ckey="intro.title"<?= apex_cms_attrs_or($cmsPrivacy['intro']['title'] ?? null, ['de' => "Datenschutzerklärung", 'en' => "Privacy Policy"]) ?>><?= apex_cms_value_or($cmsPrivacy['intro']['title'] ?? null, ['de' => "Datenschutzerklärung", 'en' => "Privacy Policy"], $currentLang) ?></h1>
+  <p class="ph-updated" data-ckey="intro.sub"<?= apex_cms_attrs_or($cmsPrivacy['intro']['sub'] ?? null, ['de' => "Diese Seite deckt die DSGVO-Mindestangaben ab. Sie wurde nicht anwaltlich geprüft.", 'en' => "This page covers DSGVO/GDPR baseline disclosures. It has not been reviewed by a lawyer."]) ?>><?= apex_cms_value_or($cmsPrivacy['intro']['sub'] ?? null, ['de' => "Diese Seite deckt die DSGVO-Mindestangaben ab. Sie wurde nicht anwaltlich geprüft.", 'en' => "This page covers DSGVO/GDPR baseline disclosures. It has not been reviewed by a lawyer."], $currentLang) ?></p>
 
   <div data-clist="sections.items" id="legalSections">
 

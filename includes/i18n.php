@@ -96,6 +96,44 @@ function apex_cms_attrs($field): string
     return $out;
 }
 
+// Server-side rendering of a CMS field, with the template's own text as the
+// fallback.
+//
+// Until these existed, a data-ckey element was only filled in by
+// content-loader.js after the page loaded. That meant an edit made in the
+// admin panel changed what a browser showed but not what the server sent, so
+// Google, and every other crawler that does not run JavaScript, kept seeing
+// the hardcoded original. Editing a headline in the panel had no SEO effect
+// whatsoever. These render the CMS value into the HTML itself, and fall back
+// to the literal that used to be hardcoded when the CMS has nothing.
+function apex_cms_attrs_or($field, array $fallback): string
+{
+    $attrs = apex_cms_attrs($field);
+    if ($attrs !== '') {
+        return $attrs;
+    }
+    $out = '';
+    foreach ($fallback as $lang => $value) {
+        $out .= ' data-' . $lang . '="' . htmlspecialchars((string) $value, ENT_QUOTES) . '"';
+    }
+    return $out;
+}
+
+function apex_cms_value_or($field, array $fallback, ?string $lang = null): string
+{
+    $value = apex_cms_value($field, $lang);
+    if ($value !== '') {
+        return $value;
+    }
+    $lang = $lang ?? apex_resolve_lang();
+    foreach ([$lang, 'en', 'de'] as $try) {
+        if (isset($fallback[$try]) && $fallback[$try] !== '') {
+            return (string) $fallback[$try];
+        }
+    }
+    return '';
+}
+
 // Rewrites the body of any element carrying a data-{lang} attribute, mirroring
 // what the client-side applyLang() does with el.innerHTML.
 //

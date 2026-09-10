@@ -1,9 +1,13 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/includes/content.php';
 require_once __DIR__ . '/includes/site-config.php';
 require_once __DIR__ . '/includes/i18n.php';
 require_once __DIR__ . '/includes/seo.php';
 $currentLang = apex_current_lang();
+// The copy the admin panel edits, rendered into the HTML instead of being
+// swapped in by JavaScript, so an edit is visible to crawlers.
+$cmsContact = apex_get_page_content('contact') ?? [];
 // Title, description, share image and the Google visibility switch are edited
 // in the admin panel under Website content > Search engine listing; the
 // fallbacks live in includes/seo.php.
@@ -278,8 +282,8 @@ ob_start();
         <img src="/assets/lotus-transparent.png" alt="Apex Beauty">
         <span>Apex Beauty</span>
       </div>
-      <h2 id="consultTitle" data-ckey="intro.title" data-de="Kostenlose Beratung" data-en="Free Consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</h2>
-      <p data-ckey="intro.sub" data-de="Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden." data-en="Fill in the form and we'll get back to you within 24 hours." data-fr="Remplissez le formulaire, nous vous répondrons sous 24 heures." data-nl="Vul het formulier in, we nemen binnen 24 uur contact met u op." data-it="Compila il modulo, ti risponderemo entro 24 ore." data-tr="Formu doldurun, 24 saat içinde size dönüş yapalım.">Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.</p>
+      <h2 id="consultTitle" data-ckey="intro.title"<?= apex_cms_attrs_or($cmsContact['intro']['title'] ?? null, ['de' => "Kostenlose Beratung", 'en' => "Free Consultation", 'fr' => "Consultation gratuite", 'nl' => "Gratis consult", 'it' => "Consulto gratuito", 'tr' => "Ücretsiz Danışma"]) ?>><?= apex_cms_value_or($cmsContact['intro']['title'] ?? null, ['de' => "Kostenlose Beratung", 'en' => "Free Consultation", 'fr' => "Consultation gratuite", 'nl' => "Gratis consult", 'it' => "Consulto gratuito", 'tr' => "Ücretsiz Danışma"], $currentLang) ?></h2>
+      <p data-ckey="intro.sub"<?= apex_cms_attrs_or($cmsContact['intro']['sub'] ?? null, ['de' => "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.", 'en' => "Fill in the form and we'll get back to you within 24 hours.", 'fr' => "Remplissez le formulaire, nous vous répondrons sous 24 heures.", 'nl' => "Vul het formulier in, we nemen binnen 24 uur contact met u op.", 'it' => "Compila il modulo, ti risponderemo entro 24 ore.", 'tr' => "Formu doldurun, 24 saat içinde size dönüş yapalım."]) ?>><?= apex_cms_value_or($cmsContact['intro']['sub'] ?? null, ['de' => "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.", 'en' => "Fill in the form and we'll get back to you within 24 hours.", 'fr' => "Remplissez le formulaire, nous vous répondrons sous 24 heures.", 'nl' => "Vul het formulier in, we nemen binnen 24 uur contact met u op.", 'it' => "Compila il modulo, ti risponderemo entro 24 ore.", 'tr' => "Formu doldurun, 24 saat içinde size dönüş yapalım."], $currentLang) ?></p>
     </div>
     <div class="lang-switch" id="langSwitch">
       <button type="button" class="lang-switch-toggle" id="langSwitchToggle" aria-haspopup="listbox" aria-expanded="false">
