@@ -34,7 +34,151 @@
       "it": "La caduta dei capelli, nota in ambito medico come alopecia, è l'assenza parziale o totale di capelli nelle aree in cui normalmente crescono. Perdere fino a 100 capelli al giorno è una parte normale del ciclo di crescita.",
       "tr": "Tıbbi adıyla alopesi olarak bilinen saç dökülmesi, normalde saçın büyüdüğü bölgelerde kısmi veya tam saç yokluğudur. Günde 100 adede kadar saç kaybı, büyüme döngüsünün normal bir parçasıdır."
     },
-    "image": "assets/content/hairpedia-wasIstHaarausfall-image-1784912960.png"
+    "image": "assets/content/hairpedia-wasIstHaarausfall-image-1784912960.png",
+    "t1": {
+      "de": "Bildplatzhalter: Diagramm",
+      "en": "Image placeholder: diagram",
+      "fr": "Espace image : diagramme",
+      "nl": "Afbeeldingsplaceholder: diagram",
+      "it": "Segnaposto immagine: diagramma",
+      "tr": "Görsel Yer Tutucu: Diyagram"
+    },
+    "t2": {
+      "de": "Illustration des Haarwachstumszyklus (Anagen, Katagen, Telogen) als kreisförmiges Diagramm",
+      "en": "Illustration of the hair growth cycle (anagen, catagen, telogen) as a circular diagram",
+      "fr": "Illustration du cycle de croissance des cheveux (anagène, catagène, télogène) sous forme de diagramme circulaire",
+      "nl": "Illustratie van de haargroeicyclus (anageen, catageen, telogeen) als cirkeldiagram",
+      "it": "Illustrazione del ciclo di crescita dei capelli (anagen, catagen, telogen) come diagramma circolare",
+      "tr": "Saç büyüme döngüsünün (anagen, katagen, telogen) dairesel bir diyagram olarak gösterimi"
+    },
+    "t3": {
+      "de": "1–1,5 Mrd.",
+      "en": "1–1.5 bn",
+      "fr": "1 à 1,5 Md",
+      "nl": "1–1,5 mrd",
+      "it": "1–1,5 mld",
+      "tr": "1–1,5 milyar"
+    },
+    "t4": {
+      "de": "Menschen weltweit von androgenetischer Alopezie betroffen",
+      "en": "people worldwide affected by androgenetic alopecia",
+      "fr": "personnes dans le monde touchées par l'alopécie androgénétique",
+      "nl": "mensen wereldwijd getroffen door androgenetische alopecia",
+      "it": "persone nel mondo colpite da alopecia androgenetica",
+      "tr": "dünya genelinde androgenetik alopesiden etkilenen kişi"
+    },
+    "t5": {
+      "de": "80% / 50%",
+      "en": "80% / 50%",
+      "fr": "80% / 50%",
+      "nl": "80% / 50%",
+      "it": "80% / 50%",
+      "tr": "%80 / %50"
+    },
+    "t6": {
+      "de": "der Männer bzw. Frauen zeigen bis 70 einen gewissen Grad an Haarausfall",
+      "en": "of men / women show some degree of hair loss by age 70",
+      "fr": "des hommes / femmes présentent un certain degré de chute de cheveux avant 70 ans",
+      "nl": "van de mannen / vrouwen vertoont voor de leeftijd van 70 een zekere mate van haaruitval",
+      "it": "degli uomini / delle donne mostra un certo grado di caduta dei capelli entro i 70 anni",
+      "tr": "erkek / kadının 70 yaşına kadar bir dereceye kadar saç dökülmesi yaşadığı"
+    },
+    "t7": {
+      "de": "Haarausfall ist nicht nur ein kosmetisches Thema. Studien zeigen durchgängig höhere Raten von Angst, depressiven Verstimmungen und vermindertem Selbstwertgefühl bei Betroffenen, besonders wenn er in jungen Jahren beginnt.",
+      "en": "Hair loss isn't just cosmetic. Research consistently shows higher rates of anxiety, depression, and reduced self-esteem among those affected, particularly when it starts young.",
+      "fr": "La chute de cheveux n'est pas qu'une question esthétique. Les études montrent systématiquement des taux plus élevés d'anxiété, de dépression et d'estime de soi réduite chez les personnes concernées, surtout lorsqu'elle commence jeune.",
+      "nl": "Haaruitval is niet alleen cosmetisch. Onderzoek toont consistent hogere niveaus van angst, depressie en verminderd zelfvertrouwen bij getroffenen, vooral wanneer het op jonge leeftijd begint.",
+      "it": "La caduta dei capelli non è solo una questione estetica. Gli studi mostrano costantemente tassi più elevati di ansia, depressione e autostima ridotta tra le persone colpite, soprattutto quando inizia in giovane età.",
+      "tr": "Saç dökülmesi yalnızca kozmetik bir konu değildir. Araştırmalar, özellikle genç yaşta başladığında, etkilenen kişilerde daha yüksek oranda kaygı, depresyon ve düşük özgüven olduğunu tutarlı biçimde göstermektedir."
+    },
+    "t8": {
+      "de": "Der Haarwachstumszyklus",
+      "en": "The hair growth cycle",
+      "fr": "Le cycle de croissance des cheveux",
+      "nl": "De haargroeicyclus",
+      "it": "Il ciclo di crescita dei capelli",
+      "tr": "Saç Büyüme Döngüsü"
+    },
+    "t9": {
+      "de": "Jedes Haar durchläuft drei Phasen. Zu verstehen, wie sie funktionieren, erklärt, warum Haarausfall entsteht und warum eine Transplantation wirkt.",
+      "en": "Every hair moves through three phases. Understanding them explains why hair loss happens and why transplantation works.",
+      "fr": "Chaque cheveu traverse trois phases. Comprendre leur fonctionnement explique pourquoi la chute de cheveux se produit et pourquoi la greffe fonctionne.",
+      "nl": "Elke haar doorloopt drie fasen. Begrijpen hoe ze werken, verklaart waarom haaruitval ontstaat en waarom een transplantatie werkt.",
+      "it": "Ogni capello attraversa tre fasi. Comprenderle spiega perché si verifica la caduta dei capelli e perché il trapianto funziona.",
+      "tr": "Her saç teli üç aşamadan geçer. Bunların nasıl işlediğini anlamak, saç dökülmesinin neden gerçekleştiğini ve saç ekiminin neden işe yaradığını açıklar."
+    },
+    "t10": {
+      "de": "Anagen",
+      "en": "Anagen",
+      "fr": "Anagène",
+      "nl": "Anageen",
+      "it": "Anagen",
+      "tr": "Anagen"
+    },
+    "t11": {
+      "de": "2–7 Jahre · Wachstumsphase",
+      "en": "2–7 years · Growth phase",
+      "fr": "2 à 7 ans · Phase de croissance",
+      "nl": "2–7 jaar · Groeifase",
+      "it": "2–7 anni · Fase di crescita",
+      "tr": "2–7 yıl · Büyüme Evresi"
+    },
+    "t12": {
+      "de": "Der Follikel produziert aktiv einen Haarschaft, rund 1 bis 1,5 cm pro Monat. Je länger diese Phase, desto länger kann das Haar werden.",
+      "en": "The follicle actively produces a hair shaft, growing roughly 1 to 1.5 cm per month. The longer this phase, the longer the hair can grow.",
+      "fr": "Le follicule produit activement une tige capillaire, à un rythme d'environ 1 à 1,5 cm par mois. Plus cette phase dure longtemps, plus le cheveu peut devenir long.",
+      "nl": "De follikel produceert actief een haarschacht, met een groei van ongeveer 1 tot 1,5 cm per maand. Hoe langer deze fase duurt, hoe langer het haar kan worden.",
+      "it": "Il follicolo produce attivamente un fusto del capello, crescendo di circa 1-1,5 cm al mese. Più questa fase dura, più il capello può allungarsi.",
+      "tr": "Folikül aktif olarak bir saç teli üretir, ayda yaklaşık 1 ila 1,5 cm büyür. Bu evre ne kadar uzun sürerse, saç o kadar uzayabilir."
+    },
+    "t13": {
+      "de": "Katagen",
+      "en": "Catagen",
+      "fr": "Catagène",
+      "nl": "Catageen",
+      "it": "Catagen",
+      "tr": "Katagen"
+    },
+    "t14": {
+      "de": "2–3 Wochen · Übergangsphase",
+      "en": "2–3 weeks · Transition phase",
+      "fr": "2 à 3 semaines · Phase de transition",
+      "nl": "2–3 weken · Overgangsfase",
+      "it": "2–3 settimane · Fase di transizione",
+      "tr": "2–3 hafta · Geçiş Evresi"
+    },
+    "t15": {
+      "de": "Eine kurze Übergangsphase. Die Haarproduktion stoppt, der Follikel schrumpft und löst sich von der Blutversorgung.",
+      "en": "A short transitional period. Hair production stops, the follicle shrinks, and detaches from its blood supply.",
+      "fr": "Une brève période de transition. La production de cheveux s'arrête, le follicule rétrécit et se détache de son apport sanguin.",
+      "nl": "Een korte overgangsperiode. De haarproductie stopt, de follikel krimpt en maakt zich los van de bloedtoevoer.",
+      "it": "Un breve periodo di transizione. La produzione di capelli si arresta, il follicolo si restringe e si stacca dal proprio apporto sanguigno.",
+      "tr": "Kısa bir geçiş dönemi. Saç üretimi durur, folikül küçülür ve kan akışından ayrılır."
+    },
+    "t16": {
+      "de": "Telogen",
+      "en": "Telogen",
+      "fr": "Télogène",
+      "nl": "Telogeen",
+      "it": "Telogen",
+      "tr": "Telogen"
+    },
+    "t17": {
+      "de": "~3 Monate · Ruhephase",
+      "en": "~3 months · Resting phase",
+      "fr": "~3 mois · Phase de repos",
+      "nl": "~3 maanden · Rustfase",
+      "it": "~3 mesi · Fase di riposo",
+      "tr": "~3 ay · Dinlenme Evresi"
+    },
+    "t18": {
+      "de": "Der Follikel ruht rund 3 Monate. Am Ende der Phase fällt das Haar aus und ein neues Anagen-Haar beginnt zu wachsen.",
+      "en": "The follicle rests for around 3 months. At the end, the hair sheds and a new anagen hair begins growing.",
+      "fr": "Le follicule se repose pendant environ 3 mois. À la fin de cette phase, le cheveu tombe et un nouveau cheveu en phase anagène commence à pousser.",
+      "nl": "De follikel rust ongeveer 3 maanden. Aan het einde van deze fase valt het haar uit en begint een nieuwe anagene haar te groeien.",
+      "it": "Il follicolo riposa per circa 3 mesi. Alla fine della fase, il capello cade e un nuovo capello in fase anagen inizia a crescere.",
+      "tr": "Folikül yaklaşık 3 ay dinlenir. Evrenin sonunda saç dökülür ve yeni bir anagen saç büyümeye başlar."
+    }
   },
   "ursachen": {
     "heading": {
@@ -53,7 +197,143 @@
       "it": "La caduta dei capelli raramente ha una causa unica. Genetica, ormoni, stress e alimentazione agiscono spesso insieme.",
       "tr": "Saç dökülmesinin nadiren tek bir nedeni vardır. Genetik, hormonlar, stres ve beslenme genellikle birlikte etki eder."
     },
-    "image": "assets/content/hairpedia-ursachen-image-1784914056.png"
+    "image": "assets/content/hairpedia-ursachen-image-1784914056.png",
+    "t1": {
+      "de": "Bildplatzhalter: Infografik",
+      "en": "Image placeholder: infographic",
+      "fr": "Espace image : infographie",
+      "nl": "Afbeeldingsplaceholder: infografiek",
+      "it": "Segnaposto immagine: infografica",
+      "tr": "Görsel Yer Tutucu: İnfografik"
+    },
+    "t2": {
+      "de": "Infografik mit Icons für jede Ursachengruppe (Genetik, Hormone, Stress, Ernährung, Medikamente)",
+      "en": "Infographic with icons for each cause group (genetics, hormones, stress, nutrition, medications)",
+      "fr": "Infographie avec des icônes pour chaque groupe de causes (génétique, hormones, stress, alimentation, médicaments)",
+      "nl": "Infografiek met iconen voor elke oorzakencategorie (genetica, hormonen, stress, voeding, medicijnen)",
+      "it": "Infografica con icone per ciascun gruppo di cause (genetica, ormoni, stress, alimentazione, farmaci)",
+      "tr": "Her neden grubu için simgeler içeren infografik (genetik, hormonlar, stres, beslenme, ilaçlar)"
+    },
+    "t3": {
+      "de": "Häufigste Ursache",
+      "en": "Most common",
+      "fr": "Cause la plus fréquente",
+      "nl": "Meest voorkomend",
+      "it": "Causa più comune",
+      "tr": "En Yaygın Neden"
+    },
+    "t4": {
+      "de": "Genetik",
+      "en": "Genetics",
+      "fr": "Génétique",
+      "nl": "Genetica",
+      "it": "Genetica",
+      "tr": "Genetik"
+    },
+    "t5": {
+      "de": "Die genetische Veranlagung ist der Haupttreiber. Rund 80% der Männer mit erblich bedingtem Haarausfall haben einen betroffenen Vater. Vererbung kann von beiden Elternteilen kommen.",
+      "en": "Genetic predisposition is the primary driver. Around 80% of men with pattern baldness have a father who was also affected. Inheritance can come from either side.",
+      "fr": "La prédisposition génétique est le principal facteur. Environ 80% des hommes atteints de calvitie héréditaire ont un père également touché. L'hérédité peut venir des deux côtés.",
+      "nl": "Genetische aanleg is de belangrijkste factor. Ongeveer 80% van de mannen met erfelijke kaalheid heeft een vader die ook was aangetast. Overerving kan van beide kanten komen.",
+      "it": "La predisposizione genetica è il fattore principale. Circa l'80% degli uomini con calvizie ereditaria ha un padre anch'egli colpito. L'ereditarietà può provenire da entrambi i lati.",
+      "tr": "Genetik yatkınlık başlıca etkendir. Kalıtsal saç dökülmesi olan erkeklerin yaklaşık %80'inin babası da bu durumdan etkilenmiştir. Kalıtım her iki taraftan da gelebilir."
+    },
+    "t6": {
+      "de": "DHT (Dihydrotestosteron)",
+      "en": "DHT (Dihydrotestosterone)",
+      "fr": "DHT (Dihydrotestostérone)",
+      "nl": "DHT (Dihydrotestosteron)",
+      "it": "DHT (Diidrotestosterone)",
+      "tr": "DHT (Dihidrotestosteron)"
+    },
+    "t7": {
+      "de": "Der zentrale Hormontreiber bei Männern und Frauen. DHT bindet an genetisch empfindliche Follikel und lässt sie über Zeit schrumpfen.",
+      "en": "The central hormonal driver in both men and women. DHT binds to genetically sensitive follicles and causes them to shrink over time.",
+      "fr": "Le principal moteur hormonal chez les hommes et les femmes. La DHT se lie aux follicules génétiquement sensibles et les fait rétrécir avec le temps.",
+      "nl": "De centrale hormonale drijfveer bij zowel mannen als vrouwen. DHT bindt zich aan genetisch gevoelige follikels en laat ze na verloop van tijd krimpen.",
+      "it": "Il principale fattore ormonale sia negli uomini che nelle donne. Il DHT si lega ai follicoli geneticamente sensibili e li fa restringere nel tempo.",
+      "tr": "Hem erkeklerde hem kadınlarda başlıca hormonal etkendir. DHT, genetik olarak duyarlı foliküllere bağlanır ve zamanla küçülmelerine neden olur."
+    },
+    "t8": {
+      "de": "Hormonelle Veränderungen",
+      "en": "Hormonal changes",
+      "fr": "Changements hormonaux",
+      "nl": "Hormonale veranderingen",
+      "it": "Cambiamenti ormonali",
+      "tr": "Hormonal Değişiklikler"
+    },
+    "t9": {
+      "de": "Schwangerschaft, Wechseljahre, Schilddrüsenerkrankungen und PCOS können diffuses Ausdünnen oder Schuppung auslösen.",
+      "en": "Pregnancy, menopause, thyroid disorders, and PCOS can trigger diffuse thinning or shedding.",
+      "fr": "La grossesse, la ménopause, les troubles thyroïdiens et le SOPK peuvent déclencher un amincissement diffus ou une chute de cheveux.",
+      "nl": "Zwangerschap, menopauze, schildklieraandoeningen en PCOS kunnen diffuse verdunning of haaruitval veroorzaken.",
+      "it": "Gravidanza, menopausa, disturbi tiroidei e PCOS possono innescare un diradamento diffuso o la caduta dei capelli.",
+      "tr": "Hamilelik, menopoz, tiroid bozuklukları ve PCOS yaygın incelme veya dökülmeye neden olabilir."
+    },
+    "t10": {
+      "de": "Stress",
+      "en": "Stress",
+      "fr": "Stress",
+      "nl": "Stress",
+      "it": "Stress",
+      "tr": "Stres"
+    },
+    "t11": {
+      "de": "Starker physischer oder psychischer Stress kann viele Follikel gleichzeitig in die Ruhephase drängen (telogenes Effluvium), meist reversibel.",
+      "en": "Significant physical or psychological stress can push many follicles into the resting phase at once (telogen effluvium), usually reversible.",
+      "fr": "Un stress physique ou psychologique important peut pousser de nombreux follicules simultanément en phase de repos (effluvium télogène), généralement réversible.",
+      "nl": "Aanzienlijke fysieke of psychische stress kan veel follikels tegelijk in de rustfase duwen (telogeen effluvium), meestal omkeerbaar.",
+      "it": "Uno stress fisico o psicologico significativo può spingere molti follicoli contemporaneamente nella fase di riposo (effluvio telogen), solitamente reversibile.",
+      "tr": "Yoğun fiziksel veya psikolojik stres, birçok folikülü aynı anda dinlenme evresine itebilir (telogen effluvium), genellikle geri dönüşlüdür."
+    },
+    "t12": {
+      "de": "Ernährung &amp; Mängel",
+      "en": "Nutrition &amp; deficiencies",
+      "fr": "Alimentation et carences",
+      "nl": "Voeding & tekorten",
+      "it": "Alimentazione e carenze",
+      "tr": "Beslenme ve Eksiklikler"
+    },
+    "t13": {
+      "de": "Eisen, Vitamin D, Zink, Protein und Biotin sind für aktive Follikel essenziell. Mängel beeinträchtigen Wachstum und Qualität.",
+      "en": "Iron, vitamin D, zinc, protein, and biotin are essential for active follicles. Deficiencies impair growth and hair quality.",
+      "fr": "Le fer, la vitamine D, le zinc, les protéines et la biotine sont essentiels aux follicules actifs. Les carences nuisent à la croissance et à la qualité des cheveux.",
+      "nl": "IJzer, vitamine D, zink, eiwitten en biotine zijn essentieel voor actieve follikels. Tekorten belemmeren de groei en haarkwaliteit.",
+      "it": "Ferro, vitamina D, zinco, proteine e biotina sono essenziali per i follicoli attivi. Le carenze compromettono la crescita e la qualità dei capelli.",
+      "tr": "Demir, D vitamini, çinko, protein ve biyotin aktif foliküller için gereklidir. Eksiklikler büyümeyi ve saç kalitesini olumsuz etkiler."
+    },
+    "t14": {
+      "de": "Medikamente",
+      "en": "Medications",
+      "fr": "Médicaments",
+      "nl": "Medicijnen",
+      "it": "Farmaci",
+      "tr": "İlaçlar"
+    },
+    "t15": {
+      "de": "Blutverdünner, Chemotherapeutika, Antidepressiva, Betablocker und hormonelle Verhütung können Haarausfall als Nebenwirkung haben.",
+      "en": "Anticoagulants, chemotherapy drugs, antidepressants, beta-blockers, and hormonal contraceptives can cause hair loss as a side effect.",
+      "fr": "Les anticoagulants, les médicaments de chimiothérapie, les antidépresseurs, les bêta-bloquants et les contraceptifs hormonaux peuvent provoquer une chute de cheveux comme effet secondaire.",
+      "nl": "Bloedverdunners, chemotherapiemedicijnen, antidepressiva, bètablokkers en hormonale anticonceptie kunnen haaruitval als bijwerking veroorzaken.",
+      "it": "Anticoagulanti, farmaci chemioterapici, antidepressivi, betabloccanti e contraccettivi ormonali possono causare la caduta dei capelli come effetto collaterale.",
+      "tr": "Kan sulandırıcılar, kemoterapi ilaçları, antidepresanlar, beta blokerler ve hormonal doğum kontrol yöntemleri yan etki olarak saç dökülmesine neden olabilir."
+    },
+    "t16": {
+      "de": "Erkrankungen",
+      "en": "Medical conditions",
+      "fr": "Affections médicales",
+      "nl": "Medische aandoeningen",
+      "it": "Condizioni mediche",
+      "tr": "Tıbbi Durumlar"
+    },
+    "t17": {
+      "de": "Alopecia areata, Kopfhautinfektionen, Lupus und andere Autoimmunerkrankungen sowie Diabetes können Haarausfall verursachen.",
+      "en": "Alopecia areata, scalp infections, lupus and other autoimmune diseases, and diabetes can all cause hair loss.",
+      "fr": "L'alopécie areata, les infections du cuir chevelu, le lupus et d'autres maladies auto-immunes ainsi que le diabète peuvent tous provoquer une chute de cheveux.",
+      "nl": "Alopecia areata, hoofdhuidinfecties, lupus en andere auto-immuunziekten, evenals diabetes, kunnen allemaal haaruitval veroorzaken.",
+      "it": "Alopecia areata, infezioni del cuoio capelluto, lupus e altre malattie autoimmuni, così come il diabete, possono tutti causare la caduta dei capelli.",
+      "tr": "Alopesi areata, saç derisi enfeksiyonları, lupus ve diğer otoimmün hastalıklar ile diyabet saç dökülmesine neden olabilir."
+    }
   },
   "arten": {
     "heading": {
@@ -72,7 +352,111 @@
       "it": "Non tutte le cadute di capelli sono uguali. Il tipo determina quale trattamento sia più indicato.",
       "tr": "Her saç dökülmesi aynı değildir. Tür, hangi tedavinin mantıklı olduğunu belirler."
     },
-    "image": "assets/content/hairpedia-arten-image-1784914433.png"
+    "image": "assets/content/hairpedia-arten-image-1784914433.png",
+    "t1": {
+      "de": "Bildplatzhalter: Vergleichsgrafik",
+      "en": "Image placeholder: comparison graphic",
+      "fr": "Espace image : graphique comparatif",
+      "nl": "Afbeeldingsplaceholder: vergelijkingsgrafiek",
+      "it": "Segnaposto immagine: grafico comparativo",
+      "tr": "Görsel Yer Tutucu: Karşılaştırma Grafiği"
+    },
+    "t2": {
+      "de": "Kopfumriss-Illustrationen, die die typischen Ausfallmuster jeder Art zeigen",
+      "en": "Head-outline illustrations showing the typical shedding pattern for each type",
+      "fr": "Illustrations de silhouettes de tête montrant le schéma de perte typique de chaque type",
+      "nl": "Hoofdomtrek-illustraties die het typische uitvalpatroon van elk type tonen",
+      "it": "Illustrazioni con sagome della testa che mostrano il tipico schema di caduta per ciascun tipo",
+      "tr": "Her tür için tipik dökülme desenini gösteren kafa taslağı çizimleri"
+    },
+    "t3": {
+      "de": "Häufigste Form",
+      "en": "Most common",
+      "fr": "Forme la plus fréquente",
+      "nl": "Meest voorkomende vorm",
+      "it": "Forma più comune",
+      "tr": "En Yaygın Form"
+    },
+    "t4": {
+      "de": "Androgenetische Alopezie",
+      "en": "Androgenetic alopecia",
+      "fr": "Alopécie androgénétique",
+      "nl": "Androgenetische alopecia",
+      "it": "Alopecia androgenetica",
+      "tr": "Androgenetik Alopesi"
+    },
+    "t5": {
+      "de": "Erblich bedingter Haarausfall. Bei Männern Geheimratsecken und Scheitel (Norwood-Hamilton I–VII), bei Frauen diffuse Ausdünnung des Scheitels (Ludwig I–III). Progressiv, chronisch, bessert sich nicht von selbst.",
+      "en": "Genetically inherited pattern hair loss. In men, temple recession and crown thinning (Norwood-Hamilton I–VII); in women, diffuse parting widening (Ludwig I–III). Progressive and chronic, does not resolve on its own.",
+      "fr": "Chute de cheveux héréditaire. Chez l'homme, recul des tempes et du sommet (Norwood-Hamilton I–VII) ; chez la femme, amincissement diffus de la raie (Ludwig I–III). Progressive et chronique, ne se résorbe pas d'elle-même.",
+      "nl": "Erfelijke haaruitval. Bij mannen, terugtrekkende slapen en kruinverdunning (Norwood-Hamilton I–VII); bij vrouwen, diffuse verbreding van de scheiding (Ludwig I–III). Progressief, chronisch, verdwijnt niet vanzelf.",
+      "it": "Caduta dei capelli ereditaria. Negli uomini, recessione temporale e diradamento del vertice (Norwood-Hamilton I–VII); nelle donne, allargamento diffuso della scriminatura (Ludwig I–III). Progressiva, cronica, non si risolve da sola.",
+      "tr": "Kalıtsal saç dökülmesi. Erkeklerde şakak çekilmesi ve tepe incelmesi (Norwood-Hamilton I–VII); kadınlarda yaygın ayrım genişlemesi (Ludwig I–III). İlerleyici, kronik, kendiliğinden düzelmez."
+    },
+    "t6": {
+      "de": "Alopecia areata",
+      "en": "Alopecia areata",
+      "fr": "Alopécie en plaques",
+      "nl": "Alopecia areata",
+      "it": "Alopecia areata",
+      "tr": "Alopesi Areata"
+    },
+    "t7": {
+      "de": "Autoimmunerkrankung, bei der das Immunsystem Follikel angreift, meist runde Herde. In den meisten Fällen wächst das Haar zurück, kann aber unvorhersehbar verlaufen.",
+      "en": "An autoimmune condition where the immune system attacks follicles, usually causing round patches. In most cases the hair regrows, though it can be unpredictable.",
+      "fr": "Une maladie auto-immune dans laquelle le système immunitaire attaque les follicules, provoquant généralement des plaques rondes. Dans la plupart des cas, les cheveux repoussent, bien que cela puisse être imprévisible.",
+      "nl": "Een auto-immuunaandoening waarbij het immuunsysteem follikels aanvalt, meestal met ronde plekken tot gevolg. In de meeste gevallen groeit het haar terug, al kan dit onvoorspelbaar verlopen.",
+      "it": "Una condizione autoimmune in cui il sistema immunitario attacca i follicoli, causando solitamente chiazze rotonde. Nella maggior parte dei casi i capelli ricrescono, anche se in modo imprevedibile.",
+      "tr": "Bağışıklık sisteminin foliküllere saldırdığı, genellikle yuvarlak lekelere neden olan otoimmün bir durumdur. Çoğu vakada saç yeniden çıkar, ancak seyri öngörülemez olabilir."
+    },
+    "t8": {
+      "de": "Telogenes Effluvium",
+      "en": "Telogen effluvium",
+      "fr": "Effluvium télogène",
+      "nl": "Telogeen effluvium",
+      "it": "Effluvio telogen",
+      "tr": "Telogen Effluvium"
+    },
+    "t9": {
+      "de": "Vorübergehendes, diffuses Ausdünnen 2 bis 4 Monate nach Geburt, OP, schwerer Krankheit oder starkem Stress. Klingt meist innerhalb von 6 bis 12 Monaten ab.",
+      "en": "Temporary diffuse shedding 2 to 4 months after childbirth, surgery, severe illness, or major stress. Usually resolves within 6 to 12 months.",
+      "fr": "Chute diffuse temporaire, 2 à 4 mois après un accouchement, une opération, une maladie grave ou un stress important. Se résorbe généralement en 6 à 12 mois.",
+      "nl": "Tijdelijke diffuse haaruitval, 2 tot 4 maanden na een bevalling, operatie, ernstige ziekte of grote stress. Verdwijnt meestal binnen 6 tot 12 maanden.",
+      "it": "Perdita diffusa temporanea, 2-4 mesi dopo il parto, un intervento chirurgico, una malattia grave o uno stress importante. Si risolve solitamente entro 6-12 mesi.",
+      "tr": "Doğum, ameliyat, ciddi hastalık veya yoğun stresten 2 ila 4 ay sonra görülen geçici, yaygın dökülmedir. Genellikle 6 ila 12 ay içinde geçer."
+    },
+    "t10": {
+      "de": "Traktionsalopezie",
+      "en": "Traction alopecia",
+      "fr": "Alopécie de traction",
+      "nl": "Tractie-alopecia",
+      "it": "Alopecia da trazione",
+      "tr": "Traksiyon Alopesisi"
+    },
+    "t11": {
+      "de": "Haarausfall durch dauerhaften Zug, etwa durch enge Zöpfe, Extensions oder Pferdeschwänze. Anfangs reversibel, kann bei anhaltendem Zug dauerhaft werden.",
+      "en": "Hair loss from chronic tension, such as tight braids, extensions, or ponytails. Initially reversible, can become permanent if tension continues.",
+      "fr": "Chute de cheveux due à une tension chronique, comme des tresses serrées, des extensions ou des queues de cheval. Réversible au début, peut devenir permanente si la tension persiste.",
+      "nl": "Haaruitval door aanhoudende trekkracht, zoals strakke vlechten, extensions of paardenstaarten. Aanvankelijk omkeerbaar, kan permanent worden bij aanhoudende trek.",
+      "it": "Perdita di capelli causata da tensione cronica, come trecce strette, extension o code di cavallo. Inizialmente reversibile, può diventare permanente se la tensione continua.",
+      "tr": "Sıkı örgüler, kaynak saç veya at kuyruğu gibi sürekli çekme nedeniyle oluşan saç dökülmesidir. Başlangıçta geri dönüşlüdür, çekme devam ederse kalıcı hale gelebilir."
+    },
+    "t12": {
+      "de": "Vernarbende Alopezie",
+      "en": "Scarring alopecia",
+      "fr": "Alopécie cicatricielle",
+      "nl": "Littekenalopecia",
+      "it": "Alopecia cicatriziale",
+      "tr": "Skatrisyel Alopesi"
+    },
+    "t13": {
+      "de": "Follikel werden zerstört und durch Narbengewebe ersetzt, dauerhafter Haarverlust. Eine Transplantation ist bei aktiver Entzündung meist nicht geeignet.",
+      "en": "Follicles are destroyed and replaced by scar tissue, causing permanent loss. Transplantation is generally unsuitable while inflammation is active.",
+      "fr": "Les follicules sont détruits et remplacés par du tissu cicatriciel, entraînant une perte permanente. La greffe n'est généralement pas adaptée tant que l'inflammation est active.",
+      "nl": "Follikels worden vernietigd en vervangen door littekenweefsel, wat leidt tot permanent haarverlies. Een transplantatie is doorgaans ongeschikt zolang de ontsteking actief is.",
+      "it": "I follicoli vengono distrutti e sostituiti da tessuto cicatriziale, causando una perdita permanente. Il trapianto è generalmente sconsigliato finché l'infiammazione è attiva.",
+      "tr": "Foliküller yok olur ve yerini skar dokusu alır, kalıcı saç kaybına yol açar. İltihap aktifken saç ekimi genellikle uygun değildir."
+    }
   },
   "diagnose": {
     "heading": {
@@ -91,7 +475,111 @@
       "it": "Una diagnosi accurata è la base di qualsiasi trattamento efficace.",
       "tr": "Doğru bir teşhis, her etkili tedavinin temelidir."
     },
-    "image": "assets/content/hairpedia-diagnose-image-1784914980.png"
+    "image": "assets/content/hairpedia-diagnose-image-1784914980.png",
+    "t1": {
+      "de": "Bildplatzhalter: Klinikfoto",
+      "en": "Image placeholder: clinic photo",
+      "fr": "Espace image : photo de clinique",
+      "nl": "Afbeeldingsplaceholder: kliniekfoto",
+      "it": "Segnaposto immagine: foto della clinica",
+      "tr": "Görsel Yer Tutucu: Klinik Fotoğrafı"
+    },
+    "t2": {
+      "de": "Foto einer Trichoskopie-Untersuchung in der Apex-Klinik",
+      "en": "Photo of a trichoscopy examination at the Apex clinic",
+      "fr": "Photo d'un examen de trichoscopie à la clinique Apex",
+      "nl": "Foto van een trichoscopie-onderzoek in de Apex-kliniek",
+      "it": "Foto di un esame di tricoscopia presso la clinica Apex",
+      "tr": "Apex Kliniği'nde bir trikoskopi muayenesinin fotoğrafı"
+    },
+    "t3": {
+      "de": "Klinische Untersuchung",
+      "en": "Clinical assessment",
+      "fr": "Évaluation clinique",
+      "nl": "Klinische beoordeling",
+      "it": "Valutazione clinica",
+      "tr": "Klinik Değerlendirme"
+    },
+    "t4": {
+      "de": "Anamnese zu Beginn, Verlauf, Familiengeschichte, Medikamenten und Ernährung, gefolgt von einer körperlichen Untersuchung von Muster und Kopfhaut.",
+      "en": "History of onset, progression, family history, medications, and diet, followed by a physical exam of pattern and scalp condition.",
+      "fr": "Antécédents concernant le début, l'évolution, les antécédents familiaux, les médicaments et l'alimentation, suivis d'un examen physique du motif et de l'état du cuir chevelu.",
+      "nl": "Anamnese van begin, verloop, familiegeschiedenis, medicatie en voeding, gevolgd door een lichamelijk onderzoek van patroon en hoofdhuidconditie.",
+      "it": "Anamnesi su esordio, evoluzione, storia familiare, farmaci e alimentazione, seguita da un esame fisico del pattern e delle condizioni del cuoio capelluto.",
+      "tr": "Başlangıç, seyir, aile öyküsü, ilaçlar ve beslenmeye ilişkin anamnez, ardından desen ve saç derisi durumunun fiziksel muayenesi."
+    },
+    "t5": {
+      "de": "Bei Apex Beauty",
+      "en": "At Apex Beauty",
+      "fr": "Chez Apex Beauty",
+      "nl": "Bij Apex Beauty",
+      "it": "Da Apex Beauty",
+      "tr": "Apex Beauty'de"
+    },
+    "t6": {
+      "de": "Trichoskopie &amp; Scalp Mapping",
+      "en": "Trichoscopy &amp; scalp mapping",
+      "fr": "Trichoscopie et cartographie du cuir chevelu",
+      "nl": "Trichoscopie & scalp mapping",
+      "it": "Tricoscopia e mappatura del cuoio capelluto",
+      "tr": "Trikoskopi ve Saç Derisi Haritalama"
+    },
+    "t7": {
+      "de": "Ein Dermatoskop vergrößert die Kopfhaut bis zu 70-fach und zeigt Follikeldichte, Miniaturisierung und Entzündung. Digitales Scalp Mapping dokumentiert Veränderungen präzise über Zeit.",
+      "en": "A dermatoscope magnifies the scalp up to 70x, revealing follicle density, miniaturization, and inflammation. Digital scalp mapping tracks changes precisely over time.",
+      "fr": "Un dermatoscope grossit le cuir chevelu jusqu'à 70 fois, révélant la densité folliculaire, la miniaturisation et l'inflammation. La cartographie numérique du cuir chevelu documente précisément les changements au fil du temps.",
+      "nl": "Een dermatoscoop vergroot de hoofdhuid tot 70x, waardoor follikeldichtheid, miniaturisatie en ontsteking zichtbaar worden. Digitale scalp mapping documenteert veranderingen nauwkeurig over tijd.",
+      "it": "Un dermatoscopio ingrandisce il cuoio capelluto fino a 70 volte, rivelando la densità follicolare, la miniaturizzazione e l'infiammazione. La mappatura digitale del cuoio capelluto documenta con precisione i cambiamenti nel tempo.",
+      "tr": "Bir dermatoskop saç derisini 70 kata kadar büyüterek folikül yoğunluğunu, minyatürleşmeyi ve iltihabı ortaya koyar. Dijital saç derisi haritalaması, değişiklikleri zaman içinde hassas biçimde belgeler."
+    },
+    "t8": {
+      "de": "Der Zugtest",
+      "en": "The pull test",
+      "fr": "Le test de traction",
+      "nl": "De trektest",
+      "it": "Il pull test",
+      "tr": "Çekme Testi"
+    },
+    "t9": {
+      "de": "40 bis 60 Haare werden sanft gezogen. Lösen sich mehr als 6, deutet das auf aktiven Haarausfall hin.",
+      "en": "A bundle of 40 to 60 hairs is gently pulled. Extracting more than 6 suggests active shedding.",
+      "fr": "Une mèche de 40 à 60 cheveux est tirée doucement. Si plus de 6 se détachent, cela indique une chute de cheveux active.",
+      "nl": "Een bosje van 40 tot 60 haren wordt zachtjes getrokken. Als er meer dan 6 loskomen, duidt dit op actieve haaruitval.",
+      "it": "Un ciuffo di 40-60 capelli viene tirato delicatamente. Se se ne staccano più di 6, ciò suggerisce una caduta attiva.",
+      "tr": "40 ila 60 saç teli nazikçe çekilir. 6'dan fazlası kopuyorsa, bu aktif saç dökülmesine işaret eder."
+    },
+    "t10": {
+      "de": "Bluttests",
+      "en": "Blood tests",
+      "fr": "Analyses de sang",
+      "nl": "Bloedonderzoek",
+      "it": "Esami del sangue",
+      "tr": "Kan Testleri"
+    },
+    "t11": {
+      "de": "Blutbild, Eisen und Ferritin, Schilddrüsenwerte, Hormonspiegel (Testosteron, DHT), Vitamin D, Zink und Blutzucker, um zugrundeliegende Ursachen auszuschließen.",
+      "en": "Full blood count, iron and ferritin, thyroid function, hormone levels (testosterone, DHT), vitamin D, zinc, and blood sugar, to rule out underlying causes.",
+      "fr": "Numération formule sanguine complète, fer et ferritine, fonction thyroïdienne, taux d'hormones (testostérone, DHT), vitamine D, zinc et glycémie, afin d'exclure des causes sous-jacentes.",
+      "nl": "Volledig bloedbeeld, ijzer en ferritine, schildklierfunctie, hormoonspiegels (testosteron, DHT), vitamine D, zink en bloedsuiker, om onderliggende oorzaken uit te sluiten.",
+      "it": "Emocromo completo, ferro e ferritina, funzione tiroidea, livelli ormonali (testosterone, DHT), vitamina D, zinco e glicemia, per escludere cause sottostanti.",
+      "tr": "Altta yatan nedenleri dışlamak için tam kan sayımı, demir ve ferritin, tiroid fonksiyonu, hormon düzeyleri (testosteron, DHT), D vitamini, çinko ve kan şekeri."
+    },
+    "t12": {
+      "de": "Kopfhautbiopsie",
+      "en": "Scalp biopsy",
+      "fr": "Biopsie du cuir chevelu",
+      "nl": "Hoofdhuidbiopsie",
+      "it": "Biopsia del cuoio capelluto",
+      "tr": "Saç Derisi Biyopsisi"
+    },
+    "t13": {
+      "de": "Bei unklaren Fällen bestätigt eine kleine Gewebeprobe unter dem Mikroskop die Art des Haarausfalls und mögliche Entzündungen.",
+      "en": "In unclear cases, a small tissue sample under the microscope confirms the type of hair loss and any inflammation.",
+      "fr": "Dans les cas incertains, un petit échantillon de tissu examiné au microscope confirme le type de chute de cheveux et une éventuelle inflammation.",
+      "nl": "In onduidelijke gevallen bevestigt een klein weefselmonster onder de microscoop het type haaruitval en eventuele ontsteking.",
+      "it": "Nei casi incerti, un piccolo campione di tessuto esaminato al microscopio conferma il tipo di caduta dei capelli ed eventuali infiammazioni.",
+      "tr": "Belirsiz vakalarda, mikroskop altında incelenen küçük bir doku örneği saç dökülmesinin türünü ve olası iltihabı doğrular."
+    }
   },
   "behandlung": {
     "heading": {
@@ -110,7 +598,151 @@
       "it": "Dai farmaci topici al trapianto, ogni opzione differisce per meccanismo d'azione, impegno richiesto e livello di evidenza scientifica.",
       "tr": "Topikal ilaçlardan nakle kadar, her seçenek etki mekanizması, gerektirdiği çaba ve kanıt kalitesi bakımından farklılık gösterir."
     },
-    "image": "assets/content/hairpedia-behandlung-image-1784915585.png"
+    "image": "assets/content/hairpedia-behandlung-image-1784915585.png",
+    "t1": {
+      "de": "Bildplatzhalter: Produktfotos",
+      "en": "Image placeholder: product photos",
+      "fr": "Espace image : photos de produits",
+      "nl": "Afbeeldingsplaceholder: productfoto's",
+      "it": "Segnaposto immagine: foto dei prodotti",
+      "tr": "Görsel Yer Tutucu: Ürün Fotoğrafları"
+    },
+    "t2": {
+      "de": "Foto-Serie der Behandlungsoptionen: Minoxidil-Flasche, PRP-Kit, Mesotherapie-Set",
+      "en": "Photo series of treatment options: minoxidil bottle, PRP kit, mesotherapy set",
+      "fr": "Série de photos des options de traitement : flacon de minoxidil, kit PRP, set de mésothérapie",
+      "nl": "Fotoreeks van behandelopties: minoxidilflacon, PRP-kit, mesotherapieset",
+      "it": "Serie di foto delle opzioni di trattamento: flacone di minoxidil, kit PRP, set di mesoterapia",
+      "tr": "Tedavi seçeneklerinin fotoğraf serisi: minoksidil şişesi, PRP kiti, mezoterapi seti"
+    },
+    "t3": {
+      "de": "Minoxidil",
+      "en": "Minoxidil",
+      "fr": "Minoxidil",
+      "nl": "Minoxidil",
+      "it": "Minoxidil",
+      "tr": "Minoksidil"
+    },
+    "t4": {
+      "de": "Topisch oder oral. Verlängert die Anagen-Phase und verbessert die Durchblutung. Blockiert kein DHT. Wirkung sichtbar nach 4 bis 6 Monaten, hält nur bei fortgesetzter Anwendung.",
+      "en": "Topical or oral. Extends the anagen phase and improves blood flow. Doesn't block DHT. Visible after 4 to 6 months, only lasts with continued use.",
+      "fr": "Topique ou oral. Prolonge la phase anagène et améliore la circulation sanguine. Ne bloque pas la DHT. Effet visible après 4 à 6 mois, ne persiste qu'avec une utilisation continue.",
+      "nl": "Topisch of oraal. Verlengt de anagene fase en verbetert de doorbloeding. Blokkeert geen DHT. Effect zichtbaar na 4 tot 6 maanden, houdt alleen aan bij voortgezet gebruik.",
+      "it": "Topico o orale. Prolunga la fase anagen e migliora la circolazione sanguigna. Non blocca il DHT. Effetto visibile dopo 4-6 mesi, dura solo con l'uso continuato.",
+      "tr": "Topikal veya oral. Anagen evresini uzatır ve kan akışını iyileştirir. DHT'yi engellemez. Etkisi 4 ila 6 ay sonra görülür, yalnızca kullanıma devam edildiğinde kalıcıdır."
+    },
+    "t5": {
+      "de": "Finasterid",
+      "en": "Finasteride",
+      "fr": "Finastéride",
+      "nl": "Finasteride",
+      "it": "Finasteride",
+      "tr": "Finasterid"
+    },
+    "t6": {
+      "de": "Orales Medikament, senkt DHT in der Kopfhaut um rund 70%. Stoppt den Haarausfall bei rund 90% der Männer, fördert Regrowth bei rund 65%.",
+      "en": "Oral medication, reduces scalp DHT by around 70%. Stops hair loss in around 90% of men, promotes regrowth in around 65%.",
+      "fr": "Médicament oral, réduit le DHT du cuir chevelu d'environ 70%. Stoppe la chute de cheveux chez environ 90% des hommes, favorise la repousse chez environ 65%.",
+      "nl": "Oraal medicijn, vermindert DHT in de hoofdhuid met ongeveer 70%. Stopt haaruitval bij ongeveer 90% van de mannen, bevordert hergroei bij ongeveer 65%.",
+      "it": "Farmaco orale, riduce il DHT del cuoio capelluto di circa il 70%. Arresta la caduta dei capelli in circa il 90% degli uomini, favorisce la ricrescita in circa il 65%.",
+      "tr": "Oral ilaç, saç derisindeki DHT'yi yaklaşık %70 azaltır. Erkeklerin yaklaşık %90'ında saç dökülmesini durdurur, yaklaşık %65'inde yeniden büyümeyi destekler."
+    },
+    "t7": {
+      "de": "Dutasterid",
+      "en": "Dutasteride",
+      "fr": "Dutastéride",
+      "nl": "Dutasteride",
+      "it": "Dutasteride",
+      "tr": "Dutasterid"
+    },
+    "t8": {
+      "de": "Stärkere Alternative zu Finasterid, senkt DHT um rund 90%. Off-Label unter ärztlicher Aufsicht, besonders wirksam am Oberkopf.",
+      "en": "A more potent alternative to finasteride, reduces DHT by around 90%. Used off-label under medical supervision, particularly effective at the crown.",
+      "fr": "Alternative plus puissante au finastéride, réduit la DHT d'environ 90%. Utilisé hors AMM sous supervision médicale, particulièrement efficace au niveau du vertex.",
+      "nl": "Krachtiger alternatief voor finasteride, vermindert DHT met ongeveer 90%. Off-label gebruikt onder medisch toezicht, bijzonder effectief bij de kruin.",
+      "it": "Alternativa più potente alla finasteride, riduce il DHT di circa il 90%. Usato off-label sotto controllo medico, particolarmente efficace sul vertice.",
+      "tr": "Finasteride göre daha güçlü bir alternatiftir, DHT'yi yaklaşık %90 azaltır. Tıbbi gözetim altında endikasyon dışı kullanılır, tepe bölgesinde özellikle etkilidir."
+    },
+    "t9": {
+      "de": "PRP",
+      "en": "PRP",
+      "fr": "PRP",
+      "nl": "PRP",
+      "it": "PRP",
+      "tr": "PRP"
+    },
+    "t10": {
+      "de": "Plättchenreiches Plasma aus dem eigenen Blut wird in die Kopfhaut injiziert und regt die Follikelaktivität an. Meist als Ergänzung, Sitzungen alle 3 bis 6 Monate.",
+      "en": "Platelet-rich plasma from the patient's own blood is injected into the scalp to stimulate follicle activity. Usually a complement, sessions every 3 to 6 months.",
+      "fr": "Le plasma riche en plaquettes issu du propre sang du patient est injecté dans le cuir chevelu pour stimuler l'activité folliculaire. Généralement en complément, séances tous les 3 à 6 mois.",
+      "nl": "Bloedplaatjesrijk plasma uit het eigen bloed van de patiënt wordt in de hoofdhuid geïnjecteerd om de follikelactiviteit te stimuleren. Meestal als aanvulling, sessies elke 3 tot 6 maanden.",
+      "it": "Il plasma ricco di piastrine ricavato dal sangue del paziente viene iniettato nel cuoio capelluto per stimolare l'attività follicolare. Solitamente come complemento, sedute ogni 3-6 mesi.",
+      "tr": "Hastanın kendi kanından elde edilen trombositten zengin plazma, folikül aktivitesini uyarmak için saç derisine enjekte edilir. Genellikle tamamlayıcı olarak kullanılır, seanslar 3-6 ayda bir yapılır."
+    },
+    "t11": {
+      "de": "Experimentell",
+      "en": "Experimental",
+      "fr": "Expérimental",
+      "nl": "Experimenteel",
+      "it": "Sperimentale",
+      "tr": "Deneysel"
+    },
+    "t12": {
+      "de": "Exosomen",
+      "en": "Exosomes",
+      "fr": "Exosomes",
+      "nl": "Exosomen",
+      "it": "Esosomi",
+      "tr": "Ekzozomlar"
+    },
+    "t13": {
+      "de": "Aus Stammzellen gewonnene Vesikel mit Wachstumssignalen, per Microneedling oder Injektion angewendet. Vielversprechend, aber noch begrenzte Langzeitdaten.",
+      "en": "Stem cell-derived vesicles carrying growth signals, applied via micro-needling or injection. Promising, but long-term data is still limited.",
+      "fr": "Vésicules dérivées de cellules souches porteuses de signaux de croissance, appliquées par micro-aiguilletage ou injection. Prometteur, mais les données à long terme restent limitées.",
+      "nl": "Uit stamcellen verkregen blaasjes met groeisignalen, toegepast via micro-needling of injectie. Veelbelovend, maar langetermijngegevens zijn nog beperkt.",
+      "it": "Vescicole derivate da cellule staminali che trasportano segnali di crescita, applicate tramite micro-needling o iniezione. Promettente, ma i dati a lungo termine sono ancora limitati.",
+      "tr": "Büyüme sinyalleri taşıyan kök hücre kaynaklı veziküller, mikro-iğneleme veya enjeksiyon yoluyla uygulanır. Umut verici olsa da uzun vadeli veriler henüz sınırlıdır."
+    },
+    "t14": {
+      "de": "Mesotherapie",
+      "en": "Mesotherapy",
+      "fr": "Mésothérapie",
+      "nl": "Mesotherapie",
+      "it": "Mesoterapia",
+      "tr": "Mezoterapi"
+    },
+    "t15": {
+      "de": "Mikroinjektionen aus Vitaminen, Mineralien und Wachstumsfaktoren zur Unterstützung der Kopfhautgesundheit. Meist begleitend zu anderen Behandlungen.",
+      "en": "Micro-injections of vitamins, minerals, and growth factors to support scalp health. Usually combined with other treatments.",
+      "fr": "Micro-injections de vitamines, minéraux et facteurs de croissance pour soutenir la santé du cuir chevelu. Généralement associée à d'autres traitements.",
+      "nl": "Micro-injecties van vitamines, mineralen en groeifactoren ter ondersteuning van de hoofdhuidgezondheid. Meestal gecombineerd met andere behandelingen.",
+      "it": "Micro-iniezioni di vitamine, minerali e fattori di crescita per sostenere la salute del cuoio capelluto. Solitamente abbinata ad altri trattamenti.",
+      "tr": "Saç derisi sağlığını desteklemek için vitamin, mineral ve büyüme faktörlerinin mikro enjeksiyonları. Genellikle diğer tedavilerle birlikte uygulanır."
+    },
+    "t16": {
+      "de": "Einzig dauerhafte Lösung",
+      "en": "Only permanent option",
+      "fr": "Seule solution permanente",
+      "nl": "Enige permanente oplossing",
+      "it": "Unica soluzione permanente",
+      "tr": "Tek Kalıcı Çözüm"
+    },
+    "t17": {
+      "de": "Haartransplantation",
+      "en": "Hair transplantation",
+      "fr": "Greffe de cheveux",
+      "nl": "Haartransplantatie",
+      "it": "Trapianto di capelli",
+      "tr": "Saç Ekimi"
+    },
+    "t18": {
+      "de": "Die einzige Behandlung, die dauerhaft Haare in kahle oder ausgedünnte Bereiche zurückbringt. Gesunde Follikel aus dem DHT-resistenten Spenderbereich werden verpflanzt.",
+      "en": "The only treatment that permanently restores hair to bald or thinning areas. Healthy follicles from the DHT-resistant donor zone are relocated.",
+      "fr": "Le seul traitement qui restaure durablement les cheveux dans les zones chauves ou clairsemées. Des follicules sains provenant de la zone donneuse résistante à la DHT sont déplacés.",
+      "nl": "De enige behandeling die haar permanent herstelt in kale of dunner wordende zones. Gezonde follikels uit het DHT-resistente donorgebied worden verplaatst.",
+      "it": "L'unico trattamento che ripristina permanentemente i capelli nelle aree calve o diradate. Follicoli sani provenienti dall'area donatrice resistente al DHT vengono trapiantati.",
+      "tr": "Kel veya seyrelmiş bölgelere kalıcı olarak saç kazandıran tek tedavidir. DHT'ye dirençli donör bölgeden sağlıklı foliküller nakledilir."
+    }
   },
   "transplantation": {
     "heading": {
@@ -129,7 +761,335 @@
       "it": "Una procedura chirurgica in anestesia locale. Follicoli sani e resistenti al DHT vengono prelevati dall'area donatrice e trapiantati nelle zone diradate, dove continuano a crescere per tutta la vita.",
       "tr": "Lokal anestezi altında yapılan cerrahi bir işlemdir. Sağlıklı, DHT'ye dirençli foliküller donör bölgeden alınarak seyrelen bölgelere nakledilir ve orada ömür boyu büyümeye devam eder."
     },
-    "image": "assets/content/hairpedia-transplantation-image-1784916023.png"
+    "image": "assets/content/hairpedia-transplantation-image-1784916023.png",
+    "t1": {
+      "de": "Bildplatzhalter: Technik-Diagramm",
+      "en": "Image placeholder: technique diagram",
+      "fr": "Espace image : diagramme technique",
+      "nl": "Afbeeldingsplaceholder: technisch diagram",
+      "it": "Segnaposto immagine: diagramma tecnico",
+      "tr": "Görsel Yer Tutucu: Teknik Diyagram"
+    },
+    "t2": {
+      "de": "Schnittdarstellung von FUE, Saphir-FUE und DHI im direkten Vergleich",
+      "en": "Cross-section illustration comparing FUE, Sapphire FUE, and DHI",
+      "fr": "Illustration en coupe transversale comparant FUE, FUE au saphir et DHI",
+      "nl": "Doorsnede-illustratie ter vergelijking van FUE, Saffier-FUE en DHI",
+      "it": "Illustrazione in sezione trasversale che confronta FUE, Saphire-FUE e DHI",
+      "tr": "FUE, Safir FUE ve DHI'yi karşılaştıran kesit çizimi"
+    },
+    "t3": {
+      "de": "Wer ist geeignet?",
+      "en": "Who is a suitable candidate?",
+      "fr": "Qui est un bon candidat ?",
+      "nl": "Wie komt in aanmerking?",
+      "it": "Chi è un candidato idoneo?",
+      "tr": "Kimler Uygun Adaydır?"
+    },
+    "t4": {
+      "de": "Androgenetische Alopezie in einer stabilen Phase (der Ausfall hat sich verlangsamt oder stabilisiert).",
+      "en": "Androgenetic alopecia in a stable phase (loss has slowed or stabilised).",
+      "fr": "Alopécie androgénétique en phase stable (la chute a ralenti ou s'est stabilisée).",
+      "nl": "Androgenetische alopecia in een stabiele fase (het uitvallen is vertraagd of gestabiliseerd).",
+      "it": "Alopecia androgenetica in fase stabile (la caduta è rallentata o si è stabilizzata).",
+      "tr": "Stabil evrede androgenetik alopesi (dökülme yavaşlamış veya durmuş)."
+    },
+    "t5": {
+      "de": "Ausreichende Spenderdichte an Hinterkopf und Seiten.",
+      "en": "Adequate donor density at the back and sides of the scalp.",
+      "fr": "Densité donneuse suffisante à l'arrière et sur les côtés du cuir chevelu.",
+      "nl": "Voldoende donordichtheid aan achterhoofd en zijkanten.",
+      "it": "Densità donatrice adeguata sul retro e ai lati del cuoio capelluto.",
+      "tr": "Saç derisinin arka ve yan bölgelerinde yeterli donör yoğunluğu."
+    },
+    "t6": {
+      "de": "Realistische Erwartungen: eine Transplantation stellt Dichte wieder her, repliziert aber nicht die volle Haarfülle der Jugend.",
+      "en": "Realistic expectations: a transplant restores density but cannot replicate the full hair of early youth.",
+      "fr": "Attentes réalistes : une greffe restaure la densité mais ne peut pas reproduire la pleine chevelure de la jeunesse.",
+      "nl": "Realistische verwachtingen: een transplantatie herstelt dichtheid maar reproduceert niet de volledige haardracht van de jeugd.",
+      "it": "Aspettative realistiche: un trapianto ripristina la densità ma non può replicare la piena capigliatura giovanile.",
+      "tr": "Gerçekçi beklentiler: bir nakil yoğunluğu geri kazandırır ancak gençlik dönemindeki tam saç yoğunluğunu tekrar oluşturamaz."
+    },
+    "t7": {
+      "de": "Guter allgemeiner Gesundheitszustand, keine aktiven Infektionen oder unbehandelten Autoimmunerkrankungen.",
+      "en": "Good general health, no active infections or untreated autoimmune conditions.",
+      "fr": "Bon état de santé général, aucune infection active ni maladie auto-immune non traitée.",
+      "nl": "Goede algemene gezondheid, geen actieve infecties of onbehandelde auto-immuunaandoeningen.",
+      "it": "Buono stato di salute generale, nessuna infezione attiva o condizione autoimmune non trattata.",
+      "tr": "İyi genel sağlık durumu, aktif enfeksiyon veya tedavi edilmemiş otoimmün hastalık bulunmaması."
+    },
+    "t8": {
+      "de": "Die drei wichtigsten Techniken",
+      "en": "The three main techniques",
+      "fr": "Les trois principales techniques",
+      "nl": "De drie belangrijkste technieken",
+      "it": "Le tre tecniche principali",
+      "tr": "Üç Ana Teknik"
+    },
+    "t9": {
+      "de": "FUE",
+      "en": "FUE",
+      "fr": "FUE",
+      "nl": "FUE",
+      "it": "FUE",
+      "tr": "FUE"
+    },
+    "t10": {
+      "de": "Follikuläre Einheiten (1 bis 4 Haare) werden einzeln mit einem Mikro-Punch-Werkzeug entnommen. Kein linearer Schnitt, keine sichtbare Narbe. 5 bis 8 Stunden je nach Graft-Anzahl.",
+      "en": "Follicular units (1 to 4 hairs) are extracted one by one with a micro-punch tool. No linear incision, no visible scar. 5 to 8 hours depending on graft count.",
+      "fr": "Les unités folliculaires (1 à 4 cheveux) sont extraites une à une à l'aide d'un micro-punch. Pas d'incision linéaire, pas de cicatrice visible. 5 à 8 heures selon le nombre de greffons.",
+      "nl": "Folliculaire eenheden (1 tot 4 haren) worden één voor één geëxtraheerd met een micro-punchtool. Geen lineaire incisie, geen zichtbaar litteken. 5 tot 8 uur, afhankelijk van het aantal grafts.",
+      "it": "Le unità follicolari (1-4 capelli) vengono estratte una per una con uno strumento micro-punch. Nessuna incisione lineare, nessuna cicatrice visibile. 5-8 ore a seconda del numero di innesti.",
+      "tr": "Foliküler üniteler (1 ila 4 saç teli) mikro-punch aracıyla tek tek çıkarılır. Doğrusal kesi yoktur, görünür iz kalmaz. Greft sayısına bağlı olarak 5 ila 8 saat sürer."
+    },
+    "t11": {
+      "de": "Meistgenutzt in Istanbul",
+      "en": "Most used in Istanbul",
+      "fr": "La plus utilisée à Istanbul",
+      "nl": "Meest gebruikt in Istanboel",
+      "it": "La più utilizzata a Istanbul",
+      "tr": "İstanbul'da En Çok Kullanılan"
+    },
+    "t12": {
+      "de": "Saphir-FUE",
+      "en": "Sapphire FUE",
+      "fr": "FUE au saphir",
+      "nl": "Saffier-FUE",
+      "it": "Saphire-FUE",
+      "tr": "Safir FUE"
+    },
+    "t13": {
+      "de": "Kanäle werden mit Saphirklingen statt Stahl geöffnet: kleinere, präzisere Schnitte, schnellere Heilung, höhere Dichte pro cm² und geringeres Risiko für Verkrustung.",
+      "en": "Channels are opened with sapphire blades instead of steel: smaller, more precise incisions, faster healing, higher density per cm², and lower risk of scabbing.",
+      "fr": "Les canaux sont ouverts avec des lames en saphir plutôt qu'en acier : incisions plus petites et plus précises, guérison plus rapide, densité plus élevée par cm² et risque réduit de croûtes.",
+      "nl": "Kanalen worden geopend met saffieren lemmeten in plaats van staal: kleinere, preciezere incisies, sneller herstel, hogere dichtheid per cm² en lager risico op korstvorming.",
+      "it": "I canali vengono aperti con lame di zaffiro anziché in acciaio: incisioni più piccole e precise, guarigione più rapida, maggiore densità per cm² e minor rischio di crostosità.",
+      "tr": "Kanallar çelik yerine safir bıçaklarla açılır: daha küçük, daha hassas kesiler, daha hızlı iyileşme, cm² başına daha yüksek yoğunluk ve daha düşük kabuklanma riski."
+    },
+    "t14": {
+      "de": "DHI",
+      "en": "DHI",
+      "fr": "DHI",
+      "nl": "DHI",
+      "it": "DHI",
+      "tr": "DHI"
+    },
+    "t15": {
+      "de": "Follikel werden mit einem Choi Implanter Pen direkt implantiert, ohne separate Kanaleröffnung. Präzise Kontrolle über Winkel und Tiefe, ideal für den Haaransatz.",
+      "en": "Follicles are implanted directly using a Choi Implanter Pen, without opening separate channels first. Precise control over angle and depth, ideal for the hairline.",
+      "fr": "Les follicules sont implantés directement à l'aide d'un stylo implanteur Choi, sans ouverture préalable de canaux séparés. Contrôle précis de l'angle et de la profondeur, idéal pour la ligne capillaire.",
+      "nl": "Follikels worden direct geïmplanteerd met een Choi Implanter Pen, zonder eerst afzonderlijke kanalen te openen. Nauwkeurige controle over hoek en diepte, ideaal voor de haarlijn.",
+      "it": "I follicoli vengono impiantati direttamente con una penna Choi Implanter, senza aprire prima canali separati. Controllo preciso di angolo e profondità, ideale per l'attaccatura.",
+      "tr": "Foliküller, önce ayrı kanallar açılmadan doğrudan bir Choi İmplanter Kalemi ile yerleştirilir. Açı ve derinlik üzerinde hassas kontrol sağlar, saç çizgisi için idealdir."
+    },
+    "t16": {
+      "de": "Saphir-FUE oder DHI: der Vergleich",
+      "en": "Sapphire FUE vs. DHI: the comparison",
+      "fr": "FUE au saphir ou DHI : la comparaison",
+      "nl": "Saffier-FUE of DHI: de vergelijking",
+      "it": "Saphire-FUE o DHI: il confronto",
+      "tr": "Safir FUE mi DHI mi: Karşılaştırma"
+    },
+    "t17": {
+      "de": "Faktor",
+      "en": "Factor",
+      "fr": "Facteur",
+      "nl": "Factor",
+      "it": "Fattore",
+      "tr": "Faktör"
+    },
+    "t18": {
+      "de": "Saphir-FUE",
+      "en": "Sapphire FUE",
+      "fr": "FUE au saphir",
+      "nl": "Saffier-FUE",
+      "it": "Saphire-FUE",
+      "tr": "Safir FUE"
+    },
+    "t19": {
+      "de": "DHI",
+      "en": "DHI",
+      "fr": "DHI",
+      "nl": "DHI",
+      "it": "DHI",
+      "tr": "DHI"
+    },
+    "t20": {
+      "de": "Am besten für",
+      "en": "Best for",
+      "fr": "Idéal pour",
+      "nl": "Het beste voor",
+      "it": "Ideale per",
+      "tr": "En İyi Kullanım Alanı"
+    },
+    "t21": {
+      "de": "Große Flächen, hohe Graft-Zahlen",
+      "en": "Large areas, high graft counts",
+      "fr": "Grandes surfaces, nombre élevé de greffons",
+      "nl": "Grote gebieden, hoge graftaantallen",
+      "it": "Aree ampie, elevato numero di innesti",
+      "tr": "Geniş alanlar, yüksek greft sayıları"
+    },
+    "t22": {
+      "de": "Haaransatz, hohe Detailtreue, kleinere Flächen",
+      "en": "Frontal hairline, high detail, smaller areas",
+      "fr": "Ligne frontale, grande précision, petites surfaces",
+      "nl": "Voorste haarlijn, hoge precisie, kleinere gebieden",
+      "it": "Attaccatura frontale, alta precisione, aree più piccole",
+      "tr": "Ön saç çizgisi, yüksek detay, küçük alanlar"
+    },
+    "t23": {
+      "de": "Heilung",
+      "en": "Healing",
+      "fr": "Guérison",
+      "nl": "Genezing",
+      "it": "Guarigione",
+      "tr": "İyileşme"
+    },
+    "t24": {
+      "de": "Schnell (kleinere Schnitte)",
+      "en": "Fast (smaller incisions)",
+      "fr": "Rapide (incisions plus petites)",
+      "nl": "Snel (kleinere incisies)",
+      "it": "Veloce (incisioni più piccole)",
+      "tr": "Hızlı (daha küçük kesiler)"
+    },
+    "t25": {
+      "de": "Moderat (mehr Werkzeugdurchgänge)",
+      "en": "Moderate (more tool passes)",
+      "fr": "Modérée (davantage de passages d'outil)",
+      "nl": "Matig (meer instrumentbewegingen)",
+      "it": "Moderata (più passaggi dello strumento)",
+      "tr": "Orta (daha fazla alet geçişi)"
+    },
+    "t26": {
+      "de": "Präzision",
+      "en": "Precision",
+      "fr": "Précision",
+      "nl": "Precisie",
+      "it": "Precisione",
+      "tr": "Hassasiyet"
+    },
+    "t27": {
+      "de": "Hoch",
+      "en": "High",
+      "fr": "Élevée",
+      "nl": "Hoog",
+      "it": "Alta",
+      "tr": "Yüksek"
+    },
+    "t28": {
+      "de": "Sehr hoch (Winkel- und Tiefenkontrolle)",
+      "en": "Very high (angle and depth control)",
+      "fr": "Très élevée (contrôle de l'angle et de la profondeur)",
+      "nl": "Zeer hoog (hoek- en dieptecontrole)",
+      "it": "Molto alta (controllo di angolo e profondità)",
+      "tr": "Çok yüksek (açı ve derinlik kontrolü)"
+    },
+    "t29": {
+      "de": "Typische Sitzungsdauer",
+      "en": "Typical session length",
+      "fr": "Durée de séance typique",
+      "nl": "Typische sessieduur",
+      "it": "Durata tipica della seduta",
+      "tr": "Tipik Seans Süresi"
+    },
+    "t30": {
+      "de": "5 bis 8 Stunden",
+      "en": "5 to 8 hours",
+      "fr": "5 à 8 heures",
+      "nl": "5 tot 8 uur",
+      "it": "5-8 ore",
+      "tr": "5 ila 8 saat"
+    },
+    "t31": {
+      "de": "6 bis 10 Stunden",
+      "en": "6 to 10 hours",
+      "fr": "6 à 10 heures",
+      "nl": "6 tot 10 uur",
+      "it": "6-10 ore",
+      "tr": "6 ila 10 saat"
+    },
+    "t32": {
+      "de": "Relative Kosten",
+      "en": "Relative cost",
+      "fr": "Coût relatif",
+      "nl": "Relatieve kosten",
+      "it": "Costo relativo",
+      "tr": "Göreceli Maliyet"
+    },
+    "t33": {
+      "de": "Moderat",
+      "en": "Moderate",
+      "fr": "Modéré",
+      "nl": "Matig",
+      "it": "Moderato",
+      "tr": "Orta"
+    },
+    "t34": {
+      "de": "Höher",
+      "en": "Higher",
+      "fr": "Plus élevé",
+      "nl": "Hoger",
+      "it": "Più elevato",
+      "tr": "Daha Yüksek"
+    },
+    "t35": {
+      "de": "Kombinierbar?",
+      "en": "Can be combined?",
+      "fr": "Combinable ?",
+      "nl": "Combineerbaar?",
+      "it": "Combinabile?",
+      "tr": "Birlikte Kullanılabilir mi?"
+    },
+    "t36": {
+      "de": "Ja",
+      "en": "Yes",
+      "fr": "Oui",
+      "nl": "Ja",
+      "it": "Sì",
+      "tr": "Evet"
+    },
+    "t37": {
+      "de": "Ja, DHI für Ansatz + Saphir-FUE für Oberkopf ist gängig",
+      "en": "Yes, DHI for hairline + Sapphire FUE for crown is common",
+      "fr": "Oui, DHI pour la ligne frontale + FUE au saphir pour le sommet est courant",
+      "nl": "Ja, DHI voor de haarlijn + Saffier-FUE voor de kruin is gebruikelijk",
+      "it": "Sì, DHI per l'attaccatura + Saphire-FUE per il vertice è una combinazione comune",
+      "tr": "Evet, saç çizgisi için DHI + tepe için Safir FUE kombinasyonu yaygındır"
+    },
+    "t38": {
+      "de": "Realistische Erwartungen",
+      "en": "Realistic expectations",
+      "fr": "Attentes réalistes",
+      "nl": "Realistische verwachtingen",
+      "it": "Aspettative realistiche",
+      "tr": "Gerçekçi Beklentiler"
+    },
+    "t39": {
+      "de": "Eine Transplantation verschiebt vorhandene gesunde Follikel, sie erschafft keine neuen. Das Ergebnis ist durch den verfügbaren Spenderbereich begrenzt.",
+      "en": "A transplant relocates existing healthy follicles; it cannot create new ones. The result is limited by the available donor area.",
+      "fr": "Une greffe déplace des follicules sains existants ; elle ne peut pas en créer de nouveaux. Le résultat est limité par la zone donneuse disponible.",
+      "nl": "Een transplantatie verplaatst bestaande gezonde follikels; er kunnen geen nieuwe worden aangemaakt. Het resultaat wordt beperkt door het beschikbare donorgebied.",
+      "it": "Un trapianto sposta follicoli sani esistenti; non può crearne di nuovi. Il risultato è limitato dall'area donatrice disponibile.",
+      "tr": "Bir nakil, mevcut sağlıklı foliküllerin yerini değiştirir; yeni folikül oluşturmaz. Sonuç, mevcut donör alanla sınırlıdır."
+    },
+    "t40": {
+      "de": "Transplantiertes Haar wächst lebenslang, da es aus DHT-resistenten Zonen stammt.",
+      "en": "Transplanted hair grows for life because it's taken from DHT-resistant zones.",
+      "fr": "Les cheveux transplantés poussent à vie car ils proviennent de zones résistantes à la DHT.",
+      "nl": "Getransplanteerd haar groeit levenslang omdat het afkomstig is uit DHT-resistente zones.",
+      "it": "I capelli trapiantati crescono per tutta la vita perché provengono da zone resistenti al DHT.",
+      "tr": "Nakledilen saçlar DHT'ye dirençli bölgelerden alındığı için ömür boyu büyür."
+    },
+    "t41": {
+      "de": "Das vollständige Ergebnis zeigt sich erst nach 12 bis 18 Monaten, nicht sofort.",
+      "en": "Full results are visible at 12 to 18 months, not immediately.",
+      "fr": "Le résultat complet est visible entre 12 et 18 mois, pas immédiatement.",
+      "nl": "Het volledige resultaat is pas na 12 tot 18 maanden zichtbaar, niet meteen.",
+      "it": "Il risultato completo è visibile dopo 12-18 mesi, non immediatamente.",
+      "tr": "Tam sonuç hemen değil, 12 ila 18 ay içinde ortaya çıkar."
+    }
   },
   "genesung": {
     "heading": {
@@ -148,7 +1108,255 @@
       "it": "Il periodo di recupero è importante quanto l'intervento stesso. Determina la sopravvivenza degli innesti, la qualità della guarigione e il risultato finale.",
       "tr": "İyileşme süreci, işlemin kendisi kadar önemlidir. Greft sağkalımını, iyileşme kalitesini ve nihai sonucu belirler."
     },
-    "image": "assets/content/hairpedia-genesung-image-1784916746.png"
+    "image": "assets/content/hairpedia-genesung-image-1784916746.png",
+    "t1": {
+      "de": "Bildplatzhalter: Foto-Zeitstrahl",
+      "en": "Image placeholder: photo timeline",
+      "fr": "Espace image : chronologie photo",
+      "nl": "Afbeeldingsplaceholder: fototijdlijn",
+      "it": "Segnaposto immagine: cronologia fotografica",
+      "tr": "Görsel Yer Tutucu: Fotoğraf Zaman Çizelgesi"
+    },
+    "t2": {
+      "de": "Patientenfotos von Tag 1 bis Monat 18, mit Einwilligung, den Heilungsverlauf zeigend",
+      "en": "Patient photos from day 1 to month 18, with consent, showing the healing progression",
+      "fr": "Photos de patients du jour 1 au mois 18, avec consentement, montrant la progression de la guérison",
+      "nl": "Patiëntfoto's van dag 1 tot maand 18, met toestemming, die het genezingsproces tonen",
+      "it": "Foto dei pazienti dal giorno 1 al mese 18, con consenso, che mostrano la progressione della guarigione",
+      "tr": "1. günden 18. aya kadar, onay alınarak çekilmiş, iyileşme sürecini gösteren hasta fotoğrafları"
+    },
+    "t3": {
+      "de": "Tag 1 bis 7",
+      "en": "Day 1 to 7",
+      "fr": "Jour 1 à 7",
+      "nl": "Dag 1 tot 7",
+      "it": "Giorno 1-7",
+      "tr": "1. ile 7. Gün"
+    },
+    "t4": {
+      "de": "Erste Heilung",
+      "en": "Initial healing",
+      "fr": "Cicatrisation initiale",
+      "nl": "Eerste genezing",
+      "it": "Guarigione iniziale",
+      "tr": "İlk İyileşme"
+    },
+    "t5": {
+      "de": "Kleine Krusten bilden sich, Rötung und leichte Schwellung um Stirn und Augen sind normal. Kopf erhöht schlafen, Kopfhaut nicht berühren.",
+      "en": "Small scabs form, redness and mild swelling around the forehead and eyes is common. Sleep with the head elevated, avoid touching the scalp.",
+      "fr": "De petites croûtes se forment, des rougeurs et un léger gonflement autour du front et des yeux sont normaux. Dormir la tête surélevée, éviter de toucher le cuir chevelu.",
+      "nl": "Kleine korstjes vormen zich, roodheid en lichte zwelling rond voorhoofd en ogen zijn normaal. Slaap met het hoofd omhoog, raak de hoofdhuid niet aan.",
+      "it": "Si formano piccole croste, arrossamento e lieve gonfiore intorno alla fronte e agli occhi sono normali. Dormire con la testa sollevata, evitare di toccare il cuoio capelluto.",
+      "tr": "Küçük kabuklar oluşur, alın ve göz çevresinde kızarıklık ve hafif şişlik normaldir. Baş yükseltilmiş şekilde uyuyun, saç derisine dokunmaktan kaçının."
+    },
+    "t6": {
+      "de": "Woche 2 bis 4",
+      "en": "Weeks 2 to 4",
+      "fr": "Semaines 2 à 4",
+      "nl": "Week 2 tot 4",
+      "it": "Settimane 2-4",
+      "tr": "2. ile 4. Hafta"
+    },
+    "t7": {
+      "de": "Schock-Verlust",
+      "en": "Shock loss",
+      "fr": "Chute de choc",
+      "nl": "Shockverlies",
+      "it": "Shock loss",
+      "tr": "Şok Dökülmesi"
+    },
+    "t8": {
+      "de": "Bis zu 90% der transplantierten Haarschäfte fallen aus. Das ist völlig normal, die Follikel selbst bleiben unter der Kopfhaut aktiv.",
+      "en": "Up to 90% of transplanted hair shafts shed. This is completely normal; the follicles themselves remain alive beneath the scalp.",
+      "fr": "Jusqu'à 90% des tiges capillaires transplantées tombent. C'est tout à fait normal, les follicules eux-mêmes restent actifs sous le cuir chevelu.",
+      "nl": "Tot 90% van de getransplanteerde haarschachten valt uit. Dit is volkomen normaal; de follikels zelf blijven actief onder de hoofdhuid.",
+      "it": "Fino al 90% dei fusti di capelli trapiantati cade. È del tutto normale; i follicoli stessi rimangono vivi sotto il cuoio capelluto.",
+      "tr": "Nakledilen saç tellerinin %90'a kadarı dökülür. Bu tamamen normaldir; foliküllerin kendisi saç derisi altında aktif kalır."
+    },
+    "t9": {
+      "de": "Monat 2 bis 3",
+      "en": "Months 2 to 3",
+      "fr": "Mois 2 à 3",
+      "nl": "Maand 2 tot 3",
+      "it": "Mese 2-3",
+      "tr": "2. ile 3. Ay"
+    },
+    "t10": {
+      "de": "Die ruhige Phase",
+      "en": "The quiet phase",
+      "fr": "La phase calme",
+      "nl": "De rustige fase",
+      "it": "La fase silente",
+      "tr": "Sessiz Evre"
+    },
+    "t11": {
+      "de": "Kaum sichtbares Wachstum, die Follikel ruhen. Erste feine Haare können ab Woche 10 bis 12 erscheinen.",
+      "en": "Little visible growth, follicles are resting. First fine hairs may emerge around week 10 to 12.",
+      "fr": "Peu de croissance visible, les follicules se reposent. Les premiers cheveux fins peuvent apparaître entre les semaines 10 et 12.",
+      "nl": "Weinig zichtbare groei, de follikels rusten. De eerste fijne haartjes kunnen rond week 10 tot 12 verschijnen.",
+      "it": "Poca crescita visibile, i follicoli riposano. I primi capelli sottili possono comparire intorno alla settimana 10-12.",
+      "tr": "Görünür büyüme azdır, foliküller dinlenir. İlk ince saçlar 10-12. haftalarda belirebilir."
+    },
+    "t12": {
+      "de": "Monat 3 bis 6",
+      "en": "Months 3 to 6",
+      "fr": "Mois 3 à 6",
+      "nl": "Maand 3 tot 6",
+      "it": "Mese 3-6",
+      "tr": "3. ile 6. Ay"
+    },
+    "t13": {
+      "de": "Sichtbares Wachstum beginnt",
+      "en": "Visible growth begins",
+      "fr": "La croissance visible commence",
+      "nl": "Zichtbare groei begint",
+      "it": "Inizia la crescita visibile",
+      "tr": "Görünür Büyüme Başlar"
+    },
+    "t14": {
+      "de": "Feine neue Haare erscheinen und verdicken sich allmählich. Bis Monat 6 sind rund 40 bis 60% des Endergebnisses sichtbar.",
+      "en": "Fine new hairs emerge and gradually thicken. By month 6, around 40 to 60% of the final result is visible.",
+      "fr": "De fins nouveaux cheveux apparaissent et s'épaississent progressivement. Au mois 6, environ 40 à 60% du résultat final sont visibles.",
+      "nl": "Fijne nieuwe haren verschijnen en worden geleidelijk dikker. Tegen maand 6 is ongeveer 40 tot 60% van het eindresultaat zichtbaar.",
+      "it": "Compaiono nuovi capelli sottili che si ispessiscono gradualmente. Entro il mese 6, è visibile circa il 40-60% del risultato finale.",
+      "tr": "İnce yeni saçlar belirir ve giderek kalınlaşır. 6. aya kadar nihai sonucun yaklaşık %40 ila %60'ı görünür hale gelir."
+    },
+    "t15": {
+      "de": "Monat 6 bis 9",
+      "en": "Months 6 to 9",
+      "fr": "Mois 6 à 9",
+      "nl": "Maand 6 tot 9",
+      "it": "Mese 6-9",
+      "tr": "6. ile 9. Ay"
+    },
+    "t16": {
+      "de": "Die Dichte verbessert sich",
+      "en": "Density improves",
+      "fr": "La densité s'améliore",
+      "nl": "De dichtheid verbetert",
+      "it": "La densità migliora",
+      "tr": "Yoğunluk Artıyor"
+    },
+    "t17": {
+      "de": "Das Haar wird spürbar dicker und dunkler. Rund 80% der Grafts sind zu diesem Zeitpunkt durchgebrochen.",
+      "en": "Hair becomes noticeably thicker and darker. Around 80% of grafts have broken through by this point.",
+      "fr": "Les cheveux deviennent nettement plus épais et plus foncés. Environ 80% des greffons ont percé à ce stade.",
+      "nl": "Het haar wordt merkbaar dikker en donkerder. Op dit punt is ongeveer 80% van de grafts doorgebroken.",
+      "it": "I capelli diventano notevolmente più spessi e scuri. A questo punto circa l'80% degli innesti è emerso.",
+      "tr": "Saçlar belirgin şekilde kalınlaşır ve koyulaşır. Bu noktada greftlerin yaklaşık %80'i çıkmış olur."
+    },
+    "t18": {
+      "de": "Monat 12 bis 18",
+      "en": "Months 12 to 18",
+      "fr": "Mois 12 à 18",
+      "nl": "Maand 12 tot 18",
+      "it": "Mese 12-18",
+      "tr": "12. ile 18. Ay"
+    },
+    "t19": {
+      "de": "Endgültige Verfeinerung",
+      "en": "Final refinement",
+      "fr": "Affinement final",
+      "nl": "Definitieve verfijning",
+      "it": "Rifinitura finale",
+      "tr": "Son Rötuşlar"
+    },
+    "t20": {
+      "de": "Die letzten Haare reifen und verdicken sich. Das transplantierte Haar verschmilzt vollständig mit dem natürlichen Haar.",
+      "en": "The last hairs mature and thicken. Transplanted hair fully blends with native hair.",
+      "fr": "Les derniers cheveux mûrissent et s'épaississent. Les cheveux transplantés se fondent complètement avec les cheveux naturels.",
+      "nl": "De laatste haren rijpen en worden dikker. Getransplanteerd haar vermengt zich volledig met natuurlijk haar.",
+      "it": "Gli ultimi capelli maturano e si ispessiscono. I capelli trapiantati si fondono completamente con quelli naturali.",
+      "tr": "Son saçlar olgunlaşır ve kalınlaşır. Nakledilen saç, doğal saçla tamamen kaynaşır."
+    },
+    "t21": {
+      "de": "Die wichtigsten Nachsorgeregeln",
+      "en": "Key aftercare rules",
+      "fr": "Les règles de suivi essentielles",
+      "nl": "De belangrijkste nazorgregels",
+      "it": "Le regole di assistenza post-operatoria più importanti",
+      "tr": "Temel Bakım Kuralları"
+    },
+    "t22": {
+      "de": "Keine direkte Sonne auf der Kopfhaut für mindestens 4 Wochen.",
+      "en": "No direct sun exposure on the scalp for at least 4 weeks.",
+      "fr": "Pas d'exposition directe au soleil sur le cuir chevelu pendant au moins 4 semaines.",
+      "nl": "Geen directe zonlicht op de hoofdhuid gedurende ten minste 4 weken.",
+      "it": "Nessuna esposizione diretta al sole sul cuoio capelluto per almeno 4 settimane.",
+      "tr": "En az 4 hafta boyunca saç derisine doğrudan güneş ışığı almayın."
+    },
+    "t23": {
+      "de": "Kein Schwimmen (Pool, Meer, See) für mindestens 4 Wochen.",
+      "en": "No swimming (pool, sea, or lake) for at least 4 weeks.",
+      "fr": "Pas de baignade (piscine, mer, lac) pendant au moins 4 semaines.",
+      "nl": "Niet zwemmen (zwembad, zee, meer) gedurende ten minste 4 weken.",
+      "it": "Niente nuoto (piscina, mare, lago) per almeno 4 settimane.",
+      "tr": "En az 4 hafta boyunca yüzmeyin (havuz, deniz, göl)."
+    },
+    "t24": {
+      "de": "Kein intensiver Sport oder starkes Schwitzen für 2 bis 3 Wochen.",
+      "en": "No intense exercise or heavy sweating for 2 to 3 weeks.",
+      "fr": "Pas de sport intense ni de transpiration excessive pendant 2 à 3 semaines.",
+      "nl": "Geen intensieve sport of overmatig zweten gedurende 2 tot 3 weken.",
+      "it": "Nessun esercizio intenso o sudorazione eccessiva per 2-3 settimane.",
+      "tr": "2-3 hafta boyunca yoğun spor yapmayın veya aşırı terlemekten kaçının."
+    },
+    "t25": {
+      "de": "Kein Alkohol in der ersten Woche, er beeinträchtigt die Durchblutung.",
+      "en": "No alcohol for the first week; it affects blood circulation.",
+      "fr": "Pas d'alcool la première semaine, il nuit à la circulation sanguine.",
+      "nl": "Geen alcohol in de eerste week, dit beïnvloedt de bloedcirculatie.",
+      "it": "Niente alcol nella prima settimana, compromette la circolazione sanguigna.",
+      "tr": "İlk hafta alkol almayın; kan dolaşımını olumsuz etkiler."
+    },
+    "t26": {
+      "de": "Nicht rauchen: Nikotin verengt die Blutgefäße und senkt die Graft-Überlebensrate.",
+      "en": "No smoking: nicotine restricts blood supply and reduces graft survival.",
+      "fr": "Ne pas fumer : la nicotine restreint l'apport sanguin et réduit la survie des greffons.",
+      "nl": "Niet roken: nicotine beperkt de bloedtoevoer en vermindert de overleving van de grafts.",
+      "it": "Non fumare: la nicotina riduce l'afflusso di sangue e diminuisce la sopravvivenza degli innesti.",
+      "tr": "Sigara içmeyin: nikotin kan akışını kısıtlar ve greft sağkalımını azaltır."
+    },
+    "t27": {
+      "de": "Kopf erhöht schlafen für die ersten 3 bis 5 Nächte.",
+      "en": "Sleep with the head elevated for the first 3 to 5 nights.",
+      "fr": "Dormir la tête surélevée pendant les 3 à 5 premières nuits.",
+      "nl": "Slaap met het hoofd omhoog gedurende de eerste 3 tot 5 nachten.",
+      "it": "Dormire con la testa sollevata per le prime 3-5 notti.",
+      "tr": "İlk 3-5 gece başınızı yükseltilmiş şekilde uyuyun."
+    },
+    "t28": {
+      "de": "Sanft waschen nach Klinikanleitung, keinen starken Wasserstrahl direkt auf die Grafts.",
+      "en": "Wash gently per the clinic's instructions; no strong water pressure directly on the grafts.",
+      "fr": "Laver délicatement selon les instructions de la clinique, pas de jet d'eau puissant directement sur les greffons.",
+      "nl": "Was voorzichtig volgens de instructies van de kliniek, geen sterke waterdruk direct op de grafts.",
+      "it": "Lavare delicatamente secondo le istruzioni della clinica, senza getto d'acqua forte direttamente sugli innesti.",
+      "tr": "Klinik talimatlarına göre nazikçe yıkayın, greftlerin üzerine doğrudan güçlü su akışı uygulamayın."
+    },
+    "t29": {
+      "de": "Haare im ersten Monat nicht aggressiv schneiden, färben oder stylen.",
+      "en": "Don't cut, colour, or style hair aggressively in the first month.",
+      "fr": "Ne pas couper, colorer ou coiffer les cheveux de manière agressive le premier mois.",
+      "nl": "Knip, kleur of stijl het haar de eerste maand niet agressief.",
+      "it": "Non tagliare, colorare o acconciare i capelli in modo aggressivo nel primo mese.",
+      "tr": "İlk ay saçınızı agresif şekilde kesmeyin, boyamayın veya şekillendirmeyin."
+    },
+    "t30": {
+      "de": "Verschriebene Medikamente wie Finasterid oder Minoxidil wie angeordnet fortsetzen.",
+      "en": "Continue prescribed medications like finasteride or minoxidil as directed.",
+      "fr": "Continuer les médicaments prescrits comme le finastéride ou le minoxidil selon les indications.",
+      "nl": "Ga door met voorgeschreven medicatie zoals finasteride of minoxidil zoals aangegeven.",
+      "it": "Continuare i farmaci prescritti come finasteride o minoxidil come indicato.",
+      "tr": "Finasterid veya minoksidil gibi reçetelenen ilaçları belirtilen şekilde kullanmaya devam edin."
+    },
+    "t31": {
+      "de": "Alle Folgetermine wahrnehmen, manche Kliniken bieten Remote-Check-ins an.",
+      "en": "Attend all follow-up appointments; some clinics offer remote check-ins.",
+      "fr": "Assister à tous les rendez-vous de suivi ; certaines cliniques proposent des suivis à distance.",
+      "nl": "Woon alle vervolgafspraken bij; sommige klinieken bieden externe check-ins aan.",
+      "it": "Partecipare a tutti gli appuntamenti di follow-up; alcune cliniche offrono check-in a distanza.",
+      "tr": "Tüm takip randevularına katılın; bazı klinikler uzaktan kontrol imkanı sunar."
+    }
   },
   "vorherNachher": {
     "heading": {
@@ -167,7 +1375,199 @@
       "it": "Un riferimento visivo e descrittivo mese per mese. Le foto reali dei pazienti Apex Beauty appariranno qui non appena approvate per l'uso.",
       "tr": "Görsel ve açıklayıcı, aya göre bir referans. Gerçek Apex Beauty hasta fotoğrafları, kullanım onayı verildiğinde burada yer alacaktır."
     },
-    "image": "assets/content/hairpedia-vorherNachher-image-1784918156.png"
+    "image": "assets/content/hairpedia-vorherNachher-image-1784918156.png",
+    "t1": {
+      "de": "Bildplatzhalter: Vorher-Nachher-Galerie",
+      "en": "Image placeholder: before/after gallery",
+      "fr": "Espace image : galerie avant/après",
+      "nl": "Afbeeldingsplaceholder: voor-en-na-galerij",
+      "it": "Segnaposto immagine: galleria prima/dopo",
+      "tr": "Görsel Yer Tutucu: Öncesi/Sonrası Galerisi"
+    },
+    "t2": {
+      "de": "Echte Apex-Patientenfotos im Split-Vergleich, mit schriftlicher Einwilligung",
+      "en": "Real Apex patient photos in a split comparison view, with written consent",
+      "fr": "Vraies photos de patients Apex en comparaison divisée, avec consentement écrit",
+      "nl": "Echte foto's van Apex-patiënten in gesplitste vergelijking, met schriftelijke toestemming",
+      "it": "Foto reali di pazienti Apex in confronto affiancato, con consenso scritto",
+      "tr": "Yazılı onay alınmış, ikiye bölünmüş karşılaştırma görünümünde gerçek Apex hasta fotoğrafları"
+    },
+    "t3": {
+      "de": "Tag 1 bis 7",
+      "en": "Day 1 to 7",
+      "fr": "Jour 1 à 7",
+      "nl": "Dag 1 tot 7",
+      "it": "Giorno 1-7",
+      "tr": "1. ile 7. Gün"
+    },
+    "t4": {
+      "de": "Grafts setzen sich, Blutversorgung baut sich wieder auf",
+      "en": "Grafts settling, blood supply re-establishing"
+    },
+    "t5": {
+      "de": "Sichtbar: Rötung, kleine Krusten, leichte Schwellung",
+      "en": "What you see: redness, small scabs, mild swelling"
+    },
+    "t6": {
+      "de": "Woche 2 bis 4",
+      "en": "Weeks 2 to 4",
+      "fr": "Semaines 2 à 4",
+      "nl": "Week 2 tot 4",
+      "it": "Settimane 2-4",
+      "tr": "2. ile 4. Hafta"
+    },
+    "t7": {
+      "de": "Follikel treten in die Telogen-Phase ein, Schock-Verlust",
+      "en": "Follicles enter telogen, shock loss occurs"
+    },
+    "t8": {
+      "de": "Sichtbar: transplantiertes Haar fällt aus, das ist normal",
+      "en": "What you see: transplanted hair sheds, this is normal"
+    },
+    "t9": {
+      "de": "Monat 2 bis 3",
+      "en": "Month 2 to 3",
+      "fr": "Mois 2 à 3",
+      "nl": "Maand 2 tot 3",
+      "it": "Mese 2-3",
+      "tr": "2. ile 3. Ay"
+    },
+    "t10": {
+      "de": "Follikel in Ruhephase, neuer Zyklus bereitet sich vor",
+      "en": "Follicles resting, new cycle preparing",
+      "fr": "Follicules au repos, nouveau cycle en préparation",
+      "nl": "Follikels in rust, nieuwe cyclus bereidt zich voor",
+      "it": "Follicoli a riposo, nuovo ciclo in preparazione",
+      "tr": "Foliküller dinleniyor, yeni döngü hazırlanıyor"
+    },
+    "t11": {
+      "de": "Sichtbar: kaum Veränderung, Kopfhaut wirkt ruhig",
+      "en": "What you see: little visible change, scalp appears calm",
+      "fr": "Ce que vous voyez : peu de changement visible, le cuir chevelu semble calme",
+      "nl": "Wat u ziet: weinig zichtbare verandering, hoofdhuid oogt rustig",
+      "it": "Cosa vedi: poco cambiamento visibile, il cuoio capelluto appare calmo",
+      "tr": "Gördükleriniz: çok az görünür değişiklik, saç derisi sakin görünüyor"
+    },
+    "t12": {
+      "de": "Monat 3 bis 5",
+      "en": "Month 3 to 5",
+      "fr": "Mois 3 à 5",
+      "nl": "Maand 3 tot 5",
+      "it": "Mese 3-5",
+      "tr": "3. ile 5. Ay"
+    },
+    "t13": {
+      "de": "Neue Anagen-Phase beginnt, erste Haare erscheinen",
+      "en": "New anagen phase begins, first hairs emerge",
+      "fr": "Une nouvelle phase anagène commence, les premiers cheveux apparaissent",
+      "nl": "Nieuwe anagene fase begint, eerste haren verschijnen",
+      "it": "Inizia una nuova fase anagen, compaiono i primi capelli",
+      "tr": "Yeni anagen evre başlar, ilk saçlar belirir"
+    },
+    "t14": {
+      "de": "Sichtbar: feine, helle Haare, rund 20% Fortschritt",
+      "en": "What you see: fine, light hairs, around 20% progress",
+      "fr": "Ce que vous voyez : cheveux fins et clairs, environ 20% de progression",
+      "nl": "Wat u ziet: fijne, lichte haartjes, ongeveer 20% voortgang",
+      "it": "Cosa vedi: capelli sottili e chiari, circa il 20% di progresso",
+      "tr": "Gördükleriniz: ince, açık renkli saçlar, yaklaşık %20 ilerleme"
+    },
+    "t15": {
+      "de": "Monat 5 bis 7",
+      "en": "Month 5 to 7",
+      "fr": "Mois 5 à 7",
+      "nl": "Maand 5 tot 7",
+      "it": "Mese 5-7",
+      "tr": "5. ile 7. Ay"
+    },
+    "t16": {
+      "de": "Haarschaft verdickt sich, wird dunkler und länger",
+      "en": "Hair shaft thickens, darkens, lengthens",
+      "fr": "La tige capillaire s'épaissit, fonce et s'allonge",
+      "nl": "Haarschacht wordt dikker, donkerder en langer",
+      "it": "Il fusto del capello si ispessisce, scurisce e si allunga",
+      "tr": "Saç teli kalınlaşır, koyulaşır ve uzar"
+    },
+    "t17": {
+      "de": "Sichtbar: rund 50% der Enddichte",
+      "en": "What you see: around 50% of final density",
+      "fr": "Ce que vous voyez : environ 50% de la densité finale",
+      "nl": "Wat u ziet: ongeveer 50% van de einddichtheid",
+      "it": "Cosa vedi: circa il 50% della densità finale",
+      "tr": "Gördükleriniz: nihai yoğunluğun yaklaşık %50'si"
+    },
+    "t18": {
+      "de": "Monat 7 bis 9",
+      "en": "Month 7 to 9",
+      "fr": "Mois 7 à 9",
+      "nl": "Maand 7 tot 9",
+      "it": "Mese 7-9",
+      "tr": "7. ile 9. Ay"
+    },
+    "t19": {
+      "de": "Dichte, Deckung und Textur verbessern sich weiter",
+      "en": "Density, coverage, and texture keep improving",
+      "fr": "La densité, la couverture et la texture continuent de s'améliorer",
+      "nl": "Dichtheid, dekking en textuur blijven verbeteren",
+      "it": "Densità, copertura e texture continuano a migliorare",
+      "tr": "Yoğunluk, kapsama ve doku iyileşmeye devam eder"
+    },
+    "t20": {
+      "de": "Sichtbar: rund 70 bis 80% des Endergebnisses",
+      "en": "What you see: around 70 to 80% of the final result",
+      "fr": "Ce que vous voyez : environ 70 à 80% du résultat final",
+      "nl": "Wat u ziet: ongeveer 70 tot 80% van het eindresultaat",
+      "it": "Cosa vedi: circa il 70-80% del risultato finale",
+      "tr": "Gördükleriniz: nihai sonucun yaklaşık %70 ila %80'i"
+    },
+    "t21": {
+      "de": "Monat 10 bis 12",
+      "en": "Month 10 to 12",
+      "fr": "Mois 10 à 12",
+      "nl": "Maand 10 tot 12",
+      "it": "Mese 10-12",
+      "tr": "10. ile 12. Ay"
+    },
+    "t22": {
+      "de": "Die meisten Grafts sind ausgereift, Endergebnis formt sich",
+      "en": "Most grafts mature, final result forming",
+      "fr": "La plupart des greffons sont matures, le résultat final se dessine",
+      "nl": "De meeste grafts zijn volgroeid, eindresultaat vormt zich",
+      "it": "La maggior parte degli innesti è matura, il risultato finale prende forma",
+      "tr": "Greftlerin çoğu olgunlaşmıştır, nihai sonuç şekilleniyor"
+    },
+    "t23": {
+      "de": "Sichtbar: nahezu finales Erscheinungsbild, natürliche Verschmelzung",
+      "en": "What you see: near-final appearance, natural blending",
+      "fr": "Ce que vous voyez : apparence quasi finale, fusion naturelle",
+      "nl": "Wat u ziet: bijna definitief uiterlijk, natuurlijke vermenging",
+      "it": "Cosa vedi: aspetto quasi definitivo, fusione naturale",
+      "tr": "Gördükleriniz: neredeyse nihai görünüm, doğal kaynaşma"
+    },
+    "t24": {
+      "de": "Monat 12 bis 18",
+      "en": "Month 12 to 18",
+      "fr": "Mois 12 à 18",
+      "nl": "Maand 12 tot 18",
+      "it": "Mese 12-18",
+      "tr": "12. ile 18. Ay"
+    },
+    "t25": {
+      "de": "Letzte Haare reifen, volle Integration mit dem natürlichen Haar",
+      "en": "Last hairs mature, full integration with native hair",
+      "fr": "Les derniers cheveux mûrissent, intégration complète avec les cheveux naturels",
+      "nl": "Laatste haren rijpen, volledige integratie met natuurlijk haar",
+      "it": "Gli ultimi capelli maturano, integrazione completa con i capelli naturali",
+      "tr": "Son saçlar olgunlaşır, doğal saçla tam entegrasyon"
+    },
+    "t26": {
+      "de": "Sichtbar: Endergebnis, natürlich und nicht mehr zu unterscheiden",
+      "en": "What you see: final result, natural and indistinguishable",
+      "fr": "Ce que vous voyez : résultat final, naturel et indiscernable",
+      "nl": "Wat u ziet: eindresultaat, natuurlijk en niet meer te onderscheiden",
+      "it": "Cosa vedi: risultato finale, naturale e indistinguibile",
+      "tr": "Gördükleriniz: doğal ve ayırt edilemeyen nihai sonuç"
+    }
   },
   "glossar": {
     "heading": {
@@ -185,6 +1585,786 @@
       "nl": "Alle technische termen die in Hairpedia worden gebruikt, eenvoudig uitgelegd.",
       "it": "Tutti i termini tecnici utilizzati in Hairpedia, spiegati in modo semplice.",
       "tr": "Hairpedia boyunca kullanılan tüm teknik terimler basitçe açıklanmıştır."
+    },
+    "t1": {
+      "de": "Alopezie",
+      "en": "Alopecia",
+      "fr": "Alopécie",
+      "nl": "Alopecia",
+      "it": "Alopecia",
+      "tr": "Alopesi"
+    },
+    "t2": {
+      "de": "Der medizinische Begriff für Haarausfall, unabhängig von der Ursache.",
+      "en": "The medical term for hair loss, from any cause.",
+      "fr": "Le terme médical désignant la chute de cheveux, quelle qu'en soit la cause.",
+      "nl": "De medische term voor haaruitval, ongeacht de oorzaak.",
+      "it": "Il termine medico per la caduta dei capelli, indipendentemente dalla causa.",
+      "tr": "Nedeni ne olursa olsun saç dökülmesi için kullanılan tıbbi terim."
+    },
+    "t3": {
+      "de": "Anagen",
+      "en": "Anagen",
+      "fr": "Anagène",
+      "nl": "Anageen",
+      "it": "Anagen",
+      "tr": "Anagen"
+    },
+    "t4": {
+      "de": "Die aktive Wachstumsphase des Haarzyklus, dauert 2 bis 7 Jahre.",
+      "en": "The active growth phase of the hair cycle, lasting 2 to 7 years."
+    },
+    "t5": {
+      "de": "Androgenetische Alopezie",
+      "en": "Androgenetic alopecia",
+      "fr": "Alopécie androgénétique",
+      "nl": "Androgenetische alopecia",
+      "it": "Alopecia androgenetica",
+      "tr": "Androgenetik Alopesi"
+    },
+    "t6": {
+      "de": "Erblich bedingter, durch DHT beeinflusster Haarausfall. Die häufigste Form bei Männern und Frauen.",
+      "en": "Genetically inherited pattern hair loss influenced by DHT. The most common form in both men and women."
+    },
+    "t7": {
+      "de": "Katagen",
+      "en": "Catagen",
+      "fr": "Catagène",
+      "nl": "Catageen",
+      "it": "Catagen",
+      "tr": "Katagen"
+    },
+    "t8": {
+      "de": "Die kurze Übergangsphase, rund 2 bis 3 Wochen, in der der Follikel schrumpft und das Wachstum stoppt.",
+      "en": "The short transitional phase, lasting about 2 to 3 weeks, during which the follicle shrinks and growth stops."
+    },
+    "t9": {
+      "de": "DHI",
+      "en": "DHI",
+      "fr": "DHI",
+      "nl": "DHI",
+      "it": "DHI",
+      "tr": "DHI"
+    },
+    "t10": {
+      "de": "Direkte Haarimplantation. Technik mit einem Choi Implanter Pen, der Follikel in einem Schritt entnimmt und implantiert.",
+      "en": "Direct Hair Implantation. A technique using a Choi Implanter Pen to extract and implant follicles in a single step."
+    },
+    "t11": {
+      "de": "DHT (Dihydrotestosteron)",
+      "en": "DHT (Dihydrotestosterone)",
+      "fr": "DHT (Dihydrotestostérone)",
+      "nl": "DHT (Dihydrotestosteron)",
+      "it": "DHT (Diidrotestosterone)",
+      "tr": "DHT (Dihidrotestosteron)"
+    },
+    "t12": {
+      "de": "Ein starkes Hormon aus Testosteron, der Haupttreiber der androgenetischen Alopezie bei genetisch empfindlichen Personen.",
+      "en": "A potent hormone derived from testosterone, the primary driver of androgenetic alopecia in genetically sensitive individuals."
+    },
+    "t13": {
+      "de": "Spenderbereich",
+      "en": "Donor area",
+      "fr": "Zone donneuse",
+      "nl": "Donorgebied",
+      "it": "Area donatrice",
+      "tr": "Donör Bölge"
+    },
+    "t14": {
+      "de": "Der Bereich der Kopfhaut, meist Hinterkopf und Seiten, aus dem DHT-resistente Follikel entnommen werden.",
+      "en": "The part of the scalp, typically the back and sides, from which DHT-resistant follicles are harvested.",
+      "fr": "La zone du cuir chevelu, généralement l'arrière et les côtés, d'où sont prélevés les follicules résistants à la DHT.",
+      "nl": "Het deel van de hoofdhuid, meestal achterhoofd en zijkanten, waaruit DHT-resistente follikels worden geoogst.",
+      "it": "La zona del cuoio capelluto, generalmente la parte posteriore e laterale, da cui vengono prelevati i follicoli resistenti al DHT.",
+      "tr": "Genellikle arka ve yan bölgeler olmak üzere, DHT'ye dirençli foliküllerin alındığı saç derisi bölgesi."
+    },
+    "t15": {
+      "de": "Exosomen",
+      "en": "Exosomes",
+      "fr": "Exosomes",
+      "nl": "Exosomen",
+      "it": "Esosomi",
+      "tr": "Ekzozomlar"
+    },
+    "t16": {
+      "de": "Winzige, aus Stammzellen gewonnene Vesikel mit Wachstumssignalen, experimentell zur Follikelregeneration eingesetzt.",
+      "en": "Tiny stem cell-derived vesicles containing growth signals, used experimentally to stimulate follicle regeneration."
+    },
+    "t17": {
+      "de": "5-Alpha-Reduktase",
+      "en": "5-alpha reductase",
+      "fr": "5-alpha réductase",
+      "nl": "5-alfa-reductase",
+      "it": "5-alfa reduttasi",
+      "tr": "5-Alfa Redüktaz"
+    },
+    "t18": {
+      "de": "Das Enzym, das Testosteron in DHT umwandelt. Wird durch Finasterid und Dutasterid gehemmt.",
+      "en": "The enzyme responsible for converting testosterone into DHT. Inhibited by finasteride and dutasteride.",
+      "fr": "L'enzyme responsable de la conversion de la testostérone en DHT. Inhibée par le finastéride et le dutastéride.",
+      "nl": "Het enzym dat testosteron omzet in DHT. Wordt geremd door finasteride en dutasteride.",
+      "it": "L'enzima responsabile della conversione del testosterone in DHT. Inibito da finasteride e dutasteride.",
+      "tr": "Testosteronu DHT'ye dönüştüren enzimdir. Finasterid ve dutasterid tarafından inhibe edilir."
+    },
+    "t19": {
+      "de": "Finasterid",
+      "en": "Finasteride",
+      "fr": "Finastéride",
+      "nl": "Finasteride",
+      "it": "Finasteride",
+      "tr": "Finasterid"
+    },
+    "t20": {
+      "de": "Orales Medikament, senkt DHT in der Kopfhaut um rund 70%, indem es Typ-II-5-Alpha-Reduktase blockiert.",
+      "en": "An oral medication that reduces scalp DHT by around 70% by blocking type II 5-alpha reductase."
+    },
+    "t21": {
+      "de": "Follikuläre Einheit",
+      "en": "Follicular unit",
+      "fr": "Unité folliculaire",
+      "nl": "Folliculaire eenheid",
+      "it": "Unità follicolare",
+      "tr": "Foliküler Ünite"
+    },
+    "t22": {
+      "de": "Eine natürliche Gruppierung von 1 bis 4 Haaren. Bei der Transplantation werden ganze Einheiten verpflanzt.",
+      "en": "A natural grouping of 1 to 4 hairs. Transplantation moves whole follicular units.",
+      "fr": "Un regroupement naturel de 1 à 4 cheveux. La greffe déplace des unités folliculaires entières.",
+      "nl": "Een natuurlijke groepering van 1 tot 4 haren. Bij transplantatie worden hele folliculaire eenheden verplaatst.",
+      "it": "Un raggruppamento naturale di 1-4 capelli. Il trapianto sposta intere unità follicolari.",
+      "tr": "1 ila 4 saç telinin doğal bir gruplanmasıdır. Nakil sırasında tüm foliküler üniteler taşınır."
+    },
+    "t23": {
+      "de": "FUE",
+      "en": "FUE",
+      "fr": "FUE",
+      "nl": "FUE",
+      "it": "FUE",
+      "tr": "FUE"
+    },
+    "t24": {
+      "de": "Follikuläre Einheiten-Extraktion. Einzelne Follikel werden mit einem Mikro-Punch entnommen, ohne lineare Narbe.",
+      "en": "Follicular Unit Extraction. Individual units are extracted one by one with a micro-punch tool, leaving no linear scar."
+    },
+    "t25": {
+      "de": "FUT",
+      "en": "FUT",
+      "fr": "FUT",
+      "nl": "FUT",
+      "it": "FUT",
+      "tr": "FUT"
+    },
+    "t26": {
+      "de": "Ältere Streifenmethode: ein Hautstreifen wird entnommen und in Einheiten geteilt. Hinterlässt eine lineare Narbe.",
+      "en": "An older strip technique: a strip of scalp is removed and divided into units. Leaves a linear scar.",
+      "fr": "Une technique de bandelette plus ancienne : une bande de cuir chevelu est prélevée et divisée en unités. Laisse une cicatrice linéaire.",
+      "nl": "Een oudere striptechniek: een strook hoofdhuid wordt verwijderd en verdeeld in eenheden. Laat een lineair litteken achter.",
+      "it": "Una tecnica a striscia più datata: una striscia di cuoio capelluto viene rimossa e suddivisa in unità. Lascia una cicatrice lineare.",
+      "tr": "Daha eski bir şerit tekniğidir: saç derisinden bir şerit alınır ve ünitelere ayrılır. Doğrusal bir iz bırakır."
+    },
+    "t27": {
+      "de": "Graft",
+      "en": "Graft",
+      "fr": "Greffon",
+      "nl": "Graft",
+      "it": "Innesto",
+      "tr": "Greft"
+    },
+    "t28": {
+      "de": "Eine bei der Transplantation verwendete follikuläre Einheit, üblicherweise 1 bis 4 Haare.",
+      "en": "A follicular unit used in transplantation, typically containing 1 to 4 hairs.",
+      "fr": "Une unité folliculaire utilisée lors de la greffe, contenant généralement 1 à 4 cheveux.",
+      "nl": "Een folliculaire eenheid die bij transplantatie wordt gebruikt, meestal met 1 tot 4 haren.",
+      "it": "Un'unità follicolare utilizzata nel trapianto, che contiene tipicamente 1-4 capelli.",
+      "tr": "Nakilde kullanılan, genellikle 1 ila 4 saç teli içeren foliküler ünitedir."
+    },
+    "t29": {
+      "de": "Ludwig-Skala",
+      "en": "Ludwig scale",
+      "fr": "Échelle de Ludwig",
+      "nl": "Ludwig-schaal",
+      "it": "Scala di Ludwig",
+      "tr": "Ludwig Skalası"
+    },
+    "t30": {
+      "de": "Klassifikation für weiblichen Haarausfall, Grad I bis III nach Ausmaß der zentralen Ausdünnung.",
+      "en": "A classification system for female pattern hair loss, graded I to III based on central thinning.",
+      "fr": "Un système de classification pour la chute de cheveux féminine, gradué de I à III selon l'ampleur de l'amincissement central.",
+      "nl": "Een classificatiesysteem voor vrouwelijke haaruitval, gegradeerd van I tot III op basis van de mate van centrale verdunning.",
+      "it": "Un sistema di classificazione per la caduta dei capelli femminile, graduato da I a III in base al diradamento centrale.",
+      "tr": "Kadın tipi saç dökülmesi için merkezi incelme derecesine göre I ile III arasında derecelendirilen bir sınıflandırma sistemidir."
+    },
+    "t31": {
+      "de": "Mesotherapie",
+      "en": "Mesotherapy",
+      "fr": "Mésothérapie",
+      "nl": "Mesotherapie",
+      "it": "Mesoterapia",
+      "tr": "Mezoterapi"
+    },
+    "t32": {
+      "de": "Mikroinjektionen aus Vitaminen, Mineralien und Wachstumsfaktoren zur Unterstützung der Follikelgesundheit.",
+      "en": "Micro-injections of vitamins, minerals, and growth factors to support follicle health."
+    },
+    "t33": {
+      "de": "Miniaturisierung",
+      "en": "Miniaturisation",
+      "fr": "Miniaturisation",
+      "nl": "Miniaturisatie",
+      "it": "Miniaturizzazione",
+      "tr": "Minyatürleşme"
+    },
+    "t34": {
+      "de": "Das fortschreitende Schrumpfen der Follikel durch DHT, bis der Follikel schließlich ruht.",
+      "en": "The progressive shrinking of follicles caused by DHT, until the follicle becomes dormant.",
+      "fr": "Le rétrécissement progressif des follicules causé par la DHT, jusqu'à ce que le follicule devienne dormant.",
+      "nl": "De progressieve verkleining van follikels door DHT, totdat de follikel uiteindelijk inactief wordt.",
+      "it": "Il progressivo restringimento dei follicoli causato dal DHT, fino a quando il follicolo diventa dormiente.",
+      "tr": "DHT'nin neden olduğu, folikülün sonunda uykuya geçmesine kadar süren kademeli küçülmedir."
+    },
+    "t35": {
+      "de": "Minoxidil",
+      "en": "Minoxidil",
+      "fr": "Minoxidil",
+      "nl": "Minoxidil",
+      "it": "Minoxidil",
+      "tr": "Minoksidil"
+    },
+    "t36": {
+      "de": "Topisches oder orales Mittel, das die Anagen-Phase verlängert und die Durchblutung verbessert. Blockiert kein DHT.",
+      "en": "A topical or oral medication that extends the anagen phase and improves blood flow. Doesn't block DHT."
+    },
+    "t37": {
+      "de": "Norwood-Hamilton-Skala",
+      "en": "Norwood-Hamilton scale",
+      "fr": "Échelle de Norwood-Hamilton",
+      "nl": "Norwood-Hamilton-schaal",
+      "it": "Scala di Norwood-Hamilton",
+      "tr": "Norwood-Hamilton Skalası"
+    },
+    "t38": {
+      "de": "Klassifikation für männlichen Haarausfall, Grad I bis VII nach Muster und Ausmaß.",
+      "en": "A classification system for male pattern baldness, graded I to VII based on pattern and extent.",
+      "fr": "Un système de classification pour la calvitie masculine, gradué de I à VII selon le motif et l'étendue.",
+      "nl": "Een classificatiesysteem voor mannelijke kaalheid, gegradeerd van I tot VII op basis van patroon en omvang.",
+      "it": "Un sistema di classificazione per la calvizie maschile, graduato da I a VII in base al pattern e all'estensione.",
+      "tr": "Erkek tipi kellik için desen ve kapsama göre I ile VII arasında derecelendirilen bir sınıflandırma sistemidir."
+    },
+    "t39": {
+      "de": "PRP",
+      "en": "PRP",
+      "fr": "PRP",
+      "nl": "PRP",
+      "it": "PRP",
+      "tr": "PRP"
+    },
+    "t40": {
+      "de": "Plättchenreiches Plasma. Eigenes Blut wird zentrifugiert und in die Kopfhaut injiziert, um Follikelaktivität anzuregen.",
+      "en": "Platelet-Rich Plasma. The patient's own blood is centrifuged and injected into the scalp to stimulate follicle activity."
+    },
+    "t41": {
+      "de": "Empfängerbereich",
+      "en": "Recipient area",
+      "fr": "Zone receveuse",
+      "nl": "Ontvangstgebied",
+      "it": "Area ricevente",
+      "tr": "Alıcı Bölge"
+    },
+    "t42": {
+      "de": "Der ausgedünnte oder kahle Bereich der Kopfhaut, in den Grafts transplantiert werden.",
+      "en": "The thinning or bald area of the scalp into which grafts are transplanted.",
+      "fr": "La zone clairsemée ou chauve du cuir chevelu dans laquelle les greffons sont transplantés.",
+      "nl": "Het uitgedunde of kale gebied van de hoofdhuid waarin grafts worden getransplanteerd.",
+      "it": "L'area diradata o calva del cuoio capelluto in cui vengono trapiantati gli innesti.",
+      "tr": "Greftlerin nakledildiği, seyrelmiş veya kel saç derisi bölgesi."
+    },
+    "t43": {
+      "de": "Saphir-FUE",
+      "en": "Sapphire FUE",
+      "fr": "FUE au saphir",
+      "nl": "Saffier-FUE",
+      "it": "Saphire-FUE",
+      "tr": "Safir FUE"
+    },
+    "t44": {
+      "de": "Fortgeschrittene FUE-Variante mit Saphirklingen für kleinere, präzisere Kanäle und schnellere Heilung.",
+      "en": "An advanced version of FUE using sapphire blades for smaller, more precise channels and faster healing."
+    },
+    "t45": {
+      "de": "Schock-Verlust",
+      "en": "Shock loss",
+      "fr": "Chute de choc",
+      "nl": "Shockverlies",
+      "it": "Shock loss",
+      "tr": "Şok Dökülmesi"
+    },
+    "t46": {
+      "de": "Vorübergehender Ausfall des transplantierten Haares 2 bis 4 Wochen nach dem Eingriff. Die Follikel überleben, die Schäfte wachsen nach.",
+      "en": "Temporary shedding of transplanted hair 2 to 4 weeks after a transplant. The follicles survive; the shafts regrow."
+    },
+    "t47": {
+      "de": "Telogen",
+      "en": "Telogen",
+      "fr": "Télogène",
+      "nl": "Telogeen",
+      "it": "Telogen",
+      "tr": "Telogen"
+    },
+    "t48": {
+      "de": "Die Ruhephase des Haarzyklus, rund 2 bis 3 Monate. Das Haar bleibt, wächst aber nicht mehr.",
+      "en": "The resting phase of the hair cycle, lasting 2 to 3 months. Hair remains in place but doesn't grow."
+    },
+    "t49": {
+      "de": "Telogenes Effluvium",
+      "en": "Telogen effluvium",
+      "fr": "Effluvium télogène",
+      "nl": "Telogeen effluvium",
+      "it": "Effluvio telogen",
+      "tr": "Telogen Effluvium"
+    },
+    "t50": {
+      "de": "Vorübergehender diffuser Haarausfall, wenn viele Follikel gleichzeitig in die Telogen-Phase eintreten.",
+      "en": "A temporary condition causing diffuse shedding when many follicles simultaneously enter telogen."
+    },
+    "t51": {
+      "de": "Trichoskopie",
+      "en": "Trichoscopy",
+      "fr": "Trichoscopie",
+      "nl": "Trichoscopie",
+      "it": "Tricoscopia",
+      "tr": "Trikoskopi"
+    },
+    "t52": {
+      "de": "Nicht-invasive Technik mit einem Dermatoskop zur Beurteilung von Follikeldichte, Miniaturisierung und Kopfhautzustand.",
+      "en": "A non-invasive technique using a dermatoscope to assess follicle density, miniaturisation, and scalp condition.",
+      "fr": "Une technique non invasive utilisant un dermatoscope pour évaluer la densité folliculaire, la miniaturisation et l'état du cuir chevelu.",
+      "nl": "Een niet-invasieve techniek met een dermatoscoop om follikeldichtheid, miniaturisatie en hoofdhuidconditie te beoordelen.",
+      "it": "Una tecnica non invasiva che utilizza un dermatoscopio per valutare la densità follicolare, la miniaturizzazione e le condizioni del cuoio capelluto.",
+      "tr": "Folikül yoğunluğunu, minyatürleşmeyi ve saç derisi durumunu değerlendirmek için dermatoskop kullanan invaziv olmayan bir tekniktir."
+    },
+    "t53": {
+      "de": "Vertex / Oberkopf",
+      "en": "Vertex / Crown",
+      "fr": "Vertex / Sommet",
+      "nl": "Vertex / Kruin",
+      "it": "Vertice / Sommità",
+      "tr": "Vertex / Tepe"
+    },
+    "t54": {
+      "de": "Der obere Hinterkopfbereich, oft einer der zuletzt betroffenen Bereiche bei männlichem Haarausfall.",
+      "en": "The top-rear area of the scalp, often one of the later areas affected in male pattern baldness.",
+      "fr": "La zone supérieure-arrière du cuir chevelu, souvent l'une des dernières zones touchées par la calvitie masculine.",
+      "nl": "Het bovenste achterste gebied van de hoofdhuid, vaak een van de laatste gebieden die worden aangetast bij mannelijke kaalheid.",
+      "it": "L'area superiore-posteriore del cuoio capelluto, spesso una delle ultime aree colpite dalla calvizie maschile.",
+      "tr": "Saç derisinin üst-arka bölgesi, erkek tipi kellikte genellikle en son etkilenen alanlardan biridir."
+    },
+    "t55": {
+      "de": "Kostenlose Beratung sichern",
+      "en": "Get your free consultation",
+      "fr": "Obtenez votre consultation gratuite",
+      "nl": "Vraag uw gratis consult aan",
+      "it": "Richiedi il tuo consulto gratuito",
+      "tr": "Ücretsiz Danışmanızı Alın"
+    },
+    "t56": {
+      "de": "Kostenlose Beratung",
+      "en": "Free Consultation",
+      "fr": "Consultation gratuite",
+      "nl": "Gratis consult",
+      "it": "Consulto gratuito",
+      "tr": "Ücretsiz Danışma"
+    },
+    "t57": {
+      "de": "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.",
+      "en": "Fill in the form and we'll get back to you within 24 hours.",
+      "fr": "Remplissez le formulaire, nous vous répondrons sous 24 heures.",
+      "nl": "Vul het formulier in, we nemen binnen 24 uur contact met u op.",
+      "it": "Compila il modulo, ti risponderemo entro 24 ore.",
+      "tr": "Formu doldurun, 24 saat içinde size dönüş yapalım."
+    },
+    "t58": {
+      "de": "Info",
+      "en": "Info",
+      "fr": "Infos",
+      "nl": "Info",
+      "it": "Info",
+      "tr": "Bilgi"
+    },
+    "t59": {
+      "de": "Bedarf",
+      "en": "Needs",
+      "fr": "Besoins",
+      "nl": "Behoefte",
+      "it": "Esigenze",
+      "tr": "İhtiyaçlar"
+    },
+    "t60": {
+      "de": "Fotos",
+      "en": "Photos",
+      "fr": "Photos",
+      "nl": "Foto's",
+      "it": "Foto",
+      "tr": "Fotoğraflar"
+    },
+    "t61": {
+      "de": "Holen Sie sich Ihre kostenlose Haaranalyse",
+      "en": "Get Your Free Hair Analysis",
+      "fr": "Obtenez votre analyse capillaire gratuite",
+      "nl": "Krijg uw gratis haaranalyse",
+      "it": "Ottieni la tua analisi gratuita dei capelli",
+      "tr": "Ücretsiz Saç Analizinizi Alın"
+    },
+    "t62": {
+      "de": "Unser Expertenteam meldet sich innerhalb von 24 Stunden",
+      "en": "Our expert team will contact you within 24 hours",
+      "fr": "Notre équipe d'experts vous contactera sous 24 heures",
+      "nl": "Ons expertteam neemt binnen 24 uur contact met u op",
+      "it": "Il nostro team di esperti ti contatterà entro 24 ore",
+      "tr": "Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir"
+    },
+    "t63": {
+      "de": "Vollständiger Name *",
+      "en": "Full Name *",
+      "fr": "Nom complet *",
+      "nl": "Volledige naam *",
+      "it": "Nome completo *",
+      "tr": "Ad Soyad *"
+    },
+    "t64": {
+      "de": "E-Mail *",
+      "en": "Email *",
+      "fr": "E-mail *",
+      "nl": "E-mail *",
+      "it": "E-mail *",
+      "tr": "E-posta *"
+    },
+    "t65": {
+      "de": "Land *",
+      "en": "Country *",
+      "fr": "Pays *",
+      "nl": "Land *",
+      "it": "Paese *",
+      "tr": "Ülke *"
+    },
+    "t66": {
+      "de": "Telefon *",
+      "en": "Phone *",
+      "fr": "Téléphone *",
+      "nl": "Telefoon *",
+      "it": "Telefono *",
+      "tr": "Telefon *"
+    },
+    "t67": {
+      "de": "Weiter",
+      "en": "Continue",
+      "fr": "Continuer",
+      "nl": "Doorgaan",
+      "it": "Continua",
+      "tr": "Devam Et"
+    },
+    "t68": {
+      "de": "Ihr Geschlecht *",
+      "en": "Your Gender *",
+      "fr": "Votre sexe *",
+      "nl": "Uw geslacht *",
+      "it": "Il tuo genere *",
+      "tr": "Cinsiyetiniz *"
+    },
+    "t69": {
+      "de": "Männlich",
+      "en": "Male",
+      "fr": "Homme",
+      "nl": "Man",
+      "it": "Uomo",
+      "tr": "Erkek"
+    },
+    "t70": {
+      "de": "Weiblich",
+      "en": "Female",
+      "fr": "Femme",
+      "nl": "Vrouw",
+      "it": "Donna",
+      "tr": "Kadın"
+    },
+    "t71": {
+      "de": "Verfahren, die Sie interessieren *",
+      "en": "Procedures You're Interested In *",
+      "fr": "Interventions qui vous intéressent *",
+      "nl": "Ingrepen waarin u geïnteresseerd bent *",
+      "it": "Procedure di tuo interesse *",
+      "tr": "İlgilendiğiniz İşlemler *"
+    },
+    "t72": {
+      "de": "Haartransplantation",
+      "en": "Hair Transplant",
+      "fr": "Greffe de cheveux",
+      "nl": "Haartransplantatie",
+      "it": "Trapianto di capelli",
+      "tr": "Saç Ekimi"
+    },
+    "t73": {
+      "de": "Barttransplantation",
+      "en": "Beard Transplant",
+      "fr": "Greffe de barbe",
+      "nl": "Baardtransplantatie",
+      "it": "Trapianto di barba",
+      "tr": "Sakal Ekimi"
+    },
+    "t74": {
+      "de": "Augenbrauentransplantation",
+      "en": "Eyebrow Transplant",
+      "fr": "Greffe de sourcils",
+      "nl": "Wenkbrauwtransplantatie",
+      "it": "Trapianto di sopracciglia",
+      "tr": "Kaş Ekimi"
+    },
+    "t75": {
+      "de": "Unterstützende Therapien",
+      "en": "Supporting Therapies",
+      "fr": "Thérapies complémentaires",
+      "nl": "Ondersteunende therapieën",
+      "it": "Terapie di supporto",
+      "tr": "Destekleyici Tedaviler"
+    },
+    "t76": {
+      "de": "PRP-Therapie",
+      "en": "PRP Therapy",
+      "fr": "Thérapie PRP",
+      "nl": "PRP-therapie",
+      "it": "Terapia PRP",
+      "tr": "PRP Tedavisi"
+    },
+    "t77": {
+      "de": "Stammzelltherapie",
+      "en": "Stem Cell Therapy",
+      "fr": "Thérapie par cellules souches",
+      "nl": "Stamceltherapie",
+      "it": "Terapia con cellule staminali",
+      "tr": "Kök Hücre Tedavisi"
+    },
+    "t78": {
+      "de": "Exosom-Therapie",
+      "en": "Exosome Therapy",
+      "fr": "Thérapie par exosomes",
+      "nl": "Exosoomtherapie",
+      "it": "Terapia con esosomi",
+      "tr": "Ekzozom Tedavisi"
+    },
+    "t79": {
+      "de": "Hyperbarer Sauerstoff",
+      "en": "Hyperbaric Oxygen",
+      "fr": "Oxygénothérapie hyperbare",
+      "nl": "Hyperbare zuurstoftherapie",
+      "it": "Ossigenoterapia iperbarica",
+      "tr": "Hiperbarik Oksijen"
+    },
+    "t80": {
+      "de": "Wann planen Sie den Eingriff?",
+      "en": "When Are You Planning the Procedure?",
+      "fr": "Quand prévoyez-vous l'intervention ?",
+      "nl": "Wanneer plant u de ingreep?",
+      "it": "Quando prevedi l'intervento?",
+      "tr": "İşlemi Ne Zaman Planlıyorsunuz?"
+    },
+    "t81": {
+      "de": "Diesen Monat",
+      "en": "This month",
+      "fr": "Ce mois-ci",
+      "nl": "Deze maand",
+      "it": "Questo mese",
+      "tr": "Bu Ay"
+    },
+    "t82": {
+      "de": "In 1–3 Monaten",
+      "en": "In 1–3 months",
+      "fr": "Dans 1 à 3 mois",
+      "nl": "Over 1–3 maanden",
+      "it": "Tra 1 e 3 mesi",
+      "tr": "1-3 Ay İçinde"
+    },
+    "t83": {
+      "de": "In 3–6 Monaten",
+      "en": "In 3–6 months",
+      "fr": "Dans 3 à 6 mois",
+      "nl": "Over 3–6 maanden",
+      "it": "Tra 3 e 6 mesi",
+      "tr": "3-6 Ay İçinde"
+    },
+    "t84": {
+      "de": "In 6+ Monaten",
+      "en": "In 6+ months",
+      "fr": "Dans 6+ mois",
+      "nl": "Over 6+ maanden",
+      "it": "Tra 6+ mesi",
+      "tr": "6+ Ay İçinde"
+    },
+    "t85": {
+      "de": "Nur recherchieren",
+      "en": "Just researching",
+      "fr": "Je me renseigne seulement",
+      "nl": "Alleen aan het oriënteren",
+      "it": "Sto solo informandomi",
+      "tr": "Sadece Araştırıyorum"
+    },
+    "t86": {
+      "de": "Zusätzliche Notizen (optional)",
+      "en": "Additional Notes (Optional)",
+      "fr": "Remarques supplémentaires (facultatif)",
+      "nl": "Aanvullende opmerkingen (optioneel)",
+      "it": "Note aggiuntive (facoltativo)",
+      "tr": "Ek Notlar (İsteğe Bağlı)"
+    },
+    "t87": {
+      "de": "Zurück",
+      "en": "Back",
+      "fr": "Retour",
+      "nl": "Terug",
+      "it": "Indietro",
+      "tr": "Geri"
+    },
+    "t88": {
+      "de": "Weiter",
+      "en": "Continue",
+      "fr": "Continuer",
+      "nl": "Doorgaan",
+      "it": "Continua",
+      "tr": "Devam Et"
+    },
+    "t89": {
+      "de": "📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.",
+      "en": "📸 Photos are optional. Our experts will contact you either way.",
+      "fr": "📸 Les photos sont facultatives. Nos experts vous contacteront dans tous les cas.",
+      "nl": "📸 Foto's zijn optioneel. Onze experts nemen sowieso contact met u op.",
+      "it": "📸 Le foto sono facoltative. I nostri esperti ti contatteranno comunque.",
+      "tr": "📸 Fotoğraflar isteğe bağlıdır. Uzmanlarımız her durumda sizinle iletişime geçecektir."
+    },
+    "t90": {
+      "de": "Vorne",
+      "en": "Front",
+      "fr": "Face avant",
+      "nl": "Voorkant",
+      "it": "Fronte",
+      "tr": "Ön"
+    },
+    "t91": {
+      "de": "Gesicht sichtbar",
+      "en": "Face visible",
+      "fr": "Visage visible",
+      "nl": "Gezicht zichtbaar",
+      "it": "Volto visibile",
+      "tr": "Yüz Görünür"
+    },
+    "t92": {
+      "de": "Oben",
+      "en": "Top",
+      "fr": "Dessus",
+      "nl": "Bovenkant",
+      "it": "Sopra",
+      "tr": "Üst"
+    },
+    "t93": {
+      "de": "Von oben",
+      "en": "From above",
+      "fr": "Vue de dessus",
+      "nl": "Van bovenaf",
+      "it": "Dall'alto",
+      "tr": "Yukarıdan"
+    },
+    "t94": {
+      "de": "Seite",
+      "en": "Side",
+      "fr": "Profil",
+      "nl": "Zijkant",
+      "it": "Lato",
+      "tr": "Yan"
+    },
+    "t95": {
+      "de": "Profil",
+      "en": "Profile",
+      "fr": "Profil",
+      "nl": "Profiel",
+      "it": "Profilo",
+      "tr": "Profil"
+    },
+    "t96": {
+      "de": "Spender",
+      "en": "Donor",
+      "fr": "Donneuse",
+      "nl": "Donor",
+      "it": "Donatrice",
+      "tr": "Donör"
+    },
+    "t97": {
+      "de": "Hinterkopf",
+      "en": "Back of head",
+      "fr": "Arrière de la tête",
+      "nl": "Achterhoofd",
+      "it": "Retro della testa",
+      "tr": "Baş Arkası"
+    },
+    "t98": {
+      "de": "Fotos hochgeladen",
+      "en": "photos uploaded",
+      "fr": "photos téléchargées",
+      "nl": "foto's geüpload",
+      "it": "foto caricate",
+      "tr": "fotoğraf yüklendi"
+    },
+    "t99": {
+      "de": "Rabattgutschein (optional)",
+      "en": "Discount Coupon (Optional)",
+      "fr": "Code de réduction (facultatif)",
+      "nl": "Kortingscode (optioneel)",
+      "it": "Codice sconto (facoltativo)",
+      "tr": "İndirim Kuponu (İsteğe Bağlı)"
+    },
+    "t100": {
+      "de": "Ich möchte über Aktionen und Angebote informiert werden.",
+      "en": "I'd like to be informed about promotions and offers.",
+      "fr": "Je souhaite être informé(e) des promotions et offres.",
+      "nl": "Ik wil op de hoogte worden gehouden van acties en aanbiedingen.",
+      "it": "Desidero essere informato/a su promozioni e offerte.",
+      "tr": "Kampanyalar ve fırsatlar hakkında bilgilendirilmek istiyorum."
+    },
+    "t101": {
+      "de": "🇪🇺 DSGVO · Ihre Daten sind geschützt",
+      "en": "🇪🇺 GDPR · Your data is protected",
+      "fr": "🇪🇺 RGPD · Vos données sont protégées",
+      "nl": "🇪🇺 AVG · Uw gegevens zijn beschermd",
+      "it": "🇪🇺 GDPR · I tuoi dati sono protetti",
+      "tr": "🇪🇺 GDPR · Verileriniz Korunmaktadır"
+    },
+    "t102": {
+      "de": "Zurück",
+      "en": "Back",
+      "fr": "Retour",
+      "nl": "Terug",
+      "it": "Indietro",
+      "tr": "Geri"
+    },
+    "t103": {
+      "de": "Absenden",
+      "en": "Submit",
+      "fr": "Envoyer",
+      "nl": "Versturen",
+      "it": "Invia",
+      "tr": "Gönder"
+    },
+    "t104": {
+      "de": "Vielen Dank!",
+      "en": "Thank You!",
+      "fr": "Merci !",
+      "nl": "Bedankt!",
+      "it": "Grazie!",
+      "tr": "Teşekkürler!"
+    },
+    "t105": {
+      "de": "Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+      "en": "We've received your request. Our team will get back to you within 24 hours.",
+      "fr": "Nous avons bien reçu votre demande. Notre équipe vous recontactera sous 24 heures.",
+      "nl": "We hebben uw aanvraag ontvangen. Ons team neemt binnen 24 uur contact met u op.",
+      "it": "Abbiamo ricevuto la tua richiesta. Il nostro team ti risponderà entro 24 ore.",
+      "tr": "Talebinizi aldık. Ekibimiz 24 saat içinde sizinle iletişime geçecektir."
     }
   },
   "seo": {
@@ -206,5 +2386,231 @@
     },
     "shareImage": "",
     "noindex": false
+  },
+  "hpHero": {
+    "t1": {
+      "de": "Wissen &amp; Aufklärung",
+      "en": "Knowledge &amp; education",
+      "fr": "Savoir et sensibilisation",
+      "nl": "Kennis & voorlichting",
+      "it": "Conoscenza ed educazione",
+      "tr": "Bilgi ve Farkındalık"
+    },
+    "t2": {
+      "de": "Was ist Haarausfall",
+      "en": "What is hair loss",
+      "fr": "Qu'est-ce que la chute de cheveux",
+      "nl": "Wat is haaruitval",
+      "it": "Cos'è la caduta dei capelli",
+      "tr": "Saç Dökülmesi Nedir"
+    },
+    "t3": {
+      "de": "Definition, Zahlen, Wachstumszyklus",
+      "en": "Definition, stats, growth cycle",
+      "fr": "Définition, chiffres, cycle de croissance",
+      "nl": "Definitie, cijfers, groeicyclus",
+      "it": "Definizione, dati, ciclo di crescita",
+      "tr": "Tanım, İstatistikler, Büyüme Döngüsü"
+    },
+    "t4": {
+      "de": "Ursachen",
+      "en": "Causes",
+      "fr": "Causes",
+      "nl": "Oorzaken",
+      "it": "Cause",
+      "tr": "Nedenler"
+    },
+    "t5": {
+      "de": "Genetik, DHT, Hormone, Stress",
+      "en": "Genetics, DHT, hormones, stress",
+      "fr": "Génétique, DHT, hormones, stress",
+      "nl": "Genetica, DHT, hormonen, stress",
+      "it": "Genetica, DHT, ormoni, stress",
+      "tr": "Genetik, DHT, Hormonlar, Stres"
+    },
+    "t6": {
+      "de": "Arten",
+      "en": "Types",
+      "fr": "Types",
+      "nl": "Soorten",
+      "it": "Tipi",
+      "tr": "Türler"
+    },
+    "t7": {
+      "de": "Androgenetisch, areata und mehr",
+      "en": "Androgenetic, areata, and more",
+      "fr": "Androgénétique, areata et plus",
+      "nl": "Androgenetisch, areata en meer",
+      "it": "Androgenetica, areata e altro",
+      "tr": "Androgenetik, Areata ve Daha Fazlası"
+    },
+    "t8": {
+      "de": "Diagnose",
+      "en": "Diagnosis",
+      "fr": "Diagnostic",
+      "nl": "Diagnose",
+      "it": "Diagnosi",
+      "tr": "Teşhis"
+    },
+    "t9": {
+      "de": "Trichoskopie, Zugtest, Bluttests",
+      "en": "Trichoscopy, pull test, blood tests",
+      "fr": "Trichoscopie, test de traction, analyses de sang",
+      "nl": "Trichoscopie, trektest, bloedonderzoek",
+      "it": "Tricoscopia, pull test, esami del sangue",
+      "tr": "Trikoskopi, Çekme Testi, Kan Testleri"
+    },
+    "t10": {
+      "de": "Behandlung",
+      "en": "Treatment",
+      "fr": "Traitement",
+      "nl": "Behandeling",
+      "it": "Trattamento",
+      "tr": "Tedavi"
+    },
+    "t11": {
+      "de": "Von Minoxidil bis Transplantation",
+      "en": "From minoxidil to transplantation",
+      "fr": "Du minoxidil à la greffe",
+      "nl": "Van minoxidil tot transplantatie",
+      "it": "Dal minoxidil al trapianto",
+      "tr": "Minoksidilden Saç Ekimine"
+    },
+    "t12": {
+      "de": "Transplantation",
+      "en": "Transplantation",
+      "fr": "Greffe",
+      "nl": "Transplantatie",
+      "it": "Trapianto",
+      "tr": "Saç Ekimi"
+    },
+    "t13": {
+      "de": "FUE, Saphir-FUE und DHI im Vergleich",
+      "en": "FUE, Sapphire FUE, and DHI compared",
+      "fr": "FUE, Saphir-FUE et DHI comparés",
+      "nl": "FUE, Saffier-FUE en DHI vergeleken",
+      "it": "FUE, Saphire-FUE e DHI a confronto",
+      "tr": "FUE, Safir FUE ve DHI Karşılaştırması"
+    },
+    "t14": {
+      "de": "Genesung",
+      "en": "Recovery",
+      "fr": "Récupération",
+      "nl": "Herstel",
+      "it": "Recupero",
+      "tr": "İyileşme"
+    },
+    "t15": {
+      "de": "Zeitstrahl &amp; Nachsorgeregeln",
+      "en": "Timeline &amp; aftercare rules",
+      "fr": "Chronologie et règles de suivi",
+      "nl": "Tijdlijn & nazorgregels",
+      "it": "Cronologia e regole di assistenza post-operatoria",
+      "tr": "Zaman Çizelgesi ve Bakım Kuralları"
+    },
+    "t16": {
+      "de": "Vorher-Nachher",
+      "en": "Before &amp; after",
+      "fr": "Avant/après",
+      "nl": "Voor en na",
+      "it": "Prima e dopo",
+      "tr": "Öncesi ve Sonrası"
+    },
+    "t17": {
+      "de": "Was pro Monat zu erwarten ist",
+      "en": "What to expect each month",
+      "fr": "À quoi s'attendre chaque mois",
+      "nl": "Wat u elke maand kunt verwachten",
+      "it": "Cosa aspettarsi ogni mese",
+      "tr": "Her Ay Neler Beklenmeli"
+    },
+    "t18": {
+      "de": "Glossar",
+      "en": "Glossary",
+      "fr": "Glossaire",
+      "nl": "Woordenlijst",
+      "it": "Glossario",
+      "tr": "Sözlük"
+    },
+    "t19": {
+      "de": "Fachbegriffe einfach erklärt",
+      "en": "Terms explained simply",
+      "fr": "Termes techniques expliqués simplement",
+      "nl": "Vaktermen eenvoudig uitgelegd",
+      "it": "Termini tecnici spiegati semplicemente",
+      "tr": "Teknik Terimler Basitçe Açıklandı"
+    },
+    "t20": {
+      "de": "Was ist Haarausfall",
+      "en": "What is hair loss",
+      "fr": "Qu'est-ce que la chute de cheveux",
+      "nl": "Wat is haaruitval",
+      "it": "Cos'è la caduta dei capelli",
+      "tr": "Saç Dökülmesi Nedir"
+    },
+    "t21": {
+      "de": "Ursachen",
+      "en": "Causes",
+      "fr": "Causes",
+      "nl": "Oorzaken",
+      "it": "Cause",
+      "tr": "Nedenler"
+    },
+    "t22": {
+      "de": "Arten",
+      "en": "Types",
+      "fr": "Types",
+      "nl": "Soorten",
+      "it": "Tipi",
+      "tr": "Türler"
+    },
+    "t23": {
+      "de": "Diagnose",
+      "en": "Diagnosis",
+      "fr": "Diagnostic",
+      "nl": "Diagnose",
+      "it": "Diagnosi",
+      "tr": "Teşhis"
+    },
+    "t24": {
+      "de": "Behandlung",
+      "en": "Treatment",
+      "fr": "Traitement",
+      "nl": "Behandeling",
+      "it": "Trattamento",
+      "tr": "Tedavi"
+    },
+    "t25": {
+      "de": "Transplantation",
+      "en": "Transplantation",
+      "fr": "Greffe",
+      "nl": "Transplantatie",
+      "it": "Trapianto",
+      "tr": "Saç Ekimi"
+    },
+    "t26": {
+      "de": "Genesung",
+      "en": "Recovery",
+      "fr": "Récupération",
+      "nl": "Herstel",
+      "it": "Recupero",
+      "tr": "İyileşme"
+    },
+    "t27": {
+      "de": "Vorher-Nachher",
+      "en": "Before &amp; after",
+      "fr": "Avant/après",
+      "nl": "Voor en na",
+      "it": "Prima e dopo",
+      "tr": "Öncesi ve Sonrası"
+    },
+    "t28": {
+      "de": "Glossar",
+      "en": "Glossary",
+      "fr": "Glossaire",
+      "nl": "Woordenlijst",
+      "it": "Glossario",
+      "tr": "Sözlük"
+    }
   }
 }

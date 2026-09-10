@@ -33,6 +33,246 @@
       "nl": "Apex Beauty past drie erkende transplantatietechnieken toe, gekozen op basis van het gebied, het aantal grafts en het gewenste detailniveau.",
       "it": "Apex Beauty esegue tre tecniche di trapianto riconosciute, scelte in base all'area, al numero di innesti e al livello di dettaglio desiderato.",
       "tr": "Apex Beauty, bölgeye, greft sayısına ve istenen detay düzeyine göre seçilen üç kabul görmüş nakil tekniği uygular."
+    },
+    "t1": {
+      "de": "Die drei wichtigsten Techniken",
+      "en": "The three main techniques",
+      "fr": "Les trois principales techniques",
+      "nl": "De drie belangrijkste technieken",
+      "it": "Le tre tecniche principali",
+      "tr": "Üç Ana Teknik"
+    },
+    "t2": {
+      "de": "FUE",
+      "en": "FUE",
+      "fr": "FUE",
+      "nl": "FUE",
+      "it": "FUE",
+      "tr": "FUE"
+    },
+    "t3": {
+      "de": "Follikuläre Einheiten (1 bis 4 Haare) werden einzeln mit einem Mikro-Punch-Werkzeug entnommen. Kein linearer Schnitt, keine sichtbare Narbe. 5 bis 8 Stunden je nach Graft-Anzahl.",
+      "en": "Follicular units (1 to 4 hairs) are extracted one by one with a micro-punch tool. No linear incision, no visible scar. 5 to 8 hours depending on graft count.",
+      "fr": "Les unités folliculaires (1 à 4 cheveux) sont extraites une à une à l'aide d'un micro-punch. Pas d'incision linéaire, pas de cicatrice visible. 5 à 8 heures selon le nombre de greffons.",
+      "nl": "Folliculaire eenheden (1 tot 4 haren) worden één voor één geëxtraheerd met een micro-punchtool. Geen lineaire incisie, geen zichtbaar litteken. 5 tot 8 uur, afhankelijk van het aantal grafts.",
+      "it": "Le unità follicolari (1-4 capelli) vengono estratte una per una con uno strumento micro-punch. Nessuna incisione lineare, nessuna cicatrice visibile. 5-8 ore a seconda del numero di innesti.",
+      "tr": "Foliküler üniteler (1 ila 4 saç teli) mikro-punch aracıyla tek tek çıkarılır. Doğrusal kesi yoktur, görünür iz kalmaz. Greft sayısına bağlı olarak 5 ila 8 saat sürer."
+    },
+    "t4": {
+      "de": "Meistgenutzt in Istanbul",
+      "en": "Most used in Istanbul",
+      "fr": "La plus utilisée à Istanbul",
+      "nl": "Meest gebruikt in Istanboel",
+      "it": "La più utilizzata a Istanbul",
+      "tr": "İstanbul'da En Çok Kullanılan"
+    },
+    "t5": {
+      "de": "Saphir-FUE",
+      "en": "Sapphire FUE",
+      "fr": "FUE au saphir",
+      "nl": "Saffier-FUE",
+      "it": "Saphire-FUE",
+      "tr": "Safir FUE"
+    },
+    "t6": {
+      "de": "Kanäle werden mit Saphirklingen statt Stahl geöffnet: kleinere, präzisere Schnitte, schnellere Heilung, höhere Dichte pro cm² und geringeres Risiko für Verkrustung.",
+      "en": "Channels are opened with sapphire blades instead of steel: smaller, more precise incisions, faster healing, higher density per cm², and lower risk of scabbing.",
+      "fr": "Les canaux sont ouverts avec des lames en saphir plutôt qu'en acier : incisions plus petites et plus précises, guérison plus rapide, densité plus élevée par cm² et risque réduit de croûtes.",
+      "nl": "Kanalen worden geopend met saffieren lemmeten in plaats van staal: kleinere, preciezere incisies, sneller herstel, hogere dichtheid per cm² en lager risico op korstvorming.",
+      "it": "I canali vengono aperti con lame di zaffiro anziché in acciaio: incisioni più piccole e precise, guarigione più rapida, maggiore densità per cm² e minor rischio di crostosità.",
+      "tr": "Kanallar çelik yerine safir bıçaklarla açılır: daha küçük, daha hassas kesiler, daha hızlı iyileşme, cm² başına daha yüksek yoğunluk ve daha düşük kabuklanma riski."
+    },
+    "t7": {
+      "de": "DHI",
+      "en": "DHI",
+      "fr": "DHI",
+      "nl": "DHI",
+      "it": "DHI",
+      "tr": "DHI"
+    },
+    "t8": {
+      "de": "Follikel werden mit einem Choi Implanter Pen direkt implantiert, ohne separate Kanaleröffnung. Präzise Kontrolle über Winkel und Tiefe, ideal für den Haaransatz.",
+      "en": "Follicles are implanted directly using a Choi Implanter Pen, without opening separate channels first. Precise control over angle and depth, ideal for the hairline.",
+      "fr": "Les follicules sont implantés directement à l'aide d'un stylo implanteur Choi, sans ouverture préalable de canaux séparés. Contrôle précis de l'angle et de la profondeur, idéal pour la ligne capillaire.",
+      "nl": "Follikels worden direct geïmplanteerd met een Choi Implanter Pen, zonder eerst afzonderlijke kanalen te openen. Nauwkeurige controle over hoek en diepte, ideaal voor de haarlijn.",
+      "it": "I follicoli vengono impiantati direttamente con una penna Choi Implanter, senza aprire prima canali separati. Controllo preciso di angolo e profondità, ideale per l'attaccatura.",
+      "tr": "Foliküller, önce ayrı kanallar açılmadan doğrudan bir Choi İmplanter Kalemi ile yerleştirilir. Açı ve derinlik üzerinde hassas kontrol sağlar, saç çizgisi için idealdir."
+    },
+    "t9": {
+      "de": "Saphir-FUE oder DHI: der Vergleich",
+      "en": "Sapphire FUE vs. DHI: the comparison",
+      "fr": "FUE au saphir ou DHI : la comparaison",
+      "nl": "Saffier-FUE of DHI: de vergelijking",
+      "it": "Saphire-FUE o DHI: il confronto",
+      "tr": "Safir FUE mi DHI mi: Karşılaştırma"
+    },
+    "t10": {
+      "de": "Faktor",
+      "en": "Factor",
+      "fr": "Facteur",
+      "nl": "Factor",
+      "it": "Fattore",
+      "tr": "Faktör"
+    },
+    "t11": {
+      "de": "Saphir-FUE",
+      "en": "Sapphire FUE",
+      "fr": "FUE au saphir",
+      "nl": "Saffier-FUE",
+      "it": "Saphire-FUE",
+      "tr": "Safir FUE"
+    },
+    "t12": {
+      "de": "DHI",
+      "en": "DHI",
+      "fr": "DHI",
+      "nl": "DHI",
+      "it": "DHI",
+      "tr": "DHI"
+    },
+    "t13": {
+      "de": "Am besten für",
+      "en": "Best for",
+      "fr": "Idéal pour",
+      "nl": "Het beste voor",
+      "it": "Ideale per",
+      "tr": "En İyi Kullanım Alanı"
+    },
+    "t14": {
+      "de": "Große Flächen, hohe Graft-Zahlen",
+      "en": "Large areas, high graft counts",
+      "fr": "Grandes surfaces, nombre élevé de greffons",
+      "nl": "Grote gebieden, hoge graftaantallen",
+      "it": "Aree ampie, elevato numero di innesti",
+      "tr": "Geniş alanlar, yüksek greft sayıları"
+    },
+    "t15": {
+      "de": "Haaransatz, hohe Detailtreue, kleinere Flächen",
+      "en": "Frontal hairline, high detail, smaller areas",
+      "fr": "Ligne frontale, grande précision, petites surfaces",
+      "nl": "Voorste haarlijn, hoge precisie, kleinere gebieden",
+      "it": "Attaccatura frontale, alta precisione, aree più piccole",
+      "tr": "Ön saç çizgisi, yüksek detay, küçük alanlar"
+    },
+    "t16": {
+      "de": "Heilung",
+      "en": "Healing",
+      "fr": "Guérison",
+      "nl": "Genezing",
+      "it": "Guarigione",
+      "tr": "İyileşme"
+    },
+    "t17": {
+      "de": "Schnell (kleinere Schnitte)",
+      "en": "Fast (smaller incisions)",
+      "fr": "Rapide (incisions plus petites)",
+      "nl": "Snel (kleinere incisies)",
+      "it": "Veloce (incisioni più piccole)",
+      "tr": "Hızlı (daha küçük kesiler)"
+    },
+    "t18": {
+      "de": "Moderat (mehr Werkzeugdurchgänge)",
+      "en": "Moderate (more tool passes)",
+      "fr": "Modérée (davantage de passages d'outil)",
+      "nl": "Matig (meer instrumentbewegingen)",
+      "it": "Moderata (più passaggi dello strumento)",
+      "tr": "Orta (daha fazla alet geçişi)"
+    },
+    "t19": {
+      "de": "Präzision",
+      "en": "Precision",
+      "fr": "Précision",
+      "nl": "Precisie",
+      "it": "Precisione",
+      "tr": "Hassasiyet"
+    },
+    "t20": {
+      "de": "Hoch",
+      "en": "High",
+      "fr": "Élevée",
+      "nl": "Hoog",
+      "it": "Alta",
+      "tr": "Yüksek"
+    },
+    "t21": {
+      "de": "Sehr hoch (Winkel- und Tiefenkontrolle)",
+      "en": "Very high (angle and depth control)",
+      "fr": "Très élevée (contrôle de l'angle et de la profondeur)",
+      "nl": "Zeer hoog (hoek- en dieptecontrole)",
+      "it": "Molto alta (controllo di angolo e profondità)",
+      "tr": "Çok yüksek (açı ve derinlik kontrolü)"
+    },
+    "t22": {
+      "de": "Typische Sitzungsdauer",
+      "en": "Typical session length",
+      "fr": "Durée de séance typique",
+      "nl": "Typische sessieduur",
+      "it": "Durata tipica della seduta",
+      "tr": "Tipik Seans Süresi"
+    },
+    "t23": {
+      "de": "5 bis 8 Stunden",
+      "en": "5 to 8 hours",
+      "fr": "5 à 8 heures",
+      "nl": "5 tot 8 uur",
+      "it": "5-8 ore",
+      "tr": "5 ila 8 saat"
+    },
+    "t24": {
+      "de": "6 bis 10 Stunden",
+      "en": "6 to 10 hours",
+      "fr": "6 à 10 heures",
+      "nl": "6 tot 10 uur",
+      "it": "6-10 ore",
+      "tr": "6 ila 10 saat"
+    },
+    "t25": {
+      "de": "Relative Kosten",
+      "en": "Relative cost",
+      "fr": "Coût relatif",
+      "nl": "Relatieve kosten",
+      "it": "Costo relativo",
+      "tr": "Göreceli Maliyet"
+    },
+    "t26": {
+      "de": "Moderat",
+      "en": "Moderate",
+      "fr": "Modéré",
+      "nl": "Matig",
+      "it": "Moderato",
+      "tr": "Orta"
+    },
+    "t27": {
+      "de": "Höher",
+      "en": "Higher",
+      "fr": "Plus élevé",
+      "nl": "Hoger",
+      "it": "Più elevato",
+      "tr": "Daha Yüksek"
+    },
+    "t28": {
+      "de": "Kombinierbar?",
+      "en": "Can be combined?",
+      "fr": "Combinable ?",
+      "nl": "Combineerbaar?",
+      "it": "Combinabile?",
+      "tr": "Birlikte Kullanılabilir mi?"
+    },
+    "t29": {
+      "de": "Ja",
+      "en": "Yes",
+      "fr": "Oui",
+      "nl": "Ja",
+      "it": "Sì",
+      "tr": "Evet"
+    },
+    "t30": {
+      "de": "Ja, DHI für Ansatz + Saphir-FUE für Oberkopf ist gängig",
+      "en": "Yes, DHI for hairline + Sapphire FUE for crown is common",
+      "fr": "Oui, DHI pour la ligne frontale + FUE au saphir pour le sommet est courant",
+      "nl": "Ja, DHI voor de haarlijn + Saffier-FUE voor de kruin is gebruikelijk",
+      "it": "Sì, DHI per l'attaccatura + Saphire-FUE per il vertice è una combinazione comune",
+      "tr": "Evet, saç çizgisi için DHI + tepe için Safir FUE kombinasyonu yaygındır"
     }
   },
   "geeignet": {
@@ -51,6 +291,46 @@
       "nl": "Een gratis consult met hoofdhuidanalyse geeft een nauwkeurige, individuele inschatting.",
       "it": "Un consulto gratuito con analisi del cuoio capelluto fornisce una valutazione precisa e personalizzata.",
       "tr": "Saç derisi analizi içeren ücretsiz bir danışma, hassas ve kişiye özel bir değerlendirme sağlar."
+    },
+    "t1": {
+      "de": "Androgenetische Alopezie in einer stabilen Phase (der Ausfall hat sich verlangsamt oder stabilisiert).",
+      "en": "Androgenetic alopecia in a stable phase (loss has slowed or stabilised).",
+      "fr": "Alopécie androgénétique en phase stable (la chute a ralenti ou s'est stabilisée).",
+      "nl": "Androgenetische alopecia in een stabiele fase (het uitvallen is vertraagd of gestabiliseerd).",
+      "it": "Alopecia androgenetica in fase stabile (la caduta è rallentata o si è stabilizzata).",
+      "tr": "Stabil evrede androgenetik alopesi (dökülme yavaşlamış veya durmuş)."
+    },
+    "t2": {
+      "de": "Ausreichende Spenderdichte an Hinterkopf und Seiten.",
+      "en": "Adequate donor density at the back and sides of the scalp.",
+      "fr": "Densité donneuse suffisante à l'arrière et sur les côtés du cuir chevelu.",
+      "nl": "Voldoende donordichtheid aan achterhoofd en zijkanten.",
+      "it": "Densità donatrice adeguata sul retro e ai lati del cuoio capelluto.",
+      "tr": "Saç derisinin arka ve yan bölgelerinde yeterli donör yoğunluğu."
+    },
+    "t3": {
+      "de": "Realistische Erwartungen: eine Transplantation stellt Dichte wieder her, repliziert aber nicht die volle Haarfülle der Jugend.",
+      "en": "Realistic expectations: a transplant restores density but cannot replicate the full hair of early youth.",
+      "fr": "Attentes réalistes : une greffe restaure la densité mais ne peut pas reproduire la pleine chevelure de la jeunesse.",
+      "nl": "Realistische verwachtingen: een transplantatie herstelt dichtheid maar reproduceert niet de volledige haardracht van de jeugd.",
+      "it": "Aspettative realistiche: un trapianto ripristina la densità ma non può replicare la piena capigliatura giovanile.",
+      "tr": "Gerçekçi beklentiler: bir nakil yoğunluğu geri kazandırır ancak gençlik dönemindeki tam saç yoğunluğunu tekrar oluşturamaz."
+    },
+    "t4": {
+      "de": "Guter allgemeiner Gesundheitszustand, keine aktiven Infektionen oder unbehandelten Autoimmunerkrankungen.",
+      "en": "Good general health, no active infections or untreated autoimmune conditions.",
+      "fr": "Bon état de santé général, aucune infection active ni maladie auto-immune non traitée.",
+      "nl": "Goede algemene gezondheid, geen actieve infecties of onbehandelde auto-immuunaandoeningen.",
+      "it": "Buono stato di salute generale, nessuna infezione attiva o condizione autoimmune non trattata.",
+      "tr": "İyi genel sağlık durumu, aktif enfeksiyon veya tedavi edilmemiş otoimmün hastalık bulunmaması."
+    },
+    "t5": {
+      "de": "Frauen mit androgenetischer Alopezie können ebenfalls geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut reicht die stabile Spenderdichte jedoch oft nicht aus, eine fachärztliche Beurteilung ist essenziell.",
+      "en": "Women with androgenetic alopecia can also be suitable candidates. With diffuse hair loss across the entire scalp, stable donor density is often insufficient, so a specialist assessment is essential.",
+      "fr": "Les femmes atteintes d'alopécie androgénétique peuvent également être de bonnes candidates. En cas de chute de cheveux diffuse sur l'ensemble du cuir chevelu, la densité donneuse stable est souvent insuffisante, une évaluation par un spécialiste est donc essentielle.",
+      "nl": "Vrouwen met androgenetische alopecia kunnen ook geschikte kandidaten zijn. Bij diffuse haaruitval over de hele hoofdhuid is de stabiele donordichtheid vaak onvoldoende, dus een beoordeling door een specialist is essentieel.",
+      "it": "Anche le donne con alopecia androgenetica possono essere candidate idonee. In caso di caduta diffusa dei capelli su tutto il cuoio capelluto, la densità donatrice stabile è spesso insufficiente, quindi una valutazione specialistica è essenziale.",
+      "tr": "Androgenetik alopesisi olan kadınlar da uygun aday olabilir. Tüm saç derisinde yaygın saç dökülmesi durumunda kararlı donör yoğunluğu genellikle yetersiz kalır, bu nedenle uzman değerlendirmesi şarttır."
     }
   },
   "genesungService": {
@@ -69,6 +349,198 @@
       "nl": "De hersteltijd is net zo belangrijk als de ingreep zelf. Deze bepaalt de overleving van de grafts, de kwaliteit van de genezing en het eindresultaat.",
       "it": "Il periodo di recupero è importante quanto l'intervento stesso. Determina la sopravvivenza degli innesti, la qualità della guarigione e il risultato finale.",
       "tr": "İyileşme süreci, işlemin kendisi kadar önemlidir. Greft sağkalımını, iyileşme kalitesini ve nihai sonucu belirler."
+    },
+    "t1": {
+      "de": "Tag 1 bis 7",
+      "en": "Day 1 to 7",
+      "fr": "Jour 1 à 7",
+      "nl": "Dag 1 tot 7",
+      "it": "Giorno 1-7",
+      "tr": "1. ile 7. Gün"
+    },
+    "t2": {
+      "de": "Erste Heilung",
+      "en": "Initial healing",
+      "fr": "Cicatrisation initiale",
+      "nl": "Eerste genezing",
+      "it": "Guarigione iniziale",
+      "tr": "İlk İyileşme"
+    },
+    "t3": {
+      "de": "Kleine Krusten bilden sich, Rötung und leichte Schwellung um Stirn und Augen sind normal. Kopf erhöht schlafen, Kopfhaut nicht berühren.",
+      "en": "Small scabs form, redness and mild swelling around the forehead and eyes is common. Sleep with the head elevated, avoid touching the scalp.",
+      "fr": "De petites croûtes se forment, des rougeurs et un léger gonflement autour du front et des yeux sont normaux. Dormir la tête surélevée, éviter de toucher le cuir chevelu.",
+      "nl": "Kleine korstjes vormen zich, roodheid en lichte zwelling rond voorhoofd en ogen zijn normaal. Slaap met het hoofd omhoog, raak de hoofdhuid niet aan.",
+      "it": "Si formano piccole croste, arrossamento e lieve gonfiore intorno alla fronte e agli occhi sono normali. Dormire con la testa sollevata, evitare di toccare il cuoio capelluto.",
+      "tr": "Küçük kabuklar oluşur, alın ve göz çevresinde kızarıklık ve hafif şişlik normaldir. Baş yükseltilmiş şekilde uyuyun, saç derisine dokunmaktan kaçının."
+    },
+    "t4": {
+      "de": "Woche 2 bis 4",
+      "en": "Weeks 2 to 4",
+      "fr": "Semaines 2 à 4",
+      "nl": "Week 2 tot 4",
+      "it": "Settimane 2-4",
+      "tr": "2. ile 4. Hafta"
+    },
+    "t5": {
+      "de": "Schock-Verlust",
+      "en": "Shock loss",
+      "fr": "Chute de choc",
+      "nl": "Shockverlies",
+      "it": "Shock loss",
+      "tr": "Şok Dökülmesi"
+    },
+    "t6": {
+      "de": "Bis zu 90% der transplantierten Haarschäfte fallen aus. Das ist völlig normal, die Follikel selbst bleiben unter der Kopfhaut aktiv.",
+      "en": "Up to 90% of transplanted hair shafts shed. This is completely normal; the follicles themselves remain alive beneath the scalp.",
+      "fr": "Jusqu'à 90% des tiges capillaires transplantées tombent. C'est tout à fait normal, les follicules eux-mêmes restent actifs sous le cuir chevelu.",
+      "nl": "Tot 90% van de getransplanteerde haarschachten valt uit. Dit is volkomen normaal; de follikels zelf blijven actief onder de hoofdhuid.",
+      "it": "Fino al 90% dei fusti di capelli trapiantati cade. È del tutto normale; i follicoli stessi rimangono vivi sotto il cuoio capelluto.",
+      "tr": "Nakledilen saç tellerinin %90'a kadarı dökülür. Bu tamamen normaldir; foliküllerin kendisi saç derisi altında aktif kalır."
+    },
+    "t7": {
+      "de": "Monat 3 bis 6",
+      "en": "Months 3 to 6",
+      "fr": "Mois 3 à 6",
+      "nl": "Maand 3 tot 6",
+      "it": "Mese 3-6",
+      "tr": "3. ile 6. Ay"
+    },
+    "t8": {
+      "de": "Sichtbares Wachstum beginnt",
+      "en": "Visible growth begins",
+      "fr": "La croissance visible commence",
+      "nl": "Zichtbare groei begint",
+      "it": "Inizia la crescita visibile",
+      "tr": "Görünür Büyüme Başlar"
+    },
+    "t9": {
+      "de": "Feine neue Haare erscheinen und verdicken sich allmählich. Bis Monat 6 sind rund 40 bis 60% des Endergebnisses sichtbar.",
+      "en": "Fine new hairs emerge and gradually thicken. By month 6, around 40 to 60% of the final result is visible.",
+      "fr": "De fins nouveaux cheveux apparaissent et s'épaississent progressivement. Au mois 6, environ 40 à 60% du résultat final sont visibles.",
+      "nl": "Fijne nieuwe haren verschijnen en worden geleidelijk dikker. Tegen maand 6 is ongeveer 40 tot 60% van het eindresultaat zichtbaar.",
+      "it": "Compaiono nuovi capelli sottili che si ispessiscono gradualmente. Entro il mese 6, è visibile circa il 40-60% del risultato finale.",
+      "tr": "İnce yeni saçlar belirir ve giderek kalınlaşır. 6. aya kadar nihai sonucun yaklaşık %40 ila %60'ı görünür hale gelir."
+    },
+    "t10": {
+      "de": "Monat 6 bis 9",
+      "en": "Months 6 to 9",
+      "fr": "Mois 6 à 9",
+      "nl": "Maand 6 tot 9",
+      "it": "Mese 6-9",
+      "tr": "6. ile 9. Ay"
+    },
+    "t11": {
+      "de": "Die Dichte verbessert sich",
+      "en": "Density improves",
+      "fr": "La densité s'améliore",
+      "nl": "De dichtheid verbetert",
+      "it": "La densità migliora",
+      "tr": "Yoğunluk Artıyor"
+    },
+    "t12": {
+      "de": "Das Haar wird spürbar dicker und dunkler. Rund 80% der Grafts sind zu diesem Zeitpunkt durchgebrochen.",
+      "en": "Hair becomes noticeably thicker and darker. Around 80% of grafts have broken through by this point.",
+      "fr": "Les cheveux deviennent nettement plus épais et plus foncés. Environ 80% des greffons ont percé à ce stade.",
+      "nl": "Het haar wordt merkbaar dikker en donkerder. Op dit punt is ongeveer 80% van de grafts doorgebroken.",
+      "it": "I capelli diventano notevolmente più spessi e scuri. A questo punto circa l'80% degli innesti è emerso.",
+      "tr": "Saçlar belirgin şekilde kalınlaşır ve koyulaşır. Bu noktada greftlerin yaklaşık %80'i çıkmış olur."
+    },
+    "t13": {
+      "de": "Monat 12 bis 18",
+      "en": "Months 12 to 18",
+      "fr": "Mois 12 à 18",
+      "nl": "Maand 12 tot 18",
+      "it": "Mese 12-18",
+      "tr": "12. ile 18. Ay"
+    },
+    "t14": {
+      "de": "Endgültige Verfeinerung",
+      "en": "Final refinement",
+      "fr": "Affinement final",
+      "nl": "Definitieve verfijning",
+      "it": "Rifinitura finale",
+      "tr": "Son Rötuşlar"
+    },
+    "t15": {
+      "de": "Die letzten Haare reifen und verdicken sich. Das transplantierte Haar verschmilzt vollständig mit dem natürlichen Haar.",
+      "en": "The last hairs mature and thicken. Transplanted hair fully blends with native hair.",
+      "fr": "Les derniers cheveux mûrissent et s'épaississent. Les cheveux transplantés se fondent complètement avec les cheveux naturels.",
+      "nl": "De laatste haren rijpen en worden dikker. Getransplanteerd haar vermengt zich volledig met natuurlijk haar.",
+      "it": "Gli ultimi capelli maturano e si ispessiscono. I capelli trapiantati si fondono completamente con quelli naturali.",
+      "tr": "Son saçlar olgunlaşır ve kalınlaşır. Nakledilen saç, doğal saçla tamamen kaynaşır."
+    },
+    "t16": {
+      "de": "Die wichtigsten Nachsorgeregeln",
+      "en": "Key aftercare rules",
+      "fr": "Les règles de suivi essentielles",
+      "nl": "De belangrijkste nazorgregels",
+      "it": "Le regole di assistenza post-operatoria più importanti",
+      "tr": "Temel Bakım Kuralları"
+    },
+    "t17": {
+      "de": "Keine direkte Sonne auf der Kopfhaut für mindestens 4 Wochen.",
+      "en": "No direct sun exposure on the scalp for at least 4 weeks.",
+      "fr": "Pas d'exposition directe au soleil sur le cuir chevelu pendant au moins 4 semaines.",
+      "nl": "Geen directe zonlicht op de hoofdhuid gedurende ten minste 4 weken.",
+      "it": "Nessuna esposizione diretta al sole sul cuoio capelluto per almeno 4 settimane.",
+      "tr": "En az 4 hafta boyunca saç derisine doğrudan güneş ışığı almayın."
+    },
+    "t18": {
+      "de": "Kein Schwimmen (Pool, Meer, See) für mindestens 4 Wochen.",
+      "en": "No swimming (pool, sea, or lake) for at least 4 weeks.",
+      "fr": "Pas de baignade (piscine, mer, lac) pendant au moins 4 semaines.",
+      "nl": "Niet zwemmen (zwembad, zee, meer) gedurende ten minste 4 weken.",
+      "it": "Niente nuoto (piscina, mare, lago) per almeno 4 settimane.",
+      "tr": "En az 4 hafta boyunca yüzmeyin (havuz, deniz, göl)."
+    },
+    "t19": {
+      "de": "Kein intensiver Sport oder starkes Schwitzen für 2 bis 3 Wochen.",
+      "en": "No intense exercise or heavy sweating for 2 to 3 weeks.",
+      "fr": "Pas de sport intense ni de transpiration excessive pendant 2 à 3 semaines.",
+      "nl": "Geen intensieve sport of overmatig zweten gedurende 2 tot 3 weken.",
+      "it": "Nessun esercizio intenso o sudorazione eccessiva per 2-3 settimane.",
+      "tr": "2-3 hafta boyunca yoğun spor yapmayın veya aşırı terlemekten kaçının."
+    },
+    "t20": {
+      "de": "Kein Alkohol in der ersten Woche, er beeinträchtigt die Durchblutung.",
+      "en": "No alcohol for the first week; it affects blood circulation.",
+      "fr": "Pas d'alcool la première semaine, il nuit à la circulation sanguine.",
+      "nl": "Geen alcohol in de eerste week, dit beïnvloedt de bloedcirculatie.",
+      "it": "Niente alcol nella prima settimana, compromette la circolazione sanguigna.",
+      "tr": "İlk hafta alkol almayın; kan dolaşımını olumsuz etkiler."
+    },
+    "t21": {
+      "de": "Nicht rauchen: Nikotin verengt die Blutgefäße und senkt die Graft-Überlebensrate.",
+      "en": "No smoking: nicotine restricts blood supply and reduces graft survival.",
+      "fr": "Ne pas fumer : la nicotine restreint l'apport sanguin et réduit la survie des greffons.",
+      "nl": "Niet roken: nicotine beperkt de bloedtoevoer en vermindert de overleving van de grafts.",
+      "it": "Non fumare: la nicotina riduce l'afflusso di sangue e diminuisce la sopravvivenza degli innesti.",
+      "tr": "Sigara içmeyin: nikotin kan akışını kısıtlar ve greft sağkalımını azaltır."
+    },
+    "t22": {
+      "de": "Kopf erhöht schlafen für die ersten 3 bis 5 Nächte.",
+      "en": "Sleep with the head elevated for the first 3 to 5 nights.",
+      "fr": "Dormir la tête surélevée pendant les 3 à 5 premières nuits.",
+      "nl": "Slaap met het hoofd omhoog gedurende de eerste 3 tot 5 nachten.",
+      "it": "Dormire con la testa sollevata per le prime 3-5 notti.",
+      "tr": "İlk 3-5 gece başınızı yükseltilmiş şekilde uyuyun."
+    },
+    "t23": {
+      "de": "Sanft waschen nach Klinikanleitung, keinen starken Wasserstrahl direkt auf die Grafts.",
+      "en": "Wash gently per the clinic's instructions; no strong water pressure directly on the grafts.",
+      "fr": "Laver délicatement selon les instructions de la clinique, pas de jet d'eau puissant directement sur les greffons.",
+      "nl": "Was voorzichtig volgens de instructies van de kliniek, geen sterke waterdruk direct op de grafts.",
+      "it": "Lavare delicatamente secondo le istruzioni della clinica, senza getto d'acqua forte direttamente sugli innesti.",
+      "tr": "Klinik talimatlarına göre nazikçe yıkayın, greftlerin üzerine doğrudan güçlü su akışı uygulamayın."
+    },
+    "t24": {
+      "de": "Alle Folgetermine wahrnehmen, manche Kliniken bieten Remote-Check-ins an.",
+      "en": "Attend all follow-up appointments; some clinics offer remote check-ins.",
+      "fr": "Assister à tous les rendez-vous de suivi ; certaines cliniques proposent des suivis à distance.",
+      "nl": "Woon alle vervolgafspraken bij; sommige klinieken bieden externe check-ins aan.",
+      "it": "Partecipare a tutti gli appuntamenti di follow-up; alcune cliniche offrono check-in a distanza.",
+      "tr": "Tüm takip randevularına katılın; bazı klinikler uzaktan kontrol imkanı sunar."
     }
   },
   "ergebnisse": {
@@ -87,6 +559,446 @@
       "nl": "Het volledige resultaat is pas na 12 tot 18 maanden zichtbaar, niet meteen.",
       "it": "Il risultato completo è visibile dopo 12-18 mesi, non immediatamente.",
       "tr": "Tam sonuç hemen değil, 12 ila 18 ay içinde ortaya çıkar."
+    },
+    "t1": {
+      "de": "Eine Transplantation verschiebt vorhandene gesunde Follikel, sie erschafft keine neuen. Das Ergebnis ist durch den verfügbaren Spenderbereich begrenzt.",
+      "en": "A transplant relocates existing healthy follicles; it cannot create new ones. The result is limited by the available donor area.",
+      "fr": "Une greffe déplace des follicules sains existants ; elle ne peut pas en créer de nouveaux. Le résultat est limité par la zone donneuse disponible.",
+      "nl": "Een transplantatie verplaatst bestaande gezonde follikels; er kunnen geen nieuwe worden aangemaakt. Het resultaat wordt beperkt door het beschikbare donorgebied.",
+      "it": "Un trapianto sposta follicoli sani esistenti; non può crearne di nuovi. Il risultato è limitato dall'area donatrice disponibile.",
+      "tr": "Bir nakil, mevcut sağlıklı foliküllerin yerini değiştirir; yeni folikül oluşturmaz. Sonuç, mevcut donör alanla sınırlıdır."
+    },
+    "t2": {
+      "de": "Transplantiertes Haar wächst lebenslang, da es aus DHT-resistenten Zonen stammt.",
+      "en": "Transplanted hair grows for life because it's taken from DHT-resistant zones.",
+      "fr": "Les cheveux transplantés poussent à vie car ils proviennent de zones résistantes à la DHT.",
+      "nl": "Getransplanteerd haar groeit levenslang omdat het afkomstig is uit DHT-resistente zones.",
+      "it": "I capelli trapiantati crescono per tutta la vita perché provengono da zone resistenti al DHT.",
+      "tr": "Nakledilen saçlar DHT'ye dirençli bölgelerden alındığı için ömür boyu büyür."
+    },
+    "t3": {
+      "de": "Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.",
+      "en": "Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome.",
+      "fr": "Les taux de survie des greffons dans les cliniques réputées sont généralement de 90 à 95 %. Si le résultat est inférieur aux attentes après 12 à 18 mois, une séance de suivi peut être envisagée. Apex Beauty propose une consultation de suivi à 12 mois pour évaluer le résultat.",
+      "nl": "De overlevingspercentages van grafts bij gerenommeerde klinieken liggen doorgaans tussen 90 en 95%. Als het resultaat na 12 tot 18 maanden onder de verwachtingen blijft, kan een vervolgsessie worden besproken. Apex Beauty biedt een vervolgconsult na 12 maanden om het resultaat te beoordelen.",
+      "it": "I tassi di sopravvivenza degli innesti nelle cliniche affidabili sono generalmente del 90-95%. Se il risultato è inferiore alle aspettative dopo 12-18 mesi, si può discutere di una seduta di follow-up. Apex Beauty offre una consulenza di controllo a 12 mesi per valutare l'esito.",
+      "tr": "Saygın kliniklerde greft sağkalım oranları genellikle %90 ila %95 arasındadır. Sonuç 12-18 ay sonra beklentilerin altındaysa, bir takip seansı değerlendirilebilir. Apex Beauty, sonucu değerlendirmek için 12 aylık bir takip danışmanlığı sunar."
+    },
+    "t4": {
+      "de": "In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.",
+      "en": "In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair.",
+      "fr": "Durant les 1 à 2 premières semaines, des croûtes visibles et des rougeurs peuvent apparaître. Ensuite, la cicatrisation devient largement invisible. Entre le 4e et le 6e mois, les nouveaux cheveux se fondent naturellement et, avec un chirurgien expérimenté, deviennent indiscernables des cheveux naturels.",
+      "nl": "In de eerste 1 tot 2 weken kunnen zichtbare korstjes en roodheid optreden. Daarna is de genezing grotendeels onzichtbaar. Vanaf maand 4 tot 6 vermengt het nieuwe haar zich natuurlijk en is het, bij een ervaren chirurg, niet te onderscheiden van natuurlijk haar.",
+      "it": "Nelle prime 1-2 settimane possono essere visibili croste e arrossamenti. Successivamente, la guarigione diventa in gran parte invisibile. Dal 4° al 6° mese, i nuovi capelli si integrano in modo naturale e, con un chirurgo esperto, risultano indistinguibili dai capelli naturali.",
+      "tr": "İlk 1-2 hafta içinde görünür kabuklanma ve kızarıklık olabilir. Bundan sonra iyileşme büyük ölçüde görünmez hale gelir. 4. ile 6. aylar arasında yeni saçlar doğal bir şekilde kaynaşır ve deneyimli bir cerrahla doğal saçtan ayırt edilemez hale gelir."
+    },
+    "t5": {
+      "de": "Kostenlose Beratung sichern",
+      "en": "Get your free consultation",
+      "fr": "Obtenez votre consultation gratuite",
+      "nl": "Vraag uw gratis consult aan",
+      "it": "Richiedi il tuo consulto gratuito",
+      "tr": "Ücretsiz Danışmanızı Alın"
+    },
+    "t6": {
+      "de": "Kostenlose Beratung",
+      "en": "Free Consultation",
+      "fr": "Consultation gratuite",
+      "nl": "Gratis consult",
+      "it": "Consulto gratuito",
+      "tr": "Ücretsiz Danışma"
+    },
+    "t7": {
+      "de": "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.",
+      "en": "Fill in the form and we'll get back to you within 24 hours.",
+      "fr": "Remplissez le formulaire, nous vous répondrons sous 24 heures.",
+      "nl": "Vul het formulier in, we nemen binnen 24 uur contact met u op.",
+      "it": "Compila il modulo, ti risponderemo entro 24 ore.",
+      "tr": "Formu doldurun, 24 saat içinde size dönüş yapalım."
+    },
+    "t8": {
+      "de": "Info",
+      "en": "Info",
+      "fr": "Infos",
+      "nl": "Info",
+      "it": "Info",
+      "tr": "Bilgi"
+    },
+    "t9": {
+      "de": "Bedarf",
+      "en": "Needs",
+      "fr": "Besoins",
+      "nl": "Behoefte",
+      "it": "Esigenze",
+      "tr": "İhtiyaçlar"
+    },
+    "t10": {
+      "de": "Fotos",
+      "en": "Photos",
+      "fr": "Photos",
+      "nl": "Foto's",
+      "it": "Foto",
+      "tr": "Fotoğraflar"
+    },
+    "t11": {
+      "de": "Holen Sie sich Ihre kostenlose Haaranalyse",
+      "en": "Get Your Free Hair Analysis",
+      "fr": "Obtenez votre analyse capillaire gratuite",
+      "nl": "Krijg uw gratis haaranalyse",
+      "it": "Ottieni la tua analisi gratuita dei capelli",
+      "tr": "Ücretsiz Saç Analizinizi Alın"
+    },
+    "t12": {
+      "de": "Unser Expertenteam meldet sich innerhalb von 24 Stunden",
+      "en": "Our expert team will contact you within 24 hours",
+      "fr": "Notre équipe d'experts vous contactera sous 24 heures",
+      "nl": "Ons expertteam neemt binnen 24 uur contact met u op",
+      "it": "Il nostro team di esperti ti contatterà entro 24 ore",
+      "tr": "Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir"
+    },
+    "t13": {
+      "de": "Vollständiger Name *",
+      "en": "Full Name *",
+      "fr": "Nom complet *",
+      "nl": "Volledige naam *",
+      "it": "Nome completo *",
+      "tr": "Ad Soyad *"
+    },
+    "t14": {
+      "de": "E-Mail *",
+      "en": "Email *",
+      "fr": "E-mail *",
+      "nl": "E-mail *",
+      "it": "E-mail *",
+      "tr": "E-posta *"
+    },
+    "t15": {
+      "de": "Land *",
+      "en": "Country *",
+      "fr": "Pays *",
+      "nl": "Land *",
+      "it": "Paese *",
+      "tr": "Ülke *"
+    },
+    "t16": {
+      "de": "Telefon *",
+      "en": "Phone *",
+      "fr": "Téléphone *",
+      "nl": "Telefoon *",
+      "it": "Telefono *",
+      "tr": "Telefon *"
+    },
+    "t17": {
+      "de": "Weiter",
+      "en": "Continue",
+      "fr": "Continuer",
+      "nl": "Doorgaan",
+      "it": "Continua",
+      "tr": "Devam Et"
+    },
+    "t18": {
+      "de": "Ihr Geschlecht *",
+      "en": "Your Gender *",
+      "fr": "Votre sexe *",
+      "nl": "Uw geslacht *",
+      "it": "Il tuo genere *",
+      "tr": "Cinsiyetiniz *"
+    },
+    "t19": {
+      "de": "Männlich",
+      "en": "Male",
+      "fr": "Homme",
+      "nl": "Man",
+      "it": "Uomo",
+      "tr": "Erkek"
+    },
+    "t20": {
+      "de": "Weiblich",
+      "en": "Female",
+      "fr": "Femme",
+      "nl": "Vrouw",
+      "it": "Donna",
+      "tr": "Kadın"
+    },
+    "t21": {
+      "de": "Verfahren, die Sie interessieren *",
+      "en": "Procedures You're Interested In *",
+      "fr": "Interventions qui vous intéressent *",
+      "nl": "Ingrepen waarin u geïnteresseerd bent *",
+      "it": "Procedure di tuo interesse *",
+      "tr": "İlgilendiğiniz İşlemler *"
+    },
+    "t22": {
+      "de": "Haartransplantation",
+      "en": "Hair Transplant",
+      "fr": "Greffe de cheveux",
+      "nl": "Haartransplantatie",
+      "it": "Trapianto di capelli",
+      "tr": "Saç Ekimi"
+    },
+    "t23": {
+      "de": "Barttransplantation",
+      "en": "Beard Transplant",
+      "fr": "Greffe de barbe",
+      "nl": "Baardtransplantatie",
+      "it": "Trapianto di barba",
+      "tr": "Sakal Ekimi"
+    },
+    "t24": {
+      "de": "Augenbrauentransplantation",
+      "en": "Eyebrow Transplant",
+      "fr": "Greffe de sourcils",
+      "nl": "Wenkbrauwtransplantatie",
+      "it": "Trapianto di sopracciglia",
+      "tr": "Kaş Ekimi"
+    },
+    "t25": {
+      "de": "Unterstützende Therapien",
+      "en": "Supporting Therapies",
+      "fr": "Thérapies complémentaires",
+      "nl": "Ondersteunende therapieën",
+      "it": "Terapie di supporto",
+      "tr": "Destekleyici Tedaviler"
+    },
+    "t26": {
+      "de": "PRP-Therapie",
+      "en": "PRP Therapy",
+      "fr": "Thérapie PRP",
+      "nl": "PRP-therapie",
+      "it": "Terapia PRP",
+      "tr": "PRP Tedavisi"
+    },
+    "t27": {
+      "de": "Stammzelltherapie",
+      "en": "Stem Cell Therapy",
+      "fr": "Thérapie par cellules souches",
+      "nl": "Stamceltherapie",
+      "it": "Terapia con cellule staminali",
+      "tr": "Kök Hücre Tedavisi"
+    },
+    "t28": {
+      "de": "Exosom-Therapie",
+      "en": "Exosome Therapy",
+      "fr": "Thérapie par exosomes",
+      "nl": "Exosoomtherapie",
+      "it": "Terapia con esosomi",
+      "tr": "Ekzozom Tedavisi"
+    },
+    "t29": {
+      "de": "Hyperbarer Sauerstoff",
+      "en": "Hyperbaric Oxygen",
+      "fr": "Oxygénothérapie hyperbare",
+      "nl": "Hyperbare zuurstoftherapie",
+      "it": "Ossigenoterapia iperbarica",
+      "tr": "Hiperbarik Oksijen"
+    },
+    "t30": {
+      "de": "Wann planen Sie den Eingriff?",
+      "en": "When Are You Planning the Procedure?",
+      "fr": "Quand prévoyez-vous l'intervention ?",
+      "nl": "Wanneer plant u de ingreep?",
+      "it": "Quando prevedi l'intervento?",
+      "tr": "İşlemi Ne Zaman Planlıyorsunuz?"
+    },
+    "t31": {
+      "de": "Diesen Monat",
+      "en": "This month",
+      "fr": "Ce mois-ci",
+      "nl": "Deze maand",
+      "it": "Questo mese",
+      "tr": "Bu Ay"
+    },
+    "t32": {
+      "de": "In 1–3 Monaten",
+      "en": "In 1–3 months",
+      "fr": "Dans 1 à 3 mois",
+      "nl": "Over 1–3 maanden",
+      "it": "Tra 1 e 3 mesi",
+      "tr": "1-3 Ay İçinde"
+    },
+    "t33": {
+      "de": "In 3–6 Monaten",
+      "en": "In 3–6 months",
+      "fr": "Dans 3 à 6 mois",
+      "nl": "Over 3–6 maanden",
+      "it": "Tra 3 e 6 mesi",
+      "tr": "3-6 Ay İçinde"
+    },
+    "t34": {
+      "de": "In 6+ Monaten",
+      "en": "In 6+ months",
+      "fr": "Dans 6+ mois",
+      "nl": "Over 6+ maanden",
+      "it": "Tra 6+ mesi",
+      "tr": "6+ Ay İçinde"
+    },
+    "t35": {
+      "de": "Nur recherchieren",
+      "en": "Just researching",
+      "fr": "Je me renseigne seulement",
+      "nl": "Alleen aan het oriënteren",
+      "it": "Sto solo informandomi",
+      "tr": "Sadece Araştırıyorum"
+    },
+    "t36": {
+      "de": "Zusätzliche Notizen (optional)",
+      "en": "Additional Notes (Optional)",
+      "fr": "Remarques supplémentaires (facultatif)",
+      "nl": "Aanvullende opmerkingen (optioneel)",
+      "it": "Note aggiuntive (facoltativo)",
+      "tr": "Ek Notlar (İsteğe Bağlı)"
+    },
+    "t37": {
+      "de": "Zurück",
+      "en": "Back",
+      "fr": "Retour",
+      "nl": "Terug",
+      "it": "Indietro",
+      "tr": "Geri"
+    },
+    "t38": {
+      "de": "Weiter",
+      "en": "Continue",
+      "fr": "Continuer",
+      "nl": "Doorgaan",
+      "it": "Continua",
+      "tr": "Devam Et"
+    },
+    "t39": {
+      "de": "📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.",
+      "en": "📸 Photos are optional. Our experts will contact you either way.",
+      "fr": "📸 Les photos sont facultatives. Nos experts vous contacteront dans tous les cas.",
+      "nl": "📸 Foto's zijn optioneel. Onze experts nemen sowieso contact met u op.",
+      "it": "📸 Le foto sono facoltative. I nostri esperti ti contatteranno comunque.",
+      "tr": "📸 Fotoğraflar isteğe bağlıdır. Uzmanlarımız her durumda sizinle iletişime geçecektir."
+    },
+    "t40": {
+      "de": "Vorne",
+      "en": "Front",
+      "fr": "Face avant",
+      "nl": "Voorkant",
+      "it": "Fronte",
+      "tr": "Ön"
+    },
+    "t41": {
+      "de": "Gesicht sichtbar",
+      "en": "Face visible",
+      "fr": "Visage visible",
+      "nl": "Gezicht zichtbaar",
+      "it": "Volto visibile",
+      "tr": "Yüz Görünür"
+    },
+    "t42": {
+      "de": "Oben",
+      "en": "Top",
+      "fr": "Dessus",
+      "nl": "Bovenkant",
+      "it": "Sopra",
+      "tr": "Üst"
+    },
+    "t43": {
+      "de": "Von oben",
+      "en": "From above",
+      "fr": "Vue de dessus",
+      "nl": "Van bovenaf",
+      "it": "Dall'alto",
+      "tr": "Yukarıdan"
+    },
+    "t44": {
+      "de": "Seite",
+      "en": "Side",
+      "fr": "Profil",
+      "nl": "Zijkant",
+      "it": "Lato",
+      "tr": "Yan"
+    },
+    "t45": {
+      "de": "Profil",
+      "en": "Profile",
+      "fr": "Profil",
+      "nl": "Profiel",
+      "it": "Profilo",
+      "tr": "Profil"
+    },
+    "t46": {
+      "de": "Spender",
+      "en": "Donor",
+      "fr": "Donneuse",
+      "nl": "Donor",
+      "it": "Donatrice",
+      "tr": "Donör"
+    },
+    "t47": {
+      "de": "Hinterkopf",
+      "en": "Back of head",
+      "fr": "Arrière de la tête",
+      "nl": "Achterhoofd",
+      "it": "Retro della testa",
+      "tr": "Baş Arkası"
+    },
+    "t48": {
+      "de": "Fotos hochgeladen",
+      "en": "photos uploaded",
+      "fr": "photos téléchargées",
+      "nl": "foto's geüpload",
+      "it": "foto caricate",
+      "tr": "fotoğraf yüklendi"
+    },
+    "t49": {
+      "de": "Rabattgutschein (optional)",
+      "en": "Discount Coupon (Optional)",
+      "fr": "Code de réduction (facultatif)",
+      "nl": "Kortingscode (optioneel)",
+      "it": "Codice sconto (facoltativo)",
+      "tr": "İndirim Kuponu (İsteğe Bağlı)"
+    },
+    "t50": {
+      "de": "Ich möchte über Aktionen und Angebote informiert werden.",
+      "en": "I'd like to be informed about promotions and offers.",
+      "fr": "Je souhaite être informé(e) des promotions et offres.",
+      "nl": "Ik wil op de hoogte worden gehouden van acties en aanbiedingen.",
+      "it": "Desidero essere informato/a su promozioni e offerte.",
+      "tr": "Kampanyalar ve fırsatlar hakkında bilgilendirilmek istiyorum."
+    },
+    "t51": {
+      "de": "🇪🇺 DSGVO · Ihre Daten sind geschützt",
+      "en": "🇪🇺 GDPR · Your data is protected",
+      "fr": "🇪🇺 RGPD · Vos données sont protégées",
+      "nl": "🇪🇺 AVG · Uw gegevens zijn beschermd",
+      "it": "🇪🇺 GDPR · I tuoi dati sono protetti",
+      "tr": "🇪🇺 GDPR · Verileriniz Korunmaktadır"
+    },
+    "t52": {
+      "de": "Zurück",
+      "en": "Back",
+      "fr": "Retour",
+      "nl": "Terug",
+      "it": "Indietro",
+      "tr": "Geri"
+    },
+    "t53": {
+      "de": "Absenden",
+      "en": "Submit",
+      "fr": "Envoyer",
+      "nl": "Versturen",
+      "it": "Invia",
+      "tr": "Gönder"
+    },
+    "t54": {
+      "de": "Vielen Dank!",
+      "en": "Thank You!",
+      "fr": "Merci !",
+      "nl": "Bedankt!",
+      "it": "Grazie!",
+      "tr": "Teşekkürler!"
+    },
+    "t55": {
+      "de": "Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+      "en": "We've received your request. Our team will get back to you within 24 hours.",
+      "fr": "Nous avons bien reçu votre demande. Notre équipe vous recontactera sous 24 heures.",
+      "nl": "We hebben uw aanvraag ontvangen. Ons team neemt binnen 24 uur contact met u op.",
+      "it": "Abbiamo ricevuto la tua richiesta. Il nostro team ti risponderà entro 24 ore.",
+      "tr": "Talebinizi aldık. Ekibimiz 24 saat içinde sizinle iletişime geçecektir."
     }
   },
   "seo": {
@@ -108,5 +1020,47 @@
     },
     "shareImage": "",
     "noindex": false
+  },
+  "hpHero": {
+    "t1": {
+      "de": "Verfahren",
+      "en": "Procedure",
+      "fr": "Procédure",
+      "nl": "Procedure",
+      "it": "Procedura",
+      "tr": "İşlem"
+    },
+    "t2": {
+      "de": "Was es umfasst",
+      "en": "What it involves",
+      "fr": "En quoi elle consiste",
+      "nl": "Wat het inhoudt",
+      "it": "Cosa comprende",
+      "tr": "Neleri Kapsar"
+    },
+    "t3": {
+      "de": "Wer ist geeignet",
+      "en": "Candidacy",
+      "fr": "Éligibilité",
+      "nl": "Geschiktheid",
+      "it": "Idoneità",
+      "tr": "Adaylık"
+    },
+    "t4": {
+      "de": "Genesung",
+      "en": "Recovery",
+      "fr": "Récupération",
+      "nl": "Herstel",
+      "it": "Recupero",
+      "tr": "İyileşme"
+    },
+    "t5": {
+      "de": "Ergebnisse",
+      "en": "Results",
+      "fr": "Résultats",
+      "nl": "Resultaten",
+      "it": "Risultati",
+      "tr": "Sonuçlar"
+    }
   }
 }

@@ -75,7 +75,55 @@
                 "it": "Sedazione senza stress",
                 "tr": "Stressiz Sedasyon"
             }
-        ]
+        ],
+        "t1": {
+            "de": "Persönliche Beratung in Österreich, Behandlung in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz.",
+            "en": "Consultation in Austria, treatment at our leading clinic in Turkey and professional aftercare across Austria, Germany and Switzerland.",
+            "fr": "Consultation en Autriche, traitement dans notre clinique de référence en Turquie et suivi professionnel en Autriche, en Allemagne et en Suisse.",
+            "nl": "Consult in Oostenrijk, behandeling in onze toonaangevende kliniek in Turkije en professionele nazorg in Oostenrijk, Duitsland en Zwitserland.",
+            "it": "Consulenza in Austria, trattamento presso la nostra clinica leader in Turchia e assistenza post-operatoria professionale in Austria, Germania e Svizzera.",
+            "tr": "Avusturya'da danışmanlık, Türkiye'deki lider kliniğimizde tedavi ve Avusturya, Almanya ve İsviçre genelinde profesyonel bakım sonrası destek."
+        },
+        "t2": {
+            "de": "Individuelles Haarlinien-Design",
+            "en": "Personalized Hairline Design",
+            "fr": "Conception personnalisée de la ligne capillaire",
+            "nl": "Persoonlijk ontwerp van de haarlijn",
+            "it": "Design personalizzato dell'attaccatura",
+            "tr": "Kişiye Özel Saç Çizgisi Tasarımı"
+        },
+        "t3": {
+            "de": "Stressfreie Sedierung",
+            "en": "Stress-Free Sedation",
+            "fr": "Sédation sans stress",
+            "nl": "Stressvrije sedatie",
+            "it": "Sedazione senza stress",
+            "tr": "Stressiz Sedasyon"
+        },
+        "t4": {
+            "de": "360°-Betreuung",
+            "en": "360° Care",
+            "fr": "Soins 360°",
+            "nl": "360° Zorg",
+            "it": "Cura 360°",
+            "tr": "360° Bakım"
+        },
+        "t5": {
+            "de": "Beratung bis Nachsorge",
+            "en": "Consultation to Aftercare",
+            "fr": "De la consultation au suivi",
+            "nl": "Van consult tot nazorg",
+            "it": "Dalla consulenza all'assistenza post-operatoria",
+            "tr": "Danışmadan Bakıma"
+        },
+        "t6": {
+            "de": "Google-Bewertungen",
+            "en": "Google Reviews",
+            "fr": "Avis Google",
+            "nl": "Google-recensies",
+            "it": "Recensioni Google",
+            "tr": "Google Yorumları"
+        }
     },
     "trustBar": {
         "stat1Label": {
@@ -244,7 +292,103 @@
                     "tr": "Doğal saç çizgisi · Güçlü sonuç"
                 }
             }
-        ]
+        ],
+        "t1": {
+            "de": "Vorher &amp; Nachher",
+            "en": "Before &amp; after",
+            "fr": "Avant/après",
+            "nl": "Voor en na",
+            "it": "Prima e dopo",
+            "tr": "Öncesi ve Sonrası"
+        },
+        "t2": {
+            "de": "VORHER",
+            "en": "BEFORE",
+            "fr": "AVANT",
+            "nl": "VOOR",
+            "it": "PRIMA",
+            "tr": "ÖNCESİ"
+        },
+        "t3": {
+            "de": "Kopfhaut-Analyse",
+            "en": "Scalp analysis",
+            "fr": "Analyse du cuir chevelu",
+            "nl": "Hoofdhuidanalyse",
+            "it": "Analisi del cuoio capelluto",
+            "tr": "Saç Derisi Analizi"
+        },
+        "t4": {
+            "de": "NACHHER",
+            "en": "AFTER",
+            "fr": "APRÈS",
+            "nl": "NA",
+            "it": "DOPO",
+            "tr": "SONRASI"
+        },
+        "t5": {
+            "de": "Präzises Ergebnis",
+            "en": "Precise result",
+            "fr": "Résultat précis",
+            "nl": "Precies resultaat",
+            "it": "Risultato preciso",
+            "tr": "Hassas Sonuç"
+        },
+        "t6": {
+            "de": "Mit Erfahrung gestaltet",
+            "en": "Shaped by experience",
+            "fr": "Façonné par l'expérience",
+            "nl": "Gevormd door ervaring",
+            "it": "Plasmato dall'esperienza",
+            "tr": "Deneyimle Şekillendi"
+        },
+        "t7": {
+            "de": "Für maximale Präzision",
+            "en": "For maximum precision",
+            "fr": "Pour une précision maximale",
+            "nl": "Voor maximale precisie",
+            "it": "Per la massima precisione",
+            "tr": "Maksimum Hassasiyet İçin"
+        },
+        "t8": {
+            "de": "Natürliche Dichte",
+            "en": "Natural density",
+            "fr": "Densité naturelle",
+            "nl": "Natuurlijke dichtheid",
+            "it": "Densità naturale",
+            "tr": "Doğal Yoğunluk"
+        },
+        "t9": {
+            "de": "Für ein echtes Ergebnis",
+            "en": "For a genuine result",
+            "fr": "Pour un résultat authentique",
+            "nl": "Voor een echt resultaat",
+            "it": "Per un risultato autentico",
+            "tr": "Gerçek Bir Sonuç İçin"
+        },
+        "t10": {
+            "de": "Individuell geplant",
+            "en": "Individually planned",
+            "fr": "Planifié individuellement",
+            "nl": "Individueel gepland",
+            "it": "Pianificato individualmente",
+            "tr": "Kişiye Özel Planlandı"
+        },
+        "t11": {
+            "de": "Für langfristige Erfolge",
+            "en": "For long-term success",
+            "fr": "Pour un succès à long terme",
+            "nl": "Voor succes op lange termijn",
+            "it": "Per un successo a lungo termine",
+            "tr": "Uzun Vadeli Başarı İçin"
+        },
+        "t12": {
+            "de": "Jetzt kostenlose Beratung sichern",
+            "en": "Get Quote",
+            "fr": "Obtenir un devis",
+            "nl": "Offerte aanvragen",
+            "it": "Richiedi un preventivo",
+            "tr": "Teklif Al"
+        }
     },
     "network": {
         "heading": {
@@ -262,6 +406,86 @@
             "nl": "Oostenrijk, Duitsland en Zwitserland, verbonden met onze hoofdkliniek in Turkije: één doorlopend zorgnetwerk verspreid over vier landen.",
             "it": "Austria, Germania e Svizzera, collegate alla nostra clinica principale in Turchia: una rete di assistenza continua che si estende su quattro paesi.",
             "tr": "Avusturya, Almanya ve İsviçre, Türkiye'deki ana kliniğimize bağlanıyor: dört ülkeye yayılan kesintisiz bir bakım ağı."
+        },
+        "t1": {
+            "de": "Unser Netzwerk",
+            "en": "Our network",
+            "fr": "Notre réseau",
+            "nl": "Ons netwerk",
+            "it": "La nostra rete",
+            "tr": "Ağımız"
+        },
+        "t2": {
+            "de": "Nachsorge",
+            "en": "Aftercare",
+            "fr": "Suivi",
+            "nl": "Nazorg",
+            "it": "Assistenza post-operatoria",
+            "tr": "Bakım"
+        },
+        "t3": {
+            "de": "München, Teil unseres Nachsorge-Netzwerks.",
+            "en": "Munich, part of our aftercare network.",
+            "fr": "Munich, membre de notre réseau de suivi.",
+            "nl": "München, onderdeel van ons nazorgnetwerk.",
+            "it": "Monaco, parte della nostra rete di assistenza post-operatoria.",
+            "tr": "Münih, bakım ağımızın bir parçasıdır."
+        },
+        "t4": {
+            "de": "Nachsorge",
+            "en": "Aftercare",
+            "fr": "Suivi",
+            "nl": "Nazorg",
+            "it": "Assistenza post-operatoria",
+            "tr": "Bakım"
+        },
+        "t5": {
+            "de": "Zürich, Teil unseres Nachsorge-Netzwerks.",
+            "en": "Zurich, part of our aftercare network.",
+            "fr": "Zurich, membre de notre réseau de suivi.",
+            "nl": "Zürich, onderdeel van ons nazorgnetwerk.",
+            "it": "Zurigo, parte della nostra rete di assistenza post-operatoria.",
+            "tr": "Zürih, bakım ağımızın bir parçasıdır."
+        },
+        "t6": {
+            "de": "Beratung &amp; Zentrale",
+            "en": "Consultation &amp; HQ",
+            "fr": "Consultation et siège",
+            "nl": "Consult & hoofdkantoor",
+            "it": "Consulenza e sede centrale",
+            "tr": "Danışma ve Merkez"
+        },
+        "t7": {
+            "de": "Linz, Ihr erstes Gespräch findet hier statt, persönlich vor Ort.",
+            "en": "Linz, your first conversation happens here, in person.",
+            "fr": "Linz, votre première conversation a lieu ici, en personne.",
+            "nl": "Linz, uw eerste gesprek vindt hier persoonlijk plaats.",
+            "it": "Linz, la tua prima conversazione avviene qui, di persona.",
+            "tr": "Linz, ilk görüşmeniz burada, yüz yüze gerçekleşir."
+        },
+        "t8": {
+            "de": "Hauptklinik",
+            "en": "Main clinic",
+            "fr": "Clinique principale",
+            "nl": "Hoofdkliniek",
+            "it": "Clinica principale",
+            "tr": "Ana Klinik"
+        },
+        "t9": {
+            "de": "Istanbul, Ihre Behandlung findet hier statt, mit 24/7-Betreuung.",
+            "en": "Istanbul, your treatment takes place here, with 24/7 care.",
+            "fr": "Istanbul, votre traitement a lieu ici, avec des soins 24h/24 et 7j/7.",
+            "nl": "Istanboel, uw behandeling vindt hier plaats, met 24/7 zorg.",
+            "it": "Istanbul, il tuo trattamento avviene qui, con assistenza 24 ore su 24.",
+            "tr": "İstanbul, tedaviniz burada, 7/24 bakımla gerçekleştirilir."
+        },
+        "t10": {
+            "de": "Live verbundenes Betreuungsnetzwerk",
+            "en": "Live connected care network",
+            "fr": "Réseau de soins connecté en direct",
+            "nl": "Live verbonden zorgnetwerk",
+            "it": "Rete di assistenza connessa in tempo reale",
+            "tr": "Canlı Bağlantılı Bakım Ağı"
         }
     },
     "faq": {
@@ -418,7 +642,543 @@
                     "tr": "Bir aracı, hasta ile klinik arasında koordinasyon sağlar ancak tıbbi olarak sürece dahil değildir. Sizi hangi ekibin tedavi edeceğini önceden bilemeyebilirsiniz. Apex Beauty ise direkt bir klinik: danıştığınız ekip, kendi tesisimizde sizi tedavi eden ekiptir. Bu da tutarlı kalite ve doğrudan sorumluluk anlamına gelir."
                 }
             }
-        ]
+        ],
+        "t1": {
+            "de": "Fragen &amp; Antworten",
+            "en": "Questions &amp; answers",
+            "fr": "Questions et réponses",
+            "nl": "Vragen & antwoorden",
+            "it": "Domande e risposte",
+            "tr": "Sorular ve Cevaplar"
+        },
+        "t2": {
+            "de": "Die Fragen, die potenzielle Patienten am häufigsten davon abhalten, eine Beratung zu buchen, ehrlich beantwortet.",
+            "en": "The questions that most often hold prospective patients back from booking a consultation, answered honestly.",
+            "fr": "Les questions qui empêchent le plus souvent les futurs patients de réserver une consultation, avec des réponses honnêtes.",
+            "nl": "De vragen die potentiële patiënten er het vaakst van weerhouden een consult te boeken, eerlijk beantwoord.",
+            "it": "Le domande che più spesso trattengono i potenziali pazienti dal prenotare una consulenza, con risposte oneste.",
+            "tr": "Potansiyel hastaları bir danışma rezervasyonu yapmaktan en çok alıkoyan sorular, dürüstçe yanıtlanmıştır."
+        },
+        "t3": {
+            "de": "Mehr über die Haartransplantation erfahren →",
+            "en": "Learn more about hair transplantation →",
+            "fr": "En savoir plus sur la greffe de cheveux →",
+            "nl": "Meer weten over haartransplantatie →",
+            "it": "Scopri di più sul trapianto di capelli →",
+            "tr": "Saç ekimi hakkında daha fazla bilgi edinin →"
+        },
+        "t4": {
+            "de": "Wird man sehen, dass ich eine Transplantation hatte?",
+            "en": "Will anyone be able to tell I've had a transplant?",
+            "fr": "Est-ce que cela se verra que j'ai eu une greffe ?",
+            "nl": "Zal iemand kunnen zien dat ik een transplantatie heb gehad?",
+            "it": "Si vedrà che ho fatto un trapianto?",
+            "tr": "Saç ekimi yaptırdığım belli olur mu?"
+        },
+        "t5": {
+            "de": "In den ersten 1 bis 2 Wochen können Krusten und Rötungen sichtbar sein. Danach ist die Heilung weitgehend unsichtbar. Ab Monat 4 bis 6 verschmilzt das neue Haar natürlich mit dem vorhandenen, bei einem erfahrenen Chirurgen nicht von echtem Haar zu unterscheiden.",
+            "en": "In the first 1 to 2 weeks, visible scabbing and redness may be noticeable. After that, healing is largely invisible. By months 4 to 6, the new hair blends naturally and, with an experienced surgeon, is indistinguishable from native hair.",
+            "fr": "Durant les 1 à 2 premières semaines, des croûtes visibles et des rougeurs peuvent apparaître. Ensuite, la cicatrisation devient largement invisible. Entre le 4e et le 6e mois, les nouveaux cheveux se fondent naturellement et, avec un chirurgien expérimenté, deviennent indiscernables des cheveux naturels.",
+            "nl": "In de eerste 1 tot 2 weken kunnen zichtbare korstjes en roodheid optreden. Daarna is de genezing grotendeels onzichtbaar. Vanaf maand 4 tot 6 vermengt het nieuwe haar zich natuurlijk en is het, bij een ervaren chirurg, niet te onderscheiden van natuurlijk haar.",
+            "it": "Nelle prime 1-2 settimane possono essere visibili croste e arrossamenti. Successivamente, la guarigione diventa in gran parte invisibile. Dal 4° al 6° mese, i nuovi capelli si integrano in modo naturale e, con un chirurgo esperto, risultano indistinguibili dai capelli naturali.",
+            "tr": "İlk 1-2 hafta içinde görünür kabuklanma ve kızarıklık olabilir. Bundan sonra iyileşme büyük ölçüde görünmez hale gelir. 4. ile 6. aylar arasında yeni saçlar doğal bir şekilde kaynaşır ve deneyimli bir cerrahla doğal saçtan ayırt edilemez hale gelir."
+        },
+        "t6": {
+            "de": "Wie viele Grafts brauche ich?",
+            "en": "How many grafts do I need?",
+            "fr": "De combien de greffons ai-je besoin ?",
+            "nl": "Hoeveel grafts heb ik nodig?",
+            "it": "Di quanti innesti ho bisogno?",
+            "tr": "Kaç greft ihtiyacım var?"
+        },
+        "t7": {
+            "de": "Das hängt vom Ausmaß des Haarausfalls und der gewünschten Dichte ab. Eine typische Sitzung umfasst 1.500 bis 4.000 Grafts. Grad II bis III benötigt meist 1.500 bis 2.000, Grad V bis VI oft 3.000 bis 4.500. Eine kostenlose Beratung mit Haaranalyse gibt eine präzise Einschätzung.",
+            "en": "This depends entirely on the degree of hair loss and desired density. A typical session ranges from 1,500 to 4,000 grafts. Grade II to III usually needs 1,500 to 2,000; grade V to VI often 3,000 to 4,500. A free consultation with scalp analysis gives an accurate estimate.",
+            "fr": "Cela dépend entièrement du degré de chute de cheveux et de la densité souhaitée. Une séance typique va de 1 500 à 4 000 greffons. Le stade II à III nécessite généralement 1 500 à 2 000 ; le stade V à VI souvent 3 000 à 4 500. Une consultation gratuite avec analyse du cuir chevelu permet une estimation précise.",
+            "nl": "Dit hangt volledig af van de mate van haaruitval en de gewenste dichtheid. Een gemiddelde sessie omvat 1.500 tot 4.000 grafts. Graad II tot III heeft meestal 1.500 tot 2.000 nodig; graad V tot VI vaak 3.000 tot 4.500. Een gratis consult met hoofdhuidanalyse geeft een nauwkeurige schatting.",
+            "it": "Dipende interamente dal grado di caduta dei capelli e dalla densità desiderata. Una seduta tipica va da 1.500 a 4.000 innesti. Il grado II-III richiede solitamente 1.500-2.000 innesti; il grado V-VI spesso 3.000-4.500. Un consulto gratuito con analisi del cuoio capelluto fornisce una stima precisa.",
+            "tr": "Bu tamamen saç dökülmesinin derecesine ve istenen yoğunluğa bağlıdır. Tipik bir seans 1.500 ile 4.000 greft arasında değişir. Derece II-III genellikle 1.500-2.000 greft gerektirir; derece V-VI ise sıklıkla 3.000-4.500 greft gerektirir. Saç derisi analizi içeren ücretsiz bir danışma, doğru bir tahmin sağlar."
+        },
+        "t8": {
+            "de": "Ist das Ergebnis dauerhaft?",
+            "en": "Is the result permanent?",
+            "fr": "Le résultat est-il permanent ?",
+            "nl": "Is het resultaat blijvend?",
+            "it": "Il risultato è permanente?",
+            "tr": "Sonuç kalıcı mı?"
+        },
+        "t9": {
+            "de": "Transplantiertes Haar stammt aus dem DHT-resistenten Spenderbereich und wächst lebenslang weiter. Nicht transplantiertes Haar kann jedoch weiter ausdünnen. Medikamente wie Finasterid oder Minoxidil nach dem Eingriff schützen das verbleibende natürliche Haar.",
+            "en": "Transplanted hair is taken from the DHT-resistant donor zone and continues to grow for life. However, existing non-transplanted hair may keep thinning. Medication like finasteride or minoxidil after the procedure helps protect remaining native hair.",
+            "fr": "Les cheveux transplantés proviennent de la zone donneuse résistante à la DHT et continuent de pousser à vie. Cependant, les cheveux non transplantés existants peuvent continuer à s'affiner. Des médicaments comme le finastéride ou le minoxidil après l'intervention aident à protéger les cheveux naturels restants.",
+            "nl": "Getransplanteerd haar komt uit het DHT-resistente donorgebied en blijft levenslang doorgroeien. Bestaand, niet-getransplanteerd haar kan echter blijven uitdunnen. Medicatie zoals finasteride of minoxidil na de ingreep helpt het resterende natuurlijke haar te beschermen.",
+            "it": "I capelli trapiantati provengono dall'area donatrice resistente al DHT e continuano a crescere per tutta la vita. Tuttavia, i capelli esistenti non trapiantati potrebbero continuare a diradarsi. Farmaci come finasteride o minoxidil dopo l'intervento aiutano a proteggere i capelli naturali rimanenti.",
+            "tr": "Nakledilen saçlar DHT'ye dirençli donör bölgeden alınır ve ömür boyu büyümeye devam eder. Ancak nakledilmemiş mevcut saçlar seyrelmeye devam edebilir. İşlem sonrası finasterid veya minoksidil gibi ilaçlar, kalan doğal saçların korunmasına yardımcı olur."
+        },
+        "t10": {
+            "de": "Was passiert, wenn das Ergebnis nicht ausreicht?",
+            "en": "What happens if I don't get enough results?",
+            "fr": "Que se passe-t-il si le résultat n'est pas suffisant ?",
+            "nl": "Wat gebeurt er als het resultaat onvoldoende is?",
+            "it": "Cosa succede se il risultato non è sufficiente?",
+            "tr": "Yeterli sonuç alamazsam ne olur?"
+        },
+        "t11": {
+            "de": "Die Graft-Überlebensrate liegt bei seriösen Kliniken bei 90 bis 95%. Bleibt das Ergebnis nach 12 bis 18 Monaten unter den Erwartungen, kann eine Folgesitzung besprochen werden. Apex Beauty bietet eine Kontrolluntersuchung nach 12 Monaten an.",
+            "en": "Graft survival rates at reputable clinics are generally 90 to 95%. If the result is below expectations after 12 to 18 months, a follow-up session can be discussed. Apex Beauty offers a 12-month follow-up consultation to assess the outcome.",
+            "fr": "Les taux de survie des greffons dans les cliniques réputées sont généralement de 90 à 95 %. Si le résultat est inférieur aux attentes après 12 à 18 mois, une séance de suivi peut être envisagée. Apex Beauty propose une consultation de suivi à 12 mois pour évaluer le résultat.",
+            "nl": "De overlevingspercentages van grafts bij gerenommeerde klinieken liggen doorgaans tussen 90 en 95%. Als het resultaat na 12 tot 18 maanden onder de verwachtingen blijft, kan een vervolgsessie worden besproken. Apex Beauty biedt een vervolgconsult na 12 maanden om het resultaat te beoordelen.",
+            "it": "I tassi di sopravvivenza degli innesti nelle cliniche affidabili sono generalmente del 90-95%. Se il risultato è inferiore alle aspettative dopo 12-18 mesi, si può discutere di una seduta di follow-up. Apex Beauty offre una consulenza di controllo a 12 mesi per valutare l'esito.",
+            "tr": "Saygın kliniklerde greft sağkalım oranları genellikle %90 ila %95 arasındadır. Sonuç 12-18 ay sonra beklentilerin altındaysa, bir takip seansı değerlendirilebilir. Apex Beauty, sonucu değerlendirmek için 12 aylık bir takip danışmanlığı sunar."
+        },
+        "t12": {
+            "de": "Können Frauen eine Haartransplantation bekommen?",
+            "en": "Can women have hair transplants?",
+            "fr": "Les femmes peuvent-elles avoir une greffe de cheveux ?",
+            "nl": "Kunnen vrouwen een haartransplantatie ondergaan?",
+            "it": "Le donne possono sottoporsi a trapianto di capelli?",
+            "tr": "Kadınlar saç ekimi yaptırabilir mi?"
+        },
+        "t13": {
+            "de": "Ja. Frauen mit androgenetischer Alopezie können geeignete Kandidatinnen sein. Bei diffusem Haarausfall über die gesamte Kopfhaut, einschließlich des Spenderbereichs, reicht die stabile Spenderdichte jedoch oft nicht aus. Eine fachärztliche Beurteilung ist essenziell.",
+            "en": "Yes. Women with androgenetic alopecia can be suitable candidates. However, women with diffuse hair loss across the entire scalp, including the donor area, may not have sufficient stable donor hair. A specialist assessment is essential.",
+            "fr": "Oui. Les femmes atteintes d'alopécie androgénétique peuvent être de bonnes candidates. Cependant, les femmes présentant une chute de cheveux diffuse sur l'ensemble du cuir chevelu, y compris la zone donneuse, peuvent ne pas disposer d'assez de cheveux donneurs stables. Une évaluation par un spécialiste est essentielle.",
+            "nl": "Ja. Vrouwen met androgenetische alopecia kunnen geschikte kandidaten zijn. Vrouwen met diffuse haaruitval over de hele hoofdhuid, inclusief het donorgebied, hebben echter mogelijk onvoldoende stabiel donorhaar. Een beoordeling door een specialist is essentieel.",
+            "it": "Sì. Le donne con alopecia androgenetica possono essere candidate idonee. Tuttavia, le donne con caduta diffusa dei capelli su tutto il cuoio capelluto, inclusa l'area donatrice, potrebbero non avere capelli donatori stabili a sufficienza. Una valutazione specialistica è essenziale.",
+            "tr": "Evet. Androgenetik alopesisi olan kadınlar uygun aday olabilir. Ancak donör bölge dahil tüm saç derisinde yaygın saç dökülmesi yaşayan kadınlarda yeterli kararlı donör saç bulunmayabilir. Uzman değerlendirmesi şarttır."
+        },
+        "t14": {
+            "de": "Wie läuft die Anreise nach Istanbul ab?",
+            "en": "How do I travel to Istanbul for the procedure?",
+            "fr": "Comment se déroule le voyage à Istanbul pour l'intervention ?",
+            "nl": "Hoe verloopt de reis naar Istanboel voor de ingreep?",
+            "it": "Come funziona il viaggio a Istanbul per l'intervento?",
+            "tr": "İşlem için İstanbul'a seyahat nasıl gerçekleşir?"
+        },
+        "t15": {
+            "de": "Apex Beauty organisiert die gesamte Logistik für Patienten aus Österreich, Deutschland und der Schweiz. Der Eingriff dauert einen Tag. Die meisten Patienten fliegen am Vortag ein, ruhen sich eine Nacht aus und fliegen innerhalb von 48 Stunden zurück. Folgetermine können per Videoanruf stattfinden.",
+            "en": "Apex Beauty coordinates all logistics for patients from Austria, Germany, and Switzerland. The procedure takes one day. Most patients fly in the day before, rest one night, and fly home within 48 hours. Follow-up appointments can be conducted remotely via video call.",
+            "fr": "Apex Beauty coordonne toute la logistique pour les patients venant d'Autriche, d'Allemagne et de Suisse. L'intervention dure une journée. La plupart des patients arrivent la veille, se reposent une nuit et rentrent chez eux dans les 48 heures. Les rendez-vous de suivi peuvent se faire à distance par appel vidéo.",
+            "nl": "Apex Beauty regelt alle logistiek voor patiënten uit Oostenrijk, Duitsland en Zwitserland. De ingreep duurt één dag. De meeste patiënten vliegen de dag ervoor in, rusten één nacht uit en vliegen binnen 48 uur terug. Vervolgafspraken kunnen op afstand via videogesprek plaatsvinden.",
+            "it": "Apex Beauty coordina tutta la logistica per i pazienti provenienti da Austria, Germania e Svizzera. L'intervento dura un giorno. La maggior parte dei pazienti arriva il giorno prima, riposa una notte e rientra entro 48 ore. Gli appuntamenti di follow-up possono svolgersi da remoto tramite videochiamata.",
+            "tr": "Apex Beauty, Avusturya, Almanya ve İsviçre'den gelen hastalar için tüm lojistiği koordine eder. İşlem bir gün sürer. Çoğu hasta bir gün önce uçarak gelir, bir gece dinlenir ve 48 saat içinde eve döner. Takip randevuları görüntülü görüşme yoluyla uzaktan yapılabilir."
+        },
+        "t16": {
+            "de": "Was unterscheidet Apex direkt von einem Vermittler?",
+            "en": "What's the difference between Apex direct and a broker?",
+            "fr": "Quelle est la différence entre Apex en direct et un intermédiaire ?",
+            "nl": "Wat is het verschil tussen Apex rechtstreeks en een bemiddelaar?",
+            "it": "Qual è la differenza tra Apex diretto e un intermediario?",
+            "tr": "Apex direkt ile bir aracı kurum arasındaki fark nedir?"
+        },
+        "t17": {
+            "de": "Ein Vermittler koordiniert zwischen Patient und Klinik, ist aber medizinisch nicht involviert. Sie wissen oft nicht im Voraus, welches Team Sie behandelt. Apex Beauty ist eine Direktklinik: das Team, das Sie beraten hat, behandelt Sie auch, in unserer eigenen Einrichtung. Das bedeutet konsistente Qualität und direkte Verantwortung.",
+            "en": "A broker coordinates between a patient and a clinic but isn't medically involved. You may not know in advance which team will treat you. Apex Beauty is a direct clinic: the team you consult with is the team that treats you, in our own facility. That means consistent quality and direct accountability.",
+            "fr": "Un intermédiaire coordonne entre un patient et une clinique, mais n'est pas médicalement impliqué. Vous ne savez souvent pas à l'avance quelle équipe vous traitera. Apex Beauty est une clinique directe : l'équipe que vous consultez est celle qui vous traite, dans notre propre établissement. Cela garantit une qualité constante et une responsabilité directe.",
+            "nl": "Een bemiddelaar coördineert tussen een patiënt en een kliniek, maar is medisch niet betrokken. U weet vaak niet vooraf welk team u zal behandelen. Apex Beauty is een directe kliniek: het team waarmee u een consult heeft, is ook het team dat u behandelt, in onze eigen faciliteit. Dat betekent consistente kwaliteit en directe verantwoordelijkheid.",
+            "it": "Un intermediario coordina tra il paziente e una clinica, ma non è coinvolto dal punto di vista medico. Spesso non si sa in anticipo quale team ti curerà. Apex Beauty è una clinica diretta: il team con cui ti consulti è lo stesso che ti tratta, nella nostra struttura. Questo garantisce qualità costante e responsabilità diretta.",
+            "tr": "Bir aracı, hasta ile klinik arasında koordinasyon sağlar ancak tıbbi olarak sürece dahil değildir. Sizi hangi ekibin tedavi edeceğini önceden bilemeyebilirsiniz. Apex Beauty ise direkt bir klinik: danıştığınız ekip, kendi tesisimizde sizi tedavi eden ekiptir. Bu da tutarlı kalite ve doğrudan sorumluluk anlamına gelir."
+        },
+        "t18": {
+            "de": "Kostenlose Beratung",
+            "en": "Free Consultation",
+            "fr": "Consultation gratuite",
+            "nl": "Gratis consult",
+            "it": "Consulto gratuito",
+            "tr": "Ücretsiz Danışma"
+        },
+        "t19": {
+            "de": "Füllen Sie das Formular aus, wir melden uns innerhalb von 24 Stunden.",
+            "en": "Fill in the form and we'll get back to you within 24 hours.",
+            "fr": "Remplissez le formulaire, nous vous répondrons sous 24 heures.",
+            "nl": "Vul het formulier in, we nemen binnen 24 uur contact met u op.",
+            "it": "Compila il modulo, ti risponderemo entro 24 ore.",
+            "tr": "Formu doldurun, 24 saat içinde size dönüş yapalım."
+        },
+        "t20": {
+            "de": "Info",
+            "en": "Info",
+            "fr": "Infos",
+            "nl": "Info",
+            "it": "Info",
+            "tr": "Bilgi"
+        },
+        "t21": {
+            "de": "Bedarf",
+            "en": "Needs",
+            "fr": "Besoins",
+            "nl": "Behoefte",
+            "it": "Esigenze",
+            "tr": "İhtiyaçlar"
+        },
+        "t22": {
+            "de": "Fotos",
+            "en": "Photos",
+            "fr": "Photos",
+            "nl": "Foto's",
+            "it": "Foto",
+            "tr": "Fotoğraflar"
+        },
+        "t23": {
+            "de": "Holen Sie sich Ihre kostenlose Haaranalyse",
+            "en": "Get Your Free Hair Analysis",
+            "fr": "Obtenez votre analyse capillaire gratuite",
+            "nl": "Krijg uw gratis haaranalyse",
+            "it": "Ottieni la tua analisi gratuita dei capelli",
+            "tr": "Ücretsiz Saç Analizinizi Alın"
+        },
+        "t24": {
+            "de": "Unser Expertenteam meldet sich innerhalb von 24 Stunden",
+            "en": "Our expert team will contact you within 24 hours",
+            "fr": "Notre équipe d'experts vous contactera sous 24 heures",
+            "nl": "Ons expertteam neemt binnen 24 uur contact met u op",
+            "it": "Il nostro team di esperti ti contatterà entro 24 ore",
+            "tr": "Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir"
+        },
+        "t25": {
+            "de": "Vollständiger Name *",
+            "en": "Full Name *",
+            "fr": "Nom complet *",
+            "nl": "Volledige naam *",
+            "it": "Nome completo *",
+            "tr": "Ad Soyad *"
+        },
+        "t26": {
+            "de": "E-Mail *",
+            "en": "Email *",
+            "fr": "E-mail *",
+            "nl": "E-mail *",
+            "it": "E-mail *",
+            "tr": "E-posta *"
+        },
+        "t27": {
+            "de": "Land *",
+            "en": "Country *",
+            "fr": "Pays *",
+            "nl": "Land *",
+            "it": "Paese *",
+            "tr": "Ülke *"
+        },
+        "t28": {
+            "de": "Telefon *",
+            "en": "Phone *",
+            "fr": "Téléphone *",
+            "nl": "Telefoon *",
+            "it": "Telefono *",
+            "tr": "Telefon *"
+        },
+        "t29": {
+            "de": "Weiter",
+            "en": "Continue",
+            "fr": "Continuer",
+            "nl": "Doorgaan",
+            "it": "Continua",
+            "tr": "Devam Et"
+        },
+        "t30": {
+            "de": "Ihr Geschlecht *",
+            "en": "Your Gender *",
+            "fr": "Votre sexe *",
+            "nl": "Uw geslacht *",
+            "it": "Il tuo genere *",
+            "tr": "Cinsiyetiniz *"
+        },
+        "t31": {
+            "de": "Männlich",
+            "en": "Male",
+            "fr": "Homme",
+            "nl": "Man",
+            "it": "Uomo",
+            "tr": "Erkek"
+        },
+        "t32": {
+            "de": "Weiblich",
+            "en": "Female",
+            "fr": "Femme",
+            "nl": "Vrouw",
+            "it": "Donna",
+            "tr": "Kadın"
+        },
+        "t33": {
+            "de": "Verfahren, die Sie interessieren *",
+            "en": "Procedures You're Interested In *",
+            "fr": "Interventions qui vous intéressent *",
+            "nl": "Ingrepen waarin u geïnteresseerd bent *",
+            "it": "Procedure di tuo interesse *",
+            "tr": "İlgilendiğiniz İşlemler *"
+        },
+        "t34": {
+            "de": "Haartransplantation",
+            "en": "Hair Transplant",
+            "fr": "Greffe de cheveux",
+            "nl": "Haartransplantatie",
+            "it": "Trapianto di capelli",
+            "tr": "Saç Ekimi"
+        },
+        "t35": {
+            "de": "Barttransplantation",
+            "en": "Beard Transplant",
+            "fr": "Greffe de barbe",
+            "nl": "Baardtransplantatie",
+            "it": "Trapianto di barba",
+            "tr": "Sakal Ekimi"
+        },
+        "t36": {
+            "de": "Augenbrauentransplantation",
+            "en": "Eyebrow Transplant",
+            "fr": "Greffe de sourcils",
+            "nl": "Wenkbrauwtransplantatie",
+            "it": "Trapianto di sopracciglia",
+            "tr": "Kaş Ekimi"
+        },
+        "t37": {
+            "de": "Unterstützende Therapien",
+            "en": "Supporting Therapies",
+            "fr": "Thérapies complémentaires",
+            "nl": "Ondersteunende therapieën",
+            "it": "Terapie di supporto",
+            "tr": "Destekleyici Tedaviler"
+        },
+        "t38": {
+            "de": "PRP-Therapie",
+            "en": "PRP Therapy",
+            "fr": "Thérapie PRP",
+            "nl": "PRP-therapie",
+            "it": "Terapia PRP",
+            "tr": "PRP Tedavisi"
+        },
+        "t39": {
+            "de": "Stammzelltherapie",
+            "en": "Stem Cell Therapy",
+            "fr": "Thérapie par cellules souches",
+            "nl": "Stamceltherapie",
+            "it": "Terapia con cellule staminali",
+            "tr": "Kök Hücre Tedavisi"
+        },
+        "t40": {
+            "de": "Exosom-Therapie",
+            "en": "Exosome Therapy",
+            "fr": "Thérapie par exosomes",
+            "nl": "Exosoomtherapie",
+            "it": "Terapia con esosomi",
+            "tr": "Ekzozom Tedavisi"
+        },
+        "t41": {
+            "de": "Hyperbarer Sauerstoff",
+            "en": "Hyperbaric Oxygen",
+            "fr": "Oxygénothérapie hyperbare",
+            "nl": "Hyperbare zuurstoftherapie",
+            "it": "Ossigenoterapia iperbarica",
+            "tr": "Hiperbarik Oksijen"
+        },
+        "t42": {
+            "de": "Wann planen Sie den Eingriff?",
+            "en": "When Are You Planning the Procedure?",
+            "fr": "Quand prévoyez-vous l'intervention ?",
+            "nl": "Wanneer plant u de ingreep?",
+            "it": "Quando prevedi l'intervento?",
+            "tr": "İşlemi Ne Zaman Planlıyorsunuz?"
+        },
+        "t43": {
+            "de": "Diesen Monat",
+            "en": "This month",
+            "fr": "Ce mois-ci",
+            "nl": "Deze maand",
+            "it": "Questo mese",
+            "tr": "Bu Ay"
+        },
+        "t44": {
+            "de": "In 1–3 Monaten",
+            "en": "In 1–3 months",
+            "fr": "Dans 1 à 3 mois",
+            "nl": "Over 1–3 maanden",
+            "it": "Tra 1 e 3 mesi",
+            "tr": "1-3 Ay İçinde"
+        },
+        "t45": {
+            "de": "In 3–6 Monaten",
+            "en": "In 3–6 months",
+            "fr": "Dans 3 à 6 mois",
+            "nl": "Over 3–6 maanden",
+            "it": "Tra 3 e 6 mesi",
+            "tr": "3-6 Ay İçinde"
+        },
+        "t46": {
+            "de": "In 6+ Monaten",
+            "en": "In 6+ months",
+            "fr": "Dans 6+ mois",
+            "nl": "Over 6+ maanden",
+            "it": "Tra 6+ mesi",
+            "tr": "6+ Ay İçinde"
+        },
+        "t47": {
+            "de": "Nur recherchieren",
+            "en": "Just researching",
+            "fr": "Je me renseigne seulement",
+            "nl": "Alleen aan het oriënteren",
+            "it": "Sto solo informandomi",
+            "tr": "Sadece Araştırıyorum"
+        },
+        "t48": {
+            "de": "Zusätzliche Notizen (optional)",
+            "en": "Additional Notes (Optional)",
+            "fr": "Remarques supplémentaires (facultatif)",
+            "nl": "Aanvullende opmerkingen (optioneel)",
+            "it": "Note aggiuntive (facoltativo)",
+            "tr": "Ek Notlar (İsteğe Bağlı)"
+        },
+        "t49": {
+            "de": "Zurück",
+            "en": "Back",
+            "fr": "Retour",
+            "nl": "Terug",
+            "it": "Indietro",
+            "tr": "Geri"
+        },
+        "t50": {
+            "de": "Weiter",
+            "en": "Continue",
+            "fr": "Continuer",
+            "nl": "Doorgaan",
+            "it": "Continua",
+            "tr": "Devam Et"
+        },
+        "t51": {
+            "de": "📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.",
+            "en": "📸 Photos are optional. Our experts will contact you either way.",
+            "fr": "📸 Les photos sont facultatives. Nos experts vous contacteront dans tous les cas.",
+            "nl": "📸 Foto's zijn optioneel. Onze experts nemen sowieso contact met u op.",
+            "it": "📸 Le foto sono facoltative. I nostri esperti ti contatteranno comunque.",
+            "tr": "📸 Fotoğraflar isteğe bağlıdır. Uzmanlarımız her durumda sizinle iletişime geçecektir."
+        },
+        "t52": {
+            "de": "Vorne",
+            "en": "Front",
+            "fr": "Face avant",
+            "nl": "Voorkant",
+            "it": "Fronte",
+            "tr": "Ön"
+        },
+        "t53": {
+            "de": "Gesicht sichtbar",
+            "en": "Face visible",
+            "fr": "Visage visible",
+            "nl": "Gezicht zichtbaar",
+            "it": "Volto visibile",
+            "tr": "Yüz Görünür"
+        },
+        "t54": {
+            "de": "Oben",
+            "en": "Top",
+            "fr": "Dessus",
+            "nl": "Bovenkant",
+            "it": "Sopra",
+            "tr": "Üst"
+        },
+        "t55": {
+            "de": "Von oben",
+            "en": "From above",
+            "fr": "Vue de dessus",
+            "nl": "Van bovenaf",
+            "it": "Dall'alto",
+            "tr": "Yukarıdan"
+        },
+        "t56": {
+            "de": "Seite",
+            "en": "Side",
+            "fr": "Profil",
+            "nl": "Zijkant",
+            "it": "Lato",
+            "tr": "Yan"
+        },
+        "t57": {
+            "de": "Profil",
+            "en": "Profile",
+            "fr": "Profil",
+            "nl": "Profiel",
+            "it": "Profilo",
+            "tr": "Profil"
+        },
+        "t58": {
+            "de": "Spender",
+            "en": "Donor",
+            "fr": "Donneuse",
+            "nl": "Donor",
+            "it": "Donatrice",
+            "tr": "Donör"
+        },
+        "t59": {
+            "de": "Hinterkopf",
+            "en": "Back of head",
+            "fr": "Arrière de la tête",
+            "nl": "Achterhoofd",
+            "it": "Retro della testa",
+            "tr": "Baş Arkası"
+        },
+        "t60": {
+            "de": "Fotos hochgeladen",
+            "en": "photos uploaded",
+            "fr": "photos téléchargées",
+            "nl": "foto's geüpload",
+            "it": "foto caricate",
+            "tr": "fotoğraf yüklendi"
+        },
+        "t61": {
+            "de": "Rabattgutschein (optional)",
+            "en": "Discount Coupon (Optional)",
+            "fr": "Code de réduction (facultatif)",
+            "nl": "Kortingscode (optioneel)",
+            "it": "Codice sconto (facoltativo)",
+            "tr": "İndirim Kuponu (İsteğe Bağlı)"
+        },
+        "t62": {
+            "de": "Ich möchte über Aktionen und Angebote informiert werden.",
+            "en": "I'd like to be informed about promotions and offers.",
+            "fr": "Je souhaite être informé(e) des promotions et offres.",
+            "nl": "Ik wil op de hoogte worden gehouden van acties en aanbiedingen.",
+            "it": "Desidero essere informato/a su promozioni e offerte.",
+            "tr": "Kampanyalar ve fırsatlar hakkında bilgilendirilmek istiyorum."
+        },
+        "t63": {
+            "de": "🇪🇺 DSGVO · Ihre Daten sind geschützt",
+            "en": "🇪🇺 GDPR · Your data is protected",
+            "fr": "🇪🇺 RGPD · Vos données sont protégées",
+            "nl": "🇪🇺 AVG · Uw gegevens zijn beschermd",
+            "it": "🇪🇺 GDPR · I tuoi dati sono protetti",
+            "tr": "🇪🇺 GDPR · Verileriniz Korunmaktadır"
+        },
+        "t64": {
+            "de": "Zurück",
+            "en": "Back",
+            "fr": "Retour",
+            "nl": "Terug",
+            "it": "Indietro",
+            "tr": "Geri"
+        },
+        "t65": {
+            "de": "Absenden",
+            "en": "Submit",
+            "fr": "Envoyer",
+            "nl": "Versturen",
+            "it": "Invia",
+            "tr": "Gönder"
+        },
+        "t66": {
+            "de": "Vielen Dank!",
+            "en": "Thank You!",
+            "fr": "Merci !",
+            "nl": "Bedankt!",
+            "it": "Grazie!",
+            "tr": "Teşekkürler!"
+        },
+        "t67": {
+            "de": "Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+            "en": "We've received your request. Our team will get back to you within 24 hours.",
+            "fr": "Nous avons bien reçu votre demande. Notre équipe vous recontactera sous 24 heures.",
+            "nl": "We hebben uw aanvraag ontvangen. Ons team neemt binnen 24 uur contact met u op.",
+            "it": "Abbiamo ricevuto la tua richiesta. Il nostro team ti risponderà entro 24 ore.",
+            "tr": "Talebinizi aldık. Ekibimiz 24 saat içinde sizinle iletişime geçecektir."
+        }
     },
     "seo": {
         "title": {
@@ -439,5 +1199,161 @@
         },
         "shareImage": "",
         "noindex": false
+    },
+    "intro": {
+        "t1": {
+            "de": "Beratung – Vor Ort, Österreich",
+            "en": "Consultation - In person, Austria",
+            "fr": "Consultation - En personne, Autriche",
+            "nl": "Consult - Persoonlijk, Oostenrijk",
+            "it": "Consulenza - Di persona, Austria",
+            "tr": "Danışma - Yüz Yüze, Avusturya"
+        },
+        "t2": {
+            "de": "Reise in die Türkei – Wir organisieren alles",
+            "en": "Trip to Turkey - We handle it all",
+            "fr": "Voyage en Turquie - Nous nous occupons de tout",
+            "nl": "Reis naar Turkije - Wij regelen alles",
+            "it": "Viaggio in Turchia - Ci occupiamo di tutto",
+            "tr": "Türkiye Seyahati - Her Şeyi Biz Ayarlıyoruz"
+        },
+        "t3": {
+            "de": "Behandlung – Hauptklinik Türkei",
+            "en": "Treatment - Main Clinic Turkey",
+            "fr": "Traitement - Clinique principale en Turquie",
+            "nl": "Behandeling - Hoofdkliniek Turkije",
+            "it": "Trattamento - Clinica principale in Turchia",
+            "tr": "Tedavi - Ana Klinik Türkiye"
+        },
+        "t4": {
+            "de": "Größtes Nachsorge-Netzwerk – AT·DE·CH",
+            "en": "Largest Aftercare Network - AT·DE·CH",
+            "fr": "Plus grand réseau de suivi - AT·DE·CH",
+            "nl": "Grootste nazorgnetwerk - AT·DE·CH",
+            "it": "La più grande rete di assistenza post-operatoria - AT·DE·CH",
+            "tr": "En Büyük Bakım Sonrası Ağı - AT·DE·CH"
+        },
+        "t5": {
+            "de": "Beratung – Vor Ort, Österreich",
+            "en": "Consultation - In person, Austria",
+            "fr": "Consultation - En personne, Autriche",
+            "nl": "Consult - Persoonlijk, Oostenrijk",
+            "it": "Consulenza - Di persona, Austria",
+            "tr": "Danışma - Yüz Yüze, Avusturya"
+        },
+        "t6": {
+            "de": "Reise in die Türkei – Wir organisieren alles",
+            "en": "Trip to Turkey - We handle it all",
+            "fr": "Voyage en Turquie - Nous nous occupons de tout",
+            "nl": "Reis naar Turkije - Wij regelen alles",
+            "it": "Viaggio in Turchia - Ci occupiamo di tutto",
+            "tr": "Türkiye Seyahati - Her Şeyi Biz Ayarlıyoruz"
+        },
+        "t7": {
+            "de": "Behandlung – Hauptklinik Türkei",
+            "en": "Treatment - Main Clinic Turkey",
+            "fr": "Traitement - Clinique principale en Turquie",
+            "nl": "Behandeling - Hoofdkliniek Turkije",
+            "it": "Trattamento - Clinica principale in Turchia",
+            "tr": "Tedavi - Ana Klinik Türkiye"
+        },
+        "t8": {
+            "de": "Größtes Nachsorge-Netzwerk – AT·DE·CH",
+            "en": "Largest Aftercare Network - AT·DE·CH",
+            "fr": "Plus grand réseau de suivi - AT·DE·CH",
+            "nl": "Grootste nazorgnetwerk - AT·DE·CH",
+            "it": "La più grande rete di assistenza post-operatoria - AT·DE·CH",
+            "tr": "En Büyük Bakım Sonrası Ağı - AT·DE·CH"
+        }
+    },
+    "promisesection": {
+        "t1": {
+            "de": "Unser Versprechen",
+            "en": "Our promise",
+            "fr": "Notre promesse",
+            "nl": "Onze belofte",
+            "it": "La nostra promessa",
+            "tr": "Sözümüz"
+        },
+        "t2": {
+            "de": "Österreich",
+            "en": "Austria",
+            "fr": "Autriche",
+            "nl": "Oostenrijk",
+            "it": "Austria",
+            "tr": "Avusturya"
+        },
+        "t3": {
+            "de": "Persönliche Beratung",
+            "en": "Personal consultation",
+            "fr": "Consultation personnelle",
+            "nl": "Persoonlijk consult",
+            "it": "Consulenza personale",
+            "tr": "Kişisel Danışma"
+        },
+        "t4": {
+            "de": "Ihr erstes Gespräch findet vor Ort statt, nicht per anonymem Chat. Wir klären Erwartungen, Methode und Ablauf, bevor Sie reisen.",
+            "en": "Your first conversation happens in person, not through an anonymous chat. We clarify expectations, method and process before you travel.",
+            "fr": "Votre première conversation a lieu en personne, pas via un chat anonyme. Nous clarifions les attentes, la méthode et le déroulement avant votre voyage.",
+            "nl": "Uw eerste gesprek vindt persoonlijk plaats, niet via een anonieme chat. We verduidelijken verwachtingen, methode en proces voordat u reist.",
+            "it": "La tua prima conversazione avviene di persona, non tramite una chat anonima. Chiariamo aspettative, metodo e procedura prima del tuo viaggio.",
+            "tr": "İlk görüşmeniz anonim bir sohbet üzerinden değil, yüz yüze gerçekleşir. Seyahat etmeden önce beklentileri, yöntemi ve süreci netleştiririz."
+        },
+        "t5": {
+            "de": "Hauptklinik Istanbul",
+            "en": "Main clinic, Istanbul",
+            "fr": "Clinique principale, Istanbul",
+            "nl": "Hoofdkliniek, Istanboel",
+            "it": "Clinica principale, Istanbul",
+            "tr": "Ana Klinik, İstanbul"
+        },
+        "t6": {
+            "de": "Behandlung mit 24/7-Betreuung",
+            "en": "Treatment with 24/7 care",
+            "fr": "Traitement avec soins 24h/24 et 7j/7",
+            "nl": "Behandeling met 24/7 zorg",
+            "it": "Trattamento con assistenza 24 ore su 24",
+            "tr": "7/24 Bakımla Tedavi"
+        },
+        "t7": {
+            "de": "Die Transplantation findet in unserer Hauptklinik statt, mit durchgehender ärztlicher Betreuung, nicht nur während des Eingriffs selbst.",
+            "en": "The transplant takes place at our main clinic, with continuous medical supervision, not just during the procedure itself.",
+            "fr": "La greffe a lieu dans notre clinique principale, avec une supervision médicale continue, pas seulement pendant l'intervention elle-même.",
+            "nl": "De transplantatie vindt plaats in onze hoofdkliniek, met continu medisch toezicht, niet alleen tijdens de ingreep zelf.",
+            "it": "Il trapianto avviene presso la nostra clinica principale, con supervisione medica continua, non solo durante l'intervento stesso.",
+            "tr": "Nakil, yalnızca işlem sırasında değil, sürekli tıbbi gözetim altında ana kliniğimizde gerçekleştirilir."
+        },
+        "t8": {
+            "de": "AT · DE · CH Netzwerk",
+            "en": "AT · DE · CH network",
+            "fr": "Réseau AT · DE · CH",
+            "nl": "AT · DE · CH netwerk",
+            "it": "Rete AT · DE · CH",
+            "tr": "AT · DE · CH Ağı"
+        },
+        "t9": {
+            "de": "Nachsorge in Ihrer Nähe",
+            "en": "Aftercare near you",
+            "fr": "Un suivi près de chez vous",
+            "nl": "Nazorg bij u in de buurt",
+            "it": "Assistenza post-operatoria vicino a te",
+            "tr": "Yakınınızda Bakım"
+        },
+        "t10": {
+            "de": "Zurück zuhause endet die Betreuung nicht: unser Kliniknetzwerk in Österreich, Deutschland und der Schweiz übernimmt die Nachsorge, von Medikamenten bis PRP-Behandlungen.",
+            "en": "Care doesn't end once you're home: our clinic network in Austria, Germany and Switzerland handles aftercare, from medication to PRP treatments.",
+            "fr": "Le suivi ne s'arrête pas une fois rentré chez vous : notre réseau de cliniques en Autriche, en Allemagne et en Suisse assure le suivi, des médicaments aux traitements PRP.",
+            "nl": "De zorg stopt niet zodra u weer thuis bent: ons klinieknetwerk in Oostenrijk, Duitsland en Zwitserland verzorgt de nazorg, van medicatie tot PRP-behandelingen.",
+            "it": "L'assistenza non finisce una volta tornati a casa: la nostra rete di cliniche in Austria, Germania e Svizzera si occupa dell'assistenza post-operatoria, dai farmaci ai trattamenti PRP.",
+            "tr": "Bakım, eve döndüğünüzde sona ermez: Avusturya, Almanya ve İsviçre'deki klinik ağımız, ilaçlardan PRP tedavilerine kadar bakım sonrası süreci yönetir."
+        },
+        "t11": {
+            "de": "Ein Anbieter, drei Länder, ein durchgehendes Betreuungsmodell.",
+            "en": "One provider, three countries, one continuous model of care.",
+            "fr": "Un seul prestataire, trois pays, un modèle de soins continu.",
+            "nl": "Eén aanbieder, drie landen, één doorlopend zorgmodel.",
+            "it": "Un unico fornitore, tre paesi, un modello di assistenza continua.",
+            "tr": "Tek sağlayıcı, üç ülke, kesintisiz bir bakım modeli."
+        }
     }
 }

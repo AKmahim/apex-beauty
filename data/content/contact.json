@@ -15,6 +15,390 @@
       "nl": "Vul het formulier in, we nemen binnen 24 uur contact met u op.",
       "it": "Compila il modulo, ti risponderemo entro 24 ore.",
       "tr": "Formu doldurun, 24 saat içinde size dönüş yapalım."
+    },
+    "t1": {
+      "de": "Info",
+      "en": "Info",
+      "fr": "Infos",
+      "nl": "Info",
+      "it": "Info",
+      "tr": "Bilgi"
+    },
+    "t2": {
+      "de": "Bedarf",
+      "en": "Needs",
+      "fr": "Besoins",
+      "nl": "Behoefte",
+      "it": "Esigenze",
+      "tr": "İhtiyaçlar"
+    },
+    "t3": {
+      "de": "Fotos",
+      "en": "Photos",
+      "fr": "Photos",
+      "nl": "Foto's",
+      "it": "Foto",
+      "tr": "Fotoğraflar"
+    },
+    "t4": {
+      "de": "Holen Sie sich Ihre kostenlose Haaranalyse",
+      "en": "Get Your Free Hair Analysis",
+      "fr": "Obtenez votre analyse capillaire gratuite",
+      "nl": "Krijg uw gratis haaranalyse",
+      "it": "Ottieni la tua analisi gratuita dei capelli",
+      "tr": "Ücretsiz Saç Analizinizi Alın"
+    },
+    "t5": {
+      "de": "Unser Expertenteam meldet sich innerhalb von 24 Stunden",
+      "en": "Our expert team will contact you within 24 hours",
+      "fr": "Notre équipe d'experts vous contactera sous 24 heures",
+      "nl": "Ons expertteam neemt binnen 24 uur contact met u op",
+      "it": "Il nostro team di esperti ti contatterà entro 24 ore",
+      "tr": "Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir"
+    },
+    "t6": {
+      "de": "Vollständiger Name *",
+      "en": "Full Name *",
+      "fr": "Nom complet *",
+      "nl": "Volledige naam *",
+      "it": "Nome completo *",
+      "tr": "Ad Soyad *"
+    },
+    "t7": {
+      "de": "E-Mail *",
+      "en": "Email *",
+      "fr": "E-mail *",
+      "nl": "E-mail *",
+      "it": "E-mail *",
+      "tr": "E-posta *"
+    },
+    "t8": {
+      "de": "Land *",
+      "en": "Country *",
+      "fr": "Pays *",
+      "nl": "Land *",
+      "it": "Paese *",
+      "tr": "Ülke *"
+    },
+    "t9": {
+      "de": "Telefon *",
+      "en": "Phone *",
+      "fr": "Téléphone *",
+      "nl": "Telefoon *",
+      "it": "Telefono *",
+      "tr": "Telefon *"
+    },
+    "t10": {
+      "de": "Weiter",
+      "en": "Continue",
+      "fr": "Continuer",
+      "nl": "Doorgaan",
+      "it": "Continua",
+      "tr": "Devam Et"
+    },
+    "t11": {
+      "de": "Ihr Geschlecht *",
+      "en": "Your Gender *",
+      "fr": "Votre sexe *",
+      "nl": "Uw geslacht *",
+      "it": "Il tuo genere *",
+      "tr": "Cinsiyetiniz *"
+    },
+    "t12": {
+      "de": "Männlich",
+      "en": "Male",
+      "fr": "Homme",
+      "nl": "Man",
+      "it": "Uomo",
+      "tr": "Erkek"
+    },
+    "t13": {
+      "de": "Weiblich",
+      "en": "Female",
+      "fr": "Femme",
+      "nl": "Vrouw",
+      "it": "Donna",
+      "tr": "Kadın"
+    },
+    "t14": {
+      "de": "Verfahren, die Sie interessieren *",
+      "en": "Procedures You're Interested In *",
+      "fr": "Interventions qui vous intéressent *",
+      "nl": "Ingrepen waarin u geïnteresseerd bent *",
+      "it": "Procedure di tuo interesse *",
+      "tr": "İlgilendiğiniz İşlemler *"
+    },
+    "t15": {
+      "de": "Haartransplantation",
+      "en": "Hair Transplant",
+      "fr": "Greffe de cheveux",
+      "nl": "Haartransplantatie",
+      "it": "Trapianto di capelli",
+      "tr": "Saç Ekimi"
+    },
+    "t16": {
+      "de": "Barttransplantation",
+      "en": "Beard Transplant",
+      "fr": "Greffe de barbe",
+      "nl": "Baardtransplantatie",
+      "it": "Trapianto di barba",
+      "tr": "Sakal Ekimi"
+    },
+    "t17": {
+      "de": "Augenbrauentransplantation",
+      "en": "Eyebrow Transplant",
+      "fr": "Greffe de sourcils",
+      "nl": "Wenkbrauwtransplantatie",
+      "it": "Trapianto di sopracciglia",
+      "tr": "Kaş Ekimi"
+    },
+    "t18": {
+      "de": "Unterstützende Therapien",
+      "en": "Supporting Therapies",
+      "fr": "Thérapies complémentaires",
+      "nl": "Ondersteunende therapieën",
+      "it": "Terapie di supporto",
+      "tr": "Destekleyici Tedaviler"
+    },
+    "t19": {
+      "de": "PRP-Therapie",
+      "en": "PRP Therapy",
+      "fr": "Thérapie PRP",
+      "nl": "PRP-therapie",
+      "it": "Terapia PRP",
+      "tr": "PRP Tedavisi"
+    },
+    "t20": {
+      "de": "Stammzelltherapie",
+      "en": "Stem Cell Therapy",
+      "fr": "Thérapie par cellules souches",
+      "nl": "Stamceltherapie",
+      "it": "Terapia con cellule staminali",
+      "tr": "Kök Hücre Tedavisi"
+    },
+    "t21": {
+      "de": "Exosom-Therapie",
+      "en": "Exosome Therapy",
+      "fr": "Thérapie par exosomes",
+      "nl": "Exosoomtherapie",
+      "it": "Terapia con esosomi",
+      "tr": "Ekzozom Tedavisi"
+    },
+    "t22": {
+      "de": "Hyperbarer Sauerstoff",
+      "en": "Hyperbaric Oxygen",
+      "fr": "Oxygénothérapie hyperbare",
+      "nl": "Hyperbare zuurstoftherapie",
+      "it": "Ossigenoterapia iperbarica",
+      "tr": "Hiperbarik Oksijen"
+    },
+    "t23": {
+      "de": "Wann planen Sie den Eingriff?",
+      "en": "When Are You Planning the Procedure?",
+      "fr": "Quand prévoyez-vous l'intervention ?",
+      "nl": "Wanneer plant u de ingreep?",
+      "it": "Quando prevedi l'intervento?",
+      "tr": "İşlemi Ne Zaman Planlıyorsunuz?"
+    },
+    "t24": {
+      "de": "Diesen Monat",
+      "en": "This month",
+      "fr": "Ce mois-ci",
+      "nl": "Deze maand",
+      "it": "Questo mese",
+      "tr": "Bu Ay"
+    },
+    "t25": {
+      "de": "In 1–3 Monaten",
+      "en": "In 1–3 months",
+      "fr": "Dans 1 à 3 mois",
+      "nl": "Over 1–3 maanden",
+      "it": "Tra 1 e 3 mesi",
+      "tr": "1-3 Ay İçinde"
+    },
+    "t26": {
+      "de": "In 3–6 Monaten",
+      "en": "In 3–6 months",
+      "fr": "Dans 3 à 6 mois",
+      "nl": "Over 3–6 maanden",
+      "it": "Tra 3 e 6 mesi",
+      "tr": "3-6 Ay İçinde"
+    },
+    "t27": {
+      "de": "In 6+ Monaten",
+      "en": "In 6+ months",
+      "fr": "Dans 6+ mois",
+      "nl": "Over 6+ maanden",
+      "it": "Tra 6+ mesi",
+      "tr": "6+ Ay İçinde"
+    },
+    "t28": {
+      "de": "Nur recherchieren",
+      "en": "Just researching",
+      "fr": "Je me renseigne seulement",
+      "nl": "Alleen aan het oriënteren",
+      "it": "Sto solo informandomi",
+      "tr": "Sadece Araştırıyorum"
+    },
+    "t29": {
+      "de": "Zusätzliche Notizen (optional)",
+      "en": "Additional Notes (Optional)",
+      "fr": "Remarques supplémentaires (facultatif)",
+      "nl": "Aanvullende opmerkingen (optioneel)",
+      "it": "Note aggiuntive (facoltativo)",
+      "tr": "Ek Notlar (İsteğe Bağlı)"
+    },
+    "t30": {
+      "de": "Zurück",
+      "en": "Back",
+      "fr": "Retour",
+      "nl": "Terug",
+      "it": "Indietro",
+      "tr": "Geri"
+    },
+    "t31": {
+      "de": "Weiter",
+      "en": "Continue",
+      "fr": "Continuer",
+      "nl": "Doorgaan",
+      "it": "Continua",
+      "tr": "Devam Et"
+    },
+    "t32": {
+      "de": "📸 Fotos sind optional. Unsere Experten kontaktieren Sie in jedem Fall.",
+      "en": "📸 Photos are optional. Our experts will contact you either way.",
+      "fr": "📸 Les photos sont facultatives. Nos experts vous contacteront dans tous les cas.",
+      "nl": "📸 Foto's zijn optioneel. Onze experts nemen sowieso contact met u op.",
+      "it": "📸 Le foto sono facoltative. I nostri esperti ti contatteranno comunque.",
+      "tr": "📸 Fotoğraflar isteğe bağlıdır. Uzmanlarımız her durumda sizinle iletişime geçecektir."
+    },
+    "t33": {
+      "de": "Vorne",
+      "en": "Front",
+      "fr": "Face avant",
+      "nl": "Voorkant",
+      "it": "Fronte",
+      "tr": "Ön"
+    },
+    "t34": {
+      "de": "Gesicht sichtbar",
+      "en": "Face visible",
+      "fr": "Visage visible",
+      "nl": "Gezicht zichtbaar",
+      "it": "Volto visibile",
+      "tr": "Yüz Görünür"
+    },
+    "t35": {
+      "de": "Oben",
+      "en": "Top",
+      "fr": "Dessus",
+      "nl": "Bovenkant",
+      "it": "Sopra",
+      "tr": "Üst"
+    },
+    "t36": {
+      "de": "Von oben",
+      "en": "From above",
+      "fr": "Vue de dessus",
+      "nl": "Van bovenaf",
+      "it": "Dall'alto",
+      "tr": "Yukarıdan"
+    },
+    "t37": {
+      "de": "Seite",
+      "en": "Side",
+      "fr": "Profil",
+      "nl": "Zijkant",
+      "it": "Lato",
+      "tr": "Yan"
+    },
+    "t38": {
+      "de": "Profil",
+      "en": "Profile",
+      "fr": "Profil",
+      "nl": "Profiel",
+      "it": "Profilo",
+      "tr": "Profil"
+    },
+    "t39": {
+      "de": "Spender",
+      "en": "Donor",
+      "fr": "Donneuse",
+      "nl": "Donor",
+      "it": "Donatrice",
+      "tr": "Donör"
+    },
+    "t40": {
+      "de": "Hinterkopf",
+      "en": "Back of head",
+      "fr": "Arrière de la tête",
+      "nl": "Achterhoofd",
+      "it": "Retro della testa",
+      "tr": "Baş Arkası"
+    },
+    "t41": {
+      "de": "Fotos hochgeladen",
+      "en": "photos uploaded",
+      "fr": "photos téléchargées",
+      "nl": "foto's geüpload",
+      "it": "foto caricate",
+      "tr": "fotoğraf yüklendi"
+    },
+    "t42": {
+      "de": "Rabattgutschein (optional)",
+      "en": "Discount Coupon (Optional)",
+      "fr": "Code de réduction (facultatif)",
+      "nl": "Kortingscode (optioneel)",
+      "it": "Codice sconto (facoltativo)",
+      "tr": "İndirim Kuponu (İsteğe Bağlı)"
+    },
+    "t43": {
+      "de": "Ich möchte über Aktionen und Angebote informiert werden.",
+      "en": "I'd like to be informed about promotions and offers.",
+      "fr": "Je souhaite être informé(e) des promotions et offres.",
+      "nl": "Ik wil op de hoogte worden gehouden van acties en aanbiedingen.",
+      "it": "Desidero essere informato/a su promozioni e offerte.",
+      "tr": "Kampanyalar ve fırsatlar hakkında bilgilendirilmek istiyorum."
+    },
+    "t44": {
+      "de": "🇪🇺 DSGVO · Ihre Daten sind geschützt",
+      "en": "🇪🇺 GDPR · Your data is protected",
+      "fr": "🇪🇺 RGPD · Vos données sont protégées",
+      "nl": "🇪🇺 AVG · Uw gegevens zijn beschermd",
+      "it": "🇪🇺 GDPR · I tuoi dati sono protetti",
+      "tr": "🇪🇺 GDPR · Verileriniz Korunmaktadır"
+    },
+    "t45": {
+      "de": "Zurück",
+      "en": "Back",
+      "fr": "Retour",
+      "nl": "Terug",
+      "it": "Indietro",
+      "tr": "Geri"
+    },
+    "t46": {
+      "de": "Absenden",
+      "en": "Submit",
+      "fr": "Envoyer",
+      "nl": "Versturen",
+      "it": "Invia",
+      "tr": "Gönder"
+    },
+    "t47": {
+      "de": "Vielen Dank!",
+      "en": "Thank You!",
+      "fr": "Merci !",
+      "nl": "Bedankt!",
+      "it": "Grazie!",
+      "tr": "Teşekkürler!"
+    },
+    "t48": {
+      "de": "Ihre Anfrage ist bei uns eingegangen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+      "en": "We've received your request. Our team will get back to you within 24 hours.",
+      "fr": "Nous avons bien reçu votre demande. Notre équipe vous recontactera sous 24 heures.",
+      "nl": "We hebben uw aanvraag ontvangen. Ons team neemt binnen 24 uur contact met u op.",
+      "it": "Abbiamo ricevuto la tua richiesta. Il nostro team ti risponderà entro 24 ore.",
+      "tr": "Talebinizi aldık. Ekibimiz 24 saat içinde sizinle iletişime geçecektir."
     }
   },
   "seo": {
