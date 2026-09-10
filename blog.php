@@ -101,12 +101,15 @@ ob_start();
 
   .bl-wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px 96px; }
   .bl-feature {
-    display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; align-items: stretch;
+    /* minmax(0, ...) rather than a bare fr: a track's automatic minimum is its
+       content's min-content width, and the cover image's intrinsic width was
+       forcing the track to 391px inside a 312px card at 360px wide. */
+    display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 0; align-items: stretch;
     background: #fff; border: 1px solid #e3edf6; border-radius: 22px; overflow: hidden;
     margin-top: -56px; position: relative; z-index: 2;
     box-shadow: 0 30px 60px -30px rgba(15,39,64,0.35);
   }
-  .bl-feature-media { background: #eef5fb; min-height: 300px; }
+  .bl-feature-media { background: #eef5fb; min-height: 300px; min-width: 0; overflow: hidden; }
   .bl-feature-media img { width: 100%; height: 100%; object-fit: cover; }
   .bl-feature-body { padding: 38px 38px 34px; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
   .bl-meta { font-size: 12.5px; color: var(--ink-soft); display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -147,7 +150,7 @@ ob_start();
   }
 
   @media (max-width: 860px) {
-    .bl-feature { grid-template-columns: 1fr; margin-top: -40px; }
+    .bl-feature { grid-template-columns: minmax(0, 1fr); margin-top: -40px; }
     .bl-feature-media { min-height: 220px; aspect-ratio: 16 / 9; }
     .bl-feature-body { padding: 28px 24px; }
   }
@@ -163,8 +166,10 @@ ob_start();
 <?php
 $siteHeaderMode = 'full';
 $siteActivePage = 'blog';
-$siteSectionBase = ($langBase === '' ? '/' : $langBase);
-$siteHomeHref = ($langBase === '' ? '/' : $langBase);
+// site-header.php prefixes the current language itself, so these must be the
+// bare template name. Passing an already-prefixed path produced /en/en links.
+$siteSectionBase = 'index.php';
+$siteHomeHref = 'index.php';
 include __DIR__ . '/includes/site-header.php';
 ?>
 

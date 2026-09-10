@@ -162,14 +162,19 @@ ob_start();
   }
 </style>
 </head>
-<body data-content-page="blog-post">
+<?php // No data-content-page here on purpose: an article renders entirely from
+      // its own JSON, server-side. Naming a page made content-loader.js fetch
+      // /api/content/blog-post, which does not exist, and 404 on every article. ?>
+<body>
 <?php require __DIR__ . '/includes/site-gtm-noscript.php'; ?>
 
 <?php
 $siteHeaderMode = 'full';
 $siteActivePage = 'blog';
-$siteSectionBase = ($langBase === '' ? '/' : $langBase);
-$siteHomeHref = ($langBase === '' ? '/' : $langBase);
+// site-header.php prefixes the current language itself, so these must be the
+// bare template name. Passing an already-prefixed path produced /en/en links.
+$siteSectionBase = 'index.php';
+$siteHomeHref = 'index.php';
 include __DIR__ . '/includes/site-header.php';
 ?>
 

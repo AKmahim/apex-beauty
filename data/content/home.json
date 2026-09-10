@@ -173,7 +173,7 @@
         },
         "cases": [
             {
-                "vorherImage": "assets/before.png",
+                "vorherImage": "assets/before.webp",
                 "vorherLine1": {
                     "de": "Bereich: Stirn & Krone",
                     "en": "Area: Hairline & crown",
@@ -190,7 +190,7 @@
                     "it": "Densità: bassa",
                     "tr": "Yoğunluk: Düşük"
                 },
-                "nachherImage": "assets/after.png",
+                "nachherImage": "assets/after.webp",
                 "nachherLine1": {
                     "de": "Transplantate präzise platziert",
                     "en": "Grafts precisely placed",
@@ -424,18 +424,18 @@
         "title": {
             "de": "Haartransplantation Österreich: Apex Beauty für Beratung, Behandlung & Nachsorge",
             "en": "Hair Transplant Austria: Apex Beauty for Consultation, Treatment & Aftercare",
-            "fr": "",
-            "nl": "",
-            "it": "",
-            "tr": ""
+            "fr": "Greffe de cheveux Autriche : Apex Beauty pour consultation, traitement et suivi",
+            "nl": "Haartransplantatie Oostenrijk: Apex Beauty voor consult, behandeling en nazorg",
+            "it": "Trapianto di capelli Austria: Apex Beauty per consulto, trattamento e post-operatorio",
+            "tr": "Avusturya saç ekimi: Apex Beauty ile danışma, tedavi ve sonrası bakım"
         },
         "description": {
             "de": "Persönliche Beratung in Österreich, Haartransplantation in unserer führenden Klinik in der Türkei und professionelle Nachsorge in Österreich, Deutschland und der Schweiz. Eines der größten Nachsorgenetzwerke Europas.",
             "en": "Personal consultation in Austria, hair transplantation at our leading clinic in Turkey, and professional aftercare in Austria, Germany and Switzerland. One of Europe's largest aftercare networks.",
-            "fr": "",
-            "nl": "",
-            "it": "",
-            "tr": ""
+            "fr": "Consultation personnelle en Autriche, greffe de cheveux dans notre clinique de référence en Turquie et suivi professionnel en Autriche, en Allemagne et en Suisse. L'un des plus grands réseaux de suivi d'Europe.",
+            "nl": "Persoonlijk consult in Oostenrijk, haartransplantatie in onze toonaangevende kliniek in Turkije en professionele nazorg in Oostenrijk, Duitsland en Zwitserland. Een van de grootste nazorgnetwerken van Europa.",
+            "it": "Consulto personale in Austria, trapianto di capelli nella nostra clinica di riferimento in Turchia e assistenza post-operatoria professionale in Austria, Germania e Svizzera. Una delle più grandi reti di follow-up d'Europa.",
+            "tr": "Avusturya'da kişisel danışma, Türkiye'deki önde gelen kliniğimizde saç ekimi ve Avusturya, Almanya ve İsviçre'de profesyonel sonrası bakım. Avrupa'nın en büyük bakım ağlarından biri."
         },
         "shareImage": "",
         "noindex": false

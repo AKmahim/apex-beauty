@@ -6,6 +6,11 @@ require_once __DIR__ . '/i18n.php';
 $siteHeaderMode = $siteHeaderMode ?? 'simple';
 $siteActivePage = $siteActivePage ?? '';
 $siteLangBase = apex_lang_base();
+// The pill has to show the language the server actually rendered, not a
+// hardcoded DE that only JS could correct. Blog pages define no applyLang(),
+// so a hardcoded value stayed wrong there forever.
+$siteCurrentLang = apex_current_lang();
+$siteLangOptions = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
 // Pages pass 'index.php' (the only value ever used in practice) or leave
 // these unset; either way the real link always needs the current language's
 // URL prefix, since a bare relative "index.php" resolves one level too deep
@@ -35,6 +40,14 @@ if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
       border-bottom: 1px solid rgba(255,255,255,0.7);
       box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset, 0 8px 24px -18px rgba(37,99,235,0.18);
     }
+    /* The header used to inherit its link reset from whatever global "a"
+       rule the surrounding page happened to define. Any page without one got
+       underlined, purple-on-visited browser defaults in the nav, which is
+       exactly what happened when the blog pages were added. Resetting it here
+       keeps the header correct on its own. .cta-btn keeps its own colour
+       because the colour reset is scoped to .nav-links. */
+    .nav a { text-decoration: none; }
+    .nav-links a { color: inherit; }
     .logo-lockup { display: flex; align-items: center; gap: 4px; }
     .logo-lockup img.lotus { height: 46px; width: auto; display: block; }
     .logo-lockup img.wordmark { height: 70px; width: auto; display: block; transform: translateY(3px); }
@@ -306,16 +319,13 @@ $medicalClinicSchema = [
   <div class="nav-right">
     <div class="lang-switch" id="langSwitch">
       <button type="button" class="lang-switch-toggle" id="langSwitchToggle" aria-haspopup="listbox" aria-expanded="false">
-        <span class="lang-switch-current">DE</span>
+        <span class="lang-switch-current"><?= htmlspecialchars(strtoupper($siteCurrentLang), ENT_QUOTES) ?></span>
         <svg class="lang-switch-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="lang-switch-menu" id="langSwitchMenu" role="listbox">
-        <button type="button" class="active" data-lang="de" role="option">DE</button>
-        <button type="button" class="inactive" data-lang="en" role="option">EN</button>
-        <button type="button" class="inactive" data-lang="fr" role="option">FR</button>
-        <button type="button" class="inactive" data-lang="nl" role="option">NL</button>
-        <button type="button" class="inactive" data-lang="it" role="option">IT</button>
-        <button type="button" class="inactive" data-lang="tr" role="option">TR</button>
+<?php foreach ($siteLangOptions as $siteLangOption): ?>
+        <button type="button" class="<?= $siteLangOption === $siteCurrentLang ? 'active' : 'inactive' ?>" data-lang="<?= htmlspecialchars($siteLangOption, ENT_QUOTES) ?>" role="option"><?= htmlspecialchars(strtoupper($siteLangOption), ENT_QUOTES) ?></button>
+<?php endforeach; ?>
       </div>
     </div>
     <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-fr="Nous contacter" data-nl="Neem contact op" data-it="Contattaci" data-tr="Bize Ulaşın">Kontakt aufnehmen</a>
@@ -336,16 +346,13 @@ $medicalClinicSchema = [
   <div class="nav-right">
     <div class="lang-switch" id="langSwitch">
       <button type="button" class="lang-switch-toggle" id="langSwitchToggle" aria-haspopup="listbox" aria-expanded="false">
-        <span class="lang-switch-current">DE</span>
+        <span class="lang-switch-current"><?= htmlspecialchars(strtoupper($siteCurrentLang), ENT_QUOTES) ?></span>
         <svg class="lang-switch-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="lang-switch-menu" id="langSwitchMenu" role="listbox">
-        <button type="button" class="active" data-lang="de" role="option">DE</button>
-        <button type="button" class="inactive" data-lang="en" role="option">EN</button>
-        <button type="button" class="inactive" data-lang="fr" role="option">FR</button>
-        <button type="button" class="inactive" data-lang="nl" role="option">NL</button>
-        <button type="button" class="inactive" data-lang="it" role="option">IT</button>
-        <button type="button" class="inactive" data-lang="tr" role="option">TR</button>
+<?php foreach ($siteLangOptions as $siteLangOption): ?>
+        <button type="button" class="<?= $siteLangOption === $siteCurrentLang ? 'active' : 'inactive' ?>" data-lang="<?= htmlspecialchars($siteLangOption, ENT_QUOTES) ?>" role="option"><?= htmlspecialchars(strtoupper($siteLangOption), ENT_QUOTES) ?></button>
+<?php endforeach; ?>
       </div>
     </div>
     <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kostenlose Beratung" data-en="Free consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</a>
@@ -369,8 +376,32 @@ $medicalClinicSchema = [
   })();
 
   // Language pill: click to drop the language list down, click a language or
-  // click outside to close it again. applyLang() itself (which swaps the
-  // actual text and updates .active/.lang-switch-current) lives per-page.
+  // click outside to close it again.
+  //
+  // Picking a language navigates to that language's URL rather than repainting
+  // the current page in place. Every language has had a real URL since the
+  // /fr, /nl, /it and /tr prefixes went in, so repainting left the address bar
+  // disagreeing with what was on screen, and it never worked at all on blog
+  // articles, whose body is server-rendered in one language and carries no
+  // per-language attributes to swap. This listener runs in the capture phase
+  // and stops propagation so the older per-page handlers do not also fire.
+  (function () {
+    var PREFIXED = ['en', 'fr', 'nl', 'it', 'tr'];
+    function localizedHref(lang) {
+      var path = location.pathname.replace(/^\/(en|fr|nl|it|tr)(?=\/|$)/, '');
+      var base = PREFIXED.indexOf(lang) === -1 ? '' : '/' + lang;
+      var target = base + (path === '/' || path === '' ? '' : path);
+      return (target === '' ? '/' : target) + location.search + location.hash;
+    }
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest ? e.target.closest('.lang-switch-menu [data-lang]') : null;
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      location.href = localizedHref(btn.getAttribute('data-lang'));
+    }, true);
+  })();
+
   (function () {
     document.querySelectorAll('.lang-switch').forEach(function (ls) {
       var toggle = ls.querySelector('.lang-switch-toggle');

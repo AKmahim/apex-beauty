@@ -56,8 +56,10 @@ ob_start();
 <?php
 $siteHeaderMode = 'full';
 $siteActivePage = 'blog';
-$siteSectionBase = ($langBase === '' ? '/' : $langBase);
-$siteHomeHref = ($langBase === '' ? '/' : $langBase);
+// site-header.php prefixes the current language itself, so these must be the
+// bare template name. Passing an already-prefixed path produced /en/en links.
+$siteSectionBase = 'index.php';
+$siteHomeHref = 'index.php';
 include __DIR__ . '/site-header.php';
 ?>
 <main class="nf">

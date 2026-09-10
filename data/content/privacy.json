@@ -151,18 +151,18 @@
     "title": {
       "de": "Datenschutzerklärung · Apex Beauty",
       "en": "Privacy Policy · Apex Beauty",
-      "fr": "",
-      "nl": "",
-      "it": "",
-      "tr": ""
+      "fr": "Politique de confidentialité · Apex Beauty",
+      "nl": "Privacyverklaring · Apex Beauty",
+      "it": "Informativa sulla privacy · Apex Beauty",
+      "tr": "Gizlilik politikası · Apex Beauty"
     },
     "description": {
       "de": "Datenschutzerklärung von Apex Beauty: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
       "en": "Apex Beauty's privacy policy: information on the processing of personal data under GDPR.",
-      "fr": "",
-      "nl": "",
-      "it": "",
-      "tr": ""
+      "fr": "Politique de confidentialité d’Apex Beauty : informations sur le traitement des données personnelles conformément au RGPD.",
+      "nl": "Privacyverklaring van Apex Beauty: informatie over de verwerking van persoonsgegevens onder de AVG.",
+      "it": "Informativa sulla privacy di Apex Beauty: informazioni sul trattamento dei dati personali ai sensi del GDPR.",
+      "tr": "Apex Beauty gizlilik politikası: KVKK ve GDPR kapsamında kişisel verilerin işlenmesi hakkında bilgiler."
     },
     "shareImage": "",
     "noindex": true

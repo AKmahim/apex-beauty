@@ -758,7 +758,14 @@ ob_start();
       display: flex; flex-direction: column; align-items: stretch;
       justify-content: space-evenly; flex: 1;
       gap: 0; /* desktop grid's 48px gap would otherwise pad every flex row */
+      /* As a flex item this keeps min-width:auto by default, so it refuses to
+         shrink below its widest content and overflows the clipped .hero on
+         narrow screens. German fits by luck; Italian and French were being cut
+         off at 360px. */
+      min-width: 0;
     }
+    .hero-inner > * { min-width: 0; }
+    .hero-sub-mobile, .hero-sub { overflow-wrap: anywhere; }
     .hero-inner > div:first-child { display: contents; }
     .eyebrow { order: 1; margin-bottom: 12px; align-self: flex-start; }
     h1 { order: 2; font-size: 26px; margin-bottom: 10px; }
@@ -780,8 +787,11 @@ ob_start();
     }
     .fc-1:hover { transform: scale(0.8); }
     /* Keep the eyebrow pill on a single line on phones. */
-    .eyebrow { font-size: 10px; padding: 5px 11px; white-space: nowrap; }
-    .eyebrow span:last-child { overflow: hidden; text-overflow: ellipsis; }
+    /* The ellipsis below only engages if the pill is actually bounded. Without
+       max-width it grew to its nowrap content width (393px at a 360px
+       viewport in Italian) and got cut off by the hero's overflow instead. */
+    .eyebrow { font-size: 10px; padding: 5px 11px; white-space: nowrap; max-width: 100%; }
+    .eyebrow span:last-child { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
     .announce-inner { padding: 9px 16px; gap: 10px; }
     .announce-items { gap: 16px; }
     .announce-item b { font-size: 10.5px; }
@@ -1450,7 +1460,7 @@ include __DIR__ . '/includes/site-header.php';
             <div class="ba-photo ba-before">
               <span class="ba-tag" data-de="VORHER" data-en="BEFORE" data-fr="AVANT" data-nl="VOOR" data-it="PRIMA" data-tr="ÖNCESİ">VORHER</span>
               <div class="ba-photo-frame">
-                <img src="/assets/before.png" alt="Vorher" loading="lazy" data-cmediafield="vorherImage">
+                <img src="/assets/before.webp" alt="Vorher" loading="lazy" data-cmediafield="vorherImage">
               </div>
               <div class="ba-callout">
                 <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v3M9 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 0v7m-3 0h6"/></svg></div>
@@ -1464,7 +1474,7 @@ include __DIR__ . '/includes/site-header.php';
             <div class="ba-photo ba-after">
               <span class="ba-tag" data-de="NACHHER" data-en="AFTER" data-fr="APRÈS" data-nl="NA" data-it="DOPO" data-tr="SONRASI">NACHHER</span>
               <div class="ba-photo-frame">
-                <img src="/assets/after.png" alt="Nachher" loading="lazy" data-cmediafield="nachherImage">
+                <img src="/assets/after.webp" alt="Nachher" loading="lazy" data-cmediafield="nachherImage">
               </div>
               <div class="ba-callout">
                 <div class="ba-callout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
@@ -2311,7 +2321,7 @@ include __DIR__ . '/includes/site-header.php';
      of the earth textures at all. -->
 <script>
   if (!isLightLanding) {
-    import('./assets/earth-globe.js').then(function (mod) {
+    import('/assets/earth-globe.js').then(function (mod) {
       var root = document.getElementById('earthGlobe');
       if (root) window.__earthGlobeApi = mod.initEarthGlobe(root);
     });
