@@ -59,6 +59,13 @@ function apex_blog_normalise(array $post, string $slug): array
         'updatedAt' => is_string($post['updatedAt'] ?? null) ? substr((string) $post['updatedAt'], 0, 10) : gmdate('Y-m-d'),
         'author' => is_string($post['author'] ?? null) && $post['author'] !== '' ? $post['author'] : APEX_BUSINESS_NAME,
         'coverImage' => is_string($post['coverImage'] ?? null) ? $post['coverImage'] : '',
+        // Every URL this post has ever had. Renaming a published article used
+        // to leave the old URL as a hard 404, losing whatever ranking and
+        // links it had earned; these let the old URL redirect instead.
+        'previousSlugs' => array_values(array_unique(array_filter(
+            is_array($post['previousSlugs'] ?? null) ? $post['previousSlugs'] : [],
+            static fn($v): bool => is_string($v) && apex_blog_valid_slug($v)
+        ))),
     ];
     foreach (APEX_BLOG_LANG_FIELDS as $field) {
         $value = $post[$field] ?? null;
@@ -90,6 +97,16 @@ function apex_blog_save(string $slug, array $post): ?array
         return null;
     }
     $post = apex_blog_normalise($post, $slug);
+    // The admin panel round-trips the post through the browser, and the browser
+    // has no reason to know about retired URLs. Merging with what is already on
+    // disk means a normal save cannot silently drop the redirect history.
+    $existing = apex_blog_get($slug);
+    if ($existing !== null) {
+        $post['previousSlugs'] = array_values(array_unique(
+            array_merge($existing['previousSlugs'], $post['previousSlugs'])
+        ));
+    }
+    $post['previousSlugs'] = array_values(array_diff($post['previousSlugs'], [$slug]));
     $post['updatedAt'] = gmdate('Y-m-d');
     file_put_contents($path, json_encode($post, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     return $post;
@@ -111,7 +128,31 @@ function apex_blog_rename(string $from, string $to): bool
     if ($fromPath === null || $toPath === null || !is_file($fromPath) || is_file($toPath)) {
         return false;
     }
-    return rename($fromPath, $toPath);
+    if (!rename($fromPath, $toPath)) {
+        return false;
+    }
+    // Remember where this post used to live so the old URL can redirect.
+    $post = apex_blog_get($to);
+    if ($post !== null) {
+        $post['previousSlugs'][] = $from;
+        apex_blog_save($to, $post);
+    }
+    return true;
+}
+
+// Finds the post that a retired URL now belongs to, so it can 301 rather
+// than 404.
+function apex_blog_find_by_previous_slug(string $slug): ?array
+{
+    if (!apex_blog_valid_slug($slug)) {
+        return null;
+    }
+    foreach (apex_blog_all(false) as $post) {
+        if (in_array($slug, $post['previousSlugs'], true)) {
+            return $post;
+        }
+    }
+    return null;
 }
 
 // Newest first. Drafts are included only when asked for, so the same call

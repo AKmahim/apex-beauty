@@ -35,6 +35,10 @@
       'settings-title': 'Site settings',
       'settings-sub': 'Verification codes and tracking IDs. These apply to every page.',
       'settings-save': 'Save settings',
+      'counter-empty': 'empty, the coded fallback will be used',
+      'counter-short': 'short, you have room for more',
+      'counter-ok': 'good length',
+      'counter-over': 'Google will likely cut this off',
       'set-googleSiteVerification': 'Google Search Console verification code',
       'set-googleSiteVerification-help': 'Paste only the code from the meta tag Google gives you, not the whole tag.',
       'set-bingSiteVerification': 'Bing Webmaster Tools verification code',
@@ -157,6 +161,10 @@
       'settings-title': 'Website-Einstellungen',
       'settings-sub': 'Bestätigungscodes und Tracking-IDs. Sie gelten für jede Seite.',
       'settings-save': 'Einstellungen speichern',
+      'counter-empty': 'leer, es wird der hinterlegte Standard verwendet',
+      'counter-short': 'kurz, es ist noch Platz',
+      'counter-ok': 'gute Länge',
+      'counter-over': 'Google schneidet das vermutlich ab',
       'set-googleSiteVerification': 'Google-Search-Console-Bestätigungscode',
       'set-googleSiteVerification-help': 'Nur den Code aus dem Meta-Tag von Google einfügen, nicht das ganze Tag.',
       'set-bingSiteVerification': 'Bing-Webmaster-Tools-Bestätigungscode',
@@ -985,6 +993,12 @@
     return item;
   }
 
+  function counterText(len, limit) {
+    var state = len === 0 ? 'empty' : (len > limit ? 'over' : (len < Math.round(limit * 0.5) ? 'short' : 'ok'));
+    var label = { empty: t('counter-empty'), over: t('counter-over'), short: t('counter-short'), ok: t('counter-ok') }[state];
+    return '<span class="cc ' + state + '">' + len + ' / ' + limit + ' &middot; ' + escapeHtml(label) + '</span>';
+  }
+
   function textOrArea(field, dataAttrs, value) {
     // <input> can't hold its value as inner text (only <textarea> can) —
     // richtext fields render as a textarea with the value as content,
@@ -1071,6 +1085,20 @@
         </div>`;
       }
       values[f.key] = normalizeLangValue((sectionState[currentPage][currentSectionKey] || {})[f.key]);
+      if (f.counter) {
+        // Google truncates on pixel width, not characters, so this is a guide
+        // rather than a hard limit. Still the single thing an SEO editor asks
+        // for first, because otherwise you are writing titles blind.
+        const val = values[f.key][currentContentLang] || '';
+        return `
+        <div class="field-row">
+          <label>${escapeHtml(schemaLabel(f.label))}</label>
+          <div>
+            ${textOrArea(f, `data-field="${f.key}" data-counter="${f.counter}"`, val)}
+            <div class="char-counter" data-counter-for="${f.key}">${counterText(val.length, f.counter)}</div>
+          </div>
+        </div>`;
+      }
       return `
         <div class="field-row">
           <label>${escapeHtml(schemaLabel(f.label))}</label>
@@ -1220,6 +1248,10 @@
     if (e.target.matches('[data-field]')) {
       const key = e.target.dataset.field;
       if (card.__values[key]) card.__values[key][currentContentLang] = e.target.value;
+      if (e.target.dataset.counter) {
+        const box = card.querySelector(`[data-counter-for="${key}"]`);
+        if (box) box.innerHTML = counterText(e.target.value.length, Number(e.target.dataset.counter));
+      }
       updateMissingDots();
       return;
     }

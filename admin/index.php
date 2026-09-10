@@ -244,6 +244,13 @@
   .field-row.toggle-row { grid-template-columns: 1fr; }
   .field-row.toggle-row label { display: flex; align-items: center; gap: 9px; padding-top: 2px; cursor: pointer; font-weight: 600; }
   .field-row.toggle-row input[type="checkbox"] { width: 16px; height: 16px; margin: 0; accent-color: var(--blue-600); cursor: pointer; }
+  .char-counter { margin-top: 5px; font-size: 11px; }
+  .char-counter .cc { display: inline-block; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+  .char-counter .cc.ok { background: #dcfce7; color: #166534; }
+  .char-counter .cc.short { background: #e0f2fe; color: #075985; }
+  .char-counter .cc.over { background: #fee2e2; color: #b91c1c; }
+  .char-counter .cc.empty { background: #f1f5f9; color: #64748b; }
+
   /* ---- Blog ---- */
   .blog-item {
     display: block; width: 100%; text-align: left; border: 0; background: transparent;

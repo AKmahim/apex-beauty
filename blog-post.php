@@ -10,6 +10,17 @@ $langBase = apex_lang_base();
 $slug = (string) ($_GET['slug'] ?? '');
 $post = apex_blog_valid_slug($slug) ? apex_blog_get($slug) : null;
 
+// A URL this post used to live at redirects permanently to where it lives now,
+// so renaming a slug in the admin panel does not throw away the ranking and
+// the links the old URL had earned.
+if ($post === null) {
+    $moved = apex_blog_find_by_previous_slug($slug);
+    if ($moved !== null && $moved['status'] === 'published') {
+        header('Location: /' . apex_blog_post_path($moved['slug']), true, 301);
+        return;
+    }
+}
+
 // A draft, a missing post, or one with nothing written in this language is a
 // genuine 404 rather than an empty page, so Google never indexes a shell.
 if ($post === null || $post['status'] !== 'published' || !apex_blog_has_language($post, $currentLang)) {

@@ -188,7 +188,21 @@ function apex_seo_text(string $page, string $key, ?string $lang = null): string
     $lang = $lang ?? apex_current_lang();
     $value = apex_seo_section($page)[$key][$lang] ?? null;
     if (!is_string($value) || trim($value) === '') {
-        $value = apex_seo_entry($page)[$key][$lang] ?? '';
+        // The admin value is resolved strictly per language above: a German
+        // title must never surface on an English URL just because English was
+        // left blank. The coded fallback below is a different thing, a
+        // developer-curated safety net, so it does chain. Without this, an
+        // editor who cleared the French title got a page titled just
+        // "Apex Beauty" with no description, silently, in four languages.
+        $entry = apex_seo_entry($page);
+        foreach ([$lang, 'en', 'de'] as $try) {
+            $candidate = $entry[$key][$try] ?? null;
+            if (is_string($candidate) && trim($candidate) !== '') {
+                $value = $candidate;
+                break;
+            }
+        }
+        $value = is_string($value) ? $value : '';
     }
     $value = strtr((string) $value, apex_seo_tokens($page, $lang));
     // Any token the page does not supply drops out rather than showing up as

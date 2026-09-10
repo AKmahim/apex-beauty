@@ -9,8 +9,8 @@ $seoSection = static function (string $descriptionLabel): array {
     return [
         'label' => 'Search engine listing',
         'fields' => [
-            ['key' => 'title', 'label' => 'Title shown in Google and the browser tab (about 60 characters)', 'type' => 'text'],
-            ['key' => 'description', 'label' => $descriptionLabel, 'type' => 'richtext'],
+            ['key' => 'title', 'label' => 'Title shown in Google and the browser tab (about 60 characters)', 'type' => 'text', 'counter' => 60],
+            ['key' => 'description', 'label' => $descriptionLabel, 'type' => 'richtext', 'counter' => 155],
             ['key' => 'shareImage', 'label' => 'Image shown when the page is shared on social media (1200 x 630 pixels works best)', 'type' => 'image'],
             ['key' => 'noindex', 'label' => 'Hide this page from Google', 'type' => 'toggle'],
         ],
