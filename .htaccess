@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Any URL that does not resolve gets the branded page rather than Apache's
+# bare "Not Found" text. 404.php sets the 404 status itself.
+ErrorDocument 404 /404.php
+
 <FilesMatch "^\.env">
 	Require all denied
 </FilesMatch>

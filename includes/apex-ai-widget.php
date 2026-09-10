@@ -5,6 +5,23 @@
 // on every page but pinned to the opposite (left) side.
 if (!defined('APEX_AI_WIDGET_EMITTED')):
 define('APEX_AI_WIDGET_EMITTED', true);
+
+require_once __DIR__ . '/i18n.php';
+// The chat collects a name, an email and optionally a phone number, so the
+// privacy notice has to be visible at the point of collection, not only in the
+// message the bot sends at the end. Chat messages render as plain text with no
+// markup, which is the right call for safety, so the linked notice lives in the
+// widget's own chrome instead.
+$aiLang = apex_current_lang();
+$aiPrivacyHref = apex_lang_base($aiLang) . '/privacy';
+$aiPrivacyNote = [
+    'de' => ['Ihre Angaben nutzen wir nur für diese Anfrage.', 'Datenschutz'],
+    'en' => ['We use your details only for this enquiry.', 'Privacy'],
+    'fr' => ['Vos données servent uniquement à cette demande.', 'Confidentialité'],
+    'nl' => ['We gebruiken uw gegevens alleen voor deze aanvraag.', 'Privacy'],
+    'it' => ['Usiamo i tuoi dati solo per questa richiesta.', 'Privacy'],
+    'tr' => ['Bilgilerinizi yalnızca bu talep için kullanırız.', 'Gizlilik'],
+][$aiLang] ?? ['We use your details only for this enquiry.', 'Privacy'];
 ?>
 <style>
   .apex-ai-launcher {
@@ -112,6 +129,11 @@ define('APEX_AI_WIDGET_EMITTED', true);
   }
   .apex-ai-inputrow button:hover { background: var(--blue-700); }
   .apex-ai-inputrow button:disabled { opacity: 0.5; cursor: default; }
+  .apex-ai-privacy {
+    flex: none; padding: 0 12px 9px; background: #fff; font-size: 10.5px; line-height: 1.4;
+    color: var(--ink-soft, #45596a); text-align: center;
+  }
+  .apex-ai-privacy a { color: var(--blue-600, #2563eb); text-decoration: underline; }
 
   @media (max-width: 640px) {
     .apex-ai-launcher { bottom: 16px; left: 16px; width: 50px; height: 50px; }
@@ -139,6 +161,10 @@ define('APEX_AI_WIDGET_EMITTED', true);
   <div class="apex-ai-inputrow">
     <input type="text" id="apexAiInput" maxlength="500" autocomplete="off">
     <button type="button" id="apexAiSend"></button>
+  </div>
+  <div class="apex-ai-privacy">
+    <?= htmlspecialchars($aiPrivacyNote[0], ENT_QUOTES) ?>
+    <a href="<?= htmlspecialchars($aiPrivacyHref, ENT_QUOTES) ?>"><?= htmlspecialchars($aiPrivacyNote[1], ENT_QUOTES) ?></a>
   </div>
 </div>
 

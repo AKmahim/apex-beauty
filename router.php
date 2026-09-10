@@ -86,5 +86,6 @@ if ($trimmed !== '' && preg_match('/^[A-Za-z0-9-]+$/', $trimmed) === 1) {
     }
 }
 
-http_response_code(404);
-echo 'Not Found';
+// Mirrors the ErrorDocument rule in .htaccess.
+require $root . '/404.php';
+return true;
