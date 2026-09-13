@@ -36,8 +36,14 @@ ob_start();
 <link rel="icon" href="/assets/lotus-transparent.png" type="image/png">
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
-<script src="/assets/cookie-consent.js"></script>
-<style>
+<!-- DOMPurify + wrapper: loaded before anything that writes markup into the
+     DOM, so the language switcher never assigns unsanitised innerHTML. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<script src="/assets/vendor/purify-3.1.6.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-safe-html.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-actions.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/cookie-consent.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root { --teal-500: #0ea5e9; --blue-600: #2563eb; --ink: #0f2027; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; color: var(--ink); background: #fff; }

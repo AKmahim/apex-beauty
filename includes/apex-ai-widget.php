@@ -23,7 +23,7 @@ $aiPrivacyNote = [
     'tr' => ['Bilgilerinizi yalnızca bu talep için kullanırız.', 'Gizlilik'],
 ][$aiLang] ?? ['We use your details only for this enquiry.', 'Privacy'];
 ?>
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   .apex-ai-launcher {
     position: fixed; bottom: 24px; left: 24px; z-index: 90;
     width: 56px; height: 56px; border-radius: 50%;
@@ -168,5 +168,5 @@ $aiPrivacyNote = [
   </div>
 </div>
 
-<script src="/assets/apex-ai.js" defer></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-ai.js'), ENT_QUOTES) ?>" defer nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 <?php endif; ?>

@@ -7,6 +7,6 @@ if ($apexGtmId === '') {
 }
 ?>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= htmlspecialchars($apexGtmId, ENT_QUOTES) ?>"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe class="u-26" src="https://www.googletagmanager.com/ns.html?id=<?= htmlspecialchars($apexGtmId, ENT_QUOTES) ?>"
+height="0" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->

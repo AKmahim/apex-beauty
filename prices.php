@@ -118,13 +118,19 @@ ob_start();
 <link rel="icon" href="/assets/lotus-transparent.png" type="image/png">
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
-<script type="application/ld+json"><?= json_encode($pricesSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<script type="application/ld+json" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"><?= json_encode($pricesSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php require __DIR__ . '/includes/site-pixel.php'; ?>
-<script src="/assets/meta-pixel.js"></script>
-<script src="/assets/cookie-consent.js"></script>
-<script src="/assets/content-loader.js"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/meta-pixel.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<!-- DOMPurify + wrapper: loaded before anything that writes markup into the
+     DOM, so the language switcher never assigns unsanitised innerHTML. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<script src="/assets/vendor/purify-3.1.6.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-safe-html.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-actions.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/cookie-consent.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/content-loader.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 <?php require __DIR__ . '/includes/site-gtm.php'; ?>
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root {
     --teal-400: #38bdf8;
     --teal-500: #0ea5e9;
@@ -705,7 +711,7 @@ include __DIR__ . '/includes/site-header.php';
     <p<?= apex_cms_attrs($prCta['sub'] ?? null) ?>><?= apex_cms_value($prCta['sub'] ?? null, $currentLang) ?></p>
     <div class="pr-band-actions">
       <a class="pr-band-btn" href="<?= htmlspecialchars($consultHref, ENT_QUOTES) ?>" data-de="Kostenlose Beratung sichern" data-en="Book a free consultation" data-fr="Réserver une consultation gratuite" data-nl="Gratis consult aanvragen" data-it="Prenota una consulenza gratuita" data-tr="Ücretsiz danışma alın">Kostenlose Beratung sichern</a>
-      <a class="pr-band-btn ghost" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" onclick="trackWhatsAppContact()">
+      <a class="pr-band-btn ghost" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" data-click="whatsapp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.35 5.07L2 22l5.1-1.33C8.55 21.5 10.24 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.24c-.22.62-1.28 1.17-1.77 1.24-.45.07-.99.1-1.6-.1-.37-.12-.84-.27-1.44-.53-2.53-1.1-4.18-3.65-4.31-3.82-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.5-.31.66-.31.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.74 1.83.8 1.96.07.13.11.29.02.46-.09.17-.13.27-.26.42-.13.15-.27.33-.39.44-.13.13-.26.27-.11.53.15.26.66 1.09 1.42 1.76.98.87 1.8 1.14 2.06 1.27.26.13.41.11.56-.06.15-.18.63-.74.8-.99.17-.26.34-.21.57-.13.22.09 1.43.67 1.68.79.24.13.4.19.46.29.07.11.07.61-.15 1.24z"/></svg>
         <span data-de="Auf WhatsApp fragen" data-en="Ask on WhatsApp" data-fr="Demander sur WhatsApp" data-nl="Vraag het op WhatsApp" data-it="Chiedi su WhatsApp" data-tr="WhatsApp'tan sorun">Auf WhatsApp fragen</span>
       </a>
@@ -715,11 +721,11 @@ include __DIR__ . '/includes/site-header.php';
 
 <?php include __DIR__ . '/includes/site-footer.php'; ?>
 
-<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
+<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" data-click="whatsapp">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
 </a>
 
-<script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   // The consultation modal lives on the homepage, so the shared header's
   // CTA buttons (which call openConsult) navigate there instead of trying
   // to open a modal that does not exist on this page.
@@ -739,7 +745,7 @@ include __DIR__ . '/includes/site-header.php';
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
       if (val === null && fallback) val = el.getAttribute('data-' + fallback);
-      if (val !== null) el.innerHTML = val;
+      if (val !== null) apexSetHTML(el, val);
     });
     document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       s.className = s.getAttribute('data-lang') === lang ? 'active' : 'inactive';

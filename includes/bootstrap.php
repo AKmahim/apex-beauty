@@ -124,12 +124,21 @@ function apex_same_origin_base(): string
     return '';
 }
 
+// The public endpoints (lead capture, chat) used to answer every origin with
+// "*", which let any site on the internet post into the leads table from a
+// visitor's browser. They now answer only the origins this clinic actually
+// publishes from - see apex_allowed_origins() in security.php, overridable
+// with APEX_ALLOWED_ORIGINS when a campaign page lives somewhere else.
 function apex_send_cors(array $methods, array $headers = ['Content-Type']): void
 {
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: ' . implode(', ', $methods));
-    if ($headers) {
-        header('Access-Control-Allow-Headers: ' . implode(', ', $headers));
+    $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+    if ($origin !== '' && in_array(strtolower($origin), array_map('strtolower', apex_allowed_origins()), true)) {
+        header('Access-Control-Allow-Origin: ' . $origin);
+        header('Vary: Origin');
+        header('Access-Control-Allow-Methods: ' . implode(', ', $methods));
+        if ($headers) {
+            header('Access-Control-Allow-Headers: ' . implode(', ', $headers));
+        }
     }
     if (apex_request_method() === 'OPTIONS') {
         http_response_code(204);
@@ -138,3 +147,11 @@ function apex_send_cors(array $methods, array $headers = ['Content-Type']): void
 }
 
 apex_bootstrap();
+
+// Loaded last because it uses apex_env()/apex_json_response() above, and
+// called here rather than in each template so that no page, API route or
+// generated file can be served without the hardening headers.
+require_once __DIR__ . '/security.php';
+apex_error_reporting();
+apex_install_error_handlers();
+apex_security_headers();

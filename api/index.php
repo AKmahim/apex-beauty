@@ -13,9 +13,29 @@ require_once __DIR__ . '/../includes/export.php';
 require_once __DIR__ . '/../includes/apex-ai.php';
 require_once __DIR__ . '/../includes/apex-ai-sales.php';
 
+// A POST larger than post_max_size is discarded by PHP before any of this
+// runs: $_POST and $_FILES arrive empty, the session cookie is never read,
+// and the request then fails the auth check further down - so an editor who
+// picked an oversized video was told they were logged out. Catching it here,
+// ahead of everything, turns that into the one sentence that is actually
+// true. 413 rather than 400, because the request really was too large.
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    $contentLength = (int) ($_SERVER['CONTENT_LENGTH'] ?? 0);
+    $postMax = apex_upload_ini_bytes('post_max_size');
+    if ($contentLength > 0 && $postMax > 0 && $contentLength > $postMax && !$_POST && !$_FILES) {
+        apex_json_response([
+            'error' => 'That upload is too large for this server (limit '
+                . apex_format_bytes($postMax) . ' per request).',
+        ], 413);
+    }
+}
+
 $method = apex_request_method();
 $path = preg_replace('#^/api/?#', '', apex_request_path()) ?? '';
 $segments = array_values(array_filter(explode('/', trim($path, '/')), static fn(string $segment): bool => $segment !== ''));
+
+const APEX_LEAD_MAX_FIELD_LENGTH = 2000;
+const APEX_LEAD_MAX_PER_HOUR = 12;
 
 function apex_not_found(): never
 {
@@ -47,8 +67,25 @@ if (($segments[0] ?? '') === 'leads') {
     if (empty($lead['name']) || empty($lead['email'])) {
         apex_json_response(['error' => 'name and email are required.'], 400);
     }
+    if (!is_string($lead['email']) || filter_var($lead['email'], FILTER_VALIDATE_EMAIL) === false) {
+        apex_json_response(['error' => 'A valid email address is required.'], 400);
+    }
+    // Caps every submitted string before it reaches the database. Without
+    // this the form is a free write of unbounded text from anyone on the
+    // internet, and the notes field in particular had no ceiling at all.
+    foreach ($lead as $key => $value) {
+        if (is_string($value) && mb_strlen($value) > APEX_LEAD_MAX_FIELD_LENGTH) {
+            $lead[$key] = mb_substr($value, 0, APEX_LEAD_MAX_FIELD_LENGTH);
+        }
+    }
 
     $ipAddress = apex_client_ip();
+    // The consultation form is the one endpoint an anonymous visitor can
+    // write through. Twelve genuine enquiries an hour from one address is
+    // already generous; beyond that it is a script filling the leads table.
+    if (apex_rate_limited('leads', $ipAddress, APEX_LEAD_MAX_PER_HOUR, 3600)) {
+        apex_json_response(['error' => 'Too many submissions. Please try again later.'], 429);
+    }
     $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? '';
     $id = apex_insert_lead($lead, ['ipAddress' => $ipAddress, 'userAgent' => $userAgent]);
 
@@ -220,13 +257,22 @@ if ($resource === 'content') {
     }
 
     if ($method === 'POST' && count($adminSegments) === 5 && $adminSegments[3] === 'media') {
-        if (!isset($_FILES['file']) || !is_uploaded_file($_FILES['file']['tmp_name'])) {
-            apex_json_response(['error' => 'No file uploaded.'], 400);
+        $uploadError = apex_upload_error($_FILES['file'] ?? null);
+        if ($uploadError !== null || !is_uploaded_file($_FILES['file']['tmp_name'])) {
+            apex_json_response(['error' => $uploadError ?? 'No file uploaded.'], 400);
         }
         // Optional: present when uploading a photo for one item in a list
         // (e.g. one Vorher/Nachher case) rather than a flat section field.
         $listKey = isset($_POST['listKey']) && $_POST['listKey'] !== '' ? (string) $_POST['listKey'] : null;
         $listIndex = isset($_POST['index']) && $_POST['index'] !== '' ? (int) $_POST['index'] : null;
+        // Checked here as well as inside apex_set_section_media so a rejected
+        // file gets a message that says what was wrong with it, rather than
+        // the 404 that means "no such section".
+        if (apex_upload_safe_extension($_FILES['file']['tmp_name'], (string) $_FILES['file']['name'], 'any') === null) {
+            apex_json_response(['error' => 'That file was not accepted. Use JPG, PNG, WebP, GIF or AVIF up to '
+                . apex_format_bytes(apex_upload_limit('image')) . ', or MP4, WebM or MOV up to '
+                . apex_format_bytes(apex_upload_limit('video')) . '.'], 400);
+        }
         $stored = apex_set_section_media(
             $page,
             $adminSegments[2],
@@ -338,12 +384,14 @@ if ($resource === 'blog') {
         if (apex_blog_get($slug) === null) {
             apex_json_response(['error' => 'Unknown post.'], 404);
         }
-        if (!isset($_FILES['file']) || !is_uploaded_file($_FILES['file']['tmp_name'])) {
-            apex_json_response(['error' => 'No file uploaded.'], 400);
+        $uploadError = apex_upload_error($_FILES['file'] ?? null);
+        if ($uploadError !== null || !is_uploaded_file($_FILES['file']['tmp_name'])) {
+            apex_json_response(['error' => $uploadError ?? 'No file uploaded.'], 400);
         }
         $stored = apex_blog_store_media($slug, $_FILES['file']['tmp_name'], $_FILES['file']['name']);
         if ($stored === null) {
-            apex_json_response(['error' => 'That file type is not allowed. Use JPG, PNG, WebP, GIF or AVIF.'], 400);
+            apex_json_response(['error' => 'That file was not accepted. Use JPG, PNG, WebP, GIF or AVIF up to '
+                . apex_format_bytes(apex_upload_limit('image')) . '.'], 400);
         }
         // The cover is a field on the post; anything else is an inline image
         // the editor drops into the body, so it only needs its URL back.

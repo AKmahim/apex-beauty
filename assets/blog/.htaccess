@@ -1,0 +1,36 @@
+# These directories hold files uploaded through the admin panel. They are
+# served to visitors and never executed.
+#
+# includes/security.php already refuses anything that is not a verified image
+# or video, but that check is code and code can have a gap; this is the layer
+# that makes a gap survivable. A script that somehow lands here is returned as
+# bytes instead of being run, which is the difference between a bad upload and
+# a compromised server.
+
+# PHP-FPM and any other handler-based setup.
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8|phps|pht|shtml|cgi|pl|py|jsp|asp|aspx|htaccess)$">
+	Require all denied
+</FilesMatch>
+
+# mod_php.
+<IfModule mod_php.c>
+	php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+	php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+	php_flag engine off
+</IfModule>
+
+# Belt and braces: strip any handler this directory may have inherited.
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .cgi .pl .py
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8
+
+Options -Indexes -ExecCGI
+
+# Never let a browser second-guess the declared type of an uploaded file.
+<IfModule mod_headers.c>
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set Content-Disposition "inline"
+</IfModule>

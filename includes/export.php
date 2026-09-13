@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/security.php';
 
 function apex_export_leads_csv(array $leads): never
 {
@@ -18,7 +19,10 @@ function apex_export_leads_csv(array $leads): never
     ]);
 
     foreach ($leads as $lead) {
-        fputcsv($out, [
+        // Every field here was typed by a member of the public. apex_csv_cell
+        // stops a spreadsheet from executing one when the clinic opens the
+        // export.
+        fputcsv($out, array_map('apex_csv_cell', [
             $lead['id'],
             $lead['submittedAt'],
             $lead['name'],
@@ -38,7 +42,7 @@ function apex_export_leads_csv(array $leads): never
             $lead['utm']['campaign'] ?? null,
             $lead['notes'],
             $lead['status'],
-        ]);
+        ]));
     }
 
     fclose($out);

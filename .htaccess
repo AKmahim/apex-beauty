@@ -4,9 +4,98 @@ RewriteEngine On
 # bare "Not Found" text. 404.php sets the 404 status itself.
 ErrorDocument 404 /404.php
 
-<FilesMatch "^\.env">
+# ---------------------------------------------------------------------------
+# Access control. Everything below the document root is reachable over HTTP
+# unless it is denied here, and this tree contains credentials (.env), the
+# full source history (.git), and the content/blog/settings JSON the panel
+# writes (data/). None of it belongs to visitors.
+# ---------------------------------------------------------------------------
+
+# Dotfiles: .env, .env.example, .gitignore, .htpasswd, editor leftovers.
+<FilesMatch "^\.">
 	Require all denied
 </FilesMatch>
+
+# Except the ACME directory, which a certificate authority has to read to
+# issue and renew the TLS certificate.
+<IfModule mod_rewrite.c>
+	RewriteRule ^\.well-known/ - [L]
+</IfModule>
+
+# The repository itself. An exposed .git lets anyone reconstruct the whole
+# codebase, including anything ever committed by mistake.
+RedirectMatch 404 /\.git(/|$)
+
+# Server-side includes, stored content, and build scripts are never fetched
+# directly; the templates require them from disk.
+RedirectMatch 404 ^/(?:includes|data|scripts|node_modules)(?:/|$)
+
+# Tooling directories that must never reach a production server at all, but
+# are denied here in case one rides along in a deploy. .claude in particular
+# can hold a whole second copy of data/ inside a worktree.
+RedirectMatch 404 ^/\.(?:claude|git|vscode|idea|github)(?:/|$)
+
+# Backup and editor files that sometimes ride along in a deploy. foo.php.bak
+# is served as plain text, which hands over the source and any keys in it.
+<FilesMatch "\.(bak|old|orig|save|swp|swo|sql|log|ini|sh|dist|example|md|json|lock|yml|yaml)$">
+	Require all denied
+</FilesMatch>
+
+# Upload limits, for hosts running mod_php. PHP-FPM reads .user.ini instead;
+# both are present because which one applies depends on the host's SAPI.
+<IfModule mod_php.c>
+	php_value upload_max_filesize 32M
+	php_value post_max_size 40M
+</IfModule>
+<IfModule mod_php8.c>
+	php_value upload_max_filesize 32M
+	php_value post_max_size 40M
+</IfModule>
+
+# Errors go to the log, never into the page. Set here as well as in PHP so
+# that a failure early enough to happen before includes/security.php runs -
+# a parse error, a missing include - still does not print a filesystem path
+# to a visitor.
+<IfModule mod_php.c>
+	php_flag display_errors off
+</IfModule>
+<IfModule mod_php8.c>
+	php_flag display_errors off
+</IfModule>
+
+# No directory listings. (If the host returns 500 after deploying this file,
+# its AllowOverride does not permit Options - remove just this line.)
+Options -Indexes
+
+# Execution inside the upload directories is disabled by their own .htaccess
+# files: assets/content/.htaccess and assets/blog/.htaccess. <Directory> is
+# not valid here, and per-directory files work under both mod_php and PHP-FPM.
+
+# ---------------------------------------------------------------------------
+# Response headers. Also set in PHP (includes/security.php) so they survive if
+# a file is served without PHP; set here so they also cover static assets.
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set X-Frame-Options "DENY"
+	Header always set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), accelerometer=()"
+	# Only sent on HTTPS responses: promising a browser to use TLS on a host
+	# that is not yet fully on TLS locks visitors out of it.
+	Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+	Header always unset X-Powered-By
+	Header always unset Server
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Force HTTPS. The admin session cookie is marked Secure, so it is simply not
+# sent over http:// - without this redirect the panel would look broken there
+# rather than insecure, and visitors would still be readable in transit.
+# Comment this block out only if the certificate is not yet issued.
+# ---------------------------------------------------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

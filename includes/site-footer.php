@@ -5,7 +5,7 @@ require_once __DIR__ . '/i18n.php';
 if (!defined('APEX_SITE_FOOTER_STYLE_EMITTED')) {
   define('APEX_SITE_FOOTER_STYLE_EMITTED', true);
   ?>
-  <style>
+  <style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
     .site-footer {
       background: #0b1524;
       padding: 26px 48px;
@@ -116,7 +116,7 @@ require_once __DIR__ . '/site-config.php';
             <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/>
           </svg>
         </a>
-        <a class="footer-social-link" href="#" onclick="return false;" aria-label="YouTube" title="YouTube">
+        <a class="footer-social-link" href="#" data-click="noop" aria-label="YouTube" title="YouTube">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
             <rect x="2.5" y="6" width="19" height="12" rx="4"/>
             <path d="M10.3 9.6l5 2.4-5 2.4v-4.8z" fill="currentColor" stroke="none"/>
@@ -129,4 +129,4 @@ require_once __DIR__ . '/site-config.php';
     <a class="footer-privacy-link" href="<?= htmlspecialchars(apex_lang_base(), ENT_QUOTES) ?>/privacy" data-de="Datenschutzerklärung" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-nl="Privacybeleid" data-it="Informativa sulla privacy" data-tr="Gizlilik Politikası">Datenschutzerklärung</a>
   </div>
 </footer>
-<script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">document.getElementById('footerYear').textContent = new Date().getFullYear();</script>

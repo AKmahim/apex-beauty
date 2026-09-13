@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/security.php';
 require_once __DIR__ . '/site-config.php';
 require_once __DIR__ . '/i18n.php';
 
@@ -216,8 +217,11 @@ function apex_blog_store_media(string $slug, string $tmpPath, string $originalNa
     if (!apex_blog_valid_slug($slug)) {
         return null;
     }
-    $ext = strtolower((string) preg_replace('/[^a-z0-9]/i', '', pathinfo($originalName, PATHINFO_EXTENSION)));
-    if (!in_array($ext, APEX_BLOG_IMAGE_TYPES, true)) {
+    // An extension allowlist on its own is not enough: it is the only thing
+    // stopping a script from landing in a directory the web server executes,
+    // so the file's sniffed type and image headers have to agree with it.
+    $ext = apex_upload_safe_extension($tmpPath, $originalName, 'image');
+    if ($ext === null) {
         return null;
     }
     $base = apex_blog_slugify(pathinfo($originalName, PATHINFO_FILENAME));
@@ -245,4 +249,17 @@ function apex_blog_delete_media(string $slug): int
         }
     }
     return $removed;
+}
+
+// True when at least one published post exists in this language. Used by the
+// sitemap (an empty archive should not be advertised) and by blog.php (an
+// empty archive should not be indexed).
+function apex_blog_any_in_language(string $lang): bool
+{
+    foreach (apex_blog_all(true) as $post) {
+        if (apex_blog_has_language($post, $lang)) {
+            return true;
+        }
+    }
+    return false;
 }

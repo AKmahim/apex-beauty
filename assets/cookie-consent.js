@@ -9,12 +9,20 @@
 // page's existing applyLang() picks it up automatically via its generic
 // document.querySelectorAll('[data-de]') pass — no extra wiring needed here.
 (function () {
+  // The page's CSP nonce, read off this script's own tag while it is still
+  // the currently-executing script. A <style> element created later in JS is
+  // subject to style-src exactly as a <style> in the markup is, and since the
+  // policy no longer allows 'unsafe-inline' it has to carry the nonce or the
+  // banner would render unstyled.
+  var CSP_NONCE = (document.currentScript && document.currentScript.nonce) || '';
+
   var STYLE_ID = 'apex-cookie-consent-style';
   var BANNER_ID = 'apexCookieBanner';
 
   function injectStyle() {
     if (document.getElementById(STYLE_ID)) return;
     var style = document.createElement('style');
+    if (CSP_NONCE) style.setAttribute('nonce', CSP_NONCE);
     style.id = STYLE_ID;
     style.textContent = [
       '#' + BANNER_ID + '{position:fixed;left:0;right:0;bottom:0;z-index:9999;',
@@ -125,7 +133,7 @@
     if (lang !== 'de') {
       wrap.querySelectorAll('[data-' + lang + ']').forEach(function (el) {
         var val = el.getAttribute('data-' + lang);
-        if (val !== null) el.innerHTML = val;
+        if (val !== null) apexSetHTML(el, val);
       });
     }
   }

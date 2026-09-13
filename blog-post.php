@@ -32,6 +32,8 @@ if ($post === null || $post['status'] !== 'published' || !apex_blog_has_language
 
 $title = apex_cms_value($post['title'], $currentLang);
 $excerpt = apex_cms_value($post['excerpt'], $currentLang);
+// Printed raw below, as rich text has to be; apex_cms_value() runs it
+// through the sanitiser first.
 $body = apex_cms_value($post['body'], $currentLang);
 $coverAlt = apex_cms_value($post['coverAlt'], $currentLang);
 
@@ -103,14 +105,20 @@ ob_start();
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
 <meta property="article:published_time" content="<?= htmlspecialchars($post['publishedAt'], ENT_QUOTES) ?>">
 <meta property="article:modified_time" content="<?= htmlspecialchars($post['updatedAt'], ENT_QUOTES) ?>">
-<script type="application/ld+json"><?= json_encode($articleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
-<script type="application/ld+json"><?= json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<script type="application/ld+json" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"><?= json_encode($articleSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<script type="application/ld+json" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"><?= json_encode($breadcrumbSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php require __DIR__ . '/includes/site-pixel.php'; ?>
-<script src="/assets/meta-pixel.js"></script>
-<script src="/assets/cookie-consent.js"></script>
-<script src="/assets/content-loader.js"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/meta-pixel.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<!-- DOMPurify + wrapper: loaded before anything that writes markup into the
+     DOM, so the language switcher never assigns unsanitised innerHTML. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<script src="/assets/vendor/purify-3.1.6.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-safe-html.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-actions.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/cookie-consent.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/content-loader.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 <?php require __DIR__ . '/includes/site-gtm.php'; ?>
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root {
     --teal-400: #38bdf8; --teal-500: #0ea5e9; --teal-600: #0284c7; --teal-700: #075985;
     --blue-500: #3b82f6; --blue-600: #2563eb; --blue-700: #1d4ed8; --blue-900: #1e3a5f;

@@ -720,9 +720,83 @@
     return String(str ?? '').replace(/"/g, '&quot;');
   }
 
-  async function loadStats() {
-    const res = await api('/stats');
-    const stats = await res.json();
+  // Every dashboard panel is backed by an endpoint that can fail (the database
+  // being unreachable is the usual reason). Without this each one read .map or
+  // .length straight off the parsed body and threw somewhere unhelpful, leaving
+  // the panel blank with no explanation. api() itself is left alone because the
+  // login flow inspects res.status directly.
+  async function apiJson(path, options) {
+    const res = await api(path, options);
+    if (!res.ok) {
+      let message = '';
+      try { message = (await res.json()).error || ''; } catch (e) { /* no JSON body */ }
+      throw new Error(message || ('Request failed (' + res.status + ')'));
+    }
+    return res.json();
+  }
+
+  // One banner at the top of the dashboard rather than the message stuffed
+  // into whichever element the panel happened to own - writing it into a stat
+  // tile rendered it at 40px next to five empty dashes.
+  function panelError(id, err) {
+    const message = (err && err.message) ? err.message : String(err);
+    if (window.console) console.warn('[admin]', id, err);
+
+    let banner = $('panelError');
+    if (!banner) {
+      const host = $('leadsPanel') || document.body;
+      banner = document.createElement('div');
+      banner.id = 'panelError';
+      banner.className = 'panel-error';
+      host.insertBefore(banner, host.firstChild);
+    }
+    banner.textContent = message;
+    banner.hidden = false;
+  }
+
+  function clearPanelError() {
+    const banner = $('panelError');
+    if (banner) banner.hidden = true;
+  }
+
+
+  // Thin wrapper so a failed request lands in this panel rather than as an
+  // unhandled promise rejection in the console.
+  async function loadStats(...args) {
+    try { const out = await loadStats__inner(...args); clearPanelError(); return out; }
+    catch (err) { panelError('statTotal', err); }
+  }
+
+  // Thin wrapper so a failed request lands in this panel rather than as an
+  // unhandled promise rejection in the console.
+  async function loadInsights(...args) {
+    try { return await loadInsights__inner(...args); }
+    catch (err) { panelError('insightsList', err); }
+  }
+
+  // Thin wrapper so a failed request lands in this panel rather than as an
+  // unhandled promise rejection in the console.
+  async function loadForecast(...args) {
+    try { return await loadForecast__inner(...args); }
+    catch (err) { panelError('forecastSummary', err); }
+  }
+
+  // Thin wrapper so a failed request lands in this panel rather than as an
+  // unhandled promise rejection in the console.
+  async function loadSuggestions(...args) {
+    try { return await loadSuggestions__inner(...args); }
+    catch (err) { panelError('suggestionsList', err); }
+  }
+
+  // Thin wrapper so a failed request lands in this panel rather than as an
+  // unhandled promise rejection in the console.
+  async function loadLeads(...args) {
+    try { return await loadLeads__inner(...args); }
+    catch (err) { panelError('pageInfo', err); }
+  }
+
+  async function loadStats__inner() {
+    const stats = await apiJson('/stats');
     $('statTotal').textContent = stats.total;
     $('stat7').textContent = stats.last7Days;
     renderDelta('stat7Delta', stats.last7Days, stats.prev7Days);
@@ -744,9 +818,8 @@
     populateSourceFilter(stats.byUtmSource);
   }
 
-  async function loadInsights() {
-    const res = await api('/insights');
-    const data = await res.json();
+  async function loadInsights__inner() {
+    const data = await apiJson('/insights');
     const list = $('insightsList');
     if (!data.insights || !data.insights.length) {
       list.innerHTML = `<li class="insufficient">${escapeHtml(t('insights-empty'))}</li>`;
@@ -757,15 +830,13 @@
     ).join('');
   }
 
-  async function loadForecast() {
-    const res = await api('/forecast');
-    const data = await res.json();
+  async function loadForecast__inner() {
+    const data = await apiJson('/forecast');
     renderForecastChart(data);
   }
 
-  async function loadSuggestions() {
-    const res = await api('/suggestions');
-    const data = await res.json();
+  async function loadSuggestions__inner() {
+    const data = await apiJson('/suggestions');
     renderSuggestions(data.suggestions);
     renderAnomalies(data.anomalies);
   }
@@ -797,10 +868,9 @@
     return `<select class="status-select status-${current}" data-id="${lead.id}">${options}</select>`;
   }
 
-  async function loadLeads() {
+  async function loadLeads__inner() {
     const query = toQuery({ ...currentFilters(), page, pageSize: 25 });
-    const res = await api('/leads?' + query);
-    const data = await res.json();
+    const data = await apiJson('/leads?' + query);
     totalPages = Math.max(1, Math.ceil(data.total / data.pageSize));
     page = data.page;
 
@@ -1586,7 +1656,7 @@
           <span class="media-status" id="blogCoverStatus"></span>
         </div>
 
-        <div class="sub" style="margin:18px 0 10px;">${escapeHtml(t('editing-lang'))}: <strong>${escapeHtml(CONTENT_LANGS.find((l) => l.code === blogLang).label)}</strong></div>
+        <div class="sub u-27">${escapeHtml(t('editing-lang'))}: <strong>${escapeHtml(CONTENT_LANGS.find((l) => l.code === blogLang).label)}</strong></div>
 
         <div class="field-row">
           <label>${escapeHtml(t('blog-headline'))}</label>
@@ -1610,11 +1680,11 @@
           <button type="button" class="blog-tool" data-wrap="ul">&bull; List</button>
           <button type="button" class="blog-tool" data-wrap="link">Link</button>
           <button type="button" class="blog-tool" id="blogInlineImageBtn">${escapeHtml(t('blog-insert-image'))}</button>
-          <input type="file" id="blogInlineImageInput" accept="image/*" style="display:none;">
+          <input type="file" id="blogInlineImageInput" accept="image/*" class="u-03">
         </div>
         <textarea class="blog-body-area" data-blog-lang-field="body">${escapeHtml(blogLangValue('body', blogLang))}</textarea>
 
-        <div class="field-row" style="margin-top:16px;">
+        <div class="field-row u-28">
           <label>${escapeHtml(t('blog-seo-title'))}</label>
           <input type="text" data-blog-lang-field="seoTitle" value="${escapeAttr(blogLangValue('seoTitle', blogLang))}">
         </div>

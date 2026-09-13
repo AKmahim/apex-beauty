@@ -28,11 +28,17 @@ ob_start();
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
 <?php require __DIR__ . '/includes/site-pixel.php'; ?>
-<script src="/assets/meta-pixel.js"></script>
-<script src="/assets/cookie-consent.js"></script>
-<script src="/assets/content-loader.js"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/meta-pixel.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<!-- DOMPurify + wrapper: loaded before anything that writes markup into the
+     DOM, so the language switcher never assigns unsanitised innerHTML. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<script src="/assets/vendor/purify-3.1.6.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-safe-html.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-actions.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/cookie-consent.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/content-loader.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 <?php require __DIR__ . '/includes/site-gtm.php'; ?>
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root {
     --teal-500: #0ea5e9;
     --teal-600: #0284c7;
@@ -222,17 +228,21 @@ ob_start();
   <a class="back-link" href="index.php" data-de="← Zurück zur Startseite" data-en="← Back to homepage" data-fr="← Retour à l'accueil" data-nl="← Terug naar homepage" data-it="← Torna alla home" data-tr="← Ana Sayfaya Dön">← Zurück zur Startseite</a>
 </div>
 
-<script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   // FR/NL/IT/TR have no translated copy yet — they fall back to the English
   // strings until real translations are added for those data-* attributes.
-  var APEX_TRANSLATED_LANGS = ['de', 'en'];
+  // All six languages carry data-* translations now. When this still said
+  // ['de','en'], applyLang() treated fr/nl/it/tr as untranslated and fell
+  // back to English for them, overwriting text the server had already
+  // rendered in the right language.
+  var APEX_TRANSLATED_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
     var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
       if (val === null && fallback) val = el.getAttribute('data-' + fallback);
-      if (val !== null) el.innerHTML = val;
+      if (val !== null) apexSetHTML(el, val);
     });
     document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       var isActive = s.getAttribute('data-lang') === lang;
@@ -278,7 +288,7 @@ ob_start();
   }
 </script>
 
-<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
+<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" data-click="whatsapp">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
 </a>
 

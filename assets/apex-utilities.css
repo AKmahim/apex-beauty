@@ -1,0 +1,46 @@
+/* Utility classes replacing inline style="" attributes.
+ *
+ * Not a design change: each rule below is the exact declaration block that
+ * used to sit in a style attribute on the element that now carries the class.
+ * They were moved because a style attribute cannot carry a CSP nonce, so
+ * while any of them existed the policy had to keep style-src 'unsafe-inline'
+ * - which permits injected CSS, and injected CSS can read form values out of
+ * a page through attribute selectors.
+ *
+ * Generated from the 46 attributes that existed, deduplicated to 26 rules.
+ */
+
+.u-01 { font-size:17px;font-weight:700;margin-bottom:14px; }
+.u-02 { grid-column: span 2; }
+.u-03 { display:none; }
+.u-04 { margin-bottom:32px; }
+.u-05 { font-weight:400;color:#64748b;font-size:11px; }
+.u-06 { margin-bottom:44px; }
+.u-07 { padding: 40px 48px 60px; text-align:center; max-width:1180px; margin:0 auto; }
+.u-08 { padding:16px 34px; font-size:15.5px; display:inline-flex; }
+.u-09 { margin-left:auto; }
+.u-10 { margin-bottom:3px; }
+.u-11 { --d:.1s; }
+.u-12 { --d:.25s; }
+.u-13 { --d:.4s; }
+.u-14 { --d:.55s; }
+.u-15 { display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--blue-700);text-decoration:underline; }
+.u-16 { font-size:14.5px;color:var(--ink-soft);line-height:1.65;max-width:760px;margin-bottom:8px; }
+.u-17 { font-size:18px;font-weight:700;margin:32px 0 4px; }
+.u-18 { font-size:13.5px;color:var(--ink-soft);margin-bottom:8px;max-width:700px; }
+.u-19 { margin-bottom:40px; }
+.u-20 { margin-bottom:36px; }
+.u-21 { font-size:14px;color:var(--ink-soft);line-height:1.6;max-width:640px; }
+.u-22 { color:var(--blue-700);text-decoration:underline;font-weight:600; }
+.u-23 { display:flex; align-items:center; }
+.u-24 { font-size:13px; font-weight:600; color:var(--ink-soft); }
+.u-25 { display:none; }
+.u-26 { display:none;visibility:hidden; }
+
+/* Admin panel. These three were built into template literals in
+   admin/admin.js, so they were not caught by the sweep over the PHP
+   templates - and one of them (display:none on the hidden file input) is
+   functional: blocked by CSP, the input became visible in the blog editor. */
+.u-27 { margin:18px 0 10px; }
+.u-28 { margin-top:16px; }
+

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/security.php';
+
 // Resolves which language a request is for from the URL itself (/en/... vs
 // everything else = de), and server-renders that language into the page
 // before it's sent. Every translatable element in the page templates already
@@ -62,15 +64,18 @@ const APEX_CONTENT_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
 // Picks one language out of a { de, en, fr, ... } content field, falling back
 // the same way the client-side applyLang() does: asked-for language, then
 // English, then German.
+// Values come out of the panel's JSON and are printed into the page as raw
+// HTML, so they pass through apex_sanitize_html() on the way. See the note on
+// that function: formatting survives, anything executable does not.
 function apex_cms_value($field, ?string $lang = null): string
 {
     if (!is_array($field)) {
-        return is_string($field) ? $field : '';
+        return is_string($field) ? apex_sanitize_html($field) : '';
     }
     $lang = $lang ?? apex_resolve_lang();
     foreach ([$lang, 'en', 'de'] as $try) {
         if (isset($field[$try]) && is_string($field[$try]) && $field[$try] !== '') {
-            return $field[$try];
+            return apex_sanitize_html($field[$try]);
         }
     }
     return '';
@@ -90,7 +95,10 @@ function apex_cms_attrs($field): string
     $out = '';
     foreach (APEX_CONTENT_LANGS as $l) {
         if (isset($field[$l]) && is_string($field[$l])) {
-            $out .= ' data-' . $l . '="' . htmlspecialchars($field[$l], ENT_QUOTES) . '"';
+            // applyLang() assigns this back through innerHTML, so escaping it
+            // for the attribute is not enough on its own - it has to be safe
+            // as markup too.
+            $out .= ' data-' . $l . '="' . htmlspecialchars(apex_sanitize_html($field[$l]), ENT_QUOTES) . '"';
         }
     }
     return $out;

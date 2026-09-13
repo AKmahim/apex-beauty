@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/security.php';
 
 function apex_content_schemas(): array
 {
@@ -72,9 +73,23 @@ function apex_set_section_media(
         return null;
     }
 
-    $ext = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
-    $ext = $ext !== '' ? '.' . preg_replace('/[^a-z0-9]/i', '', $ext) : '';
-    $filename = sprintf('%s-%s-%s-%d%s', $page, $section, $field, time(), $ext);
+    // This writes a browser-supplied file into a directory Apache serves, so
+    // the extension is not taken from the upload - it is decided here, from an
+    // allowlist checked against the file's actual sniffed type. Before this,
+    // uploading hero-image.php stored an executable script under the document
+    // root, which is remote code execution behind one shared password.
+    $ext = apex_upload_safe_extension($tmpPath, $originalName, 'any');
+    if ($ext === null) {
+        return null;
+    }
+    $filename = sprintf(
+        '%s-%s-%s-%d.%s',
+        apex_upload_safe_segment($page),
+        apex_upload_safe_segment($section),
+        apex_upload_safe_segment($field),
+        time(),
+        $ext
+    );
     $target = APEX_MEDIA_DIR . '/' . $filename;
 
     if (!move_uploaded_file($tmpPath, $target)) {

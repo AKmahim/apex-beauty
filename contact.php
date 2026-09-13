@@ -28,11 +28,17 @@ ob_start();
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
 <?php require __DIR__ . '/includes/site-pixel.php'; ?>
-<script src="/assets/meta-pixel.js"></script>
-<script src="/assets/cookie-consent.js"></script>
-<script src="/assets/content-loader.js"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/meta-pixel.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<!-- DOMPurify + wrapper: loaded before anything that writes markup into the
+     DOM, so the language switcher never assigns unsanitised innerHTML. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<script src="/assets/vendor/purify-3.1.6.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-safe-html.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-actions.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/cookie-consent.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/content-loader.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 <?php require __DIR__ . '/includes/site-gtm.php'; ?>
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root {
     --teal-400: #38bdf8;
     --teal-500: #0ea5e9;
@@ -315,15 +321,15 @@ ob_start();
     <div class="pane-sub" data-ckey="intro.t5"<?= apex_cms_attrs_or($cmsContact['intro']['t5'] ?? null, ['de' => "Unser Expertenteam meldet sich innerhalb von 24 Stunden", 'en' => "Our expert team will contact you within 24 hours", 'fr' => "Notre équipe d'experts vous contactera sous 24 heures", 'nl' => "Ons expertteam neemt binnen 24 uur contact met u op", 'it' => "Il nostro team di esperti ti contatterà entro 24 ore", 'tr' => "Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t5'] ?? null, ['de' => "Unser Expertenteam meldet sich innerhalb von 24 Stunden", 'en' => "Our expert team will contact you within 24 hours", 'fr' => "Notre équipe d'experts vous contactera sous 24 heures", 'nl' => "Ons expertteam neemt binnen 24 uur contact met u op", 'it' => "Il nostro team di esperti ti contatterà entro 24 ore", 'tr' => "Uzman ekibimiz 24 saat içinde sizinle iletişime geçecektir"], $currentLang) ?></div>
     <div class="cfield">
       <label data-ckey="intro.t6"<?= apex_cms_attrs_or($cmsContact['intro']['t6'] ?? null, ['de' => "Vollständiger Name *", 'en' => "Full Name *", 'fr' => "Nom complet *", 'nl' => "Volledige naam *", 'it' => "Nome completo *", 'tr' => "Ad Soyad *"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t6'] ?? null, ['de' => "Vollständiger Name *", 'en' => "Full Name *", 'fr' => "Nom complet *", 'nl' => "Volledige naam *", 'it' => "Nome completo *", 'tr' => "Ad Soyad *"], $currentLang) ?></label>
-      <input type="text" id="cfName" data-de-ph="Ihr vollständiger Name" data-en-ph="Your full name" placeholder="Ihr vollständiger Name" oninput="validateStep1()">
+      <input type="text" id="cfName" data-de-ph="Ihr vollständiger Name" data-en-ph="Your full name" placeholder="Ihr vollständiger Name" data-input="validate1">
     </div>
     <div class="cfield">
       <label data-ckey="intro.t7"<?= apex_cms_attrs_or($cmsContact['intro']['t7'] ?? null, ['de' => "E-Mail *", 'en' => "Email *", 'fr' => "E-mail *", 'nl' => "E-mail *", 'it' => "E-mail *", 'tr' => "E-posta *"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t7'] ?? null, ['de' => "E-Mail *", 'en' => "Email *", 'fr' => "E-mail *", 'nl' => "E-mail *", 'it' => "E-mail *", 'tr' => "E-posta *"], $currentLang) ?></label>
-      <input type="email" id="cfEmail" placeholder="email@example.com" oninput="validateStep1()">
+      <input type="email" id="cfEmail" placeholder="email@example.com" data-input="validate1">
     </div>
     <div class="cfield">
       <label data-ckey="intro.t8"<?= apex_cms_attrs_or($cmsContact['intro']['t8'] ?? null, ['de' => "Land *", 'en' => "Country *", 'fr' => "Pays *", 'nl' => "Land *", 'it' => "Paese *", 'tr' => "Ülke *"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t8'] ?? null, ['de' => "Land *", 'en' => "Country *", 'fr' => "Pays *", 'nl' => "Land *", 'it' => "Paese *", 'tr' => "Ülke *"], $currentLang) ?></label>
-      <select id="cfCountry" onchange="updatePrefix(); validateStep1()">
+      <select id="cfCountry" data-change="prefix">
         <option value="AT" data-prefix="+43">🇦🇹 Österreich</option>
         <option value="DE" data-prefix="+49">🇩🇪 Deutschland</option>
         <option value="CH" data-prefix="+41">🇨🇭 Schweiz</option>
@@ -335,11 +341,11 @@ ob_start();
       <label data-ckey="intro.t9"<?= apex_cms_attrs_or($cmsContact['intro']['t9'] ?? null, ['de' => "Telefon *", 'en' => "Phone *", 'fr' => "Téléphone *", 'nl' => "Telefoon *", 'it' => "Telefono *", 'tr' => "Telefon *"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t9'] ?? null, ['de' => "Telefon *", 'en' => "Phone *", 'fr' => "Téléphone *", 'nl' => "Telefoon *", 'it' => "Telefono *", 'tr' => "Telefon *"], $currentLang) ?></label>
       <div class="phone-row">
         <div class="prefix" id="cfPrefix">+43</div>
-        <input type="tel" id="cfPhone" placeholder="660 123 45 67" oninput="validateStep1()">
+        <input type="tel" id="cfPhone" placeholder="660 123 45 67" data-input="validate1">
       </div>
     </div>
     <div class="consult-nav">
-      <button type="button" class="cnext" id="cnext1" disabled onclick="gotoStep(2)" data-ckey="intro.t10"<?= apex_cms_attrs_or($cmsContact['intro']['t10'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t10'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"], $currentLang) ?></button>
+      <button type="button" class="cnext" id="cnext1" disabled data-click="step" data-step="2" data-ckey="intro.t10"<?= apex_cms_attrs_or($cmsContact['intro']['t10'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t10'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"], $currentLang) ?></button>
     </div>
   </div>
 
@@ -348,10 +354,10 @@ ob_start();
     <div class="cfield">
       <label data-ckey="intro.t11"<?= apex_cms_attrs_or($cmsContact['intro']['t11'] ?? null, ['de' => "Ihr Geschlecht *", 'en' => "Your Gender *", 'fr' => "Votre sexe *", 'nl' => "Uw geslacht *", 'it' => "Il tuo genere *", 'tr' => "Cinsiyetiniz *"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t11'] ?? null, ['de' => "Ihr Geschlecht *", 'en' => "Your Gender *", 'fr' => "Votre sexe *", 'nl' => "Uw geslacht *", 'it' => "Il tuo genere *", 'tr' => "Cinsiyetiniz *"], $currentLang) ?></label>
       <div class="opt-grid cols-2" id="genderRow">
-        <div class="opt-card radio centered" data-value="male" onclick="pickSingle(this,'genderRow'); validateStep2()">
+        <div class="opt-card radio centered" data-value="male" data-click="pick" data-row="genderRow">
           <span data-ckey="intro.t12"<?= apex_cms_attrs_or($cmsContact['intro']['t12'] ?? null, ['de' => "Männlich", 'en' => "Male", 'fr' => "Homme", 'nl' => "Man", 'it' => "Uomo", 'tr' => "Erkek"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t12'] ?? null, ['de' => "Männlich", 'en' => "Male", 'fr' => "Homme", 'nl' => "Man", 'it' => "Uomo", 'tr' => "Erkek"], $currentLang) ?></span>
         </div>
-        <div class="opt-card radio centered" data-value="female" onclick="pickSingle(this,'genderRow'); validateStep2()">
+        <div class="opt-card radio centered" data-value="female" data-click="pick" data-row="genderRow">
           <span data-ckey="intro.t13"<?= apex_cms_attrs_or($cmsContact['intro']['t13'] ?? null, ['de' => "Weiblich", 'en' => "Female", 'fr' => "Femme", 'nl' => "Vrouw", 'it' => "Donna", 'tr' => "Kadın"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t13'] ?? null, ['de' => "Weiblich", 'en' => "Female", 'fr' => "Femme", 'nl' => "Vrouw", 'it' => "Donna", 'tr' => "Kadın"], $currentLang) ?></span>
         </div>
       </div>
@@ -359,28 +365,28 @@ ob_start();
     <div class="cfield">
       <label data-ckey="intro.t14"<?= apex_cms_attrs_or($cmsContact['intro']['t14'] ?? null, ['de' => "Verfahren, die Sie interessieren *", 'en' => "Procedures You're Interested In *", 'fr' => "Interventions qui vous intéressent *", 'nl' => "Ingrepen waarin u geïnteresseerd bent *", 'it' => "Procedure di tuo interesse *", 'tr' => "İlgilendiğiniz İşlemler *"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t14'] ?? null, ['de' => "Verfahren, die Sie interessieren *", 'en' => "Procedures You're Interested In *", 'fr' => "Interventions qui vous intéressent *", 'nl' => "Ingrepen waarin u geïnteresseerd bent *", 'it' => "Procedure di tuo interesse *", 'tr' => "İlgilendiğiniz İşlemler *"], $currentLang) ?></label>
       <div class="opt-grid cols-1" id="procRow">
-        <div class="opt-card" data-value="hair" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="hair" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t15"<?= apex_cms_attrs_or($cmsContact['intro']['t15'] ?? null, ['de' => "Haartransplantation", 'en' => "Hair Transplant", 'fr' => "Greffe de cheveux", 'nl' => "Haartransplantatie", 'it' => "Trapianto di capelli", 'tr' => "Saç Ekimi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t15'] ?? null, ['de' => "Haartransplantation", 'en' => "Hair Transplant", 'fr' => "Greffe de cheveux", 'nl' => "Haartransplantatie", 'it' => "Trapianto di capelli", 'tr' => "Saç Ekimi"], $currentLang) ?></span>
         </div>
-        <div class="opt-card" data-value="beard" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="beard" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t16"<?= apex_cms_attrs_or($cmsContact['intro']['t16'] ?? null, ['de' => "Barttransplantation", 'en' => "Beard Transplant", 'fr' => "Greffe de barbe", 'nl' => "Baardtransplantatie", 'it' => "Trapianto di barba", 'tr' => "Sakal Ekimi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t16'] ?? null, ['de' => "Barttransplantation", 'en' => "Beard Transplant", 'fr' => "Greffe de barbe", 'nl' => "Baardtransplantatie", 'it' => "Trapianto di barba", 'tr' => "Sakal Ekimi"], $currentLang) ?></span>
         </div>
-        <div class="opt-card" data-value="eyebrow" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="eyebrow" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t17"<?= apex_cms_attrs_or($cmsContact['intro']['t17'] ?? null, ['de' => "Augenbrauentransplantation", 'en' => "Eyebrow Transplant", 'fr' => "Greffe de sourcils", 'nl' => "Wenkbrauwtransplantatie", 'it' => "Trapianto di sopracciglia", 'tr' => "Kaş Ekimi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t17'] ?? null, ['de' => "Augenbrauentransplantation", 'en' => "Eyebrow Transplant", 'fr' => "Greffe de sourcils", 'nl' => "Wenkbrauwtransplantatie", 'it' => "Trapianto di sopracciglia", 'tr' => "Kaş Ekimi"], $currentLang) ?></span>
         </div>
       </div>
       <div class="cgroup-note" data-ckey="intro.t18"<?= apex_cms_attrs_or($cmsContact['intro']['t18'] ?? null, ['de' => "Unterstützende Therapien", 'en' => "Supporting Therapies", 'fr' => "Thérapies complémentaires", 'nl' => "Ondersteunende therapieën", 'it' => "Terapie di supporto", 'tr' => "Destekleyici Tedaviler"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t18'] ?? null, ['de' => "Unterstützende Therapien", 'en' => "Supporting Therapies", 'fr' => "Thérapies complémentaires", 'nl' => "Ondersteunende therapieën", 'it' => "Terapie di supporto", 'tr' => "Destekleyici Tedaviler"], $currentLang) ?></div>
       <div class="opt-grid cols-2" id="therapyRow">
-        <div class="opt-card" data-value="prp" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="prp" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t19"<?= apex_cms_attrs_or($cmsContact['intro']['t19'] ?? null, ['de' => "PRP-Therapie", 'en' => "PRP Therapy", 'fr' => "Thérapie PRP", 'nl' => "PRP-therapie", 'it' => "Terapia PRP", 'tr' => "PRP Tedavisi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t19'] ?? null, ['de' => "PRP-Therapie", 'en' => "PRP Therapy", 'fr' => "Thérapie PRP", 'nl' => "PRP-therapie", 'it' => "Terapia PRP", 'tr' => "PRP Tedavisi"], $currentLang) ?></span>
         </div>
-        <div class="opt-card" data-value="stemcell" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="stemcell" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t20"<?= apex_cms_attrs_or($cmsContact['intro']['t20'] ?? null, ['de' => "Stammzelltherapie", 'en' => "Stem Cell Therapy", 'fr' => "Thérapie par cellules souches", 'nl' => "Stamceltherapie", 'it' => "Terapia con cellule staminali", 'tr' => "Kök Hücre Tedavisi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t20'] ?? null, ['de' => "Stammzelltherapie", 'en' => "Stem Cell Therapy", 'fr' => "Thérapie par cellules souches", 'nl' => "Stamceltherapie", 'it' => "Terapia con cellule staminali", 'tr' => "Kök Hücre Tedavisi"], $currentLang) ?></span>
         </div>
-        <div class="opt-card" data-value="exosome" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="exosome" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t21"<?= apex_cms_attrs_or($cmsContact['intro']['t21'] ?? null, ['de' => "Exosom-Therapie", 'en' => "Exosome Therapy", 'fr' => "Thérapie par exosomes", 'nl' => "Exosoomtherapie", 'it' => "Terapia con esosomi", 'tr' => "Ekzozom Tedavisi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t21'] ?? null, ['de' => "Exosom-Therapie", 'en' => "Exosome Therapy", 'fr' => "Thérapie par exosomes", 'nl' => "Exosoomtherapie", 'it' => "Terapia con esosomi", 'tr' => "Ekzozom Tedavisi"], $currentLang) ?></span>
         </div>
-        <div class="opt-card" data-value="hbot" onclick="toggleChip(this); validateStep2()">
+        <div class="opt-card" data-value="hbot" data-click="chip">
           <span class="mark"></span><span data-ckey="intro.t22"<?= apex_cms_attrs_or($cmsContact['intro']['t22'] ?? null, ['de' => "Hyperbarer Sauerstoff", 'en' => "Hyperbaric Oxygen", 'fr' => "Oxygénothérapie hyperbare", 'nl' => "Hyperbare zuurstoftherapie", 'it' => "Ossigenoterapia iperbarica", 'tr' => "Hiperbarik Oksijen"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t22'] ?? null, ['de' => "Hyperbarer Sauerstoff", 'en' => "Hyperbaric Oxygen", 'fr' => "Oxygénothérapie hyperbare", 'nl' => "Hyperbare zuurstoftherapie", 'it' => "Ossigenoterapia iperbarica", 'tr' => "Hiperbarik Oksijen"], $currentLang) ?></span>
         </div>
       </div>
@@ -388,11 +394,11 @@ ob_start();
     <div class="cfield">
       <label data-ckey="intro.t23"<?= apex_cms_attrs_or($cmsContact['intro']['t23'] ?? null, ['de' => "Wann planen Sie den Eingriff?", 'en' => "When Are You Planning the Procedure?", 'fr' => "Quand prévoyez-vous l'intervention ?", 'nl' => "Wanneer plant u de ingreep?", 'it' => "Quando prevedi l'intervento?", 'tr' => "İşlemi Ne Zaman Planlıyorsunuz?"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t23'] ?? null, ['de' => "Wann planen Sie den Eingriff?", 'en' => "When Are You Planning the Procedure?", 'fr' => "Quand prévoyez-vous l'intervention ?", 'nl' => "Wanneer plant u de ingreep?", 'it' => "Quando prevedi l'intervento?", 'tr' => "İşlemi Ne Zaman Planlıyorsunuz?"], $currentLang) ?></label>
       <div class="opt-grid cols-3" id="timingRow">
-        <div class="opt-card radio centered" data-value="this-month" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-ckey="intro.t24"<?= apex_cms_attrs_or($cmsContact['intro']['t24'] ?? null, ['de' => "Diesen Monat", 'en' => "This month", 'fr' => "Ce mois-ci", 'nl' => "Deze maand", 'it' => "Questo mese", 'tr' => "Bu Ay"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t24'] ?? null, ['de' => "Diesen Monat", 'en' => "This month", 'fr' => "Ce mois-ci", 'nl' => "Deze maand", 'it' => "Questo mese", 'tr' => "Bu Ay"], $currentLang) ?></span></div>
-        <div class="opt-card radio centered" data-value="1-3" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-ckey="intro.t25"<?= apex_cms_attrs_or($cmsContact['intro']['t25'] ?? null, ['de' => "In 1–3 Monaten", 'en' => "In 1–3 months", 'fr' => "Dans 1 à 3 mois", 'nl' => "Over 1–3 maanden", 'it' => "Tra 1 e 3 mesi", 'tr' => "1-3 Ay İçinde"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t25'] ?? null, ['de' => "In 1–3 Monaten", 'en' => "In 1–3 months", 'fr' => "Dans 1 à 3 mois", 'nl' => "Over 1–3 maanden", 'it' => "Tra 1 e 3 mesi", 'tr' => "1-3 Ay İçinde"], $currentLang) ?></span></div>
-        <div class="opt-card radio centered" data-value="3-6" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-ckey="intro.t26"<?= apex_cms_attrs_or($cmsContact['intro']['t26'] ?? null, ['de' => "In 3–6 Monaten", 'en' => "In 3–6 months", 'fr' => "Dans 3 à 6 mois", 'nl' => "Over 3–6 maanden", 'it' => "Tra 3 e 6 mesi", 'tr' => "3-6 Ay İçinde"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t26'] ?? null, ['de' => "In 3–6 Monaten", 'en' => "In 3–6 months", 'fr' => "Dans 3 à 6 mois", 'nl' => "Over 3–6 maanden", 'it' => "Tra 3 e 6 mesi", 'tr' => "3-6 Ay İçinde"], $currentLang) ?></span></div>
-        <div class="opt-card radio centered" data-value="6plus" onclick="pickSingle(this,'timingRow'); validateStep2()"><span data-ckey="intro.t27"<?= apex_cms_attrs_or($cmsContact['intro']['t27'] ?? null, ['de' => "In 6+ Monaten", 'en' => "In 6+ months", 'fr' => "Dans 6+ mois", 'nl' => "Over 6+ maanden", 'it' => "Tra 6+ mesi", 'tr' => "6+ Ay İçinde"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t27'] ?? null, ['de' => "In 6+ Monaten", 'en' => "In 6+ months", 'fr' => "Dans 6+ mois", 'nl' => "Over 6+ maanden", 'it' => "Tra 6+ mesi", 'tr' => "6+ Ay İçinde"], $currentLang) ?></span></div>
-        <div class="opt-card radio centered" data-value="research" onclick="pickSingle(this,'timingRow'); validateStep2()" style="grid-column: span 2;"><span data-ckey="intro.t28"<?= apex_cms_attrs_or($cmsContact['intro']['t28'] ?? null, ['de' => "Nur recherchieren", 'en' => "Just researching", 'fr' => "Je me renseigne seulement", 'nl' => "Alleen aan het oriënteren", 'it' => "Sto solo informandomi", 'tr' => "Sadece Araştırıyorum"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t28'] ?? null, ['de' => "Nur recherchieren", 'en' => "Just researching", 'fr' => "Je me renseigne seulement", 'nl' => "Alleen aan het oriënteren", 'it' => "Sto solo informandomi", 'tr' => "Sadece Araştırıyorum"], $currentLang) ?></span></div>
+        <div class="opt-card radio centered" data-value="this-month" data-click="pick" data-row="timingRow"><span data-ckey="intro.t24"<?= apex_cms_attrs_or($cmsContact['intro']['t24'] ?? null, ['de' => "Diesen Monat", 'en' => "This month", 'fr' => "Ce mois-ci", 'nl' => "Deze maand", 'it' => "Questo mese", 'tr' => "Bu Ay"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t24'] ?? null, ['de' => "Diesen Monat", 'en' => "This month", 'fr' => "Ce mois-ci", 'nl' => "Deze maand", 'it' => "Questo mese", 'tr' => "Bu Ay"], $currentLang) ?></span></div>
+        <div class="opt-card radio centered" data-value="1-3" data-click="pick" data-row="timingRow"><span data-ckey="intro.t25"<?= apex_cms_attrs_or($cmsContact['intro']['t25'] ?? null, ['de' => "In 1–3 Monaten", 'en' => "In 1–3 months", 'fr' => "Dans 1 à 3 mois", 'nl' => "Over 1–3 maanden", 'it' => "Tra 1 e 3 mesi", 'tr' => "1-3 Ay İçinde"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t25'] ?? null, ['de' => "In 1–3 Monaten", 'en' => "In 1–3 months", 'fr' => "Dans 1 à 3 mois", 'nl' => "Over 1–3 maanden", 'it' => "Tra 1 e 3 mesi", 'tr' => "1-3 Ay İçinde"], $currentLang) ?></span></div>
+        <div class="opt-card radio centered" data-value="3-6" data-click="pick" data-row="timingRow"><span data-ckey="intro.t26"<?= apex_cms_attrs_or($cmsContact['intro']['t26'] ?? null, ['de' => "In 3–6 Monaten", 'en' => "In 3–6 months", 'fr' => "Dans 3 à 6 mois", 'nl' => "Over 3–6 maanden", 'it' => "Tra 3 e 6 mesi", 'tr' => "3-6 Ay İçinde"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t26'] ?? null, ['de' => "In 3–6 Monaten", 'en' => "In 3–6 months", 'fr' => "Dans 3 à 6 mois", 'nl' => "Over 3–6 maanden", 'it' => "Tra 3 e 6 mesi", 'tr' => "3-6 Ay İçinde"], $currentLang) ?></span></div>
+        <div class="opt-card radio centered" data-value="6plus" data-click="pick" data-row="timingRow"><span data-ckey="intro.t27"<?= apex_cms_attrs_or($cmsContact['intro']['t27'] ?? null, ['de' => "In 6+ Monaten", 'en' => "In 6+ months", 'fr' => "Dans 6+ mois", 'nl' => "Over 6+ maanden", 'it' => "Tra 6+ mesi", 'tr' => "6+ Ay İçinde"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t27'] ?? null, ['de' => "In 6+ Monaten", 'en' => "In 6+ months", 'fr' => "Dans 6+ mois", 'nl' => "Over 6+ maanden", 'it' => "Tra 6+ mesi", 'tr' => "6+ Ay İçinde"], $currentLang) ?></span></div>
+        <div class="opt-card radio centered u-02" data-value="research" data-click="pick" data-row="timingRow"><span data-ckey="intro.t28"<?= apex_cms_attrs_or($cmsContact['intro']['t28'] ?? null, ['de' => "Nur recherchieren", 'en' => "Just researching", 'fr' => "Je me renseigne seulement", 'nl' => "Alleen aan het oriënteren", 'it' => "Sto solo informandomi", 'tr' => "Sadece Araştırıyorum"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t28'] ?? null, ['de' => "Nur recherchieren", 'en' => "Just researching", 'fr' => "Je me renseigne seulement", 'nl' => "Alleen aan het oriënteren", 'it' => "Sto solo informandomi", 'tr' => "Sadece Araştırıyorum"], $currentLang) ?></span></div>
       </div>
     </div>
     <div class="cfield">
@@ -400,8 +406,8 @@ ob_start();
       <textarea id="cfNotes" data-de-ph="Ihre Ziele oder Fragen..." data-en-ph="Your goals or questions..." placeholder="Ihre Ziele oder Fragen..."></textarea>
     </div>
     <div class="consult-nav">
-      <button type="button" class="cback" onclick="gotoStep(1)" data-ckey="intro.t30"<?= apex_cms_attrs_or($cmsContact['intro']['t30'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t30'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"], $currentLang) ?></button>
-      <button type="button" class="cnext" id="cnext2" disabled onclick="gotoStep(3)" data-ckey="intro.t31"<?= apex_cms_attrs_or($cmsContact['intro']['t31'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t31'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"], $currentLang) ?></button>
+      <button type="button" class="cback" data-click="step" data-step="1" data-ckey="intro.t30"<?= apex_cms_attrs_or($cmsContact['intro']['t30'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t30'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"], $currentLang) ?></button>
+      <button type="button" class="cnext" id="cnext2" disabled data-click="step" data-step="3" data-ckey="intro.t31"<?= apex_cms_attrs_or($cmsContact['intro']['t31'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t31'] ?? null, ['de' => "Weiter", 'en' => "Continue", 'fr' => "Continuer", 'nl' => "Doorgaan", 'it' => "Continua", 'tr' => "Devam Et"], $currentLang) ?></button>
     </div>
   </div>
 
@@ -413,25 +419,25 @@ ob_start();
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhFront" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhFront)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><circle cx="15" cy="14" r="7" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12.5" cy="12.5" r="1.1" fill="#fff"/><circle cx="17.5" cy="12.5" r="1.1" fill="#fff"/><path d="M12 17c1 1.2 2 1.6 3 1.6s2-0.4 3-1.6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
         <b data-ckey="intro.t33"<?= apex_cms_attrs_or($cmsContact['intro']['t33'] ?? null, ['de' => "Vorne", 'en' => "Front", 'fr' => "Face avant", 'nl' => "Voorkant", 'it' => "Fronte", 'tr' => "Ön"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t33'] ?? null, ['de' => "Vorne", 'en' => "Front", 'fr' => "Face avant", 'nl' => "Voorkant", 'it' => "Fronte", 'tr' => "Ön"], $currentLang) ?></b>
         <span data-ckey="intro.t34"<?= apex_cms_attrs_or($cmsContact['intro']['t34'] ?? null, ['de' => "Gesicht sichtbar", 'en' => "Face visible", 'fr' => "Visage visible", 'nl' => "Gezicht zichtbaar", 'it' => "Volto visibile", 'tr' => "Yüz Görünür"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t34'] ?? null, ['de' => "Gesicht sichtbar", 'en' => "Face visible", 'fr' => "Visage visible", 'nl' => "Gezicht zichtbaar", 'it' => "Volto visibile", 'tr' => "Yüz Görünür"], $currentLang) ?></span>
-        <input type="file" accept="image/*" onchange="markSlot(this,'slot-front')">
+        <input type="file" accept="image/*" data-change="slot" data-slot="slot-front">
       </div>
       <div class="photo-slot" id="slot-top">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhTop" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhTop)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><circle cx="15" cy="20" r="4.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M15 5v8M11 9l4-4 4 4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <b data-ckey="intro.t35"<?= apex_cms_attrs_or($cmsContact['intro']['t35'] ?? null, ['de' => "Oben", 'en' => "Top", 'fr' => "Dessus", 'nl' => "Bovenkant", 'it' => "Sopra", 'tr' => "Üst"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t35'] ?? null, ['de' => "Oben", 'en' => "Top", 'fr' => "Dessus", 'nl' => "Bovenkant", 'it' => "Sopra", 'tr' => "Üst"], $currentLang) ?></b>
         <span data-ckey="intro.t36"<?= apex_cms_attrs_or($cmsContact['intro']['t36'] ?? null, ['de' => "Von oben", 'en' => "From above", 'fr' => "Vue de dessus", 'nl' => "Van bovenaf", 'it' => "Dall'alto", 'tr' => "Yukarıdan"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t36'] ?? null, ['de' => "Von oben", 'en' => "From above", 'fr' => "Vue de dessus", 'nl' => "Van bovenaf", 'it' => "Dall'alto", 'tr' => "Yukarıdan"], $currentLang) ?></span>
-        <input type="file" accept="image/*" onchange="markSlot(this,'slot-top')">
+        <input type="file" accept="image/*" data-change="slot" data-slot="slot-top">
       </div>
       <div class="photo-slot" id="slot-side">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhSide" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhSide)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><path d="M11 22c-1-2-1-4 0-6-1-1-1-3 0-4 1-3 4-5 7-5 3 0 4 2 4 4 1 0 2 1 2 2 0 2-1 3-2 3 0 2-1 4-3 5-1 1-1 2 0 3z" fill="#fff" opacity="0.92"/></svg></span>
         <b data-ckey="intro.t37"<?= apex_cms_attrs_or($cmsContact['intro']['t37'] ?? null, ['de' => "Seite", 'en' => "Side", 'fr' => "Profil", 'nl' => "Zijkant", 'it' => "Lato", 'tr' => "Yan"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t37'] ?? null, ['de' => "Seite", 'en' => "Side", 'fr' => "Profil", 'nl' => "Zijkant", 'it' => "Lato", 'tr' => "Yan"], $currentLang) ?></b>
         <span data-ckey="intro.t38"<?= apex_cms_attrs_or($cmsContact['intro']['t38'] ?? null, ['de' => "Profil", 'en' => "Profile", 'fr' => "Profil", 'nl' => "Profiel", 'it' => "Profilo", 'tr' => "Profil"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t38'] ?? null, ['de' => "Profil", 'en' => "Profile", 'fr' => "Profil", 'nl' => "Profiel", 'it' => "Profilo", 'tr' => "Profil"], $currentLang) ?></span>
-        <input type="file" accept="image/*" onchange="markSlot(this,'slot-side')">
+        <input type="file" accept="image/*" data-change="slot" data-slot="slot-side">
       </div>
       <div class="photo-slot" id="slot-donor">
         <span class="opt-badge"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gPhDonor" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs><rect width="30" height="30" rx="9" fill="url(#gPhDonor)"/><ellipse cx="10" cy="8" rx="9" ry="5" fill="#fff" opacity="0.18"/><path d="M20 10a7 7 0 1 0 1.8 6.9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polyline points="22,7 21.8,11.5 17.5,10.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <b data-ckey="intro.t39"<?= apex_cms_attrs_or($cmsContact['intro']['t39'] ?? null, ['de' => "Spender", 'en' => "Donor", 'fr' => "Donneuse", 'nl' => "Donor", 'it' => "Donatrice", 'tr' => "Donör"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t39'] ?? null, ['de' => "Spender", 'en' => "Donor", 'fr' => "Donneuse", 'nl' => "Donor", 'it' => "Donatrice", 'tr' => "Donör"], $currentLang) ?></b>
         <span data-ckey="intro.t40"<?= apex_cms_attrs_or($cmsContact['intro']['t40'] ?? null, ['de' => "Hinterkopf", 'en' => "Back of head", 'fr' => "Arrière de la tête", 'nl' => "Achterhoofd", 'it' => "Retro della testa", 'tr' => "Baş Arkası"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t40'] ?? null, ['de' => "Hinterkopf", 'en' => "Back of head", 'fr' => "Arrière de la tête", 'nl' => "Achterhoofd", 'it' => "Retro della testa", 'tr' => "Baş Arkası"], $currentLang) ?></span>
-        <input type="file" accept="image/*" onchange="markSlot(this,'slot-donor')">
+        <input type="file" accept="image/*" data-change="slot" data-slot="slot-donor">
       </div>
     </div>
     <div class="photo-note"><span id="photoCount">0</span>/4 <span data-ckey="intro.t41"<?= apex_cms_attrs_or($cmsContact['intro']['t41'] ?? null, ['de' => "Fotos hochgeladen", 'en' => "photos uploaded", 'fr' => "photos téléchargées", 'nl' => "foto's geüpload", 'it' => "foto caricate", 'tr' => "fotoğraf yüklendi"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t41'] ?? null, ['de' => "Fotos hochgeladen", 'en' => "photos uploaded", 'fr' => "photos téléchargées", 'nl' => "foto's geüpload", 'it' => "foto caricate", 'tr' => "fotoğraf yüklendi"], $currentLang) ?></span></div>
@@ -440,7 +446,7 @@ ob_start();
       <input type="text" id="cfCoupon" placeholder="WELCOME5">
     </div>
     <div class="check-row">
-      <input type="checkbox" id="cfPrivacy" onchange="validateStep3()">
+      <input type="checkbox" id="cfPrivacy" data-change="validate3">
       <span data-de="Ich habe die &lt;a href=&quot;<?= apex_lang_base() ?>/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Datenschutzerklärung&lt;/a&gt; gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *" data-en="I have read the &lt;a href=&quot;<?= apex_lang_base() ?>/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacy policy&lt;/a&gt; and accept the processing of my personal data. *" data-fr="J'ai lu la &lt;a href=&quot;<?= apex_lang_base() ?>/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;politique de confidentialité&lt;/a&gt; et j'accepte le traitement de mes données personnelles. *" data-nl="Ik heb het &lt;a href=&quot;<?= apex_lang_base() ?>/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;privacybeleid&lt;/a&gt; gelezen en ga akkoord met de verwerking van mijn persoonsgegevens. *" data-it="Ho letto l'&lt;a href=&quot;<?= apex_lang_base() ?>/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;informativa sulla privacy&lt;/a&gt; e accetto il trattamento dei miei dati personali. *" data-tr="&lt;a href=&quot;<?= apex_lang_base() ?>/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Gizlilik politikasını&lt;/a&gt; okudum ve kişisel verilerimin işlenmesini kabul ediyorum. *">Ich habe die <a href="<?= apex_lang_base() ?>/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner personenbezogenen Daten. *</span>
     </div>
     <div class="check-row">
@@ -449,8 +455,8 @@ ob_start();
     </div>
     <div class="gdpr-badge" data-ckey="intro.t44"<?= apex_cms_attrs_or($cmsContact['intro']['t44'] ?? null, ['de' => "🇪🇺 DSGVO · Ihre Daten sind geschützt", 'en' => "🇪🇺 GDPR · Your data is protected", 'fr' => "🇪🇺 RGPD · Vos données sont protégées", 'nl' => "🇪🇺 AVG · Uw gegevens zijn beschermd", 'it' => "🇪🇺 GDPR · I tuoi dati sono protetti", 'tr' => "🇪🇺 GDPR · Verileriniz Korunmaktadır"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t44'] ?? null, ['de' => "🇪🇺 DSGVO · Ihre Daten sind geschützt", 'en' => "🇪🇺 GDPR · Your data is protected", 'fr' => "🇪🇺 RGPD · Vos données sont protégées", 'nl' => "🇪🇺 AVG · Uw gegevens zijn beschermd", 'it' => "🇪🇺 GDPR · I tuoi dati sono protetti", 'tr' => "🇪🇺 GDPR · Verileriniz Korunmaktadır"], $currentLang) ?></div>
     <div class="consult-nav">
-      <button type="button" class="cback" onclick="gotoStep(2)" data-ckey="intro.t45"<?= apex_cms_attrs_or($cmsContact['intro']['t45'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t45'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"], $currentLang) ?></button>
-      <button type="button" class="cnext" id="cnext3" disabled onclick="submitConsult()" data-ckey="intro.t46"<?= apex_cms_attrs_or($cmsContact['intro']['t46'] ?? null, ['de' => "Absenden", 'en' => "Submit", 'fr' => "Envoyer", 'nl' => "Versturen", 'it' => "Invia", 'tr' => "Gönder"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t46'] ?? null, ['de' => "Absenden", 'en' => "Submit", 'fr' => "Envoyer", 'nl' => "Versturen", 'it' => "Invia", 'tr' => "Gönder"], $currentLang) ?></button>
+      <button type="button" class="cback" data-click="step" data-step="2" data-ckey="intro.t45"<?= apex_cms_attrs_or($cmsContact['intro']['t45'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t45'] ?? null, ['de' => "Zurück", 'en' => "Back", 'fr' => "Retour", 'nl' => "Terug", 'it' => "Indietro", 'tr' => "Geri"], $currentLang) ?></button>
+      <button type="button" class="cnext" id="cnext3" disabled data-click="submit-consult" data-ckey="intro.t46"<?= apex_cms_attrs_or($cmsContact['intro']['t46'] ?? null, ['de' => "Absenden", 'en' => "Submit", 'fr' => "Envoyer", 'nl' => "Versturen", 'it' => "Invia", 'tr' => "Gönder"]) ?>><?= apex_cms_value_or($cmsContact['intro']['t46'] ?? null, ['de' => "Absenden", 'en' => "Submit", 'fr' => "Envoyer", 'nl' => "Versturen", 'it' => "Invia", 'tr' => "Gönder"], $currentLang) ?></button>
     </div>
   </div>
 
@@ -465,7 +471,7 @@ ob_start();
   </div>
 </div>
 
-<script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   // Leads backend (see /backend) — update this when deploying so submissions
   // reach the real API instead of a local dev server.
   var LEADS_API_BASE = '';
@@ -479,14 +485,18 @@ ob_start();
 
   // FR/NL/IT/TR have no translated copy yet — they fall back to the English
   // strings until real translations are added for those data-* attributes.
-  var APEX_TRANSLATED_LANGS = ['de', 'en'];
+  // All six languages carry data-* translations now. When this still said
+  // ['de','en'], applyLang() treated fr/nl/it/tr as untranslated and fell
+  // back to English for them, overwriting text the server had already
+  // rendered in the right language.
+  var APEX_TRANSLATED_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
     var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
       if (val === null && fallback) val = el.getAttribute('data-' + fallback);
-      if (val !== null) el.innerHTML = val;
+      if (val !== null) apexSetHTML(el, val);
     });
     document.querySelectorAll('[data-de-ph]').forEach(function (el) {
       var ph = el.getAttribute('data-' + lang + '-ph');
@@ -648,7 +658,7 @@ ob_start();
   }
 </script>
 
-<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
+<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" data-click="whatsapp">
   <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.386.7 4.61 1.902 6.478L4 29l7.72-1.865a11.94 11.94 0 0 0 4.284.788h.001C22.635 27.923 28 22.55 28 15.918 28 9.287 22.635 3 16.004 3zm0 21.9h-.001a9.9 9.9 0 0 1-5.05-1.383l-.362-.215-4.583 1.107 1.128-4.47-.236-.376a9.86 9.86 0 0 1-1.516-5.263c0-5.468 4.45-9.917 9.923-9.917 2.65 0 5.14 1.033 7.014 2.909a9.85 9.85 0 0 1 2.905 7.019c0 5.468-4.45 9.589-9.222 9.589z"/><path d="M21.62 18.164c-.297-.148-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.254-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.208-.242-.58-.487-.502-.669-.511l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.873.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
 </a>
 

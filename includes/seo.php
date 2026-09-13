@@ -313,13 +313,25 @@ function apex_sitemap_xml(): string
         $entry = apex_seo_entry($page);
         $urls = [];
         foreach ($langs as $lang) {
+            // The blog archive is the one registry page whose usefulness
+            // depends on content: with no article written in a language, that
+            // language's /blog is an empty list. Submitting four empty pages
+            // to Google is thin content on a site that is trying to rank, so
+            // a language only gets the archive once it has something in it.
+            if ($page === 'blog' && !apex_blog_any_in_language($lang)) {
+                continue;
+            }
             $urls[$lang] = apex_seo_url($page, $lang);
+        }
+        if ($urls === []) {
+            continue;
         }
         $alternates = '';
         foreach ($urls as $lang => $url) {
             $alternates .= '    <xhtml:link rel="alternate" hreflang="' . $esc($lang) . '" href="' . $esc($url) . "\"/>\n";
         }
-        $alternates .= '    <xhtml:link rel="alternate" hreflang="x-default" href="' . $esc($urls['de']) . "\"/>\n";
+        $alternates .= '    <xhtml:link rel="alternate" hreflang="x-default" href="'
+            . $esc($urls['de'] ?? reset($urls)) . "\"/>\n";
         $lastmod = apex_seo_lastmod($page);
         foreach ($urls as $loc) {
             $out .= "  <url>\n"

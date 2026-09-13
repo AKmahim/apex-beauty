@@ -23,7 +23,7 @@ $siteSectionBase = $siteLangBase . '/' . ($siteSectionBase === 'index.php' || $s
 if (!defined('APEX_SITE_HEADER_STYLE_EMITTED')) {
   define('APEX_SITE_HEADER_STYLE_EMITTED', true);
   ?>
-  <style>
+  <style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
     .nav {
       position: sticky;
       top: 0;
@@ -294,7 +294,7 @@ $medicalClinicSchema = [
     'https://www.instagram.com/apex_beauty_',
   ],
 ]; ?>
-<script type="application/ld+json"><?= json_encode($medicalClinicSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<script type="application/ld+json" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"><?= json_encode($medicalClinicSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php endif; ?>
 <nav class="nav <?= $siteHeaderMode === 'full' ? 'nav-full' : 'nav-simple' ?>">
   <a class="logo-lockup" href="<?= htmlspecialchars($siteHomeHref, ENT_QUOTES) ?>" aria-label="Apex Beauty Home">
@@ -314,7 +314,7 @@ $medicalClinicSchema = [
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#network" data-de="Unser Netzwerk" data-en="Our Network" data-fr="Notre réseau" data-nl="Ons netwerk" data-it="La nostra rete" data-tr="Ağımız">Unser Netzwerk</a>
       <a href="<?= htmlspecialchars($siteSectionBase, ENT_QUOTES) ?>#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
     </div>
-    <a href="#" class="cta-btn nav-drop-cta" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-fr="Nous contacter" data-nl="Neem contact op" data-it="Contattaci" data-tr="Bize Ulaşın">Kontakt aufnehmen</a>
+    <a href="#" class="cta-btn nav-drop-cta" data-click="open-consult" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-fr="Nous contacter" data-nl="Neem contact op" data-it="Contattaci" data-tr="Bize Ulaşın">Kontakt aufnehmen</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch" id="langSwitch">
@@ -328,7 +328,7 @@ $medicalClinicSchema = [
 <?php endforeach; ?>
       </div>
     </div>
-    <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-fr="Nous contacter" data-nl="Neem contact op" data-it="Contattaci" data-tr="Bize Ulaşın">Kontakt aufnehmen</a>
+    <a href="#" class="cta-btn" data-click="open-consult" data-de="Kontakt aufnehmen" data-en="Get in Touch" data-fr="Nous contacter" data-nl="Neem contact op" data-it="Contattaci" data-tr="Bize Ulaşın">Kontakt aufnehmen</a>
   </div>
   <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -355,14 +355,14 @@ $medicalClinicSchema = [
 <?php endforeach; ?>
       </div>
     </div>
-    <a href="#" class="cta-btn" onclick="openConsult(event)" data-de="Kostenlose Beratung" data-en="Free consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</a>
+    <a href="#" class="cta-btn" data-click="open-consult" data-de="Kostenlose Beratung" data-en="Free consultation" data-fr="Consultation gratuite" data-nl="Gratis consult" data-it="Consulto gratuito" data-tr="Ücretsiz Danışma">Kostenlose Beratung</a>
   </div>
 <?php endif; ?>
 </nav>
 
 <?php if (!defined('APEX_SITE_HEADER_SCRIPT_EMITTED')): ?>
 <?php define('APEX_SITE_HEADER_SCRIPT_EMITTED', true); ?>
-<script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   (function () {
     var nav = document.querySelector('.nav.nav-full');
     var navHamburger = document.getElementById('navHamburger');

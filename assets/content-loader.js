@@ -129,13 +129,26 @@
       }
     });
 
+    // Re-apply the page's language after the CMS values land, because the
+    // fetched content is keyed by field and arrives in every language at once.
+    //
+    // This used to read `lang === 'en' ? 'en' : 'de'`, from when the site was
+    // only German and English. Once four more languages were added, every
+    // /fr, /nl, /it and /tr page loaded correct localised HTML from the server
+    // and was then switched back to German by this line - and applyLang() also
+    // sets <html lang>, so the page ended up claiming to be German too.
+    // Crawlers, which do not run this script, saw the right language all
+    // along; only actual visitors got the wrong one.
+    var SUPPORTED = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
+    var lang = (document.documentElement.lang || 'de').toLowerCase().slice(0, 2);
+    if (SUPPORTED.indexOf(lang) === -1) lang = 'de';
+
     if (typeof window.applyLang === 'function') {
-      window.applyLang(document.documentElement.lang === 'en' ? 'en' : 'de');
+      window.applyLang(lang);
     } else {
-      var lang = document.documentElement.lang === 'en' ? 'en' : 'de';
       document.querySelectorAll('[data-de]').forEach(function (el) {
         var val = el.getAttribute('data-' + lang);
-        if (val !== null) el.innerHTML = val;
+        if (val !== null) apexSetHTML(el, val);
       });
     }
     document.dispatchEvent(new CustomEvent('apex-content-loaded'));

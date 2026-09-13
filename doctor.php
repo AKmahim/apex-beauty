@@ -31,13 +31,19 @@ ob_start();
 <link rel="icon" href="/assets/lotus-transparent.png" type="image/png">
 <title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 <?php require __DIR__ . '/includes/site-meta.php'; ?>
-<script type="application/ld+json"><?= json_encode($physicianSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
+<script type="application/ld+json" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"><?= json_encode($physicianSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 <?php require __DIR__ . '/includes/site-pixel.php'; ?>
-<script src="/assets/meta-pixel.js"></script>
-<script src="/assets/cookie-consent.js"></script>
-<script src="/assets/content-loader.js"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/meta-pixel.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<!-- DOMPurify + wrapper: loaded before anything that writes markup into the
+     DOM, so the language switcher never assigns unsanitised innerHTML. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<script src="/assets/vendor/purify-3.1.6.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-safe-html.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/apex-actions.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/cookie-consent.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="<?= htmlspecialchars(apex_asset('assets/content-loader.js'), ENT_QUOTES) ?>" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 <?php require __DIR__ . '/includes/site-gtm.php'; ?>
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root {
     --teal-400: #38bdf8;
     --teal-500: #0ea5e9;
@@ -402,11 +408,11 @@ include __DIR__ . '/includes/site-header.php';
 
 <?php include __DIR__ . '/includes/site-footer.php'; ?>
 
-<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackWhatsAppContact()">
+<a class="whatsapp-fab" href="<?= htmlspecialchars(APEX_WHATSAPP_LINK, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" data-click="whatsapp">
   <svg viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.35 5.07L2 22l5.1-1.33C8.55 21.5 10.24 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.24c-.22.62-1.28 1.17-1.77 1.24-.45.07-.99.1-1.6-.1-.37-.12-.84-.27-1.44-.53-2.53-1.1-4.18-3.65-4.31-3.82-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.5-.31.66-.31.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.74 1.83.8 1.96.07.13.11.29.02.46-.09.17-.13.27-.26.42-.13.15-.27.33-.39.44-.13.13-.26.27-.11.53.15.26.66 1.09 1.42 1.76.98.87 1.8 1.14 2.06 1.27.26.13.41.11.56-.06.15-.18.63-.74.8-.99.17-.26.34-.21.57-.13.22.09 1.43.67 1.68.79.24.13.4.19.46.29.07.11.07.61-.15 1.24z"/></svg>
 </a>
 
-<script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   // The shared header's CTA buttons call openConsult(), but the consultation
   // modal itself only exists on the homepage — without this shim those
   // buttons threw a ReferenceError here and did nothing at all.
@@ -495,14 +501,18 @@ include __DIR__ . '/includes/site-header.php';
 
   // FR/NL/IT/TR have no translated copy yet — they fall back to the English
   // strings until real translations are added for those data-* attributes.
-  var APEX_TRANSLATED_LANGS = ['de', 'en'];
+  // All six languages carry data-* translations now. When this still said
+  // ['de','en'], applyLang() treated fr/nl/it/tr as untranslated and fell
+  // back to English for them, overwriting text the server had already
+  // rendered in the right language.
+  var APEX_TRANSLATED_LANGS = ['de', 'en', 'fr', 'nl', 'it', 'tr'];
   function applyLang(lang) {
     document.documentElement.lang = lang;
     var fallback = APEX_TRANSLATED_LANGS.indexOf(lang) === -1 ? 'en' : null;
     document.querySelectorAll('[data-de]').forEach(function (el) {
       var val = el.getAttribute('data-' + lang);
       if (val === null && fallback) val = el.getAttribute('data-' + fallback);
-      if (val !== null) el.innerHTML = val;
+      if (val !== null) apexSetHTML(el, val);
     });
     document.querySelectorAll('.lang-switch-menu button').forEach(function (s) {
       var isActive = s.getAttribute('data-lang') === lang;

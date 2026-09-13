@@ -1,4 +1,14 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+
+// The panel is a static shell that talks to /api, so it required nothing and
+// therefore got none of the site-wide hardening. Bootstrapping it here sends
+// the same headers as every other page, plus two this page in particular
+// needs: never cached, never indexed.
+require_once __DIR__ . '/../includes/bootstrap.php';
+apex_no_store();
+header('X-Robots-Tag: noindex, nofollow');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apex Beauty — Leads Admin</title>
 <meta name="robots" content="noindex, nofollow">
-<style>
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
   :root {
     --blue-600: #2563eb;
     --blue-700: #1d4ed8;
@@ -350,7 +360,7 @@
       <h1 data-i18n="header-title">Consultation leads</h1>
       <div class="sub" data-i18n="header-sub">Live submissions from the free-consultation form</div>
     </div>
-    <div style="display:flex; align-items:center;">
+    <div class="u-23">
       <div class="admin-lang-toggle" id="adminLangToggle">
         <button type="button" data-admin-lang="en" class="active">EN</button>
         <button type="button" data-admin-lang="de">DE</button>
@@ -457,7 +467,7 @@
       </thead>
       <tbody id="leadsBody"></tbody>
     </table>
-    <div class="empty-state" id="emptyState" style="display:none;" data-i18n="empty-state">No leads match these filters yet.</div>
+    <div class="empty-state u-03" id="emptyState" data-i18n="empty-state">No leads match these filters yet.</div>
   </div>
 
   <div class="pagination">
@@ -467,11 +477,11 @@
   </div>
   </div>
 
-  <div id="contentPanel" style="display:none;">
+  <div class="u-03" id="contentPanel">
     <div class="toolbar">
-      <label style="font-size:13px; font-weight:600; color:var(--ink-soft);" data-i18n="page-label">Page:</label>
+      <label class="u-24" data-i18n="page-label">Page:</label>
       <select id="cPageSelect"></select>
-      <span class="sub" style="margin-left:auto;" data-i18n="content-hint">Edits save immediately and appear on the live site on next page load.</span>
+      <span class="sub u-09" data-i18n="content-hint">Edits save immediately and appear on the live site on next page load.</span>
     </div>
     <div class="content-layout">
       <div class="section-tabs" id="cSectionTabs"></div>
@@ -482,7 +492,7 @@
     </div>
   </div>
 
-  <div id="settingsPanel" style="display:none;">
+  <div class="u-03" id="settingsPanel">
     <div class="content-card" id="settingsCard">
       <h3 data-i18n="settings-title">Site settings</h3>
       <div class="sub" data-i18n="settings-sub">Verification codes and tracking IDs. These apply to every page.</div>
@@ -494,10 +504,10 @@
     </div>
   </div>
 
-  <div id="blogPanel" style="display:none;">
+  <div class="u-03" id="blogPanel">
     <div class="toolbar">
       <button class="btn-primary" id="blogNewBtn" data-i18n="blog-new">New article</button>
-      <span class="sub" style="margin-left:auto;" data-i18n="blog-hint">Drafts stay invisible on the site. Publishing adds the article to the blog, the sitemap and llms.txt.</span>
+      <span class="sub u-09" data-i18n="blog-hint">Drafts stay invisible on the site. Publishing adds the article to the blog, the sitemap and llms.txt.</span>
     </div>
     <div class="content-layout">
       <div class="section-tabs" id="blogList"></div>
@@ -509,7 +519,17 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-<script src="/admin/admin.js"></script>
+<!-- Self-hosted: a CDN script is code a third party can change after you
+     have reviewed it, and the admin panel is the highest-value page here. -->
+<link rel="stylesheet" href="<?= htmlspecialchars(apex_asset('assets/apex-utilities.css'), ENT_QUOTES) ?>">
+<style nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
+  /* Shown only when a dashboard request fails. */
+  .panel-error { margin: 0 0 16px; padding: 12px 14px; border-radius: 10px;
+    background: #fef2f2; border: 1px solid #fecaca; color: #991b1b;
+    font-size: 13.5px; font-weight: 600; }
+</style>
+
+<script src="/assets/vendor/chart-4.4.4.umd.min.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
+<script src="/admin/admin.js" nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>"></script>
 </body>
 </html>

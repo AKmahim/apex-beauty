@@ -8,3 +8,11 @@ data/chat-hits.json
 # Written by the admin panel on the server and set once by whoever owns the
 # Search Console property, so a deploy must never overwrite it.
 data/settings.json
+
+# Runtime rate-limiter state. Per-server and per-moment, never deployed.
+data/rate-*.json
+data/login-attempts.json
+
+# Agent tooling. .claude/worktrees in particular can hold a whole second
+# copy of data/, which must never reach a web server.
+.claude/

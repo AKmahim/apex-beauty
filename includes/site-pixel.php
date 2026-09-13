@@ -8,7 +8,7 @@ if ($apexPixelId === '') {
 }
 ?>
 <!-- Meta Pixel Code -->
-<script>
+<script nonce="<?= htmlspecialchars(apex_csp_nonce(), ENT_QUOTES) ?>">
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -20,7 +20,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '<?= htmlspecialchars($apexPixelId, ENT_QUOTES) ?>');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript><img class="u-25" height="1" width="1"
 src="https://www.facebook.com/tr?id=<?= htmlspecialchars($apexPixelId, ENT_QUOTES) ?>&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
